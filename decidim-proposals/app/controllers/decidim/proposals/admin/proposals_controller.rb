@@ -144,6 +144,22 @@ module Decidim
           end
         end
 
+        def destroy_draft
+          enforce_permission_to :edit, :proposal, proposal: draft
+  
+          Admin::DestroyProposal.call(draft, current_user) do
+            on(:ok) do
+              flash[:notice] = I18n.t("proposals.destroy_draft.success", scope: "decidim")
+              redirect_to participatory_texts_path
+            end
+  
+            on(:invalid) do
+              flash.now[:alert] = I18n.t("proposals.destroy_draft.error", scope: "decidim")
+              redirect_to participatory_texts_path
+            end
+          end
+        end
+
         private
 
         def collection
@@ -160,6 +176,10 @@ module Decidim
 
         def proposal_ids
           @proposal_ids ||= params[:proposal_ids]
+        end
+
+        def draft
+          @draft ||= drafts.find(params[:id])
         end
 
         def update_proposals_bulk_response_successful(response, subject)

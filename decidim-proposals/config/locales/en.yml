@@ -396,6 +396,8 @@ en:
             publish_document: Publish document
             save_draft: Save draft
             title: Preview participatory text
+            discard: Delete
+            discard_confirmation: Are you sure you want to discard this section draft?
           new_import:
             accepted_mime_types:
               md: Markdown

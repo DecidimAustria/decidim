@@ -19,6 +19,7 @@
             <a href="#" class="accordion-title flex--sbc"><%= preview_participatory_text_section_title(proposal) %><span class="mr-m"><%= icon "menu", class: "icon--small", role: "img", "aria-hidden": true %></span></a>
             <div class="accordion-content" data-tab-content>
               <%= render "article-preview", { form: prop_form, proposal: proposal } %>
+              <%= link_to t(".discard"), destroy_draft_proposal_path(proposal), class: "button alert", method: :delete, data: { confirm: t(".discard_confirmation") } %>
             </div>
           </li>
         <% end %>
