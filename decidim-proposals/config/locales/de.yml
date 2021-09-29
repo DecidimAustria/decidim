@@ -373,6 +373,7 @@ de:
             are_you_sure: Sind Sie sicher, den gesamten Entwurf des partizipativen Textes zu verwerfen?
             discard_all: Alle verwerfen
             import_doc: Dokument importieren
+            write_document: Dokument schreiben
           discard:
             success: Alle Mitentscheidungsentwürfe wurden verworfen.
           import:
@@ -384,6 +385,11 @@ de:
             publish_document: Dokument veröffentlichen
             save_draft: Entwurf speichern
             title: VORSCHAU TEILNEHMERTEXT
+          new_editor:
+            title: Dokument hinzufügen
+            bottom_hint: "(Sie können Dokumentabschnitte in der Vorschau anzeigen und sortieren.)"
+            editor_description: "Schreiben Sie ein Dokument oder fügen Sie es ein und verwenden Sie Überschriften, um die Absätze zu trennen."
+            import: Import
           new_import:
             accepted_mime_types:
               md: Markdown
