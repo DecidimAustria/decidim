@@ -1,0 +1,18 @@
+<h2>
+  <%= translated_attribute(@proposal.title) %>
+</h2>
+
+<%= link_to proposal_path(@proposal) do %>
+  Visit details
+<% end %>
+
+<%= amendments_for @proposal %>
+
+
+<h3>
+  Comments (<%= @proposal.comments.size %>)
+</h3>
+
+<%= comments_for(@proposal) %>
+<%= yield :expanded %>
+

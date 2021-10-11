@@ -18,6 +18,7 @@ module Decidim
             get :edit_draft
             patch :update_draft
             get :preview
+            get :sidebar
             post :publish
             delete :destroy_draft
             put :withdraw

@@ -1,9 +1,34 @@
 <div class="row hover-section">
   <div class="columns mediumlarge-8">
-    <%= link_to resource_path, class: "card__link--block pt-s pb-s" do %>
+    <%= link_to sidebar_proposal_path(model), class: "card__link--block pt-s pb-s" do %>
       <%= title %>
       <%= body %>
     <% end %>
+
+    <%= link_to amend_resource_path do %>
+      <%= present(model).comments.where(alignment: 1).size %>
+      Upvotes
+    <% end %>
+
+    <%= link_to "" do %>
+      <%= present(model).comments.where(alignment: -1).size %>
+      Downvotes
+    <% end %>
+
+    <%= link_to "" do %>
+      <%= present(model).comments_count %>
+
+      Add your comment
+    <% end %>
+
+    <%= link_to amend_resource_path do %>
+      Amend Proposal
+    <% end %>
+
+    <%= link_to sidebar_proposal_path(model), remote: true do %>
+      Visit details
+    <% end %>
   </div>
+
   <%= render :buttons %>
 </div>
