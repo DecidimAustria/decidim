@@ -6,8 +6,13 @@
   Visit details
 <% end %>
 
-<%= amendments_for @proposal %>
+<h3>Amendments (<%= @proposal.amendments.size %>) </h3>
 
+<%#= amendments_for @proposal %>
+
+<% @proposal.amendments.order(created_at: :desc).limit(2).each do |amendment| %>
+  <%= cell('decidim/proposals/amendment', amendment) %>
+<% end %>
 
 <h3>
   Comments (<%= @proposal.comments.size %>)
