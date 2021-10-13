@@ -19,8 +19,8 @@ module Decidim
         model.emendation
       end
 
-      def emendation_authors
-        model.emendation.authors
+      def emendation_author
+        present(model.emendation.authors.first)
       end
 
       def emendation_excerpt

@@ -2,7 +2,7 @@
   <div class="amendment__header">
     <div class="amendment__author">
       <%# TODO: check if it's possible that an emendation has multiple authors %>
-      <%= cell('decidim/author', present(emendation_authors.first), has_tooltip: true).(:profile_inline) %>
+      <%= cell('decidim/author', emendation_author, has_tooltip: true).(:profile_inline) %>
     </div>
 
     <%= created_at %>
