@@ -1,23 +1,21 @@
-<h2>
-  <%= translated_attribute(@proposal.title) %>
-</h2>
+<div class="proposal--sidebar">
+  <div class="columns">
+    <h2>
+      <%= translated_attribute(@proposal.title) %>
+    </h2>
 
-<%= link_to proposal_path(@proposal) do %>
-  Visit details
-<% end %>
+    <%= link_to proposal_path(@proposal) do %>
+      <%= t('decidim.proposals.actions.show') %>
+    <% end %>
+  </div>
 
-<h3>Amendments (<%= @proposal.amendments.size %>) </h3>
+  <div class="columns">
+    <h3 class="section-heading">Amendments (<%= @proposal.amendments.size %>) </h3>
 
-<%#= amendments_for @proposal %>
+    <% @proposal.amendments.order(created_at: :desc).limit(2).each do |amendment| %>
+      <%= cell('decidim/proposals/amendment', amendment) %>
+    <% end %>
+  </div>
 
-<% @proposal.amendments.order(created_at: :desc).limit(2).each do |amendment| %>
-  <%= cell('decidim/proposals/amendment', amendment) %>
-<% end %>
-
-<h3>
-  Comments (<%= @proposal.comments.size %>)
-</h3>
-
-<%= comments_for(@proposal) %>
-<%= yield :expanded %>
-
+  <%= cell("decidim/proposals/comments", @proposal) %>
+</div>
