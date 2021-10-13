@@ -7,6 +7,7 @@ module Decidim
     class AmendmentCell < Decidim::ViewModel
       include Cell::ViewModel::Partial
       include Decidim::SanitizeHelper
+      include ProposalCellsHelper
 
       def show
         render
