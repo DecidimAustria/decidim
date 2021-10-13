@@ -1,1 +1,20 @@
 @import "stylesheets/decidim/proposals/proposals/preview";
+
+.proposal-actions {
+  padding: 0 1rem;
+
+  .right-column {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+#proposals {
+  background-color: white;
+  padding: 0 1rem;
+}
+
+.proposal {
+  padding: 1rem; 
+  border-bottom: 1px solid #e9e9e9;
+}

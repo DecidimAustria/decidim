@@ -1,34 +1,35 @@
 <div class="row hover-section">
-  <div class="columns mediumlarge-8">
-    <%= link_to sidebar_proposal_path(model), class: "card__link--block pt-s pb-s" do %>
+  <div class="columns mediumlarge-12 proposal">
+    <%= link_to sidebar_proposal_path(model), class: "card__link--block pb-s" do %>
       <%= title %>
       <%= body %>
     <% end %>
 
-    <%= link_to amend_resource_path do %>
-      <%= present(model).comments.where(alignment: 1).size %>
-      Upvotes
-    <% end %>
+    <div class="proposal-actions">
+      <div class="columns mediumlarge-5">
+        <%= link_to amend_resource_path do %>
+          <span class="show-for-sr"><%= t("decidim.metrics.endorsements.title") %></span>
+          <%= icon "chevron-top", class: "icon--small", role: "img", "aria-hidden": true %>
+          <%= present(model).endorsements_count %>
+        <% end %>
+      </div>
 
-    <%= link_to "" do %>
-      <%= present(model).comments.where(alignment: -1).size %>
-      Downvotes
-    <% end %>
+      <div class="columns mediumlarge-7 right-column">
+        <%= link_to "" do %>
+          <%= icon "comment-square", class: "icon--small", role: "img", "aria-hidden": true %>
+          <%= t("decidim.components.proposals.actions.comment") %>
+          (<%= present(model).comments_count %>)
+        <% end %>
 
-    <%= link_to "" do %>
-      <%= present(model).comments_count %>
+        <%= link_to amend_resource_path do %>
+          <%= icon "pencil", class: "icon--small", role: "img", "aria-hidden": true %>
+          <%= t("decidim.components.proposals.actions.amend") %>
+        <% end %>
 
-      Add your comment
-    <% end %>
-
-    <%= link_to amend_resource_path do %>
-      Amend Proposal
-    <% end %>
-
-    <%= link_to sidebar_proposal_path(model), remote: true do %>
-      Visit details
-    <% end %>
+        <%= link_to sidebar_proposal_path(model), remote: true do %>
+          Visit details
+        <% end %>
+      </div>
+    </div>
   </div>
-
-  <%= render :buttons %>
 </div>
