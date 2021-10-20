@@ -6,29 +6,31 @@
     <% end %>
 
     <div class="proposal-actions">
-      <div class="columns mediumlarge-5">
-        <%= link_to amend_resource_path do %>
-          <span class="show-for-sr"><%= t("decidim.metrics.endorsements.title") %></span>
-          <%= icon "chevron-top", class: "icon--small", role: "img", "aria-hidden": true %>
-          <%= present(model).endorsements_count %>
-        <% end %>
-      </div>
+      <div class="row">
+        <div class="columns mediumlarge-5">
+          <%= link_to amend_resource_path do %>
+            <span class="show-for-sr"><%= t("decidim.metrics.endorsements.title") %></span>
+            <%= icon "chevron-top", class: "icon--small", role: "img", "aria-hidden": true %>
+            <%= present(model).endorsements_count %>
+          <% end %>
+        </div>
 
-      <div class="columns mediumlarge-7 right-column">
-        <%= link_to proposal_path(model, anchor: "comments") do %>
-          <%= icon "comment-square", class: "icon--small", role: "img", "aria-hidden": true %>
-          <%= t("decidim.components.proposals.actions.comment") %>
-          (<%= present(model).comments_count %>)
-        <% end %>
+        <div class="columns mediumlarge-7 right-column">
+          <%= link_to proposal_path(model, anchor: "comments") do %>
+            <%= icon "comment-square", class: "icon--small", role: "img", "aria-hidden": true %>
+            <%= t("decidim.components.proposals.actions.comment") %>
+            (<%= present(model).comments_count %>)
+          <% end %>
 
-        <%= link_to amend_resource_path do %>
-          <%= icon "pencil", class: "icon--small", role: "img", "aria-hidden": true %>
-          <%= t("decidim.components.proposals.actions.amend") %>
-        <% end %>
+          <%= link_to amend_resource_path do %>
+            <%= icon "pencil", class: "icon--small", role: "img", "aria-hidden": true %>
+            <%= t("decidim.components.proposals.actions.amend") %>
+          <% end %>
 
-        <%= link_to proposal_path(model), remote: true do %>
-          <%= t('decidim.proposals.actions.show') %>
-        <% end %>
+          <%= link_to proposal_path(model), remote: true do %>
+            <%= t('decidim.proposals.actions.show') %>
+          <% end %>
+        </div>
       </div>
     </div>
   <% end %>
