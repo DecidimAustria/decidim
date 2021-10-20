@@ -15,7 +15,7 @@
       </div>
 
       <div class="columns mediumlarge-7 right-column">
-        <%= link_to "" do %>
+        <%= link_to proposal_path(model, anchor: "comments") do %>
           <%= icon "comment-square", class: "icon--small", role: "img", "aria-hidden": true %>
           <%= t("decidim.components.proposals.actions.comment") %>
           (<%= present(model).comments_count %>)
