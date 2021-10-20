@@ -7,11 +7,7 @@
 
     <div class="proposal-actions">
       <div class="columns mediumlarge-5">
-        <%= link_to amend_resource_path do %>
-          <span class="show-for-sr"><%= t("decidim.metrics.endorsements.title") %></span>
-          <%= icon "chevron-top", class: "icon--small", role: "img", "aria-hidden": true %>
-          <%= present(model).endorsements_count %>
-        <% end %>
+        <%= render partial: "decidim/proposals/proposals/participatory_texts/proposal_vote_button_chevron.html", locals: { proposal: model, from_proposals_list: true } %>
       </div>
 
       <div class="columns mediumlarge-7 right-column">
