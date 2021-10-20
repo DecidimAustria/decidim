@@ -2,7 +2,11 @@
   <div></div>
 <% else %>
   <% if component_settings.participatory_texts_enabled? && from_proposals_list %>
-    <%= render partial: "decidim/proposals/proposals/participatory_texts/proposal_vote_button", locals: { proposal: proposal, from_proposals_list: true } %>
+    <% if chevron_button %>
+      <%= render partial: "decidim/proposals/proposals/participatory_texts/proposal_vote_button_chevron", locals: { proposal: proposal, from_proposals_list: true } %>
+    <% else %>
+      <%= render partial: "decidim/proposals/proposals/participatory_texts/proposal_vote_button", locals: { proposal: proposal, from_proposals_list: true } %>
+    <% end %>
   <% else %>
     <div id="proposal-<%= proposal.id %>-vote-button" class="button--vote-button">
       <% if !current_user %>
