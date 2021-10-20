@@ -74,7 +74,7 @@ module Decidim
 
         raise ActionController::RoutingError, "Not Found" if proposal.blank? || !can_show_proposal?
 
-        render "decidim/proposals/proposals/participatory_texts/participatory_text", locals: { proposal: proposal }
+        render "decidim/proposals/proposals/participatory_texts/participatory_text", locals: { active_proposal: proposal }
       end
 
       def new

@@ -1,5 +1,5 @@
 <div class="row hover-section">
-  <div class="columns mediumlarge-12 proposal">
+  <%= content_tag :div, class: proposal_class_names do %>
     <%= link_to sidebar_proposal_path(model), class: "card__link--block pb-s" do %>
       <%= title %>
       <%= body %>
@@ -31,5 +31,5 @@
         <% end %>
       </div>
     </div>
-  </div>
+  <% end %>
 </div>

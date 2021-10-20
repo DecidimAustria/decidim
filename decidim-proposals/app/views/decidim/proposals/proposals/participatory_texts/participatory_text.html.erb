@@ -8,14 +8,14 @@
 
     <div class="row columns card" id="proposals">
       <% @proposals.each do |proposal| %>
-        <%= cell("decidim/proposals/participatory_text_proposal", proposal, context: { current_user: current_user }) %>
+        <%= cell("decidim/proposals/participatory_text_proposal", proposal, active_proposal: local_assigns[:active_proposal], context: { current_user: current_user }) %>
       <% end %>
     </div>
   </div>
 
   <div class="column medium-5 pull-right">
-    <% if local_assigns[:proposal].presence %>
-      <%= render partial: "decidim/proposals/proposals/participatory_texts/sidebar", locals: { proposal: proposal } %>
+    <% if local_assigns[:active_proposal].presence %>
+      <%= render partial: "decidim/proposals/proposals/participatory_texts/sidebar", locals: { proposal: active_proposal } %>
     <% end %>
   </div>
 </div>

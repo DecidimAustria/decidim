@@ -85,6 +85,18 @@ module Decidim
       def amend_button_disabled?
         !amendmendment_creation_enabled?
       end
+
+      def is_active_proposal?
+        return @options[:active_proposal] && model == @options[:active_proposal]
+      end
+
+      def proposal_class_names
+        class_names = 'columns mediumlarge-12 proposal'
+
+        class_names = "#{class_names} proposal--active" if is_active_proposal?
+
+        return class_names
+      end
     end
   end
 end

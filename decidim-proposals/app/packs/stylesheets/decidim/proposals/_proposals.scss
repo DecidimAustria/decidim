@@ -25,6 +25,10 @@
   }
 }
 
+.proposal--active {
+  border: 1px solid $dark-gray;
+}
+
 .emendation {
   .amendment__header {
     padding: 1rem;
