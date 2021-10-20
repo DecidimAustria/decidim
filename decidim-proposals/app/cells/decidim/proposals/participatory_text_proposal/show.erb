@@ -1,6 +1,6 @@
 <div class="row hover-section">
   <%= content_tag :div, class: proposal_class_names do %>
-    <%= link_to sidebar_proposal_path(model), class: "card__link--block pb-s" do %>
+    <%= link_to overview_proposal_path(model), class: "card__link--block pb-s" do %>
       <%= title %>
       <%= body %>
     <% end %>
@@ -26,7 +26,7 @@
           <%= t("decidim.components.proposals.actions.amend") %>
         <% end %>
 
-        <%= link_to sidebar_proposal_path(model), remote: true do %>
+        <%= link_to proposal_path(model), remote: true do %>
           <%= t('decidim.proposals.actions.show') %>
         <% end %>
       </div>

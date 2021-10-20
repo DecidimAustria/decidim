@@ -15,7 +15,7 @@
 
   <div class="column medium-5 pull-right">
     <% if local_assigns[:active_proposal].presence %>
-      <%= render partial: "decidim/proposals/proposals/participatory_texts/sidebar", locals: { proposal: active_proposal } %>
+      <%= render partial: "decidim/proposals/proposals/participatory_texts/overview", locals: { proposal: active_proposal } %>
     <% end %>
   </div>
 </div>

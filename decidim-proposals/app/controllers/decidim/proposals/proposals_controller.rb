@@ -20,7 +20,7 @@ module Decidim
 
       before_action :authenticate_user!, only: [:new, :create, :complete]
       before_action :ensure_is_draft, only: [:compare, :complete, :preview, :publish, :edit_draft, :update_draft, :destroy_draft]
-      before_action :set_proposal, only: [:show, :edit, :update, :withdraw, :sidebar]
+      before_action :set_proposal, only: [:show, :edit, :update, :withdraw, :overview]
       before_action :edit_form, only: [:edit_draft, :edit]
 
       before_action :set_participatory_text
@@ -61,7 +61,7 @@ module Decidim
         raise ActionController::RoutingError, "Not Found" if @proposal.blank? || !can_show_proposal?
       end
 
-      def sidebar
+      def overview
         @proposals = Decidim::Proposals::Proposal
                      .where(component: current_component)
                      .published
