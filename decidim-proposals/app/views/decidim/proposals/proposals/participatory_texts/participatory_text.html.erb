@@ -6,7 +6,7 @@
 
     <%= render partial: "decidim/proposals/proposals/participatory_texts/view_index" %>
 
-    <div class="row columns card" id="proposals">
+    <div class="card" id="proposals">
       <% @proposals.each do |proposal| %>
         <%= cell("decidim/proposals/participatory_text_proposal", proposal, active_proposal: local_assigns[:active_proposal], context: { current_user: current_user }) %>
       <% end %>

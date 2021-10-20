@@ -1,37 +1,41 @@
 @import "stylesheets/decidim/proposals/proposals/preview";
 
 #proposals {
-  background-color: white;
-  padding: 0 1rem;
+  background-color: $white;
+  padding: 1rem;
 }
 
 .proposal {
   padding: 1rem;
-  border-bottom: 1px solid #e9e9e9;
+  border: 1px solid $white;
+  border-bottom-color: #e9e9e9;
 
   a {
+    color: inherit;
     &:hover {
       text-decoration: none;
     }
   }
-}
 
-.proposal-actions {
+  &__actions {
 
-  .right-column {
-    display: flex;
-    justify-content: space-between;
-  }
+    .right-column {
+      display: flex;
+      justify-content: space-between;
+    }
 
-  a {
-    &:hover {
-      text-decoration: underline;
+    a {
+      color: #39747f;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
 
 .proposal--active {
   border: 1px solid $dark-gray;
+  border-radius: 4px;
 }
 
 .emendation {
@@ -59,22 +63,12 @@
 
   &:hover{
     .proposal {
-      background-color: $white;
-      border-top: $border;
-      border-bottom: $border;
-    }
-
-    > :first-child{
-      border-right: $border;
+      background-color: #f9f9f9;
     }
 
     .proposal-actions {
       color: #3d393c;
     }
-  }
-
-  a{
-    color: inherit;
   }
 
   .hidden-section{

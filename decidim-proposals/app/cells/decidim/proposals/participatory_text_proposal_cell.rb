@@ -91,7 +91,7 @@ module Decidim
       end
 
       def proposal_class_names
-        class_names = 'columns mediumlarge-12 proposal'
+        class_names = 'proposal'
 
         class_names = "#{class_names} proposal--active" if is_active_proposal?
 
