@@ -25,7 +25,9 @@
     }
 
     a {
-      color: #39747f;
+      color: $secondary;
+      font-weight: 600;
+      font-size: .9rem;
       &:hover {
         text-decoration: underline;
       }
