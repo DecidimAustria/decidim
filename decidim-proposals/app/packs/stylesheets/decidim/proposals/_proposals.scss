@@ -59,6 +59,11 @@
 }
 
 .proposal__overview {
+  position: static;
+}
+
+.proposal__overview--sticky {
+  position: fixed;
 }
 
 .hover-section{
