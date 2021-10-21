@@ -64,6 +64,10 @@
 
 .proposal__overview--sticky {
   position: fixed;
+  max-width: 470px;
+  top: 0;
+  height: 100vh;
+  overflow-y: scroll;
 }
 
 .hover-section{
