@@ -142,6 +142,7 @@ de:
             official_proposals_enabled: Offizielle Vorschläge aktiviert
             participatory_texts_enabled: Partizipative Texte aktiviert
             participatory_texts_enabled_readonly: Die Interaktion mit dieser Einstellung ist nicht möglich, wenn Vorschläge bestehen. Bitte erstellen Sie eine neue „Vorschlagskomponente“, wenn Sie diese Funktion aktivieren möchten, oder verwerfen Sie alle importierten Vorschläge im Menü „Beteiligungstexte“, wenn Sie diese Funktion deaktivieren möchten.
+            hide_participatory_text_titles_enabled: Titel für Partizipative Texte ausblenden
             proposal_answering_enabled: Vorschlagsantworten aktiviert
             proposal_edit_before_minutes: Vorschläge können von Autoren innerhalb dieser Zeit bearbeitet werden
             proposal_edit_time: Vorschläge bearbeiten
@@ -373,6 +374,7 @@ de:
             are_you_sure: Sind Sie sicher, den gesamten Entwurf des partizipativen Textes zu verwerfen?
             discard_all: Alle verwerfen
             import_doc: Dokument importieren
+            write_document: Dokument schreiben
           discard:
             success: Alle Mitentscheidungsentwürfe wurden verworfen.
           import:
@@ -386,6 +388,11 @@ de:
             title: VORSCHAU TEILNEHMERTEXT
             discard: Löschen
             discard_confirmation: Sind Sie sicher, dass Sie diesen Abschnitt entfernen wollen?
+          new_editor:
+            title: Dokument hinzufügen
+            bottom_hint: "(Sie können Dokumentabschnitte in der Vorschau anzeigen und sortieren.)"
+            editor_description: "Schreiben Sie ein Dokument oder fügen Sie es ein und verwenden Sie Überschriften, um die Absätze zu trennen."
+            import: Import
           new_import:
             accepted_mime_types:
               md: Markdown

@@ -1,9 +1,31 @@
-<div class="row hover-section">
-  <div class="columns mediumlarge-8">
-    <%= link_to resource_path, class: "card__link--block pt-s pb-s" do %>
+<div class="hover-section" id="<%= dom_id(model) %>">
+  <%= content_tag :div, class: proposal_class_names do %>
+    <%= link_to overview_proposal_path(model, anchor: dom_id(model)), class: "card__link--block pb-s" do %>
       <%= title %>
       <%= body %>
     <% end %>
-  </div>
-  <%= render :buttons %>
+
+    <div class="proposal__actions row">
+      <div class="columns mediumlarge-5">
+        <%= render partial: "decidim/proposals/proposals/participatory_texts/proposal_vote_button_chevron.html", locals: { proposal: model, from_proposals_list: true } %>
+      </div>
+
+      <div class="columns mediumlarge-7 right-column">
+        <%= link_to proposal_path(model, anchor: "comments") do %>
+          <%= icon "comment-square", class: "icon--small", role: "img", "aria-hidden": true %>
+          <%= t("decidim.components.proposals.actions.comment") %>
+          (<%= present(model).comments_count %>)
+        <% end %>
+
+        <%= link_to amend_resource_path do %>
+          <%= icon "pencil", class: "icon--small", role: "img", "aria-hidden": true %>
+          <%= t("decidim.components.proposals.actions.amend") %>
+        <% end %>
+
+        <%= link_to proposal_path(model), remote: true do %>
+          <%= t('decidim.proposals.actions.show') %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
 </div>

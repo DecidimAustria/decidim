@@ -14,6 +14,7 @@ module Decidim
       def create
         enforce_permission_to :vote, :proposal, proposal: proposal
         @from_proposals_list = params[:from_proposals_list] == "true"
+        @chevron_button = params[:chevron_button] == "true"
 
         VoteProposal.call(proposal, current_user) do
           on(:ok) do
@@ -37,6 +38,7 @@ module Decidim
       def destroy
         enforce_permission_to :unvote, :proposal, proposal: proposal
         @from_proposals_list = params[:from_proposals_list] == "true"
+        @chevron_button = params[:chevron_button] == "true"
 
         UnvoteProposal.call(proposal, current_user) do
           on(:ok) do

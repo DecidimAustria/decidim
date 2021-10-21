@@ -20,7 +20,7 @@ module Decidim
 
       before_action :authenticate_user!, only: [:new, :create, :complete]
       before_action :ensure_is_draft, only: [:compare, :complete, :preview, :publish, :edit_draft, :update_draft, :destroy_draft]
-      before_action :set_proposal, only: [:show, :edit, :update, :withdraw]
+      before_action :set_proposal, only: [:show, :edit, :update, :withdraw, :overview]
       before_action :edit_form, only: [:edit_draft, :edit]
 
       before_action :set_participatory_text
@@ -59,6 +59,22 @@ module Decidim
 
       def show
         raise ActionController::RoutingError, "Not Found" if @proposal.blank? || !can_show_proposal?
+      end
+
+      def overview
+        @proposals = Decidim::Proposals::Proposal
+                     .where(component: current_component)
+                     .published
+                     .not_hidden
+                     .only_amendables
+                     .includes(:category, :scope)
+                     .order(position: :asc)
+
+        proposal = @proposals.find(params[:id])
+
+        raise ActionController::RoutingError, "Not Found" if proposal.blank? || !can_show_proposal?
+
+        render "decidim/proposals/proposals/participatory_texts/participatory_text", locals: { active_proposal: proposal }
       end
 
       def new

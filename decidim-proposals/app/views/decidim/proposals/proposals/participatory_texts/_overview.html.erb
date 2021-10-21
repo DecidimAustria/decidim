@@ -1,0 +1,19 @@
+<div class="proposal__overview" id="proposal__overview">
+  <h2>
+    <%= translated_attribute(@proposal.title) %>
+  </h2>
+
+  <%= link_to proposal_path(@proposal), class: 'link' do %>
+    <%= t('decidim.proposals.actions.show') %>
+  <% end %>
+
+  <h3 class="section-heading margin-top-1">Amendments (<%= @proposal.amendments.size %>) </h3>
+
+  <% @proposal.amendments.order(created_at: :desc).limit(2).each do |amendment| %>
+    <%= cell('decidim/proposals/amendment', amendment) %>
+  <% end %>
+
+  <div class="row">
+    <%= cell("decidim/proposals/comments", @proposal) %>
+  </div>
+</div>

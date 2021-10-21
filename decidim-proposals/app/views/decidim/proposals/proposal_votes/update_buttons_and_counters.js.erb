@@ -9,7 +9,7 @@
     var $proposalVoteButton = $('#proposal-<%= proposal.id %>-vote-button');
 
     if($proposalVoteButton[0]) {
-      morphdom($proposalVoteButton[0], '<%= j(render partial: "decidim/proposals/proposals/vote_button", locals: { proposal: proposal, from_proposals_list: @from_proposals_list }).strip.html_safe %>');
+      morphdom($proposalVoteButton[0], '<%= j(render partial: "decidim/proposals/proposals/vote_button", locals: { proposal: proposal, from_proposals_list: @from_proposals_list, chevron_button: @chevron_button }).strip.html_safe %>');
     }
   })();
 <% end %>

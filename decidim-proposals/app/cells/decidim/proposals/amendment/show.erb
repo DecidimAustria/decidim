@@ -1,0 +1,18 @@
+<div class="card emendation">
+  <div class="amendment__header">
+    <div class="amendment__author">
+      <%# TODO: check if it's possible that an emendation has multiple authors %>
+      <%= cell('decidim/author', emendation_author, has_tooltip: true).(:profile_inline) %>
+    </div>
+
+    <%= created_at %>
+  </div>
+
+  <div class="amendment__body">
+    <%= emendation_excerpt %>
+  </div>
+
+  <div class="amendment__actions">
+    <%= link_to t('decidim.proposals.actions.show'), compare_emendation_path %>
+  </div>
+</div>

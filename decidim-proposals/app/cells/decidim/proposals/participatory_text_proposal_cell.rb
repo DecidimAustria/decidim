@@ -19,6 +19,8 @@ module Decidim
       private
 
       def title
+        return if current_component.settings.hide_participatory_text_titles_enabled?
+
         case model.participatory_text_level
         when "section"
           "<h5><strong>#{section_title}</strong></h5>"
@@ -84,6 +86,18 @@ module Decidim
 
       def amend_button_disabled?
         !amendmendment_creation_enabled?
+      end
+
+      def is_active_proposal?
+        return @options[:active_proposal] && model == @options[:active_proposal]
+      end
+
+      def proposal_class_names
+        class_names = 'proposal'
+
+        class_names = "#{class_names} proposal--active" if is_active_proposal?
+
+        return class_names
       end
     end
   end

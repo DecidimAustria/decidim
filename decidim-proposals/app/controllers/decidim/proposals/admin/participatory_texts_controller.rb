@@ -42,6 +42,34 @@ module Decidim
           end
         end
 
+        def new_editor
+          enforce_permission_to :manage, :participatory_texts
+          participatory_text = Decidim::Proposals::ParticipatoryText.find_by(component: current_component)
+          @import = form(Admin::ImportEditorParticipatoryTextForm).from_model(participatory_text)
+        end
+
+        def import_from_editor
+          enforce_permission_to :manage, :participatory_texts
+          @import = form(Admin::ImportEditorParticipatoryTextForm).from_params(params)
+
+          Admin::ImportFromEditorParticipatoryText.call(@import) do
+            on(:ok) do
+              flash[:notice] = I18n.t("participatory_texts.import.success", scope: "decidim.proposals.admin")
+              redirect_to EngineRouter.admin_proxy(current_component).participatory_texts_path
+            end
+
+            on(:invalid) do
+              flash.now[:alert] = I18n.t("participatory_texts.import.invalid", scope: "decidim.proposals.admin")
+              render action: "new_editor"
+            end
+
+            on(:invalid_file) do
+              flash.now[:alert] = I18n.t("participatory_texts.import.invalid_file", scope: "decidim.proposals.admin")
+              render action: "new_editor"
+            end
+          end
+        end
+
         # When `save_draft` param exists, proposals are only saved.
         # When no `save_draft` param is set, proposals are saved and published.
         def update
