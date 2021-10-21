@@ -109,6 +109,9 @@ en:
     admin:
       actions:
         cancel: Cancel
+      exports:
+        formats:
+          Word: Word (docx)
     admin_log:
       area:
         create: "%{user_name} created the %{resource_name} area"

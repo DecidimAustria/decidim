@@ -141,6 +141,8 @@ Decidim.register_component(:proposals) do |component|
       end
     end
 
+    exports.formats %w(CSV JSON Excel Word)
+
     exports.include_in_open_data = true
 
     exports.serializer Decidim::Proposals::ProposalSerializer
