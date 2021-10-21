@@ -1,6 +1,6 @@
-<div class="hover-section">
+<div class="hover-section" id="<%= dom_id(model) %>">
   <%= content_tag :div, class: proposal_class_names do %>
-    <%= link_to overview_proposal_path(model), class: "card__link--block pb-s" do %>
+    <%= link_to overview_proposal_path(model, anchor: dom_id(model)), class: "card__link--block pb-s" do %>
       <%= title %>
       <%= body %>
     <% end %>
