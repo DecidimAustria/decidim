@@ -386,6 +386,8 @@ de:
             publish_document: Dokument veröffentlichen
             save_draft: Entwurf speichern
             title: VORSCHAU TEILNEHMERTEXT
+            discard: Löschen
+            discard_confirmation: Sind Sie sicher, dass Sie diesen Abschnitt entfernen wollen?
           new_editor:
             title: Dokument hinzufügen
             bottom_hint: "(Sie können Dokumentabschnitte in der Vorschau anzeigen und sortieren.)"

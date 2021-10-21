@@ -21,6 +21,9 @@ module Decidim
             resource :proposals_split, only: [:create]
             resource :valuation_assignment, only: [:create, :destroy]
           end
+          member do
+            delete :destroy_draft
+          end
           resources :proposal_answers, only: [:edit, :update]
           resources :proposal_notes, only: [:create]
         end
