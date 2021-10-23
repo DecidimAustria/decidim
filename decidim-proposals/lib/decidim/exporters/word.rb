@@ -77,7 +77,7 @@ module Decidim
             proposal.body.each do |language, body|
               docx.p do
                 text "body (#{language}): ", bold: true
-                text body
+                text "#{body}"
               end
             end
           else
