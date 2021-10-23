@@ -144,6 +144,7 @@ module Decidim
               docx.p do
                 text "Amendment ID: ", bold: true
                 text amendment.id
+                text ", "
                 text "Proposal ID: ", bold: true
                 text amendment.emendation.id
               end
@@ -178,7 +179,7 @@ module Decidim
               end
 
               docx.p do
-                text "endorsements/total_count: ", bold: true
+                text "endorsements: ", bold: true
                 text proposal.endorsements.count
               end
 
