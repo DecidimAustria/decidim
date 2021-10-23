@@ -26,6 +26,8 @@ Gem::Specification.new do |s|
   s.add_dependency "redcarpet", "~> 3.5", ">= 3.5.1"
   s.add_dependency "commonlit-caracal", "~> 1.7.2"
 
+  s.add_dependency "docx", "~> 0.6.2"
+
   s.add_development_dependency "decidim-admin", Decidim::Proposals.version
   s.add_development_dependency "decidim-assemblies", Decidim::Proposals.version
   s.add_development_dependency "decidim-budgets", Decidim::Proposals.version
