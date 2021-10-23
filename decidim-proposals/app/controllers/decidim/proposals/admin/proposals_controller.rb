@@ -147,7 +147,7 @@ module Decidim
         def destroy_draft
           enforce_permission_to :edit, :proposal, proposal: draft
   
-          Admin::DestroyProposal.call(draft, current_user) do
+          Admin::DestroyProposal.call(draft) do
             on(:ok) do
               flash[:notice] = I18n.t("proposals.destroy_draft.success", scope: "decidim")
               redirect_to participatory_texts_path
@@ -176,6 +176,10 @@ module Decidim
 
         def proposal_ids
           @proposal_ids ||= params[:proposal_ids]
+        end
+
+        def drafts
+          Proposal.where(component: current_component).drafts
         end
 
         def draft

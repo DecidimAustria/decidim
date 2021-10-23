@@ -8,7 +8,6 @@ module Decidim
         # Public: Initializes the command.
         #
         # proposal     - The proposal to destroy.
-        # current_user - The current user.
         def initialize(proposal)
           @proposal = proposal
         end
