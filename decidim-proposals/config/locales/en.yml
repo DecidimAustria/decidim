@@ -392,6 +392,7 @@ en:
         new: New proposal
         participatory_texts: Participatory texts
         show: Show proposal
+        show_details: Show details
         title: Actions
       admin:
         actions:
