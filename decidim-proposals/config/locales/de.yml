@@ -358,6 +358,7 @@ de:
         new: Neuer Vorschlag
         participatory_texts: Partizipative Texte
         show: Vorschlag anzeigen
+        show_details: Details anzeigen
         title: Aktionen
       admin:
         actions:
