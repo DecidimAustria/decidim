@@ -2,16 +2,17 @@
   <div class="columns large-12 comments-container" id="comments">
     <div class="comments">
       <div class="row collapse order-by">
-        <h2 class="order-by__text section-heading">
-          <% if single_comment? %>
-            <%= t("decidim.components.comments.comment_details_title") %>
-          <% else %>
-            <span class="comments-count">
-              <%= t("decidim.components.comments.title", count: comments_count) %>
-            </span>
-          <% end %>
-        </h2>
+        <h3 class="order-by__text section-heading">
+          <%= comments_count %> <%= Decidim::Comments::Comment.model_name.human(count: comments_count) %>
+        </h3>
       </div>
+
+      <p>
+        <% if comments_count > 2 %>
+          <%= link_to t('decidim.proposals.actions.add_comment'), '#add_comment', class: 'link' %>
+        <% end %>
+      </p>
+
       <%= single_comment_warning %>
       <%= blocked_comments_warning %>
       <div class="comment-threads">
@@ -19,7 +20,9 @@
           <%= cell("decidim/comments/comment_thread", comment, order: order) %>
         <% end %>
       </div>
-      <%= add_comment %>
+      <div id="add_comment">
+        <%= add_comment %>
+      </div>
       <%= user_comments_blocked_warning %>
     </div>
     <div class="callout primary loading-comments hide">
