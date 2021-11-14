@@ -7,7 +7,7 @@
     <%= t('decidim.proposals.actions.show') %>
   <% end %>
 
-  <h3 class="section-heading margin-top-1">Amendments (<%= @proposal.amendments.size %>) </h3>
+  <h3 class="section-heading margin-top-1"><%= @proposal.amendments.size %> <%= Decidim::Amendment.model_name.human(count: @proposal.amendments.size) %></h3>
 
   <% @proposal.amendments.order(created_at: :desc).limit(2).each do |amendment| %>
     <%= cell('decidim/proposals/amendment', amendment) %>
