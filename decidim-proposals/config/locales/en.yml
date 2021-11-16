@@ -164,7 +164,7 @@ en:
             official_proposals_enabled: Official proposals enabled
             participatory_texts_enabled: Participatory texts enabled
             participatory_texts_enabled_readonly: Cannot interact with this setting if there are existing proposals. Please, create a new `Proposals component` if you want to enable this feature or discard all imported proposals in the `Participatory Texts` menu if you want to disable it.
-            hide_participatory_text_titles_enabled: Hide participatory text titles
+            hide_participatory_text_titles_enabled: Hide participatory text titles if they consist only of numbers
             proposal_answering_enabled: Proposal answering enabled
             proposal_edit_before_minutes: Proposals can be edited by authors before this many minutes passes
             proposal_edit_time: Proposal editing
