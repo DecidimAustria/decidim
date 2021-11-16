@@ -18,220 +18,237 @@ module Decidim
       #
       # Returns an ExportData instance.
       def export
-        docx = Caracal::Document.new('export.docx')
+        # @docx
+        init_docx
 
-        docx.style id: "metadata", name: "Metadata" do
-          color "929292"
-        end
+        @component = collection.first.component
+        @participatory_space = collection.first.participatory_space
 
-        docx.style id: "gray", name: "Gray" do
-          color "929292"
-        end
+        print_titles @component.name
 
-        docx.style id: "green", name: "Green" do
-          color '61D836'
-        end
+        print_metadata
 
-        docx.style id: "red", name: "Red" do
-          color 'EE220C'
-        end
-
-        docx
-
-        component = collection.first.component
-        participatory_space = collection.first.participatory_space
-
-        if component.name.keys.count > 1
-          component.name.each do |language, name|
-            docx.h1 "#{language}: #{name}"
-          end
-        else
-          docx.h1 component.name.values.first
-        end
-
-        metadata = [
-          "ID",
-          "participatory space id: #{participatory_space.id}",
-          "component id: #{component.id}"
-        ]
-        docx.p metadata.join(" | "), style: "metadata"
-        docx.p
-
-        collection.first.participatory_space.short_description.each do |language, short_description|
-          docx.p "short description (#{language}): #{short_description}"
-        end
-        collection.first.participatory_space.description.each do |language, description|
-          docx.p "description (#{language}): #{description}"
-        end
+        print_descriptions collection.first.participatory_space
 
         collection.each do |proposal|
           next if proposal.amended.present?
 
-          docx.hr
-          if proposal.title.keys.count > 1
-            if proposal.component.settings.hide_participatory_text_titles_enabled? == false
-              proposal.title.each do |language, title|
-                docx.h2 "title (#{language}): #{title}"
-              end
-            end
-            proposal.body.each do |language, body|
-              docx.p do
-                text "body (#{language}): ", bold: true
-                text "#{body}"
-              end
-            end
-          else
-            if proposal.component.settings.hide_participatory_text_titles_enabled? == false
-              docx.h2 "title: #{proposal.title.values.first}"
-            end
-            docx.p do
-              text "body: ", bold: true
-              text proposal.body.values.first
-            end
-          end
-
-          # possible states: not_answered evaluating accepted rejected withdrawn
-          case proposal.state
-          when "accepted"
-            docx.p proposal.state, bold: true, color: '61D836'
-          when "evaluating", ""
-            docx.p proposal.state, bold: true, color: 'FFD932'
-          when "rejected"
-            docx.p proposal.state, bold: true, color: 'EE220C'
-          when "not_answered", "withdrawn"
-            docx.p proposal.state, bold: true, color: '929292'
-          end
-
-          docx.p "Reference: #{proposal.reference}", style: "gray"
-          docx.p "Followers: #{proposal.followers.count}", style: "gray"
-
-          docx.p do
-            text "Supports: ", bold: true
-            text proposal.votes.count
-          end
-
-          docx.p do
-            text "endorsements/total_count: ", bold: true
-            text proposal.endorsements.count
-          end
-
-          docx.p do
-            text "comments: ", bold: true
-            text proposal.comments.count
-          end
-
-          docx.p
-
-          if proposal.comments.any?
-            docx.h3 "Comments to this proposal:"
-
-            proposal.comments.where(depth: 0).each do |comment|
-              print_comment(comment, docx)
-            end
-            
-            docx.p
-          end
-
-          if proposal.amendments.any?
-            docx.h3 "Amendments:"
-
-            proposal.amendments.each do |amendment|
-              if proposal.component.settings.hide_participatory_text_titles_enabled? == false
-                docx.p "Amendment title: #{amendment.emendation.title.values.first}", bold:true
-              end
-              docx.p amendment.emendation.body.values.first
-
-              docx.p do
-                text "Amendment ID: ", bold: true
-                text amendment.id
-                text ", "
-                text "Proposal ID: ", bold: true
-                text amendment.emendation.id
-              end
-
-              docx.p do
-                text "created: ", bold: true
-                text amendment.created_at
-              end
-
-              docx.p do
-                text "author(s): ", bold: true
-                text amendment.emendation.authors.collect {|a| "#{a.name} (#{a.id})"}.join (", ")
-              end
-
-              case amendment.amendable.state
-              when "accepted"
-                docx.p amendment.amendable.state, bold: true, color: '61D836'
-              when "evaluating", ""
-                docx.p amendment.amendable.state, bold: true, color: 'FFD932'
-              when "rejected"
-                docx.p amendment.amendable.state, bold: true, color: 'EE220C'
-              when "not_answered", "withdrawn"
-                docx.p amendment.amendable.state, bold: true, color: '929292'
-              end
-
-              docx.p "Reference: #{proposal.reference}", style: "gray"
-              docx.p "Followers: #{proposal.followers.count}", style: "gray"
-
-              docx.p do
-                text "Supports: ", bold: true
-                text proposal.votes.count
-              end
-
-              docx.p do
-                text "endorsements: ", bold: true
-                text proposal.endorsements.count
-              end
-
-              docx.p do
-                text "comments: ", bold: true
-                text proposal.comments.count
-              end
-            end
-          end
+          print_proposal proposal
         end
 
-        # docx.p collection.inspect
-        
-        #processed_collection.each_with_index do |resource, index|
-          #if resource[header].respond_to?(:strftime)
-          # resource[header].is_a?(Date) ? cell.set_number_format("dd.mm.yyyy") : cell.set_number_format("dd.mm.yyyy HH:MM:SS")
+        # @docx.p collection.inspect
 
-        #ExportData.new(workbook.stream.string, "xlsx")
-        doxc_buffer = docx.render
+        doxc_buffer = @docx.render
         doxc_buffer.rewind
         ExportData.new(doxc_buffer.sysread, "docx")
       end
 
       private
 
-      def print_comment(comment, docx)
-        docx.p do
-          text (" " * (comment.depth + 1))
+      def init_docx
+        @docx = Caracal::Document.new("export.docx")
+
+        @docx.style id: "metadata", name: "Metadata" do
+          color "929292"
+        end
+
+        @docx.style id: "gray", name: "Gray" do
+          color "929292"
+        end
+
+        @docx.style id: "green", name: "Green" do
+          color "61D836"
+        end
+
+        @docx.style id: "red", name: "Red" do
+          color "EE220C"
+        end
+      end
+
+      def print_titles(titles)
+        if titles.keys.count > 1
+          titles.each do |language, name|
+            @docx.h1 "#{language}: #{name}"
+          end
+        else
+          @docx.h1 titles.values.first
+        end
+      end
+
+      def print_metadata
+        metadata = [
+          "ID",
+          "participatory space id: #{@participatory_space.id}",
+          "component id: #{@component.id}"
+        ]
+        @docx.p metadata.join(" | "), style: "metadata"
+        @docx.p
+      end
+
+      def print_descriptions(participatory_space)
+        participatory_space.short_description.each do |language, short_description|
+          @docx.p "short description (#{language}): #{short_description}"
+        end
+        participatory_space.description.each do |language, description|
+          @docx.p "description (#{language}): #{description}"
+        end
+      end
+
+      def print_proposal(proposal)
+        @docx.hr
+
+        if proposal.title.keys.count > 1
+          unless proposal.component.settings.hide_participatory_text_titles_enabled? && proposal.title.values.first !~ /\D/
+            proposal.title.each do |language, title|
+              @docx.h2 "title (#{language}): #{title}"
+            end
+          end
+          proposal.body.each do |language, body|
+            @docx.p do
+              text "body (#{language}): ", bold: true
+              text body.to_s
+            end
+          end
+        else
+          @docx.h2 "title: #{proposal.title.values.first}" unless proposal.component.settings.hide_participatory_text_titles_enabled? && proposal.title.values.first !~ /\D/
+
+          @docx.p do
+            text "body: ", bold: true
+            text proposal.body.values.first
+          end
+        end
+
+        # possible states: not_answered evaluating accepted rejected withdrawn
+        case proposal.state
+        when "accepted"
+          @docx.p proposal.state, bold: true, color: "61D836"
+        when "evaluating", ""
+          @docx.p proposal.state, bold: true, color: "FFD932"
+        when "rejected"
+          @docx.p proposal.state, bold: true, color: "EE220C"
+        when "not_answered", "withdrawn"
+          @docx.p proposal.state, bold: true, color: "929292"
+        end
+
+        @docx.p "Reference: #{proposal.reference}", style: "gray"
+        @docx.p "Followers: #{proposal.followers.count}", style: "gray"
+
+        @docx.p do
+          text "Supports: ", bold: true
+          text proposal.votes.count
+        end
+
+        @docx.p do
+          text "endorsements/total_count: ", bold: true
+          text proposal.endorsements.count
+        end
+
+        @docx.p do
+          text "comments: ", bold: true
+          text proposal.comments.count
+        end
+
+        @docx.p
+
+        if proposal.comments.any?
+          @docx.h3 "Comments to this proposal:"
+
+          proposal.comments.where(depth: 0).each do |comment|
+            print_comment(comment)
+          end
+
+          @docx.p
+        end
+
+        @docx.h3 "Amendments:" if proposal.amendments.any?
+
+        proposal.amendments.each do |amendment|
+          print_amendment proposal, amendment
+        end
+      end
+
+      def print_amendment(proposal, amendment)
+        unless proposal.component.settings.hide_participatory_text_titles_enabled? && proposal.title.values.first !~ /\D/
+          @docx.p "Amendment title: #{amendment.emendation.title.values.first}", bold: true
+        end
+
+        @docx.p amendment.emendation.body.values.first
+
+        @docx.p do
+          text "Amendment ID: ", bold: true
+          text amendment.id
+          text ", "
+          text "Proposal ID: ", bold: true
+          text amendment.emendation.id
+        end
+
+        @docx.p do
+          text "created: ", bold: true
+          text amendment.created_at
+        end
+
+        @docx.p do
+          text "author(s): ", bold: true
+          text amendment.emendation.authors.collect { |a| "#{a.name} (#{a.id})" }.join(", ")
+        end
+
+        case amendment.amendable.state
+        when "accepted"
+          @docx.p amendment.amendable.state, bold: true, color: "61D836"
+        when "evaluating", ""
+          @docx.p amendment.amendable.state, bold: true, color: "FFD932"
+        when "rejected"
+          @docx.p amendment.amendable.state, bold: true, color: "EE220C"
+        when "not_answered", "withdrawn"
+          @docx.p amendment.amendable.state, bold: true, color: "929292"
+        end
+
+        @docx.p "Reference: #{proposal.reference}", style: "gray"
+        @docx.p "Followers: #{proposal.followers.count}", style: "gray"
+
+        @docx.p do
+          text "Supports: ", bold: true
+          text proposal.votes.count
+        end
+
+        @docx.p do
+          text "endorsements: ", bold: true
+          text proposal.endorsements.count
+        end
+
+        @docx.p do
+          text "comments: ", bold: true
+          text proposal.comments.count
+        end
+      end
+
+      def print_comment(comment)
+        @docx.p do
+          text " " * (comment.depth + 1)
           text "Body: ", bold: true
           text comment.body.values.first
         end
 
-        docx.p do
-          text (" " * (comment.depth + 1))
+        @docx.p do
+          text " " * (comment.depth + 1)
           text "ID: ", bold: true
           text comment.id
         end
 
-        docx.p do
-          text (" " * (comment.depth + 1))
+        @docx.p do
+          text " " * (comment.depth + 1)
           text "created: ", bold: true
           text comment.created_at
         end
 
-        docx.p do
-          text (" " * (comment.depth + 1))
+        @docx.p do
+          text " " * (comment.depth + 1)
           text "author: ", bold: true
           text "#{comment.author.name} (#{comment.author.id})"
         end
 
-        docx.p do
-          text (" " * (comment.depth + 1))
+        @docx.p do
+          text " " * (comment.depth + 1)
           text "alignment: ", bold: true
           case comment.alignment
           when 1
@@ -244,22 +261,22 @@ module Decidim
         end
 
         if comment.user_group.present?
-          docx.p do
-            text (" " * (comment.depth + 1))
+          @docx.p do
+            text " " * (comment.depth + 1)
             text "user-group id: ", bold: true
-            text "#{comment.decidim_user_group_id}"
+            text comment.decidim_user_group_id.to_s
           end
 
-          docx.p do
-            text (" " * (comment.depth + 1))
+          @docx.p do
+            text " " * (comment.depth + 1)
             text "user-group name: ", bold: true
             text comment.user_group.name
           end
         end
 
         # find comments to this comment and print them recursively
-        Decidim::Comments::Comment.where(decidim_commentable_id: comment.id).each do |comment|
-          print_comment(comment, docx)
+        Decidim::Comments::Comment.where(decidim_commentable_id: comment.id).each do |sub_comment|
+          print_comment(sub_comment)
         end
       end
     end
