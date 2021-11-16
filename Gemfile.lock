@@ -185,9 +185,11 @@ PATH
     decidim-participatory_processes (0.26.0.dev)
       decidim-core (= 0.26.0.dev)
     decidim-proposals (0.26.0.dev)
+      commonlit-caracal (~> 1.7.2)
       decidim-comments (= 0.26.0.dev)
       decidim-core (= 0.26.0.dev)
       doc2text (~> 0.4.3)
+      docx (~> 0.6.2)
       redcarpet (~> 3.5, >= 3.5.1)
     decidim-sortitions (0.26.0.dev)
       decidim-admin (= 0.26.0.dev)
@@ -348,6 +350,10 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     colorize (0.8.1)
+    commonlit-caracal (1.7.2)
+      nokogiri (~> 1.6)
+      rubyzip (>= 1.1.0, < 3.0)
+      tilt (>= 1.4)
     concurrent-ruby (1.1.9)
     crack (0.4.5)
       rexml
@@ -388,6 +394,9 @@ GEM
       nokogiri (~> 1.11.1)
       rubyzip (~> 2.3.0)
     docile (1.4.0)
+    docx (0.6.2)
+      nokogiri (~> 1.10, >= 1.10.4)
+      rubyzip (~> 2.0)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
     doorkeeper (5.5.2)
@@ -867,4 +876,4 @@ RUBY VERSION
    ruby 2.7.1p83
 
 BUNDLED WITH
-   2.2.18
+   2.2.26
