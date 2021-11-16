@@ -146,13 +146,13 @@ module Decidim
 
         def destroy_draft
           enforce_permission_to :edit, :proposal, proposal: draft
-  
+
           Admin::DestroyProposal.call(draft) do
             on(:ok) do
               flash[:notice] = I18n.t("proposals.destroy_draft.success", scope: "decidim")
               redirect_to participatory_texts_path
             end
-  
+
             on(:invalid) do
               flash.now[:alert] = I18n.t("proposals.destroy_draft.error", scope: "decidim")
               redirect_to participatory_texts_path
