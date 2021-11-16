@@ -19,6 +19,8 @@ module Decidim
       private
 
       def title
+        return "" if section_title.blank?
+
         case model.participatory_text_level
         when "section"
           "<h5><strong>#{section_title}</strong></h5>"
