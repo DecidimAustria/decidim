@@ -20,6 +20,7 @@
         <%= link_to amend_resource_path do %>
           <%= icon "pencil", class: "icon--small", role: "img", "aria-hidden": true %>
           <%= t("decidim.components.proposals.actions.amend") %>
+          (<%= model.amendments.count %>)
         <% end %>
 
         <%= link_to proposal_path(model), remote: true do %>

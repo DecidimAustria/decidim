@@ -9,6 +9,7 @@
 
       <p>
         <% if comments_count > 2 %>
+          <%= icon "comment-square", class: "icon--small", role: "img", "aria-hidden": true %>
           <%= link_to t('decidim.proposals.actions.add_comment'), '#add_comment', class: 'link' %>
         <% end %>
       </p>

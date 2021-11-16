@@ -41,12 +41,22 @@
 }
 
 .emendation {
+  .amendment__avatar {
+    margin-left: -1.2rem;
+  }
+
   .amendment__header {
-    padding: 1rem;
+    padding: 1rem 1rem 0.5rem 1rem;
   }
 
   .amendment__author {
     display: flex;
+  }
+
+  .amendment__date {
+    font-style: italic;
+    color: #9b9b9b;
+    font-size: 0.7rem;
   }
 
   .amendment__body {
@@ -54,7 +64,7 @@
   }
 
   .amendment__actions {
-    padding: 0.5rem 1rem;
+    padding: 0rem 1rem 1rem 1rem;
   }
 }
 
