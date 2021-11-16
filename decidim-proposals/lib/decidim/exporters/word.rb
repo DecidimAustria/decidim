@@ -65,13 +65,43 @@ module Decidim
         end
       end
 
-      def print_titles(titles)
+      # def print_titles(titles)
+      #   if titles.keys.count > 1
+      #     titles.each do |language, name|
+      #       @docx.h1 "#{language}: #{name}"
+      #     end
+      #   else
+      #     @docx.h1 titles.values.first
+      #   end
+      # end
+
+      def print_titles(titles, proposal: nil, heading: "h1", description: "")
+        description = "#{description}: " if description.present?
+
         if titles.keys.count > 1
-          titles.each do |language, name|
-            @docx.h1 "#{language}: #{name}"
+          titles.each do |language, title|
+            @docx.send(heading, "#{description}#{language}: #{title}") if show_title_for(proposal, title)
+          end
+        elsif show_title_for(proposal)
+          @docx.send(heading, "#{description}#{titles.values.first}")
+        end
+      end
+
+      def print_content(content, description: "")
+        description = "#{description}: " if description.present?
+
+        if content.keys.count > 1
+          content.each do |language, body|
+            @docx.p do
+              text "#{description}#{language}:", bold: true if description.present?
+              text body.to_s
+            end
           end
         else
-          @docx.h1 titles.values.first
+          @docx.p do
+            text "#{description}:", bold: true if description.present?
+            text content.values.first.to_s
+          end
         end
       end
 
@@ -97,26 +127,9 @@ module Decidim
       def print_proposal(proposal)
         @docx.hr
 
-        if proposal.title.keys.count > 1
-          unless proposal.component.settings.hide_participatory_text_titles_enabled? && proposal.title.values.first !~ /\D/
-            proposal.title.each do |language, title|
-              @docx.h2 "title (#{language}): #{title}"
-            end
-          end
-          proposal.body.each do |language, body|
-            @docx.p do
-              text "body (#{language}): ", bold: true
-              text body.to_s
-            end
-          end
-        else
-          @docx.h2 "title: #{proposal.title.values.first}" unless proposal.component.settings.hide_participatory_text_titles_enabled? && proposal.title.values.first !~ /\D/
+        print_titles(proposal.title, proposal: proposal, heading: "h2", description: "title")
 
-          @docx.p do
-            text "body: ", bold: true
-            text proposal.body.values.first
-          end
-        end
+        print_content(proposal.body, description: "body")
 
         # possible states: not_answered evaluating accepted rejected withdrawn
         case proposal.state
@@ -168,9 +181,7 @@ module Decidim
       end
 
       def print_amendment(proposal, amendment)
-        unless proposal.component.settings.hide_participatory_text_titles_enabled? && proposal.title.values.first !~ /\D/
-          @docx.p "Amendment title: #{amendment.emendation.title.values.first}", bold: true
-        end
+        @docx.p "Amendment title: #{amendment.emendation.title.values.first}", bold: true if show_title_for(amendment.emendation)
 
         @docx.p amendment.emendation.body.values.first
 
@@ -278,6 +289,20 @@ module Decidim
         Decidim::Comments::Comment.where(decidim_commentable_id: comment.id).each do |sub_comment|
           print_comment(sub_comment)
         end
+      end
+
+      def show_title_for(proposal, title = "")
+        return true unless proposal.instance_of?(Decidim::Proposals::Proposal)
+
+        !hide_title_for(proposal, title)
+      end
+
+      def hide_title_for(proposal, title = "")
+        return false unless proposal.instance_of?(Decidim::Proposals::Proposal)
+
+        title = proposal.title.values.first if title.blank?
+
+        proposal.component.settings.hide_participatory_text_titles_enabled? && title !~ /\D/
       end
     end
   end
