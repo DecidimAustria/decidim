@@ -86,16 +86,16 @@ module Decidim
         !amendmendment_creation_enabled?
       end
 
-      def is_active_proposal?
-        return @options[:active_proposal] && model == @options[:active_proposal]
+      def active_proposal?
+        @options[:active_proposal] && model == @options[:active_proposal]
       end
 
       def proposal_class_names
-        class_names = 'proposal'
+        class_names = "proposal"
 
-        class_names = "#{class_names} proposal--active" if is_active_proposal?
+        class_names = "#{class_names} proposal--active" if active_proposal?
 
-        return class_names
+        class_names
       end
     end
   end
