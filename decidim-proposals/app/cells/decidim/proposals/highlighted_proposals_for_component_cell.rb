@@ -17,9 +17,16 @@ module Decidim
       private
 
       def proposals
-        @proposals ||= Decidim::Proposals::Proposal.published.not_hidden.except_withdrawn
-                                                   .where(component: model)
-                                                   .order_randomly(rand * 2 - 1)
+        @proposals ||= if model.settings.participatory_texts_enabled?
+                         Decidim::Proposals::Proposal.published.not_hidden.except_withdrawn
+                                                     .only_emendations
+                                                     .where(component: model)
+                                                     .order_randomly(rand * 2 - 1)
+                       else
+                         @proposals ||= Decidim::Proposals::Proposal.published.not_hidden.except_withdrawn
+                                                                    .where(component: model)
+                                                                    .order_randomly(rand * 2 - 1)
+                       end
       end
 
       def proposals_to_render
