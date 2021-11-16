@@ -28,7 +28,7 @@ module Decidim
       end
 
       def section_title
-        decidim_html_escape(present(model).title).html_safe
+        decidim_html_escape(present(model).title_if_enabled).html_safe
       end
 
       def body
