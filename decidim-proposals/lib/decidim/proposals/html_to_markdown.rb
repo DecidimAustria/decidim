@@ -15,7 +15,7 @@ module Decidim
       end
 
       def to_md
-        ::Kramdown::Document.new(@html, input: 'html').to_kramdown
+        ::Kramdown::Document.new(@html, input: "html").to_kramdown
       end
     end
   end
