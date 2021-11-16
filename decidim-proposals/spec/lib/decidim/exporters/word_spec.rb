@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 require "spec_helper"
-require "./lib/decidim/exporters/word.rb"
-require 'docx'
+require "./lib/decidim/exporters/word"
+require "docx"
 
 module Decidim
   describe Exporters::Word do
@@ -32,7 +32,8 @@ module Decidim
 
     let(:collection) do
       proposal_component = create(:proposal_component, :with_amendments_and_participatory_texts_enabled)
-      participatory_text = create(:participatory_text, component: proposal_component)
+      # participatory_text = create(:participatory_text, component: proposal_component)
+      create(:participatory_text, component: proposal_component)
       proposal = create(:proposal, component: proposal_component)
       Decidim::Proposals::Proposal.where(component: proposal.component)
       # [
