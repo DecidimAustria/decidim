@@ -2,9 +2,10 @@
   <h4><%= t(".document_index") %></h4>
   <div class="text-muted">
     <% @proposals.each do |proposal| %>
+      <% next unless present(proposal).title_if_enabled.present? %>
       <div class="mb-s">
         <p>
-          <%= link_to resource_locator(proposal).path do %>
+          <%= link_to overview_proposal_path(proposal, anchor: dom_id(proposal)) do %>
             <% if proposal.participatory_text_level == "article" %>
               <u><%= decidim_html_escape(present(proposal).title).html_safe %></u>
             <% else %>
