@@ -42,6 +42,19 @@ module Decidim
         super proposal.title, links, html_escape, all_locales, extras: extras
       end
 
+      # Render the proposal title if it is not numeric and if showing it is enabled
+      #
+      # links - should render hashtags as links?
+      # extras - should include extra hashtags?
+      #
+      # Returns a String.
+      def title_if_enabled
+        return unless proposal
+        return "" if proposal.component.settings.hide_participatory_text_titles_enabled? && translated_attribute(proposal.title) !~ /\D/
+
+        translated_attribute(proposal.title)
+      end
+
       def id_and_title(links: false, extras: true, html_escape: false)
         "##{proposal.id} - #{title(links: links, extras: extras, html_escape: html_escape)}"
       end

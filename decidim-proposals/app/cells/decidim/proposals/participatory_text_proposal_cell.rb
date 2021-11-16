@@ -19,8 +19,6 @@ module Decidim
       private
 
       def title
-        return if current_component.settings.hide_participatory_text_titles_enabled?
-
         case model.participatory_text_level
         when "section"
           "<h5><strong>#{section_title}</strong></h5>"
@@ -30,7 +28,7 @@ module Decidim
       end
 
       def section_title
-        decidim_html_escape(present(model).title).html_safe
+        decidim_html_escape(present(model).title_if_enabled).html_safe
       end
 
       def body
