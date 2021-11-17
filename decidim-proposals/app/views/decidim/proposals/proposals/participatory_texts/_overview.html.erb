@@ -1,16 +1,19 @@
 <div class="proposal__overview" id="proposal__overview">
-  <h2>
-    <%= present(@proposal).title_if_enabled %>
-  </h2>
 
-  <div class="amendments">
-    <h3 class="section-heading">
-      <%= @proposal.amendments.size %> <%= Decidim::Amendment.model_name.human(count: @proposal.amendments.size) %>
-    </h3>
+  <div class="row">
+    <div class="column">
+      <h2><%= present(@proposal).title_if_enabled %></h2>
 
-    <% @proposal.amendments.order(created_at: :desc).limit(2).each do |amendment| %>
-      <%= cell("decidim/proposals/amendment", amendment) %>
-    <% end %>
+      <div class="amendments">
+        <h3 class="section-heading">
+          <%= @proposal.amendments.size %> <%= Decidim::Amendment.model_name.human(count: @proposal.amendments.size) %>
+        </h3>
+
+        <% @proposal.amendments.order(created_at: :desc).each do |amendment| %>
+          <%= cell("decidim/proposals/amendment", amendment) %>
+        <% end %>
+      </div>
+    </div>
   </div>
 
   <div class="row">

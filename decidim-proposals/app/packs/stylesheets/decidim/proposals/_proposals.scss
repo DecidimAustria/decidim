@@ -5,24 +5,41 @@
   padding: 1.125rem;
 }
 
+.proposals-overview {
+  overflow: unset;
+}
+
 .proposal {
   padding: 1rem;
   border: 1px solid $white;
   border-bottom-color: #f4f4f4;
 
+  &__layout {
+    display: flex;
+  }
+  &__main {
+    width: 60%;
+  }
+  &__sidebar {
+    width: 40%;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    padding: 3rem 0;
+    overflow: scroll;
+    scroll-behavior: smooth;
+  }
   a {
     color: inherit;
     &:hover {
       text-decoration: none;
     }
   }
-
   &__actions {
     .right-column {
       display: flex;
       justify-content: space-between;
     }
-
     a {
       color: $secondary;
       font-weight: 600;
@@ -68,6 +85,7 @@
 
 .proposal--active {
   border: 1px solid #3c393b;
+  background-color: #f4f4f4;
   border-radius: 4px;
 }
 
@@ -100,17 +118,6 @@
   }
 }
 
-.proposal__overview {
-  position: static;
-}
-
-.proposal__overview--sticky {
-  position: fixed;
-  max-width: 470px;
-  top: 0;
-  height: 100vh;
-  overflow-y: scroll;
-}
 
 .hover-section{
   .proposal-actions {
