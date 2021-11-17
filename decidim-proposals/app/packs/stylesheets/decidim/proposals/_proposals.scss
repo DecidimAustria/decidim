@@ -145,3 +145,12 @@
     display: none;
   }
 }
+
+@media screen and (max-width: 1125px) {
+  .proposal__main {
+    width: 100%;
+  }
+  .proposal__sidebar {
+    display: none;
+  }
+}
