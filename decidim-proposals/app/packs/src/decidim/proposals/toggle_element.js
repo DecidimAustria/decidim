@@ -1,33 +1,21 @@
 $(() => {
-
-  const $expandButton = $("[data-toggle='show']")
+  const $showButton = $("[data-toggle='show']")
   const $hideButton = $("[data-toggle='hide']")
-  const $toggleElements = $(".toggle-visibility")
+  const $toggleElements = $(".toggle--hidden:not(button)")
 
-  $expandButton.on("click", (e) => {
+  $showButton.on("click", (e) => {
     e.preventDefault()
-    $toggleElements.removeClass("toggle-visibility")
+    $toggleElements.removeClass("toggle--hidden")
 
-    $(e.target).addClass("toggle-visibility")
+    $hideButton.removeClass("toggle--hidden")
+    $(e.target).addClass("toggle--hidden")
   })
 
   $hideButton.on("click", (e) => {
     e.preventDefault()
-    $toggleElements.addClass("toggle-visibility")
+    $toggleElements.addClass("toggle--hidden")
 
-    $(e.target).addClass("toggle-visibility")
+    $showButton.removeClass("toggle--hidden")
+    $(e.target).addClass("toggle--hidden")
   })
-  // const $hideButton = $("[data-toggle-class]")
-  // const toggleClass = $expandButton.data("toggle-class")
-  //
-  // console.log($expandButton)
-  // console.log(toggleClass)
-  //
-  // $elementsToToggle = $("." + toggleClass)
-  //
-  // $expandButton.on("click", () => {
-  //   console.log($(toggleClass))
-  //   $elementsToToggle.addClass("toggle--expanded")
-  //   $elementsToToggle.removeClass(toggleClass)
-  // })
 });

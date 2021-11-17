@@ -730,6 +730,9 @@ en:
             votes: Votes
       new:
         limit_reached: You can't create new proposals since you've exceeded the limit.
+      overview:
+        expand_amendments: Show all
+        shrink_amendments: Show less
       participatory_text_proposal:
         alternative_title: There are no participatory texts at the moment
         buttons:

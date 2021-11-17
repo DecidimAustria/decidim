@@ -9,14 +9,18 @@
           <%= @proposal.amendments.size %> <%= Decidim::Amendment.model_name.human(count: @proposal.amendments.size) %>
         </h3>
 
-        <% @proposal.amendments.order(created_at: :desc).each_with_index do |amendment, index| %>
-          <div class="<%= "toggle-visibility" if index > 2 %>">
+        <% @amendments.each_with_index do |amendment, index| %>
+          <div class="<%= "toggle--hidden" if index > 2 %>">
             <%= cell("decidim/proposals/amendment", amendment) %>
           </div>
         <% end %>
-        <% if @proposal.amendments.order(created_at: :desc).size > 2 %>
-          <button data-toggle-class="toggle-visibility" data-toggle="show" class="link margin-top-1">Show more</button>
-          <button data-toggle-class="toggle-visibility" data-toggle="hide" class="link margin-top-1 toggle-visibility">Show less</button>
+        <% if @amendments.size > 2 %>
+          <button data-toggle-class="toggle--hidden" data-toggle="show" class="link margin-top-1">
+            <%= t("decidim.proposals.overview.expand_amendments") %> (<%= @amendments.size %>)
+          </button>
+          <button data-toggle-class="toggle--hidden" data-toggle="hide" class="link margin-top-1 toggle--hidden">
+            <%= t("decidim.proposals.overview.shrink_amendments") %>
+          </button>
         <% end %>
       </div>
     </div>

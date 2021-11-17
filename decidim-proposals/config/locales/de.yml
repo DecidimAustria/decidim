@@ -695,6 +695,9 @@ de:
             votes: Stimmen
       new:
         limit_reached: Sie können keine neuen Vorschläge erstellen, da Sie das Maximum erreicht haben.
+      overview:
+        expand_amendments: Alle anzeigen
+        shrink_amendments: Weniger anzeigen
       participatory_text_proposal:
         alternative_title: Momentan gibt es keine Mitmachtexte
         buttons:
