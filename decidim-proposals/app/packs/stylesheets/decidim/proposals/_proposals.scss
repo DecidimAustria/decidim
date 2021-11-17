@@ -9,6 +9,10 @@
   overflow: unset;
 }
 
+.toggle-visibility {
+  display: none;
+}
+
 .proposal {
   padding: 1rem;
   border: 1px solid $white;
@@ -57,6 +61,9 @@
     h3 {
       font-size:  1.125rem;
     }
+    .link {
+      font-size: .9rem;
+    }
     .amendments, .comments {
       background-color: #f4f4f4;
       padding: 1.125rem;
@@ -68,7 +75,7 @@
       }
       .card {
         margin-bottom: 0;
-        margin-top: 1rem;
+        margin-top: .5rem;
       }
     }
     .comments__header {
