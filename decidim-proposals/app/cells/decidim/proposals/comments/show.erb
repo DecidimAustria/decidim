@@ -1,18 +1,17 @@
 <%= content_tag :div, id: node_id, data: { decidim_comments: comments_data } do %>
   <div class="columns large-12 comments-container" id="comments">
     <div class="comments">
-      <div class="row collapse order-by">
+      <div class="row collapse comments__header">
         <h3 class="order-by__text section-heading">
           <%= comments_count %> <%= Decidim::Comments::Comment.model_name.human(count: comments_count) %>
         </h3>
-      </div>
-
-      <p>
         <% if comments_count > 2 %>
-          <%= icon "comment-square", class: "icon--small", role: "img", "aria-hidden": true %>
-          <%= link_to t('decidim.proposals.actions.add_comment'), '#add_comment', class: 'link' %>
+          <%= link_to '#add_comment', class: 'link' do %>
+            <%= icon "comment-square", class: "icon--small", role: "img", "aria-hidden": true %>
+            <span><%= t('decidim.proposals.actions.add_comment') %></span>
+          <% end %>
         <% end %>
-      </p>
+      </div>
 
       <%= single_comment_warning %>
       <%= blocked_comments_warning %>

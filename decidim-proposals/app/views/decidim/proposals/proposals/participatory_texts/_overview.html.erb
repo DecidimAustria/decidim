@@ -3,11 +3,15 @@
     <%= present(@proposal).title_if_enabled %>
   </h2>
 
-  <h3 class="section-heading margin-top-1"><%= @proposal.amendments.size %> <%= Decidim::Amendment.model_name.human(count: @proposal.amendments.size) %></h3>
+  <div class="amendments">
+    <h3 class="section-heading">
+      <%= @proposal.amendments.size %> <%= Decidim::Amendment.model_name.human(count: @proposal.amendments.size) %>
+    </h3>
 
-  <% @proposal.amendments.order(created_at: :desc).limit(2).each do |amendment| %>
-    <%= cell("decidim/proposals/amendment", amendment) %>
-  <% end %>
+    <% @proposal.amendments.order(created_at: :desc).limit(2).each do |amendment| %>
+      <%= cell("decidim/proposals/amendment", amendment) %>
+    <% end %>
+  </div>
 
   <div class="row">
     <%= cell("decidim/proposals/comments", @proposal) %>
