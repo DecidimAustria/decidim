@@ -161,6 +161,7 @@
       width: 100%;
       padding: 0;
       overflow: auto;
+      display: none;
     }
   }
   .proposal__main {
@@ -170,6 +171,9 @@
   .proposals-overview {
     .proposal {
       display: none;
+      &__sidebar {
+        display: block;
+      }
       &__back-button {
         display: block;
       }
