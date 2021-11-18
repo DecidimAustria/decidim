@@ -1,11 +1,9 @@
 <%= render partial: "decidim/shared/component_announcement" %>
 
-<div class="row view-header">
-  <div class="column medium-7">
-    <h2 class="heading2"><%= render_participatory_text_title(@participatory_text) %></h2>
-
+<div class="proposal__layout">
+  <div class="proposal__main">
+    <h2 class="heading2 margin-bottom-1"><%= render_participatory_text_title(@participatory_text) %></h2>
     <%= render partial: "decidim/proposals/proposals/participatory_texts/view_index" %>
-
     <div class="card" id="proposals">
       <% @proposals.each do |proposal| %>
         <%= cell("decidim/proposals/participatory_text_proposal", proposal, active_proposal: local_assigns[:active_proposal], context: { current_user: current_user }) %>
@@ -13,7 +11,7 @@
     </div>
   </div>
 
-  <div class="column medium-5 pull-right">
+  <div class="proposal__sidebar">
     <% if local_assigns[:active_proposal].presence %>
       <%= render partial: "decidim/proposals/proposals/participatory_texts/overview", locals: { proposal: active_proposal } %>
     <% end %>

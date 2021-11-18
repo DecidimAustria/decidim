@@ -13,7 +13,7 @@
       <div class="columns mediumlarge-7 right-column">
         <%= link_to overview_proposal_path(model, anchor: dom_id(model)) do %>
           <%= icon "comment-square", class: "icon--small", role: "img", "aria-hidden": true %>
-          <%= t("decidim.components.proposals.actions.comment") %>
+          <%= t("decidim.proposals.actions.add_comment") %>
           (<%= present(model).comments_count %>)
         <% end %>
 
