@@ -1,7 +1,5 @@
 <div class="proposal__overview" id="proposal__overview">
 
-  <div class="row">
-    <div class="column">
       <h2><%= present(@proposal).title_if_enabled %></h2>
 
       <div class="amendments">
@@ -14,7 +12,7 @@
             <%= cell("decidim/proposals/amendment", amendment) %>
           </div>
         <% end %>
-        <% if @amendments.size > 2 %>
+        <% if @amendments.size > 3 %>
           <button data-toggle-class="toggle--hidden" data-toggle="show" class="link margin-top-1">
             <%= t("decidim.proposals.overview.expand_amendments") %> (<%= @amendments.size %>)
           </button>
@@ -23,10 +21,6 @@
           </button>
         <% end %>
       </div>
-    </div>
-  </div>
 
-  <div class="row">
     <%= cell("decidim/proposals/comments", @proposal) %>
-  </div>
 </div>
