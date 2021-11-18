@@ -1,7 +1,5 @@
 <div class="proposal__overview" id="proposal__overview">
 
-  <div class="row">
-    <div class="column">
       <h2><%= present(@proposal).title_if_enabled %></h2>
 
       <div class="amendments">
@@ -23,10 +21,6 @@
           </button>
         <% end %>
       </div>
-    </div>
-  </div>
 
-  <div class="row">
     <%= cell("decidim/proposals/comments", @proposal) %>
-  </div>
 </div>
