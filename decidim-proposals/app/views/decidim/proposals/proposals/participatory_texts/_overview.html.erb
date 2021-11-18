@@ -1,13 +1,30 @@
 <div class="proposal__overview" id="proposal__overview">
-  <h2>
-    <%= present(@proposal).title_if_enabled %>
-  </h2>
 
-  <h3 class="section-heading margin-top-1"><%= @proposal.amendments.size %> <%= Decidim::Amendment.model_name.human(count: @proposal.amendments.size) %></h3>
+  <div class="row">
+    <div class="column">
+      <h2><%= present(@proposal).title_if_enabled %></h2>
 
-  <% @proposal.amendments.order(created_at: :desc).limit(2).each do |amendment| %>
-    <%= cell("decidim/proposals/amendment", amendment) %>
-  <% end %>
+      <div class="amendments">
+        <h3 class="section-heading">
+          <%= @proposal.amendments.size %> <%= Decidim::Amendment.model_name.human(count: @proposal.amendments.size) %>
+        </h3>
+
+        <% @amendments.each_with_index do |amendment, index| %>
+          <div class="<%= "toggle--hidden" if index > 2 %>">
+            <%= cell("decidim/proposals/amendment", amendment) %>
+          </div>
+        <% end %>
+        <% if @amendments.size > 2 %>
+          <button data-toggle-class="toggle--hidden" data-toggle="show" class="link margin-top-1">
+            <%= t("decidim.proposals.overview.expand_amendments") %> (<%= @amendments.size %>)
+          </button>
+          <button data-toggle-class="toggle--hidden" data-toggle="hide" class="link margin-top-1 toggle--hidden">
+            <%= t("decidim.proposals.overview.shrink_amendments") %>
+          </button>
+        <% end %>
+      </div>
+    </div>
+  </div>
 
   <div class="row">
     <%= cell("decidim/proposals/comments", @proposal) %>

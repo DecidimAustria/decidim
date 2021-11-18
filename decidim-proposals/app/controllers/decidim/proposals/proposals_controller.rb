@@ -70,6 +70,8 @@ module Decidim
                      .includes(:category, :scope)
                      .order(position: :asc)
 
+        @amendments = @proposal.amendments.order(created_at: :desc)
+
         proposal = @proposals.find(params[:id])
 
         raise ActionController::RoutingError, "Not Found" if proposal.blank? || !can_show_proposal?

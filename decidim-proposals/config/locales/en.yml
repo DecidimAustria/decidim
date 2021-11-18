@@ -164,6 +164,7 @@ en:
             official_proposals_enabled: Official proposals enabled
             participatory_texts_enabled: Participatory texts enabled
             participatory_texts_enabled_readonly: Cannot interact with this setting if there are existing proposals. Please, create a new `Proposals component` if you want to enable this feature or discard all imported proposals in the `Participatory Texts` menu if you want to disable it.
+            hide_participatory_text_titles_enabled: Hide participatory text titles
             proposal_answering_enabled: Proposal answering enabled
             proposal_edit_before_minutes: Proposals can be edited by authors before this many minutes passes
             proposal_edit_time: Proposal editing
@@ -729,6 +730,9 @@ en:
             votes: Votes
       new:
         limit_reached: You can't create new proposals since you've exceeded the limit.
+      overview:
+        expand_amendments: Show all
+        shrink_amendments: Show less
       participatory_text_proposal:
         alternative_title: There are no participatory texts at the moment
         buttons:
