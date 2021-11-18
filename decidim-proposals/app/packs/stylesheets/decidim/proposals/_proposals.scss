@@ -161,6 +161,7 @@
       width: 100%;
       padding: 0;
       overflow: auto;
+      height: auto;
       display: none;
     }
   }
@@ -173,6 +174,8 @@
       display: none;
       &__sidebar {
         display: block;
+        overflow: auto;
+        height: auto;
       }
       &__back-button {
         display: block;
