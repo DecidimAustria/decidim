@@ -18,18 +18,22 @@
   border: 1px solid $white;
   border-bottom-color: #f4f4f4;
 
+  &__back-button {
+    display: none;
+  }
   &__layout {
     display: flex;
   }
   &__main {
-    width: 60%;
+    width: 66.6667%;
+    padding-right: 10px;
   }
   &__sidebar {
-    width: 40%;
+    width: 33.333%;
     position: sticky;
     top: 0;
     height: 100vh;
-    padding: 3rem 0;
+    padding: 3rem 0 3rem 10px;
     overflow: scroll;
     scroll-behavior: smooth;
   }
@@ -146,11 +150,43 @@
   }
 }
 
+/* Mobile */
+
 @media screen and (max-width: 1125px) {
+  .proposal {
+    &__layout {
+      display: block;
+    }
+    &__sidebar {
+      width: 100%;
+      padding: 0;
+      overflow: auto;
+    }
+  }
   .proposal__main {
     width: 100%;
+    padding: 0;
   }
-  .proposal__sidebar {
-    display: none;
+  .proposals-overview {
+    .proposal {
+      display: none;
+      &__back-button {
+        display: block;
+      }
+      &--active {
+        display: block;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .proposal {
+    &__actions .right-column {
+      flex-direction: column;
+      a {
+        margin-top: .5rem;
+      }
+    }
   }
 }
