@@ -14,7 +14,7 @@
             <%= cell("decidim/proposals/amendment", amendment) %>
           </div>
         <% end %>
-        <% if @amendments.size > 2 %>
+        <% if @amendments.size > 3 %>
           <button data-toggle-class="toggle--hidden" data-toggle="show" class="link margin-top-1">
             <%= t("decidim.proposals.overview.expand_amendments") %> (<%= @amendments.size %>)
           </button>
