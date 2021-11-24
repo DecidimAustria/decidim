@@ -373,6 +373,8 @@ de:
           proposal:
             name: Vorschlag
         participatory_texts:
+          article-preview:
+            title_hint: Für einen leeren Titel wird automatisch eine Nummer generiert. Titel die nur aus Zahlen bestehen werden allerdings auf öffentlichen Seiten ausgeblendet.
           bulk-actions:
             are_you_sure: Sind Sie sicher, den gesamten Entwurf des partizipativen Textes zu verwerfen?
             discard_all: Alle verwerfen
@@ -392,7 +394,7 @@ de:
             discard: Löschen
             discard_confirmation: Sind Sie sicher, dass Sie diesen Abschnitt entfernen wollen?
           new_editor:
-            title: Dokument hinzufügen
+            title: Text schreiben
             bottom_hint: "(Sie können Dokumentabschnitte in der Vorschau anzeigen und sortieren.)"
             editor_description: "Schreiben Sie ein Dokument oder fügen Sie es ein und verwenden Sie Heading 1 um Abschnitte zu definieren, Heading 2 für Unterabschnitte und einfache Absätze für einzelne Artikel."
             editor_description: "Write or paste your document. Use Heading 1 to define sections, Heading 2 for subsections and simple paragraphs to split text."

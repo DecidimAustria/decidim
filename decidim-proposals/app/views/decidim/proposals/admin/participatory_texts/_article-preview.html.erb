@@ -2,6 +2,9 @@
   <div class="cell">
     <%= form.hidden_field :position, class: "position" %>
     <%= form.text_field :title, optional: false %>
+    <% if hide_proposal_title?(proposal) %>
+      <span class="help-text">* <%= t(".title_hint") %></span>
+    <% end %>
   </div>
 </div>
 <% if proposal.article? %>

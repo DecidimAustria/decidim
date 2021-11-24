@@ -406,6 +406,8 @@ en:
           proposal:
             name: Proposal
         participatory_texts:
+          article-preview:
+            title_hint: Empty title-fields will automatically be filled with numbers, but will be hidden on the public page when consisting of numbers only.
           bulk-actions:
             are_you_sure: Are you sure to discard the whole participatory text draft?
             discard_all: Discard all
@@ -425,7 +427,7 @@ en:
             discard: Delete
             discard_confirmation: Are you sure you want to discard this section draft?
           new_editor:
-            title: Add document
+            title: Write text
             bottom_hint: "(You will be able to preview and sort document sections)"
             editor_description: "Write or paste your document. Use Heading 1 to define sections, Heading 2 for subsections and simple paragraphs to split text into articles."
             import: Import
