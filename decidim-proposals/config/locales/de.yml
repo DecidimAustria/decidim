@@ -373,6 +373,8 @@ de:
           proposal:
             name: Vorschlag
         participatory_texts:
+          article-preview:
+            title_hint: Für einen leeren Titel wird automatisch eine Nummer generiert. Titel die nur aus Zahlen bestehen werden allerdings auf öffentlichen Seiten ausgeblendet.
           bulk-actions:
             are_you_sure: Sind Sie sicher, den gesamten Entwurf des partizipativen Textes zu verwerfen?
             discard_all: Alle verwerfen

@@ -406,6 +406,8 @@ en:
           proposal:
             name: Proposal
         participatory_texts:
+          article-preview:
+            title_hint: Empty title-fields will automatically be filled with numbers, but will be hidden on the public page when consisting of numbers only.
           bulk-actions:
             are_you_sure: Are you sure to discard the whole participatory text draft?
             discard_all: Discard all
