@@ -36,6 +36,14 @@ module Decidim
         end
         links
       end
+
+      def show_proposal_title?(proposal)
+        !hide_proposal_title?(proposal)
+      end
+
+      def hide_proposal_title?(proposal)
+        proposal.component.settings.hide_participatory_text_titles_enabled? && translated_attribute(proposal.title) !~ /\D/
+      end
     end
   end
 end
