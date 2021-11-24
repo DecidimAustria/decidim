@@ -23,7 +23,7 @@
           (<%= model.amendments.count %>)
         <% end %>
 
-        <%= link_to proposal_path(model), remote: true do %>
+        <%= link_to proposal_path(model) do %>
           <%= t('decidim.proposals.actions.show_details') %>
         <% end %>
       </div>
