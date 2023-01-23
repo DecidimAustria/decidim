@@ -30,9 +30,39 @@ module Decidim
         translated_locales = translated_locales_list(field)
         remove_duplicate_translations(field, translated_locales) if @resource[field]["machine_translations"].present?
 
+        Sentry.with_scope do |scope|
+          scope.set_context(
+            'translation',
+            {
+              field: field,
+              previous_changes: previous_changes,
+              source_locale: source_locale
+            }
+          )
+          Sentry.capture_message("MachineTranslationResourceJob default_locale_changed_or_translation_removed")
+        end
         next unless default_locale_changed_or_translation_removed(previous_changes, field)
 
         @locales_to_be_translated += pending_locales(translated_locales) if @locales_to_be_translated.blank?
+
+        Sentry.with_scope do |scope|
+          scope.set_context(
+            'translation',
+            {
+              locales_to_be_translated: @locales_to_be_translated,
+              field: field,
+              previous_changes: previous_changes,
+              source_locale: source_locale,
+              resource: @resource,
+              resource_field_value: resource_field_value(previous_changes,
+                field,
+                source_locale
+              ),
+
+            }
+          )
+          Sentry.capture_message("MachineTranslationResourceJob run MachineTranslationFieldsJob for locales")
+        end
 
         @locales_to_be_translated.each do |target_locale|
           Decidim::MachineTranslationFieldsJob.perform_later(
