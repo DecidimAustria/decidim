@@ -112,7 +112,9 @@ module Decidim
     end
 
     def pending_locales(translated_locales)
-      available_locales = @resource.organization.available_locales.map(&:to_s) if @resource.respond_to? :organization
+      organization = @resource if @resource.is_a?(Decidim::Organization)
+      organization ||= @resource.organization if @resource.respond_to? :organization
+      available_locales = organization.available_locales.map(&:to_s) if organization.present?
       available_locales ||= Decidim.available_locales.map(&:to_s)
       available_locales - translated_locales
     end

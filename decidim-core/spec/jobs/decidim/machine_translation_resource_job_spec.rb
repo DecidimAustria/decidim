@@ -116,6 +116,33 @@ module Decidim
       end
     end
 
+    describe "if default locale is changed for an organization attribute" do
+      before do
+        updated_description = { en: "This is the new description", es: "" }
+        organization.update(description: updated_description)
+        clear_enqueued_jobs
+      end
+
+      it "enqueus the machine translation fields job" do
+        Decidim::MachineTranslationResourceJob.perform_now(
+          organization,
+          organization.translatable_previous_changes,
+          current_locale
+        )
+        expect(Decidim::MachineTranslationFieldsJob)
+          .to have_been_enqueued
+          .on_queue("translations")
+          .exactly(1).times
+          .with(
+            organization,
+            "description",
+            "This is the new description",
+            "es",
+            current_locale
+          )
+      end
+    end
+
     context "when machine translations are duplicated" do
       let(:new_title) { { en: "New Title", machine_translations: { es: "nuevo título" } } }
       let!(:process) { create :participatory_process, title: new_title }
