@@ -32,7 +32,7 @@ module Decidim
 
         Sentry.with_scope do |scope|
           scope.set_context(
-            'translation',
+            "translation",
             {
               field: field,
               previous_changes: previous_changes,
@@ -47,7 +47,7 @@ module Decidim
 
         Sentry.with_scope do |scope|
           scope.set_context(
-            'translation',
+            "translation",
             {
               locales_to_be_translated: @locales_to_be_translated,
               field: field,
@@ -57,8 +57,7 @@ module Decidim
               resource_field_value: resource_field_value(previous_changes,
                 field,
                 source_locale
-              ),
-
+              )
             }
           )
           Sentry.capture_message("MachineTranslationResourceJob run MachineTranslationFieldsJob for locales")
@@ -86,6 +85,21 @@ module Decidim
       values = previous_changes[field]
       old_value = values.first
       new_value = values.last
+
+      Sentry.with_scope do |scope|
+        scope.set_context(
+          'translation',
+          {
+            default_locale: default_locale,
+            old_value: old_value,
+            new_value: new_value,
+            value_changed: (old_value[default_locale] != new_value[default_locale]),
+
+          }
+        )
+        Sentry.capture_message("MachineTranslationResourceJob in default_locale_changed_or_translation_removed")
+      end
+
       return true unless old_value.is_a?(Hash)
 
       return true if old_value[default_locale] != new_value[default_locale]
