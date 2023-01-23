@@ -115,7 +115,9 @@ module Decidim
     end
 
     def default_locale(resource)
-      if resource.respond_to? :organization
+      if resource.is_a?(Decidim::Organization)
+        resource.default_locale.to_s
+      elsif resource.respond_to? :organization
         resource.organization.default_locale.to_s
       else
         Decidim.available_locales.first.to_s
