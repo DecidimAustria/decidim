@@ -30,38 +30,9 @@ module Decidim
         translated_locales = translated_locales_list(field)
         remove_duplicate_translations(field, translated_locales) if @resource[field]["machine_translations"].present?
 
-        Sentry.with_scope do |scope|
-          scope.set_context(
-            "translation",
-            {
-              field: field,
-              previous_changes: previous_changes,
-              source_locale: source_locale
-            }
-          )
-          Sentry.capture_message("MachineTranslationResourceJob default_locale_changed_or_translation_removed")
-        end
         next unless default_locale_changed_or_translation_removed(previous_changes, field)
 
         @locales_to_be_translated += pending_locales(translated_locales) if @locales_to_be_translated.blank?
-
-        Sentry.with_scope do |scope|
-          scope.set_context(
-            "translation",
-            {
-              locales_to_be_translated: @locales_to_be_translated,
-              field: field,
-              previous_changes: previous_changes,
-              source_locale: source_locale,
-              resource: @resource,
-              resource_field_value: resource_field_value(previous_changes,
-                field,
-                source_locale
-              )
-            }
-          )
-          Sentry.capture_message("MachineTranslationResourceJob run MachineTranslationFieldsJob for locales")
-        end
 
         @locales_to_be_translated.each do |target_locale|
           Decidim::MachineTranslationFieldsJob.perform_later(
@@ -85,20 +56,6 @@ module Decidim
       values = previous_changes[field]
       old_value = values.first
       new_value = values.last
-
-      Sentry.with_scope do |scope|
-        scope.set_context(
-          'translation',
-          {
-            default_locale: default_locale,
-            old_value: old_value,
-            new_value: new_value,
-            value_changed: (old_value[default_locale] != new_value[default_locale]),
-
-          }
-        )
-        Sentry.capture_message("MachineTranslationResourceJob in default_locale_changed_or_translation_removed")
-      end
 
       return true unless old_value.is_a?(Hash)
 
@@ -129,11 +86,13 @@ module Decidim
     end
 
     def default_locale(resource)
+      # TODO: This does not work for resources that are not scoped to an organization
       if resource.is_a?(Decidim::Organization)
         resource.default_locale.to_s
       elsif resource.respond_to? :organization
         resource.organization.default_locale.to_s
       else
+        # TODO: For multi-tenancy, we need to find out the organization for the resource!
         Decidim.available_locales.first.to_s
       end
     end
@@ -158,9 +117,11 @@ module Decidim
     end
 
     def pending_locales(translated_locales)
+      # TODO: This does not work for resources that are not scoped to an organization
       organization = @resource if @resource.is_a?(Decidim::Organization)
       organization ||= @resource.organization if @resource.respond_to? :organization
       available_locales = organization.available_locales.map(&:to_s) if organization.present?
+      # TODO: For multi-tenancy, we need to find out the organization for the resource!
       available_locales ||= Decidim.available_locales.map(&:to_s)
       available_locales - translated_locales
     end
