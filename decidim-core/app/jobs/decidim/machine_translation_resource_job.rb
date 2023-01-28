@@ -64,7 +64,7 @@ module Decidim
       # In a case where the default locale isn't changed
       # but a translation of a different locale is deleted
       # We trigger a job to translate only for that locale
-      if old_value[default_locale] == new_value[source_locale]
+      if old_value[source_locale] == new_value[source_locale]
         locales_present = old_value.keys
         locales_present.each do |locale|
           @locales_to_be_translated << locale if old_value[locale] != new_value[locale] && new_value[locale] == ""
