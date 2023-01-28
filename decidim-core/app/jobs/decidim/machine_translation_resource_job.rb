@@ -30,7 +30,7 @@ module Decidim
         translated_locales = translated_locales_list(field)
         remove_duplicate_translations(field, translated_locales) if @resource[field]["machine_translations"].present?
 
-        next unless default_locale_changed_or_translation_removed(previous_changes, field)
+        next unless source_locale_value_changed_or_translation_removed(previous_changes, field, source_locale)
 
         @locales_to_be_translated += pending_locales(translated_locales) if @locales_to_be_translated.blank?
 
@@ -51,20 +51,20 @@ module Decidim
     end
     # rubocop: enable Metrics/CyclomaticComplexity
 
-    def default_locale_changed_or_translation_removed(previous_changes, field)
-      default_locale = default_locale(@resource)
+    def source_locale_value_changed_or_translation_removed(previous_changes, field, source_locale)
+      #default_locale = default_locale(@resource) || source_locale
       values = previous_changes[field]
       old_value = values.first
       new_value = values.last
 
       return true unless old_value.is_a?(Hash)
 
-      return true if old_value[default_locale] != new_value[default_locale]
+      return true if old_value[source_locale] != new_value[source_locale]
 
       # In a case where the default locale isn't changed
       # but a translation of a different locale is deleted
       # We trigger a job to translate only for that locale
-      if old_value[default_locale] == new_value[default_locale]
+      if old_value[default_locale] == new_value[source_locale]
         locales_present = old_value.keys
         locales_present.each do |locale|
           @locales_to_be_translated << locale if old_value[locale] != new_value[locale] && new_value[locale] == ""
@@ -93,7 +93,9 @@ module Decidim
         resource.organization.default_locale.to_s
       else
         # TODO: For multi-tenancy, we need to find out the organization for the resource!
-        Decidim.available_locales.first.to_s
+        #Decidim.available_locales.first.to_s
+        # Don't return anything if we can't find the default locale
+        nil
       end
     end
 
@@ -122,6 +124,7 @@ module Decidim
       organization ||= @resource.organization if @resource.respond_to? :organization
       available_locales = organization.available_locales.map(&:to_s) if organization.present?
       # TODO: For multi-tenancy, we need to find out the organization for the resource!
+      # At the moment we translate to all available locales of the platform
       available_locales ||= Decidim.available_locales.map(&:to_s)
       available_locales - translated_locales
     end
