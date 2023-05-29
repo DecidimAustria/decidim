@@ -52,10 +52,6 @@ lv:
               title: Virsrakstam nevajadzētu būt tukšam
   activerecord:
     models:
-      decidim/initiative:
-        zero: Iniciatīvas
-        one: Iniciatīva
-        other: Iniciatīvas
       decidim/initiative_comittee:
         zero: Komitejas
         one: Komiteja
@@ -286,7 +282,6 @@ lv:
         fill_data:
           back: Atpakaļ
           continue: Turpināt
-          initiative_type: Iniciatīvas veids
           more_information: "(Papildu informācija)"
           select_area: Izvēlieties jomu
           select_scope: Izvēlēties darbības tvērumu

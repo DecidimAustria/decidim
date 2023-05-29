@@ -9,7 +9,7 @@ describe "Admin creates proposals", type: :system do
     create(:proposal_component,
            :with_creation_enabled,
            :with_attachments_allowed,
-           manifest:,
+           manifest: manifest,
            participatory_space: participatory_process)
   end
   let(:new_title) { "This is my proposal new title" }
