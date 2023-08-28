@@ -819,11 +819,11 @@ es-MX:
             max_results: Cantidad máxima de elementos a mostrar
           landing_page:
             attachments_and_folders:
-              name: Archivos adjuntos y carpetas de la votación
+              name: Archivos y carpetas de la votación
             description:
               name: Descripción de la votación
             elections:
-              name: Elecciones de la votación
+              name: Elecciones
             header:
               name: Cabecera de la votación
             html_block_1:
@@ -833,13 +833,13 @@ es-MX:
             html_block_3:
               name: Bloque html 3 de la votación
             metrics:
-              name: Métricas de votación
+              name: Métricas de la votación
             polling_stations:
               name: Puntos de votación
             stats:
-              name: Estadísticas de votación
+              name: Estadísticas de la votación
             timeline:
-              name: Calendario de votación
+              name: Calendario de la votación
         index:
           not_published: Despublicada
           published: Publicada
@@ -1160,7 +1160,7 @@ es-MX:
           name: Votaciones destacadas
         landing_page:
           description:
-            title: Sobre esta votación
+            title: Acerca de esta votación
           metrics:
             heading: Métricas
           polling_stations:
