@@ -11,6 +11,9 @@ module Decidim
     include Loggable
     include Decidim::ShareableWithToken
     include ScopableComponent
+    include Decidim::TranslatableResource
+
+    translatable_fields :name
 
     belongs_to :participatory_space, polymorphic: true
 
