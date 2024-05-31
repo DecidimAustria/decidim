@@ -172,7 +172,7 @@ describe "Homepage" do
           click_link static_page1.title["en"]
           expect(page).to have_i18n_content(static_page1.title)
 
-          expect(page).to have_i18n_content(static_page1.content)
+          expect(page).to have_i18n_content(static_page1.content, strip_tags: true)
         end
 
         it "includes the footer sub_hero with the current organization name" do
@@ -283,6 +283,53 @@ describe "Homepage" do
                 href: "/pages/#{static_page_topic2_page2.slug}"
               )
             end
+          end
+        end
+      end
+
+      context "when organization forces users to authenticate before access" do
+        let(:organization) do
+          create(
+            :organization,
+            official_url:,
+            force_users_to_authenticate_before_access_organization: true
+          )
+        end
+
+        context "when there are site activities and user is not authenticated" do
+          let(:participatory_space) { create(:participatory_process, organization:) }
+          let(:component) do
+            create(:component, :published, participatory_space:)
+          end
+          let(:commentable) { create(:dummy_resource, component:) }
+          let(:comment) { create(:comment, commentable:) }
+          let!(:action_log) do
+            create(:action_log, created_at: 1.day.ago, action: "create", visibility: "public-only", resource: comment, organization:, participatory_space:)
+          end
+
+          before do
+            visit current_path
+            find_by_id("main-dropdown-summary").hover
+          end
+
+          it "does not show last activity section on menu bar main dropdown" do
+            expect(page).not_to have_content(translated(comment.body))
+            expect(page).not_to have_link("New comment")
+            expect(page).not_to have_link("Last activity")
+          end
+        end
+
+        context "when there is a promoted participatory space and user is not authenticated" do
+          let!(:participatory_space) { create(:participatory_process, :promoted, title:, organization:) }
+          let(:title) { { en: "Promoted, promoted, promoted!!!" } }
+
+          before do
+            visit current_path
+            find_by_id("main-dropdown-summary").hover
+          end
+
+          it "does not show last activity section on menu bar main dropdown" do
+            expect(page).not_to have_content(title[:en])
           end
         end
       end

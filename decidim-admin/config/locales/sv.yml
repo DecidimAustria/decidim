@@ -501,6 +501,7 @@ sv:
         help_sections: Hjälpavsnitt
         homepage: Hemsida
         impersonations: Uppträd som
+        manage: Hantera
         moderation: Global moderering
         newsletters: Nyhetsbrev
         participants: Deltagare
@@ -993,3 +994,8 @@ sv:
   errors:
     messages:
       invalid_json: Ogiltig JSON
+  layouts:
+    decidim:
+      admin:
+        global_moderations:
+          title: Global moderering

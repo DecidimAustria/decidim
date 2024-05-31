@@ -10,7 +10,6 @@ fr-CA:
   decidim:
     admin:
       menu:
-        manage: Gérer
         templates: Modèles 
       templates:
         actions:
@@ -27,6 +26,8 @@ fr-CA:
         destroy:
           success: Modèle supprimé avec succès.
         empty: Il n'y a pas de modèle pour l'instant.
+        fetch:
+          error: Impossible de trouver ce modèle. Veuillez recharger la page.
         missing_resource: "(ressource manquante)"
         update:
           error: Un problème est survenu lors de la mise à jour de ce modèle.
@@ -72,7 +73,7 @@ fr-CA:
             component_constraint: Ajouter une contrainte
             confirm_delete: Êtes-vous sûr de vouloir supprimer ce modèle ?
             global_scope: Global (disponible partout)
-            internal_state: État interne
+            internal_state: Etat interne
             title: Réponses à la proposition
           new:
             title: Nouveau modèle de réponse à proposition

@@ -127,11 +127,18 @@ eu:
       x_minutes:
         one: Minutu 1
         other: "Minutu %{count}"
+      x_months:
+        one: 1 hilabete
+        other: "%{count} hilabete"
+      x_seconds:
+        one: Segundo bat
+        other: "%{count} segundo"
   decidim:
     accessibility:
       external_link: Kanpoko lotura
       front_page_link: Zoaz orri nagusira
       logo: "%{organization} aren logo ofiziala"
+      opens_in_new_tab: Ireki beste fitxa batean
       skip_button: Joan eduki nagusira
     account:
       blocked: Kontu hau blokeatu egin da erabilera-terminoak eta -baldintzak urratu direlako
@@ -1195,7 +1202,7 @@ eu:
         token_error: Lotura iraungi da.
         unsubscribe: Baja eman
     newsletters_opt_in:
-      unathorized: Sentitzen dugu, lotura hau ez dago eskuragarri.
+      unathorized: Sentitzen dut, esteka hau ez dago eskuragarri.
       update:
         error: Arazo bat egon da buletinaren konfigurazioak gordetzean.
         success: Buletinaren ezarpenak zuzen eguneratuak.
@@ -1438,6 +1445,8 @@ eu:
         close_modal: Itxi leihoa
         ok: Ados
         title: Baieztatu
+      embed:
+        title: Bideo-eduki txertatuak
       extended_navigation_bar:
         more: Gehiago
         unfold: Zabaldu
@@ -2023,6 +2032,7 @@ eu:
       long_with_particles: "%B%d, %Y% H:%M etan"
       short: "%d/%m/%Y, %H:%M"
       time_of_day: "%H:%M"
+      tooltip: "%d-%m-%Y %H:%M %p %Z (GMT %:z)"
   versions:
     directions:
       left: Ezabapenak

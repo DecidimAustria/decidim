@@ -315,7 +315,6 @@ zh-TW:
           '1': 創建您的修正案
           '2': 比較您的修正案
           '3': 完成您的修正案
-          '4': 發佈您的修正案
     anonymous_user: 匿名
     application:
       document:
@@ -1101,7 +1100,6 @@ zh-TW:
         token_error: 該連結已過期。
         unsubscribe: 取消訂閱
     newsletters_opt_in:
-      unathorized: 抱歉，此連結已不再可用。
       update:
         error: 儲存通訊設定時出現問題。
         success: 成功更新電子報設定.
@@ -1186,11 +1184,13 @@ zh-TW:
           register: 註冊
         hero:
           participate: 參與
+          participate_title: 參與平台的流程
           welcome: 歡迎來到 %{organization}！
         statistics:
           headline: '%{organization} 的目前狀態'
         sub_hero:
           register: 註冊
+          register_title: 註冊以創建帳戶
       index:
         standalone_pages: 頁
         subheading: 瀏覽 %{name} 的幫助頁面

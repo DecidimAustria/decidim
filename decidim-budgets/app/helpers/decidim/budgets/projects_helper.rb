@@ -126,12 +126,12 @@ module Decidim
         project.latitude.present? && project.longitude.present?
       end
 
-      def filter_addition_type_values(added_count:)
+      def filter_addition_type_values
         return [] if voting_finished?
 
         [
-          ["all", { text: t("all", scope: "decidim.budgets.projects.project_filter"), count: nil }],
-          ["added", { text: t("added", scope: "decidim.budgets.projects.project_filter"), count: added_count }]
+          ["all", t("all", scope: "decidim.budgets.projects.project_filter")],
+          ["added", t("added", scope: "decidim.budgets.projects.project_filter")]
         ]
       end
 
@@ -162,7 +162,7 @@ module Decidim
         references = Budget.joins(:component)
                            .where(component: { participatory_space: current_participatory_space }).order(weight: :asc)
         references.map do |budget|
-          ["#{"&nbsp;" * 4} #{translated_attribute(budget.title)}".html_safe, budget.id]
+          ["#{"&nbsp;" * 4} #{decidim_escape_translated(budget.title)}".html_safe, budget.id]
         end
       end
     end

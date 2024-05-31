@@ -434,6 +434,7 @@ lb:
         help_sections: Hilfeabschnitte
         homepage: Startseite
         impersonations: Identitätswechsel
+        manage: Verwalten
         moderation: Globale Moderationen
         newsletters: Newsletter
         participants: Teilnehmer
@@ -889,3 +890,8 @@ lb:
   errors:
     messages:
       invalid_json: Ungültiger JSON
+  layouts:
+    decidim:
+      admin:
+        global_moderations:
+          title: Globale Moderationen

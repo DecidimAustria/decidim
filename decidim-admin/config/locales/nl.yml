@@ -482,6 +482,7 @@ nl:
         help_sections: Helpsecties
         homepage: Startpagina
         impersonations: Zich voordoen als
+        manage: Beheer
         moderation: Algemene moderatie
         newsletters: Nieuwsbrieven
         participants: Deelnemers
@@ -955,3 +956,8 @@ nl:
   errors:
     messages:
       invalid_json: Ongeldige JSON
+  layouts:
+    decidim:
+      admin:
+        global_moderations:
+          title: Algemene moderatie

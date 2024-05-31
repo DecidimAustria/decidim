@@ -8,20 +8,19 @@
   </div>
 
   <div class="card-section">
-    <div class="grid grid-cols-2 gap-x-8 p-4">
+    <div class="grid md:grid-cols-2 gap-x-8 p-4">
       <% templates.each do |newsletter_template| %>
-        <div class="card card--mini" id="<%= newsletter_template.name %>">
-          <iframe src="<%= preview_newsletter_template_path(newsletter_template.name) %>" class="email-preview newsletter-template-preview w-full h-96">
+        <div class="card card--mini pb-12 md:pb-0" id="<%= newsletter_template.name %>">
+          <iframe src="<%= preview_newsletter_template_path(newsletter_template.name) %>" class="email-preview w-full h-[60dvh]">
           </iframe>
-
           <div class="card-footer">
-            <h1 class="card-title flex items-center">
+            <h2 class="card-title flex items-center">
               <%= t newsletter_template.public_name_key %>
               <div class="ml-auto">
                 <%= link_to(t(".preview_template"), newsletter_template_path(newsletter_template.name), class: "button button__sm button__secondary") %>
                 <%= link_to(t(".use_template"), new_newsletter_template_newsletter_path(newsletter_template.name), class: "button button__sm button__secondary") %>
               </div>
-            </h1>
+            </h2>
           </div>
         </div>
       <% end %>

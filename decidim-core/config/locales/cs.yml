@@ -88,7 +88,10 @@ cs:
     'true': 'Ano'
   carrierwave:
     errors:
+      file_cannot_be_processed: Soubor nelze zpracovat
+      file_resolution_too_large: Rozlišení souboru je příliš velké
       file_size_too_large: Soubor je příliš velký
+      not_inside_organization: Soubor není připojen k žádné organizaci
   date:
     formats:
       decidim_short: "%d/%m/%Y"
@@ -167,6 +170,7 @@ cs:
       external_link: Externí odkaz
       front_page_link: Přejít na titulní stránku
       logo: "Oficiální logo %{organization}"
+      opens_in_new_tab: Otevře se v nové kartě
       skip_button: Přeskočit na hlavní obsah
     account:
       blocked: Tento účet byl zablokován kvůli porušení smluvních podmínek
@@ -384,7 +388,6 @@ cs:
           '1': Vytvořte svůj pozměňovací návrh
           '2': Porovnejte váš pozměňovací návrh
           '3': Dokončete váš pozměňovací návrh
-          '4': Zveřejněte svůj pozměňovací návrh
     anonymous_user: Anonymní
     application:
       document:
@@ -545,6 +548,8 @@ cs:
         name: Zápatí pod hlavním pruhem
       global_menu:
         name: Globální menu
+      hero:
+        name: Obrázek hrdiny a CTA
       hero_settings_form:
         background_image: Obrázek pozadí
         welcome_text: Uvítací text
@@ -1312,6 +1317,8 @@ cs:
     offline:
       name: Offline
       show:
+        message_1: Vypadá to, že jste v režimu offline.
+        message_2: Prosím, zkuste to znovu později.
         retry: Zkusit znovu
     open_data:
       not_available_yet: Soubory Open Data nejsou dosud k dispozici. Zkuste to prosím znovu za pár minut.
@@ -1490,6 +1497,8 @@ cs:
         close_modal: Zavřít okno
         ok: OK
         title: Potvrdit
+      embed:
+        title: Vložený obsah videa
       extended_navigation_bar:
         more: Více
         unfold: Rozvinout
@@ -1837,13 +1846,16 @@ cs:
     button: Přidat emoji
     categories:
       activities: Aktivity
+      animals-nature: Zvířata a příroda
       custom: Vlastní
       flags: Značky
+      food-drink: Jídlo a pití
       objects: Objekty
       people-body: Lidé a tělo
       recents: Naposledy použité
       smileys-emotion: Smajlíky a emoce
       symbols: Symboly
+      travel-places: Cestování a místa
     error:
       load: Nepodařilo se načíst emoje
     recents:

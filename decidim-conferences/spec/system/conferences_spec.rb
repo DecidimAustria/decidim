@@ -141,6 +141,10 @@ describe "Conferences" do
       visit decidim_conferences.conference_path(conference)
     end
 
+    it "has a sidebar" do
+      expect(page).to have_css(".conference__nav-container")
+    end
+
     describe "follow button" do
       let!(:user) { create(:user, :confirmed, organization:) }
       let(:followable) { conference }
@@ -228,8 +232,8 @@ describe "Conferences" do
     context "when the conference has some components" do
       it "shows the components" do
         within ".conference__nav" do
-          expect(page).to have_content(translated(proposals_component.name, locale: :en))
-          expect(page).not_to have_content(translated(meetings_component.name, locale: :en))
+          expect(page).to have_content(decidim_escape_translated(proposals_component.name))
+          expect(page).not_to have_content(decidim_escape_translated(meetings_component.name))
         end
       end
 
@@ -265,6 +269,18 @@ describe "Conferences" do
           expect(page).to have_css(".conference__map-address", count: 3)
         end
       end
+    end
+  end
+
+  describe "when the conference has no components" do
+    let!(:conference) { base_conference }
+
+    before do
+      visit decidim_conferences.conference_path(conference)
+    end
+
+    it "has no sidebar" do
+      expect(page).not_to have_css(".conference__nav-container")
     end
   end
 end

@@ -13,6 +13,10 @@ module Decidim
     let!(:report) { create(:report, moderation:, details: "bacon eggs spam") }
     let(:decidim) { Decidim::Core::Engine.routes.url_helpers }
 
+    before do
+      reportable.coauthorships.first.author.update!(name: "O'Higgins")
+    end
+
     describe "#report" do
       let(:mail) { described_class.report(user, report) }
 
@@ -28,7 +32,7 @@ module Decidim
 
       describe "email body" do
         it "includes the participatory space name" do
-          expect(email_body(mail)).to match(moderation.participatory_space.title["en"])
+          expect(email_body(mail)).to include(decidim_escape_translated(moderation.participatory_space.title))
         end
 
         it "includes the report's reason" do
@@ -107,7 +111,7 @@ module Decidim
           let(:reportable) { create(:proposal, :official) }
 
           it "includes the name of the organization" do
-            expect(email_body(mail)).to match(author.name)
+            expect(email_body(mail)).to match(decidim_escape_translated(author.name))
           end
         end
 

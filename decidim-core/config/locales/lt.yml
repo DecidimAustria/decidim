@@ -379,7 +379,6 @@ lt:
           '1': Sukurkite savo pataisą
           '2': Palyginkite savo pataisą
           '3': Užbaikite savo pataisą
-          '4': Paskalbkite savo pataisą
     anonymous_user: Anonimas
     application:
       document:
@@ -1225,7 +1224,6 @@ lt:
         token_error: Nuorodos galiojimo laikas baigėsi.
         unsubscribe: Atsisakyti prenumeratos
     newsletters_opt_in:
-      unathorized: Atsiprašome, šios nuorodos nebėra.
       update:
         error: Išsaugant naujienlaiškių nuostatas iškilo problema.
         success: Naujienlaiškio nuostatos atnaujintos.

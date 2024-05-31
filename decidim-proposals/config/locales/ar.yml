@@ -186,7 +186,6 @@ ar:
             proposal_wizard_step_1_help_text: اقتراح الاقتراح "إنشاء" نص مساعدة الخطوة
             proposal_wizard_step_2_help_text: اقتراح الاقتراح "قارن" نص خطوة المساعدة
             proposal_wizard_step_3_help_text: نص اقتراح "إكمال" تعليمات نص المعالج
-            proposal_wizard_step_4_help_text: اقتراح الاقتراح "نشر" نص تعليمات الخطوة
             resources_permissions_enabled: يمكن تعيين أذونات الإجراءات لكل اقتراح
             scope_id: نطاق
             scopes_enabled: النطاقات مفعلة
@@ -281,7 +280,6 @@ ar:
             notification_title: تم قبول اقتراحك <a href="%{resource_path}">%{resource_title}</a>.
           follower:
             email_intro: 'تم قبول الاقتراح "%{resource_title}". يمكنك قراءة الإجابة على هذه الصفحة:'
-            email_outro: لقد تلقيت هذا الإشعار لأنك تتابع %{resource_title}. يمكنك إلغاء المتابعة على الرابط السابق.
             notification_title: لقد تم قبول المُقتَرح <a href="%{resource_path}">%{resource_title}</a>.
         proposal_evaluating:
           affected_user:
@@ -291,7 +289,6 @@ ar:
             notification_title: يتم تقييم الاقتراح الخاص بك <a href="%{resource_path}">%{resource_title}</a>.
           follower:
             email_intro: 'الاقتراح "%{resource_title}" قيد التقييم حاليا. يمكنك التحقق من وجود إجابة على هذه الصفحة:'
-            email_outro: لقد تلقيت هذا الإشعار لأنك تتابع %{resource_title}. يمكنك إلغاء المتابعة على الرابط السابق.
             notification_title: الاقتراح <a href="%{resource_path}">%{resource_title}</a> قيد التقييم الآن.
         proposal_mentioned:
           email_intro: تم ذكر اقتراحك "%{mentioned_proposal_title}" <a href="%{resource_url}">في هذا الفضاء</a> في التعليقات.
@@ -315,7 +312,6 @@ ar:
             notification_title: تم رفض اقتراحك <a href="%{resource_path}">%{resource_title}</a>.
           follower:
             email_intro: 'تم رفض الاقتراح %{resource_title}. يمكنك قراءة الإجابة على ذلك على هذه الصفحة:'
-            email_outro: لقد تلقيت هذا الإشعار لأنك تتابع %{resource_title}. يمكنك إلغاء المتابعة على الرابط السابق.
             notification_title: تم رفض الاقتراح <a href="%{resource_path}">%{resource_title}</a>.
         proposal_update_category:
           email_intro: 'قام المشرف بتحديث فئة اقتراحك "%{resource_title}" ، تحقق من ذلك في هذه الصفحة:'
@@ -472,7 +468,7 @@ ar:
             accepted: وافقت
             answer_proposal: إجابة
             evaluating: تقييم
-            not_answered: لم تتم الإجابة عليه
+            not_answered: بلا جواب
             rejected: مرفوض
             title: الإجابة على الاقتراح %{title}
         proposal_notes:
@@ -864,7 +860,7 @@ ar:
           step_1: إنشاء اقتراحك
           step_2: قارن
           step_3: إكمال
-          step_4: انشر اقتراحك
+          step_4: نشر اقتراحك
           title: خطوات إنشاء الاقتراحات
       proposals_picker:
         choose_proposals: اختيار الاقتراحات

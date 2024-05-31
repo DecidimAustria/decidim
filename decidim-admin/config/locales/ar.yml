@@ -450,6 +450,7 @@ ar:
         help_sections: أقسام المساعدة
         homepage: الصفحة الرئيسية
         impersonations: التقليد
+        manage: تدبير
         newsletters: الرسائل الإخبارية
         participants: المشاركون
         scope_types: أنواع المجال
@@ -881,3 +882,8 @@ ar:
   errors:
     messages:
       invalid_json: JSON غير صالح
+  layouts:
+    decidim:
+      admin:
+        global_moderations:
+          title: مُشرف عام

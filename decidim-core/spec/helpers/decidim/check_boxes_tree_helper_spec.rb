@@ -39,7 +39,7 @@ module Decidim
             data: { checkboxes_tree: "with_any_whatever_" },
             include_hidden: false,
             label: "<span>All</span>",
-            label_options: { class: "filter", "data-global-checkbox": "", value: "" },
+            label_options: { "data-global-checkbox": "", value: "" },
             multiple: true,
             value: ""
           }
@@ -69,12 +69,42 @@ module Decidim
             label: "<span>An option</span>",
             multiple: true,
             include_hidden: false,
-            label_options: { "data-children-checkbox": "with_any_whatever_", value: "an_option", class: "filter" }
+            label_options: { "data-children-checkbox": "with_any_whatever_", value: "an_option" }
           }
         end
 
         it "returns the options" do
           expect(helper.check_boxes_tree_options(value, label, **options)).to eq(expected_options)
+        end
+      end
+    end
+
+    describe "#filter_categories_values" do
+      let(:root) { helper.filter_categories_values }
+      let(:leaf) { helper.filter_categories_values.leaf }
+      let(:nodes) { helper.filter_categories_values.node }
+
+      context "when the participatory space does not have categories" do
+        it "does not return any category" do
+          expect(leaf.value).to eq("")
+          expect(nodes.count).to eq(0)
+          expect(nodes.first).to be_nil
+        end
+      end
+
+      context "when the participatory space has a category with subcategories" do
+        let(:participatory_space) { create(:participatory_process, organization:) }
+        let(:category) { create(:category, participatory_space:) }
+        let!(:subcategories) { create_list(:subcategory, 5, parent: category, participatory_space:) }
+
+        it "returns all the subcategories" do
+          expect(leaf.value).to eq("")
+          expect(root).to be_a(Decidim::CheckBoxesTreeHelper::TreeNode)
+          expect(root.node.first.node.count).to eq(5)
+        end
+
+        it "sanitizes the labels" do
+          expect(root.node.first.first.label).to start_with("&lt;script&gt;alert(&quot;category_name&quot;);&lt;/script&gt;")
         end
       end
     end

@@ -224,7 +224,6 @@ nl:
           '1': Maak uw amendement
           '2': Vergelijk uw amendement
           '3': Voltooi uw amendement
-          '4': Publiceer uw amendement
     anonymous_user: Anoniem
     application:
       document:
@@ -892,6 +891,7 @@ nl:
           headline: Huidige stand van %{organization}
         sub_hero:
           register: Registreren
+          register_title: Meld je aan voor een account
       index:
         standalone_pages: Pages
         subheading: Navigeer door de helppagina's van %{name}

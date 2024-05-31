@@ -480,6 +480,9 @@ gl:
         button: Deixar de seguir
         error: Houbo un erro ao seguir este recurso.
     forms:
+      file_help:
+        file:
+          message_2: Nas imaxes, emprega preferiblemente as apaisadas, o servizo recorta a imaxe.
       upload:
         labels:
           add_attachment: Engadir ficheiro anexo
@@ -698,6 +701,7 @@ gl:
           headline: Estado actual de %{organization}
         sub_hero:
           register: Rexistrarse
+          register_title: Rexistrarse para crear unha conta
       index:
         standalone_pages: Páxinas
         subheading: Navega polas páxinas de axuda de %{name}

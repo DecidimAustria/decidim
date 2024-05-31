@@ -32,6 +32,10 @@ fi:
           attributes:
             redirect_uri:
               must_be_ssl: Uudelleenohjaus osoite (URI) on oltava SSL-muotoinen osoite (URI)
+        organization:
+          attributes:
+            password:
+              secret_key: Sinun täytyy määritellä SECRET_KEY_BASE ympäristömuuttuja, jotta voit tallentaa tämän kentän.
   decidim:
     system:
       actions:
@@ -233,8 +237,8 @@ fi:
           google_oauth2:
             client_id: Asiakkaan tunniste (Client ID)
             client_secret: Asiakkaan salausavain (Client secret)
-          icon: Ikoni
-          icon_path: Ikonin polku
+          icon: Kuvake
+          icon_path: Kuvakkeen polku
           twitter:
             api_key: API-avain
             api_secret: API-salausavain
@@ -245,7 +249,7 @@ fi:
           fieldsets:
             sender: Lähettäjä
           instructions:
-            from_label: 'Sähköpostin lähettäjä on: "organisaatiosi-nimi <your-organization@example.org>". Jätä tyhjäksi käyttääksesi "Sähköpostiosoite" -kentän arvoa lähettäjän nimenä.'
+            from_label: 'Sähköpostin lähettäjä on: "organisaation-nimi <organisaation-sahkoposti@example.org>". Jätä tyhjäksi käyttääksesi "Sähköpostiosoite" -kentän arvoa lähettäjän nimenä.'
           placeholder:
             from_email: sinun-organisaatiosi@example.org
             from_label: organisaatiosi-nimi

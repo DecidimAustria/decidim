@@ -269,7 +269,6 @@ tr:
             select_parent_assembly: Bağlı olduğu kurulu seçin
             social_handlers: Sosyal
             title: Genel bilgi
-            visbility: görünürlük
         assemblies_types:
           form:
             title: Başlık
@@ -331,7 +330,7 @@ tr:
           'false': opak
           'true': şeffaf
         private_space: Bu özel bir kurul
-        related_participatory_processes: İlgili katılımcı süreçleri
+        related_participatory_processes: İlgili Katılımcı süreçler
     assembly_members:
       assembly_member:
         designated_on: Üzerinde belirlenen

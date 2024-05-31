@@ -220,7 +220,6 @@ pt:
           '1': Criar a sua modificação
           '2': Comparar a sua modificação
           '3': Concluir a sua modificação
-          '4': Publicar a sua modificação
     anonymous_user: Anônimo
     application:
       document:
@@ -618,6 +617,7 @@ pt:
         file:
           explanation: 'Orientação para o ficheiro:'
           message_1: Tem que ser uma imagem ou um documento.
+          message_2: Para imagens, use de preferência imagens de paisagem, o serviço corta a imagem.
         image:
           explanation: 'Orientação para a imagem:'
           message_1: Preferencialmente, uma imagem de paisagem que não tem nenhum texto.
@@ -883,6 +883,7 @@ pt:
           headline: Estado atual de %{organization}
         sub_hero:
           register: Registar
+          register_title: Registe-se para criar conta
       index:
         standalone_pages: Páginas
         subheading: Navegar pelas páginas de ajuda de %{name}
