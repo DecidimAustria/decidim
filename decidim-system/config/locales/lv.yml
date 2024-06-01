@@ -1,5 +1,22 @@
 ---
 lv:
+  activemodel:
+    attributes:
+      oauth_application:
+        organization_logo: Organizācijas logotips (kvadrāts)
+        organization_url: Organizācijas URL
+        redirect_uri: Novirzīšanas URI
+      organization:
+        address: SMTP saimniekdatora nosaukums
+        password: Parole
+        port: Ports
+        user_name: Lietotājvārds
+    errors:
+      models:
+        oauth_application:
+          attributes:
+            redirect_uri:
+              must_be_ssl: Novirzīšanas URI jābūt SSL URI
   decidim:
     system:
       actions:
@@ -23,6 +40,8 @@ lv:
         new:
           create: Izveidot
           title: Jauns administrators
+        show:
+          edit: Labot
         update:
           error: Administratora atjaunināšanas laikā radās problēma.
           success: Administrators ir veiksmīgi atjaunināts
@@ -50,7 +69,6 @@ lv:
             name: Nosaukums
             omniauth_settings: Omniauth iestatījumi
             smtp_settings: SMTP iestatījumi
-          name: Organizācija
       organizations:
         create:
           error: Jaunas organizācijas izveides laikā radās problēma.
@@ -60,8 +78,6 @@ lv:
         index:
           title: Organizācijas
         new:
-          reference_prefix_hint: Atsauces prefiksu izmanto, lai varētu identificēt resursus visā organizācijā
-          secondary_hosts_hint: Katru no tām ievadiet jaunā rindā
           title: Jauna organizācija
         omniauth_settings:
           decidim:

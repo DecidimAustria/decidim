@@ -80,6 +80,7 @@ pl:
           form:
             add_question: Dodaj pytanie
             add_separator: Dodaj separator
+            add_title_and_description: Dodaj tytuł i opis
             already_answered_warning: Niektórzy użytkownicy już odpowiedzieli na pytania tego formularza, więc nie można modyfikować jego pytań.
             collapse: Zwiń wszystkie pytania
             expand: Rozwiń wszystkie pytania
@@ -109,14 +110,29 @@ pl:
             remove: Usuń
             separator: Separator
             up: W górę
+          title_and_description:
+            collapse: Zwiń
+            description: Opis
+            down: W dół
+            expand: Rozwiń
+            remove: Usuń
+            title: Tytuł
+            title_and_description: Tytuł i opis
+            up: W górę
           update:
             invalid: Podczas zapisywania formularza wystąpił błąd.
             success: Formularz został zapisany.
+      admin_log:
+        questionnaire:
+          update: "%{user_name} zaktualizował(a) kwestionariusz %{resource_name}"
       errors:
         answer:
           body: Treść nie może być pusta
       images:
         dimensions: "%{width} × %{height} px"
+        processors:
+          resize_and_pad: Rozmiar obrazu zostanie zmieniony i dopasowany do wymiarów %{dimensions}.
+          resize_to_fit: Rozmiar obrazu zostanie zmieniony i dopasowany do wymiarów %{dimensions}.
       question_types:
         files: Pliki
         long_answer: Długa odpowiedź
@@ -127,6 +143,8 @@ pl:
         single_option: Jedna opcja
         sorting: Sortowanie
         title_and_description: Tytuł i opis
+      questionnaire_answer_presenter:
+        download_attachment: Pobierz załącznik
       questionnaires:
         answer:
           invalid: Podczas wypełniania formularza wystąpiły błędy.

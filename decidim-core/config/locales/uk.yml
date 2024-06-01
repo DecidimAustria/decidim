@@ -171,9 +171,12 @@ uk:
           invalid_field: "Для поля %{field} значення %{value} неприпустиме."
           ok: Гаразд
           title: Недостатньо прав через відсутність підтвердження особи
-      show:
-        close_modal: Закрити віконце
     collapsible_list:
+      hidden_elements_count:
+        one: і ще %{count}
+        few: і ще %{count}
+        many: і ще %{count}
+        other: і ще %{count}
       see_less: "(читати менше)"
       see_more: "(читати далі)"
     components:
@@ -223,7 +226,6 @@ uk:
           already_have_an_account?: Вже маєте обліковий запис?
           newsletter: Отримувати іноді розсилання зі свіжими новинами
           newsletter_title: Дозвіл на зв'язок
-          sign_in: Увійти
           sign_up: Зареєструватися
           sign_up_as:
             legend: Зареєструватися як
@@ -240,7 +242,6 @@ uk:
         newsletter_modal:
           buttons:
             check: Поставити галочку та продовжити
-            close_modal: Закрити віконце
           notice: |-
             <p>Привіт, ви впевнені, що не хочете отримувати розсилання новин?<br> Будь ласка, ще раз розгляньте можливість поставити нижче галочку щодо розсилання.<br> Для нас дуже важливо, щоб ви могли іноді отримувати електронні листи з важливими оголошеннями. Ви завжди можете змінити це на сторінці налаштувань сповіщень.</p> <p>Якщо ви не поставите цю галочку, ви можете прогледіти доречні відомості щодо свіжих можливостей участі в роботі майданчика.<br> Якщо ви все ж бажаєте уникнути розсилань, ми прекрасно розуміємо таке ваше рішення.</p> <p>Дякуємо, що прочитали це!</p>
           title: Сповіщення про новини
@@ -267,8 +268,6 @@ uk:
       show:
         download_data: Завантажити дані
         request_data: Подати запит на дані
-    endorsable:
-      endorsements: Проявів підтримки
     errors:
       internal_server_error:
         title: При з'єднанні з нашим сервером сталася помилка
@@ -341,9 +340,9 @@ uk:
       default_image: Зображення за замовчуванням
       errors:
         error: У цьому полі є помилка.
-    links:
-      warning:
-        close_modal: Закрити віконце
+      upload:
+        labels:
+          save: Зберегти
     log:
       base_presenter:
         create: "%{user_name} створив %{resource_name}"
@@ -383,12 +382,17 @@ uk:
         create:
           error: Бесіда не розпочата. Спробуйте ще раз пізніше
         index:
-          close: Закрити віконце
+          from: Від
           no_conversations: У вас ще немає бесід
+          title: Бесіди
         reply:
           send: Надіслати
+          title: Відповісти
+        show:
+          title: Бесіда з %{usernames}
         start:
           send: Надіслати
+          title: Почати бесіду
     newsletter_mailer:
       newsletter:
         note: Ви отримали цього електронного листа, оскільки ви підписалися на новини щодо %{organization_name}. Ви можете змінити свої налаштування на <a href="%{link}">сторінці сповіщень</a>.
@@ -440,7 +444,6 @@ uk:
           proposals: Пропозиції
           proposals_explanation: Вносьте нові пропозиції, підтримуйте існуючі та сприяйте змінам, які ви хочете бачити.
         footer_sub_hero:
-          footer_sub_hero_body: Створімо більш відкрите, прозоре та співпрацююче суспільство.<br /> Долучайтесь, беріть участь та приймайте рішення.
           footer_sub_hero_headline: Ласкаво просимо до майданчику співучасті %{organization}!
           register: Зареєструватися
         hero:
@@ -458,7 +461,6 @@ uk:
           legend: Погодитися з умовами участі
         refuse:
           modal_btn_exit: Я перегляну це пізніше
-          modal_close: Закрити віконце
           modal_title: Ви дійсно відмовляєтеся від оновлених "Умов участі"?
         required_review:
           alert: Ми оновили наші "Умови участі", будь ласка, перегляньте їх.
@@ -471,6 +473,7 @@ uk:
     profiles:
       default_officialization_text_for_users: Особу цього учасника прилюдно підтверджено, його ім'я чи роль перевірено на відповідність його справжньому імені та ролі
       show:
+        conversations: Бесіди
         followers: Ті, хто стежить
         following: 'Стежить за:'
       user:
@@ -502,10 +505,8 @@ uk:
       term_input_placeholder: Шукати
     searches:
       filters_small_view:
-        close_modal: Закрити віконце
         filter: Відібрати
         filter_by: 'Відібрати за ознакою:'
-        unfold: Розгорнути
     shared:
       embed_modal:
         close_window: Закрити вікно
@@ -538,6 +539,8 @@ uk:
     user_conversations:
       index:
         close: Закрити
+      show:
+        title: Бесіда з %{usernames}
       update:
         error: Повідомлення не надіслано. Спробуйте ще раз пізніше
     version_author:

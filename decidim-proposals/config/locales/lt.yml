@@ -43,6 +43,10 @@ lt:
           valuator_role_id: Vertintojo vardas ir pavardė
     errors:
       models:
+        participatory_text:
+          attributes:
+            document:
+              allowed_file_content_types: 'Nevalidus turinio tipas. Leidžiamos rinkmenos tik su šiomis galūnėmis: %{types}'
         proposal:
           attributes:
             add_documents:
@@ -179,7 +183,6 @@ lt:
             proposal_wizard_step_1_help_text: Pasiūlymo vedlio etapo „Sukurti“ pagalbos tekstas
             proposal_wizard_step_2_help_text: Pasiūlymo vedlio etapo „Palyginti“ pagalbos tekstas
             proposal_wizard_step_3_help_text: Pasiūlymo vedlio etapo „Užbaigti“ pagalbos tekstas
-            proposal_wizard_step_4_help_text: Pasiūlymo vedlio etapo „Paskelbti“ pagalbos tekstas
             resources_permissions_enabled: Kiekvienam pasiūlymui galima nustatyti leistinus veiksmus
             scope_id: Apimtis
             scopes_enabled: Sritys įjungtos
@@ -279,7 +282,6 @@ lt:
             notification_title: Jūsų pasiūlymas <a href="%{resource_path}">%{resource_title}</a> priimtas.
           follower:
             email_intro: 'Pasiūlymas "%{resource_title}" priimtas. Atsakymą galite perskaityti šiame puslapyje:'
-            email_outro: Gavote šį pranešimą, nes sekate %{resource_title}. Galite nebesekti paspaudę ant aukščiau esančios nuorodos.
             email_subject: Pasiūlymas, kurį sekate, buvo priimtas
             notification_title: <a href="%{resource_path}">%{resource_title}</a> pasiūlymas priimtas.
         proposal_evaluating:
@@ -290,7 +292,6 @@ lt:
             notification_title: Jūsų pasiūlymas <a href="%{resource_path}">%{resource_title}</a> šiuo metu vertinamas.
           follower:
             email_intro: 'Pasiūlymas "%{resource_title}" šiuo metu vertinamas. Atsakymą galite patikrinti šiame puslapyje:'
-            email_outro: Gavote šį pranešimą, nes sekate %{resource_title}. Galite nebesekti paspaudę ant aukščiau esančios nuorodos.
             email_subject: Pasiūlymas, kurį sekate, šiuo metu vertinamas
             notification_title: <a href="%{resource_path}">%{resource_title}</a> pasiūlymas šiuo metu vertinamas.
         proposal_mentioned:
@@ -313,10 +314,10 @@ lt:
           affected_user:
             email_intro: 'Jūsų pasiūlymas „%{resource_title}“ atmestas. Atsakymą galite perskaityti šiame puslapyje:'
             email_outro: Šį pranešimą gavote dėl to, kad esate „%{resource_title}“ autorius.
+            email_subject: Jūsų pasiūlymas atmestas
             notification_title: Jūsų pasiūlymas <a href="%{resource_path}">%{resource_title}</a> atmestas.
           follower:
             email_intro: 'Pasiūlymas „%{resource_title}“ atmestas. Atsakymą galite perskaityti šiame puslapyje:'
-            email_outro: Gavote šį pranešimą, nes sekate %{resource_title}. Galite nebesekti paspaudę ant aukščiau esančios nuorodos.
             email_subject: Pasiūlymas, kurį sekate, buvo atmestas
             notification_title: Pasiūlymas <a href="%{resource_path}">%{resource_title}</a> buvo atmestas.
         proposal_update_category:
@@ -405,6 +406,23 @@ lt:
           proposal_comments: Komentarai
           proposals: Pasiūlymai
         imports:
+          help:
+            answers: |
+              Importuojamas dokumentas turėtų turėti šiuos stulpelių pavadinimus atveju, jei tai CSV ar Excel failai, arba raktų pavadinimus, jei tai JSON failai:
+
+              <ul>
+              <li><b>id:</b> Pasirinkimo atsakymo ID</li>
+              <li><b>state:</b> Vienas iš "accepted", "evaluating" arba "rejected"</li>
+              <li><b>answer/en:</b> Atsakymas anglų kalba. Tai priklauso nuo jūsų platformos kalbos konfigūracijos.</li>
+              </ul>
+            proposals: |
+              Failas privalo turėti šiuos stulpelių pavadinimus atveju, jei tai CSV ar Excel failai, arba raktų pavadinimus, jei tai JSON failai:
+              <ul>
+              <li><b>title/en:</b> Pavadinimas anglų kalba. Tai priklauso nuo jūsų platformos kalbos konfigūracijos.</li>
+              <li><b>body/en:</b> Tekstas anglų kalba. Tai priklauso nuo jūsų platformos kalbos konfigūracijos.</li>
+              <li><b>scope/id:</b> Masto ID</li>
+              <li><b>category/id:</b> Kategorijos ID</li>
+              </ul>
           label:
             answers: Importuoti atsakymus iš failo
             proposals: Importuoti pasiūlymus iš failo
@@ -645,6 +663,7 @@ lt:
             many: "%{count} bendri projektai"
             other: "%{count} bendri projektai"
         create:
+          error: Kuriant šį bendrąjį juodraštį iškilo problema.
           success: Bendrasis juodraštis sukurtas.
         edit:
           attachment_legend: "(Neprivaloma) Pridėti priedą"
@@ -845,6 +864,8 @@ lt:
           recent: Naujausi
           with_more_authors: Turintys daug autorių
         participatory_texts:
+          index:
+            document_index: Dokumentų rodyklė
           view_index:
             see_index: Žiūrėti rodyklę
         placeholder:

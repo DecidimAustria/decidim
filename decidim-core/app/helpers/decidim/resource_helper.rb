@@ -67,13 +67,15 @@ module Decidim
 
     # Returns an instance of ResourceLocatorPresenter with the given resource
     def resource_locator(resource)
+      return resource.resource_locator if resource.respond_to?(:resource_locator)
+
       ::Decidim::ResourceLocatorPresenter.new(resource)
     end
 
     # Returns a descriptive title for the resource
     def resource_title(resource)
       title = resource.try(:title) || resource.try(:name) || resource.try(:subject) || "#{resource.model_name.human} ##{resource.id}"
-      title = translated_attribute(title) if title.is_a?(Hash)
+      title = decidim_escape_translated(title) if title.is_a?(Hash)
       title
     end
   end

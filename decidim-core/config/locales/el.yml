@@ -74,10 +74,7 @@ el:
     'true': 'Ναι'
   carrierwave:
     errors:
-      file_cannot_be_processed: Το αρχείο δεν μπορεί να επεξεργαστεί
-      file_resolution_too_large: Η ανάλυση του αρχείου είναι πολύ μεγάλη
       file_size_too_large: Το μέγεθος του αρχείου είναι πολύ μεγάλο
-      not_inside_organization: Το αρχείο δεν είναι συνδεδεμένο σε κανέναν οργανισμό
   date:
     formats:
       decidim_short: "%d/%m/%Y"
@@ -291,7 +288,6 @@ el:
           '1': Δημιουργήστε την τροποποίησή σας
           '2': Συγκρίνετε την τροποποίησή σας
           '3': Ολοκληρώστε την τροποποίησή σας
-          '4': Δημοσιεύστε την τροποποίησή σας
     anonymous_user: Ανώνυμη
     application:
       collection:
@@ -372,7 +368,7 @@ el:
           request_confirmation_instructions: Ζητήστε οδηγίες επιβεβαίωσης
           title: Επιβεβαίωση διεύθυνσης email
       show:
-        close_modal: Κλείσιμο βοηθητικού στοιχείου
+        close_modal: Κλείσιμο παραθύρου
     block_user_mailer:
       notify:
         body_1: Ο λογαριασμός σας αποκλείστηκε.
@@ -487,7 +483,6 @@ el:
           newsletter: Λάβετε ένα περιστασιακό ενημερωτικό δελτίο με σχετικές πληροφορίες
           newsletter_title: Άδεια επικοινωνίας
           nickname_help: Το ψευδώνυμό σας στο %{organization}. Μπορεί να περιέχει μόνο γράμματα, αριθμούς, '-' και '_'.
-          sign_in: Σύνδεση
           sign_up: Εγγραφή
           sign_up_as:
             legend: Εγγραφή ως
@@ -508,7 +503,7 @@ el:
         newsletter_modal:
           buttons:
             check: Επιλογή και συνέχεια
-            close_modal: Κλείσιμο βοηθητικού στοιχείου
+            close_modal: Κλείσιμο παραθύρου
             uncheck: Διατήρηση χωρίς επιλογή
           notice: |-
             <p>Είστε βέβαιοι ότι δεν θέλετε να λαμβάνετε ενημερωτικό δελτίο;<br>
@@ -548,7 +543,6 @@ el:
     editor_images:
       drag_and_drop_help: Προσθήκη εικόνων σύροντας τις & ρίχνοντας ή επικολλώντας αυτές.
     endorsable:
-      endorsements: Επιδοκιμασίες
       endorsements_count: Καταμέτρηση επιδοκιμασιών
     endorsement_buttons_cell:
       already_endorsed: Με επιδοκιμασία
@@ -747,6 +741,7 @@ el:
         file:
           explanation: 'Οδηγίες για αρχείο:'
           message_1: Πρέπει να είναι εικόνα ή έγγραφο.
+          message_2: Για εικόνες, χρησιμοποιήστε κατά προτίμηση οριζόντιας διάταξης, η υπηρεσία περικόπτει την εικόνα.
         image:
           explanation: 'Οδηγίες για εικόνα:'
           message_1: Προτιμώμενη εικόνα οριζόντιας διάταξης που δεν περιέχει κείμενο.
@@ -756,6 +751,8 @@ el:
         max_file_size: 'Μέγιστο μέγεθος αρχείου: %{megabytes}MB'
       upload:
         labels:
+          cancel: Ακύρωση
+          save: Αποθήκευση
           title: Τίτλος
           title_required: Ο τίτλος απαιτείται!
           uploaded: Φορτώθηκε
@@ -888,7 +885,7 @@ el:
         body_1: Πρόκειται να επισκεφθείτε έναν εξωτερικό σύνδεσμο και θα θέλαμε να είστε προσεκτικοί όσον αφορά το περιεχόμενο στην εξωτερική ιστοσελίδα.
         body_2: Παρακαλούμε ελέγξτε τον σύνδεσμο που πρόκειται να επισκεφθείτε και βεβαιωθείτε ότι τον αναγνωρίζετε ως ασφαλή τοποθεσία πριν προχωρήσετε.
         cancel: Ακύρωση
-        close_modal: Κλείσιμο βοηθητικού στοιχείου
+        close_modal: Κλείσιμο παραθύρου
         proceed: Συνέχεια
         title: Άνοιγμα εξωτερικού συνδέσμου
     log:
@@ -976,7 +973,7 @@ el:
           error: Η συνομιλία δεν ξεκίνησε. Δοκιμάστε ξανά αργότερα.
         index:
           ago: πριν
-          close: Κλείσιμο βοηθητικού στοιχείου
+          close: Κλείσιμο παραθύρου
           from: Από
           groups: Οι ομάδες μου
           last_message: Τελευταίο μήνυμα
@@ -1097,7 +1094,6 @@ el:
           proposals: Προτάσεις
           proposals_explanation: Διατυπώστε προτάσεις, υποστηρίξτε υπάρχουσες και αναβαθμίστε τις αλλαγές που θέλετε να δείτε.
         footer_sub_hero:
-          footer_sub_hero_body: Ας οικοδομήσουμε μια πιο ανοιχτή, διαφανή και συνεργατική κοινωνία.<br /> Εγγραφείτε, συμμετάσχετε και αποφασίστε.
           footer_sub_hero_headline: Καλώς ορίσατε στην πλατφόρμα συμμετοχής του οργανισμού %{organization}.
           register: Εγγραφή
         hero:
@@ -1130,7 +1126,7 @@ el:
           modal_btn_continue: Αποδοχή των όρων και συνέχεια
           modal_btn_exit: Θα τους διαβάσω αργότερα
           modal_button: Απόρριψη των όρων
-          modal_close: Κλείσιμο βοηθητικού στοιχείου
+          modal_close: Κλείσιμο παραθύρου
           modal_title: Θέλετε πραγματικά να απορρίψετε τους ενημερωμένους Όρους και προϋποθέσεις;
         required_review:
           alert: Ενημερώσαμε τους Όρους χρήσης υπηρεσίας, διαβάστε τους.
@@ -1224,7 +1220,7 @@ el:
           future: Μέλλον
           past: Παρελθόν
       filters_small_view:
-        close_modal: Κλείσιμο βοηθητικού στοιχείου
+        close_modal: Κλείσιμο παραθύρου
         filter: Φίλτρο
         filter_by: Φιλτράρισμα κατά
         unfold: Αποκάλυψη
@@ -1476,8 +1472,6 @@ el:
       updated: Ο λογαριασμός σας ενημερώθηκε με επιτυχία.
     sessions:
       already_signed_out: Η έξοδος ολοκληρώθηκε με επιτυχία.
-      new:
-        sign_in: Σύνδεση
       signed_in: Η είσοδος ολοκληρώθηκε με επιτυχία.
       signed_out: Η έξοδος ολοκληρώθηκε με επιτυχία.
     shared:
@@ -1486,7 +1480,6 @@ el:
         didn_t_receive_confirmation_instructions: Δεν λάβατε οδηγίες επιβεβαίωσης;
         didn_t_receive_unlock_instructions: Δεν λάβατε οδηγίες ξεκλειδώματος;
         forgot_your_password: Ξεχάσατε τον κωδικό πρόσβασής σας;
-        sign_in: Σύνδεση
         sign_in_with_provider: Είσοδος με %{provider}
         sign_up: Εγγραφή
       minimum_password_length:
@@ -1558,8 +1551,9 @@ el:
         facebook: "%{organization} στο Facebook"
         github: "%{organization} στο GitHub"
         instagram: "%{organization} στο Instagram"
-        twitter: "%{organization} στο Twitter"
         youtube: "%{organization} στο YouTube"
+      upload_modal:
+        close_modal: Κλείσιμο παραθύρου
       user_menu:
         account: 'Λογαριασμός χρήστη: %{name}'
         admin_dashboard: Πίνακας εργαλείων διαχειριστή

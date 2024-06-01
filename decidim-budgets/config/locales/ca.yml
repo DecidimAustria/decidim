@@ -21,6 +21,9 @@ ca:
         scope_id: Àmbit
   activerecord:
     models:
+      decidim/budgets/budget:
+        one: Pressupost
+        other: Pressupostos
       decidim/budgets/project:
         one: Projecte
         other: Projectes
@@ -100,6 +103,9 @@ ca:
             pending_orders: Vots en procés
             select_for_implementation: Seleccionat per implementar
             selected: Seleccionat
+            selected_options:
+              'no': 'No'
+              'yes': 'Sí'
             title: Projectes
             update: Actualitzar
             update_scope_button: Actualitzar àmbit
@@ -362,7 +368,7 @@ ca:
       budgets:
         budget_published:
           email_intro: 'Ja està activa la fase %{resource_title} per a %{participatory_space_title}. Pots veure-la des d''aquesta pàgina:'
-          email_outro: Has rebut aquesta notificació perquè estàs seguint l'espai %{participatory_space_title}. Pots deixar de rebre notificacions a través de l'enllaç anterior.
+          email_outro: Has rebut aquesta notificació perquè estàs seguint l'espai "%{participatory_space_title}". Pots deixar de rebre notificacions a través de l'enllaç anterior.
           email_subject: El component %{resource_title} ja està actiu per %{participatory_space_title}.
           notification_title: El pressupost <a href="%{resource_path}">%{resource_title}</a> a %{participatory_space_title} ja està actiu.
     orders:

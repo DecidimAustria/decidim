@@ -14,26 +14,51 @@ pl:
       meeting:
         address: Adres
         available_slots: Dostępne miejsca na to spotkanie
+        customize_registration_email: Dostosuj maila rejestracji
         decidim_category_id: Kategoria
         decidim_scope_id: Zakres
         decidim_user_group_id: Grupa użytkowników
         description: Opis
+        end_time: Czas zakończenia
         id: Numer ID
+        iframe_embed_type: Typ osadzenia Iframe
         location: Miejsce
         location_hints: Wskazówki co do miejsca
         online_meeting_url: Adres URL spotkania online
         organizer_gid: Utwórz jako
         organizer_id: Organizator
         private_meeting: Prywatne spotkanie
+        registration_email_custom_content: Niestandardowa treści rejestracyjnego e-maila
         registration_form_enabled: Włączono formularz rejestracyjny
         registration_terms: Warunki rejestracji
+        registration_type: Typ rejestracji
         registration_url: Adres URL rejestracji
         registrations_enabled: Rejestracje włączone
+        reserved_slots: Zastrzeżone miejsca na to spotkanie
+        start_time: Godzina rozpoczęcia
         title: Tytuł
         transparent: Transparentny
         type_of_meeting: Typ
+      meeting_agenda:
+        title: Tytuł
+        visible: Widoczna
+      meeting_agenda_items:
+        description: Opis
+        duration: Czas trwania
+        title: Tytuł
+      meeting_registration_invite:
+        email: E-mail
+        name: Nazwa
+      validate_registration_code:
+        code: Kod
     errors:
       models:
+        meeting:
+          attributes:
+            iframe_embed_type:
+              not_embeddable: Ten adres URL nie może być osadzony na stronie spotkania lub wydarzenia na żywo
+            online_meeting_url:
+              url_format: Adres URL musi być prawidłowy
         meeting_agenda:
           attributes:
             base:
@@ -76,9 +101,27 @@ pl:
           closed_at_present:
             label: Państwo
             values:
+              'false': Otwarte
               'true': Zamknięte
           is_upcoming_true:
             label: Data
+            values:
+              'false': Przeszłe
+              'true': Nadchodzące
+          scope_id_eq:
+            label: Zakres
+          with_any_origin:
+            label: Źródło
+            values:
+              official: Oficjalny
+              participants: Uczestnik
+              user_group: Grupy użytkowników
+          with_any_type:
+            label: Rodzaj spotkania
+            values:
+              hybrid: Hybrydowe
+              in_person: Osobiste
+              online: Online
       meeting_copies:
         create:
           error: Wystąpił błąd podczas duplikowania tego spotkania.
@@ -90,6 +133,7 @@ pl:
     components:
       meetings:
         actions:
+          comment: Skomentuj
           join: Dołącz
         name: Spotkania
         settings:
@@ -157,6 +201,9 @@ pl:
           email_outro: Otrzymałeś to powiadomienie, ponieważ obserwujesz spotkanie "%{resource_title}". Aby przestać otrzymywać powiadomienia kliknij w powyższy link, a następnie na stronie spotkania kliknij w przycisk obserwowania.
           email_subject: Spotkanie "%{resource_title}" rozpocznie się za mniej niż 48 godzin.
           notification_title: Spotkanie <a href="%{resource_path}">%{resource_title}</a> rozpocznie się za mniej niż 48 godzin.
+    forms:
+      meetings:
+        attendees_count_help_text: Nie zapomnij podać całkowitej liczby uczestników spotkania osobistego, online lub hybrydowego.
     gamification:
       badges:
         attended_meetings:
@@ -243,9 +290,9 @@ pl:
           index:
             filter:
               accepted: Zaakceptowano
-              all: Wszystko
+              all: Wszystkie
               rejected: Odrzucono
-              sent: Wysłane
+              sent: Wysłano
             filter_by: Filtruj według
             invite_attendee: Zaproś uczestnika
             invites: Zaproszeni
@@ -282,6 +329,8 @@ pl:
             registration_url_help: 'Link: zezwól użytkownikom na korzystanie z usługi zewnętrznej, której używasz do rejestracji'
             select_a_meeting_type: Wybierz typ spotkania
             select_a_registration_type: Wybierz typ rejestracji
+            select_an_iframe_access_level: Wybierz poziom dostępu do iframe
+            show_embedded_iframe_help: 'Tylko kilka usług pozwala na osadzanie się w spotkaniu lub wydarzeniu na żywo z następujących domen: %{domains}'
           index:
             title: Spotkania
           new:
@@ -309,6 +358,9 @@ pl:
         meetings_poll:
           form:
             title: Edytuj kartę do głosowania dla %{questionnaire_for}
+          update:
+            invalid: Wystąpił błąd podczas aktualizacji tej ankiety
+            success: Ankieta spotkania została pomyślnie zaktualizowana
         models:
           meeting:
             name: Spotkanie
@@ -351,20 +403,38 @@ pl:
           value_types:
             organizer_presenter:
               not_found: 'Nie znaleziono organizatora w bazie danych (ID: %{id})'
+        questionnaire:
+          update: "%{user_name} zaktualizował(a) kwestionariusz spotkania %{meeting_name}"
       application_helper:
+        filter_category_values:
+          all: Wszystkie
+        filter_meeting_space_values:
+          all: Wszystkie
         filter_scope_values:
-          all: Wszystko
+          all: Wszystkie
+      calendar:
+        meeting_to_event:
+          read_more: Przeczytaj więcej o tym spotkaniu
       calendar_modal:
         calendar_url: Adres URL kalendarza
         close_window: Zamknij okno
+        copy_calendar_url: Kopiuj
+        copy_calendar_url_clarification: Skopiuj adres URL kalendarza do schowka
+        copy_calendar_url_copied: Skopiowano!
         copy_calendar_url_description: Możesz zobaczyć wszystkie opublikowane spotkania w swojej aplikacji kalendarza. Skopiuj i wklej ten adres URL w swoim kalendarzu, używając opcji "Dodaj nowy kalendarz z URL".
+        copy_calendar_url_explanation: Pamiętaj, że eksportujesz wybrane spotkania, ponieważ filtry są włączone. Jeśli chcesz je wyeksportować, najpierw zresetuj wszystkie filtry.
+        copy_calendar_url_message: Link został pomyślnie skopiowany do schowka.
         export_calendar: Eksportuj kalendarz
       close_meeting_reminder_mailer:
         close_meeting_reminder:
+          body: Spotkanie <a href="%{meeting_path}">"%{meeting_title}"</a> oczekuje na zamknięcie. Dodaj raport z spotkania za pomocą przycisku "Zamknij spotkanie".
+          greetings: Pozdrawiamy,<br/>%{organization_name}<br/><a href="%{organization_url}">%{organization_url}</a>
+          hello: Witaj %{username},
           subject: Teraz możesz zamknąć spotkanie z opublikowaniem raportu na platformie %{organization_name}
       conference_venues: Sale konferencyjne
       content_blocks:
         upcoming_meetings:
+          name: Nadchodzące spotkania
           upcoming_meetings: Nadchodzące spotkania
           view_all_meetings: Pokaż wszystkie
       directory:
@@ -372,9 +442,23 @@ pl:
           index:
             meetings: Spotkania
             space_type: Przestrzeń partycypacyjna
+      iframe_access_level:
+        all: Wszyscy odwiedzający
+        registered: Zarejestrowani uczestnicy tego spotkania
+        signed_in: Tylko zalogowani uczestnicy
+      iframe_embed_type:
+        embed_in_meeting_page: Osadź na stronie spotkania
+        none: Żaden
+        open_in_live_event_page: Otwórz stronę wydarzenia na żywo (z opcjonalnymi ankietami)
+        open_in_new_tab: Otwórz odnośnik w nowej zakładce
       last_activity:
         meeting_updated_at_html: "<span>Spotkanie zaktualizowane o %{link}</span>"
         new_meeting_at_html: "<span>Nowe spotkanie %{link}</span>"
+      layouts:
+        live_event:
+          administrate: Administruj
+          close: zamknij
+          questions: Pytania
       mailer:
         invite_join_meeting_mailer:
           invite:
@@ -394,6 +478,7 @@ pl:
           add_to_calendar: Dodaj do kalendarza
           apple: Dodaj do kalendarza Apple
           close_window: Zamknij okno
+          full_details_html: Aby uzyskać pełne szczegóły, przejdź do %{link}
           google: Dodaj do kalendarza Google
           outlook: Dodaj do kalendarza Outlook
         count:
@@ -423,11 +508,14 @@ pl:
           origin_values:
             all: Wszystkie
             official: Oficjalny
+            participants: Uczestnicy
+            user_groups: Grupy
           scope: Zakres
           search: Szukaj
           type: Typ
           type_values:
             all: Wszystko
+            hybrid: Hybrydowe
             in_person: Osobiście
             online: Online
         filters_small_view:
@@ -447,8 +535,14 @@ pl:
           select_a_category: Wybierz kategorię
           select_a_meeting_type: Wybierz typ spotkania
           select_a_registration_type: Wybierz typ rejestracji
+          select_an_iframe_access_level: Wybierz poziom dostępu iframe
+          show_embedded_iframe_help: 'Tylko kilka usług pozwala na osadzanie się w spotkaniu lub wydarzeniu na żywo z następujących domen: %{domains}'
         index:
+          click_here: Zobacz wszystkie spotkania
           new_meeting: Nowe spotkanie
+          see_all: Zobacz wszystkie spotkania
+          see_all_withdrawn: Zobacz wszystkie wycofane spotkania
+          text_banner: Oglądasz listę spotkań wycofanych przez ich autorów. %{go_back_link}.
         meeting_minutes:
           related_information: Powiązana informacja
         meetings:
@@ -510,11 +604,21 @@ pl:
         questions:
           closed_question:
             question_results: Wyniki wyborów
+          index_admin:
+            edit: Edytuj w panelu administratora
+            question: Pytanie
+            received_answer: otrzymana odpowiedź
+            received_answers: otrzymane odpowiedzi
+            results: Wyniki
+            send: Wyślij
+            sent: Wysłano
           published_question:
             max_choices_alert: Wybrano zbyt wiele opcji
             question: Pytanie
             question_replied: Odpowiedziano na pytanie
             reply_question: Odpowiedz na pytanie
+      public_participants_list:
+        attending_participants: Uczestnicy biorący udział
       read_more: "(zobacz więcej)"
       registration_mailer:
         confirmation:
@@ -542,8 +646,12 @@ pl:
       types:
         private_meeting: Prywatne spotkanie
         transparent: Transparentne
+        withdraw: Wycofany
       versions:
         back_to_resource: Wróć do spotkania
+      withdraw:
+        error: Wystąpił błąd podczas wycofywania spotkania
+        success: Spotkanie zostało pomyślnie wycofane
     metrics:
       meetings:
         description: Liczba utworzonych spotkań

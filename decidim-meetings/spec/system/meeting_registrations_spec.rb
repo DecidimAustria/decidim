@@ -61,7 +61,7 @@ describe "Meeting registrations", type: :system do
         visit questionnaire_public_path
 
         expect(page).to have_i18n_content(questionnaire.title, upcase: true)
-        expect(page).to have_i18n_content(questionnaire.description)
+        expect(page).to have_i18n_content(questionnaire.description, strip_tags: true)
 
         expect(page).to have_no_i18n_content(question.body)
 
@@ -98,7 +98,7 @@ describe "Meeting registrations", type: :system do
           visit questionnaire_public_path
 
           expect(page).to have_i18n_content(questionnaire.title, upcase: true)
-          expect(page).to have_i18n_content(questionnaire.description)
+          expect(page).to have_i18n_content(questionnaire.description, strip_tags: true)
 
           expect(page).to have_no_i18n_content(question.body)
 
@@ -153,7 +153,7 @@ describe "Meeting registrations", type: :system do
             visit questionnaire_public_path
 
             expect(page).to have_i18n_content(questionnaire.title, upcase: true)
-            expect(page).to have_i18n_content(questionnaire.description)
+            expect(page).to have_i18n_content(questionnaire.description, strip_tags: true)
 
             expect(page).not_to have_css(".form.answer-questionnaire")
 
@@ -190,8 +190,8 @@ describe "Meeting registrations", type: :system do
               expect(page).to have_content("successfully")
             end
 
-            expect(page).to have_text("You have signed up for this meeting")
-            expect(page).to have_css(".button", text: "CANCEL YOUR REGISTRATION")
+            expect(page).to have_text("You have joined the meeting")
+            expect(page).to have_css("a", text: "Cancel your registration")
             expect(page).to have_text("19 slots remaining")
             expect(page).to have_text("Stop following")
             expect(page).to have_no_text("ATTENDING PARTICIPANTS")
@@ -214,7 +214,7 @@ describe "Meeting registrations", type: :system do
 
             expect(page).to have_content("successfully")
 
-            expect(page).to have_text("You have signed up for this meeting")
+            expect(page).to have_text("You have joined the meeting")
             expect(page).to have_text("19 slots remaining")
             expect(page).to have_text("Stop following")
             expect(page).to have_text("ATTENDING PARTICIPANTS")
@@ -243,8 +243,8 @@ describe "Meeting registrations", type: :system do
               expect(page).to have_content("successfully")
             end
 
-            expect(page).to have_text("You have signed up for this meeting")
-            expect(page).to have_css(".button", text: "CANCEL YOUR REGISTRATION")
+            expect(page).to have_text("You have joined the meeting successfully")
+            expect(page).to have_css("a", text: "Cancel your registration")
             expect(page).to have_text("19 slots remaining")
             expect(page).to have_text("Stop following")
           end
@@ -275,8 +275,8 @@ describe "Meeting registrations", type: :system do
               expect(page).to have_content("successfully")
             end
 
-            expect(page).to have_text("You have signed up for this meeting")
-            expect(page).to have_css(".button", text: "CANCEL YOUR REGISTRATION")
+            expect(page).to have_text("You have joined the meeting")
+            expect(page).to have_css("a", text: "Cancel your registration")
             expect(page).to have_text("19 slots remaining")
 
             expect(page).to have_text("ATTENDING ORGANIZATIONS")
@@ -309,7 +309,7 @@ describe "Meeting registrations", type: :system do
           visit questionnaire_public_path
 
           expect(page).to have_i18n_content(questionnaire.title, upcase: true)
-          expect(page).to have_i18n_content(questionnaire.description)
+          expect(page).to have_i18n_content(questionnaire.description, strip_tags: true)
           expect(page).to have_content "Show my attendance publicly"
           expect(page).to have_field("public_participation", checked: false)
 
@@ -376,7 +376,7 @@ describe "Meeting registrations", type: :system do
       it "shows the confirmation modal when leaving the meeting" do
         visit_meeting
 
-        click_button "Cancel your registration"
+        click_link "Cancel your registration"
 
         within ".confirm-modal-content" do
           expect(page).to have_content("Are you sure you want to cancel your registration for this meeting?")
@@ -386,7 +386,7 @@ describe "Meeting registrations", type: :system do
       it "they can leave the meeting" do
         visit_meeting
 
-        accept_confirm { click_button "Cancel your registration" }
+        accept_confirm { click_link "Cancel your registration" }
 
         within_flash_messages do
           expect(page).to have_content("successfully")
@@ -483,7 +483,7 @@ describe "Meeting registrations", type: :system do
           visit questionnaire_public_path
 
           expect(page).to have_i18n_content(questionnaire.title, upcase: true)
-          expect(page).to have_i18n_content(questionnaire.description)
+          expect(page).to have_i18n_content(questionnaire.description, strip_tags: true)
 
           expect(page).to have_no_i18n_content(question.body)
 

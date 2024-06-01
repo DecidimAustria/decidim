@@ -75,7 +75,7 @@ ca:
     'true': 'Sí'
   carrierwave:
     errors:
-      file_cannot_be_processed: No s'ha pogut llegir el fitxer
+      file_cannot_be_processed: No s'ha pogut processar el fitxer
       file_resolution_too_large: La resolució de l'arxiu és massa gran
       file_size_too_large: La mida del fitxer és massa gran
       not_inside_organization: L'arxiu no està relacionat amb cap organització
@@ -252,7 +252,7 @@ ca:
       user_moderation:
         unreport: "%{user_name} ha desfet el report %{resource_type} - %{unreported_user_name}"
     admin_terms_of_use:
-      default_body: "<h2>TERMES D'ÚS PER ADMINS</h2><p>Donem per fet que has rebut l'habitual explicació de l'administrador del sistema local. En general es redueix a aquestes tres coses:</p><ol><li>Respectar la privadesa dels altres.</li><li>Penseu abans de fer clic.</li><li>A un gran poder l'hi correspon gran responsabilitat.</li></ol>"
+      default_body: "<h2>TERMES D'ÚS PER ADMINS</h2><p>Donem per fet que has rebut l'habitual explicació de l'administrador del sistema local. En general es redueix a aquestes tres coses:</p><ol><li>Respectar la privadesa dels altres.</li><li>Penseu abans de fer clic.</li><li>A un gran poder li correspon gran responsabilitat.</li></ol>"
     alert:
       dismiss: Descartar notificació
     amendments:
@@ -531,6 +531,8 @@ ca:
           subtitle: Si us plau, omple el següent formulari per tal de completar la teva inscripció
           username_help: Nom públic que apareix als teus missatges. Amb l'objectiu de garantir l'anonimat, pot ser qualsevol nom.
       registrations:
+        create:
+          error: S'ha produït un error en crear el teu compte.
         new:
           already_have_an_account?: Ja tens un compte?
           newsletter: Vull rebre un butlletí ocasional amb informació rellevant
@@ -619,29 +621,29 @@ ca:
         amendment_accepted:
           affected_user:
             email_intro: 'S''ha acceptat una esmena per %{amendable_title}. Pots veure-ho des d''aquesta pàgina:'
-            email_outro: Has rebut aquesta notificació perquè ets una autora de %{amendable_title}.
+            email_outro: Has rebut aquesta notificació perquè s'ha acceptat una esmena presentada a l'apartat "%{amendable_title}" que administres.
             email_subject: Esmena acceptada per %{amendable_title} a %{emendation_author_nickname}
             notification_title: L'<a href="%{emendation_path}">esmena</a> creada per <a href="%{emendation_author_path}">%{emendation_author_nickname}</a> ha estat acceptada per <a href="%{amendable_path}">%{amendable_title}</a>.
           follower:
             email_intro: 'S''ha acceptat una esmena per %{amendable_title}. Pots veure-ho en aquesta pàgina:'
-            email_outro: Has rebut aquesta notificació perquè estàs seguint %{amendable_title}. Pots deixar de rebre notificacions seguint l'enllaç anterior.
+            email_outro: Has rebut aquesta notificació perquè estàs seguint l'esmena "%{amendable_title}". Pots deixar de rebre notificacions seguint l'enllaç anterior.
             email_subject: Esmena acceptada per %{amendable_title} de %{emendation_author_nickname}
             notification_title: L'<a href="%{emendation_path}">esmena</a> creada per <a href="%{emendation_author_path}">%{emendation_author_nickname}</a> ha estat acceptada per <a href="%{amendable_path}">%{amendable_title}</a>.
         amendment_created:
           affected_user:
             email_intro: 'S''ha creat una nova esmena per a %{amendable_title}. La pots veure des d''aquesta pàgina:'
-            email_outro: Has rebut aquesta notificació perquè ets autora de %{amendable_title}.
+            email_outro: Has rebut aquesta notificació perquè s'ha presentat una esmena a l'apartat "%{amendable_title}" que administres.
             email_subject: Nova esmena per a %{amendable_title}
             notification_title: S'ha creat una nova esmena per a <a href="%{amendable_path}">%{amendable_title}</a>.
           follower:
             email_intro: 'S''ha creat una nova esmena per a %{amendable_title}. La pots veure des d''aquesta pàgina:'
-            email_outro: Has rebut aquesta notificació perquè estàs seguint %{amendable_title}. Pots deixar de rebre notificacions seguint l'enllaç anterior.
+            email_outro: Has rebut aquesta notificació perquè estàs seguint l'esmena "%{amendable_title}". Pots deixar de rebre notificacions seguint l'enllaç anterior.
             email_subject: Nova esmena per a %{amendable_title}
             notification_title: S'ha creat una nova esmena per a <a href="%{amendable_path}">%{amendable_title}</a>.
         amendment_promoted:
           affected_user:
             email_intro: 'Una esmena rebutjada per %{amendable_title} ha estat publicada com una nova %{amendable_type}. La pots veure des d''aquesta pàgina:'
-            email_outro: Has rebut aquesta notificació perquè ets autora de %{amendable_title}.
+            email_outro: Has rebut aquesta notificació perquè s'ha promogut una esmena a l'apartat "%{amendable_title}" que administres.
             email_subject: Una nova esmena feta per %{emendation_author_nickname} s'ha publicat com a nova %{amendable_type}
             notification_title: Una <a href="%{emendation_path}">esmena rebutjada</a> per <a href="%{amendable_path}">%{amendable_title}</a> ha estat publicada com un nou %{amendable_type} per <a href="%{emendation_author_path}">%{emendation_author_nickname}</a>.
           follower:
@@ -652,7 +654,7 @@ ca:
         amendment_rejected:
           affected_user:
             email_intro: 'Una esmena s''ha rebutjat per %{amendable_title}. La pots veure des d''aquesta pàgina:'
-            email_outro: Has rebut aquesta notificació perquè ets autora de %{amendable_title}.
+            email_outro: Has rebut aquesta notificació perquè s'ha rebutjat una esmena a l'apartat "%{amendable_title}" que administres.
             email_subject: Esmena rebutjada per %{amendable_title} a %{emendation_author_nickname}
             notification_title: L'<a href="%{emendation_path}">esmena</a> creada per <a href="%{emendation_author_path}">%{emendation_author_nickname}</a> ha estat rebutjada per <a href="%{amendable_path}">%{amendable_title}</a>.
           follower:
@@ -663,13 +665,13 @@ ca:
       attachments:
         attachment_created:
           email_intro: 'S''ha afegit un nou document a %{resource_title}. Pots veure''l des d''aquesta pàgina:'
-          email_outro: Has rebut aquesta notificació perquè estàs seguint %{resource_title}. Pots deixar de rebre notificacions seguint l'enllaç anterior.
+          email_outro: Has rebut aquesta notificació perquè estàs seguint "%{resource_title}". Pots deixar de rebre notificacions seguint l'enllaç anterior.
           email_subject: S'ha produït una actualització per a %{resource_title}
           notification_title: S'ha afegit un <a href="%{resource_path}"> nou document</a> a <a href="%{attached_to_url}">%{resource_title}</a>
       components:
         component_published:
           email_intro: 'Ja està actiu el component %{resource_title} per %{participatory_space_title}. Pots veure''l des d''aquesta pàgina:'
-          email_outro: Has rebut aquesta notificació perquè estàs seguint %{participatory_space_title}. Pots deixar de rebre notificacions seguint l'enllaç anterior.
+          email_outro: Has rebut aquesta notificació perquè estàs seguint l'espai "%{participatory_space_title}". Pots deixar de rebre notificacions seguint l'enllaç anterior.
           email_subject: Una actualització a %{participatory_space_title}
           notification_title: Ja està actiu el component %{resource_title} per <a href="%{resource_path}">%{participatory_space_title}</a>
       email_event:
@@ -701,17 +703,17 @@ ca:
           notification_title: T'han convidat a unir-te al grup <a href="%{resource_path}">%{user_group_name}</a>. Comprova els <a href="%{groups_profile_tab_path}">grups de la pàgina</a> en el teu perfil per acceptar la invitació!
         join_request_accepted:
           email_intro: Felicitats! Una administradora del grup <a href="%{resource_url}">%{user_group_name}</a> ha acceptat la teva sol·licitud per unir-te.
-          email_outro: Has rebut aquesta notificació perquè s'ha actualitzat la teva sol·licitud per a formar-ne part.
+          email_outro: Has rebut aquesta notificació perquè s'ha actualitzat la teva sol·licitud per a formar part del grup.
           email_subject: La teva sol·licitud per a unir-te al grup %{user_group_name} ha estat acceptada!
           notification_title: Has estat acceptada al grup <a href="%{resource_path}">%{user_group_name}</a>.
         join_request_created:
           email_intro: Algú ha sol·licitat unir-se al grup %{user_group_name}. Pots acceptar-la o rebutjar-la des de <a href="%{resource_url}"> la pàgina de membres</a>.
-          email_outro: Has rebut aquesta notificació perquè ets administradora del grup %{user_group_name}.
+          email_outro: Has rebut aquesta notificació perquè administres el grup "%{user_group_name}".
           email_subject: Algú ha sol·licitat unir-se al grup %{user_group_name}!
           notification_title: Algú ha sol·licitat unir-se al grup %{user_group_name}. Pots acceptar o rebutjar la sol·licitud des de <a href="%{resource_path}">els membres del grup de la pàgina</a>.
         join_request_rejected:
           email_intro: Una administradora del grup <a href="%{resource_url}">%{user_group_name}</a> ha rebutjat la teva sol·licitud per unir-te.
-          email_outro: Has rebut aquesta notificació perquè la teva sol·licitud d'incorporació s'ha actualitzat.
+          email_outro: Has rebut aquesta notificació perquè la teva sol·licitud d'incorporació al grup s'ha actualitzat.
           email_subject: La teva sol·licitud per unir-te al grup %{user_group_name} ha estat rebutjada!
           notification_title: La teva sol·licitud per unir-te al grup <a href="%{resource_path}">%{user_group_name}</a> ha estat rebutjada.
         promoted_to_admin:
@@ -731,7 +733,7 @@ ca:
           notification_title: S'ha creat el grup d'usuàries %{user_group_name}. Ara pots verificar-ho al <a href="%{groups_admin_path}">taulell d'administració</a>.
         user_group_updated:
           email_intro: El grup d'usuàries %{user_group_name} ha actualitzat el seu perfil perdent-ne la verificació. Pots tornar a verificar-lo a través del <a href="%{groups_admin_url}"> taulell d'administració</a>.
-          email_outro: Has rebut aquesta notificació perquè ets una de les administradores de la plataforma.
+          email_outro: Has rebut aquesta notificació perquè admnistres la plataforma.
           email_subject: Un grup d'usuàries ha actualitzat el seu perfil
           notification_title: El grup d'usuàries %{user_group_name} ha actualitzat el seu perfil perdent-ne la verificació. Pots tornar a verificar-lo a través del <a href="%{groups_admin_path}"> taulell d'administració</a>.
       nickname_event:
@@ -741,25 +743,25 @@ ca:
       reports:
         resource_hidden:
           email_intro: Una administradora ha eliminat el teu %{resource_type} degut a que has estat reportada com a %{report_reasons}.
-          email_outro: Has rebut aquesta notificació perquè ets autora d'un contingut eliminat.
+          email_outro: Has rebut aquesta notificació perquè s'ha eliminiat un contingut que havies creat.
           email_subject: S'ha eliminat el/la teu/teva %{resource_type}
           notification_title: |-
             Una administradora ha eliminat el teu %{resource_type} degut a que has estat reportada com a %{report_reasons}..</br>
             <i>%{resource_content}</i>
       resource_endorsed:
         email_intro: '%{endorser_name} %{endorser_nickname}, a qui segueixes, acaba d''adherir-se a "%{resource_title}" que et pot resultar interessant, revisa-la i contribueix:'
-        email_outro: Has rebut aquesta notificació perquè estàs seguint a %{endorser_nickname}. Pots deixar de rebre notificacions seguint l'enllaç anterior.
+        email_outro: Has rebut aquesta notificació perquè estàs seguint a "%{endorser_nickname}". Pots deixar de rebre notificacions seguint l'enllaç anterior.
         email_subject: "%{endorser_nickname} s'ha adherit a una proposta"
         notification_title: <a href="%{endorser_path}">%{endorser_name} %{endorser_nickname}</a> s'ha adherit a <a href="%{resource_path}">%{resource_title}</a> (%{resource_type}).
       users:
         profile_updated:
           email_intro: La pàgina <a href="%{resource_url}"> de perfil </a> de %{name} (%{nickname}), a qui estàs seguint, s'ha actualitzat.
-          email_outro: Has rebut aquesta notificació perquè estàs seguint a %{nickname}. Pots deixar de rebre notificacions seguint l'enllaç anterior.
+          email_outro: Has rebut aquesta notificació perquè estàs seguint a "%{nickname}". Pots deixar de rebre notificacions seguint l'enllaç anterior.
           email_subject: "%{nickname} ha actualitzat el seu perfil"
           notification_title: El <a href="%{resource_path}"> perfi l</a> de %{name} (%{nickname}), a qui estàs seguint, s'ha actualitzat.
         user_officialized:
           email_intro: La participant %{name} (%{nickname}) ha estat oficialitzada.
-          email_outro: Has rebut aquesta notificació perquè ets una de les administradores de la plataforma.
+          email_outro: Has rebut aquesta notificació perquè administres la plataforma.
           email_subject: "S'ha oficialitzat a %{name}"
           notification_title: La participant %{name} (%{nickname}) ha estat oficialitzada.
     export_mailer:
@@ -840,7 +842,7 @@ ca:
           file_size_too_large: 'L''arxiu és massa gran! Pes d''arxiu màxim: %{megabytes}MB'
           remove: Eliminar
           replace: Reemplaçar
-          save: Desar
+          save: Desa
           title: Títol
           title_required: Un títol és necessari!
           uploaded: Pujat
@@ -1017,13 +1019,13 @@ ca:
     messaging:
       conversation_mailer:
         comanagers_new_conversation:
-          admin_in_group: Reps aquesta notificació perquè ets administradora de %{group}.
+          admin_in_group: Reps aquesta notificació perquè administres el grup "%{group}".
           greeting: Hola, %{recipient}!
           intro: "%{manager} ha iniciat una nova conversa en nom de %{group}. Fes clic aquí per veure-la:"
           outro: Gaudeix de Decidim!
           subject: "%{manager} ha iniciat una nova conversa com a %{group}"
         comanagers_new_message:
-          admin_in_group: Reps aquesta notificació perquè ets administradora de %{group}.
+          admin_in_group: Reps aquesta notificació perquè administres el grup "%{group}".
           greeting: Hola, %{recipient}!
           intro: "%{manager} ha publicat nous missatge a una conversa en nom de %{group}. Fes clic aquí per veure-la:"
           outro: Gaudeix de Decidim!
@@ -1034,13 +1036,13 @@ ca:
           outro: Gaudeix de Decidim!
           subject: "%{sender} ha iniciat una conversa amb tu"
         new_group_conversation:
-          admin_in_group: Reps aquesta notificació perquè ets administradora de %{group}.
+          admin_in_group: Reps aquesta notificació perquè administres el grup "%{group}".
           greeting: Hola, %{recipient}!
           intro: "%{sender} ha iniciat una nova conversa amb el %{group}. Fes clic aquí per veure-la:"
           outro: Gaudeix de Decidim!
           subject: "%{sender} ha iniciat una nova conversa amb %{group}"
         new_group_message:
-          admin_in_group: Reps aquesta notificació perquè ets administradora de %{group}.
+          admin_in_group: Reps aquesta notificació perquè administres el grup "%{group}".
           greeting: Hola, %{recipient}!
           intro: "%{sender} ha publicat nous missatge a una conversa amb el grup %{group}. Fes clic aquí per veure-la:"
           outro: Gaudeix de Decidim!
@@ -1226,7 +1228,7 @@ ca:
           proposals: Propostes
           proposals_explanation: Realitza propostes, dóna suport a les ja existents i promociona els canvis que vols veure.
         footer_sub_hero:
-          footer_sub_hero_body: Construïm una societat més oberta, transparent i col·laborativa.<br />Uneix-te, participa i decideix.
+          footer_sub_hero_body: Construïm una societat més oberta, transparent i col·laborativa.<br /> Uneix-te, participa i decideix.
           footer_sub_hero_headline: Benvinguda a la plataforma participativa %{organization}.
           register: Registra't
         hero:
@@ -1362,7 +1364,7 @@ ca:
         close_modal: Tancar el modal
         filter: Filtra
         filter_by: Filtra per
-        unfold: Desplega
+        unfold: Desplegar
       results:
         results:
           one: "%{count} resultat"
@@ -1433,7 +1435,7 @@ ca:
         label: 'Resultats per pàgina:'
         title: Seleccionar el nombre de resultats per pàgina
       share_modal:
-        close_window: Tanca la finestra
+        close_window: Tancar finestra
         copy_share_link: Còpia
         copy_share_link_clarification: Copia l'enllaç al porta-retalls
         copy_share_link_copied: Copiat!
@@ -1658,7 +1660,7 @@ ca:
     sessions:
       already_signed_out: Sessió finalitzada correctament.
       new:
-        sign_in: Iniciar sessió
+        sign_in: Entra
       signed_in: Sessió iniciada correctament.
       signed_out: S'ha iniciat la sessió correctament.
     shared:
@@ -1667,7 +1669,7 @@ ca:
         didn_t_receive_confirmation_instructions: No has rebut instruccions de confirmació?
         didn_t_receive_unlock_instructions: No has rebut instruccions de desbloqueig?
         forgot_your_password: Has oblidat la teva contrasenya?
-        sign_in: Iniciar sessió
+        sign_in: Entra
         sign_in_with_provider: Inicia sessió amb %{provider}
         sign_up: Registra't
       minimum_password_length:
@@ -1700,6 +1702,7 @@ ca:
       not_saved:
         one: 'S''ha produït un error en processar la teva sol·licitud:'
         other: 'S''han produït múltiples errors en processar la vostra sol·licitud:'
+      password_confirmation_message: '"Confirma la teva contrasenya" no coincideix amb la Contrasenya'
       too_many_marks: Estàs fent servir massa signes de puntuació consecutius (p. ex. i?)
       too_much_caps: Estàs utilitzant massa lletres majúscules (més del 25% del text)
       too_short: és massa curt (menys %{count} caràcters)
@@ -1796,7 +1799,7 @@ ca:
         facebook: "%{organization} a Facebook"
         github: "%{organization} a GitHub"
         instagram: "%{organization} a Instagram"
-        twitter: "%{organization} a Twitter"
+        x: "%{organization} a X"
         youtube: "%{organization} a YouTube"
       timeout_modal:
         body: Has estat sense activitat durant %{minutes} minuts. Si continues inactiva, es tancarà la teva sessió automàticament per la teva pròpia seguretat.
@@ -1804,7 +1807,7 @@ ca:
         sign_out: Tancar sessió
         title: Vols continuar amb la sessió?
       upload_modal:
-        close_modal: Tancar finestra
+        close_modal: Tancar el modal
       user_menu:
         account: 'Compte d''usuària: %{name}'
         admin_dashboard: Tauler d'administració
@@ -1863,6 +1866,7 @@ ca:
     weibo: Sina Weibo
     whatsapp_app: WhatsApp
     whatsapp_web: WhatsApp
+    x: X
     xing: Xing
   time:
     formats:

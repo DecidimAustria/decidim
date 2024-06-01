@@ -226,7 +226,7 @@ es:
           answer:
             name: Respuesta
           election:
-            name: Votación
+            name: Elección
           question:
             name: Pregunta
           trustee:
@@ -644,7 +644,7 @@ es:
               upload_legend: El servidor tiene sus claves públicas de identificación, pero su navegador todavía no las tiene. Necesitas importar el archivo con tus claves de identificación a tu ordenador desde la copia de seguridad que creaste después de generarlas.
             not_supported_browser_description: Parece que estás usando un navegador que no puede ser utilizado para actuar como garante. Asegúrate de que estás usando la versión más reciente de tu navegador, o intenta usar cualquiera de los navegadores más populares para poder completar tus tareas como garante.
             not_supported_browser_title: Actualiza el navegador para actuar como garante
-            trustee_role_description: Se le ha asignado como garante en algunas de las elecciones celebradas en esta plataforma.
+            trustee_role_description: Has sido asignada como garante en algunas de las elecciones celebradas en esta plataforma.
           update:
             success: Tu clave pública de identificación fue guardada con éxito.
       votes:
@@ -735,36 +735,36 @@ es:
           continue: Siguiente
       warnings:
         no_elections_warning: No hay ninguna votación que coincida con tu búsqueda o no hay ninguna programada.
-        no_scheduled_elections_warning: Actualmente no hay votaciones programadas, pero puedes ver las anteriores.
+        no_scheduled_elections_warning: Actualmente no hay elecciones programadas, pero puedes ver un listado de las anteriores.
     events:
       elections:
         election_published:
           email_intro: 'La votación %{resource_title} ya está activa en %{participatory_space_title}. Puedes verla desde esta página:'
-          email_outro: Has recibido esta notificación porque estás siguiendo %{participatory_space_title}. Puedes dejar de recibir notificaciones siguiendo el enlace anterior.
+          email_outro: Has recibido esta notificación porque estás siguiendo el espacio "%{participatory_space_title}". Puedes dejar de recibir notificaciones siguiendo el enlace anterior.
           email_subject: La votación %{resource_title} en %{participatory_space_title} ya está activa.
           notification_title: La votación <a href="%{resource_path}">%{resource_title}</a> ya está activa en %{participatory_space_title}.
         trustees:
           new_election:
             email_intro: Has sido añadido como garante para la elección de %{resource_title}.
-            email_outro: Has recibido esta notificación porque has sido añadido como garante para la elección %{resource_title}.
+            email_outro: Has recibido esta notificación porque has sido añadido como garante para la elección "%{resource_title}".
             email_subject: Eres garante para la elección de %{resource_title}..
             notification_title: Eres garante para la elección de <a href="%{resource_path}">%{resource_title}</a>.
           new_trustee:
             email_intro: Un administrador te ha añadido como garante para %{resource_name}. Debes crear tu clave pública <a href='%{trustee_zone_url}'>en tu zona de garantes</a>
-            email_outro: Has recibido esta notificación porque has sido añadido como garante para %{resource_name}.
+            email_outro: Has recibido esta notificación porque has sido añadido como garante para la elección "%{resource_name}".
             email_subject: Eres garante de %{resource_name}.
             notification_title: Eres garante de <a href="%{participatory_space_url}">%{resource_name}</a>.
         votes:
           accepted_votes:
             email_intro: '¡Tu voto ha sido aceptado! Utilizando tu token de voto: %{encrypted_vote_hash}, puedes verificar tu voto <a href="%{verify_url}">aquí</a>.'
-            email_outro: Has recibido esta notificación porque has votado en la elección %{resource_name}.
+            email_outro: Has recibido esta notificación porque has votado en la elección "%{resource_name}".
             email_subject: Tu voto para %{resource_name} ha sido aceptado.
             notification_title: 'Tu voto ha sido aceptado. Verifica tu voto <a href="%{verify_url}">aquí</a> usando tu token de voto: %{encrypted_vote_hash}'
       votings:
         polling_officers:
           polling_station_assigned:
             email_intro: Se te ha asignado como %{role} del punto de votación %{polling_station_name} en <a href="%{resource_url}">%{resource_title}</a>. Puedes administrar el punto de votación desde el espacio <a href="%{polling_officer_zone_url}">Zona de gestores de mesa</a>.
-            email_outro: Has recibido esta notificación porque has sido asignado como %{role} de %{polling_station_name}.
+            email_outro: Has recibido esta notificación porque has sido asignado como %{role} de "%{polling_station_name}".
             email_subject: Eres %{role} del punto de votación %{polling_station_name}.
             notification_title: Eres %{role} del punto de votación %{polling_station_name} en la votación <a href="%{resource_path}">%{resource_title}</a>.
         send_access_code:
@@ -1186,7 +1186,7 @@ es:
           certify:
             add_images: Añadir imágenes
             error: Se ha producido un error al adjuntar el certificado, por favor inténtalo de nuevo.
-            form_legend: Sube una foto del certificado de cierre electoral
+            form_legend: Sube una foto del Certificado de Cierre Electoral
             heading: Recuento de votos - Subir certificado
             info_text: Por favor, sube una foto del certificado de cierre electoral.
             submit: Subir el certificado

@@ -8,7 +8,7 @@ module Decidim
     extend ActiveSupport::Concern
 
     included do
-      has_one :categorization, as: :categorizable
+      has_one :categorization, as: :categorizable, class_name: "Decidim::Categorization", dependent: :destroy
       has_one :category, through: :categorization
 
       scope :with_category, lambda { |category|
@@ -26,11 +26,11 @@ module Decidim
         cat_ids = parent_ids.dup
         cat_ids.prepend(nil) if categories.include?("without")
 
-        subquery = includes(:category).where(decidim_categories: { id: cat_ids })
+        subquery = left_outer_joins(:category).where(decidim_categories: { id: cat_ids })
         return subquery if parent_ids.none?
 
         subquery.or(
-          includes(:category).where(decidim_categories: { parent_id: parent_ids })
+          left_outer_joins(:category).where(decidim_categories: { parent_id: parent_ids })
         )
       }
 

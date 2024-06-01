@@ -1,5 +1,22 @@
 ---
 ru:
+  activemodel:
+    attributes:
+      oauth_application:
+        organization_logo: Логотип организации (квадрат)
+        organization_url: Веб-адрес организации
+        redirect_uri: URI перенаправления
+      organization:
+        address: Имя хоста SMTP
+        password: Пароль
+        port: Порт
+        user_name: Имя пользователя
+    errors:
+      models:
+        oauth_application:
+          attributes:
+            redirect_uri:
+              must_be_ssl: URI перенаправления должен быть SSL URI
   decidim:
     system:
       actions:
@@ -23,6 +40,8 @@ ru:
         new:
           create: Добавить
           title: Добавить администратора
+        show:
+          edit: Редактировать
         update:
           error: При попытке обновить этого администратора произошла ошибка.
           success: Администратор успешно обновлен
@@ -49,7 +68,6 @@ ru:
             created_at: 'Добавлено:'
             name: Имя
             smtp_settings: Настройки SMTP
-          name: Организация
       organizations:
         create:
           error: При попытке добавить новую организацию произошла ошибка.
@@ -59,8 +77,6 @@ ru:
         index:
           title: Организации
         new:
-          reference_prefix_hint: Справочный префикс используется для однозначной идентификации ресурсов во всех организациях
-          secondary_hosts_hint: Введите каждый из них в новой строке
           title: Добавить организацию
         update:
           error: При попытке обновить эту организацию произошла ошибка.

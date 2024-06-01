@@ -68,7 +68,7 @@ de:
             error: Die Sortierung kann nicht abgebrochen werden.
             success: Die Sortierung wurde erfolgreich abgebrochen
           edit:
-            title: Aktualisieren Sie die Informationen zur Sortierung
+            title: Informationen zur Sortierung aktualisieren
             update: Aktualisieren
           form:
             all_categories: Alle Kategorien
@@ -102,7 +102,7 @@ de:
           category: Kategorie
           category_prompt: Wählen Sie eine Kategorie
           search: Suche
-          state: Zustand
+          state: Status
         filters_small_view:
           close_modal: Modal schließen
           filter: Filter

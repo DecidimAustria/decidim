@@ -83,7 +83,7 @@ describe "Participatory Process Groups", type: :system do
       end
 
       it "shows the description" do
-        expect(page).to have_i18n_content(participatory_process_group.description)
+        expect(page).to have_i18n_content(participatory_process_group.description, strip_tags: true)
       end
 
       it "shows the meta scope name" do
@@ -120,10 +120,10 @@ describe "Participatory Process Groups", type: :system do
 
       it "shows metadata attributes" do
         within "#participatory_process_group-metadata" do
-          expect(page).to have_i18n_content(participatory_process_group.developer_group)
-          expect(page).to have_i18n_content(participatory_process_group.target)
-          expect(page).to have_i18n_content(participatory_process_group.participatory_scope)
-          expect(page).to have_i18n_content(participatory_process_group.participatory_structure)
+          expect(page).to have_i18n_content(participatory_process_group.developer_group, strip_tags: true)
+          expect(page).to have_i18n_content(participatory_process_group.target, strip_tags: true)
+          expect(page).to have_i18n_content(participatory_process_group.participatory_scope, strip_tags: true)
+          expect(page).to have_i18n_content(participatory_process_group.participatory_structure, strip_tags: true)
         end
       end
     end
@@ -535,7 +535,7 @@ describe "Participatory Process Groups", type: :system do
     context "when filtering processes by scope" do
       context "and choosing a scope" do
         before do
-          visit decidim_participatory_processes.participatory_process_group_path(participatory_process_group, filter: { with_scope: scope.id })
+          visit decidim_participatory_processes.participatory_process_group_path(participatory_process_group, filter: { with_any_scope: [scope.id] })
         end
 
         it "lists active process belonging to that scope" do

@@ -60,6 +60,8 @@ ca:
             official_blog_post: Post oficial
             title: Títol
       posts:
+        index:
+          empty: Encara no hi ha cap publicació.
         show:
           back: Tornar al llistat
           comments: Comentaris
@@ -91,7 +93,7 @@ ca:
       blogs:
         post_created:
           email_intro: La publicació "%{resource_title}" s'ha publicat al "%{participatory_space_title}", el qual segueixes.
-          email_outro: Has rebut aquesta notificació perquè estàs seguint "%{participatory_space_title}". Pots deixar de seguir-lo des de l'enllaç anterior.
+          email_outro: Has rebut aquesta notificació perquè estàs seguint l'espai "%{participatory_space_title}". Pots deixar de seguir-lo des de l'enllaç anterior.
           email_subject: Nova publicació publicada a %{participatory_space_title}
           notification_title: La publicació <a href="%{resource_path}">%{resource_title}</a> ha estat publicada a %{participatory_space_title}
     statistics:

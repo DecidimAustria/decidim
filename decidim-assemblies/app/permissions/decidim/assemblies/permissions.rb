@@ -16,6 +16,7 @@ module Decidim
         if permission_action.scope == :public
           public_list_assemblies_action?
           public_read_assembly_action?
+          public_embed_assembly_action?
           public_list_members_action?
           return permission_action
         end
@@ -136,6 +137,17 @@ module Decidim
         allow!
       end
 
+      def public_embed_assembly_action?
+        return unless permission_action.action == :embed &&
+                      [:assembly, :participatory_space].include?(permission_action.subject) &&
+                      assembly
+
+        return disallow! unless assembly.published?
+        return disallow! if assembly.private_space && !assembly.is_transparent?
+
+        allow!
+      end
+
       # All users with a relation to a assembly and organization admins can enter
       # the space area. The sapce area is considered to be the assemblies zone,
       # not the assembly groups one.
@@ -211,9 +223,9 @@ module Decidim
       end
 
       def allowed_list_of_assemblies?
-        parent_assemblies = assembly_admin_allowed_assemblies.flat_map { |assembly| [assembly.id] + assembly.ancestors.pluck(:id) }
+        parent_assemblies = assembly.ancestors.flat_map { |assembly| [assembly.id] + assembly.ancestors.pluck(:id) }
 
-        allowed_list_of_assemblies = Decidim::Assembly.where(id: assembly_admin_allowed_assemblies + parent_assemblies)
+        allowed_list_of_assemblies = Decidim::Assembly.where(id: [assembly.id] + parent_assemblies)
         allowed_list_of_assemblies.uniq.member?(assembly)
       end
 
@@ -308,10 +320,12 @@ module Decidim
       end
 
       def assembly_admin_allowed_assemblies
-        assemblies = AssembliesWithUserRole.for(user, :admin)
-        child_assemblies = assemblies.flat_map { |assembly| [assembly.id] + assembly.children.pluck(:id) }
+        @assembly_admin_allowed ||= begin
+          assemblies = AssembliesWithUserRole.for(user, :admin).where(id: [assembly.id, assembly.parent_id])
+          child_assemblies = assemblies.flat_map { |assembly| [assembly.id] + assembly.children.pluck(:id) }
 
-        Decidim::Assembly.where(id: assemblies + child_assemblies)
+          Decidim::Assembly.where(id: assemblies + child_assemblies)
+        end
       end
     end
   end

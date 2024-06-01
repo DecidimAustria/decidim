@@ -59,7 +59,6 @@ tr:
         subtitle: Alt Başlık
         target: Katılanlar
         title: Başlık
-        twitter: Twitter
         weight: Sipariş pozisyonu
         youtube: YouTube
       assembly_member:
@@ -285,10 +284,8 @@ tr:
             select_an_area: Bir alan seçin
             select_an_assembly_type: Bir kurul türü seçin
             select_parent_assembly: Bağlı olduğu kurulu seçin
-            slug_help: 'URL sümüklü böcekleri, bu kurula işaret eden URL''leri oluşturmak için kullanılır. Yalnızca harfleri, sayıları ve kısa çizgileri kabul eder ve bir harfle başlamalıdır. Örnek: %{url}'
             social_handlers: Sosyal
             title: Genel bilgi
-            visbility: görünürlük
         assemblies_settings:
           edit:
             update: Güncelle
@@ -297,13 +294,9 @@ tr:
         assemblies_types:
           form:
             title: Başlık
-        assembly_copies:
-          form:
-            slug_help: 'URL sümükleri, bu derleme işaret eden URL''leri oluşturmak için kullanılır. Sadece harfleri, sayıları ve kısa çizgileri kabul eder ve bir harfle başlamalıdır. Örnek: %{url}'
         assembly_imports:
           form:
             document_legend: Bir belge ekle
-            slug_help: 'URL sümüklü böcekleri, bu kurula işaret eden URL''leri oluşturmak için kullanılır. Yalnızca harfleri, sayıları ve kısa çizgileri kabul eder ve bir harfle başlamalıdır. Örnek: %{url}'
         assembly_members:
           form:
             existing_user: Mevcut katılımcı
@@ -314,8 +307,6 @@ tr:
           index:
             filter:
               all: Tümü
-              ceased: Durduruldu
-              not_ceased: Durdurulmadı
             filter_by: Şuna göre filtrele
             search: Arama
         content_blocks:
@@ -385,7 +376,7 @@ tr:
         purpose_of_action: Eylem amacı
         read_less: Daha az oku
         read_more: Daha fazla oku
-        related_participatory_processes: İlgili katılımcı süreçleri
+        related_participatory_processes: İlgili Katılımcı süreçler
         scope: kapsam
         social_networks: Sosyal ağlar
         target: Katılanlar

@@ -48,6 +48,38 @@ shared_examples "comments" do
     expect(page).to have_css(".comments > div:nth-child(2)", text: "Most Rated Comment")
   end
 
+  context "when there are comments and replies" do
+    let!(:single_comment) { create(:comment, commentable: commentable) }
+    let!(:reply) { create(:comment, commentable: single_comment, root_commentable: commentable) }
+
+    it "displays the show replies link on comment with reply" do
+      visit resource_path
+      expect(page).not_to have_content("Comments are disabled at this time")
+      expect(page).to have_css(".comment", minimum: 1)
+
+      within "#comment_#{single_comment.id}" do
+        expect(page).to have_content "Hide replies"
+      end
+    end
+
+    context "when there is a comment with the same parent id but different type with replies" do
+      let!(:other_component) { create(:component, manifest_name: :dummy, organization: organization) }
+      let!(:other_commentable) { create(:dummy_resource, component: other_component, author: user, id: single_comment.id) }
+      let!(:reply) { create(:comment, commentable: other_commentable, root_commentable: other_commentable) }
+      let!(:other_reply) { create(:comment, commentable: reply, root_commentable: other_commentable) }
+
+      it "displays the show replies link on comment with reply" do
+        visit resource_path
+        expect(page).not_to have_content("Comments are disabled at this time")
+        expect(page).to have_css(".comment", minimum: 1)
+
+        within "#comment_#{single_comment.id}" do
+          expect(page).not_to have_content "Hide replies"
+        end
+      end
+    end
+  end
+
   context "when there are deleted comments" do
     let(:deleted_comment) { comments[0] }
 
@@ -836,6 +868,30 @@ shared_examples "comments" do
       it "replaces the hashtag with a link to the hashtag search" do
         expect(page).to have_comment_from(user, "A comment with a hashtag #decidim", wait: 20)
         expect(page).to have_link "#decidim", href: "/search?term=%23decidim"
+      end
+    end
+
+    describe "export_serializer" do
+      let(:comment) { comments.first }
+
+      it "returns the serializer for the comment" do
+        expect(comment.class.export_serializer).to eq(Decidim::Comments::CommentSerializer)
+      end
+
+      context "with instance" do
+        subject { comment.class.export_serializer.new(comment).serialize }
+
+        it { is_expected.to have_key(:id) }
+        it { is_expected.to have_key(:created_at) }
+        it { is_expected.to have_key(:body) }
+        it { is_expected.to have_key(:locale) }
+        it { is_expected.to have_key(:author) }
+        it { is_expected.to have_key(:alignment) }
+        it { is_expected.to have_key(:depth) }
+        it { is_expected.to have_key(:user_group) }
+        it { is_expected.to have_key(:commentable_id) }
+        it { is_expected.to have_key(:commentable_type) }
+        it { is_expected.to have_key(:root_commentable_url) }
       end
     end
   end

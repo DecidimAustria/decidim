@@ -30,6 +30,31 @@ describe "Explore meetings", :slow, type: :system do
       end
     end
 
+    context "when displaying calendar" do
+      let(:component) { create(:meeting_component, participatory_space: participatory_space) }
+      let(:link) { Decidim::ShortLink.find_by(target_type: "Decidim::Component", target_id: component.id) }
+
+      before do
+        visit_component
+      end
+
+      context "when meetings mounted under paraticipatory process" do
+        let(:participatory_space) { create(:participatory_process, organization: organization) }
+
+        it "properly saves the shortened link" do
+          expect(link.mounted_engine_name).to eq("decidim_participatory_process_meetings")
+        end
+      end
+
+      context "when meetings mounted under assemblies" do
+        let(:participatory_space) { create(:assembly, organization: organization) }
+
+        it "properly saves the shortened link" do
+          expect(link.mounted_engine_name).to eq("decidim_assembly_meetings")
+        end
+      end
+    end
+
     context "with default filter" do
       let!(:past_meeting) { create(:meeting, :published, start_time: 2.weeks.ago, component: component) }
       let!(:upcoming_meeting) { create(:meeting, :published, :not_official, component: component) }
@@ -453,9 +478,9 @@ describe "Explore meetings", :slow, type: :system do
 
     it "shows all meeting info" do
       expect(page).to have_i18n_content(meeting.title)
-      expect(page).to have_i18n_content(meeting.description)
-      expect(page).to have_i18n_content(meeting.location)
-      expect(page).to have_i18n_content(meeting.location_hints)
+      expect(page).to have_i18n_content(meeting.description, strip_tags: true)
+      expect(page).to have_i18n_content(meeting.location, strip_tags: true)
+      expect(page).to have_i18n_content(meeting.location_hints, strip_tags: true)
       expect(page).to have_content(meeting.address)
       expect(page).to have_content(meeting.reference)
 
@@ -569,7 +594,7 @@ describe "Explore meetings", :slow, type: :system do
       it "shows the closing report" do
         visit_component
         click_link translated(meeting.title)
-        expect(page).to have_i18n_content(meeting.closing_report)
+        expect(page).to have_i18n_content(meeting.closing_report, strip_tags: true)
 
         within ".definition-data" do
           expect(page).to have_content("ATTENDEES COUNT\n#{meeting.attendees_count}")

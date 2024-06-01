@@ -62,7 +62,7 @@ hu:
         personal_url: Személyes URL-cím
         position: Pozíció
         short_bio: Rövid önéletrajz
-        twitter_handle: Twitter oldal
+        twitter_handle: X kezelő
         user_id: Felhasználó
       conference_user_role:
         email: Email
@@ -204,7 +204,7 @@ hu:
         conference:
           fields:
             created_at: 'Létrehozva:'
-            promoted: promotált
+            promoted: Kiemelt
             published: Közzétett
             title: Cím
         conference_speaker:
@@ -328,9 +328,6 @@ hu:
         title: Hangszórók
     conferences:
       admin:
-        conference_copies:
-          form:
-            slug_help: 'Az URL-csigákat használják az e konferenciára utaló URL-ek előállításához. Csak leveleket, számokat és kötőjeleket fogad el, és betűvel kell kezdenie. Példa: %{url}'
         conference_invites:
           create:
             error: Probléma merült fel a felhasználó csatlakozásakor.
@@ -372,7 +369,6 @@ hu:
             registrations_count:
               one: 1 regisztráció volt.
               other: '%{count} regisztráció volt.'
-            slug_help: 'Az URL-csigákat használják az e konferenciára utaló URL-ek előállításához. Csak leveleket, számokat és kötőjeleket fogad el, és betűvel kell kezdenie. Példa: %{url}'
         diplomas:
           edit:
             save: Mentés
@@ -441,7 +437,6 @@ hu:
           invalid: Probléma merült fel a konferencián.
           success: A konferencia sikeres volt.
       conference_speaker:
-        go_to_twitter: Menjen a Twitterre
         more_info: több információ
         personal_website: Személyes weboldal
         show:
@@ -506,6 +501,7 @@ hu:
           highlighted_conferences:
             active_conferences: Aktív konferenciák
             conferences_button_title: Link a Konferenciák oldalra, ahol az összes konferencia látható
+            see_all_conferences: Az összes konferencia megtekintése
       photo:
         image:
           attributes:

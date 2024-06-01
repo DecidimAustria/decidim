@@ -1,5 +1,17 @@
 ---
 uk:
+  activemodel:
+    attributes:
+      oauth_application:
+        organization_logo: Логотип організації (квадрат)
+        organization_url: Адреса сайту організації
+        redirect_uri: URI перенаправлення
+    errors:
+      models:
+        oauth_application:
+          attributes:
+            redirect_uri:
+              must_be_ssl: URI перенаправлення має бути SSL URI
   decidim:
     system:
       actions:
@@ -23,6 +35,8 @@ uk:
         new:
           create: Додати
           title: Додати адміністратора
+        show:
+          edit: Редагувати
         update:
           error: При спробі оновити цього адміністратора сталася помилка.
           success: Адміністратора успішно оновлено
@@ -48,7 +62,6 @@ uk:
           fields:
             created_at: 'Додано:'
             name: Ім'я
-          name: Організація
       organizations:
         create:
           error: При спробі додати нову організацію сталася помилка.
@@ -58,8 +71,6 @@ uk:
         index:
           title: Організації
         new:
-          reference_prefix_hint: Довідковий префікс використовується для унікального визначення ресурсів в усіх організаціях
-          secondary_hosts_hint: Введіть кожен з них в новому рядку
           title: Додати організацію
         update:
           error: При спробі оновити цю організацію сталася помилка.

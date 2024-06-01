@@ -2,6 +2,10 @@
 nl:
   activemodel:
     attributes:
+      oauth_application:
+        organization_logo: Logo organisatie (vierkant)
+        organization_url: URL van de organisatie
+        redirect_uri: URI doorsturen
       organization:
         address: SMTP hostname
         from_email: E-mailadres
@@ -9,6 +13,12 @@ nl:
         password: Wachtwoord
         port: Poort
         user_name: Gebruikersnaam
+    errors:
+      models:
+        oauth_application:
+          attributes:
+            redirect_uri:
+              must_be_ssl: De omleidings-URI moet een SSL-URI zijn
   decidim:
     system:
       actions:
@@ -32,6 +42,8 @@ nl:
         new:
           create: Creëren
           title: Nieuwe admin
+        show:
+          edit: Bewerk
         update:
           error: Er is een fout opgetreden bij het bijwerken van deze admin.
           success: Admin succesvol bijgewerkt
@@ -62,7 +74,6 @@ nl:
             name: Naam
             omniauth_settings: Omniauth instellingen
             smtp_settings: SMTP-instellingen
-          name: Organisatie
       organizations:
         advanced_settings:
           hide: Geavanceerde instellingen verbergen
@@ -75,8 +86,6 @@ nl:
         index:
           title: Organisaties
         new:
-          reference_prefix_hint: Het referentie-voorvoegsel wordt gebruikt ter identificatie van unieke middelen over alle organisaties
-          secondary_hosts_hint: Voer elk van hen op een nieuwe regel in
           title: Nieuwe organisatie
         omniauth_settings:
           decidim:
