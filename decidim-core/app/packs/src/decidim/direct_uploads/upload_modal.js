@@ -167,6 +167,8 @@ export default class UploadModal {
       dataSelectFileButton.disabled = true;
     }
 
+    // first remove the listeners to avoid multiple bindings
+    dataSelectFileButton.removeEventListener("click", () => this.input.click());
     dataSelectFileButton.addEventListener("click", () => this.input.click());
   }
 
