@@ -144,6 +144,14 @@ export default class UploadModal {
     return nextOrdinalNumber;
   }
 
+  activateDataSelectFileButton() {
+    const dataSelectFileButton = this.emptyItems.querySelector("[data-select-file-button]");
+    // clone the button to remove all the listeners
+    const newButton = dataSelectFileButton.cloneNode(true);
+    dataSelectFileButton.parentNode.replaceChild(newButton, dataSelectFileButton);
+    dataSelectFileButton.addEventListener("click", () => this.input.click());
+  }
+
   updateDropZone() {
     // NOTE: since the FileList HTML attribute of input[type="file"] cannot be set (read-only),
     // we cannot check this.input.files.length when some item is removed
@@ -167,9 +175,7 @@ export default class UploadModal {
       dataSelectFileButton.disabled = true;
     }
 
-    // first remove the listeners to avoid multiple bindings
-    dataSelectFileButton.removeEventListener("click", () => this.input.click());
-    dataSelectFileButton.addEventListener("click", () => this.input.click());
+    this.activateDataSelectFileButton();
   }
 
   createUploadItem(file, errors, opts = {}) {
