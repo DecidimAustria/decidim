@@ -149,7 +149,7 @@ export default class UploadModal {
     // clone the button to remove all the listeners
     const newButton = dataSelectFileButton.cloneNode(true);
     dataSelectFileButton.parentNode.replaceChild(newButton, dataSelectFileButton);
-    dataSelectFileButton.addEventListener("click", () => this.input.click());
+    newButton.addEventListener("click", () => this.input.click());
   }
 
   updateDropZone() {
