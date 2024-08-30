@@ -1538,9 +1538,9 @@ de:
       filter_results_for_category: 'Ergebnisse nach Kategorie filtern: %{resource}'
       filter_results_for_scope: 'Ergebnisse nach Anwendungsbereich filtern: %{resource}'
     translation_bar:
-      help_text: "<strong>Warnung:</strong> Inhalt könnte automatisch übersetzt werden und nicht 100% korrekt sein."
-      show_original: Originaltext anzeigen
-      show_translated: Automatisch übersetzter Text anzeigen
+      help_text: Automatische Übersetzungen aktiviert.
+      show_original: Original anzeigen
+      show_translated: Übersetzung anzeigen
     user_activity:
       index:
         no_activities_warning: Für diesen Teilnehmer gibt es bisher noch keine Aktivität.
