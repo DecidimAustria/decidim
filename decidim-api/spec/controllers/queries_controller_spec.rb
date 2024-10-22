@@ -34,6 +34,12 @@ module Decidim
         parsed_response = JSON.parse(response.body)["data"]
         expect(parsed_response["__schema"]["queryType"]["name"]).to eq("Query")
       end
+
+      it "does not accept introspection queries" do
+        post :create, params: { query: "query inv { __schema { types { name fields { name } } } }", operationName: "inv" }
+
+        expect(response.body).to include("Field '__schema' doesn't exist on type 'Query'")
+      end
     end
   end
 end

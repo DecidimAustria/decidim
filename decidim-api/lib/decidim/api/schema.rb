@@ -4,6 +4,8 @@ module Decidim
   module Api
     # Main GraphQL schema for decidim's API.
     class Schema < GraphQL::Schema
+      disable_introspection_entry_points if Rails.env.production? || Rails.env.test?
+
       mutation(MutationType)
       query(QueryType)
 
