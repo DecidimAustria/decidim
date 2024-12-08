@@ -37,7 +37,7 @@ module Decidim
       def preview
         enforce_permission_to(:read, :newsletter, newsletter:)
 
-        email = NewsletterMailer.newsletter(current_user, newsletter, preview: true)
+        email = NewsletterMailer.newsletter(current_user, newsletter, true)
         Premailer::Rails::Hook.perform(email)
         render html: email.html_part.body.decoded.html_safe
       end
@@ -47,7 +47,7 @@ module Decidim
         @form = form(NewsletterForm).from_params(params)
         @form.images = images_block_context unless has_images_block_context?
 
-        CreateNewsletter.call(@form, content_block, current_user) do
+        CreateNewsletter.call(@form, content_block) do
           on(:ok) do |newsletter|
             flash.now[:notice] = I18n.t("newsletters.create.success", scope: "decidim.admin")
             redirect_to action: :show, id: newsletter.id
@@ -71,7 +71,7 @@ module Decidim
         @form = form(NewsletterForm).from_params(params)
         @form.images = images_block_context unless has_images_block_context?
 
-        UpdateNewsletter.call(newsletter, @form, current_user) do
+        UpdateNewsletter.call(newsletter, @form) do
           on(:ok) do |newsletter|
             flash[:notice] = I18n.t("newsletters.update.success", scope: "decidim.admin")
             redirect_to action: :show, id: newsletter.id
@@ -89,7 +89,7 @@ module Decidim
         enforce_permission_to(:destroy, :newsletter, newsletter:)
 
         DestroyNewsletter.call(newsletter, current_user) do
-          on(:already_sent) do
+          on(:invalid) do
             flash.now[:error] = I18n.t("newsletters.destroy.error_already_sent", scope: "decidim.admin")
             redirect_to :back
           end
@@ -117,7 +117,7 @@ module Decidim
         enforce_permission_to(:update, :newsletter, newsletter:)
         @form = form(SelectiveNewsletterForm).from_params(params)
 
-        DeliverNewsletter.call(newsletter, @form, current_user) do
+        DeliverNewsletter.call(newsletter, @form) do
           on(:ok) do
             flash[:notice] = I18n.t("newsletters.deliver.success", scope: "decidim.admin")
             redirect_to action: :index

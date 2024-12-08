@@ -76,8 +76,8 @@ describe "Proposals component" do # rubocop:disable RSpec/DescribeClass
       end
     end
 
-    describe "supports_count" do
-      let(:stats_name) { :supports_count }
+    describe "votes_count" do
+      let(:stats_name) { :votes_count }
 
       before do
         create_list(:proposal_vote, 2, proposal:)
@@ -137,11 +137,11 @@ describe "Proposals component" do # rubocop:disable RSpec/DescribeClass
       it_behaves_like "has mandatory config setting", :proposal_limit
     end
 
-    context "when support limit per participant is empty" do
+    context "when vote limit per participant is empty" do
       it_behaves_like "has mandatory config setting", :vote_limit
     end
 
-    context "when minimum supports per user is empty" do
+    context "when minimum votes per user is empty" do
       it_behaves_like "has mandatory config setting", :minimum_votes_per_user
     end
 
@@ -179,13 +179,13 @@ describe "Proposals component" do # rubocop:disable RSpec/DescribeClass
       context "when there are no proposals for the component" do
         it "allows to check the setting" do
           expect(participatory_texts_enabled_container[:class]).not_to include("readonly")
-          expect(page).not_to have_content("Cannot interact with this setting if there are existing proposals. Please, create a new `Proposals component` if you want to enable this feature or discard all imported proposals in the `Participatory Texts` menu if you want to disable it.")
+          expect(page).to have_no_content("Cannot interact with this setting if there are existing proposals. Please, create a new `Proposals component` if you want to enable this feature or discard all imported proposals in the `Participatory Texts` menu if you want to disable it.")
         end
 
         it "changes the setting value after updating" do
           expect do # rubocop:disable Lint/AmbiguousBlockAssociation
             check "Participatory texts enabled"
-            click_button "Update"
+            click_on "Update"
           end.to change { component.reload.settings.participatory_texts_enabled }
         end
       end
@@ -204,7 +204,7 @@ describe "Proposals component" do # rubocop:disable RSpec/DescribeClass
 
         it "does not change the setting value after updating" do
           expect do # rubocop:disable Lint/AmbiguousBlockAssociation
-            click_button "Update"
+            click_on "Update"
           end.not_to change { component.reload.settings.participatory_texts_enabled }
         end
       end
@@ -227,7 +227,7 @@ describe "Proposals component" do # rubocop:disable RSpec/DescribeClass
 
       it "does not show the amendments dependent settings" do
         fields.each do |field|
-          expect(page).not_to have_content(field)
+          expect(page).to have_no_content(field)
           expect(page).to have_css(".#{field.parameterize.underscore}_container", visible: :all)
         end
       end

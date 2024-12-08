@@ -14,8 +14,8 @@ module Decidim
       # attributes  - The Hash of attributes to create the ParticipatoryProcess with.
       # user        - The user that performs the action.
       # opts        - The options MUST contain:
-      #   - title: The +title+ for the new PartidicpatoryProcess
-      #   - slug: The +slug+ for the new PartidicpatoryProcess
+      #   - title: The +title+ for the new ParticipatoryProcess
+      #   - slug: The +slug+ for the new ParticipatoryProcess
       #
       # Returns a ParticipatoryProcess.
       def import(attributes, _user, opts)
@@ -42,13 +42,10 @@ module Decidim
             announcement: attributes["announcement"],
             private_space: attributes["private_space"],
             scopes_enabled: attributes["scopes_enabled"],
-            show_metrics: attributes["show_metrics"],
-            show_statistics: attributes["show_statistics"],
             participatory_process_group: import_process_group(attributes["participatory_process_group"]),
             participatory_process_type: import_participatory_process_type(attributes["participatory_process_type"])
           )
           @imported_process.attached_uploader(:hero_image).remote_url = attributes["remote_hero_image_url"] if attributes["remote_hero_image_url"].present?
-          @imported_process.attached_uploader(:banner_image).remote_url = attributes["remote_banner_image_url"] if attributes["remote_banner_image_url"].present?
 
           @imported_process.save!
           @imported_process

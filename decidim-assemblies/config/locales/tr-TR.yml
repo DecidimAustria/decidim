@@ -51,7 +51,6 @@ tr:
         scope_id: kapsam
         scopes_enabled: Kapsamlar etkin
         short_description: Kısa Açıklama
-        show_statistics: İstatistikleri göster
         slug: URL sümüklü böcek
         special_features: Özel özellikler
         subtitle: Alt Başlık
@@ -325,11 +324,11 @@ tr:
       show:
         assembly_type: Kurul türü
         duration: Süre
-        is_transparent:
-          'false': opak
-          'true': şeffaf
         private_space: Bu özel bir kurul
+<<<<<<< HEAD
         related_participatory_processes: İlgili Katılımcı süreçler
+=======
+>>>>>>> tags/v0.29.1
     assembly_members:
       assembly_member:
         designated_on: Üzerinde belirlenen

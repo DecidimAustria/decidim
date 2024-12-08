@@ -13,7 +13,7 @@ describe "Decidim::Api::QueryType" do
     %(
       query {
         organization{
-          name
+          name { translation(locale: "#{locale}") }
           stats{
             name
             value
@@ -24,12 +24,12 @@ describe "Decidim::Api::QueryType" do
   end
 
   describe "valid query" do
-    it "executes sucessfully" do
+    it "executes successfully" do
       expect { response }.not_to raise_error
     end
 
     it "has name" do
-      expect(response["organization"]["name"]).to eq(current_organization.name)
+      expect(response["organization"]["name"]["translation"]).to eq(translated(current_organization.name))
     end
 
     %w(

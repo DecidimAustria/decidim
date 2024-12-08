@@ -46,7 +46,7 @@ describe "Decidim::Api::QueryType" do
           "id" => e.author.id.to_s,
           "name" => e.author.name,
           "nickname" => "@#{e.author.nickname}",
-          "organizationName" => e.author.organization.name,
+          "organizationName" => { "translation" => translated(e.author.organization.name) },
           "profilePath" => "/profiles/#{e.author.nickname}" }
       end,
       "endorsementsCount" => proposal.endorsements.size,
@@ -68,7 +68,9 @@ describe "Decidim::Api::QueryType" do
       "userAllowedToComment" => proposal.user_allowed_to_comment?(current_user),
       "versions" => [],
       "versionsCount" => 0,
-      "voteCount" => proposal.votes.size
+      "voteCount" => proposal.votes.size,
+      "withdrawn" => proposal.withdrawn?,
+      "withdrawnAt" => proposal.withdrawn_at&.iso8601&.to_s&.gsub("Z", "+00:00")
     }
   end
 
@@ -142,7 +144,7 @@ describe "Decidim::Api::QueryType" do
                 deleted
                  name
                 nickname
-                organizationName
+                organizationName { translation(locale: "en") }
                 profilePath
               }
               endorsementsCount
@@ -181,6 +183,8 @@ describe "Decidim::Api::QueryType" do
               }
               versionsCount
               voteCount
+              withdrawn
+              withdrawnAt
             }
           }
         }
@@ -188,7 +192,7 @@ describe "Decidim::Api::QueryType" do
     )
     end
 
-    it "executes sucessfully" do
+    it "executes successfully" do
       expect { response }.not_to raise_error
     end
   end
@@ -245,7 +249,7 @@ describe "Decidim::Api::QueryType" do
             deleted
              name
             nickname
-            organizationName
+            organizationName { translation(locale: "en") }
             profilePath
           }
           endorsementsCount
@@ -284,12 +288,14 @@ describe "Decidim::Api::QueryType" do
           }
           versionsCount
           voteCount
+          withdrawn
+          withdrawnAt
         }
       }
     )
     end
 
-    it "executes sucessfully" do
+    it "executes successfully" do
       expect { response }.not_to raise_error
     end
 

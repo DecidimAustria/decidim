@@ -28,7 +28,7 @@ $(() => {
   // - amendment_promotion_enabled
 
   // (1) Hides target fields if amendments_enabled component setting is NOT checked.
-  // (2) Toggles visibilty of target fields when amendments_enabled component setting is clicked.
+  // (2) Toggles visibility of target fields when amendments_enabled component setting is clicked.
   const $amendmentsEnabled = $("input#component_settings_amendments_enabled");
 
   if ($amendmentsEnabled.length > 0) {
@@ -42,4 +42,21 @@ $(() => {
       $amendmentStepSettings.toggle();
     });
   }
+
+  // Toggles visibility of the attachments_allowed help text when the checkbox is clicked.
+  // Show the help text if the checkbox is checked.
+  const $attachmentsAllowedCheckbox = $("#component_settings_attachments_allowed");
+  const $attachmentsHelpText = $(".attachments_allowed_container .help-text");
+
+  if (!$attachmentsAllowedCheckbox.is(":checked")) {
+    $attachmentsHelpText.hide();
+  }
+
+  $attachmentsAllowedCheckbox.on("change", () => {
+    if ($attachmentsAllowedCheckbox.is(":checked")) {
+      $attachmentsHelpText.show();
+    } else {
+      $attachmentsHelpText.hide();
+    }
+  });
 });

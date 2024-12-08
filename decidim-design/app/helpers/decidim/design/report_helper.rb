@@ -7,31 +7,24 @@ module Decidim
         [
           {
             id: "usage",
+            title: t("decidim.design.helpers.usage"),
             contents: [
               {
                 type: :text,
-                values: ["Report button launches a modal window to flag the current resource."]
+                values: [t("decidim.design.helpers.report_usage_description")]
               },
               {
-                type: :table,
-                options: { headings: ["Report Button"] },
-                items: report_table({}),
+                type: :cell_table,
+                options: { headings: [t("decidim.design.helpers.report_button")] },
                 cell_snippet: {
                   cell: "decidim/report_button",
-                  args: [Decidim::User.first]
+                  args: [Decidim::User.first],
+                  call_string: 'cell("decidim/report_button", _REPORTABLE_RESOURCE_)'
                 }
               }
             ]
           }
         ]
-      end
-
-      def report_table(*table_rows, **_opts)
-        table_rows.each_with_index.map do
-          row = []
-          row << render(partial: "decidim/design/components/report/static-report")
-          row
-        end
       end
     end
   end

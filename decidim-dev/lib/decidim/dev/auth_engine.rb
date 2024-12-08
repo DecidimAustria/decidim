@@ -1,7 +1,10 @@
 # frozen_string_literal: true
 
+<<<<<<< HEAD
 require "decidim/dev/needs_development_tools"
 
+=======
+>>>>>>> tags/v0.29.1
 module Decidim
   module Dev
     # Example engine overriding the core authentication routes.

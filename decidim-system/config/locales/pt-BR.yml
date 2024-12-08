@@ -75,7 +75,11 @@ pt-BR:
             did_not_receive_unlock_instructions?: Não recebeu instruções de desbloqueio?
             forgot_your_password?: Esqueceu sua senha?
             log_in: Iniciar sessão
+<<<<<<< HEAD
             sign_up: Cadastrar-se
+=======
+            sign_up: Criar uma conta
+>>>>>>> tags/v0.29.1
       menu:
         admins: Administradores
         dashboard: painel de controle
@@ -192,7 +196,11 @@ pt-BR:
           success: Organização atualizada com sucesso.
         users_registration_mode:
           disabled: O acesso só pode ser feito com contas externas
+<<<<<<< HEAD
           enabled: Permitir que os usuários se registrem e efetuem login
+=======
+          enabled: Permitir que os participantes criem uma conta e façam login
+>>>>>>> tags/v0.29.1
           existing: Não permitir que usuários se registrem, mas permitir que usuários existentes façam login
       shared:
         notices:
@@ -200,6 +208,12 @@ pt-BR:
           our_getting_started_guide: nosso guia inicial
         organizations_list:
           confirm_resend_invitation: Tem certeza de que deseja excluir este aplicativo?
+<<<<<<< HEAD
+=======
+      system_checks:
+        active_job_queue:
+          decidim_documentation: Documentação do Decidim
+>>>>>>> tags/v0.29.1
       titles:
         dashboard: painel de controle
   layouts:

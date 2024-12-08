@@ -5,20 +5,25 @@
 shared_examples "manage posts" do |audit_check: true|
   it_behaves_like "having a rich text editor for field", ".tabs-content[data-tabs-content='post-body-tabs']", "full" do
     before do
-      within find("tr", text: translated(post1.title)) do
-        click_link "Edit"
+      within "tr", text: translated(post1.title) do
+        click_on "Edit"
       end
     end
   end
   let(:attributes) { attributes_for(:post) }
 
   it "updates a post", versioning: true do
+<<<<<<< HEAD
     within find("tr", text: translated(post1.title)) do
       click_link "Edit"
+=======
+    within "tr", text: translated(post1.title) do
+      click_on "Edit"
+>>>>>>> tags/v0.29.1
     end
 
     within ".edit_post" do
-      expect(page).to have_select("post_decidim_author_id", selected: author.name)
+      expect(page).to have_select("post_decidim_author_id", selected: translated(author.name))
 
       fill_in_i18n(:post_title, "#post-title-tabs", **attributes[:title].except("machine_translations"))
       fill_in_i18n_editor(:post_body, "#post-body-tabs", **attributes[:body].except("machine_translations"))
@@ -31,7 +36,12 @@ shared_examples "manage posts" do |audit_check: true|
     within "table" do
       expect(page).to have_content(translated(attributes[:title]))
       expect(page).to have_content("Post title 2")
-      expect(page).to have_content(author.name)
+      expect(page).to have_content(translated(author.name))
+    end
+
+    if audit_check == true
+      visit decidim_admin.root_path
+      expect(page).to have_content("updated the #{translated(attributes[:title])} blog post")
     end
 
     if audit_check == true
@@ -41,7 +51,11 @@ shared_examples "manage posts" do |audit_check: true|
   end
 
   it "creates a new post", versioning: true do
+<<<<<<< HEAD
     click_link "New post"
+=======
+    click_on "New post"
+>>>>>>> tags/v0.29.1
 
     fill_in_i18n(:post_title, "#post-title-tabs", **attributes[:title].except("machine_translations"))
     fill_in_i18n_editor(:post_body, "#post-body-tabs", **attributes[:body].except("machine_translations"))
@@ -78,14 +92,14 @@ shared_examples "manage posts" do |audit_check: true|
     end
 
     it "deletes a post" do
-      within find("tr", text: translated(post1.title)) do
-        accept_confirm { click_link "Delete" }
+      within "tr", text: translated(post1.title) do
+        accept_confirm { click_on "Delete" }
       end
 
       expect(page).to have_admin_callout("successfully")
 
       within "table" do
-        expect(page).not_to have_content(translated(post1.title))
+        expect(page).to have_no_content(translated(post1.title))
         expect(page).to have_content(translated(post2.title))
       end
     end
@@ -96,7 +110,7 @@ shared_examples "manage posts" do |audit_check: true|
     let!(:membership) { create(:user_group_membership, user:, user_group:) }
 
     it "can set user group as posts author" do
-      click_link "New post"
+      click_on "New post"
 
       select user_group.name, from: "post_decidim_author_id"
 
@@ -131,8 +145,8 @@ shared_examples "manage posts" do |audit_check: true|
     end
 
     it "can update the user group as the post author" do
-      within find("tr", text: translated(post1.title)) do
-        click_link "Edit"
+      within "tr", text: translated(post1.title) do
+        click_on "Edit"
       end
 
       within ".edit_post" do
@@ -142,7 +156,7 @@ shared_examples "manage posts" do |audit_check: true|
 
       expect(page).to have_admin_callout("successfully")
 
-      within find("tr", text: translated(post1.title)) do
+      within "tr", text: translated(post1.title) do
         expect(page).to have_content(user_group.name)
       end
     end
@@ -152,9 +166,9 @@ shared_examples "manage posts" do |audit_check: true|
     let(:author) { organization }
 
     it "can set organization as posts author" do
-      click_link "New post"
+      click_on "New post"
 
-      select organization.name, from: "post_decidim_author_id"
+      select translated(organization.name), from: "post_decidim_author_id"
 
       fill_in_i18n(
         :post_title,
@@ -179,7 +193,7 @@ shared_examples "manage posts" do |audit_check: true|
       expect(page).to have_admin_callout("successfully")
 
       within "table" do
-        expect(page).to have_content(author.name)
+        expect(page).to have_content(translated(organization.name))
         expect(page).to have_content("My post")
         expect(page).to have_content("Post title 1")
         expect(page).to have_content("Post title 2")
@@ -187,19 +201,19 @@ shared_examples "manage posts" do |audit_check: true|
     end
 
     it "can update the blog as the organization" do
-      within find("tr", text: translated(post1.title)) do
-        click_link "Edit"
+      within "tr", text: translated(post1.title) do
+        click_on "Edit"
       end
 
       within ".edit_post" do
-        select organization.name, from: "post_decidim_author_id"
+        select translated(organization.name), from: "post_decidim_author_id"
         find("*[type=submit]").click
       end
 
       expect(page).to have_admin_callout("successfully")
 
-      within find("tr", text: translated(post1.title)) do
-        expect(page).to have_content(author.name)
+      within "tr", text: translated(post1.title) do
+        expect(page).to have_content(translated(organization.name))
       end
     end
   end
@@ -208,7 +222,7 @@ shared_examples "manage posts" do |audit_check: true|
     let(:author) { user }
 
     it "can set current_user as posts author" do
-      click_link "New post"
+      click_on "New post"
 
       select user.name, from: "post_decidim_author_id"
 
@@ -243,8 +257,8 @@ shared_examples "manage posts" do |audit_check: true|
     end
 
     it "can update the blog as the user" do
-      within find("tr", text: translated(post1.title)) do
-        click_link "Edit"
+      within "tr", text: translated(post1.title) do
+        click_on "Edit"
       end
 
       within ".edit_post" do
@@ -254,17 +268,21 @@ shared_examples "manage posts" do |audit_check: true|
 
       expect(page).to have_admin_callout("successfully")
 
-      within find("tr", text: translated(post1.title)) do
+      within "tr", text: translated(post1.title) do
         expect(page).to have_content(author.name)
       end
     end
 
     it "changes the publish time" do
-      within find("tr", text: translated(post1.title)) do
-        click_link "Edit"
+      within "tr", text: translated(post1.title) do
+        click_on "Edit"
       end
       within ".edit_post" do
-        fill_in "Publish time", with: Time.current.change(year: 2022, month: 1, day: 1, hour: 0, min: 0)
+        fill_in :post_published_at_date, with: nil, fill_options: { clear: :backspace }
+        fill_in :post_published_at_time, with: nil, fill_options: { clear: :backspace }
+        fill_in_datepicker :post_published_at_date, with: "01.01.2022", visible: :all
+        fill_in_timepicker :post_published_at_time, with: "00:00"
+        expect(page).to have_field(:post_published_at, with: "2022-01-01T00:00", visible: :hidden)
         find("*[type=submit]").click
       end
 

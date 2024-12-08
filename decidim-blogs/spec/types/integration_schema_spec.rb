@@ -29,7 +29,7 @@ describe "Decidim::Api::QueryType" do
           "id" => endo.author.id.to_s,
           "name" => endo.author.name,
           "nickname" => "@#{endo.author.nickname}",
-          "organizationName" => endo.author.organization.name,
+          "organizationName" => { "translation" => translated(endo.author.organization.name) },
           "profilePath" => "/profiles/#{endo.author.nickname}"
         }
       end,
@@ -98,7 +98,7 @@ describe "Decidim::Api::QueryType" do
                 deleted
                 name
                 nickname
-                organizationName
+                organizationName { translation(locale:"#{locale}") }
                 profilePath
                 __typename
               }
@@ -135,7 +135,7 @@ describe "Decidim::Api::QueryType" do
     end
 
     context "when unfiltered" do
-      it "executes sucessfully" do
+      it "executes successfully" do
         expect { response }.not_to raise_error
       end
 
@@ -278,7 +278,7 @@ describe "Decidim::Api::QueryType" do
             deleted
             name
             nickname
-            organizationName
+            organizationName { translation(locale:"#{locale}") }
             profilePath
             __typename
           }
@@ -306,7 +306,7 @@ describe "Decidim::Api::QueryType" do
     )
     end
 
-    it "executes sucessfully" do
+    it "executes successfully" do
       expect { response }.not_to raise_error
     end
 

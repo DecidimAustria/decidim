@@ -7,30 +7,31 @@ module Decidim
         [
           {
             id: "context",
+            title: t("decidim.design.helpers.context"),
             contents: [
               {
                 type: :text,
                 values: [
-                  "This tab-panel component gathers all the related contents or another resources of the main element displayed,
-                    in order to save vertical space. Clicking on the tab will activate the reated panel to show the content.",
-                  "Mainly is used within the <i>layout_item</i> or the <i>layout_center</i>, after the main content of the resource."
+                  t("decidim.design.helpers.tab_panels_context_description"),
+                  t("decidim.design.helpers.tab_panels_context_description_html")
                 ]
               }
             ]
           },
           {
             id: "usage",
+            title: t("decidim.design.helpers.usage"),
             contents: [
               {
                 type: :text,
                 values: [
-                  "This component receives an array of hashes, and rearrange the output of each item into a tab-panel structure. Available properties for each panel:",
-                  "<strong>enabled</strong>: <i>Boolean</i>. Conditionally render the tab",
-                  "<strong>id</strong>: <i>String</i>. Unique id",
-                  "<strong>text</strong>: <i>String</i>. Tab title",
-                  "<strong>icon</strong>: <i>String</i>. Remixicon key",
-                  "<strong>method</strong>: <i>Symbol</i>. Any function rails understands",
-                  "<strong>args</strong>: <i>Array</i>. Arguments for the previous method"
+                  t("decidim.design.helpers.tab_panels_usage_description"),
+                  t("decidim.design.helpers.tab_panels_usage_description_html"),
+                  t("decidim.design.helpers.tab_panels_usage_description_id_html"),
+                  t("decidim.design.helpers.tab_panels_usage_description_tab_html"),
+                  t("decidim.design.helpers.tab_panels_usage_description_remixicon_html"),
+                  t("decidim.design.helpers.tab_panels_usage_description_rails_html"),
+                  t("decidim.design.helpers.tab_panels_usage_description_arguments_html")
                 ]
               },
               {
@@ -42,7 +43,50 @@ module Decidim
                 ),
                 cell_snippet: {
                   cell: "decidim/tab_panels",
-                  args: [tab_panels_items]
+                  args: [tab_panels_items],
+                  call_string: [<<-TEXT1, <<-TEXT2]
+  cell(
+      "decidim/tab_panels",
+      [
+        {
+          enabled: true,
+          id: "button",
+          text: "Button",
+          icon: resource_type_icon_key("images"),
+          method: :cell,
+          args: ["decidim/button", { text: "Send" }]
+        },
+        {
+          enabled: true,
+          id: "announce",
+          text: "Announcement",
+          icon: resource_type_icon_key("documents"),
+          method: :cell,
+          args: ["decidim/announcement", "I am an announcement"]
+        }
+      ]
+    )
+                  TEXT1
+  cell(
+      "decidim/tab_panels",
+      [
+        {
+          enabled: true,
+          id: "icon",
+          text: "Icon",
+          method: :icon,
+          args: ["question-line", { class: "w-4 h-4" }]
+        },
+        {
+          enabled: true,
+          id: "text",
+          text: "Plain",
+          method: :content_tag,
+          args: ["p", "plain text", { class: "text-left" }]
+        }
+      ]
+    )
+                  TEXT2
                 }
               }
             ]
@@ -67,7 +111,7 @@ module Decidim
             text: "Button",
             icon: resource_type_icon_key("images"),
             method: :cell,
-            args: ["decidim/button", { text: "Send" }]
+            args: ["decidim/button", { text: t("decidim.design.helpers.send") }]
           },
           {
             enabled: true,
@@ -75,7 +119,7 @@ module Decidim
             text: "Announcement",
             icon: resource_type_icon_key("documents"),
             method: :cell,
-            args: ["decidim/announcement", "I am an annoucement"]
+            args: ["decidim/announcement", t("decidim.design.components.announcement.iam_an_announcement")]
           }
         ]
       end

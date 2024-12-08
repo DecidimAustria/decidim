@@ -51,7 +51,6 @@ el:
         scope_id: Πεδίο εφαρμογής
         scopes_enabled: Ενεργοποιημένα πεδία εφαρμογών
         short_description: Σύντομη περιγραφή
-        show_statistics: Εμφάνιση στατιστικών
         slug: Slug διεύθυνσης URL
         special_features: Ειδικά χαρακτηριστικά
         subtitle: Υπότιτλος
@@ -283,7 +282,6 @@ el:
           form:
             existing_user: Υπάρχων συμμετέχων
             explanation: 'Οδηγίες για την εικόνα:'
-            image_guide: Κατά προτίμηση μια εικόνα με οριζόντιο προσανατολισμό που δεν περιέχει κείμενο.
             non_user: Μη συμμετέχων
             non_user_avatar_help: Θα πρέπει να λάβετε τη συγκατάθεση των προσώπων πριν τα δημοσιεύσετε ως μέλος.
             select_a_position: Επιλέξτε θέση
@@ -340,11 +338,7 @@ el:
       show:
         assembly_type: Τύπος συνέλευσης
         duration: Διάρκεια
-        is_transparent:
-          'false': αδιαφανής
-          'true': διαφανής
         private_space: Αυτή είναι μια ιδιωτική συνέλευση
-        related_participatory_processes: Σχετικές διαδικασίες συμμετοχής
         social_networks_title: Επίσκεψη στη συνέλευση στις
     assembly_members:
       assembly_member:

@@ -278,12 +278,14 @@ zh-CN:
             non_user: 非现有参与者
             select_user: 选择参与者
           index:
+<<<<<<< HEAD
             filter:
               all: 所有的
               sent: 已发送
+=======
+>>>>>>> tags/v0.29.1
             invite_attendee: Invite participant
             invites: 邀请
-            search: 搜索
           new:
             invite: 邀请
             new_invite: Invite participant

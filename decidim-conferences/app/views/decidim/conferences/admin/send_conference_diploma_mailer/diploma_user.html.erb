@@ -1,16 +1,21 @@
 <main class="conference-diploma">
   <div class="diploma__border">
     <div class="diploma__content">
+<<<<<<< HEAD
       <div class="small-11 small-centered">
         <div class="diploma__logo small-4 small-centered">
+=======
+      <div>
+        <div class="diploma__logo">
+>>>>>>> tags/v0.29.1
           <%= wicked_pdf_image_tag @conference.attached_uploader(:main_logo).variant_url(:thumb) %>
         </div>
-        <div class="diploma__name small-10 small-centered">
+        <div class="diploma__name">
           <h2><strong><%= translated_attribute(@conference.title) %></strong></h2>
           <h3><%= t("decidim.conferences.admin.send_conference_diploma_mailer.diploma_user.certificate_of_attendance") %></h3>
           <p><%= t("decidim.conferences.admin.send_conference_diploma_mailer.diploma_user.certificate_of_attendance_description", user: @user.name, title: translated_attribute(@conference.title), location: @conference.location, start: l(@conference.start_date, format: :decidim_short), end: l(@conference.end_date, format: :decidim_short) ).html_safe %></p>
         </div>
-        <hr class="mt-m mb-m">
+        <hr>
         <div class="diploma__attendance">
           <strong><%= t("decidim.conferences.admin.send_conference_diploma_mailer.diploma_user.attendance_verified_by") %></strong>
           <div>

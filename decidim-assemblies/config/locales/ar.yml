@@ -51,7 +51,6 @@ ar:
         scope_id: نطاق
         scopes_enabled: النطاقات المُفعّلَة
         short_description: وصف قصير
-        show_statistics: عرض الإحصائيات
         slug: سبيكة العنوان الشبكي
         special_features: مميزات خاصة
         subtitle: العنوان الفرعي
@@ -290,7 +289,6 @@ ar:
           form:
             existing_user: المشارك الحالي
             explanation: 'إرشادات للصورة:'
-            image_guide: يفضل أن تكون صورة لا تحتوي على أي نص.
             non_user: غير مشارك
             non_user_avatar_help: يجب أن تحصل على موافقة الأشخاص قبل نشرهم كأعضاء.
             select_a_position: اختر المنصب
@@ -349,11 +347,7 @@ ar:
       show:
         assembly_type: نوع الجمعية
         duration: المدة الزمنية
-        is_transparent:
-          'false': مبهمة
-          'true': شفافة
         private_space: هذه جمعية خاصة
-        related_participatory_processes: العمليات التشاركية ذات الصلة
         social_networks_title: زيارة التجمع على
     assembly_members:
       assembly_member:

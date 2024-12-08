@@ -199,12 +199,14 @@ tr:
             non_user: Mevcut olmayan katılımcı
             select_user: Katılımcı seç
           index:
+<<<<<<< HEAD
             filter:
               all: Tümü
               sent: Gönderilen
+=======
+>>>>>>> tags/v0.29.1
             invite_attendee: Katılımcı davet et
             invites: Davetler
-            search: Arama
         meeting_closes:
           edit:
             close: Kapat

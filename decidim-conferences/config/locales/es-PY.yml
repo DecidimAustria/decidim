@@ -127,6 +127,12 @@ es-PY:
         new:
           create: Crear
           title: Nuevo conferenciante.
+        publish:
+          invalid: Se ha producido un error al publicar esta ponente.
+          success: Ponente de la conferencia actualizada correctamente.
+        unpublish:
+          invalid: Se ha producido un error al despublicar esta ponente.
+          success: Ponente de la conferencia despublicada correctamente.
         update:
           error: Hubo un error al actualizar el altavoz de esta conferencia.
           success: Altavoz actualizado con éxito para esta conferencia.
@@ -348,14 +354,8 @@ es-PY:
             non_user: Usuario no existente
             select_user: Seleccionar usuario
           index:
-            filter:
-              accepted: Aceptado
-              all: Todas
-              rejected: Rechazado
-              sent: Expedido
             invite_attendee: Invitar a un asistente
             invites: Invitaciones
-            search: Buscar
           new:
             explanation: La participante será invitada a unirse a la jornada. Si su correo electrónico no está registrado, también será invitada a unirse a la organización.
             invite: Invitación

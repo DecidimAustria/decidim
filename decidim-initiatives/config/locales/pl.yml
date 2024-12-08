@@ -243,6 +243,10 @@ pl:
               most_recent: Najnowsze
         exports:
           initiatives: Inicjatywy
+        index:
+          initiatives_types:
+            alert_html: "<p>Musisz utworzyć co najmniej jeden typ inicjatywy, aby uczestnicy mogli rozpocząć tworzenie inicjatyw.</p><p> %{link}</p>"
+            button: Nowy typ inicjatywy
         initiatives:
           edit:
             accept: Akceptuj inicjatywę
@@ -298,7 +302,11 @@ pl:
         initiatives_types:
           create:
             error: Wystąpił błąd.
+<<<<<<< HEAD
             success: Utworzono nowy typ inicjatywy.
+=======
+            success: Nowy typ inicjatywy został pomyślnie utworzony. Musisz zdefiniować co najmniej jeden zakres dla tego typu inicjatywy, aby można go było użyć.
+>>>>>>> tags/v0.29.1
           destroy:
             success: Typ inicjatywy został usunięty.
           edit:
@@ -554,7 +562,6 @@ pl:
           other: " podpisy"
         vote_cabin:
           already_voted: Już podpisano
-          supports_required: "Wymagane %{total_supports} podpisów"
           verification_required: Zweryfikuj swoje konto, aby podpisać inicjatywę
           vote: Podpisz
           votes_blocked: Podpisywanie wyłączone

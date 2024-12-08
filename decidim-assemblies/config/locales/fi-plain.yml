@@ -51,7 +51,6 @@ fi-pl:
         scope_id: Teema
         scopes_enabled: Teemat käytössä
         short_description: Lyhyt kuvaus
-        show_statistics: Näytä tilastot
         slug: URL-tunniste
         special_features: Lisäominaisuudet
         subtitle: Alaotsikko
@@ -297,7 +296,11 @@ fi-pl:
             slug_help_html: 'URL-tunnisteita käytetään tähän ryhmään osoittavien URL-osoitteiden luonnissa. Hyväksyy kirjaimet, numerot ja viivat. Ensimmäinen merkki on oltava kirjain. Esimerkiksi: %{url}'
             social_handlers: Sosiaalinen media
             title: Yleiset tiedot
+<<<<<<< HEAD
             visbility: Näkyvyys
+=======
+            visibility: Näkyvyys
+>>>>>>> tags/v0.29.1
         assemblies_types:
           form:
             title: Otsikko
@@ -397,11 +400,7 @@ fi-pl:
       show:
         assembly_type: Ryhmän tyyppi
         duration: Kesto
-        is_transparent:
-          'false': läpinäkymätön
-          'true': läpinäkyvä
         private_space: Tämä on yksityinen ryhmä
-        related_participatory_processes: Liittyvät osallisuusprosessit
         social_networks_title: Vieraile ryhmän sivulla palvelussa
     assembly_members:
       assembly_member:

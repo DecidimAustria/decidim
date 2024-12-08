@@ -287,12 +287,14 @@ tr:
             non_user: Mevcut olmayan kullanıcı
             select_user: Kullanıcı seç
           index:
+<<<<<<< HEAD
             filter:
               all: Herşey
               sent: Gönderilen
+=======
+>>>>>>> tags/v0.29.1
             invite_attendee: Katılımcı Davet Et
             invites: Davetler
-            search: Arama
           new:
             invite: Davet et
             new_invite: Kullanıcı davet et

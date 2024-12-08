@@ -25,7 +25,7 @@ module Decidim
     end
 
     describe ".daily" do
-      subject { described_class.daily(time:).order(:id) }
+      subject { described_class.daily(time).order(:id) }
 
       let(:time) { Time.now.utc }
       let(:resource) { create(:dummy_resource) }
@@ -53,7 +53,7 @@ module Decidim
     end
 
     describe ".weekly" do
-      subject { described_class.weekly(time:).order(:id) }
+      subject { described_class.weekly(time).order(:id) }
 
       let(:time) { Time.now.utc }
       let(:resource) { create(:dummy_resource) }
@@ -77,6 +77,15 @@ module Decidim
 
       it "returns only the notifications within the whole previous week" do
         expect(subject).to eq(correct_notifications)
+      end
+    end
+
+    describe "#event_class_instance" do
+      let(:resource) { create(:dummy_resource) }
+      let(:notification) { create(:notification, resource:) }
+
+      it "returns the event class instance" do
+        expect(notification.event_class_instance).to be_a(Dev::DummyResourceEvent)
       end
     end
   end

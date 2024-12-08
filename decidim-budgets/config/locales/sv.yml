@@ -126,12 +126,20 @@ sv:
             invalid: 'De här projekten tillhörde redan kategorin %{subject_name}: %{projects}.'
             select_a_category: Välj en kategori.
             select_a_project: Välj ett projekt.
+<<<<<<< HEAD
             success: 'Projekten till budgeten %{subject_name} har uppdaterats: %{projects}.'
+=======
+            success: 'Projekt som tilldelats kategorin %{subject_name}: %{projects}.'
+>>>>>>> tags/v0.29.1
           update_scope:
             invalid: 'De här projekten tillhörde redan indelningen %{subject_name}: %{projects}.'
             select_a_project: Välj ett projekt.
             select_a_scope: Välj en indelning.
+<<<<<<< HEAD
             success: 'Projekten inom %{subject_name} har uppdaterats: %{projects}.'
+=======
+            success: 'Projekten uppdaterades till %{subject_name}: %{projects}.'
+>>>>>>> tags/v0.29.1
           update_selected:
             invalid:
               selected: 'De här projekten har redan valts för genomförande: %{projects}.'
@@ -139,7 +147,11 @@ sv:
             select_a_project: Välj ett projekt.
             select_a_selection: Välj status för genomförandet.
             success:
+<<<<<<< HEAD
               selected: 'Projekten har redan valts för genomförande: %{projects}.'
+=======
+              selected: 'Projekten har valts för genomförande: %{projects}.'
+>>>>>>> tags/v0.29.1
               unselected: 'Projekten har valts bort från genomförande: %{projects}.'
         proposals_imports:
           create:
@@ -172,7 +184,7 @@ sv:
         back_to: Tillbaka till %{component_name}
         close_modal: Stäng fönster
         continue: Fortsätt
-        more_information: Mer information
+        more_information: Mer information om budgeten
       budgets_list:
         budgets: Budgetar
         cancel_order:
@@ -211,6 +223,7 @@ sv:
           fields:
             category: Kategori
             id: ID
+            map: Karta
             title: Titel
       order_summary_mailer:
         order_summary:

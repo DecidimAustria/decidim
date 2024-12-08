@@ -1,10 +1,14 @@
+<<<<<<< HEAD
 /* global jest */
 
+=======
+>>>>>>> tags/v0.29.1
 import { Editor } from "@tiptap/core";
 
 import DecidimKit from "src/decidim/editor/extensions/decidim_kit";
 
 import { createEditorContainer } from "src/decidim/editor/test/helpers";
+<<<<<<< HEAD
 
 // Mock picmo as it is distributed as an ES6 module that is not fully compatible
 // with Jest without configuration changes.
@@ -18,6 +22,8 @@ jest.mock("@picmo/popup-picker",
     }
   })
 );
+=======
+>>>>>>> tags/v0.29.1
 
 describe("DecidimKit", () => {
   const createEditor = (config = {}) => {

@@ -19,7 +19,11 @@ Gem::Specification.new do |s|
     "homepage_uri" => "https://decidim.org",
     "source_code_uri" => "https://github.com/decidim/decidim"
   }
+<<<<<<< HEAD
   s.required_ruby_version = "~> 3.1.0"
+=======
+  s.required_ruby_version = "~> 3.2.0"
+>>>>>>> tags/v0.29.1
 
   s.name = "decidim-api"
   s.summary = "Decidim API module"
@@ -32,11 +36,17 @@ Gem::Specification.new do |s|
     end
   end
 
+<<<<<<< HEAD
   s.add_dependency "commonmarker", "~> 0.23.0", ">= 0.23.9"
   s.add_dependency "decidim-core", Decidim::Api.version
   # Graphql version 2.1 breaks graphql-client compatibility See https://github.com/github/graphql-client/pull/310
   s.add_dependency "graphql", "~> 2.0.0"
   s.add_dependency "graphql-docs", "~> 3.0.1"
+=======
+  s.add_dependency "decidim-core", Decidim::Api.version
+  s.add_dependency "graphql", "~> 2.2.6"
+  s.add_dependency "graphql-docs", "~> 4.0"
+>>>>>>> tags/v0.29.1
   s.add_dependency "rack-cors", "~> 1.0"
 
   s.add_development_dependency "decidim-comments", Decidim::Api.version

@@ -78,13 +78,19 @@ sv:
   booleans:
     'false': 'Nej'
     'true': 'Ja'
+<<<<<<< HEAD
   carrierwave:
     errors:
       file_cannot_be_processed: Filen kan inte bearbetas
       file_resolution_too_large: Filupplösningen är för stor
       file_size_too_large: Filen är för stor
       not_inside_organization: Filen är inte kopplad till någon organisation
+=======
+>>>>>>> tags/v0.29.1
   date:
+    buttons:
+      close: Stäng
+      select: Välj
     formats:
       decidim_short: "%d/%m/%Y"
       decidim_short_dashed: "%d-%m-%Y"
@@ -92,6 +98,10 @@ sv:
       decidim_with_day_and_month_name: "%A %d %b %Y"
       decidim_with_month_name: "%d %B %Y"
       decidim_with_month_name_short: "%d %b"
+      help:
+        date_format: 'Format: dd/mm/åååå'
+      order: d-m-y
+      separator: "/"
   datetime:
     distance_in_words:
       about_x_hours:
@@ -296,10 +306,13 @@ sv:
         title:
           one: "%{count} ändringsförslag"
           other: "%{count} ändringsförslag"
+<<<<<<< HEAD
       compare_draft:
         continue: Fortsätt
         no_similars_found: Hittade inga liknande ändringsförslag.
         title: Liknande ändringsförslag
+=======
+>>>>>>> tags/v0.29.1
       created:
         error: Ett fel uppstod när ändringsutkastet skulle skapas.
         success: Skapade utkast till ändringsförslag.
@@ -357,14 +370,22 @@ sv:
       wizard_step_form:
         steps:
           '1': Skapa ändringsförslag
+<<<<<<< HEAD
           '2': Jämför ändringsförslag
           '3': Slutför ändringsförslaget
           '4': Publicera ditt ändringsförslag
+=======
+          '2': Publicera ditt ändringsförslag
+>>>>>>> tags/v0.29.1
     anonymous_user: Anonym
     application:
       document:
         download: Hämta fil
+        visit_link: Öppna länk
       documents:
+        component_documents:
+          dummy: Dummy-dokument till komponent
+          meetings: Mötesdokument
         documents: Dokument
         related_documents: Relaterade dokument
       photo:
@@ -547,7 +568,11 @@ sv:
       metrics:
         name: Organisationsdata
       participatory_space_metrics:
+<<<<<<< HEAD
         name: Deltagande i siffror
+=======
+        name: Mätvärden
+>>>>>>> tags/v0.29.1
       participatory_space_stats:
         name: Statistik
       social_networks_metadata:
@@ -596,8 +621,13 @@ sv:
           log_in: Logga in
           newsletter: Få enstaka nyhetsbrev med relevant information
           newsletter_title: Kontakttillstånd
+<<<<<<< HEAD
           sign_up: Registrera dig
           subtitle: Registrera dig för att delta i diskussioner och stödja förslag.
+=======
+          sign_up: Skapa ett konto
+          subtitle: Skapa ett konto för att delta i plattformen.
+>>>>>>> tags/v0.29.1
           terms: användarvillkoren
           tos_agreement: Genom att registrera dig godkänner du %{link}.
           tos_title: Användarvillkor
@@ -669,6 +699,10 @@ sv:
     endorsers_list:
       endorsed_by: Gillad av…
     errors:
+      files:
+        file_cannot_be_processed: Filen kan inte bearbetas
+        file_resolution_too_large: Filupplösningen är för stor
+        not_inside_organization: Filen är inte kopplad till någon organisation
       internal_server_error:
         copied: Texten har kopierats!
         copy_error_message_clarification: Kopiera felmeddelandet till urklipp
@@ -808,7 +842,7 @@ sv:
       nickname_event:
         notification_body: Vi har ändrat reglerna för användarnamn för att undvika dubbletter och har tagit bort regeln om skriftlägeskänsliga namn. <br/> Ditt användarnamn skapades efter ett annat med samma namn, så vi har automatiskt bytt namn på det. Du kan ändra det i <a href="%{link_to_account_settings}">dina kontoinställningar</a>.
       notification_event:
-        notification_title: En händelse inträffade i <a href="%{resource_path}">%{resource_title}</a>.
+        notification_title: Något inträffade i <a href="%{resource_path}">%{resource_title}</a>.
       reports:
         resource_hidden:
           email_intro: En administratör tog bort din %{resource_type} eftersom den har rapporterats som %{report_reasons}.
@@ -874,11 +908,16 @@ sv:
       create:
         button: Följ
         error: Det gick inte att följa resursen.
-        participatory_space: Följer <span class="show-for-sr">%{resource_name}</span>
+        participatory_space: Följer <span>%{resource_name}</span>
       destroy:
         button: Sluta följa
         error: Det gick inte att sluta följa den här resursen.
     forms:
+      attachment_link:
+        explanation: Instruktioner för bifogade länkar
+        help_messages:
+          - Endast korrekta URL-format accepteras.
+          - Observera att länkarna måste vara offentliga så att alla deltagare kan komma åt dem.
       errors:
         decidim/user:
           password: Lösenordet är för kort.
@@ -888,13 +927,18 @@ sv:
         file:
           explanation: 'Instruktioner för fil:'
           message_1: Måste vara en bild eller ett dokument.
+          message_2: Använd helst liggande bilder. Bilden beskärs automatiskt.
         icon:
           explanation: 'Instruktioner för ikon:'
           message_1: Måste vara en kvadratisk bild.
           message_2: Den rekommenderade storleken för denna bild är 512x512.
         image:
           explanation: 'Instruktioner för bild:'
+<<<<<<< HEAD
           message_1: Helst en landskapsbild som inte har någon text.
+=======
+          message_1: Helst en liggande bild som inte innehåller någon text.
+>>>>>>> tags/v0.29.1
           message_2: Bilden kommer bli beskuren.
       file_validation:
         allowed_file_extensions: 'Tillåtna filtillägg: %{extensions}'
@@ -1036,7 +1080,11 @@ sv:
           content: "<p>I %{organization} kan du delta och besluta i de deltagandeprocesser som visas i toppmenyn: processer, samråd, namninsamlingar och konsultationer.</p> <p>Inom varje område kan du delta på olika sätt: lämna förslag – enskilt eller med andra människor – delta i debatter, prioritera projekt att genomföra, delta i möten med mera.</p>\n"
           title: Vad kan jag göra i %{organization}?
         description: Läs mer om %{organization}.
+<<<<<<< HEAD
         title: Allmän hjälp
+=======
+        title: Allmänt
+>>>>>>> tags/v0.29.1
     last_activities:
       all: Alla aktivitetstyper
       index:
@@ -1212,7 +1260,11 @@ sv:
         token_error: Länken är inte längre giltig.
         unsubscribe: Avprenumerera
     newsletters_opt_in:
+<<<<<<< HEAD
       unathorized: Länken är tyvärr inte längre tillgänglig.
+=======
+      unauthorized: Länken är tyvärr inte längre tillgänglig.
+>>>>>>> tags/v0.29.1
       update:
         error: Det gick inte att spara inställningarna för nyhetsbrevet.
         success: Inställningarna för nyhetsbrevet har ändrats.
@@ -1232,6 +1284,7 @@ sv:
         same_language: Innehållet har skrivits på ditt valda språk (%{language}). Därför visas inte automatisk översättning i det här e-postmeddelandet.
         translated_text: 'Maskinöversatt text:'
     notifications:
+      action_error: Det gick inte att uppdatera inställningen för meddelanden.
       no_notifications: Inga meddelanden ännu.
       show:
         missing_event: Hoppsan, det här meddelandet tillhör ett objekt som inte längre är tillgängligt. Du kan kasta det.
@@ -1335,8 +1388,11 @@ sv:
           alert: Vi har uppdaterat våra användarvillkor, vänligen granska dem.
           body: Var snäll och granska uppdateringarna i våra användarvillkor. Annars kommer du inte att kunna använda plattformen.
           title: 'Obligatoriskt: Granska uppdateringarna av våra användarvillkor'
+<<<<<<< HEAD
     participatory_space_private_users:
       not_allowed: Du har inte rätt att se det här innehållet
+=======
+>>>>>>> tags/v0.29.1
     passwords:
       update:
         error: Det gick inte att uppdatera lösenordet.
@@ -1471,7 +1527,11 @@ sv:
         does_not_belong: Innehåller olaglig information, hot om självmord, personuppgifter eller något annat som inte hör hemma på %{organization_name}.
         hide: Dölj
         hide_content: Dölj detta innehåll
+<<<<<<< HEAD
         offensive: Innehåller rasism, sexism, personangrepp, mordhot, uppmaning att begå självmord eller hets mot folkgrupp.
+=======
+        offensive: Innehåller rasism, sexism, nedsättande kommentarer, personliga attacker, dödshot, självmordsförfrågningar eller någon form av hatpropaganda.
+>>>>>>> tags/v0.29.1
         reason: Anledning
         report: Rapportera
         spam: Innehåller klickbete, reklam, bedrägerier eller skräpprogramvara.
@@ -1493,7 +1553,11 @@ sv:
         log_in_before_follow: Logga in innan du utför denna åtgärd
       login_modal:
         please_log_in: Logga in
+<<<<<<< HEAD
         sign_up: Registrera dig
+=======
+        sign_up: Skapa ett konto
+>>>>>>> tags/v0.29.1
       mentions_modal:
         remove_recipient: Ta bort mottagare %{name}
       participatory_space_filters:
@@ -1705,7 +1769,7 @@ sv:
     registrations:
       destroyed: Ditt konto har avregistrerats. Vi hoppas att vi ses snart igen.
       new:
-        sign_up: Registrera
+        sign_up: Skapa ett konto
       signed_up: Välkommen! Din registrering är klar.
       signed_up_but_inactive: Din registrering är klar. Men vi kunde inte logga in dig eftersom ditt konto ännu inte är aktiverat.
       signed_up_but_locked: Din registrering är klar. Men vi kunde inte logga in dig eftersom ditt konto är låst.
@@ -1726,7 +1790,11 @@ sv:
         forgot_your_password: Glömt ditt lösenord?
         log_in: Logga in
         log_in_with_provider: Logga in med %{provider}
+<<<<<<< HEAD
         sign_up: Registrera dig
+=======
+        sign_up: Skapa ett konto
+>>>>>>> tags/v0.29.1
       minimum_password_length:
         one: "(minst %{count} tecken)"
         other: "(minst %{count} tecken)"
@@ -1797,8 +1865,10 @@ sv:
     upload:
       uploadedFile: Uppladdad fil
   emojis:
+    add_custom: Lägg till egen emoji
     button: Lägg till emoji
     categories:
+<<<<<<< HEAD
       activities: Aktiviteter
       animals-nature: Djur & Natur
       custom: Anpassad
@@ -1821,6 +1891,31 @@ sv:
       clear: Rensa sökning
       error: Det gick inte att söka emojis
       not_found: Sökningen gav inget resultat
+=======
+      activity: Aktivitet
+      custom: Anpassad
+      flags: Flaggor
+      foods: Mat & Dryck
+      frequent: Ofta använda
+      nature: Djur & Natur
+      objects: Saker
+      people: Smileys & människor
+      places: Resor & Platser
+      search: Sökresultat
+      symbols: Symboler
+    pick: Välj en emoji…
+    search: Sök
+    search_no_results_1: Åh nej!
+    search_no_results_2: Den emojin kunde inte hittas
+    skins:
+      '1': Förval
+      '2': Ljus
+      '3': Medelljus
+      '4': Mellan
+      '5': Medel-mörk
+      '6': Mörk
+      choose: Välj förvald hudton
+>>>>>>> tags/v0.29.1
   errors:
     messages:
       allowed_file_content_types: 'endast filer med följande tillägg är tillåtna: %{types}'
@@ -1838,7 +1933,11 @@ sv:
       long_words: innehåller ord som är för långa (över 35 tecken)
       must_start_with_caps: måste börja med en stor bokstav
       nesting_too_deep: får inte tillhöra en underkategori
+<<<<<<< HEAD
       not_found: kunde inte hittas. Har du registrerat dig tidigare?
+=======
+      not_found: kunde inte hittas. Har du skapat ett konto tidigare?
+>>>>>>> tags/v0.29.1
       not_locked: låstes inte
       not_saved:
         one: 'Det finns ett fel i din begäran:'
@@ -1923,8 +2022,13 @@ sv:
         log_in: Logga in
         made_with_open_source: Webbplats skapad med <a target="_blank" href="https://github.com/decidim/decidim">fri programvara</a>.
         resources: Innehåll
+<<<<<<< HEAD
         sign_up: Registrera
         terms_and_conditions: Användarvillkor
+=======
+        sign_up: Skapa ett konto
+        terms_of_service: Användarvillkor
+>>>>>>> tags/v0.29.1
       header:
         log_in: Logga in
         main_menu: Huvudmeny
@@ -1940,10 +2044,13 @@ sv:
         mark_as_read: Markera som läst
       offline_banner:
         cache_version_page: Hoppsan! Ditt nätverk är offline. Detta är en tidigare cachad version av sidan, innehållet är kanske inte uppdaterat.
+<<<<<<< HEAD
       shared:
         layout_item:
           next: Nästa
           prev: Föregående
+=======
+>>>>>>> tags/v0.29.1
       social_media_links:
         facebook: "%{organization} på Facebook"
         github: "%{organization} på GitHub"
@@ -2022,6 +2129,10 @@ sv:
     x: X
     xing: Xing
   time:
+    buttons:
+      close: Stäng
+      reset: Återställ
+      select: Välj
     formats:
       day_of_month: "%b %d"
       day_of_week: "%a"
@@ -2036,6 +2147,8 @@ sv:
         mailer:
           invitation_instructions:
             accept_until_format: "%B %d, %Y %I:%M %p"
+      help:
+        time_format: 'Format: hh:mm'
       long: "%B %d, %Y kl.%H:%M"
       long_dashed: "%Y-%m-%d %H:%M:%S"
       long_with_particles: "%B %d, %Y kl. %H:%M"

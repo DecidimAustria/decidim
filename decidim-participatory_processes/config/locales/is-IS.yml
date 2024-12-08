@@ -4,7 +4,6 @@ is:
     attributes:
       participatory_process:
         announcement: Tilkynning
-        banner_image: Borðamynd
         copy_categories: Afrita flokka
         copy_components: Afrita hluti
         copy_steps: Afrita skref
@@ -21,7 +20,6 @@ is:
         scope_id: Umfang
         scopes_enabled: Scopes virkt
         short_description: Stutt lýsing
-        show_statistics: Sýna tölfræði
         slug: URL slug
         start_date: Upphafsdagur
         subtitle: Texti

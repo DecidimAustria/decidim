@@ -5,7 +5,11 @@ require "spec_helper"
 shared_examples "email with logo" do
   context "when organization has a logo" do
     let(:organization_logo) { Decidim::Dev.test_file("city.jpeg", "image/jpeg") }
+<<<<<<< HEAD
     let(:organization) { create(:organization, name: "O'Higgins", logo: organization_logo) }
+=======
+    let(:organization) { create(:organization, name: { en: "O'Higgins" }, logo: organization_logo) }
+>>>>>>> tags/v0.29.1
     let(:mail) { described_class.event_received(event, event_class_name, resource, user, :follower, extra) }
     let(:logo_path) { Rails.application.routes.url_helpers.rails_representation_path(organization.logo.variant(resize_to_fit: [600, 160]), only_path: true) }
 

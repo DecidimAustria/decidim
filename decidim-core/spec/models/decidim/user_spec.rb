@@ -328,7 +328,7 @@ module Decidim
 
       it "sends the email" do
         expect(last_email.to).to eq([user.email])
-        expect(last_email.subject).to eq("Thanks for joining #{organization.name}!")
+        expect(last_email.subject).to eq("Thanks for joining #{translated(organization.name)}!")
       end
 
       context "when the organization does not send welcome notifications" do
@@ -480,7 +480,7 @@ module Decidim
         end
       end
 
-      context "when searching with scopes no one is intereted in" do
+      context "when searching with scopes no one is interested in" do
         let(:scopes) { [scope4.id, scope5.id] }
 
         before { create_users_and_scopes }

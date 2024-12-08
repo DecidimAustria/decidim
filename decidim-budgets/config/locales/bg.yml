@@ -172,7 +172,11 @@ bg:
         back_to: Назад към %{component_name}
         close_modal: Затвори прозореца
         continue: Продължи
+<<<<<<< HEAD
         more_information: Още информация
+=======
+        more_information: Повече информация относно бюджета
+>>>>>>> tags/v0.29.1
       budgets_list:
         budgets: Бюджети
         cancel_order:
@@ -211,6 +215,10 @@ bg:
           fields:
             category: Категория
             id: ID
+<<<<<<< HEAD
+=======
+            map: Карта
+>>>>>>> tags/v0.29.1
             title: Заглавие
       order_summary_mailer:
         order_summary:

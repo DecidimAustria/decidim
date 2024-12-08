@@ -79,10 +79,16 @@ ro:
   booleans:
     'false': 'Nu'
     'true': 'Da'
+<<<<<<< HEAD
   carrierwave:
     errors:
       file_size_too_large: Mărimea fișierului este prea mare
+=======
+>>>>>>> tags/v0.29.1
   date:
+    buttons:
+      close: Închideți
+      select: Selectați
     formats:
       decidim_short: "%d/%m/%Y"
       decidim_short_with_month_name_short: "%d %b %Y"
@@ -251,10 +257,13 @@ ro:
           one: "%{count} amendament"
           few: "%{count} amendamente"
           other: "%{count} amendamente"
+<<<<<<< HEAD
       compare_draft:
         continue: Continuă
         no_similars_found: Nu există amendamente similare.
         title: Amendamente similare
+=======
+>>>>>>> tags/v0.29.1
       created:
         error: S-a produs o eroare la crearea ciornei de amendament.
         success: Ciorna de amendament a fost creată cu succes.
@@ -303,9 +312,7 @@ ro:
       wizard_step_form:
         steps:
           '1': Creează-ți un amendament
-          '2': Compară amendamentul tău
-          '3': Completează amendamentul tău
-          '4': Publică amendamentul tău
+          '2': Publică amendamentul tău
     anonymous_user: Anonim
     application:
       document:
@@ -486,7 +493,6 @@ ro:
           complete_profile: Profil complet
           nickname_help: Pseudonimul tău în %{organization}. Poate conține doar litere, numere, '-' și '_'.
           sign_up: Completează-ţi profilul
-          subtitle: Te rugăm să completezi următorul formular pentru a finaliza înregistrarea
           username_help: Numele public care apare pe posturi. Pentru a garanta anonimitatea, poate fi orice nume.
       registrations:
         new:
@@ -494,8 +500,6 @@ ro:
           log_in: Autentificare
           newsletter: Primește un buletin informativ ocazional cu informații relevante
           newsletter_title: Drepturi privind contactele
-          sign_up: Înscrie-te
-          subtitle: Înscrie-te pentru a participa la discuții și pentru a vota propuneri.
           tos_agreement: Prin înregistrare ești de acord cu %{link}.
           tos_title: Condiții de utilizare
           username_help: Numele public care apare pe postări. Pentru a garanta anonimitatea, poate fi orice nume.
@@ -664,8 +668,6 @@ ro:
           email_outro: Ai primit această notificare deoarece ești un administrator al platformei.
           email_subject: Un grup de utilizatori și-a actualizat profilul
           notification_title: Grupul de utilizatori %{user_group_name} și-a actualizat profilul, lăsând neverificat. Acum îl poți verifica în panoul <a href="%{groups_admin_path}">de administratori</a>.
-      notification_event:
-        notification_title: A apărut un eveniment pentru <a href="%{resource_path}">%{resource_title}</a>.
       reports:
         resource_hidden:
           email_intro: Un administrator a eliminat %{resource_type} deoarece a fost raportat ca %{report_reasons}.
@@ -720,7 +722,6 @@ ro:
       create:
         button: Urmărește
         error: A apărut o problemă la urmărirea acestei resurse.
-        participatory_space: Urmăriți<span class="show-for-sr">%{resource_name}</span>
       destroy:
         button: Nu doresc să mai urmăresc
         error: A apărut o problemă la anularea urmăririi acestei resurse.
@@ -737,7 +738,6 @@ ro:
           explanation: 'Îndrumare pentru imagine:'
         image:
           explanation: 'Orientări pentru imagine:'
-          message_1: De preferință o imagine landscape care să nu conțină vreun text.
           message_2: Serviciul decupează imaginea.
       file_validation:
         allowed_file_extensions: 'Extensii de fișiere permise: %{extensions}'
@@ -831,7 +831,6 @@ ro:
         default_page:
           content: "<p>În %{organization} poți participa și decide cu privire la diferite subiecte, prin spaţiile participative pe care le vezi în meniul superior: Procese, Grupuri de lucru, Iniţiative, Consultări.</p> <p>În cadrul fiecăruia vei găsi opțiuni diferite pentru a participa: formulează propuneri individual sau împreună cu alte persoane, ia parte la dezbateri, prioritizează proiectele ce urmează a fi puse în aplicare, participă la întâlniri față-în-față și la alte acțiuni.</p>\n"
           title: Ce pot face în %{organization}?
-        title: Ajutor General
     last_activities:
       all: Toate tipurile de activitate
       index:
@@ -1057,8 +1056,6 @@ ro:
         metrics:
           headline: Indicatori
           link: Arată toate măsurătorile
-    participatory_space_private_users:
-      not_allowed: Nu aveţi permisiunea să vizualizaţi acest conţinut
     profile:
       deleted: Participant șters
     profiles:
@@ -1183,8 +1180,6 @@ ro:
         title: Raportează un utilizator nepotrivit
       floating_help:
         help: Ajutor
-      login_modal:
-        sign_up: Înscrie-te
       participatory_space_filters:
         filters:
           areas: Zone
@@ -1354,8 +1349,6 @@ ro:
       updated_not_active: Parola dvs. a fost schimbată cu succes.
     registrations:
       destroyed: Contul tău a fost anulat cu succes. Sperăm să te revedem în curând.
-      new:
-        sign_up: Înscrie-te
       signed_up: Bine ați venit! V-ați înregistrat cu succes.
       signed_up_but_inactive: V-ați înregistrat cu succes. Cu toate acestea, nu vă putem conecta deoarece contul dvs. nu este încă activat.
       signed_up_but_locked: V-ați înregistrat cu succes. Cu toate acestea, nu vă putem conecta deoarece contul dvs. este blocat.
@@ -1370,7 +1363,10 @@ ro:
         back: Înapoi
         forgot_your_password: V-ați uitat parola?
         log_in: Autentificare
+<<<<<<< HEAD
         sign_up: Înscrie-te
+=======
+>>>>>>> tags/v0.29.1
       minimum_password_length:
         one: "(minimum %{count} caractere)"
         few: "(minimum %{count} caractere)"
@@ -1392,7 +1388,6 @@ ro:
       invalid_time_zone: nu este un fus orar valid
       long_words: conține cuvinte care sunt prea lungi (peste 35 de caractere)
       must_start_with_caps: trebuie să înceapă cu o majusculă
-      not_found: nu a putut fi găsit. V-ați înscris anterior?
       not_locked: nu a fost blocat
       not_saved:
         one: 'A apărut o eroare la procesarea cererii tale:'
@@ -1426,7 +1421,6 @@ ro:
         download_open_data: Descarcă fișierele de date deschise
         log_in: Autentificare
         made_with_open_source: Site web creat cu <a target="_blank" href="https://github.com/decidim/decidim">software gratuit</a>.
-        sign_up: Înscrie-te
       header:
         log_in: Autentificare
         main_menu: Meniul principal

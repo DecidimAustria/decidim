@@ -5,7 +5,6 @@ de:
       participatory_process:
         announcement: Ankündigung
         area_id: Bereich
-        banner_image: Banner-Bild
         copy_categories: Kategorien kopieren
         copy_components: Komponenten kopieren
         copy_steps: Phasen kopieren
@@ -35,8 +34,6 @@ de:
         scope_type_max_depth_id: Umfang-Filtertiefe
         scopes_enabled: Themenbereiche aktiviert
         short_description: Kurzbeschreibung
-        show_metrics: Metriken anzeigen
-        show_statistics: Statistiken anzeigen
         slug: URL-Slug
         start_date: Startdatum
         subtitle: Untertitel
@@ -438,7 +435,11 @@ de:
             select_process_group: Wählen Sie eine Prozessgruppe aus
             slug_help_html: 'URL-Slugs werden zum Generieren der URLs verwendet, die auf diesen Prozess verweisen. Akzeptiert werden nur Buchstaben, Zahlen und Bindestriche und es muss mit einem Buchstaben beginnen. Beispiel: %{url}'
             title: Allgemeine Information
+<<<<<<< HEAD
             visbility: Sichtbarkeit
+=======
+            visibility: Sichtbarkeit
+>>>>>>> tags/v0.29.1
       content_blocks:
         extra_data:
           name: Phase & Dauer

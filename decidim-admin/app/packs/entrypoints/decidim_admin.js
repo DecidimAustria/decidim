@@ -8,7 +8,7 @@ import "src/decidim/admin/resources_permissions"
 import "src/decidim/admin/welcome_notification"
 import "src/decidim/admin/newsletters"
 import "src/decidim/admin/form"
-import "src/decidim/admin/external_domain_whitelist"
+import "src/decidim/admin/external_domain_allowlist"
 import "src/decidim/admin/draggable-list"
 import "src/decidim/admin/sortable"
 import "src/decidim/admin/moderations"
@@ -17,6 +17,9 @@ import "src/decidim/slug_form"
 import "src/decidim/admin/admin_autocomplete"
 import "src/decidim/admin/triadic_color_picker"
 import "src/decidim/admin/participatory_space_search"
+import "src/decidim/admin/css_preview"
+import "src/decidim/admin/sync_radio_buttons"
+import "src/decidim/admin/text_copy"
 
 // CSS
 import "entrypoints/decidim_admin.scss";

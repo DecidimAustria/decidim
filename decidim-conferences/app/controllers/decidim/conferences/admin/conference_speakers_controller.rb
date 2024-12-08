@@ -28,7 +28,7 @@ module Decidim
           enforce_permission_to :create, :conference_speaker
           @form = form(ConferenceSpeakerForm).from_params(params)
 
-          CreateConferenceSpeaker.call(@form, current_user, current_conference) do
+          CreateConferenceSpeaker.call(@form) do
             on(:ok) do
               flash[:notice] = I18n.t("conference_speakers.create.success", scope: "decidim.admin")
               redirect_to conference_speakers_path(current_conference)
@@ -70,6 +70,38 @@ module Decidim
             on(:ok) do
               flash[:notice] = I18n.t("conference_speakers.destroy.success", scope: "decidim.admin")
               redirect_to conference_speakers_path(current_conference)
+            end
+          end
+        end
+
+        def publish
+          enforce_permission_to(:update, :conference_speaker, speaker: conference_speaker)
+
+          Decidim::Conferences::Admin::PublishConferenceSpeaker.call(conference_speaker, current_user) do
+            on(:ok) do
+              flash[:notice] = I18n.t("conference_speakers.publish.success", scope: "decidim.admin")
+              redirect_to conference_speakers_path(current_conference)
+            end
+
+            on(:invalid) do
+              flash.now[:alert] = I18n.t("conference_speakers.publish.invalid", scope: "decidim.admin")
+              render action: "index"
+            end
+          end
+        end
+
+        def unpublish
+          enforce_permission_to(:update, :conference_speaker, speaker: conference_speaker)
+
+          Decidim::Conferences::Admin::UnpublishConferenceSpeaker.call(conference_speaker, current_user) do
+            on(:ok) do
+              flash[:notice] = I18n.t("conference_speakers.unpublish.success", scope: "decidim.admin")
+              redirect_to conference_speakers_path(current_conference)
+            end
+
+            on(:invalid) do
+              flash.now[:alert] = I18n.t("conference_speakers.unpublish.invalid", scope: "decidim.admin")
+              render action: "index"
             end
           end
         end

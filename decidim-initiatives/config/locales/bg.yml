@@ -101,7 +101,11 @@ bg:
           title_or_description_or_id_string_or_author_name_or_author_nickname_cont: Търсете в %{collection} по заглавие, описание, идент. № или име на автора.
       initiatives_settings:
         update:
+<<<<<<< HEAD
           error: Възникна грешка!
+=======
+          error: Възникна грешка.
+>>>>>>> tags/v0.29.1
           success: Настройките на инициативите са актуализирани успешно.
       menu:
         attachments: Прикачени файлове
@@ -292,7 +296,10 @@ bg:
         initiatives_types:
           create:
             error: Възникна грешка.
+<<<<<<< HEAD
             success: Успешно е създаден нов тип инициатива.
+=======
+>>>>>>> tags/v0.29.1
           destroy:
             success: Типът инициатива беше премахнат успешно.
           edit:
@@ -540,7 +547,10 @@ bg:
           other: " подписи"
         vote_cabin:
           already_voted: Вече подписани
+<<<<<<< HEAD
           supports_required: "Необходими са %{total_supports} подписа"
+=======
+>>>>>>> tags/v0.29.1
           verification_required: Потвърдете профила си, за да подпишете инициативата
           vote: Подписване
           votes_blocked: Подписването е деактивирано

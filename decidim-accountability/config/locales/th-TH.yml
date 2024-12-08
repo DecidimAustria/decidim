@@ -159,7 +159,10 @@ th:
         show:
           stats:
             back_to_resource: กลับไปหาผลลัพธ์
+<<<<<<< HEAD
             comments: ความคิดเห็น
+=======
+>>>>>>> tags/v0.29.1
         timeline:
           title: วิวัฒนาการของโครงการ
     admin:

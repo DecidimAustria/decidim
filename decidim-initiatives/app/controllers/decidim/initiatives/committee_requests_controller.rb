@@ -22,7 +22,7 @@ module Decidim
                .from_params(initiative_id: current_initiative.id, user_id: current_user.id, state: "requested")
                .with_context(current_organization: current_initiative.organization, current_user:)
 
-        SpawnCommitteeRequest.call(form, current_user) do
+        SpawnCommitteeRequest.call(form) do
           on(:ok) do
             redirect_to initiatives_path, flash: {
               notice: I18n.t(

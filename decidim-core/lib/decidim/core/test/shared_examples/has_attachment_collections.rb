@@ -6,6 +6,7 @@ shared_examples_for "has attachment collections" do
   context "when it has attachment collections" do
     let(:attachment_collection) { create(:attachment_collection, collection_for:) }
     let!(:document) { create(:attachment, :with_pdf, attached_to:, attachment_collection:) }
+    let!(:link) { create(:attachment, :with_link, attached_to:, attachment_collection:) }
     let!(:other_document) { create(:attachment, :with_pdf, attached_to:, attachment_collection: nil) }
 
     before do
@@ -19,7 +20,12 @@ shared_examples_for "has attachment collections" do
     it "show their documents" do
       within "[id*=documents-#{attachment_collection.id}]", visible: false do
         expect(page).to have_content(:all, translated(document.title))
+<<<<<<< HEAD
         expect(page).not_to have_content(:all, translated(other_document.title))
+=======
+        expect(page).to have_content(:all, translated(link.title))
+        expect(page).to have_no_content(:all, translated(other_document.title))
+>>>>>>> tags/v0.29.1
       end
     end
   end
@@ -53,7 +59,11 @@ shared_examples_for "has attachment collections" do
 
     it "is not present" do
       expect(page).to have_content(translated(attachment_collection.name))
+<<<<<<< HEAD
       expect(page).not_to have_content(translated(empty_attachment_collection.name))
+=======
+      expect(page).to have_no_content(translated(empty_attachment_collection.name))
+>>>>>>> tags/v0.29.1
     end
   end
 end

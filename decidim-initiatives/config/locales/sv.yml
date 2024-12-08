@@ -128,7 +128,11 @@ sv:
         initiatives_type_scope:
           fields:
             scope: Indelning
+<<<<<<< HEAD
             supports_required: Underskrifter som krävs
+=======
+            supports_required: Antal underskrifter som krävs
+>>>>>>> tags/v0.29.1
           name: Indelning för initiativtypen
         initiatives_types:
           fields:
@@ -237,6 +241,10 @@ sv:
               most_recent: Senaste
         exports:
           initiatives: Initiativ
+        index:
+          initiatives_types:
+            alert_html: "<p>Du måste skapa minst en initiativtyp så att deltagarna kan börja skapa initiativ.</p><p> %{link}</p>"
+            button: Ny typ av initiativ
         initiatives:
           edit:
             accept: Godkänn initiativ
@@ -277,7 +285,11 @@ sv:
         initiatives_type_scopes:
           create:
             error: Ett fel har inträffat.
+<<<<<<< HEAD
             success: En ny indelning har skapats för initiativtypen.
+=======
+            success: En ny indelning har skapats för namninsamlingen.
+>>>>>>> tags/v0.29.1
           destroy:
             success: Indelningen har tagit borts.
           edit:
@@ -292,7 +304,11 @@ sv:
         initiatives_types:
           create:
             error: Ett fel har inträffat.
+<<<<<<< HEAD
             success: En ny initiativtyp har skapats.
+=======
+            success: En ny initiativtyp har skapats. Du måste ange minst ett utrymme för denna initiativtyp för att den ska användas.
+>>>>>>> tags/v0.29.1
           destroy:
             success: Initiativtypen har tagits bort.
           edit:
@@ -540,7 +556,6 @@ sv:
           other: " underskrifter"
         vote_cabin:
           already_voted: Redan undertecknad
-          supports_required: "%{total_supports} underskrifter krävs"
           verification_required: Verifiera ditt konto för att skriva under initiativet
           vote: Signera
           votes_blocked: Underskrifter är avaktiverade

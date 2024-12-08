@@ -4,7 +4,7 @@ require "spec_helper"
 
 describe "Organizations" do
   let(:admin) { create(:admin, email: "system@example.org") }
-  let(:organization) { create(:organization, name: "Citizen Corp") }
+  let(:organization) { create(:organization, name: { ca: "", en: "Citizen Corp", es: "" }) }
 
   context "when an admin authenticated" do
     before do
@@ -14,7 +14,7 @@ describe "Organizations" do
 
     describe "current organizations section" do
       it "has a link for creating a new organization" do
-        click_link "New organization"
+        click_on "New organization"
         expect(page).to have_content("New organization")
         expect(page).to have_button("Create organization & invite admin")
       end
@@ -26,7 +26,7 @@ describe "Organizations" do
 
     describe "admins section" do
       it "has a link for creating a new admin" do
-        click_link "New admin"
+        click_on "New admin"
         expect(page).to have_content("New admin")
         expect(page).to have_button("Create")
       end

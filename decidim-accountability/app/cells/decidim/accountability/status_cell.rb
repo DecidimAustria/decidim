@@ -6,6 +6,7 @@ module Decidim
   module Accountability
     # This cell renders the status of a category
     class StatusCell < Decidim::ViewModel
+<<<<<<< HEAD
       include ApplicationHelper
       include BreadcrumbHelper
       include Decidim::SanitizeHelper
@@ -14,6 +15,11 @@ module Decidim
       include ActionView::Helpers::NumberHelper
 
       delegate :current_component, :component_settings, to: :controller
+=======
+      include Decidim::Accountability::ApplicationHelper
+      include Decidim::Accountability::BreadcrumbHelper
+      include ActionView::Helpers::NumberHelper
+>>>>>>> tags/v0.29.1
 
       def show
         return unless render?
@@ -41,7 +47,11 @@ module Decidim
 
       def title
         if model.is_a? Decidim::Category
+<<<<<<< HEAD
           decidim_html_escape translated_attribute(model.name)
+=======
+          decidim_escape_translated(model.name)
+>>>>>>> tags/v0.29.1
         else
           options[:title]
         end
@@ -73,6 +83,14 @@ module Decidim
         return unless results_count&.positive? && render_count
 
         display_count(results_count)
+      end
+
+      def display_count(count)
+        heading_parent_level_results(count)
+      end
+
+      def heading_parent_level_results(count)
+        t("results.count.results_count", scope: "decidim.accountability", count:)
       end
 
       def render_count

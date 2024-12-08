@@ -1,6 +1,6 @@
 <% add_decidim_page_title(t("impersonatable_users", scope: "decidim.admin.titles")) %>
 <% if current_organization.available_authorizations.empty? %>
-  <div class="section">
+  <div>
     <%= cell("decidim/announcement", t(".needs_authorization_warning"), callout_class: "warning" ) %>
   </div>
 <% end %>
@@ -32,7 +32,7 @@
   </div>
   <div class="fcell search">
     <%= form_tag "", method: :get do %>
-      <div class="filters__search">
+      <div>
         <div class="input-group">
           <%= search_field_tag :q, @query,label: false, class: "input-group-field", placeholder: t(".search") %>
           <%= hidden_field_tag :state, @state %>
@@ -64,7 +64,7 @@
             <td><%= user.managed? ? t(".managed") : t(".not_managed") %></td>
             <td class="table-list__actions">
               <% if allowed_to? :impersonate, :impersonatable_user, user: user %>
-                <%= icon_link_to "login-box-line", new_impersonatable_user_impersonation_path(user), t(".impersonate"), class: "action-icon--impersonate" %>
+                <%= icon_link_to "user-line", new_impersonatable_user_impersonation_path(user), t(".impersonate"), class: "action-icon--impersonate" %>
               <% end %>
               <%= icon_link_to "time-line", impersonatable_user_impersonation_logs_path(user), t(".view_logs"), class: "action-icon--view-logs" %>
               <% if allowed_to? :promote, :impersonatable_user, user: user %>

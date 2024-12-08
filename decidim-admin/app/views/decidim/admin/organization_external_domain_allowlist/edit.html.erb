@@ -1,0 +1,22 @@
+<% add_decidim_page_title(t("edit_external_domains", scope: "decidim.admin.titles")) %>
+
+<div class="item_show__header">
+  <h1 class="item_show__header-title">
+<<<<<<< HEAD:decidim-admin/app/views/decidim/admin/organization_external_domain_whitelist/edit.html.erb
+    <%= t("title", scope: "decidim.admin.organization_external_domain_whitelist.form") %>
+=======
+    <%= t("title", scope: "decidim.admin.organization_external_domain_allowlist.form") %>
+>>>>>>> tags/v0.29.1:decidim-admin/app/views/decidim/admin/organization_external_domain_allowlist/edit.html.erb
+  </h1>
+</div>
+
+<div class="item__edit-form">
+  <%= decidim_form_for(@form, html: { class: "form-defaults form edit_organization_external_domain_allowlist" }, url: organization_external_domain_allowlist_path, method: :patch) do |f| %>
+    <%= render partial: "form", object: f %>
+    <div class="item__edit-sticky">
+      <div class="item__edit-sticky-container">
+        <%= f.submit t(".update"), class: "button button__sm button__secondary" %>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -168,7 +168,7 @@ pl:
         back_to: Wróć do %{component_name}
         close_modal: Zamknij okno
         continue: Dalej
-        more_information: Więcej informacji
+        more_information: Więcej informacji na temat budżetu
       budgets_list:
         budgets: Budżety
         cancel_order:
@@ -204,6 +204,10 @@ pl:
           fields:
             category: Kategoria
             id: Identyfikator
+<<<<<<< HEAD
+=======
+            map: Mapa
+>>>>>>> tags/v0.29.1
             title: Tytuł
       order_summary_mailer:
         order_summary:

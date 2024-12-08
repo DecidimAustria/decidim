@@ -10,7 +10,9 @@ module Decidim
       helper Decidim::TraceabilityHelper
       helper Decidim::Accountability::BreadcrumbHelper
 
-      helper_method :results, :result, :first_class_categories, :count_calculator, :nav_paths
+      helper_method :results, :result, :first_class_categories, :count_calculator
+
+      before_action :set_controller_breadcrumb
 
       before_action :set_controller_breadcrumb
 
@@ -31,24 +33,6 @@ module Decidim
 
       def result
         @result ||= search_collection.includes(:timeline_entries).find_by(id: params[:id])
-      end
-
-      def next_result
-        return if search_collection.size < 2
-
-        search_collection.order(:start_date, :id).where(Decidim::Accountability::Result.arel_table[:id].gt(result.id)).first
-      end
-
-      def prev_result
-        return if search_collection.size < 2
-
-        search_collection.order(:start_date, :id).where(Decidim::Accountability::Result.arel_table[:id].lt(result.id)).last
-      end
-
-      def nav_paths
-        return {} if result.blank?
-
-        { prev_path: prev_result, next_path: next_result }.compact_blank.transform_values { |result| result_path(result) }
       end
 
       def search_collection

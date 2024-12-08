@@ -39,7 +39,11 @@ sv:
           error: Det gick inte att rösta om kommentaren.
     components:
       add_comment_form:
+<<<<<<< HEAD
         account_message: <a href="%{sign_in_url}">Logga in med ditt konto</a> eller <a href="%{sign_up_url}">registrera dig</a> för att lämna en kommentar.
+=======
+        account_message: <a href="%{sign_in_url}">Logga in</a> eller <a href="%{sign_up_url}">skapa ett konto</a> för kommentera.
+>>>>>>> tags/v0.29.1
         form:
           body:
             label: Kommentera
@@ -50,6 +54,7 @@ sv:
           user_group_id:
             label: Kommentera som
         opinion:
+<<<<<<< HEAD
           label: Din åsikt om ämnet
           negative: Negativ
           negative_selected: Din åsikt om ämnet är negativ
@@ -57,6 +62,15 @@ sv:
           neutral_selected: Din åsikt om ämnet är neutral
           positive: Positiv
           positive_selected: Din åsikt om ämnet är positiv
+=======
+          label: Din åsikt om frågan
+          negative: Negativ
+          negative_selected: Din åsikt om frågan är negativ
+          neutral: Neutral
+          neutral_selected: Din åsikt om frågan är neutral
+          positive: Positiv
+          positive_selected: Din åsikt om frågan är positiv
+>>>>>>> tags/v0.29.1
         remaining_characters: "%{count} tecken kvar"
         remaining_characters_1: "%{count} tecken kvar"
         title: Lämna din kommentar

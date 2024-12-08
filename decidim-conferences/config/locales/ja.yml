@@ -124,6 +124,12 @@ ja:
         new:
           create: 作成
           title: 新しいカンファレンススピーカー。
+        publish:
+          invalid: このスピーカーを公開中に問題が発生しました。
+          success: カンファレンスのスピーカーを公開しました。
+        unpublish:
+          invalid: このスピーカーを非公開にする際に問題がありました。
+          success: カンファレンスのスピーカーを非公開にしました。
         update:
           error: このカンファレンススピーカーの更新中に問題が発生しました。
           success: カンファレンススピーカーが正常に更新されました。
@@ -345,14 +351,16 @@ ja:
             non_user: 非参加者
             select_user: 参加者を選択
           index:
+<<<<<<< HEAD
             filter:
               accepted: 承認済み
               all: すべて
               rejected: 却下済み
               sent: 送信済み
+=======
+>>>>>>> tags/v0.29.1
             invite_attendee: 参加者の招待
             invites: 招待
-            search: 検索
           new:
             explanation: 参加者はカンファレンスに参加するように招待されます。参加者のメールアドレスが組織に登録されていない場合は、組織にも招待されます。
             invite: 招待

@@ -78,13 +78,19 @@ de:
   booleans:
     'false': 'Nein'
     'true': 'Ja'
+<<<<<<< HEAD
   carrierwave:
     errors:
       file_cannot_be_processed: Datei konnte nicht verarbeitet werden
       file_resolution_too_large: Die Datei-Auflösung ist zu gross
       file_size_too_large: Datei ist zu groß
       not_inside_organization: Die Datei ist keiner Organisation angefügt.
+=======
+>>>>>>> tags/v0.29.1
   date:
+    buttons:
+      close: Schliessen
+      select: Auswählen
     formats:
       decidim_short: "%d/%m/%Y"
       decidim_short_dashed: "%d-%m-%Y"
@@ -92,6 +98,10 @@ de:
       decidim_with_day_and_month_name: "%A, %d. %b %Y"
       decidim_with_month_name: "%d %B %Y"
       decidim_with_month_name_short: "%d. %b"
+      help:
+        date_format: 'Format: dd/mm/yyyy'
+      order: d-m-y
+      separator: "/"
   datetime:
     distance_in_words:
       about_x_hours:
@@ -296,10 +306,6 @@ de:
         title:
           one: "%{count} Anpassung"
           other: "%{count} Anpassungen"
-      compare_draft:
-        continue: Fortfahren
-        no_similars_found: Keine ähnlichen Entwürfe gefunden.
-        title: Ähnliche Entwürfe
       created:
         error: Beim Erstellen des Änderungsvorschlags ist ein Fehler aufgetreten.
         success: Der Änderungsvorschlag wurde erfolgreich erstellt.
@@ -358,14 +364,22 @@ de:
       wizard_step_form:
         steps:
           '1': Erstellen Sie Ihre Änderung
+<<<<<<< HEAD
           '2': Vergleichen Sie Ihren Änderungsvorschlag
           '3': Vervollständigen Sie Ihren Änderungsvorschlag
           '4': Änderung veröffentlichen
+=======
+          '2': Änderung veröffentlichen
+>>>>>>> tags/v0.29.1
     anonymous_user: Anonym
     application:
       document:
         download: Datei herunterladen
+        visit_link: Link öffnen
       documents:
+        component_documents:
+          dummy: Platzhalter für Komponenten-Dokumente
+          meetings: Veranstaltungsdokumente
         documents: Dokumente
         related_documents: Zugehörige Dokumente
       photo:
@@ -587,7 +601,7 @@ de:
           complete_profile: Profil vervollständingen
           nickname_help: Ihr Pseudonym in %{organization}. Kann nur Buchstaben, Zahlen, '-' und '_' enthalten.
           sign_up: Bitte vervollständigen Sie Ihr Profil
-          subtitle: Bitte füllen Sie das folgende Formular aus, um die Anmeldung abzuschließen
+          subtitle: Bitte füllen Sie das folgende Formular aus, um die Kontoerstellung abzuschließen
           username_help: Öffentlich sichtbarer Name, der in Ihren Beiträgen angezeigt wird. Um Anonymität zu gewährleisten, kann es sich um einen beliebigen Namen handeln.
       registrations:
         create:
@@ -597,8 +611,8 @@ de:
           log_in: Anmelden
           newsletter: Gelegentlich einen Newsletter mit relevanten Informationen erhalten
           newsletter_title: Kontakterlaubnis
-          sign_up: Registrieren
-          subtitle: Registrieren Sie sich, um an Diskussionen teilzunehmen und Vorschläge zu unterstützen.
+          sign_up: Konto erstellen
+          subtitle: Erstellen Sie ein Konto, um auf der Plattform teilzunehmen.
           terms: die Nutzungsbedingungen
           tos_agreement: Mit der Anmeldung stimmen Sie %{link} zu.
           tos_title: Nutzungsbedingungen
@@ -674,6 +688,10 @@ de:
     endorsers_list:
       endorsed_by: Gefällt…
     errors:
+      files:
+        file_cannot_be_processed: Datei konnte nicht verarbeitet werden
+        file_resolution_too_large: Die Datei-Auflösung ist zu gross
+        not_inside_organization: Die Datei ist keiner Organisation angefügt.
       internal_server_error:
         copied: Text Kopiert!
         copy_error_message_clarification: Fehlermeldung in die Zwischenablage kopieren
@@ -878,11 +896,16 @@ de:
       create:
         button: Folgen
         error: Beim Folgen dieser Ressource ist ein Fehler aufgetreten.
-        participatory_space: Sie folgen <span class="show-for-sr">%{resource_name}</span>
+        participatory_space: Folgen Sie <span>%{resource_name}</span>
       destroy:
         button: Entfolgen
         error: Beim Entfolgen dieser Ressource ist ein Fehler aufgetreten.
     forms:
+      attachment_link:
+        explanation: Anleitung für Anhang-Links
+        help_messages:
+          - Nur korrekte URL-Formate werden akzeptiert.
+          - Bitte beachten Sie, dass die Links öffentlich sein müssen, damit alle Teilnehmer auf sie zugreifen können.
       errors:
         decidim/user:
           password: Das Passwort ist zu kurz.
@@ -899,7 +922,7 @@ de:
           message_2: Die empfohlene Größe für dieses Bild ist 512x512 Pixel.
         image:
           explanation: 'Anleitung für Bild:'
-          message_1: Vorzugsweise ein Querformat ohne Text.
+          message_1: Vorzugsweise ein Bild im Querformat, das keinen Text enthält.
           message_2: Der Dienst schneidet die Datei zu.
       file_validation:
         allowed_file_extensions: 'Erlaubte Dateiformate: %{extensions}'
@@ -1042,7 +1065,7 @@ de:
           content: "<p>In %{organization} können Sie durch die Felder, die Sie im oberen Menü sehen, an verschiedenen Themen teilnehmen: Prozesse, Gremien, Initiativen, Beratungen.</p> <p>In jedem Bereich finden Sie verschiedene Optionen für die Teilnahme: Vorschläge machen - einzeln oder mit anderen -, an Debatten teilnehmen, Prioritäten für umzusetzende Projekte setzen, persönliche Treffen und andere Aktionen besuchen.</p>\n"
           title: Was kann ich in %{organization} tun?
         description: Mehr lesen über %{organization}.
-        title: Allgemeine Hilfe
+        title: Allgemein
     last_activities:
       all: Alle Aktivitätstypen
       index:
@@ -1218,7 +1241,7 @@ de:
         token_error: Der Link ist abgelaufen.
         unsubscribe: Abmelden
     newsletters_opt_in:
-      unathorized: Entschuldigung, dieser Link ist nicht mehr verfügbar.
+      unauthorized: Entschuldigung, dieser Link ist nicht mehr verfügbar.
       update:
         error: Beim Speichern der Newslettereinstellungen ist ein Problem aufgetreten.
         success: Newslettereinstellungen wurden erfolgreich aktualisiert.
@@ -1238,6 +1261,7 @@ de:
         same_language: Der Inhalt wurde in Ihrer bevorzugten Sprache (%{language}) veröffentlicht, daher wird in dieser E-Mail keine automatisierte Übersetzung angezeigt.
         translated_text: 'Automatisch übersetzter Text:'
     notifications:
+      action_error: Beim Aktualisieren der Benachrichtigungen ist ein Fehler aufgetreten.
       no_notifications: Noch keine Benachrichtigungen
       show:
         missing_event: Hoppla, diese Benachrichtigung gehört zu einem Artikel, der nicht mehr verfügbar ist. Du kannst sie verwerfen.
@@ -1314,7 +1338,7 @@ de:
           headline: Aktueller Status von %{organization}
         sub_hero:
           register: Registrieren
-          register_title: Registrieren Sie sich um ein Konto anzulegen
+          register_title: Konto erstellen
       index:
         standalone_pages: Seiten
         subheading: Navigieren Sie durch die Hilfeseiten von %{name}
@@ -1341,8 +1365,6 @@ de:
           alert: Wir haben unsere Nutzungsbedingungen aktualisiert. Bitte überprüfen Sie sie.
           body: Bitte nehmen Sie sich einen Moment Zeit, um sich über die Aktualisierungen unserer Nutzungsbedingungen zu informieren. Andernfalls können Sie die Plattform nicht nutzen.
           title: 'Erforderlich: Überprüfen Sie die Aktualisierungen unserer Nutzungsbedingungen'
-    participatory_space_private_users:
-      not_allowed: Sie dürfen diesen Inhalt nicht sehen
     passwords:
       update:
         error: Es gab ein Problem bei der Aktualisierung des Passwortes.
@@ -1499,7 +1521,7 @@ de:
         log_in_before_follow: Bitte melden Sie sich an, bevor Sie diese Aktion durchführen
       login_modal:
         please_log_in: Bitte melden Sie sich an
-        sign_up: Registrieren
+        sign_up: Konto erstellen
       mentions_modal:
         remove_recipient: Empfänger %{name} entfernen
       participatory_space_filters:
@@ -1626,7 +1648,7 @@ de:
       locked: Dein Konto ist gesperrt.
       not_found_in_database: Ungültige %{authentication_keys} oder Passwort
       timeout: Ihre Sitzung ist abgelaufen. Bitte melden Sie sich erneut an, um fortzufahren.
-      unauthenticated: Sie müssen sich anmelden oder registrieren, bevor Sie fortfahren.
+      unauthenticated: Sie müssen sich anmelden oder registrieren, bevor Sie fortfahren können.
     invitations:
       edit:
         header: Beenden Sie die Erstellung Ihres Kontos
@@ -1714,7 +1736,7 @@ de:
     registrations:
       destroyed: Tschüss! Ihr Konto wurde erfolgreich storniert. Wir hoffen, Sie bald wieder zu sehen.
       new:
-        sign_up: Registrieren
+        sign_up: Konto erstellen
       signed_up: Herzlich willkommen! Sie haben sich erfolgreich angemeldet.
       signed_up_but_inactive: Sie haben sich erfolgreich angemeldet. Wir konnten Sie jedoch nicht anmelden, weil Ihr Konto noch nicht aktiviert wurde.
       signed_up_but_locked: Sie haben sich erfolgreich angemeldet. Wir konnten Sie jedoch nicht anmelden, weil Ihr Konto gesperrt ist.
@@ -1735,7 +1757,7 @@ de:
         forgot_your_password: Haben Sie Ihr Passwort vergessen?
         log_in: Anmelden
         log_in_with_provider: Anmelden über %{provider}
-        sign_up: Registrieren
+        sign_up: Konto erstellen
       minimum_password_length:
         one: "(%{count} Zeichen Minimum)"
         other: "(%{count} Zeichen Minimum)"
@@ -1806,30 +1828,32 @@ de:
     upload:
       uploadedFile: Hochgeladene Datei
   emojis:
+    add_custom: Eigenes Emoji hinzufügen
     button: Emoji hinzufügen
     categories:
-      activities: Aktivitäten
-      animals-nature: Tiere & Natur
+      activity: Aktivität
       custom: Benutzerdefiniert
       flags: Flaggen
-      food-drink: Essen & Trinken
+      foods: Essen & Trinken
+      frequent: Häufig verwendet
+      nature: Tiere & Natur
       objects: Objekte
-      people-body: Personen & Körper
-      recents: Kürzlich verwendet
-      smileys-emotion: Smileys & Emotion
+      people: Lächeln & Menschen
+      places: Reisen & Orte
+      search: Suchergebnisse
       symbols: Symbole
-      travel-places: Reisen & Orte
-    error:
-      load: Fehler beim Laden von Emojis
-    recents:
-      clear: Zuletzt benutzte Emoji entfernen
-      none: Sie haben noch keine Emojis ausgewählt.
-    retry: Erneut versuchen
-    search:
-      _: Emojis suchen...
-      clear: Suche löschen
-      error: Fehler beim Suchen von Emojis
-      not_found: Keine Ergebnisse gefunden
+    pick: Wähle einen Emoji…
+    search: Suchen
+    search_no_results_1: Oh nein!
+    search_no_results_2: Dieser Emoji konnte nicht gefunden werden.
+    skins:
+      '1': Standard
+      '2': Hell
+      '3': Mittel-Hell
+      '4': Mittel
+      '5': Mitteldunkel
+      '6':
+      choose: Standard-Hautton auswählen
   errors:
     messages:
       allowed_file_content_types: 'nur Dateien mit den folgenden Typen sind erlaubt: %types%'
@@ -1847,7 +1871,7 @@ de:
       long_words: enthält zu lange Wörter (über 35 Zeichen)
       must_start_with_caps: muss mit einem Großbuchstaben beginnen
       nesting_too_deep: kann nicht innerhalb einer Unterkategorie sein
-      not_found: konnte nicht gefunden werden. Haben Sie sich vorher angemeldet?
+      not_found: konnte nicht gefunden werden. Haben Sie bereits ein Konto erstellt?
       not_locked: war nicht gesperrt
       not_saved:
         one: 'Bei der Bearbeitung Ihrer Anfrage ist ein Fehler aufgetreten:'
@@ -1932,8 +1956,8 @@ de:
         log_in: Anmelden
         made_with_open_source: Website mit <a target="_blank" href="https://github.com/decidim/decidim">freier Software erstellt</a>.
         resources: Ressourcen
-        sign_up: Registrieren
-        terms_and_conditions: Nutzungsbedingungen
+        sign_up: Konto erstellen
+        terms_of_service: Nutzungsbedingungen
       header:
         log_in: Anmelden
         main_menu: Hauptmenü
@@ -1949,10 +1973,6 @@ de:
         mark_as_read: Als gelesen markieren
       offline_banner:
         cache_version_page: Hoppla! Ihr Netzwerk ist offline. Dies ist eine zuvor gecachte Version der Seite, die Sie besuchen, möglicherweise ist der Inhalt nicht aktuell.
-      shared:
-        layout_item:
-          next: Nächstes Element
-          prev: Vorheriges Element
       social_media_links:
         facebook: "%{organization} auf Facebook"
         github: "%{organization} auf GitHub"
@@ -2031,6 +2051,10 @@ de:
     x: X
     xing: Xing
   time:
+    buttons:
+      close: Schliessen
+      reset: Zurücksetzen
+      select: Auswählen
     formats:
       day_of_month: "%d. %b"
       day_of_week: "%a"
@@ -2045,6 +2069,8 @@ de:
         mailer:
           invitation_instructions:
             accept_until_format: "%d. %B %Y %H:%M"
+      help:
+        time_format: 'Format: hh:mm'
       long: "%d. %B %Y %H:%M"
       long_dashed: "%d.%m.%Y %H:%M:%S"
       long_with_particles: "%d. %B %Y %H:%M"

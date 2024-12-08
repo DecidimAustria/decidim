@@ -60,6 +60,33 @@ module Decidim
         subject.default_locale = :en
         expect(subject).not_to be_valid
       end
+
+      describe "name" do
+        context "when name does not exists" do
+          it "is valid" do
+            expect(described_class.count).to eq(0)
+            expect(subject).to be_valid
+          end
+        end
+
+        context "when name exists for same locale" do
+          let!(:dummy_organization) { create(:organization, name: { en: "Dummy Random 22" }) }
+
+          it "is invalid" do
+            subject.name = { en: "Dummy Random 22" }
+            expect(subject).not_to be_valid
+          end
+        end
+
+        context "when name exists for different locale" do
+          let!(:dummy_organization) { create(:organization, name: { ca: "Dummy Random 22", en: "Dummy" }) }
+
+          it "is invalid" do
+            subject.name = { en: "Dummy Random 22" }
+            expect(subject).not_to be_valid
+          end
+        end
+      end
     end
 
     describe "enabled omniauth providers" do
@@ -89,16 +116,16 @@ module Decidim
         end
       end
 
-      context "when it is overriden" do
+      context "when it is overridden" do
         let(:organization) { create(:organization) }
         let(:omniauth_settings) do
           {
             "omniauth_settings_facebook_enabled" => true,
-            "omniauth_settings_facebook_app_id" => Decidim::AttributeEncryptor.encrypt("overriden-app-id"),
-            "omniauth_settings_facebook_app_secret" => Decidim::AttributeEncryptor.encrypt("overriden-app-secret"),
+            "omniauth_settings_facebook_app_id" => Decidim::AttributeEncryptor.encrypt("overridden-app-id"),
+            "omniauth_settings_facebook_app_secret" => Decidim::AttributeEncryptor.encrypt("overridden-app-secret"),
             "omniauth_settings_google_oauth2_enabled" => true,
-            "omniauth_settings_google_oauth2_client_id" => Decidim::AttributeEncryptor.encrypt("overriden-client-id"),
-            "omniauth_settings_google_oauth2_client_secret" => Decidim::AttributeEncryptor.encrypt("overriden-client-secret"),
+            "omniauth_settings_google_oauth2_client_id" => Decidim::AttributeEncryptor.encrypt("overridden-client-id"),
+            "omniauth_settings_google_oauth2_client_secret" => Decidim::AttributeEncryptor.encrypt("overridden-client-secret"),
             "omniauth_settings_twitter_enabled" => false
           }
         end
@@ -106,9 +133,9 @@ module Decidim
         before { organization.update!(omniauth_settings:) }
 
         it "returns only the enabled settings" do
-          expect(subject[:facebook][:app_id]).to eq("overriden-app-id")
+          expect(subject[:facebook][:app_id]).to eq("overridden-app-id")
           expect(subject[:twitter]).to be_nil
-          expect(subject[:google_oauth2][:client_id]).to eq("overriden-client-id")
+          expect(subject[:google_oauth2][:client_id]).to eq("overridden-client-id")
         end
       end
     end

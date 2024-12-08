@@ -133,6 +133,12 @@ pl:
         new:
           create: Utwórz
           title: Nowy prelegent konferencyjny.
+        publish:
+          invalid: Podczas publikowania tego zespołu wystąpił błąd.
+          success: Opublikowano mówcę konferencyjnego.
+        unpublish:
+          invalid: Wystąpił problem podczas cofania publikacji tego mówcy.
+          success: Usunięto publikację mówcy konferencyjnego.
         update:
           error: Wystąpił błąd podczas aktualizacji prelegenta konferencji.
           success: Prelegent zaktualizowany pomyślnie.
@@ -354,14 +360,8 @@ pl:
             non_user: Nieistniejący użytkownik
             select_user: Wybierz użytkownika
           index:
-            filter:
-              accepted: Przyjęto
-              all: Wszystko
-              rejected: Odrzucono
-              sent: Wysłano
             invite_attendee: Zaproś użytkownika
             invites: Zaproszeni
-            search: Szukaj
           new:
             explanation: Użytkownik zostanie zaproszony do udziału w konferencji. Jeśli e-mail nie został wcześniej zarejestrowany, zostanie również zaproszony do organizacji.
             invite: Zaproś

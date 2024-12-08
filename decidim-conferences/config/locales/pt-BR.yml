@@ -126,6 +126,12 @@ pt-BR:
         new:
           create: Crio
           title: Novo orador da conferência.
+        publish:
+          invalid: Ocorreu um problema ao publicar esta reunião.
+          success: Alto-falante excluído com sucesso para esta conferência.
+        unpublish:
+          invalid: Ocorreu um erro ao atualizar esta assembleia.
+          success: Speaker atualizado com sucesso para esta conferência.
         update:
           error: Houve um erro ao atualizar o palestrante para esta conferência.
           success: Speaker atualizado com sucesso para esta conferência.
@@ -346,14 +352,8 @@ pt-BR:
             non_user: Usuário não existente
             select_user: Selecione o usuário
           index:
-            filter:
-              accepted: Aceitaram
-              all: Todos
-              rejected: Rejeitado
-              sent: Enviei
             invite_attendee: Convidar participante
             invites: Convites
-            search: Pesquisa
           new:
             explanation: O usuário será convidado a participar de uma conferência. Se o email não estiver registrado, ele será convidado para a organização também.
             invite: Convite

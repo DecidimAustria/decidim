@@ -53,6 +53,8 @@ module Decidim
   autoload :Menu, "decidim/menu"
   autoload :MenuItem, "decidim/menu_item"
   autoload :MenuRegistry, "decidim/menu_registry"
+  autoload :AdminFilter, "decidim/admin_filter"
+  autoload :AdminFiltersRegistry, "decidim/admin_filters_registry"
   autoload :ManifestRegistry, "decidim/manifest_registry"
   autoload :AssetRouter, "decidim/asset_router"
   autoload :EngineRouter, "decidim/engine_router"
@@ -102,7 +104,6 @@ module Decidim
   autoload :ShareableWithToken, "decidim/shareable_with_token"
   autoload :RecordEncryptor, "decidim/record_encryptor"
   autoload :AttachmentAttributes, "decidim/attachment_attributes"
-  autoload :CarrierWaveMigratorService, "decidim/carrier_wave_migrator_service"
   autoload :ReminderRegistry, "decidim/reminder_registry"
   autoload :ReminderManifest, "decidim/reminder_manifest"
   autoload :ManifestMessages, "decidim/manifest_messages"
@@ -123,6 +124,17 @@ module Decidim
   autoload :ContentSecurityPolicy, "decidim/content_security_policy"
   autoload :IconRegistry, "decidim/icon_registry"
   autoload :HasConversations, "decidim/has_conversations"
+<<<<<<< HEAD
+=======
+
+  module Commands
+    autoload :CreateResource, "decidim/commands/create_resource"
+    autoload :UpdateResource, "decidim/commands/update_resource"
+    autoload :DestroyResource, "decidim/commands/destroy_resource"
+    autoload :ResourceHandler, "decidim/commands/resource_handler"
+    autoload :HookError, "decidim/commands/hook_error"
+  end
+>>>>>>> tags/v0.29.1
 
   include ActiveSupport::Configurable
   # Loads seeds from all engines.
@@ -171,7 +183,7 @@ module Decidim
 
   def self.seed_gamification_badges!
     Gamification.badges.each do |badge|
-      puts "Setting random values for the \"#{badge.name}\" badge..."
+      puts "Setting random values for the \"#{badge.name}\" badge..." # rubocop:disable Rails/Output
       User.all.find_each do |user|
         Gamification::BadgeScore.find_or_create_by!(
           user:,
@@ -305,7 +317,7 @@ module Decidim
     end
   end
 
-  # Exposes a configuration option: the whitelist ips
+  # Exposes a configuration option: the IPs that are allowed to access the system
   config_accessor :system_accesslist_ips do
     []
   end
@@ -432,7 +444,7 @@ module Decidim
     ";"
   end
 
-  # Exposes a configuration option: HTTP_X_FORWADED_HOST header follow-up.
+  # Exposes a configuration option: HTTP_X_FORWARDED_HOST header follow-up.
   # If a caching system is in place, it can also allow cache and log poisoning attacks,
   # allowing attackers to control the contents of caches and logs that could be used for other attacks.
   config_accessor :follow_http_x_forwarded_host do
@@ -561,6 +573,11 @@ module Decidim
   # List of static pages' slugs that can include content blocks
   config_accessor :page_blocks do
     %w(terms-of-service)
+  end
+
+  # The default max last activity users to be shown
+  config_accessor :default_max_last_activity_users do
+    6
   end
 
   # List of additional content security policies to be appended to the default ones
@@ -768,6 +785,10 @@ module Decidim
     @icons ||= Decidim::IconRegistry.new
   end
 
+  def self.admin_filter(name, &)
+    AdminFiltersRegistry.register(name.to_sym, &)
+  end
+
   # Public: Stores an instance of ViewHooks
   def self.view_hooks
     @view_hooks ||= ViewHooks.new
@@ -832,11 +853,11 @@ module Decidim
   end
 
   def self.register_assets_path(path)
-    Rails.autoloaders.main.ignore(path) if Rails.configuration.autoloader == :zeitwerk
+    Rails.autoloaders.main.ignore(path)
   end
 
   # Checks if a particular decidim gem is installed and needed by this
-  # particular instance. Preferrably this happens through bundler by inspecting
+  # particular instance. Preferably this happens through bundler by inspecting
   # the Gemfile of the instance but when Decidim is used without bundler, this
   # will check:
   # 1. If the gem is globally available or not in the loaded specs, i.e. the

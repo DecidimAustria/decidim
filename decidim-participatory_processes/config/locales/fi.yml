@@ -5,7 +5,6 @@ fi:
       participatory_process:
         announcement: Ilmoitus
         area_id: Alue
-        banner_image: Bannerikuva
         copy_categories: Kopioi aihepiirit
         copy_components: Kopioi komponentit
         copy_steps: Kopioi vaiheet
@@ -35,8 +34,6 @@ fi:
         scope_type_max_depth_id: Teema-suodattimen syvyys
         scopes_enabled: Teemat käytössä
         short_description: Lyhyt kuvaus
-        show_metrics: Näytä tilastomittarit
-        show_statistics: Näytä tilastot
         slug: URL-tunniste
         start_date: Alkamispäivä
         subtitle: Alaotsikko
@@ -437,7 +434,7 @@ fi:
             select_process_group: Valitse prosessiryhmä
             slug_help_html: 'URL-tunnisteita käytetään tuottamaan URL-osoitteet, jotka viittaavat tähän prosessiin. Hyväksyy vain kirjaimet, numerot ja viivat. Arvon on alettava kirjaimella. Esimerkki: %{url}'
             title: Yleistä tietoa
-            visbility: Näkyvyys
+            visibility: Näkyvyys
       content_blocks:
         extra_data:
           name: Vaihe ja kesto

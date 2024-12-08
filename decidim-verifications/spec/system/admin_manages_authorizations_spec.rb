@@ -17,7 +17,11 @@ describe "Admin manages authorizations users" do
   end
 
   context "when multiple authorization handlers are available" do
+<<<<<<< HEAD
     let(:available_authorizations) { %w(id_documents postal_letter csv_census) }
+=======
+    let(:available_authorizations) { %w(id_documents postal_letter csv_census dummy_authorization_handler another_dummy_authorization_handler sms) }
+>>>>>>> tags/v0.29.1
 
     it "displays the menu entries" do
       within ".sidebar-menu" do
@@ -32,6 +36,12 @@ describe "Admin manages authorizations users" do
         expect(page).to have_content("Identity documents")
         expect(page).to have_content("Code by postal letter")
         expect(page).to have_content("Organization's census")
+<<<<<<< HEAD
+=======
+        expect(page).to have_content("Example authorization")
+        expect(page).to have_content("Another example authorization")
+        expect(page).to have_content("Code by SMS")
+>>>>>>> tags/v0.29.1
       end
     end
   end
@@ -43,7 +53,11 @@ describe "Admin manages authorizations users" do
       within ".sidebar-menu" do
         expect(page).to have_content("Identity documents")
         expect(page).to have_content("Organization's census")
+<<<<<<< HEAD
         expect(page).not_to have_content("Code by postal letter")
+=======
+        expect(page).to have_no_content("Code by postal letter")
+>>>>>>> tags/v0.29.1
       end
     end
 
@@ -51,7 +65,14 @@ describe "Admin manages authorizations users" do
       within ".item_show__wrapper" do
         expect(page).to have_content("Identity documents")
         expect(page).to have_content("Organization's census")
+<<<<<<< HEAD
         expect(page).not_to have_content("Code by postal letter")
+=======
+        expect(page).to have_no_content("Code by postal letter")
+        expect(page).to have_no_content("Example authorization")
+        expect(page).to have_no_content("Another example authorization")
+        expect(page).to have_no_content("Code by SMS")
+>>>>>>> tags/v0.29.1
       end
     end
   end
@@ -61,17 +82,32 @@ describe "Admin manages authorizations users" do
 
     it "displays the menu entries" do
       within ".sidebar-menu" do
+<<<<<<< HEAD
         expect(page).not_to have_content("Identity documents")
         expect(page).not_to have_content("Code by postal letter")
         expect(page).not_to have_content("Organization's census")
+=======
+        expect(page).to have_no_content("Identity documents")
+        expect(page).to have_no_content("Code by postal letter")
+        expect(page).to have_no_content("Organization's census")
+>>>>>>> tags/v0.29.1
       end
     end
 
     it "displays main view entries" do
       within ".item_show__wrapper" do
+<<<<<<< HEAD
         expect(page).not_to have_content("Identity documents")
         expect(page).not_to have_content("Code by postal letter")
         expect(page).not_to have_content("Organization's census")
+=======
+        expect(page).to have_no_content("Identity documents")
+        expect(page).to have_no_content("Code by postal letter")
+        expect(page).to have_no_content("Organization's census")
+        expect(page).to have_no_content("Example authorization")
+        expect(page).to have_no_content("Another example authorization")
+        expect(page).to have_no_content("Code by SMS")
+>>>>>>> tags/v0.29.1
       end
     end
   end

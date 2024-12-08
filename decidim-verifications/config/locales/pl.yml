@@ -57,10 +57,30 @@ pl:
         grant_id_documents_offline_verification: "%{user_name} zweryfikował(a) %{resource_name} przy użyciu autoryzacji dokumentów tożsamości offline"
     authorization_handlers:
       admin:
+<<<<<<< HEAD
+=======
+        another_dummy_authorization_handler:
+          help:
+            - Przykładowy uchwyt autoryzacji, aby deweloperzy mogli zrozumieć, jak działa prosta weryfikacja.
+            - Jest on skierowany do programistów, aby mogli zrozumieć, w jaki sposób wdrożyć własny system weryfikacji.
+            - Uzyskaj weryfikację, wprowadzając numer paszportu zaczynający się od litery "A".
+>>>>>>> tags/v0.29.1
         csv_census:
           help:
             - Administratorzy przesyłają plik CSV z adresami e-mail zaakceptowanych uczestników.
             - Tylko uczestnicy z adresem e-mail w tym pliku CSV mogą zostać zweryfikowani.
+<<<<<<< HEAD
+=======
+        default:
+          help:
+            - Uchwyt obsługi autoryzacji nie jest zdefiniowany.
+            - Programista musi zdefiniować pomoc w kluczu tłumaczenia (i18n) "%{authorization_handler}"
+        dummy_authorization_handler:
+          help:
+            - Przykładowy uchwyt autoryzacji, aby deweloperzy mogli zrozumieć, jak działa prosta weryfikacja.
+            - Jest on skierowany do programistów, aby mogli zrozumieć, w jaki sposób wdrożyć własny system weryfikacji.
+            - Uzyskaj weryfikację, wprowadzając numer dokumentu kończący się na literę "X".
+>>>>>>> tags/v0.29.1
         id_documents:
           help:
             - Użytkownicy wypełniają swoje dane osobowe i przesyłają kopię swojego dokumentu.
@@ -73,6 +93,11 @@ pl:
             - Wysyłasz list na adres z kodem weryfikacyjnym.
             - Oznaczasz list jako wysłany.
             - Po oznaczeniu listu jako wysłany użytkownik będzie mógł wprowadzić kod i uzyskać weryfikację.
+        sms:
+          help:
+            - Użytkownicy proszą o kod weryfikacyjny, który zostanie wysłany na ich telefon.
+            - Muszą wprowadzić kod, aby zostać zweryfikowanym.
+            - Jeśli nie otrzymają kodu, mogą zażądać go ponownie.
       csv_census:
         explanation: Zostań zweryfikowany przy użyciu spisu organizacji.
         name: Spis organizacji
@@ -89,10 +114,17 @@ pl:
     events:
       verifications:
         verify_with_managed_user:
+<<<<<<< HEAD
           email_intro: Uczestnik <a href="%{resource_url}">%{resource_title}</a> próbował zweryfikować siebie z danymi innego uczestnika (<a href="%{managed_user_url}">%{managed_user_name}</a>).
           email_outro: Sprawdź <a href="%{conflicts_url}">listę konfliktów weryfikacji</a> i skontaktuj się z uczestnikiem, aby zweryfikować jego dane i rozwiązać problem.
           email_subject: Nieudana próba weryfikacji względem innego uczestnika
           notification_title: Uczestnik <a href="%{resource_path}">%{resource_title}</a> próbował zweryfikować siebie z danymi innego uczestnika (<a href="%{managed_user_path}">%{managed_user_name}</a>).
+=======
+          email_intro: Uczestnik <a href="%{resource_url}">%{resource_title}</a> próbował zweryfikować się z danymi innego uczestnika (<a href="%{managed_user_url}">%{managed_user_name}</a>).
+          email_outro: Sprawdź <a href="%{conflicts_url}">listę konfliktów weryfikacji</a> i skontaktuj się z uczestnikiem, aby zweryfikować jego dane i rozwiązać problem.
+          email_subject: Nieudana próba weryfikacji względem innego uczestnika
+          notification_title: Uczestnik <a href="%{resource_path}">%{resource_title}</a> próbował zweryfikować się z danymi innego uczestnika (<a href="%{managed_user_path}">%{managed_user_name}</a>).
+>>>>>>> tags/v0.29.1
     verifications:
       authorizations:
         authorization_metadata:
@@ -273,7 +305,7 @@ pl:
             error: Wystąpił błąd podczas wysyłania Twojego żądania.
             success: Dziękujemy! Wysłaliśmy wiadomość SMS na Twój numer telefonu.
           destroy:
-            success: Kod weryfikacyjny został pomyślnie zresetowany. Wprowadź ponownie swój numer telefonu.
+            success: Resetowanie kodu weryfikacyjnego się powiodło. Prosimy o ponowne wpisanie numeru telefonu.
           edit:
             confirm_destroy: Czy na pewno chcesz zresetować kod weryfikacyjny?
             destroy: Zresetuj kod weryfikacyjny

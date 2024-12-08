@@ -237,6 +237,10 @@ es-MX:
               most_recent: Más recientes
         exports:
           initiatives: Iniciativas
+        index:
+          initiatives_types:
+            alert_html: "<p>Tienes que crear por lo menos un tipo de iniciativa para que las participantes puedan empezar a crear sus iniciativas.</p><p>%{link}</p>"
+            button: Nuevo tipo de iniciativa
         initiatives:
           accept:
             success: La iniciativa se ha aceptado correctamente.
@@ -302,7 +306,7 @@ es-MX:
         initiatives_types:
           create:
             error: Se ha producido un error.
-            success: Se ha creado correctamente un nuevo tipo de iniciativa.
+            success: Un nuevo tipo de iniciativa ha sido creado con éxito. Necesitas definir al menos un ámbito para este tipo de iniciativa para que se pueda utilizar.
           destroy:
             success: El tipo de iniciativa se ha eliminado correctamente.
           edit:
@@ -550,7 +554,6 @@ es-MX:
           other: " firmas"
         vote_cabin:
           already_voted: Ha sido firmado
-          supports_required: "Se requieren %{total_supports} firmas"
           verification_required: Verifica tu cuenta para firmar la iniciativa.
           vote: Firmar
           votes_blocked: Firma desactivada

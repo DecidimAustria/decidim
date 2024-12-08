@@ -164,11 +164,13 @@ uk:
             non_user: Не чинний учасник
             select_user: Оберіть учасника
           index:
+<<<<<<< HEAD
             filter:
               sent: Надіслано
+=======
+>>>>>>> tags/v0.29.1
             invite_attendee: Запросити учасника
             invites: Запрошення
-            search: Шукати
         meeting_closes:
           edit:
             close: Закрити

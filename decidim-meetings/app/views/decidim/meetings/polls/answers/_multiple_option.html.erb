@@ -2,6 +2,7 @@
   <% question.answer_options.each_with_index do |answer_option, idx| %>
     <% choice = answer.choices.find { |choice| choice.decidim_answer_option_id == answer_option.id } if answer %>
 
+<<<<<<< HEAD
     <div class="js-collection-input">
       <%= label_tag do %>
         <%= check_box_tag "answer[choices][#{idx}][body]",
@@ -13,5 +14,14 @@
         <%= hidden_field_tag "answer[choices][#{idx}][answer_option_id]", answer_option.id, disabled: %>
       <% end %>
     </div>
+=======
+    <%= label_tag "answer[choices][#{answer_option.id}][answer_option_id]", nil, class: "js-collection-input" do %>
+      <%= check_box_tag "answer[choices][#{answer_option.id}][answer_option_id]",
+                        answer_option.id,
+                        choice.present?, disabled: %>
+
+      <%= translated_attribute(answer_option.body) %>
+    <% end %>
+>>>>>>> tags/v0.29.1
   <% end %>
 </div>

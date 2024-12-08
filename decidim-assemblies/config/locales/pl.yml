@@ -51,7 +51,6 @@ pl:
         scope_id: Zakres
         scopes_enabled: Zakresy dozwolone
         short_description: Krótki opis
-        show_statistics: Pokaż statystyki
         slug: URL slug
         special_features: Cechy szczególne
         subtitle: Podtytuł
@@ -303,7 +302,7 @@ pl:
             slug_help_html: 'Slugi URL służą do generowania adresów URL kierujących bezpośrednio do tego zgromadzenia. Można użyć liter, cyfr i myślników. Musi zaczynać się od litery. Przykład: %{url}'
             social_handlers: Profile społecznościowe
             title: Informacje ogólne
-            visbility: Widoczność
+            visibility: Widoczność
         assemblies_types:
           form:
             title: Tytuł
@@ -403,11 +402,11 @@ pl:
       show:
         assembly_type: Typ zespołu
         duration: Czas trwania
-        is_transparent:
-          'false': nietransparentny
-          'true': transparentny
         private_space: To jest prywatny zespół
+<<<<<<< HEAD
         related_participatory_processes: Powiązane procesy partycypacyjne
+=======
+>>>>>>> tags/v0.29.1
         social_networks_title: Odwiedź zespół na
     assembly_members:
       assembly_member:

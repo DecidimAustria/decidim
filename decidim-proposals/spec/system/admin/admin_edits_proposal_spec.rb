@@ -32,7 +32,11 @@ describe "Admin edits proposals" do
 
       fill_in_i18n :proposal_title, "#proposal-title-tabs", **attributes[:title].except("machine_translations")
       fill_in_i18n_editor :proposal_body, "#proposal-body-tabs", **attributes[:body].except("machine_translations")
+<<<<<<< HEAD
       click_button "Update"
+=======
+      click_on "Update"
+>>>>>>> tags/v0.29.1
 
       preview_window = window_opened_by { find("a.action-icon--preview").click }
 
@@ -56,7 +60,7 @@ describe "Admin edits proposals" do
         visit_component_admin
 
         expect(page).to have_content(translated(proposal.title))
-        expect(page).not_to have_css("a.action-icon--edit-proposal")
+        expect(page).to have_no_css("a.action-icon--edit-proposal")
         visit current_path + "proposals/#{proposal.id}/edit"
 
         expect(page).to have_content("not authorized")
@@ -87,14 +91,14 @@ describe "Admin edits proposals" do
         find("a.action-icon--edit-proposal").click
         find("input#proposal_attachment_delete_file").set(true)
         within ".item__edit-form" do
-          click_button "Update", type: "submit"
+          click_on "Update"
         end
 
         expect(page).to have_content("Proposal successfully updated.")
 
         visit_component_admin
         find("a.action-icon--edit-proposal").click
-        expect(page).not_to have_content("Current file")
+        expect(page).to have_no_content("Current file")
       end
 
       it "can attach a file" do
@@ -103,12 +107,18 @@ describe "Admin edits proposals" do
         fill_in :proposal_attachment_title, with: "FOO BAR"
 
         find("input#proposal_attachment_delete_file").set(true)
+<<<<<<< HEAD
         click_button("Replace")
         click_button("Remove")
         click_button("Save")
+=======
+        click_on("Replace")
+        click_on("Remove")
+        click_on("Save")
+>>>>>>> tags/v0.29.1
         dynamically_attach_file(:proposal_attachment_file, Decidim::Dev.asset("city.jpeg"))
 
-        click_button("Update")
+        click_on("Update")
         find("a.action-icon--edit-proposal").click
 
         expect(page).to have_content("city.jpeg")
@@ -124,7 +134,7 @@ describe "Admin edits proposals" do
       visit_component_admin
 
       expect(page).to have_content(translated(proposal.title))
-      expect(page).not_to have_css("a.action-icon--edit-proposal")
+      expect(page).to have_no_css("a.action-icon--edit-proposal")
       visit current_path + "proposals/#{proposal.id}/edit"
 
       expect(page).to have_content("not authorized")

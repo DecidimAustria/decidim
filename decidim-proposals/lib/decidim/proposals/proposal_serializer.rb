@@ -44,13 +44,17 @@ module Decidim
           reference: proposal.reference,
           answer: ensure_translatable(proposal.answer),
           answered_at: proposal.answered_at,
+<<<<<<< HEAD
           supports: proposal.proposal_votes_count,
+=======
+          votes: proposal.proposal_votes_count,
+>>>>>>> tags/v0.29.1
           endorsements: {
             total_count: proposal.endorsements.size,
             user_endorsements:
           },
           comments: proposal.comments_count,
-          attachments: proposal.attachments.count,
+          attachments: proposal.attachments.size,
           followers: proposal.follows.size,
           published_at: proposal.published_at,
           url:,
@@ -60,7 +64,9 @@ module Decidim
           original_proposal: {
             title: proposal&.amendable&.title,
             url: original_proposal_url
-          }
+          },
+          withdrawn: proposal.withdrawn?,
+          withdrawn_at: proposal.withdrawn_at
         }
       end
 

@@ -170,10 +170,6 @@ nl:
         error: Er is een fout opgetreden bij het wijzigen van deze bron.
         promote_button: Promoot naar %{model_name}
         promote_confirm_text: Weet je zeker dat je deze eervolle vermelding wilt promoten?
-      compare_draft:
-        continue: Volgende
-        no_similars_found: Geen gelijkaardige amendementen gevonden.
-        title: Gelijkaardige amendementen
       created:
         error: Er is een fout opgetreden tijdens het aanmaken van het amendement.
         success: Het amendement werd met succes aangemaakt.
@@ -222,8 +218,11 @@ nl:
       wizard_step_form:
         steps:
           '1': Maak uw amendement
+<<<<<<< HEAD
           '2': Vergelijk uw amendement
           '3': Voltooi uw amendement
+=======
+>>>>>>> tags/v0.29.1
     anonymous_user: Anoniem
     application:
       document:
@@ -384,7 +383,6 @@ nl:
           complete_profile: Volledig profiel
           nickname_help: Je alias in %{organization}. Kan alleen letters, cijfers, '-' en '_' bevatten.
           sign_up: Gelieve uw profiel te voltooien
-          subtitle: Vul onderstaand formulier in om de aanmelding te voltooien
           username_help: Publieke naam die op je berichten verschijnt. Met het oog op het waarborgen van de anonimiteit hoeft dit niet jouw echte naam te zijn.
       registrations:
         new:
@@ -392,8 +390,6 @@ nl:
           log_in: Aanmelden
           newsletter: Ontvang af en toe een nieuwsbrief met relevante informatie
           newsletter_title: Contact toestemming
-          sign_up: Registratie
-          subtitle: Meld je aan om deel te nemen aan discussies en om voorstellen te steunen.
           tos_agreement: Door het aanmelden gaat u akkoord met %{link}.
           tos_title: Servicevoorwaarden
           username_help: Publieke naam die op uw berichten verschijnt. Met het oog op het waarborgen van de anonimiteit hoeft dit niet uw echte naam te zijn.
@@ -557,8 +553,6 @@ nl:
           email_outro: Je hebt deze melding ontvangen omdat je beheerder bent van het platform.
           email_subject: Een gebruikersgroep heeft zijn profiel bijgewerkt
           notification_title: De gebruikersgroep %{user_group_name} heeft zijn profiel bijgewerkt, het niet geverifieerd. U kunt het nu verifiëren in het beheerderspaneel <a href="%{groups_admin_path}"></a>.
-      notification_event:
-        notification_title: Er is een gebeurtenis opgetreden bij <a href="%{resource_path}">%{resource_title}</a>.
       resource_endorsed:
         email_intro: '%{endorser_name} %{endorser_nickname}, die je volgt, heeft zojuist goedgekeurd "%{resource_title}" en wij denken dat het interessant voor je kan zijn. Bekijk het en draag bij:'
         email_outro: Je hebt deze melding ontvangen omdat je %{endorser_nickname}volgt. Je kan de meldingen uitschakelen door te klikken op de voorgaande link.
@@ -604,7 +598,6 @@ nl:
       create:
         button: Volgen
         error: Er is een fout opgetreden na deze bron.
-        participatory_space: <span class="show-for-sr">%{resource_name}</span> aan het volgen
       destroy:
         button: Stop met volgen
         error: Er is een fout opgetreden bij het stoppen met volgen van deze bron.
@@ -619,7 +612,6 @@ nl:
           message_1: Moet een afbeelding of een document zijn.
         image:
           explanation: 'Eigenschappen afbeelding:'
-          message_1: Bij voorkeur een afbeelding in 'landscape' die geen tekst bevat.
           message_2: De service is de afbeelding.
       file_validation:
         allowed_file_extensions: 'Toegestane bestandsextensies: %{extensions}'
@@ -694,7 +686,6 @@ nl:
         default_page:
           content: "<p>In %{organization} kunt u deelnemen en besluiten over verschillende onderwerpen, via de ruimten die u ziet in het top menu: Processen, Groepen, Initiatieven, Raadplegingen.</p> <p>Binnen elke ruimte vindt u verschillende opties om deel te nemen: doe voorstellen - individueel of met andere mensen - neem deel aan debatten, wijs prioriteiten toe aan projecten, woon vergaderingen bij en andere acties.</p>\n \n"
           title: Wat kan ik doen in %{organization}?
-        title: Algemene hulp
     last_activities:
       all: Alle soorten activiteiten
       index:
@@ -902,8 +893,6 @@ nl:
         metrics:
           headline: Deelname in cijfers
           link: Toon alle statistieken
-    participatory_space_private_users:
-      not_allowed: Je hebt geen toestemming om deze inhoud te bekijken
     profile:
       deleted: Verwijderde deelnemer
     profiles:
@@ -1012,8 +1001,6 @@ nl:
         title: Meld een probleem
       floating_help:
         help: Help
-      login_modal:
-        sign_up: Registreren
       participatory_space_filters:
         filters:
           areas: Onderwerpen
@@ -1168,8 +1155,6 @@ nl:
       updated_not_active: Je wachtwoord is met succes veranderd.
     registrations:
       destroyed: Uw account is succesvol geannuleerd. We hopen je snel weer te zien.
-      new:
-        sign_up: Aanmelden
       signed_up: Welkom! Je hebt je succesvol aangemeld.
       signed_up_but_inactive: Je hebt je succesvol aangemeld. We konden u echter niet aanmelden omdat uw account nog niet is geactiveerd.
       signed_up_but_locked: Je hebt je succesvol aangemeld. We konden u echter niet aanmelden omdat uw account is vergrendeld.
@@ -1184,7 +1169,10 @@ nl:
         back: Terug
         forgot_your_password: Uw wachtwoord vergeten?
         log_in: Aanmelden
+<<<<<<< HEAD
         sign_up: Registreren
+=======
+>>>>>>> tags/v0.29.1
       minimum_password_length:
         one: "(Minimaal%{count} tekens)"
         other: "(Minimaal%{count} tekens)"
@@ -1205,7 +1193,6 @@ nl:
       invalid_time_zone: is geen geldige tijdszone
       long_words: bevat woorden die te lang zijn (meer dan 35 tekens)
       must_start_with_caps: moet beginnen met een hoofdletter
-      not_found: kon niet worden gevonden. Ben je vooraf aangemeld?
       not_locked: was niet vergrendeld
       not_saved:
         one: 'Er is een fout opgetreden bij de verwerking van je aanvraag:'
@@ -1248,7 +1235,6 @@ nl:
         download_open_data: Download Open Data-bestanden
         log_in: Aanmelden
         made_with_open_source: Website is gemaakt met <a target="_blank" href="https://github.com/decidim/decidim"> open-source software</a>.
-        sign_up: Registreren
       header:
         log_in: Aanmelden
         main_menu: Hoofdmenu

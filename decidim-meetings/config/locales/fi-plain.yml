@@ -91,6 +91,11 @@ fi-pl:
   decidim:
     admin:
       filters:
+        accepted_at_not_null:
+          label: Hyväksytyt
+          values:
+            'false': Muut paitsi hyväksytyt
+            'true': Hyväksytyt
         meetings:
           category_id_eq:
             label: Aihepiiri
@@ -118,6 +123,18 @@ fi-pl:
               hybrid: Hybridi
               in_person: Fyysinen
               online: Verkossa
+        rejected_at_not_null:
+          label: Hylätyt
+          values:
+            'false': Muut paitsi hylätyt
+            'true': Hylätyt
+        search_placeholder:
+          user_name_or_user_email_cont: Hae nimellä tai sähköpostilla
+        sent_at_not_null:
+          label: Lähetetyt
+          values:
+            'false': Muut paitsi lähetetyt
+            'true': Lähetetyt
       meeting_copies:
         create:
           error: Tämän tapahtuman monistamisessa tapahtui virhe.
@@ -130,6 +147,7 @@ fi-pl:
         actions:
           comment: Kommentoi
           join: Liity mukaan
+          reply_poll: Vastaa mielipidetiedusteluun
         name: Tapahtumat
         settings:
           global:
@@ -282,15 +300,9 @@ fi-pl:
             non_user: Käyttäjää ei ole olemassa
             select_user: Valitse käyttäjä
           index:
-            filter:
-              accepted: Hyväksytyt
-              all: Kaikki
-              rejected: Hylätyt
-              sent: Lähetetyt
             invite_attendee: Kutsu osallistuja
             invites: Kutsut
             registrations_disabled: Et voi kutsua osallistujaa, koska ilmoittautumiset on poistettu käytöstä.
-            search: Hae
         meeting_closes:
           edit:
             close: Sulje
@@ -352,6 +364,13 @@ fi-pl:
           update:
             invalid: Tapaamisen mielipidetiedustelun päivittäminen epäonnistui.
             success: Tapaamisen mielipidetiedustelun päivittäminen onnistui.
+        poll:
+          form:
+            announcement_html:
+              - Kun kysymykseen vastataan tai se julkaistaan tai suljetaan, sitä ei voi enää muokata sen jälkeen.
+              - Voit lisätä kysymyksiä milloin tahansa.
+              - Tämä mielipidetiedustelu suljetaan, kun kaikkien kysymysten tulokset on julkaistu.
+              - Vieraile <a href='%{admin_link}'>mielipidetiedustelun hallinnointisivulla</a> lähettääksesi kysymyksiä ja julkaistaksesi tuloksia.
         registrations:
           edit:
             save: Tallenna
@@ -413,7 +432,7 @@ fi-pl:
           body: Tapaaminen <a href="%{meeting_path}">"%{meeting_title}"</a> odottaa sulkemista. Ole hyvä ja kirjoita raportti tapaamisesta käyttämällä "Sulje tapaaminen" -painiketta.
           greetings: Terveisin,<br/>%{organization_name}<br/><a href="%{organization_url}">%{organization_url}</a>
           hello: Hei %{username},
-          subject: Voit nyt sulkea tapaamisesi kirjoittamalla siitä raportin alustalla %{organization_name}
+          subject: Voit nyt sulkea tapaamisen "%{meeting_title}" kirjoittamalla siitä raportin
       conference_venues: Tapahtumapaikat
       content_blocks:
         upcoming_meetings:
@@ -430,16 +449,14 @@ fi-pl:
       iframe_embed_type:
         embed_in_meeting_page: Upota tapaamisen sivulle
         none: Ei mitään
-        open_in_live_event_page: Avaa upotus tapahtuman sivulla reaaliajassa (liitä vapaaehtoisia mielipidekyselyjä)
+        open_in_live_event_page: Avaa tapahtumasivu
         open_in_new_tab: Avaa uudessa välilehdessä
       last_activity:
         meeting_updated: 'Tapaamista on päivitetty:'
         new_meeting: 'Uusi tapaaminen:'
       layouts:
         live_event:
-          administrate: Hallinnoi
           close: sulje
-          questions: Kysymykset
       mailer:
         invite_join_meeting_mailer:
           invite:
@@ -520,6 +537,8 @@ fi-pl:
           edit_close_meeting: Muokkaa tapaamisraporttia
           edit_meeting: Muokkaa tapaamista
           join_meeting: Ilmoittaudu tapaamiseen
+          reply_poll: Vastaa mielipidetiedusteluun
+          view_poll: Näytä mielipidetiedustelu
         meetings:
           no_meetings_warning: Yksikään tapaaminen ei vastaa hakukriteerejäsi tai yhtään tapaamista ei ole suunniteltu.
           upcoming_meetings_warning: Tällä hetkellä ei ole suuniteltuja tapahtumia, mutta täältä löydät kaikki aikaisemmat tapahtumat.
@@ -578,13 +597,22 @@ fi-pl:
             start_time: Alkamispäivä
             title: Otsikko
       polls:
+        answers:
+          index:
+            administrate: Hallinnoi
+            title: Mielipidetiedustelu
+          index_admin:
+            back_to_meeting: Takaisin tapaamiseen
+            title: Hallinnoi mielipidetiedustelua
+            view_poll: Näytä mielipidetiedustelu
         questions:
           closed_question:
-            question_results: Kysymyksen tulokset
+            announcement: Tämä kysymys on suljettu, eikä siihen voi enää vastata.
+            question: Kysymys
+            question_results: Tulokset
           index:
             empty_questions: Tämän tapaamisen aikana esitetään kysymyksiä, joihin voit vastata. Kysymykset näytetään tässä.
           index_admin:
-            admin_dashboard: Hallintapaneeli
             edit: Muokkaa hallintapaneelissa
             question: Kysymys
             received_answer: vastaus
@@ -592,6 +620,10 @@ fi-pl:
             results: Tulokset
             send: Lähetä
             sent: Lähetetty
+            statuses:
+              closed: Tulokset lähetetty (suljettu)
+              published: Lähetetty (avoin)
+              unpublished: Odottaa lähetystä
           published_question:
             max_choices_alert: Liian monta vaihtoehtoa on valittu
             question: Kysymys

@@ -78,13 +78,19 @@ eu:
   booleans:
     'false': 'Ez'
     'true': 'Bai'
+<<<<<<< HEAD
   carrierwave:
     errors:
       file_cannot_be_processed: Fitxategia ezin izan da prozesatu
       file_resolution_too_large: Fitxategiaren erresoluzioa handiegia da
       file_size_too_large: Fitxategiaren taimaina handiegia da
       not_inside_organization: Artxiboa ez dago erakunde batekin erlazionatuta
+=======
+>>>>>>> tags/v0.29.1
   date:
+    buttons:
+      close: Itxi
+      select: Hautatu
     formats:
       decidim_short: "%d/%m/%Y"
       decidim_short_dashed: "%e-%h-%U"
@@ -92,6 +98,10 @@ eu:
       decidim_with_day_and_month_name: "%A %d %b %Y"
       decidim_with_month_name: "%d %B %Y"
       decidim_with_month_name_short: "%d %b"
+      help:
+        date_format: 'Formatua: dd/mm/yyyy'
+      order: d-m-y
+      separator: "/"
   datetime:
     distance_in_words:
       about_x_hours:
@@ -286,10 +296,6 @@ eu:
         promote_button: '%{model_name}suspertzea'
         promote_confirm_text: Ziur al zaude zuzenketa hau sustatu nahi duzula?
         promote_help_text: Zuzenketa hau sustatu eta %{model_name} independiente gisa argitara dezakezu.
-      compare_draft:
-        continue: Jarraitu
-        no_similars_found: Ez da aurkitu antzeko zuzenketarik.
-        title: Antzeko zuzenketak
       created:
         error: Errorea egon da zuzenketa-zirriborroa sortzean.
         success: Zuzenketa-zirriborroa zuzen sortu da.
@@ -348,14 +354,16 @@ eu:
       wizard_step_form:
         steps:
           '1': Sortu zure zuzenketa
-          '2': Alderatu zure zuzenketa
-          '3': Osatu zure zuzenketa
-          '4': Argitaratu zure zuzenketa
+          '2': Argitaratu zure zuzenketa
     anonymous_user: Anonimoa
     application:
       document:
         download: Deskargatu fitxategia
+        visit_link: Bisitatu esteka
       documents:
+        component_documents:
+          dummy: Fikziozko osagaien dokumentuak
+          meetings: Topaketen gaineko dokumentuak
         documents: Dokumentuak
         related_documents: Honekin lotutako agiriak
       photo:
@@ -560,7 +568,7 @@ eu:
         name: Sub heroi banner
     core:
       actions:
-        login_before_access: Mesedez, sartu baino lehen hasi saioa zure kontuarekin.
+        login_before_access: Mesedez, hasi saioa zure kontua erabiliz sartu baino lehen.
         unauthorized: Ez duzu baimenik ekintza hau egiteko.
       application_helper:
         filter_area_values:
@@ -577,7 +585,7 @@ eu:
           complete_profile: Osatu profila
           nickname_help: Zure ezizena %{organization}-an. Letrak, zenbakiak, '-' eta '_' soilik eduki ditzake.
           sign_up: Mesedez, osatu zure profila
-          subtitle: Mesedez, bete inprimaki hau izen-ematea osatzeko
+          subtitle: Mesedez, bete hurrengo formularioa kontua sortzen amaitzeko
           username_help: Zure mezuetan agertuko den izen publikoa. Anonimatua bermatze aldera, edozein izen izan daiteke.
       registrations:
         create:
@@ -587,8 +595,8 @@ eu:
           log_in: Hasi saioa
           newsletter: Jaso nahi dut noizbehinka informazio garrantzitsua duen buletina
           newsletter_title: Harremanetarako baimena
-          sign_up: Erregistratu
-          subtitle: Sortu kontu bat eztabaida eta laguntza proposamenetan parte hartzeko.
+          sign_up: Sortu kontu bat
+          subtitle: Sortu kontu bat plataforman parte hartzeko.
           terms: zerbitzuaren baldintzak
           tos_agreement: 'Erregistratzean hau onartzen duzu: %{link}.'
           tos_title: Zerbitzuaren baldintzak
@@ -598,7 +606,7 @@ eu:
           are_you_new?: Berria zara plataforman?
           register: Sortu zure kontua
           sign_in_disabled: Kanpoko kontu batez sartu ahal zara.
-          sign_up_disabled: Izen-ematea desgaituta dago, sartzeko lehendik dagoen kontu bat erabil dezakezu.
+          sign_up_disabled: Kontuak sortzea desgaituta dago, sartzeko lehendik dagoen kontu bat erabil dezakezu.
         user:
           timed_out: Denbora luzeegi egon zara jarduerarik gabe, eta zure saioa automatikoki itxi da. Parte hartzen jarraitu nahi baduzu, hasi saioa berriro.
       shared:
@@ -662,6 +670,10 @@ eu:
     endorsers_list:
       endorsed_by: Gustuko du…
     errors:
+      files:
+        file_cannot_be_processed: Fitxategia ezin izan da prozesatu
+        file_resolution_too_large: Fitxategiaren erresoluzioa handiegia da
+        not_inside_organization: Artxiboa ez dago erakunde batekin erlazionatuta
       internal_server_error:
         copied: Testua kopiatuta!
         copy_error_message_clarification: Errore-mezua arbelean kopiatuta
@@ -799,7 +811,7 @@ eu:
           email_subject: Talde batek bere profila eguneratu du
           notification_title: '%{user_group_name} taldeak bere profila eguneratu du egiaztapena galduz. Berriro egiaztatu ahal duzu honen bidez <a href="%{groups_admin_path}">panel de administración</a>.'
       nickname_event:
-        notification_body: Zuzendu dugu nola erabiltzen diren ezizenak bikoizketarik egon ez dadin, eta hori egiteko jada ez dira bereizten letra larriak eta xeheak. < br/>Tu alias beste berdin baten ondoren sortu zen, beraz, automatikoki berrizendatu dugu. < a href = " % {link_to_account_settings}" >zure kontuaren konfiguraziotik alda dezakezu.
+        notification_body: 'Ezizenak erabiltzeko modua zuzendu dugu bikoiztasunik egon ez dadin, eta horregatik kendu dugu kasu sentikorra den araua. Zure ezizena beste baten ostean sortu da, eta automatikoki aldatu dugu. Zure kontuaren konfiguraziotik alda dezakezu hemen: <a href="%{link_to_account_settings}">your account settings</a>.'
       notification_event:
         notification_title: 'Gertaera bat jazo da hemen: <a href="%{resource_path}">%{resource_title}</a>.'
       reports:
@@ -863,11 +875,16 @@ eu:
       create:
         button: Jarraitu
         error: Arazo bat egon da baliabide hau jarraitzean.
-        participatory_space: Jarraitzen <span class="show-for-sr">%{resource_name}</span>
+        participatory_space: Jarraitzen <span>%{resource_name}</span>
       destroy:
         button: Utzi jarraitzeari
         error: Arazo bat egon da baliabide hau jarraitzeari uztean.
     forms:
+      attachment_link:
+        explanation: Gida erantsitako fitxategien esteketarako
+        help_messages:
+          - URL formatu zuzenak onartzen dira soilik.
+          - Kontuan izan estekak publikoak izan behar direla parte-hartzaile guztiak sartu ahal izateko.
       errors:
         decidim/user:
           password: Pasahitza laburregia da.
@@ -877,14 +894,14 @@ eu:
         file:
           explanation: 'Jarraibideak artxiborako:'
           message_1: Irudi bat edo dokumentu bat izan behar da.
-          message_2: Irudietarako, ahal dela, erabili irudi etzanak, zerbitzuak irudia mozten baitu.
+          message_2: Irudietarako, erabili batez ere irudi etzanak; zerbitzuak irudia mozten du.
         icon:
           explanation: 'Jarraibideak irudirako:'
           message_1: Irudi karratua izan behar da.
           message_2: Irudi honetarako gomendatzen den tamaina da 512x512.
         image:
           explanation: 'Jarraibideak irudirako:'
-          message_1: Ahal izanez gero, irudi etzana eta testurik gabekoa.
+          message_1: Ahal dela, testurik gabeko irudi etzana.
           message_2: Zerbitzuak irudia moztu egiten du.
       file_validation:
         allowed_file_extensions: 'Onartutako artxiboen formatua: %{extensions}'
@@ -1027,7 +1044,7 @@ eu:
           content: "<p> %{organization} gai desberdinetan parte hartu eta erabaki dezakezu, menu nagusian ikusten dituzun espazioen bidez: Prozesuak, Biltzarrak, Ekimenak, Kontsultak.</p> <p>Parte bakoitzean parte hartzeko aukera desberdinak aurkituko dituzu: proposamenak egitea, banaka edo beste pertsona batzuekin, eztabaidetan parte hartzea, proiektuak gauzatzeko aurreikusitako aurrekontuak, aurrez aurreko topaketak eta bestelako ekintzak biltzea.</p>\n"
           title: Zer egin dezaket %{organization}?
         description: 'Irakurri gehiago honetaz: %{organization}.'
-        title: Laguntza orokorra
+        title: Orokorra
     last_activities:
       all: Jarduera mota guztiak
       index:
@@ -1203,7 +1220,11 @@ eu:
         token_error: Lotura iraungi da.
         unsubscribe: Baja eman
     newsletters_opt_in:
+<<<<<<< HEAD
       unathorized: Sentitzen dut, esteka hau ez dago eskuragarri.
+=======
+      unauthorized: Sentitzen dut, esteka hau ez dago eskuragarri.
+>>>>>>> tags/v0.29.1
       update:
         error: Arazo bat egon da buletinaren konfigurazioak gordetzean.
         success: Buletinaren ezarpenak zuzen eguneratuak.
@@ -1223,6 +1244,7 @@ eu:
         same_language: Edukia zure hizkuntza gogokoenean %{language} argitaratu da, horregatik ez da itzulpen automatikorik agertzen posta elektroniko honetan.
         translated_text: 'Automatikoki itzulitako testua:'
     notifications:
+      action_error: Arazo bat sortu da jakinarazpenak eguneratzean.
       no_notifications: Oraindik ez dago jakinarazpenik.
       show:
         missing_event: Aiba, jakinarazpen hau dagoeneko eskuragarri ez dagoen item batena da. Baztertu dezakezu.
@@ -1299,7 +1321,7 @@ eu:
           headline: '%{organization} erakundearen egungo egoera'
         sub_hero:
           register: Erregistroa
-          register_title: Sortu zure kontua saioa hasteko
+          register_title: Sortu kontu bat
       index:
         standalone_pages: orrialdeak
         subheading: Laguntza orrietan nabigatzeko %{name}
@@ -1326,8 +1348,6 @@ eu:
           alert: "Gure zerbitzu baldintzak eguneratu ditugu., berrikusi, mesedez.\n"
           body: Mesedez, hartu tarte bat erabilerarako gure baldintzak eta irizpideak berrikusteko. Bestela, ezin izango duzu plataforman parte hartu.
           title: 'Eskatuta: berrikusi eguneraketak gure zerbitzuaren baldintzetan'
-    participatory_space_private_users:
-      not_allowed: Ez duzu baimenik eduki hau ikusteko
     passwords:
       update:
         error: Arazo bat egon da pasahitza eguneratzean.
@@ -1484,7 +1504,7 @@ eu:
         log_in_before_follow: Mesedez, hasi saioa ekintza hau egin aurretik
       login_modal:
         please_log_in: Mesedez, hasi saioa
-        sign_up: Erregistratu
+        sign_up: Sortu kontu bat
       mentions_modal:
         remove_recipient: Kendu %{name} hartzailea
       participatory_space_filters:
@@ -1611,7 +1631,7 @@ eu:
       locked: Zure kontua blokeatuta dago.
       not_found_in_database: '%{authentication_keys} edo pasahitza baliogabea.'
       timeout: Zure saioa iraungi da. Mesedez, hasi saioa berriro jarraitzeko.
-      unauthenticated: Saioa hasi edo izena eman behar duzu jarraitu aurretik.
+      unauthenticated: Saioa hasi edo kontu bat sortu behar duzu, jarraitu baino lehen.
     invitations:
       edit:
         header: Amaitu zure kontua sortzea
@@ -1698,7 +1718,7 @@ eu:
     registrations:
       destroyed: Agur! Zure kontua behar bezala bertan behera utzi da. Laster ikusiko dugu berriro.
       new:
-        sign_up: Eman izena
+        sign_up: Sortu kontu bat
       signed_up: Ongi etorri! Eginda sinatu duzu.
       signed_up_but_inactive: Eginda sinatu duzu. Hala ere, ezin izan dugu saioa hasi kontua oraindik ez baita aktibatuta.
       signed_up_but_locked: Eginda sinatu duzu. Hala ere, ezin izan dugu saioa hasi kontua blokeatuta dagoelako.
@@ -1719,7 +1739,7 @@ eu:
         forgot_your_password: Zure pasahitza ahaztu duzu?
         log_in: Hasi saioa
         log_in_with_provider: 'Hasi honekin: %{provider}'
-        sign_up: Eman izena
+        sign_up: Sortu kontu bat
       minimum_password_length:
         one: "(%{count} karaktere gutxienez)"
         other: "(Gutxienez%{count} karaktere)"
@@ -1790,18 +1810,29 @@ eu:
     upload:
       uploadedFile: Igotako fitxategia
   emojis:
+    add_custom: Gehitu emoji pertsonala
     button: Gehitu emojia
     categories:
+<<<<<<< HEAD
       activities: Jarduerak
       animals-nature: Animaliak & Natura
       custom: Pertsonalizatu
       flags: Banderak
       food-drink: Janaria & Edaria
+=======
+      activity: Jarduera
+      custom: Pertsonalizatu
+      flags: Banderak
+      foods: Janaria & Edaria
+      frequent: Maiz erabiliak
+      nature: Animaliak & Natura
+>>>>>>> tags/v0.29.1
       objects: Objektuak
-      people-body: Jendea eta gorputza
-      recents: Oraintsu erabilia
-      smileys-emotion: Irribarreak eta emozioa
+      people: Irribarreak & Pertsonak
+      places: Bidaiak & Lekuak
+      search: Bilatu Emaitzak
       symbols: Ikurrak
+<<<<<<< HEAD
       travel-places: Bidaiak & Lekuak
     error:
       load: Ezin izan dira emojiak kargatu.
@@ -1814,6 +1845,20 @@ eu:
       clear: Garbitu bilaketa
       error: Ezin izan dira emojiak bilatu.
       not_found: Ez da emaitzarik aurkitu
+=======
+    pick: Aukeratu emoji bat…
+    search: Bilatu
+    search_no_results_1: O ez!
+    search_no_results_2: Emoji hori ezin da aurkitu
+    skins:
+      '1': Lehenetsia
+      '2': Argia
+      '3': Argi Ertaina
+      '4': Ertaina
+      '5': Erdi Iluna
+      '6': Ilun
+      choose: Aukeratu azalaren tonu lehenetsia
+>>>>>>> tags/v0.29.1
   errors:
     messages:
       allowed_file_content_types: 'soilik onartuko dira honako hedapenak: %{types}'
@@ -1831,7 +1876,7 @@ eu:
       long_words: luzeegiak diren hitzak ditu (35 karaktere baino gehiago)
       must_start_with_caps: letra maiuskulaz hasi behar da
       nesting_too_deep: ezin da egon azpikategoria batean
-      not_found: ezin izan da aurkitu. Aldez aurretik erregistratu zara?
+      not_found: ezin izan da aurkitu. Lehenago konturik sortu duzu?
       not_locked: ez zen blokeatuta
       not_saved:
         one: 'Errore bat egon da zure eskaera prozesatzean:'
@@ -1916,8 +1961,13 @@ eu:
         log_in: Hasi saioa
         made_with_open_source: Gune hau egiteko, <a target="_blank" href="https://github.com/decidim/decidim">software libre</a> erabili da.
         resources: Baliabideak
+<<<<<<< HEAD
         sign_up: Erregistratu
         terms_and_conditions: Terminoak eta baldintzak
+=======
+        sign_up: Sortu kontu bat
+        terms_of_service: Zerbitzuaren baldintzak
+>>>>>>> tags/v0.29.1
       header:
         log_in: Hasi saioa
         main_menu: Menu nagusia
@@ -1933,10 +1983,6 @@ eu:
         mark_as_read: Markatu irakurrita bezala
       offline_banner:
         cache_version_page: Kontuz! Lineaz kanpo lan egiten ari zara. Bisitatzen ari zaren orriaren cache bertsioa da hau, agian edukia ez dago eguneratuta.
-      shared:
-        layout_item:
-          next: Hurrengo itema
-          prev: Aurreko itema
       social_media_links:
         facebook: "%{organization} Facebooken"
         github: "%{organization} GitHuben"
@@ -2015,6 +2061,10 @@ eu:
     x: X
     xing: Xing
   time:
+    buttons:
+      close: Itxi
+      reset: Berrabiarazi
+      select: Hautatu
     formats:
       day_of_month: "%b %d"
       day_of_week: "%a"
@@ -2029,6 +2079,8 @@ eu:
         mailer:
           invitation_instructions:
             accept_until_format: "%B %d, %Y %I:%M %p"
+      help:
+        time_format: 'Formatua: hh:mm'
       long: "%B, %d %Y %H:%M"
       long_dashed: "%Y-%m-%d, %H:%M:%S"
       long_with_particles: "%B%d, %Y% H:%M etan"

@@ -296,7 +296,6 @@
         title: Verifiseringskonflikter
         transfer:
           email: E-post
-          error: Det oppstod et problem med overføring av gjeldende deltaker til håndtert deltaker.
           name: Navn
           reason: Årsak
           success: Overføringen er gjennomført.
@@ -383,7 +382,6 @@
           report_count_eq: Antall rapporter
           reported_id_string_or_reported_content_cont: Søk %{collection} av rapporterbar id eller innhold.
           title_cont: Søk %{collection} etter tittel.
-          user_name_or_user_email_cont: Søk %{collection} etter navn eller e-post.
           user_name_or_user_nickname_or_user_email_cont: Søk %{collection} via e-post, navn eller kallenavn.
         state_eq:
           label: Tilstand
@@ -733,12 +731,15 @@
             layout_appearance_title: Rediger layout utseende
             preview: Forhåndsvis
           omnipresent_banner_appearance_title: Endre enerådende banner
+<<<<<<< HEAD
       organization_external_domain_whitelist:
         edit:
           update: Oppdater
         form:
           add: Legg til i hviteliste
           title: Hviteliste for eksterne domener
+=======
+>>>>>>> tags/v0.29.1
       participatory_space_private_users:
         create:
           error: Det oppstod et problem med å legge til en privat deltaker for dette deltakerområdet.

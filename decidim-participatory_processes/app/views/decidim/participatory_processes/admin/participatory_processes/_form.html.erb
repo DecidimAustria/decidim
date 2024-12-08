@@ -86,10 +86,6 @@
         <div class="columns">
           <%= form.upload :hero_image, button_class: "button button__sm button__transparent-secondary" %>
         </div>
-
-        <div class="columns">
-          <%= form.upload :banner_image, button_class: "button button__sm button__transparent-secondary" %>
-        </div>
       </div>
     </div>
   </div>
@@ -168,16 +164,16 @@
     </div>
   </div>
 
-  <div class="card" data-component="accordion" id="accordion-visbility">
+  <div class="card" data-component="accordion" id="accordion-visibility">
     <div class="card-divider">
-      <button class="card-divider-button" data-open="true" data-controls="panel-visbility" type="button">
+      <button class="card-divider-button" data-open="true" data-controls="panel-visibility" type="button">
         <%= icon "arrow-right-s-line" %>
-        <h2 class="card-title" id="visbility">
-          <%= t("visbility", scope: "decidim.participatory_processes.admin.participatory_processes.form") %>
+        <h2 class="card-title" id="visibility">
+          <%= t("visibility", scope: "decidim.participatory_processes.admin.participatory_processes.form") %>
         </h2>
       </button>
     </div>
-    <div id="panel-visbility" class="card-section">
+    <div id="panel-visibility" class="card-section">
       <div class="row column">
         <% if process_groups_for_select %>
           <%= form.select :participatory_process_group_id,
@@ -227,14 +223,6 @@
     </div>
 
     <div id="panel-other" class="card-section">
-      <div class="row column">
-        <%= form.check_box :show_statistics %>
-      </div>
-
-      <div class="row column">
-        <%= form.check_box :show_metrics %>
-      </div>
-
       <% if @form.participatory_process_types_for_select.present? %>
         <div class="row column">
           <%= form.select(

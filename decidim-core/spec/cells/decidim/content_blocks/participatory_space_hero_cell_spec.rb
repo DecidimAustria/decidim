@@ -44,8 +44,13 @@ describe Decidim::ContentBlocks::ParticipatorySpaceHeroCell, type: :cell do
       end
 
       it "does not show the button" do
+<<<<<<< HEAD
         expect(subject).not_to have_link("This is my button text")
         expect(subject).not_to have_css("a[data-cta]")
+=======
+        expect(subject).to have_no_link("This is my button text")
+        expect(subject).to have_no_css("a[data-cta]")
+>>>>>>> tags/v0.29.1
       end
     end
 
@@ -57,8 +62,13 @@ describe Decidim::ContentBlocks::ParticipatorySpaceHeroCell, type: :cell do
       end
 
       it "does not show the button" do
+<<<<<<< HEAD
         expect(subject).not_to have_link(href: "/example")
         expect(subject).not_to have_css("a[data-cta]")
+=======
+        expect(subject).to have_no_link(href: "/example")
+        expect(subject).to have_no_css("a[data-cta]")
+>>>>>>> tags/v0.29.1
       end
     end
   end

@@ -10,8 +10,13 @@
   <div class="card-section">
     <div class="grid md:grid-cols-2 gap-x-8 p-4">
       <% templates.each do |newsletter_template| %>
+<<<<<<< HEAD
         <div class="card card--mini pb-12 md:pb-0" id="<%= newsletter_template.name %>">
           <iframe src="<%= preview_newsletter_template_path(newsletter_template.name) %>" class="email-preview w-full h-[60dvh]">
+=======
+        <div class="card pb-12 md:pb-0" id="<%= newsletter_template.name %>">
+          <iframe src="<%= preview_newsletter_template_path(newsletter_template.name) %>" class="w-full h-[60dvh]" data-email-preview>
+>>>>>>> tags/v0.29.1
           </iframe>
           <div class="card-footer">
             <h2 class="card-title flex items-center">

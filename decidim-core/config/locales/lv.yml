@@ -151,10 +151,6 @@ lv:
         error: Vienuma grozījumu veikšanas laikā radusies kļūda.
         promote_button: Paaugstināt līdz %{model_name}
         promote_confirm_text: Vai tiešām vēlaties atbalstīt šo labojumu?
-      compare_draft:
-        continue: Turpināt
-        no_similars_found: Netika atrasts neviens līdzīgs labojums.
-        title: Līdzīgi labojumi
       created:
         error: Grozījuma melnraksta veidošanas laikā radās kļūda.
         success: Grozījuma melnraksts ir veiksmīgi izveidots.
@@ -200,8 +196,11 @@ lv:
       wizard_step_form:
         steps:
           '1': Izveidot savu grozījumu
+<<<<<<< HEAD
           '2': Salīdzināt savu grozījumu
           '3': Pabeigt savu grozījumu
+=======
+>>>>>>> tags/v0.29.1
     anonymous_user: Anonīms
     application:
       document:
@@ -332,7 +331,6 @@ lv:
         new:
           complete_profile: Pabeigt profila izveidi
           sign_up: Lūdzu, pabeidziet aizpildīt savu profilu
-          subtitle: Lūdzu, aizpildiet šo anketu, lai pabeigtu reģistrēšanos
           username_help: Publiski redzamais vārds, kas parādās pie jūsu ierakstiem. Lai garantētu anonimitāti, tas var būt jebkurš vārds.
       registrations:
         new:
@@ -340,8 +338,6 @@ lv:
           log_in: Pieteikties
           newsletter: Saņemiet neregulāru informatīvo biļetenu ar būtisko informāciju
           newsletter_title: Atļauja sazināties
-          sign_up: Reģistrēties
-          subtitle: Reģistrēties, lai piedalītos diskusijās un atbalstītu priekšlikumus.
           tos_agreement: Reģistrējoties jūs piekrītat %{link}.
           tos_title: Pakalpojumu sniegšanas noteikumi
           username_help: Publiski redzamais vārds, kas parādās pie jūsu ierakstiem. Lai garantētu anonimitāti, tas var būt jebkurš vārds.
@@ -500,8 +496,6 @@ lv:
           email_outro: Jūs saņēmāt šo paziņojumu, jo esat šīs platformas administrators.
           email_subject: Lietotāju grupa ir atjauninājusi savu profilu
           notification_title: Lietotāju grupa %{user_group_name}, ir atjauninājusi savu profilu, atstājot to neapstiprinātu. Tagad to varat apstiprināt <a href="%{groups_admin_path}">administratora panelī</a>.
-      notification_event:
-        notification_title: <a href="%{resource_path}">%{resource_title}</a> ir noticis atgadījums.
       resource_endorsed:
         email_intro: '%{endorser_name}%{endorser_nickname}, kam jūs sekojat, tikko atbalstīja "%{resource_title}", un mums šķiet, ka tas jums varētu būt interesanti. Aplūkojiet to un piedalieties:'
         email_outro: Jūs saņēmāt šo paziņojumu, jo sekojat %{endorser_nickname}. Jūs varat atteikties no paziņojumu saņemšanas, sekojot iepriekšējai saitei.
@@ -618,7 +612,6 @@ lv:
         default_page:
           content: "<p>%{organization} jūs varat piedalīties un lemt par dažādām tēmām, izmantojot augšējā izvēlnē redzamās vietas: procesi, asamblejas, iniciatīvas, konsultācijas. </p><p> Katrā no tām jūs atradīsiet dažādas iespējas piedalīties: izteikt priekšlikumus – individuāli vai kopā ar citiem, piedalīties debatēs, noteikt prioritātes projektiem, kas tiek īstenoti, apmeklēt klātienes sanāksmes un veikt citas darbības.</p>"
           title: Ko es varu darīt %{organization}?
-        title: Vispārēja palīdzība
     last_activities:
       all: Visi aktivitātes veidi
       index:
@@ -788,8 +781,6 @@ lv:
         metrics:
           headline: Rādītāji
           link: Rādīt visus rādītājus
-    participatory_space_private_users:
-      not_allowed: Jums nav atļauts skatīt šo saturu
     profile:
       deleted: Dzēsts dalībnieks
     profiles:
@@ -869,8 +860,6 @@ lv:
         spam: Satur klikšķu ēsmu (clickbait), reklāmu, krāpšanu vai skriptu robotprogrammatūru.
       floating_help:
         help: Palīdzība
-      login_modal:
-        sign_up: Reģistrēties
       participatory_space_filters:
         filters:
           areas: Jomas
@@ -1008,8 +997,6 @@ lv:
       updated_not_active: Jūsu parole ir veiksmīgi nomainīta.
     registrations:
       destroyed: Jūsu konts ir veiksmīgi atcelts. Mēs ceram jūs drīz atkal redzēt.
-      new:
-        sign_up: Reģistrēties
       signed_up: Laipni lūdzam! Jūsu reģistrācija bija veiksmīga.
       signed_up_but_inactive: Jūsu reģistrācija bija veiksmīga. Tomēr mēs nevarējām jūs pierakstīt, jo jūsu konts vēl nav aktivizēts.
       signed_up_but_locked: Jūsu reģistrācija bija veiksmīga. Tomēr mēs nevarējām jūs pierakstīt, jo jūsu konts ir bloķēts.
@@ -1024,7 +1011,10 @@ lv:
         back: Atpakaļ
         forgot_your_password: Aizmirsāt paroli?
         log_in: Pieteikties
+<<<<<<< HEAD
         sign_up: Reģistrēties
+=======
+>>>>>>> tags/v0.29.1
       minimum_password_length:
         zero: "(vismaz %{count} rakstzīmes)"
         one: "(vismaz %{count} rakstzīme)"
@@ -1046,7 +1036,6 @@ lv:
       invalid_time_zone: nav derīga laika josla
       long_words: satur vārdus, kas ir pārāk gari (vairāk nekā 35 rakstzīmes)
       must_start_with_caps: jāsākas ar lielo burtu
-      not_found: netika atrasts. Vai jūs jau iepriekš reģistrējāties?
       not_locked: netika bloķēts
       not_saved:
         zero: 'Apstrādājot jūsu pieprasījumu, radās vairākas kļūdas:'
@@ -1069,7 +1058,10 @@ lv:
         download_open_data: Lejupielādējiet atvērto datu failus
         log_in: Pieteikties
         made_with_open_source: Vietne, kas izveidota ar <a target="_blank" href="https://github.com/decidim/decidim"> bezmaksas programmatūru </a>.
+<<<<<<< HEAD
         sign_up: Reģistrēties
+=======
+>>>>>>> tags/v0.29.1
       header:
         log_in: Pieteikties
       impersonation_warning:

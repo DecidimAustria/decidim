@@ -4,9 +4,7 @@ module Decidim
   # This cell renders a notification from a notifications collection
 
   class NotificationCell < Decidim::ViewModel
-    include Decidim::IconHelper
     include Decidim::Core::Engine.routes.url_helpers
-    include Decidim::SanitizeHelper
 
     def show
       if notification.event_class_instance.try(:hidden_resource?)
@@ -27,9 +25,17 @@ module Decidim
 
       participatory_space = notification.resource.participatory_space
       link_to(
-        decidim_html_escape(translated_attribute(participatory_space.title)),
+        decidim_escape_translated(participatory_space.title),
         resource_locator(participatory_space).path
       )
+    end
+
+    def action_class
+      @action ||= ("#{notification.event_class_instance.action_cell.camelize}Cell" if notification.event_class_instance.action_cell)
+    end
+
+    def action_cell
+      @action_cell ||= (notification.event_class_instance.action_cell if action_class&.safe_constantize)
     end
 
     private

@@ -131,8 +131,6 @@ ru:
       amendable:
         button: Изменить %{model_name}
         promote_button: Повысить до %{model_name}
-      compare_draft:
-        continue: Продолжить
       edit_draft:
         send: Предпросмотр
       emendation:
@@ -253,7 +251,6 @@ ru:
         new:
           complete_profile: Заполните профиль
           sign_up: Пожалуйста, заполните свой профиль
-          subtitle: Пожалуйста, заполните следующую форму, чтобы завершить регистрацию
           username_help: Общедоступное имя, которое отображается в ваших сообщениях. В целях обеспечения анонимности оно может быть любым.
       registrations:
         new:
@@ -261,8 +258,6 @@ ru:
           log_in: Войти
           newsletter: Получать время от времени рассылку со свежими новостями
           newsletter_title: Разрешение на связь с вами
-          sign_up: Зарегистрироваться
-          subtitle: Зарегистрируйтесь, чтобы участвовать в обсуждениях и поддерживать предложения.
           tos_agreement: Регистрируясь, вы принимаете %{link}.
           tos_title: Условия участия
           username_help: Общедоступное имя, которое отображается в ваших сообщениях. В целях обеспечения анонимности оно может быть любым.
@@ -331,8 +326,6 @@ ru:
         email_intro: '«%{resource_title}» обновили. Вы можете посмотреть его на странице:'
         email_outro: Вы получили это уведомление, потому что вы следите за «%{resource_title}». Вы можете перестать за ним следить, перейдя по приведенной выше ссылке.
         email_subject: Обновление %{resource_title}
-      notification_event:
-        notification_title: С <a href="%{resource_path}">%{resource_title}</a> произошло событие.
       users:
         profile_updated:
           email_intro: Страница <a href="%{resource_url}">профиля</a> участника %{name} (%{nickname}), за которым вы следите, была обновлена.
@@ -494,8 +487,6 @@ ru:
           headline: Текущее состояние %{organization}
         sub_hero:
           register: Зарегистрироваться
-    participatory_space_private_users:
-      not_allowed: У вас нет прав на просмотр этого содержимого
     profile:
       deleted: Удаленный участник
     profiles:
@@ -554,8 +545,6 @@ ru:
         title: Пожаловаться на проблему
       floating_help:
         help: Справка
-      login_modal:
-        sign_up: Зарегистрироваться
       reference:
         reference: 'Ссылка: %{reference}'
       results_per_page:
@@ -630,8 +619,6 @@ ru:
       edit:
         new_password: Пароль
     registrations:
-      new:
-        sign_up: Зарегистрироваться
       signed_up: Добро пожаловать! Вы успешно зарегистрировались.
       signed_up_but_inactive: Вы успешно зарегистрировались. Однако вы не можете войти в систему, потому что учетная запись еще не активирована.
       signed_up_but_locked: Вы успешно зарегистрировались. Однако вы не можете войти в систему, потому что ваша учетная запись заблокирована.
@@ -643,7 +630,10 @@ ru:
         back: Назад
         forgot_your_password: Забыли пароль?
         log_in: Войти
+<<<<<<< HEAD
         sign_up: Зарегистрироваться
+=======
+>>>>>>> tags/v0.29.1
     unlocks:
       new:
         resend_unlock_instructions: Повторно отправить инструкции по разблокировке
@@ -668,7 +658,10 @@ ru:
       footer:
         log_in: Войти
         made_with_open_source: Сайт создан с помощью <a target="_blank" href="https://github.com/decidim/decidim"> бесплатного программного обеспечения</a>.
+<<<<<<< HEAD
         sign_up: Зарегистрироваться
+=======
+>>>>>>> tags/v0.29.1
       header:
         log_in: Войти
       impersonation_warning:

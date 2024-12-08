@@ -47,7 +47,6 @@ module Decidim::Assemblies
             scope: my_assembly.scope,
             area: my_assembly.area,
             errors: my_assembly.errors,
-            show_statistics: my_assembly.show_statistics,
             participatory_processes_ids: participatory_processes.map(&:id),
             purpose_of_action: my_assembly.purpose_of_action,
             composition: my_assembly.composition,
@@ -87,7 +86,7 @@ module Decidim::Assemblies
       let(:form) do
         Admin::AssemblyForm.from_params(params).with_context(context)
       end
-      let(:command) { described_class.new(my_assembly, form) }
+      let(:command) { described_class.new(form, my_assembly) }
 
       describe "when the form is not valid" do
         before do
@@ -159,7 +158,7 @@ module Decidim::Assemblies
         it "traces the action", versioning: true do
           expect(Decidim.traceability)
             .to receive(:perform_action!)
-            .with(:update, my_assembly, user)
+            .with(:update, my_assembly, user, {})
             .and_call_original
 
           expect { command.call }.to change(Decidim::ActionLog, :count)

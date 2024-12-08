@@ -237,6 +237,10 @@ ca:
               most_recent: Més recents
         exports:
           initiatives: Iniciatives
+        index:
+          initiatives_types:
+            alert_html: "<p>Has de crear com a mínim un tipus d'iniciativa per tal que les participants puguin començar a crear les seves iniciatives.</p><p>%{link}</p>"
+            button: Nou tipus d'iniciativa
         initiatives:
           accept:
             success: La iniciativa s'ha acceptat correctament.
@@ -302,7 +306,7 @@ ca:
         initiatives_types:
           create:
             error: S'ha produït un error.
-            success: S'ha creat correctament un nou tipus d'iniciativa.
+            success: S'ha creat amb èxit un nou tipus d'iniciativa. Has de definir com a mínim un àmbit per aquest tipus d'iniciativa perquè es pugui fer servir.
           destroy:
             success: S'ha eliminat correctament el tipus d'iniciativa.
           edit:
@@ -550,7 +554,6 @@ ca:
           other: " signatures"
         vote_cabin:
           already_voted: Ja has signat
-          supports_required: "Es requereixen %{total_supports} signatures"
           verification_required: Verifica el teu compte per a signar la iniciativa
           vote: Signar
           votes_blocked: S'ha desactivat la signatura

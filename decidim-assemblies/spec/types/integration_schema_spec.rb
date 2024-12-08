@@ -59,7 +59,6 @@ describe "Decidim::Api::QueryType" do
       "reference" => assembly.reference,
       "scopesEnabled" => assembly.scopes_enabled?,
       "shortDescription" => { "translation" => assembly.short_description[locale] },
-      "showStatistics" => assembly.show_statistics?,
       "slug" => assembly.slug,
       "specialFeatures" => { "translation" => assembly.special_features[locale] },
       "subtitle" => { "translation" => assembly.subtitle[locale] },
@@ -180,7 +179,6 @@ describe "Decidim::Api::QueryType" do
         shortDescription {
           translation(locale:"#{locale}")
         }
-        showStatistics
         slug
         specialFeatures {
           translation(locale:"#{locale}")
@@ -211,7 +209,7 @@ describe "Decidim::Api::QueryType" do
   end
 
   describe "valid query" do
-    it "executes sucessfully" do
+    it "executes successfully" do
       expect { response }.not_to raise_error
     end
 
@@ -346,7 +344,6 @@ describe "Decidim::Api::QueryType" do
         shortDescription {
           translation(locale:"#{locale}")
         }
-        showStatistics
         slug
         specialFeatures {
           translation(locale:"#{locale}")
@@ -368,7 +365,7 @@ describe "Decidim::Api::QueryType" do
     )
     end
 
-    it "executes sucessfully" do
+    it "executes successfully" do
       expect { response }.not_to raise_error
     end
 

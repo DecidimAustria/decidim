@@ -51,7 +51,10 @@ he:
         scope_id: היקף
         scopes_enabled: היקפים מאופשרים
         short_description: תיאור קצר
+<<<<<<< HEAD
         show_statistics: הצגת סטטיסטיקה
+=======
+>>>>>>> tags/v0.29.1
         slug: כינוי לקישור
         special_features: מאפיינים מיוחדים
   decidim:
@@ -94,6 +97,9 @@ he:
       assembly_user_roles:
         create:
           error: הייתה בעיה בהוספת מנהל.ת עבור אסיפה זו.
+<<<<<<< HEAD
     assemblies:
       show:
         related_participatory_processes: תהליך השתתפותי מקושר
+=======
+>>>>>>> tags/v0.29.1

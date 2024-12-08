@@ -381,7 +381,11 @@ de:
           update: Aktualisieren
       dashboard:
         pending_moderations:
+<<<<<<< HEAD
           anouncement:
+=======
+          announcement:
+>>>>>>> tags/v0.29.1
             one: Es gibt %{count} zu moderierender Beitrag
             other: Es gibt %{count} zu moderierende Beiträge
           goto_moderation: Gehe zur globalen Moderation
@@ -389,12 +393,12 @@ de:
         show:
           dropdown: Dropdown
           view_more_logs: Weitere Protokolle anzeigen
-      domain_whitelist:
+      domain_allowlist:
         form:
           domain_too_short: Domain zu kurz
         update:
-          error: Fehler beim Aktualisieren der Domain-Whitelist.
-          success: Domain-Whitelist erfolgreich aktualisiert.
+          error: Liste der zulässigen externen Domains konnte nicht aktualisiert werden
+          success: Die Liste der zulässigen externen Domains wurde erfolgreich aktualisiert.
       exports:
         export_as: "%{name} als %{export_format}"
         formats:
@@ -453,6 +457,7 @@ de:
           values:
             'false': Veröffentlicht
             'true': Unveröffentlicht
+        remove_all: Alle entfernen
         scope_id_eq:
           label: Themenbereich
         search_label: Suche
@@ -461,7 +466,6 @@ de:
           report_count_eq: Anzahl Meldungen
           reported_id_string_or_reported_content_cont: Suche %{collection} nach meldbarer Id oder Inhalt.
           title_cont: In %{collection} nach Titel suchen.
-          user_name_or_user_email_cont: In %{collection} nach Name oder E-Mail suchen.
           user_name_or_user_nickname_or_user_email_cont: '%{collection} nach E-Mail, Name oder Kontoname durchsuchen.'
         state_eq:
           label: Status
@@ -577,7 +581,7 @@ de:
         components: Komponenten
         configuration: Aufbau
         content: Gemeldeter Inhalt
-        external_domain_whitelist: Erlaubte externe Domains
+        external_domain_allowlist: Erlaubte externe Domains
         help_sections: Hilfeabschnitte
         homepage: Startseite
         impersonations: Identitätswechsel
@@ -862,7 +866,7 @@ de:
             layout_appearance_title: Layout-Layout bearbeiten
             preview: Vorschau
           omnipresent_banner_appearance_title: Bearbeiten Sie das allgegenwärtige Banner
-      organization_external_domain_whitelist:
+      organization_external_domain_allowlist:
         edit:
           update: Aktualisieren
         external_domain:
@@ -871,8 +875,8 @@ de:
           remove: Entfernen
           up: Hoch
         form:
-          add: Zur Whitelist hinzufügen
-          title: Externe Domain-Whitelist
+          add: Zur erlaubten Liste hinzufügen
+          title: Liste erlaubter externer Domains
       participatory_space_private_users:
         create:
           error: Beim Hinzufügen eines privaten Benutzers für diesen partizipativen Bereich ist ein Fehler aufgetreten.
@@ -968,6 +972,11 @@ de:
           help: Diese Token werden verwendet, um diese unveröffentlichte Ressource öffentlich an jeden Benutzer weiterzugeben. Sie werden ausgeblendet, wenn das Werk veröffentlicht wird. Klicken Sie auf das Teilen-Symbol des Tokens um die teilbare URL zu besuchen.
           title: Token teilen
       shared:
+        adjacent_navigation:
+          next: Weiter
+          next_title: Nächstes Element
+          previous: Zurück
+          previous_title: Vorheriges Element
         gallery:
           add_images: Bilder hinzufügen
           edit_images: Bilder bearbeiten
@@ -1020,7 +1029,7 @@ de:
         areas: Bereiche
         authorization_workflows: Verifizierungsmethoden
         dashboard: Instrumententafel
-        edit_external_domains: Externe Domain-Whitelist
+        edit_external_domains: Liste erlaubter externer Domains
         edit_landing_page: Seiteninhalte
         edit_organization_appearance: Homepage-Erscheinungsbild bearbeiten
         impersonatable_users: Überschaubare Benutzer

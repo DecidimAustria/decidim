@@ -17,11 +17,15 @@ shared_examples "a paginated resource" do
 
     within "[data-pagination]" do
       page.find("summary", text: "25").click
+<<<<<<< HEAD
       click_link "50"
+=======
+      click_on "50"
+>>>>>>> tags/v0.29.1
     end
 
     sleep 2
     expect(page).to have_css(resource_selector, count: collection_size)
-    expect(page).not_to have_css("[data-pagination]")
+    expect(page).to have_no_css("[data-pagination]")
   end
 end

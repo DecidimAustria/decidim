@@ -2,7 +2,11 @@
 
 module Decidim
   module Admin
+<<<<<<< HEAD
     # This module contains the breadrumb for the verifications worfklows
+=======
+    # This module contains the breadcrumb for the verifications workflows
+>>>>>>> tags/v0.29.1
     module WorkflowsBreadcrumb
       extend ActiveSupport::Concern
 

@@ -78,13 +78,19 @@ ca:
   booleans:
     'false': 'No'
     'true': 'Sí'
+<<<<<<< HEAD
   carrierwave:
     errors:
       file_cannot_be_processed: No s'ha pogut processar el fitxer
       file_resolution_too_large: La resolució de l'arxiu és massa gran
       file_size_too_large: La mida del fitxer és massa gran
       not_inside_organization: L'arxiu no està relacionat amb cap organització
+=======
+>>>>>>> tags/v0.29.1
   date:
+    buttons:
+      close: Tancar
+      select: Seleccionar
     formats:
       decidim_short: "%d/%m/%Y"
       decidim_short_dashed: "%d-%m-%Y"
@@ -92,6 +98,10 @@ ca:
       decidim_with_day_and_month_name: "%A %d %b %Y"
       decidim_with_month_name: "%d %B %Y"
       decidim_with_month_name_short: "%d %b"
+      help:
+        date_format: 'Format: dd/mm/aaaa'
+      order: d-m-a
+      separator: "/"
   datetime:
     distance_in_words:
       about_x_hours:
@@ -296,10 +306,6 @@ ca:
         title:
           one: "%{count} esmena"
           other: "%{count} esmenes"
-      compare_draft:
-        continue: Continua
-        no_similars_found: No s’han trobat esmenes semblants.
-        title: Esmenes similars
       created:
         error: S'ha produït un error durant la creació de l’esmena.
         success: L'esborrany d’esmena ha estat creat amb èxit.
@@ -355,14 +361,16 @@ ca:
       wizard_step_form:
         steps:
           '1': Crea la teva esmena
-          '2': Compara la teva esmena
-          '3': Completa la teva esmena
-          '4': Publica la teva esmena
+          '2': Publica la teva esmena
     anonymous_user: Anònim
     application:
       document:
         download: Descarregar fitxer
+        visit_link: Visita l'enllaç
       documents:
+        component_documents:
+          dummy: Documents sobre components ficticis
+          meetings: Documents sobre trobades
         documents: Documents
         related_documents: Documents relacionats
       photo:
@@ -584,7 +592,7 @@ ca:
           complete_profile: Completa el perfil
           nickname_help: El teu àlies a %{organization}. Només pot contenir lletres, números, '-' and '_'.
           sign_up: Si us plau, completa el teu perfil
-          subtitle: Si us plau, omple el següent formulari per tal de completar la teva inscripció
+          subtitle: Si us plau, omple el següent formulari per tal de completar la creació del teu compte
           username_help: Nom públic que apareix als teus missatges. Amb l'objectiu de garantir l'anonimat, pot ser qualsevol nom.
       registrations:
         create:
@@ -594,8 +602,8 @@ ca:
           log_in: Entra
           newsletter: Vull rebre un butlletí ocasional amb informació rellevant
           newsletter_title: Permís de contacte
-          sign_up: Registra't
-          subtitle: Crea un compte per poder participar en els debats i donar suport a les propostes.
+          sign_up: Crea un compte
+          subtitle: Crea un compte per participar en la plataforma.
           terms: els termes i condicions d'ús
           tos_agreement: En registrar-te acceptes %{link}.
           tos_title: Termes del servei
@@ -605,7 +613,7 @@ ca:
           are_you_new?: Ets nova a la plataforma?
           register: Crea't un compte
           sign_in_disabled: Pots accedir amb un compte extern.
-          sign_up_disabled: El registre està deshabilitat, pots fer servir un compte existent per accedir-hi.
+          sign_up_disabled: La creació de comptes està deshabilitada, pots fer servir un compte existent per accedir-hi.
         user:
           timed_out: Has estat sense activitat durant massa temps i la teva sessió s'ha tancat automàticament. Si vols continuar participant, torna a iniciar sessió.
       shared:
@@ -669,6 +677,10 @@ ca:
     endorsers_list:
       endorsed_by: Li agrada a…
     errors:
+      files:
+        file_cannot_be_processed: No s'ha pogut processar el fitxer
+        file_resolution_too_large: La resolució de l'arxiu és massa gran
+        not_inside_organization: L'arxiu no està relacionat amb cap organització
       internal_server_error:
         copied: Text copiat!
         copy_error_message_clarification: Missatge d'error copiat amb el porta-retalls
@@ -806,7 +818,7 @@ ca:
           email_subject: Un grup d'usuàries ha actualitzat el seu perfil
           notification_title: El grup d'usuàries %{user_group_name} ha actualitzat el seu perfil perdent-ne la verificació. Pots tornar a verificar-lo a través del <a href="%{groups_admin_path}"> taulell d'administració</a>.
       nickname_event:
-        notification_body: S'ha corregit la manera en que es fan servir els àlies per a que no n'hi hagi de duplicats, per fer-ho ja no es distingueix entre majúscules i minúscules.<br/>El teu àlies es va crear més tard que un altre d'igual, així que se t'ha renombrat automàticament. Pots modificar el teu àlies des de la <a href="%{link_to_account_settings}">configuració del teu compte</a>.
+        notification_body: S'ha corregit la manera en que es fan servir els àlies per a que no n'hi hagi de duplicats, per fer-ho ja no es distingueix entre majúscules i minúscules.<br/>El teu àlies es va crear més tard que un altre d'igual, així que s'ha renombrat automàticament. Pots modificar el teu àlies des de la <a href="%{link_to_account_settings}">configuració del teu compte</a>.
       notification_event:
         notification_title: S'ha produït un esdeveniment a <a href="%{resource_path}">%{resource_title}</a>.
       reports:
@@ -873,11 +885,16 @@ ca:
       create:
         button: Seguir
         error: S'ha produït un error en seguir aquest recurs.
-        participatory_space: Seguint <span class="show-for-sr">%{resource_name}</span>
+        participatory_space: Seguint <span>%{resource_name}</span>
       destroy:
         button: Deixar de seguir
         error: S'ha produït un error en deixar de seguir aquest recurs.
     forms:
+      attachment_link:
+        explanation: Guia per enllaços adjunts
+        help_messages:
+          - Només s'accepten format d'URL correctes.
+          - Tingues en compte que els enllaços han de ser públics perquè tots els participants hi puguin accedir.
       errors:
         decidim/user:
           password: La contrasenya és massa curta.
@@ -887,7 +904,7 @@ ca:
         file:
           explanation: 'Instruccions per a l''arxiu:'
           message_1: Ha de ser una imatge o un document.
-          message_2: Per a les imatges, fes servir imatges apaïsades preferiblement, el servei retalla la imatge.
+          message_2: Per a les imatges, fes servir, preferiblement, imatges apaïsades, el servei retalla la imatge.
         icon:
           explanation: 'Instruccions per a la icona:'
           message_1: Ha de ser una imatge quadrada.
@@ -1037,7 +1054,7 @@ ca:
           content: "<p>A %{organization} pots participar i decidir sobre diferents temes, a través dels espais que veus al menú superior: Processos, Assemblees, Iniciatives, Consultes.</p> <p>Dins de cada un trobaràs diferents opcions per participar: fer propostes - a nivell individual o amb altres persones -, prendre part en debats, prioritzar projectes a executar, assistir a trobades presencials i altres accions.</p>\n"
           title: Què puc fer a %{organization}?
         description: Llegeix més sobre %{organization}.
-        title: Ajuda general
+        title: General
     last_activities:
       all: Tots els tipus d'activitats
       index:
@@ -1213,7 +1230,7 @@ ca:
         token_error: L'enllaç ha caducat.
         unsubscribe: Anul·la la subscripció
     newsletters_opt_in:
-      unathorized: Ho sentim, aquest enllaç ja no està disponible.
+      unauthorized: Ho sentim, aquest enllaç ja no està disponible.
       update:
         error: S'ha produït un error en desar la configuració del butlletí de notícies.
         success: La configuració del butlletí de notícies s'ha actualitzat correctament.
@@ -1233,6 +1250,7 @@ ca:
         same_language: El contingut s'ha publicat en la teva llengua de preferència (%{language}), és per això que no es mostra cap traducció automàtica en aquest correu electrònic.
         translated_text: 'Text de la traducció automàtica:'
     notifications:
+      action_error: S'ha produït un error en actualitzar les notificacions.
       no_notifications: Encara no hi ha notificacions.
       show:
         missing_event: Vaja, aquesta notificació pertany a un element que ja no està disponible. Pots descartar-la.
@@ -1309,7 +1327,7 @@ ca:
           headline: Estat actual de %{organization}
         sub_hero:
           register: Registra't
-          register_title: Registra't per crear un compte
+          register_title: Crea un compte
       index:
         standalone_pages: Pàgines
         subheading: Navega per les pàgines d'ajuda de %{name}
@@ -1336,8 +1354,6 @@ ca:
           alert: Hem actualitzat els nostres Termes i Condicions d'ús, si us plau, revisa'ls.
           body: Si us plau, dedica un moment a revisar l'actualització dels nostres Termes i Condicions d'ús. En cas contrari, no podràs participar en la plataforma.
           title: 'Obligatori: revisa les actualitzacions als nostres termes i condicions d''ús'
-    participatory_space_private_users:
-      not_allowed: No tens permís per visualitzar aquest contingut
     passwords:
       update:
         error: Hi ha hagut un problema en actualitzar la contrasenya.
@@ -1494,7 +1510,7 @@ ca:
         log_in_before_follow: Si us plau, inicia sessió abans de realitzar aquesta acció
       login_modal:
         please_log_in: Si us plau, inicia la sessió
-        sign_up: Registra't
+        sign_up: Crea un compte
       mentions_modal:
         remove_recipient: Eliminar destinatària %{name}
       participatory_space_filters:
@@ -1621,7 +1637,7 @@ ca:
       locked: El teu compte està bloquejat.
       not_found_in_database: El %{authentication_keys} o la contrasenya no són vàlids.
       timeout: La teva sessió ha expirat. Si us plau, torna a iniciar-la per continuar.
-      unauthenticated: Cal iniciar sessió o registrar-te abans de continuar.
+      unauthenticated: Cal iniciar sessió o crear un compte abans de continuar.
     invitations:
       edit:
         header: Acabar de crear el teu compte
@@ -1708,7 +1724,7 @@ ca:
     registrations:
       destroyed: El teu compte s'ha cancel·lat correctament. Esperem tornar-te a veure aviat.
       new:
-        sign_up: Registra't
+        sign_up: Crea un compte
       signed_up: Benvinguda! Has iniciat la sessió amb èxit.
       signed_up_but_inactive: Has iniciat la sessió amb èxit. Tanmateix, no hem pogut iniciar la sessió perquè el teu compte encara no està activat.
       signed_up_but_locked: T'has registrat amb èxit. Tanmateix, no has pogut iniciar la sessió perquè el teu compte està bloquejat.
@@ -1729,7 +1745,7 @@ ca:
         forgot_your_password: Has oblidat la teva contrasenya?
         log_in: Entra
         log_in_with_provider: Inicia sessió amb %{provider}
-        sign_up: Registra't
+        sign_up: Crea un compte
       minimum_password_length:
         one: "(Mínim de%{count} caràcters)"
         other: "(Mínim de%{count} caràcters)"
@@ -1800,30 +1816,32 @@ ca:
     upload:
       uploadedFile: Fitxer carregat
   emojis:
+    add_custom: Afegir emoji personalitzat
     button: Afegir emoji
     categories:
-      activities: Activitats
-      animals-nature: Animals i natura
+      activity: Activitat
       custom: Personalitzat
       flags: Banderes
-      food-drink: Aliments i begudes
+      foods: Aliments i begudes
+      frequent: Usats freqüentment
+      nature: Animals i natura
       objects: Objectes
-      people-body: Persones i cos
-      recents: Utilitzats recentment
-      smileys-emotion: Somriures i emocions
+      people: Cares i Gent
+      places: Viatges i llocs
+      search: Resultats de la cerca
       symbols: Símbols
-      travel-places: Viatges i llocs
-    error:
-      load: No s'ha pogut carregar la llista d'emojis
-    recents:
-      clear: Esborrar els emojis recents
-      none: Encara no has seleccionat cap emoji.
-    retry: Prova-ho de nou
-    search:
-      _: Cercar emojis...
-      clear: Neteja la cerca
-      error: Error en cercar emojis
-      not_found: No s'han trobat resultats
+    pick: Tria una emoticona…
+    search: Cercar
+    search_no_results_1: Oh, no!
+    search_no_results_2: No s'ha trobat aquesta emoticona
+    skins:
+      '1': Per defecte
+      '2': Clara
+      '3': Mig clara
+      '4': Mitja
+      '5': Mig fosca
+      '6': Fosca
+      choose: Tria un to de pell predeterminat
   errors:
     messages:
       allowed_file_content_types: 'només s''accepten arxius amb les següents extensions: %{types}'
@@ -1841,7 +1859,7 @@ ca:
       long_words: conté paraules massa llargues (més de 35 caràcters)
       must_start_with_caps: ha de començar amb una lletra majúscula
       nesting_too_deep: no pot estar dins d'una subcategoria
-      not_found: No es pot trobar. Us heu inscrit prèviament?
+      not_found: No s'ha pogut trobar. Has creat un compte anteriorment?
       not_locked: No estava bloquejat
       not_saved:
         one: 'S''ha produït un error en processar la teva sol·licitud:'
@@ -1926,8 +1944,8 @@ ca:
         log_in: Entra
         made_with_open_source: Web creada amb <a target="_blank" href="https://github.com/decidim/decidim">programari lliure</a>.
         resources: Recursos
-        sign_up: Registra't
-        terms_and_conditions: Termes i condicions
+        sign_up: Crea un compte
+        terms_of_service: Termes i condicions d'ús
       header:
         log_in: Entra
         main_menu: Menú principal
@@ -1943,10 +1961,6 @@ ca:
         mark_as_read: Marcar com a llegit
       offline_banner:
         cache_version_page: Ostres! La teva xarxa està desconnectada. El que estàs veient és una versió prèvia de la pàgina desada a la memòria cau i podria ser que el contingut no estigui actualitzat.
-      shared:
-        layout_item:
-          next: Següent tema
-          prev: Tema anterior
       social_media_links:
         facebook: "%{organization} a Facebook"
         github: "%{organization} a GitHub"
@@ -2025,6 +2039,10 @@ ca:
     x: X
     xing: Xing
   time:
+    buttons:
+      close: Tancar
+      reset: Reiniciar
+      select: Seleccionar
     formats:
       day_of_month: "%b %d"
       day_of_week: "%a"
@@ -2039,6 +2057,8 @@ ca:
         mailer:
           invitation_instructions:
             accept_until_format: "%B %d, %Y %I:%M %p"
+      help:
+        time_format: 'Format: hh:mm'
       long: "%B %d, %Y %H:%M"
       long_dashed: "%A-%m-%d %H:%M:%S"
       long_with_particles: "%d %B, de %Y a les %H:%M"

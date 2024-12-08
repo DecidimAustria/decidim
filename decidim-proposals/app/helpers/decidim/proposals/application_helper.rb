@@ -28,16 +28,22 @@ module Decidim
         I18n.t(state, scope: "decidim.proposals.answers", default: :not_answered)
       end
 
+      def proposal_state_css_style(proposal)
+        return "" if proposal.emendation?
+
+        proposal.proposal_state&.css_style
+      end
+
       # Public: The css class applied based on the proposal state.
       #
       # proposal - The proposal to evaluate.
       #
       # Returns a String.
       def proposal_state_css_class(proposal)
-        state = proposal.state
-        state = proposal.internal_state if proposal.answered? && !proposal.published_state?
+        return "alert" if proposal.withdrawn?
+        return if proposal.state.blank?
 
-        case state
+        case proposal.state
         when "accepted"
           "success"
         when "rejected", "withdrawn"
@@ -144,7 +150,7 @@ module Decidim
         return true if vote_limit_enabled?
         return true if threshold_per_proposal_enabled?
         return true if proposal_limit_enabled?
-        return true if can_accumulate_supports_beyond_threshold?
+        return true if can_accumulate_votes_beyond_threshold?
         return true if minimum_votes_per_user_enabled?
       end
 
@@ -166,7 +172,7 @@ module Decidim
         base
       end
 
-      # Explicitely commenting the used I18n keys so their are not flagged as unused
+      # Explicitly commenting the used I18n keys so their are not flagged as unused
       # i18n-tasks-use t('decidim.proposals.application_helper.filter_origin_values.official')
       # i18n-tasks-use t('decidim.proposals.application_helper.filter_origin_values.participants')
       # i18n-tasks-use t('decidim.proposals.application_helper.filter_origin_values.user_groups')
@@ -191,11 +197,11 @@ module Decidim
         Decidim::CheckBoxesTreeHelper::TreeNode.new(
           Decidim::CheckBoxesTreeHelper::TreePoint.new("", t("decidim.proposals.application_helper.filter_state_values.all")),
           [
-            Decidim::CheckBoxesTreeHelper::TreePoint.new("accepted", t("decidim.proposals.application_helper.filter_state_values.accepted")),
-            Decidim::CheckBoxesTreeHelper::TreePoint.new("evaluating", t("decidim.proposals.application_helper.filter_state_values.evaluating")),
-            Decidim::CheckBoxesTreeHelper::TreePoint.new("state_not_published", t("decidim.proposals.application_helper.filter_state_values.not_answered")),
-            Decidim::CheckBoxesTreeHelper::TreePoint.new("rejected", t("decidim.proposals.application_helper.filter_state_values.rejected"))
-          ]
+            Decidim::CheckBoxesTreeHelper::TreePoint.new("state_not_published", t("decidim.proposals.application_helper.filter_state_values.not_answered"))
+          ] +
+            Decidim::Proposals::ProposalState.where(component: current_component).where.not(token: "not_answered").map do |state|
+              Decidim::CheckBoxesTreeHelper::TreePoint.new(state.token, translated_attribute(state.title))
+            end
         )
       end
 

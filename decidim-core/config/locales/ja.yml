@@ -74,13 +74,19 @@ ja:
   booleans:
     'false': 'いいえ'
     'true': 'はい'
+<<<<<<< HEAD
   carrierwave:
     errors:
       file_cannot_be_processed: ファイルを処理できません
       file_resolution_too_large: ファイルの解像度が大きすぎます
       file_size_too_large: ファイルサイズが大きすぎます
       not_inside_organization: ファイルがどの組織にも属していません
+=======
+>>>>>>> tags/v0.29.1
   date:
+    buttons:
+      close: 閉じる
+      select: 選択
     formats:
       decidim_short: "%Y/%m/%d"
       decidim_short_dashed: "%Y-%m-%d"
@@ -88,6 +94,10 @@ ja:
       decidim_with_day_and_month_name: "%Y %b %d %A"
       decidim_with_month_name: "%Y %B %d"
       decidim_with_month_name_short: "%b %d"
+      help:
+        date_format: 'フォーマット: dd/mm/yyyy'
+      order: d-m-y
+      separator: "/"
   datetime:
     distance_in_words:
       about_x_hours:
@@ -282,10 +292,6 @@ ja:
       amendments:
         title:
           other: "%{count} 件の修正"
-      compare_draft:
-        continue: 続ける
-        no_similars_found: 似たような表現は見つかりません。
-        title: 似たような訂正
       created:
         error: 修正案の作成中にエラーが発生しました。
         success: 修正案が正常に作成されました。
@@ -344,14 +350,22 @@ ja:
       wizard_step_form:
         steps:
           '1': 修正を作成する
+<<<<<<< HEAD
           '2': 修正内容を比較
           '3': 修正を完了する
           '4': 修正を公開
+=======
+          '2': 修正を公開
+>>>>>>> tags/v0.29.1
     anonymous_user: 匿名です
     application:
       document:
         download: ファイルをダウンロード
+        visit_link: リンクを開く
       documents:
+        component_documents:
+          dummy: ダミーコンポーネントドキュメント
+          meetings: ミーティングドキュメント
         documents: ドキュメント
         related_documents: 関連ドキュメント
       photo:
@@ -553,7 +567,7 @@ ja:
         name: サブヒーローバナー
     core:
       actions:
-        login_before_access: アクセスする前に、あなたのアカウントでログインしてください。
+        login_before_access: アクセスする前にログインしてください。
         unauthorized: この操作を実行する権限がありません。
       application_helper:
         filter_area_values:
@@ -570,7 +584,7 @@ ja:
           complete_profile: プロファイルを完了
           nickname_help: '%{organization} でのニックネームです。文字、数字、''-'' および ''_'' のみを使用できます。'
           sign_up: プロフィールを完成してください
-          subtitle: ユーザ登録を完了するには、次のフォームに記入してください
+          subtitle: アカウントの作成を完了するため、次のフォームに記入してください
           username_help: 投稿に表示される公表名。匿名性を保証する目的で、任意の名前にすることができます。
       registrations:
         create:
@@ -580,8 +594,8 @@ ja:
           log_in: ログイン
           newsletter: 関連するお知らせを受け取る
           newsletter_title: ニュースレターを受け取る
-          sign_up: 新規登録
-          subtitle: 参加するにはユーザ登録をしてください。
+          sign_up: アカウントを作成
+          subtitle: プラットフォームに参加するアカウントを作成します。
           terms: 利用規約
           tos_agreement: ユーザ登録することで、 %{link} に同意したことになります。
           tos_title: 利用規約
@@ -591,7 +605,7 @@ ja:
           are_you_new?: プラットフォームは初めてですか？
           register: アカウントを作成
           sign_in_disabled: 外部アカウントでアクセスできます。
-          sign_up_disabled: 新規登録は無効になっています。既存のアカウントを使用してアクセスすることができます。
+          sign_up_disabled: アカウントの作成が無効になっています。既存のアカウントを使用してアクセスできます。
         user:
           timed_out: 長時間非アクティブであり、自動的にサービスからログアウトされました。 引き続きサービスをご利用いただく場合は、再度ログインしてください。
       shared:
@@ -653,6 +667,10 @@ ja:
     endorsers_list:
       endorsed_by: オススメ
     errors:
+      files:
+        file_cannot_be_processed: ファイルを処理できません
+        file_resolution_too_large: ファイルの解像度が大きすぎます
+        not_inside_organization: ファイルがどの組織にも属していません
       internal_server_error:
         copied: テキストをコピーしました
         copy_error_message_clarification: エラーメッセージをクリップボードにコピー
@@ -790,7 +808,7 @@ ja:
           email_subject: ユーザーグループがプロファイルを更新しました
           notification_title: '%{user_group_name} ユーザーグループがプロファイルを更新し、未検証のままにしました。 <a href="%{groups_admin_path}">管理画面</a> で確認できるようになりました。'
       nickname_event:
-        notification_body: ニックネームの使用方法を修正し、重複をなくすために大文字小文字を区別しないようにしました。<br/> あなたのニックネームは他の人と同じだったため、自動的にリネームされました。<a href="%{link_to_account_settings}">アカウント設定</a>から変更することができます。
+        notification_body: ニックネームの使用方法を修正し、重複をなくすために大文字小文字を区別しないようにしました。<br/> あなたのニックネームは他の同じ名前の方の後に登録されたため、自動的にリネームされました。<a href="%{link_to_account_settings}">アカウント設定</a>から変更することができます。
       notification_event:
         notification_title: <a href="%{resource_path}">%{resource_title}</a> にイベントが発生しました。
       reports:
@@ -855,11 +873,16 @@ ja:
       create:
         button: フォロー
         error: このリソースの後に問題がありました。
-        participatory_space: <span class="show-for-sr">%{resource_name}</span>をフォロー中
+        participatory_space: <span>%{resource_name}</span> をフォロー中
       destroy:
         button: フォローを停止
         error: リソースのフォローを解除する際に問題が発生しました。
     forms:
+      attachment_link:
+        explanation: 添付ファイルへのリンクのガイド
+        help_messages:
+          - 正しいURL形式のみ入力できます
+          - リンクは公開されているものでなければならないので、すべての参加者がアクセスできるようにしてください。
       errors:
         decidim/user:
           password: パスワードが短すぎます。
@@ -869,14 +892,14 @@ ja:
         file:
           explanation: 'ファイルのガイダンス:'
           message_1: 画像またはドキュメントである必要があります。
-          message_2: 画像の場合、ランドスケープ画像が適しています。システムが画像を切り抜きます。
+          message_2: 画像の場合、横長の画像が適しています。システムが画像を切り抜きます。
         icon:
           explanation: 'アイコンのガイド:'
           message_1: 正方形の画像でなければなりません。
           message_2: この画像の推奨サイズは512x512です。
         image:
           explanation: '画像のガイダンス:'
-          message_1: テキストを含まない風景画像が適しています。
+          message_1: テキストを含まない横長の画像をお勧めします。
           message_2: システムが画像を切り抜きます。
       file_validation:
         allowed_file_extensions: 'アップロード可能なファイル形式: %{extensions}'
@@ -1019,7 +1042,7 @@ ja:
           content: "<p>%{organization} では、トップメニューにあるスペース（参加型プロセスや参加スペース、取り組み、議案）から、さまざまなトピックに参加したり、決定したりすることができます。</p> <p>それぞれのスペースには、参加するためのさまざまなオプションが用意されています: （個人または他の人と一緒に）提案をする 、ディベートに参加する、実施するプロジェクトの優先順位を決める、対面ミーティングに出席する、その他のアクションを行う等。</p>\n"
           title: '%{organization} で何ができますか？'
         description: '%{organization} についてもっと読む'
-        title: 一般的なヘルプ
+        title: 全般
     last_activities:
       all: すべてのアクティビティ種別
       index:
@@ -1195,7 +1218,11 @@ ja:
         token_error: リンクの有効期限が切れました。
         unsubscribe: 購読解除
     newsletters_opt_in:
+<<<<<<< HEAD
       unathorized: 申し訳ありませんが、このリンクは使用できなくなりました。
+=======
+      unauthorized: 申し訳ありませんが、このリンクは使用できなくなりました。
+>>>>>>> tags/v0.29.1
       update:
         error: ニュースレター設定の保存中に問題が発生しました。
         success: ニュースレター設定を更新しました。
@@ -1215,6 +1242,7 @@ ja:
         same_language: コンテンツはあなたの設定された言語(%{language}) で投稿されました。このため、このメールには自動翻訳は表示されません。
         translated_text: '自動翻訳されたテキスト:'
     notifications:
+      action_error: 通知の更新中に問題が発生しました。
       no_notifications: まだ通知はありません。
       show:
         missing_event: この通知は利用できなくなった要素に属しています。破棄してください。
@@ -1291,7 +1319,7 @@ ja:
           headline: '%{organization} の現在の状態'
         sub_hero:
           register: 登録
-          register_title: サインアップしてアカウントを作成
+          register_title: アカウントを作成
       index:
         standalone_pages: ページ
         subheading: '%{name} のヘルプページをナビゲートします'
@@ -1318,8 +1346,6 @@ ja:
           alert: 利用規約を更新しました。ご確認ください。
           body: 利用規約の更新内容を確認してください。確認しない場合、プラットフォームを使用することはできません。
           title: '必須: 利用規約の更新を確認する'
-    participatory_space_private_users:
-      not_allowed: このコンテンツを表示する権限がありません
     passwords:
       update:
         error: パスワードの更新中に問題が発生しました。
@@ -1476,7 +1502,7 @@ ja:
         log_in_before_follow: このアクションを実行する前にログインしてください
       login_modal:
         please_log_in: ログインしてください
-        sign_up: 新規登録
+        sign_up: アカウントを作成
       mentions_modal:
         remove_recipient: 受信者 %{name} を削除
       participatory_space_filters:
@@ -1603,7 +1629,7 @@ ja:
       locked: あなたのアカウントはロックされています。
       not_found_in_database: '%{authentication_keys} またはパスワードが無効です。'
       timeout: セッションの有効期限が切れました。再度ログインしてください。
-      unauthenticated: 続行する前にログインまたはサインアップする必要があります。
+      unauthenticated: 続行するにはログインするか、またはアカウントを作成する必要があります。
     invitations:
       edit:
         header: アカウントの作成を完了する
@@ -1690,7 +1716,7 @@ ja:
     registrations:
       destroyed: お客様のアカウントは正常にキャンセルされました。しばらくお待ちください。
       new:
-        sign_up: 新規登録
+        sign_up: アカウントを作成
       signed_up: ようこそ！正常に登録完了しました。
       signed_up_but_inactive: 登録が完了しました。ただし、アカウントが有効化されていないため、ログインできませんでした。
       signed_up_but_locked: 登録完了しましたが、アカウントがロックされているため、ログインできませんでした。
@@ -1711,7 +1737,7 @@ ja:
         forgot_your_password: パスワードをお忘れですか？
         log_in: ログイン
         log_in_with_provider: '%{provider} でログイン'
-        sign_up: 新規登録
+        sign_up: アカウントを作成
       minimum_password_length:
         other: "(%{count} 文字以上)"
     unlocks:
@@ -1781,30 +1807,36 @@ ja:
     upload:
       uploadedFile: アップロードされたファイル
   emojis:
+    add_custom: カスタム絵文字を追加
     button: 絵文字を追加
     categories:
-      activities: アクティビティ
-      animals-nature: 動物・自然
+      activity: アクティビティ
       custom: ユーザー定義
       flags: 国旗
+<<<<<<< HEAD
       food-drink: 食べ物・飲み物
+=======
+      foods: 食べ物・飲み物
+      frequent: よく使う絵文字
+      nature: 動物・自然
+>>>>>>> tags/v0.29.1
       objects: 物
-      people-body: 人・体
-      recents: 最近使用したもの
-      smileys-emotion: スマイリー・エモティコン
+      people: 表情・人物
+      places: 旅行・場所
+      search: 検索結果
       symbols: シンボル
-      travel-places: 旅行・場所
-    error:
-      load: 絵文字の読み込みに失敗しました
-    recents:
-      clear: 最近の絵文字を消去
-      none: 絵文字がまだ選択されていません。
-    retry: やり直す
-    search:
-      _: 絵文字を検索...
-      clear: 検索をクリア
-      error: 絵文字の検索に失敗しました
-      not_found: 検索結果がありません
+    pick: 絵文字の選択
+    search: 検索
+    search_no_results_1: おっと！
+    search_no_results_2: 絵文字が見つかりませんでした
+    skins:
+      '1': デフォルト
+      '2': 明るめ
+      '3': やや明るめ
+      '4': 中間
+      '5': やや暗め
+      '6': 暗め
+      choose: デフォルトのスキンのトーンを選択
   errors:
     messages:
       allowed_file_content_types: '次の拡張子を持つファイルのみが許可されています: %{types}'
@@ -1822,7 +1854,7 @@ ja:
       long_words: には長すぎる単語が含まれています（35文字以上）
       must_start_with_caps: 先頭は大文字でなければなりません
       nesting_too_deep: サブカテゴリ内にすることはできません
-      not_found: 見つかりませんでした。以前に登録しましたか？
+      not_found: 見つかりませんでした。以前にアカウントを作成されましたか？
       not_locked: ロックされていません
       not_saved:
         other: 'リクエストの処理中に複数のエラーが発生しました:'
@@ -1905,8 +1937,8 @@ ja:
         log_in: ログイン
         made_with_open_source: このサイトは <a target="_blank" href="https://github.com/decidim/decidim">フリーソフトウェア</a>で作られています。
         resources: リソース
-        sign_up: 新規登録
-        terms_and_conditions: 利用規約
+        sign_up: アカウントを作成
+        terms_of_service: 利用規約
       header:
         log_in: ログイン
         main_menu: メインメニュー
@@ -1922,10 +1954,6 @@ ja:
         mark_as_read: 既読にする
       offline_banner:
         cache_version_page: 注意：あなたのネットワークはオフラインです。これは以前にアクセスしているページのキャッシュされたバージョンです。おそらくコンテンツが最新ではありません。
-      shared:
-        layout_item:
-          next: 次のアイテム
-          prev: 前のアイテム
       social_media_links:
         facebook: "Facebook の %{organization}"
         github: "GitHub の %{organization}"
@@ -2004,6 +2032,10 @@ ja:
     x: X
     xing: Xing
   time:
+    buttons:
+      close: 閉じる
+      reset: リセット
+      select: 選択
     formats:
       day_of_month: "%b %d"
       day_of_week: "%a"
@@ -2018,6 +2050,8 @@ ja:
         mailer:
           invitation_instructions:
             accept_until_format: "%Y %B %d, %I:%M %p"
+      help:
+        time_format: 'フォーマット: hh:mm'
       long: "%B %d, %Y %H:%M"
       long_dashed: "%Y-%m-%d %H:%M:%S"
       long_with_particles: "%Y年%m月%d日 %H:%M"

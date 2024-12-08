@@ -44,7 +44,6 @@
         scope_id: Tema
         scopes_enabled: Temaer aktivert
         short_description: Kort beskrivelse
-        show_statistics: Vis statistikk
         slug: URL slug
         special_features: Spesialfunksjoner
         subtitle: Undertittel
@@ -265,7 +264,6 @@
           form:
             existing_user: Eksisterende deltaker
             explanation: 'Veiledning for bilde:'
-            image_guide: Helst et portrettbilde uten tekst.
             non_user: Ingen deltakende
             non_user_avatar_help: Du bør få samtykke fra personene før du offentliggjør dem som medlem.
             select_a_position: Velg en posisjon
@@ -318,11 +316,7 @@
       show:
         assembly_type: Forsamlingstype
         duration: Varighet
-        is_transparent:
-          'false': opaque
-          'true': privat
         private_space: Dette er en privat forsamling
-        related_participatory_processes: Relaterte deltakerprosesser
     assembly_members:
       assembly_member:
         designated_on: Utpekt på

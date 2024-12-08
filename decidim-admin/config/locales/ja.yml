@@ -358,7 +358,7 @@ ja:
         title: 確認の競合
         transfer:
           email: Eメールアドレス
-          error: 参加者から管理対象参加者への移行中に問題が発生しました。
+          error: 現在の参加者を管理対象の参加者に移行する際に問題が発生しました。
           name: 名前
           reason: 理由
           success: 現在の移転が正常に完了しました。
@@ -381,19 +381,23 @@ ja:
           update: 更新
       dashboard:
         pending_moderations:
+<<<<<<< HEAD
           anouncement:
+=======
+          announcement:
+>>>>>>> tags/v0.29.1
             other: 保留中のモデレーションが%{count} 件あります
           goto_moderation: グローバルモデレーションへ移動
           title: 保留中のモデレーション
         show:
           dropdown: ドロップダウン
           view_more_logs: もっとログを見る
-      domain_whitelist:
+      domain_allowlist:
         form:
           domain_too_short: ドメインが短すぎます
         update:
-          error: ドメインのホワイトリストを更新できませんでした。
-          success: ドメインのホワイトリストを更新しました。
+          error: 許可された外部ドメインのリストを更新できませんでした
+          success: 許可された外部ドメインのリストを更新しました。
       exports:
         export_as: "%{name} を %{export_format} 形式で取得"
         formats:
@@ -452,6 +456,7 @@ ja:
           values:
             'false': 公開済み
             'true': 未公開
+        remove_all: すべて削除
         scope_id_eq:
           label: スコープ
         search_label: 検索
@@ -460,7 +465,6 @@ ja:
           report_count_eq: 報告数
           reported_id_string_or_reported_content_cont: 報告可能なIDまたはコンテンツで %{collection} を検索します。
           title_cont: '%{collection} をタイトルで検索します。'
-          user_name_or_user_email_cont: '%{collection} を名前またはメールアドレスで検索します。'
           user_name_or_user_nickname_or_user_email_cont: '%{collection} をメール、表示名、アカウントIDで検索します。'
         state_eq:
           label: 状態
@@ -572,7 +576,7 @@ ja:
         components: コンポーネント
         configuration: 設定
         content: 報告されたコンテンツ
-        external_domain_whitelist: 許可された外部ドメイン
+        external_domain_allowlist: 許可された外部ドメイン
         help_sections: ヘルプセクション
         homepage: ホームページ
         impersonations: なりすまし
@@ -857,7 +861,7 @@ ja:
             layout_appearance_title: レイアウトを編集
             preview: プレビュー
           omnipresent_banner_appearance_title: Omnipresentバナーを編集
-      organization_external_domain_whitelist:
+      organization_external_domain_allowlist:
         edit:
           update: 更新
         external_domain:
@@ -866,8 +870,8 @@ ja:
           remove: 削除
           up: 上へ
         form:
-          add: ホワイトリストに追加
-          title: 外部ドメインのホワイトリスト
+          add: 許可されたリストに追加
+          title: 許可された外部ドメインのリスト
       participatory_space_private_users:
         create:
           error: この参加型スペースにプライベート参加者を追加する際に問題が発生しました。
@@ -962,6 +966,11 @@ ja:
           help: これらのトークンは、公開されていないリソースをすべてのユーザーに公開するために使用されます。 リソースが公開されると、それらは非表示になります。共有可能なURLにアクセスするにはトークンの共有アイコンをクリックしてください。
           title: トークンを共有
       shared:
+        adjacent_navigation:
+          next: 次へ
+          next_title: 次のアイテム
+          previous: 前へ
+          previous_title: 前のアイテム
         gallery:
           add_images: 画像を追加
           edit_images: 画像を編集
@@ -1014,7 +1023,7 @@ ja:
         areas: エリア
         authorization_workflows: 確認方法
         dashboard: ダッシュボード
-        edit_external_domains: 外部ドメインのホワイトリスト
+        edit_external_domains: 許可された外部ドメインのリスト
         edit_landing_page: ページ内容
         edit_organization_appearance: ホームページの外観を編集
         impersonatable_users: 管理可能な参加者

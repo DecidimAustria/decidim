@@ -44,7 +44,6 @@ gl:
         scope_id: Alcance
         scopes_enabled: Ámbitos habilitados
         short_description: Descrición curta
-        show_statistics: Amosar estatísticas
         slug: URL slug
         special_features: Características especiais
         subtitle: Subtítulo
@@ -266,7 +265,6 @@ gl:
           form:
             existing_user: Usuario existente
             explanation: 'Instrucións para a imaxe:'
-            image_guide: É preferíbel unha imaxe apaisada sen ningún texto.
             non_user: Non usuario
             non_user_avatar_help: Tes que obter o consentimento das persoas antes de publicalas coma membros.
             select_a_position: Seleccione unha posición
@@ -321,11 +319,7 @@ gl:
       show:
         assembly_type: Tipo de montaxe
         duration: Duración
-        is_transparent:
-          'false': opaco
-          'true': transparente
         private_space: Esta é unha asemblea privada
-        related_participatory_processes: Procesos participativos relacionados
     assembly_members:
       assembly_member:
         designated_on: Designado en

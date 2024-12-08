@@ -72,8 +72,13 @@ fr:
           index:
             component_constraint: Ajouter une contrainte
             confirm_delete: Êtes-vous sûr de vouloir supprimer ce modèle ?
+<<<<<<< HEAD
             global_scope: Global (disponible partout)
             internal_state: Etat interne
+=======
+            missing_state: Etat manquant
+            proposal_state_id: Etat interne
+>>>>>>> tags/v0.29.1
             title: Réponses à la proposition
           new:
             title: Nouveau modèle de réponse à proposition

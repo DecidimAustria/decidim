@@ -23,7 +23,11 @@ module Capybara
           expect(page).to have_content(filename.first(12)) if front_interface
         end
         all(title_input(front_interface)).last.set(options[:title]) if options.has_key?(:title)
+<<<<<<< HEAD
         click_button("Save") unless options[:keep_modal_open]
+=======
+        click_on("Save") unless options[:keep_modal_open]
+>>>>>>> tags/v0.29.1
       end
     end
 
@@ -36,7 +40,7 @@ module Capybara
     end
 
     def click_remove(front_interface)
-      front_interface ? click_button("Remove") : find(".remove-upload-item").click
+      front_interface ? click_on("Remove") : find(".remove-upload-item").click
     end
   end
 end

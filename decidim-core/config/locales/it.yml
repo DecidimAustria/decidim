@@ -167,10 +167,6 @@ it:
         error: Si è verificato un errore durante la modifica di questa risorsa.
         promote_button: Promuovi a %{model_name}
         promote_confirm_text: Sei sicuro di voler promuovere questa emendazione?
-      compare_draft:
-        continue: Prosegui
-        no_similars_found: Nessun emendamento simile trovato.
-        title: Emendamenti simili
       created:
         error: Si è verificato un errore durante la creazione della proposta di emendamento.
         success: La proposta di emendamento è stata creata con successo.
@@ -219,8 +215,11 @@ it:
       wizard_step_form:
         steps:
           '1': Crea il tuo emendamento
+<<<<<<< HEAD
           '2': Confronta il tuo emendamento
           '3': Completa il tuo emendamento
+=======
+>>>>>>> tags/v0.29.1
     anonymous_user: Anonimo
     application:
       document:
@@ -384,7 +383,6 @@ it:
           complete_profile: Completa il profilo
           nickname_help: Il tuo alias in %{organization} può contenere solo lettere, numeri, '-' e '_'.
           sign_up: Completa il tuo profilo
-          subtitle: Compila il modulo per completare la registrazione
           username_help: Nome pubblico che appare suoi tuoi post. Con l'obiettivo di garantire l'anonimato, può essere qualsiasi nome.
       registrations:
         new:
@@ -392,8 +390,6 @@ it:
           log_in: Accedi
           newsletter: Ricevi una newsletter occasionale con informazioni pertinenti
           newsletter_title: Autorizzazione di contatto
-          sign_up: Registrati
-          subtitle: Registrati per partecipare alle discussioni e sostenere le proposte.
           tos_agreement: Iscrivendoti accetti i %{link} e dichiari di aver preso visione della privacy policy.
           tos_title: Termini di servizio
           username_help: Nome "pubblico" che comparirà a firma di tutti i tuoi contributi e che sarà accessibile a tutti i navigatori, anche non iscritti alla piattaforma. Ti invitiamo a utilizzare un nome di fantasia per una maggiore tutela della riservatezza.
@@ -555,8 +551,6 @@ it:
           email_outro: Hai ricevuto questa notifica perché sei un amministratore della piattaforma.
           email_subject: Un gruppo di utenti ha aggiornato il suo profilo
           notification_title: Il gruppo utenti %{user_group_name} ha aggiornato il suo profilo, lasciandolo non verificato. Ora puoi verificarlo nel <a href="%{groups_admin_path}">pannello di amministratore</a>.
-      notification_event:
-        notification_title: Si è verificato un evento di <a href="%{resource_path}">%{resource_title}</a>.
       reports:
         resource_hidden:
           email_intro: Un amministratore ha rimosso il tuo %{resource_type} perché è stato segnalato come %{report_reasons}.
@@ -608,7 +602,6 @@ it:
       create:
         button: Segui
         error: C'è stato un errore seguendo questa risorsa.
-        participatory_space: Stai seguendo <span class="show-for-sr">%{resource_name}</span>
       destroy:
         button: Smetti di seguire
         error: Si è verificato un errore ad smettere questa risorsa.
@@ -624,7 +617,6 @@ it:
           message_2: Per le immagini, utilizzare preferibilmente immagini orizzontali, il servizio ritaglia l'immagine.
         image:
           explanation: 'Orientamenti per il file:'
-          message_1: Preferibilmente un'immagine orizzontale che non ha alcun testo.
           message_2: Il servizio ritaglia l'immagine.
       file_validation:
         allowed_file_extensions: 'Estensioni file consentite: %{extensions}'
@@ -699,7 +691,6 @@ it:
         default_page:
           content: "<p>In %{organization} puoi partecipare e decidere su diversi argomenti, attraverso gli spazi che vedi nel menu in alto: Processi, Assemblee, Iniziative, Consultazioni.</p> <p>All'interno di ognuna troverai diverse opzioni per partecipare: fare proposte - individualmente o con altre persone-, prendere parte ai dibattiti, dare la priorità ai progetti da attuare, partecipare alle riunioni faccia a faccia e altre azioni.</p>\n"
           title: Cosa posso fare in %{organization}?
-        title: Aiuto generale
     last_activities:
       all: Tutti i tipi di attività
       index:
@@ -903,8 +894,6 @@ it:
         metrics:
           headline: Partecipazione in cifre
           link: Mostra tutte le statistiche
-    participatory_space_private_users:
-      not_allowed: Non sei autorizzato a visualizzare questo contenuto
     profile:
       deleted: Utente eliminato
     profiles:
@@ -1022,8 +1011,6 @@ it:
         title: Segnala utente inappropriato
       floating_help:
         help: Aiuto
-      login_modal:
-        sign_up: Registrazione
       participatory_space_filters:
         filters:
           areas: Ambiti territoriali
@@ -1190,8 +1177,6 @@ it:
       updated_not_active: La tua password è stata cambiata con successo.
     registrations:
       destroyed: Ciao! Il tuo account è stato cancellato con successo. Speriamo di rivederti presto.
-      new:
-        sign_up: Iscriviti
       signed_up: Benvenuto! Ti sei registrato con successo.
       signed_up_but_inactive: Ti sei registrato con successo. Tuttavia, non siamo riusciti ad accedere perché il tuo account non è ancora attivo.
       signed_up_but_locked: Ti sei registrato con successo. Tuttavia, non siamo riusciti ad accedere perché il tuo account è bloccato.
@@ -1206,7 +1191,10 @@ it:
         back: Indietro
         forgot_your_password: Hai dimenticato la password?
         log_in: Accedi
+<<<<<<< HEAD
         sign_up: Iscriviti
+=======
+>>>>>>> tags/v0.29.1
       minimum_password_length:
         one: "(Minimo%{count} caratteri)"
         other: "(Minimo%{count} caratteri)"
@@ -1227,7 +1215,6 @@ it:
       invalid_time_zone: non è un fuso orario valido
       long_words: contiene parole troppo lunghe (oltre 35 caratteri)
       must_start_with_caps: deve iniziare con una lettera maiuscola
-      not_found: non è stato trovato. Ti sei iscritto in precedenza?
       not_locked: non era bloccato
       not_saved:
         one: 'Si è verificato un errore durante l''elaborazione della tua richiesta:'
@@ -1259,7 +1246,6 @@ it:
         download_open_data: Scarica i file Open Data
         log_in: Accedi
         made_with_open_source: Sito web creato con <a target="_blank" href="https://github.com/decidim/decidim">software libero</a>.
-        sign_up: Registrati
       header:
         log_in: Accedi
         main_menu: Menù principale

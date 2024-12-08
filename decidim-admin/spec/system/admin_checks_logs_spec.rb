@@ -12,14 +12,14 @@ describe "Admin checks logs" do
     switch_to_host(organization.host)
     login_as user, scope: :user
     visit decidim_admin.root_path
-    click_link "Admin activity log"
+    click_on "Admin activity log"
   end
 
   it "lists all recent logs" do
     expect(page).to have_content("Admin log")
 
     within ".logs.table" do
-      expect(page).to have_selector("div.logs__log", count: 3)
+      expect(page).to have_css("div.logs__log", count: 3)
     end
   end
 
@@ -62,7 +62,7 @@ describe "Admin checks logs" do
         end
 
         within ".logs.table" do
-          expect(page).to have_selector("div.logs__log", count: 1)
+          expect(page).to have_css("div.logs__log", count: 1)
         end
       end
     end
@@ -78,35 +78,39 @@ describe "Admin checks logs" do
 
       it "lists only logs after the start time or at the same minute" do
         within ".filters__section" do
-          fill_in :q_created_at_dtgteq, with: Time.zone.local(2022, 6, 22, 9, 10)
+          fill_in_datepicker :q_created_at_dtgteq_date, with: "22/06/2022"
+          fill_in_timepicker :q_created_at_dtgteq_time, with: "09:10"
           find("*[type=submit]").click
         end
 
         within ".logs.table" do
-          expect(page).to have_selector("div.logs__log", count: 2)
+          expect(page).to have_css("div.logs__log", count: 2)
         end
       end
 
       it "lists only logs before the end time or at the same minute" do
         within ".filters__section" do
-          fill_in :q_created_at_dtlteq, with: Time.zone.local(2022, 6, 22, 9, 10)
+          fill_in_datepicker :q_created_at_dtlteq_date, with: "22/06/2022"
+          fill_in_timepicker :q_created_at_dtlteq_time, with: "09:10"
           find("*[type=submit]").click
         end
 
         within ".logs.table" do
-          expect(page).to have_selector("div.logs__log", count: 2)
+          expect(page).to have_css("div.logs__log", count: 2)
         end
       end
 
       it "lists only logs between the start time and the end time or at the same minutes" do
         within ".filters__section" do
-          fill_in :q_created_at_dtgteq, with: Time.zone.local(2022, 6, 22, 8, 9)
-          fill_in :q_created_at_dtlteq, with: Time.zone.local(2022, 6, 22, 9, 10)
+          fill_in_datepicker :q_created_at_dtgteq_date, with: "22/06/2022"
+          fill_in_timepicker :q_created_at_dtgteq_time, with: "08:09"
+          fill_in_datepicker :q_created_at_dtlteq_date, with: "22/06/2022"
+          fill_in_timepicker :q_created_at_dtlteq_time, with: "09:10"
           find("*[type=submit]").click
         end
 
         within ".logs.table" do
-          expect(page).to have_selector("div.logs__log", count: 2)
+          expect(page).to have_css("div.logs__log", count: 2)
         end
       end
     end
@@ -130,7 +134,7 @@ describe "Admin checks logs" do
         end
 
         within ".logs.table" do
-          expect(page).to have_selector("div.logs__log", count: 1)
+          expect(page).to have_css("div.logs__log", count: 1)
         end
 
         within ".filters__section" do
@@ -139,7 +143,7 @@ describe "Admin checks logs" do
         end
 
         within ".logs.table" do
-          expect(page).to have_selector("div.logs__log", count: 1)
+          expect(page).to have_css("div.logs__log", count: 1)
         end
       end
 
@@ -150,7 +154,7 @@ describe "Admin checks logs" do
         end
 
         within ".logs.table" do
-          expect(page).to have_selector("div.logs__log", count: 1)
+          expect(page).to have_css("div.logs__log", count: 1)
         end
       end
 
@@ -161,7 +165,7 @@ describe "Admin checks logs" do
         end
 
         within ".logs.table" do
-          expect(page).to have_selector("div.logs__log", count: 1)
+          expect(page).to have_css("div.logs__log", count: 1)
         end
       end
     end

@@ -97,6 +97,11 @@ cs:
   decidim:
     admin:
       filters:
+        accepted_at_not_null:
+          label: Přijato
+          values:
+            'false': Nepřijato
+            'true': Přijato
         meetings:
           category_id_eq:
             label: Kategorie
@@ -124,6 +129,18 @@ cs:
               hybrid: Hybridní
               in_person: Osobně
               online: Online
+        rejected_at_not_null:
+          label: Odmítnuto
+          values:
+            'false': Neodmítnuto
+            'true': Odmítnuto
+        search_placeholder:
+          user_name_or_user_email_cont: Hledat podle jména nebo e-mailu
+        sent_at_not_null:
+          label: Odesláno
+          values:
+            'false': Neodesláno
+            'true': Odesláno
       meeting_copies:
         create:
           error: Bylo zde chyba, že se tato schůzka zdvojnásobila.
@@ -290,15 +307,9 @@ cs:
             non_user: Neexistující uživatel
             select_user: Vyberte uživatele
           index:
-            filter:
-              accepted: Přijato
-              all: Vše
-              rejected: Odmítnuto
-              sent: Odeslaná
             invite_attendee: Pozvat účastníka
             invites: Pozvánky
             registrations_disabled: Nemůžete pozvat účastníka, protože registrace jsou blokovány.
-            search: Vyhledávání
         meeting_closes:
           edit:
             close: Zavřít
@@ -362,6 +373,13 @@ cs:
           update:
             invalid: Při aktualizaci této schůze došlo k chybě.
             success: Anketa ke schůzi byla úspěšně aktualizována.
+        poll:
+          form:
+            announcement_html:
+              - Pokud otázka obdrží odpovědi nebo je zveřejněna/uzavřena, již ji nelze upravovat.
+              - Otázku můžete kdykoliv přidat.
+              - Průzkum bude ukončen po zveřejnění výsledků všech vytvořených otázek.
+              - Navštivte <a href='%{admin_link}'>stránku administrace anket</a> pro odeslání dotazů a publikování výsledků.
         registrations:
           edit:
             save: Uložit
@@ -425,7 +443,7 @@ cs:
           body: Schůzka <a href="%{meeting_path}">"%{meeting_title}"</a> čeká na ukončení. Přidejte prosím zprávu o schůzce pomocí tlačítka "Zavřít schůzku".
           greetings: Dobrý den,<br/>%{organization_name}<br/><a href="%{organization_url}">%{organization_url}</a>
           hello: Dobrý den %{username},
-          subject: Nyní můžete svou schůzku uzavřít se zprávou o platformě %{organization_name}
+          subject: Nyní můžete schůzku "%{meeting_title}" ukončit s hlášením
       conference_venues: Konferenční prostory
       content_blocks:
         upcoming_meetings:
@@ -442,16 +460,14 @@ cs:
       iframe_embed_type:
         embed_in_meeting_page: Vložit do stránky schůzky
         none: Žádný
-        open_in_live_event_page: Otevřít na stránce živé události (s volitelnými anketami)
+        open_in_live_event_page: Otevřít na stránce živé události
         open_in_new_tab: Otevřít URL v nové kartě
       last_activity:
         meeting_updated: 'Schůze aktualizována:'
         new_meeting: 'Nová schůze:'
       layouts:
         live_event:
-          administrate: Spravovat
           close: zavřít
-          questions: Otázky
       mailer:
         invite_join_meeting_mailer:
           invite:
@@ -534,6 +550,8 @@ cs:
           edit_close_meeting: Upravit zprávu schůzky
           edit_meeting: Upravit schůzku
           join_meeting: Připojit se ke schůzce
+          reply_poll: Odpověď ankety
+          view_poll: Zobrazit anketu
         meetings:
           no_meetings_warning: Žádná schůzka neodpovídá vašim kritériím nebo není naplánována žádná schůzka.
           upcoming_meetings_warning: V současné době neexistují žádné plánované schůzky, ale naleznete zde všechny minulé schůzky.
@@ -594,13 +612,22 @@ cs:
             start_time: Datum zahájení
             title: Titul
       polls:
+        answers:
+          index:
+            administrate: Spravovat
+            title: Anketa
+          index_admin:
+            back_to_meeting: Zpět na schůzku
+            title: Správa ankety
+            view_poll: Zobrazit anketu
         questions:
           closed_question:
-            question_results: Výsledky otázek
+            announcement: Odpovědi na tuto otázku byly uzavřeny.
+            question: Otázka
+            question_results: Výsledky
           index:
             empty_questions: Během této schůzky budou zaslány některé dotazy a vy na ně budete moci odpovědět. Zobrazí se zde.
           index_admin:
-            admin_dashboard: Řídicí panel administrace
             edit: Upravit v panelu administrace
             question: Otázka
             received_answer: přijatá odpověď
@@ -608,6 +635,10 @@ cs:
             results: Výsledky
             send: Odeslat
             sent: Odesláno
+            statuses:
+              closed: Výsledky byly odeslány (uzavřeny)
+              published: Odesláno (otevřeno)
+              unpublished: Čeká na odeslání
           published_question:
             max_choices_alert: Je vybráno příliš mnoho možností
             question: Otázka

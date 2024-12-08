@@ -82,7 +82,10 @@ ar:
           update: "%{user_name} تحديث المشروع %{resource_name} في %{space_name} الفضاء"
       budget_information_modal:
         continue: مواصلة
+<<<<<<< HEAD
         more_information: المزيد من المعلومات
+=======
+>>>>>>> tags/v0.29.1
       budgets_list:
         budgets: الميزانيات
       models:

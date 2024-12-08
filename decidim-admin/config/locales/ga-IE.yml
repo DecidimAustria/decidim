@@ -315,9 +315,12 @@ ga:
         form:
           images:
             preview: Réamhamharc
+<<<<<<< HEAD
       organization_external_domain_whitelist:
         edit:
           update: Nuashonraigh
+=======
+>>>>>>> tags/v0.29.1
       participatory_space_private_users:
         new:
           create: Cruthaigh

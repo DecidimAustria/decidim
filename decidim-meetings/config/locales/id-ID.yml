@@ -175,11 +175,13 @@ id:
             non_user: Pengguna tidak ada
             select_user: Pilih pengguna
           index:
+<<<<<<< HEAD
             filter:
               sent: Terkirim
+=======
+>>>>>>> tags/v0.29.1
             invite_attendee: Undang hadirin
             invites: Undangan
-            search: Pencarian
         meeting_closes:
           edit:
             close: Dekat

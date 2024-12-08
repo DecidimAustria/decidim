@@ -262,7 +262,10 @@ pt-BR:
         initiatives_types:
           create:
             error: Ocorreu um erro.
+<<<<<<< HEAD
             success: Um novo tipo de iniciativa foi criado com sucesso.
+=======
+>>>>>>> tags/v0.29.1
           edit:
             update: Atualizar
           form:
@@ -492,7 +495,6 @@ pt-BR:
           other: " assinaturas"
         vote_cabin:
           already_voted: Já assinadas
-          supports_required: "São necessárias %{total_supports} assinaturas"
           verification_required: Confirme sua conta para assinar a iniciativa
           vote: Placa
           votes_blocked: Assinatura desativada

@@ -319,14 +319,16 @@ pt:
             non_user: Participante inexistente
             select_user: Selecione participante
           index:
+<<<<<<< HEAD
             filter:
               accepted: Aceite
               all: Todos
               rejected: Rejeitado
               sent: Enviado
+=======
+>>>>>>> tags/v0.29.1
             invite_attendee: Convidar participante
             invites: Convites
-            search: Pesquisar
           new:
             invite: Convidar
             new_invite: Convidar participante

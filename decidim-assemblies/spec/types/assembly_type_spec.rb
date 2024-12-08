@@ -161,14 +161,6 @@ module Decidim
         end
       end
 
-      describe "showStatistics" do
-        let(:query) { "{ showStatistics }" }
-
-        it "returns the showStatistics field" do
-          expect(response["showStatistics"]).to eq(model.show_statistics)
-        end
-      end
-
       describe "scopesEnabled" do
         let(:query) { "{ scopesEnabled }" }
 
@@ -265,7 +257,7 @@ module Decidim
       context "when there is type" do
         let(:model) { create(:assembly, :with_type) }
 
-        describe "assemblyeType" do
+        describe "assemblyType" do
           let(:query) { "{ assemblyType { id } }" }
 
           it "returns the assemblyType field" do

@@ -51,7 +51,6 @@ de:
         scope_id: Umfang
         scopes_enabled: Bereiche aktiviert
         short_description: Kurze Beschreibung
-        show_statistics: Zeige Statistiken
         slug: URL-Block
         special_features: Besondere Merkmale
         subtitle: Untertitel
@@ -297,7 +296,11 @@ de:
             slug_help_html: 'URL-Slugs werden zum Generieren der URLs verwendet, die auf dieses Gremium verweisen. Akzeptiert werden nur Buchstaben, Zahlen und Bindestriche und es muss mit einem Buchstaben beginnen. Beispiel: %{url}'
             social_handlers: Sozial
             title: Allgemeine Information
+<<<<<<< HEAD
             visbility: Sichtbarkeit
+=======
+            visibility: Sichtbarkeit
+>>>>>>> tags/v0.29.1
         assemblies_types:
           form:
             title: Titel
@@ -311,7 +314,7 @@ de:
           form:
             existing_user: Existierender Benutzer
             explanation: 'Hinweise für das Bild:'
-            image_guide: Vorzugsweise ein Bild im Querformat, das keinen Text enthält.
+            image_guide: Vorzugsweise ein Portraitbild, das keinen Text enthält.
             non_user: Nichtbenutzer
             non_user_avatar_help: Sie sollten die Zustimmung der Personen einholen, bevor Sie sie als Mitglied veröffentlichen.
             select_a_position: Wählen Sie eine Position
@@ -397,11 +400,13 @@ de:
       show:
         assembly_type: Montageart
         duration: Aktiv bis
+<<<<<<< HEAD
         is_transparent:
           'false': undurchsichtig
           'true': transparent
+=======
+>>>>>>> tags/v0.29.1
         private_space: Dies ist eine private Versammlung
-        related_participatory_processes: Ähnliche Beteiligungsprozesse
         social_networks_title: Gremium besuchen unter
     assembly_members:
       assembly_member:

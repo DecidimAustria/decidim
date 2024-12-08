@@ -245,6 +245,7 @@ he:
           search: חיפוש פעולה
         show:
           stats:
+<<<<<<< HEAD
             attendees: משתתפים.ות
             back_to_resource: בחזרה לתוצאות
             comments: תגובות
@@ -254,6 +255,9 @@ he:
             meetings: פגישות
             proposals: הצעות
             votes: תמיכה
+=======
+            back_to_resource: בחזרה לתוצאות
+>>>>>>> tags/v0.29.1
         timeline:
           title: אבולוציה של הפרויקט
     admin:
@@ -272,6 +276,7 @@ he:
         name: אחריותיות
         settings:
           global:
+<<<<<<< HEAD
             categories_label: שם ל"קטגוריות"
             comments_enabled: איפשור תגובות
             comments_max_length: אורך מקסימלי להערות (השאירו 0 לערך ברירת המחדל)
@@ -282,6 +287,14 @@ he:
             scope_id: היקף
             scopes_enabled: היקפים מאופשרים
             subcategories_label: שם ל"תתי קטוגריות"
+=======
+            comments_enabled: איפשור תגובות
+            comments_max_length: אורך מקסימלי להערות (השאירו 0 לערך ברירת המחדל)
+            display_progress_enabled: הצגת התקדמות
+            intro: הקדמה
+            scope_id: היקף
+            scopes_enabled: היקפים מאופשרים
+>>>>>>> tags/v0.29.1
           step:
             comments_blocked: תגובות חסומות
     events:

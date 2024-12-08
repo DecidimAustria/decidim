@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require "decidim/dev/needs_development_tools"
+
 module Decidim
   module Dev
     # Decidim's development Rails Engine.
@@ -27,6 +29,18 @@ module Decidim
         Decidim.register_assets_path File.expand_path("app/packs", root)
       end
 
+<<<<<<< HEAD
+=======
+      initializer "decidim_dev.middleware.test_map_server" do |app|
+        next unless Rails.env.test?
+
+        require "decidim/dev/test/map_server"
+
+        # Add the test map server as the first middleware in the stack
+        app.config.middleware.insert_before 0, Decidim::Dev::Test::MapServer
+      end
+
+>>>>>>> tags/v0.29.1
       initializer "decidim_dev.moderation_content" do
         config.to_prepare do
           ActiveSupport::Notifications.subscribe("decidim.admin.block_user:after") do |_event_name, data|

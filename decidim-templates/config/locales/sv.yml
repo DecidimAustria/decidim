@@ -72,8 +72,13 @@ sv:
           index:
             component_constraint: Lägg till villkor
             confirm_delete: Är du säker på att du vill ta bort mallen?
+<<<<<<< HEAD
             global_scope: Globalt (tillgängligt överallt)
             internal_state: Intern status
+=======
+            missing_state: Status saknas
+            proposal_state_id: Intern status
+>>>>>>> tags/v0.29.1
             title: Svar på förslag
           new:
             title: Ny mall för svar på förslag

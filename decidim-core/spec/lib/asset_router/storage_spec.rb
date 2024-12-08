@@ -18,7 +18,11 @@ module Decidim::AssetRouter
 
       context "with an ActiveStorage::Attached" do
         it "creates the disk service route to the blob" do
+<<<<<<< HEAD
           ActiveStorage::Current.host = "http://localhost:#{default_port}"
+=======
+          ActiveStorage::Current.url_options = { host: "http://localhost:#{default_port}" }
+>>>>>>> tags/v0.29.1
           expect(subject).to match(%r{^http://localhost:#{default_port}/rails/active_storage/disk/[^/]+/avatar\.jpg$})
         end
 
@@ -49,7 +53,11 @@ module Decidim::AssetRouter
         let(:asset) { organization.official_img_footer.blob }
 
         it "creates the disk service route to the blob" do
+<<<<<<< HEAD
           ActiveStorage::Current.host = "http://localhost:#{default_port}"
+=======
+          ActiveStorage::Current.url_options = { host: "http://localhost:#{default_port}" }
+>>>>>>> tags/v0.29.1
           expect(subject).to match(%r{^http://localhost:#{default_port}/rails/active_storage/disk/[^/]+/avatar\.jpg$})
         end
 

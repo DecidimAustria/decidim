@@ -68,6 +68,7 @@ cs:
         show:
           admins: Administrátoři
           current_organizations: Aktuální organizace
+          system_checks: Kontroly systému
       default_pages:
         placeholders:
           content: Přidejte smysluplný obsah na statickou stránku %{page} na ovládacím panelu administrátora.
@@ -88,7 +89,7 @@ cs:
             did_not_receive_unlock_instructions?: Neobdrželi jste instrukce pro odemknutí?
             forgot_your_password?: Zapomněli jste heslo?
             log_in: Přihlásit se
-            sign_up: Zaregistrovat se
+            sign_up: Vytvořit účet
       menu:
         admins: Správci
         dashboard: Ovládací panel
@@ -260,8 +261,8 @@ cs:
           success: Organizace byla úspěšně aktualizována.
         users_registration_mode:
           disabled: Přístup lze provádět pouze s externími účty
-          enabled: Umožnit uživatelům registraci a přihlášení
-          existing: Neumožnit účastníkům registraci, ale umožnit stávajícím účastníkům přihlášení
+          enabled: Povolit účastníkům vytvořit účet a přihlásit se
+          existing: Nepovolovat účastníkům vytvářet účet, ale umožnit stávajícím účastníkům přihlásit se
       shared:
         notices:
           no_organization_warning_html: Abyste mohli začít, musíte vytvořit organizaci. Před pokračováním se ujistěte, že jste si přečetli %{guide}.
@@ -269,6 +270,14 @@ cs:
         organizations_list:
           confirm_resend_invitation: Opravdu chcete znovu odeslat pozvánku?
           resend_invitation: Znovu odeslat pozvánku
+      system_checks:
+        active_job_queue:
+          decidim_documentation: Dokumentace Decidim
+          error: Fronta ActiveJob není nakonfigurována. Toto není doporučené provozní nastavení. Přečtěte si více na %{error_extra}.
+          success: Fronta ActiveJob je nakonfigurována správně.
+        secret_key:
+          error: 'Tajný klíč není správně definován. Uložte prosím do proměnné prostředí SECRET_KEY_BASE a restartujte server: %{error_extra}'
+          success: Tajný klíč je správně nakonfigurován.
       titles:
         dashboard: Ovládací panel
         decidim: Decidim

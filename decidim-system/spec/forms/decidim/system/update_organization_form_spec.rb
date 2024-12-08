@@ -6,7 +6,11 @@ module Decidim::System
   describe UpdateOrganizationForm do
     subject do
       described_class.new(
+<<<<<<< HEAD
         name: "Gotham City",
+=======
+        name: { ca: "", en: "Gotham City", es: "" },
+>>>>>>> tags/v0.29.1
         host: "decide.example.org",
         secondary_hosts: "foo.example.org\r\n\r\nbar.example.org",
         reference_prefix: "JKR",
@@ -137,17 +141,17 @@ module Decidim::System
           },
           file_upload_settings: {
             allowed_file_extensions: {
-              "default" => %w(jpg jpeg),
-              "admin" => %w(jpg jpeg png),
-              "image" => %w(jpg jpeg png)
+              default: %w(jpg jpeg),
+              admin: %w(jpg jpeg png),
+              image: %w(jpg jpeg png)
             },
-            "allowed_content_types" => {
-              "default" => %w(image/*),
-              "admin" => %w(image/*)
+            allowed_content_types: {
+              default: %w(image/*),
+              admin: %w(image/*)
             },
-            "maximum_file_size" => {
-              "default" => 7.2,
-              "avatar" => 2.4
+            maximum_file_size: {
+              default: 7.2,
+              avatar: 2.4
             }
           }
         )

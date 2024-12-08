@@ -45,7 +45,10 @@ hu:
           form:
             save: Mentés
           index:
+<<<<<<< HEAD
             global_scope: Globális
+=======
+>>>>>>> tags/v0.29.1
             title: Javaslat válaszok
         questionnaire_templates:
           choose:

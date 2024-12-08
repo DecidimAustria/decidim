@@ -72,8 +72,13 @@ pl:
           index:
             component_constraint: Dodaj ograniczenie
             confirm_delete: Czy na pewno chcesz usunąć ten szablon?
+<<<<<<< HEAD
             global_scope: Globalny (dostępny wszędzie)
             internal_state: Stan wewnętrzny
+=======
+            missing_state: Brakujący stan
+            proposal_state_id: Stan wewnętrzny
+>>>>>>> tags/v0.29.1
             title: Odpowiedzi na propozycję
           new:
             title: Nowy szablon odpowiedzi na propozycję

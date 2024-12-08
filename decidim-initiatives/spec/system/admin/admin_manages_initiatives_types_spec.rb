@@ -22,7 +22,7 @@ describe "Admin manages initiatives types" do
 
   context "when creating an initiative type" do
     it "creates the initiative type" do
-      click_link "New initiative type"
+      click_on "New initiative type"
 
       fill_in_i18n(
         :initiatives_type_title,
@@ -40,7 +40,7 @@ describe "Admin manages initiatives types" do
 
       dynamically_attach_file(:initiatives_type_banner_image, Decidim::Dev.asset("city2.jpeg"))
 
-      click_button "Create"
+      click_on "Create"
 
       expect(page).to have_admin_callout("A new initiative type has been successfully created")
 
@@ -51,7 +51,7 @@ describe "Admin manages initiatives types" do
 
   context "when updating an initiative type" do
     it "updates the initiative type" do
-      within find("tr", text: translated(initiatives_type.title)) do
+      within "tr", text: translated(initiatives_type.title) do
         page.find(".action-icon--edit").click
       end
 
@@ -73,7 +73,7 @@ describe "Admin manages initiatives types" do
       check "Enable authors to choose the area for their initiative"
       uncheck "Enable comments"
 
-      click_button "Update"
+      click_on "Update"
 
       expect(page).to have_admin_callout("The initiative type has been successfully updated")
 
@@ -84,7 +84,7 @@ describe "Admin manages initiatives types" do
 
   context "when deleting an initiative type" do
     it "deletes the initiative type" do
-      within find("tr", text: translated(initiatives_type.title)) do
+      within "tr", text: translated(initiatives_type.title) do
         accept_confirm do
           page.find(".action-icon--remove").click
         end

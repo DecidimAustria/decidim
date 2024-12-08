@@ -11,17 +11,25 @@ shared_context "when inviting process users" do
 
     visit decidim_admin_participatory_processes.participatory_process_user_roles_path(participatory_process)
     within "[data-content]" do
-      click_link "New process admin"
+      click_on "New process admin"
     end
 
     fill_in "Name", with: "Alice Liddel"
     fill_in "Email", with: email
     select role, from: "Role"
+<<<<<<< HEAD
     click_button "Create"
     expect(page).to have_content("successfully added to this participatory process")
     logout :user
     visit decidim.root_path
     expect(page).to have_content(organization.name)
+=======
+    click_on "Create"
+    expect(page).to have_content("successfully added to this participatory process")
+    logout :user
+    visit decidim.root_path
+    expect(page).to have_content(translated(organization.name))
+>>>>>>> tags/v0.29.1
   end
 
   def edit_user(username)

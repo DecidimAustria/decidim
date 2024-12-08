@@ -9,7 +9,7 @@ shared_examples "manage conference speakers examples" do
     login_as user, scope: :user
     visit decidim_admin_conferences.edit_conference_path(conference)
     within_admin_sidebar_menu do
-      click_link "Speakers"
+      click_on "Speakers"
     end
   end
 
@@ -21,7 +21,11 @@ shared_examples "manage conference speakers examples" do
 
   context "without existing user" do
     it "creates a new conference speaker", versioning: true do
+<<<<<<< HEAD
       click_link "New speaker"
+=======
+      click_on "New speaker"
+>>>>>>> tags/v0.29.1
 
       within ".new_conference_speaker" do
         fill_in(:conference_speaker_full_name, with: attributes[:full_name])
@@ -47,7 +51,7 @@ shared_examples "manage conference speakers examples" do
     let!(:speaker_user) { create(:user, organization: conference.organization) }
 
     it "creates a new conference speaker" do
-      click_link "New speaker"
+      click_on "New speaker"
 
       within ".new_conference_speaker" do
         select "Existing participant", from: :conference_speaker_existing_user
@@ -71,8 +75,13 @@ shared_examples "manage conference speakers examples" do
     end
 
     it "updates a conference speaker", versioning: true do
+<<<<<<< HEAD
       within find("#conference_speakers tr", text: conference_speaker.full_name) do
         click_link "Edit"
+=======
+      within "#conference_speakers tr", text: conference_speaker.full_name do
+        click_on "Edit"
+>>>>>>> tags/v0.29.1
       end
 
       within ".edit_conference_speaker" do
@@ -95,14 +104,14 @@ shared_examples "manage conference speakers examples" do
     end
 
     it "deletes the conference speaker" do
-      within find("#conference_speakers tr", text: conference_speaker.full_name) do
+      within "#conference_speakers tr", text: conference_speaker.full_name do
         accept_confirm { find("a.action-icon--remove").click }
       end
 
       expect(page).to have_admin_callout("successfully")
 
       within "#conference_speakers table" do
-        expect(page).not_to have_content(conference_speaker.full_name)
+        expect(page).to have_no_content(conference_speaker.full_name)
       end
     end
   end

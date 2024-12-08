@@ -17,8 +17,6 @@ module Decidim
   # The `model` is expected to be a resource with HasAttachments concern
   #
   class TabPanelsCell < Decidim::ViewModel
-    include IconHelper
-
     def show
       return if model.blank?
 
@@ -35,6 +33,18 @@ module Decidim
 
     def panels
       @panels ||= items.map { |item| item.slice(:id, :method, :args) }
+    end
+
+    def selected_tab
+      @selected_tab ||= items.find { |item| item[:selected] }
+    end
+
+    def selected?(tab, index)
+      if selected_tab
+        tab[:id] == selected_tab[:id]
+      else
+        index.zero?
+      end
     end
   end
 end

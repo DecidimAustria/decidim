@@ -19,8 +19,6 @@ module Decidim
   #   - `callout_class`: The Css class to apply
   #
   class AnnouncementCell < Decidim::ViewModel
-    include Decidim::SanitizeHelper
-
     def show
       return if blank_content?
 
@@ -39,6 +37,12 @@ module Decidim
 
     def text
       has_title? ? clean_body : clean_announcement
+    end
+
+    def css_styles
+      return unless options[:callout_styles]
+
+      options[:callout_styles]
     end
 
     def css_class

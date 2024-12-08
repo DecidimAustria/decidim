@@ -23,6 +23,7 @@ module Decidim
         it "returns an URL including the organization domain" do
           expect(subject.hero_image_url).to include(process.organization.host)
           expect(subject.hero_image_url).to be_blob_url(process.hero_image.blob)
+<<<<<<< HEAD
         end
       end
     end
@@ -42,6 +43,8 @@ module Decidim
         it "returns an URL including the organization domain" do
           expect(subject.banner_image_url).to include(process.organization.host)
           expect(subject.banner_image_url).to be_blob_url(process.banner_image.blob)
+=======
+>>>>>>> tags/v0.29.1
         end
       end
     end

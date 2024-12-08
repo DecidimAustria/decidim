@@ -289,7 +289,6 @@ ar:
         title: تضارب التحقق
         transfer:
           email: البريد الإلكتروني
-          error: كانت هناك مشكلة في نقل المشارك الحالي إلى مشارك مُدار.
           name: الإسم
           reason: السبب
           success: قد اكتمل النقل الحالي بنجاح.
@@ -364,7 +363,6 @@ ar:
           report_count_eq: عدد التقارير يساوى
           reported_id_string_or_reported_content_cont: البحث عن %{collection} بواسطة رقم-مُعرف أو بالمحتوى.
           title_cont: البحث عن %{collection} بحسب العنوان.
-          user_name_or_user_email_cont: البحث عن %{collection} حسب الاسم أو البريد الإلكتروني.
           user_name_or_user_nickname_or_user_email_cont: البحث عن %{collection} بحسب عنوان البريد الإكتروني أو الإسم أو الإسم المستعار.
         state_eq:
           label: الحالة
@@ -670,11 +668,14 @@ ar:
             layout_appearance_title: تحرير مظهر التخطيط
             preview: معاينة
           omnipresent_banner_appearance_title: تحرير لافتة في كل مكان
+<<<<<<< HEAD
       organization_external_domain_whitelist:
         edit:
           update: تحديث
         form:
           add: إضافة إلى القائمة البيضاء
+=======
+>>>>>>> tags/v0.29.1
       participatory_space_private_users:
         create:
           error: حدثت مشكلة أثناء إضافة مشارك خاص لهذه المساحة التشاركية.

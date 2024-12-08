@@ -127,6 +127,12 @@ eu:
         new:
           create: Sortu
           title: Beste hizlari bat.
+        publish:
+          invalid: Arazo bat izan zen hizlari hau argitaratzean.
+          success: Hizlaria behar bezala argitaratua.
+        unpublish:
+          invalid: Arazo bat izan da hizlari hau despublikatzean.
+          success: Hizlaria behar bezala despublikatua.
         update:
           error: Arazo bat egon da hizlari hau eguneratzean.
           success: Hizlaria zuzen eguneratua hitzaldi honetarako.
@@ -348,14 +354,16 @@ eu:
             non_user: Parte-hartzailea ez dago
             select_user: Aukeratu erabiltzailea
           index:
+<<<<<<< HEAD
             filter:
               accepted: Onartua
               all: guztiak
               rejected: Baztertua
               sent: bidalia
+=======
+>>>>>>> tags/v0.29.1
             invite_attendee: Gonbidatu parte-hartzailea
             invites: Gonbidapenak
-            search: Bilatu
           new:
             explanation: Parte-hartzailea gonbidatuko da hitzaldi batera lotzera. Bere posta elektronikoa erregistratuta ez badago, erakundera ere gonbidatuko dute.
             invite: gonbidatu

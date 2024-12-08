@@ -235,15 +235,7 @@ bg:
           search: Търсене на действия
         show:
           stats:
-            attendees: Присъстващи
             back_to_resource: Върни се към резултата
-            comments: Коментари
-            contributions: Предложения
-            last_edited_by: Последна промяна на
-            last_updated_at: Последно обновен на
-            meetings: Срещи
-            proposals: Предложения
-            votes: Поддръжки
         timeline:
           title: Развитие на проекта
     admin:
@@ -262,16 +254,12 @@ bg:
         name: Отговорност
         settings:
           global:
-            categories_label: Име за "категории"
             comments_enabled: Коментарите са разрешени
             comments_max_length: Максимална дължина на коментарите (Оставете 0 за стойност по подразбиране)
             display_progress_enabled: Показвай развитието
-            heading_leaf_level_results: Име за "Проекти"
-            heading_parent_level_results: Име за "Резултати"
             intro: Въведение
             scope_id: Сфера
             scopes_enabled: Сферите са разрешени
-            subcategories_label: Име за "подкатегории"
           step:
             comments_blocked: Коментарите са блокирани
     events:

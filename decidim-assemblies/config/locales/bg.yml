@@ -51,7 +51,10 @@ bg:
         scope_id: Обхват
         scopes_enabled: Обхватите са активирани
         short_description: Кратко описание
+<<<<<<< HEAD
         show_statistics: Покажи статистиката
+=======
+>>>>>>> tags/v0.29.1
         slug: Съкратен URL
         special_features: Специални функции
         subtitle: Подзаглавие
@@ -296,7 +299,11 @@ bg:
             slug_help_html: 'Използват се променливи полета в URL адреса, за да се генерират URL адреси, които водят към това събрание. Допуска се използването само на букви, цифри и тирета и адресът трябва да започва с буква. Пример: %{url}'
             social_handlers: Социални мрежи
             title: Основна информация
+<<<<<<< HEAD
             visbility: Видимост
+=======
+            visibility: Видимост
+>>>>>>> tags/v0.29.1
         assemblies_types:
           form:
             title: Редактиране на типа събрание
@@ -310,7 +317,11 @@ bg:
           form:
             existing_user: Съществуващ участник
             explanation: 'Указания за изображението:'
+<<<<<<< HEAD
             image_guide: За предпочитане използвайте хоризонтално изображение без текст.
+=======
+            image_guide: За предпочитане е портретно (вертикално) изображение без текст.
+>>>>>>> tags/v0.29.1
             non_user: Не е участник
             non_user_avatar_help: Трябва да получите съгласието на лицата, преди да ги публикувате като членове.
             select_a_position: Изберете длъжност
@@ -396,11 +407,15 @@ bg:
       show:
         assembly_type: Тип събрание
         duration: Продължителност
+<<<<<<< HEAD
         is_transparent:
           'false': непрозрачно
           'true': прозрачно
         private_space: Това е частно събрание
         related_participatory_processes: Свързани процеси за участие
+=======
+        private_space: Това е частно събрание
+>>>>>>> tags/v0.29.1
         social_networks_title: Посетете събранието на
     assembly_members:
       assembly_member:

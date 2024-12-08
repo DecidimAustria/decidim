@@ -5,7 +5,6 @@ it:
       participatory_process:
         announcement: Avviso
         area_id: Area
-        banner_image: Immagine del banner
         copy_categories: Copia le categorie
         copy_components: Copia le componenti
         copy_steps: Copia le fasi
@@ -28,8 +27,6 @@ it:
         scope_type_max_depth_id: Profondità del filtro dell'ambito
         scopes_enabled: Gli ambiti abilitati
         short_description: Descrizione breve
-        show_metrics: Mostra tutte le statistiche
-        show_statistics: Mostra statistiche
         slug: Stringa URL
         start_date: Data di inizio
         subtitle: Sottotitolo
@@ -348,7 +345,6 @@ it:
             select_an_area: Seleziona un'area
             select_process_group: Seleziona un gruppo di processi
             title: Informazioni generali
-            visbility: Visibilità
       content_blocks:
         highlighted_processes:
           name: Processi evidenziati

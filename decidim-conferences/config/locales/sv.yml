@@ -114,6 +114,11 @@ sv:
         new:
           create: Skapa
           title: Ny talare.
+        publish:
+          success: Konferensens talare har publicerats.
+        unpublish:
+          invalid: Det gick inte att avpublicera talaren.
+          success: Konferensens talare har avpublicerats.
         update:
           error: Det gick inte att uppdatera talaren.
           success: Talaren har uppdaterats.
@@ -326,14 +331,16 @@ sv:
             non_user: Icke befintlig deltagare
             select_user: Välj deltagare
           index:
+<<<<<<< HEAD
             filter:
               accepted: Accepterad
               all: Alla
               rejected: Avvisad
               sent: Skickad
+=======
+>>>>>>> tags/v0.29.1
             invite_attendee: Bjud in deltagare
             invites: Inbjudningar
-            search: Sök
           new:
             invite: Inbjudan
             new_invite: Bjud in deltagare

@@ -17,6 +17,8 @@ module Decidim
         helper Decidim::Initiatives::InitiativeHelper
         helper Decidim::Initiatives::SignatureTypeOptionsHelper
 
+        helper_method :show_initiative_type_callout?
+
         # GET /admin/initiatives
         def index
           enforce_permission_to :list, :initiative
@@ -46,7 +48,7 @@ module Decidim
           @form = form(Decidim::Initiatives::Admin::InitiativeForm)
                   .from_params(params, initiative: current_initiative)
 
-          Decidim::Initiatives::Admin::UpdateInitiative.call(current_initiative, @form, current_user) do
+          Decidim::Initiatives::Admin::UpdateInitiative.call(@form, current_initiative) do
             on(:ok) do |initiative|
               flash[:notice] = I18n.t("initiatives.update.success", scope: "decidim.initiatives.admin")
               redirect_to edit_initiative_path(initiative)
@@ -187,6 +189,10 @@ module Decidim
         end
 
         private
+
+        def show_initiative_type_callout?
+          Decidim::InitiativesType.where(organization: current_organization).none?
+        end
 
         def collection
           @collection ||= ManageableInitiatives.for(current_user)

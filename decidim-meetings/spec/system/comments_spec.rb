@@ -19,11 +19,6 @@ describe "Comments" do
 
   let(:resource_path) { resource_locator(commentable).path }
 
-  before do
-    # Make static map requests not to fail with HTTP 500 (causes JS error)
-    stub_request(:get, Regexp.new(Decidim.maps.fetch(:static).fetch(:url))).to_return(body: "")
-  end
-
   include_examples "comments"
 
   context "with comments blocked" do

@@ -5,7 +5,6 @@ cs:
       participatory_process:
         announcement: Oznámení
         area_id: Oblast
-        banner_image: Obrázek banneru
         copy_categories: Kopírovat kategorie
         copy_components: Kopírování komponent
         copy_steps: Kopírování kroků
@@ -35,8 +34,6 @@ cs:
         scope_type_max_depth_id: Hloubka filtru rozsahu
         scopes_enabled: Oblasti působnosti povoleny
         short_description: Stručný popis
-        show_metrics: Zobrazit metriku
-        show_statistics: Zobrazit statistiky
         slug: URL slug
         start_date: Datum zahájení
         subtitle: Podtitul
@@ -446,7 +443,7 @@ cs:
             select_process_group: Vyberte skupinu procesů
             slug_help_html: 'URL slugy slouží ke generaci adres URL, které odkazují na tento proces. Povolená jsou pouze písmena, číslice a pomlčky a musí začínat písmenem. Příklad: %{url}'
             title: Obecná informace
-            visbility: Viditelnost
+            visibility: Viditelnost
       content_blocks:
         extra_data:
           name: Fáze a doba trvání

@@ -91,6 +91,11 @@ sv:
   decidim:
     admin:
       filters:
+        accepted_at_not_null:
+          label: Tackat ja
+          values:
+            'false': Inte tackat ja
+            'true': Tackat ja
         meetings:
           category_id_eq:
             label: Kategori
@@ -118,6 +123,21 @@ sv:
               hybrid: Hybrid
               in_person: Fysiska
               online: Digitala
+<<<<<<< HEAD
+=======
+        rejected_at_not_null:
+          label: Tackat nej
+          values:
+            'false': Inte tackat nej
+            'true': Tackat nej
+        search_placeholder:
+          user_name_or_user_email_cont: Sök på namn eller e-postadress
+        sent_at_not_null:
+          label: Skickad
+          values:
+            'false': Ej skickad
+            'true': Skickad
+>>>>>>> tags/v0.29.1
       meeting_copies:
         create:
           error: Det gick inte att duplicera mötet.
@@ -130,6 +150,7 @@ sv:
         actions:
           comment: Kommentera
           join: Gå med
+          reply_poll: Svarsenkät
         name: Möten
         settings:
           global:
@@ -282,6 +303,7 @@ sv:
             non_user: Icke befintlig deltagare
             select_user: Välj deltagare
           index:
+<<<<<<< HEAD
             filter:
               accepted: Tackat ja
               all: Alla
@@ -291,6 +313,11 @@ sv:
             invites: Inbjudningar
             registrations_disabled: Det går inte att bjuda in deltagare eftersom registreringen är stängd.
             search: Sök
+=======
+            invite_attendee: Bjud in deltagare
+            invites: Inbjudningar
+            registrations_disabled: Det går inte att bjuda in deltagare eftersom registreringen är stängd.
+>>>>>>> tags/v0.29.1
         meeting_closes:
           edit:
             close: Stäng
@@ -352,6 +379,16 @@ sv:
           update:
             invalid: Det gick inte att uppdatera enkäten till mötet.
             success: Enkäten till mötet har uppdaterats.
+<<<<<<< HEAD
+=======
+        poll:
+          form:
+            announcement_html:
+              - Det går inte längre att redigera en fråga som besvarats eller publicerats/stängts.
+              - Du kan lägga till en fråga när som helst.
+              - Enkäten kommer att stängas när resultaten från alla frågor har publicerats.
+              - Besök <a href='%{admin_link}'>administrationssidan för enkäten</a> för att skicka frågor och publicera resultat.
+>>>>>>> tags/v0.29.1
         registrations:
           edit:
             save: Spara
@@ -413,6 +450,10 @@ sv:
           body: Mötet <a href="%{meeting_path}">"%{meeting_title}"</a> väntar på att avslutas. Lägg till en rapport från mötet med knappen "Avsluta möte".
           greetings: Hälsningar,<br/>%{organization_name}<br/><a href="%{organization_url}">%{organization_url}</a>
           hello: Hej %{username},
+<<<<<<< HEAD
+=======
+          subject: Du kan nu avsluta mötet "%{meeting_title}" med en rapport
+>>>>>>> tags/v0.29.1
       conference_venues: Möteslokaler
       content_blocks:
         upcoming_meetings:
@@ -429,16 +470,14 @@ sv:
       iframe_embed_type:
         embed_in_meeting_page: Bädda in på mötessidan
         none: Ingen
-        open_in_live_event_page: Öppna i live event sida (med valfria omröstningar)
+        open_in_live_event_page: Öppna på live-eventsidan
         open_in_new_tab: Öppna länk i ny flik
       last_activity:
         meeting_updated: 'Möte uppdaterades:'
         new_meeting: 'Nytt möte:'
       layouts:
         live_event:
-          administrate: Administrera
           close: stäng
-          questions: Frågor
       mailer:
         invite_join_meeting_mailer:
           invite:
@@ -519,6 +558,11 @@ sv:
           edit_close_meeting: Redigera mötesrapport
           edit_meeting: Redigera möte
           join_meeting: Gå med i mötet
+<<<<<<< HEAD
+=======
+          reply_poll: Svarsenkät
+          view_poll: Visa enkät
+>>>>>>> tags/v0.29.1
         meetings:
           no_meetings_warning: Inga möten matchar dina sökkriterier eller så finns det inga möten inplanerade.
           upcoming_meetings_warning: För närvarande finns det inga planerade möten, men här hittar du alla tidigare möten listade.
@@ -577,13 +621,26 @@ sv:
             start_time: Startdatum
             title: Titel
       polls:
+        answers:
+          index:
+            administrate: Administrera
+            title: Enkät
+          index_admin:
+            back_to_meeting: Tillbaka till mötet
+            title: Administrera enkät
+            view_poll: Visa enkät
         questions:
           closed_question:
+            announcement: Enkätfrågan är stängd.
+            question: Fråga
             question_results: Resultat
           index:
             empty_questions: Under mötet kommer några frågor att skickas och du kommer kunna svara på dem här.
           index_admin:
+<<<<<<< HEAD
             admin_dashboard: Adminpanel
+=======
+>>>>>>> tags/v0.29.1
             edit: Redigera i admin-panelen
             question: Fråga
             received_answer: mottaget svar
@@ -591,6 +648,10 @@ sv:
             results: Resultat
             send: Skicka
             sent: Skickat
+            statuses:
+              closed: Resultat skickade (stängda)
+              published: Skickade (öppen)
+              unpublished: Väntar på att skickas
           published_question:
             max_choices_alert: Du har valt för många alternativ
             question: Fråga

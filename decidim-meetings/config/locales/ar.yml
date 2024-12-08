@@ -267,12 +267,14 @@ ar:
             non_user: مشارك غير موجود
             select_user: اختر المشارك
           index:
+<<<<<<< HEAD
             filter:
               all: الكل
               sent: أرسلت
+=======
+>>>>>>> tags/v0.29.1
             invite_attendee: دعوة الحضور
             invites: تدعو
-            search: بحث
         meeting_closes:
           edit:
             close: قريب
@@ -372,7 +374,6 @@ ar:
           body: الاجتماع <a href="%{meeting_path}">"%{meeting_title}"</a> في انتظار إغلاقه. الرجاء إضافة تقرير عن الاجتماع باستخدام زر "إغلاق الاجتماع".
           greetings: تحيات,<br/>%{organization_name}<br/><a href="%{organization_url}">%{organization_url}</a>
           hello: مرحبا %{username}،
-          subject: يمكنك الآن إغلاق اجتماعك بتقديم تقرير على منصة %{organization_name}
       conference_venues: أماكن المؤتمر
       content_blocks:
         upcoming_meetings:
@@ -389,7 +390,6 @@ ar:
       iframe_embed_type:
         embed_in_meeting_page: تضمين في صفحة الاجتماع
         none: بلا
-        open_in_live_event_page: فتح في صفحة الحدث المباشر (مع استطلاعات الرأي الاختيارية)
         open_in_new_tab: فتح عنوان الرابط URL في تبويب جديد
       last_activity:
         meeting_updated: 'تم تحديث الاجتماع:'
@@ -397,7 +397,6 @@ ar:
       layouts:
         live_event:
           close: إغلاق
-          questions: الأسئلة
       mailer:
         invite_join_meeting_mailer:
           invite:
@@ -534,12 +533,9 @@ ar:
             title: عنوان
       polls:
         questions:
-          closed_question:
-            question_results: نتائج السؤال
           index:
             empty_questions: خلال هذا الاجتماع، سيتم إرسال بعض الأسئلة وسوف تتمكن من الإجابة عليها. سيتم عرضها هنا.
           index_admin:
-            admin_dashboard: لوحة المدراء
             edit: تحرير في لوحة المدراء
             question: سؤال
             received_answer: الإجابة المتلقاة

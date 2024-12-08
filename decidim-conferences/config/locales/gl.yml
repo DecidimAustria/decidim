@@ -315,12 +315,14 @@ gl:
             non_user: Usuario non existente
             select_user: Seleccionar usuario
           index:
+<<<<<<< HEAD
             filter:
               all: Todo
               sent: Enviado
+=======
+>>>>>>> tags/v0.29.1
             invite_attendee: Invitar asistente
             invites: Invitacións
-            search: Busca
           new:
             invite: Invitar
             new_invite: Invitar ao usuario

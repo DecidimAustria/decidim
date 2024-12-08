@@ -127,6 +127,12 @@ fr-CA:
         new:
           create: Créer
           title: Nouveau conférencier
+        publish:
+          invalid: Il y a eu un problème lors de la publication de cet intervenant.
+          success: L'intervenant de la conférence a été publié avec succès.
+        unpublish:
+          invalid: Il y a eu un problème lors de la dépublication de cet intervenant.
+          success: L'intervenant de la conférence a été dépublié avec succès.
         update:
           error: Une erreur s'est produite lors de la mise à jour du conférencier pour cette conférence.
           success: Conférencier mis à jour avec succès pour cette conférence.
@@ -348,14 +354,8 @@ fr-CA:
             non_user: Utilisateur non existant
             select_user: Sélectionnez l'utilisateur
           index:
-            filter:
-              accepted: Accepté
-              all: Tout
-              rejected: Rejeté
-              sent: Envoyé
             invite_attendee: Inviter un participant
             invites: Invite
-            search: Chercher
           new:
             explanation: Le participant sera invité à se joindre à une conférence. Si son adresse électronique n'est pas enregistrée, il sera également invité à s'inscrire sur la plateforme.
             invite: Inviter

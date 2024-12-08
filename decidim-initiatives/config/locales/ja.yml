@@ -98,7 +98,7 @@ ja:
           title_or_description_or_id_string_or_author_name_or_author_nickname_cont: '%{collection} をタイトル、説明、ID、または著者名で検索します。'
       initiatives_settings:
         update:
-          error: エラーが発生しました
+          error: エラーが発生しました。
           success: イニシアチブの設定が正常に更新されました。
       menu:
         attachments: 添付ファイル
@@ -234,6 +234,10 @@ ja:
               most_recent: 新着順
         exports:
           initiatives: イニシアチブ
+        index:
+          initiatives_types:
+            alert_html: "<p>参加者がイニシアチブを作成できるように、少なくとも1つのイニシアチブ種別を作成する必要があります。</p><p> %{link}</p>"
+            button: 新しいイニシアチブ種別
         initiatives:
           accept:
             success: イニシアチブは受理されました。
@@ -299,7 +303,7 @@ ja:
         initiatives_types:
           create:
             error: エラーが発生しました。
-            success: 新しいイニシアチブタイプが正常に作成されました。
+            success: 新しいイニシアチブ種別を作成しました。このイニシアチブ種別を使用するには、少なくとも 1 つのスコープを定義する必要があります。
           destroy:
             success: イニシアチブ種別を削除しました。
           edit:
@@ -543,7 +547,6 @@ ja:
           other: " 署名"
         vote_cabin:
           already_voted: 既に署名されています
-          supports_required: "%{total_supports} 署名が必要です"
           verification_required: イニシアチブに署名するにはアカウントを確認してください
           vote: サイン
           votes_blocked: ログインが無効になっています

@@ -8,9 +8,9 @@ describe "Organizations" do
   shared_examples "form hiding advanced settings" do
     it "hides advanced settings" do
       expect(page).to have_content "Show advanced settings"
-      expect(page).not_to have_content "SMTP settings"
-      expect(page).not_to have_content "Omniauth settings"
-      expect(page).not_to have_content "File upload settings"
+      expect(page).to have_no_content "SMTP settings"
+      expect(page).to have_no_content "Omniauth settings"
+      expect(page).to have_no_content "File upload settings"
     end
   end
 
@@ -22,8 +22,8 @@ describe "Organizations" do
 
     describe "creating an organization" do
       before do
-        click_link "Organizations"
-        click_link "New"
+        click_on "Organizations"
+        click_on "New"
       end
 
       it_behaves_like "form hiding advanced settings"
@@ -49,9 +49,9 @@ describe "Organizations" do
         fill_in "Organization admin email", with: "mayor@example.org"
         check "organization_available_locales_en"
         choose "organization_default_locale_en"
-        choose "Allow participants to register and login"
+        choose "Allow participants to create an account and log in"
         check "Example authorization (Direct)"
-        click_button "Create organization & invite admin"
+        click_on "Create organization & invite admin"
 
         within ".flash__message" do
           expect(page).to have_content("Organization successfully created.")
@@ -65,7 +65,7 @@ describe "Organizations" do
       context "with invalid data" do
         it "does not create an organization" do
           fill_in "Name", with: "Bad"
-          click_button "Create organization & invite admin"
+          click_on "Create organization & invite admin"
 
           expect(page).to have_content("There is an error in this field")
         end
@@ -120,7 +120,7 @@ describe "Organizations" do
         it "does not show the button" do
           visit decidim_system.root_path
           expect(organization_admin).not_to be_invitation_pending
-          expect(page).not_to have_content("Resend invitation")
+          expect(page).to have_no_content("Resend invitation")
         end
       end
 
@@ -131,9 +131,9 @@ describe "Organizations" do
           visit decidim_system.root_path
           expect(organization_admin).to be_invitation_pending
           expect(page).to have_content("Resend invitation")
-          click_link "Resend invitation"
+          click_on "Resend invitation"
           within "#confirm-modal-content" do
-            click_button "OK"
+            click_on "OK"
           end
           within_flash_messages do
             expect(page).to have_content "Invitation successfully sent"
@@ -145,42 +145,65 @@ describe "Organizations" do
     end
 
     describe "editing an organization" do
-      let!(:organization) { create(:organization, name: "Citizen Corp") }
+      let!(:organization) { create(:organization, name: { ca: "", en: "Citizen Corp", es: "" }) }
 
       before do
-        click_link "Organizations"
+        click_on "Organizations"
         within "table tbody" do
-          first("tr").click_link "Edit"
+          first("tr").click_on "Edit"
         end
       end
 
       it_behaves_like "form hiding advanced settings"
 
-      it "edits the data" do
-        fill_in "Name", with: "Citizens Rule!"
-        fill_in "Host", with: "www.example.org"
-        fill_in "Secondary hosts", with: "foobar.example.org\n\rbar.example.org"
-        choose "Do not allow participants to register, but allow existing participants to login"
-        check "Example authorization (Direct)"
+      it "properly validate name" do
+        create(:organization, name: { ca: "", en: "Duplicate organization", es: "" })
 
-        click_button "Show advanced settings"
-        check "organization_omniauth_settings_facebook_enabled"
-        fill_in "organization_omniauth_settings_facebook_app_id", with: "facebook-app-id"
-        fill_in "organization_omniauth_settings_facebook_app_secret", with: "facebook-app-secret"
+        fill_in_i18n :update_organization_name, "#update_organization-name-tabs", en: "Citizens Rule!", ca: "Something", es: "Another"
+        click_on "Save"
 
-        click_button "Save"
+        within "table tbody tr", text: "Citizens Rule!" do
+          click_on "Edit"
+        end
+        fill_in_i18n :update_organization_name, "#update_organization-name-tabs", en: "Citizens Rule!", ca: "", es: ""
+        click_on "Save"
 
         expect(page).to have_css("div.flash.success")
         expect(page).to have_content("Citizens Rule!")
       end
 
+<<<<<<< HEAD
+=======
+      it "edits the data" do
+        fill_in_i18n :update_organization_name, "#update_organization-name-tabs", en: "Citizens Rule!"
+        fill_in "Host", with: "www.example.org"
+        fill_in "Secondary hosts", with: "foobar.example.org\n\rbar.example.org"
+        choose "Do not allow participants to create an account, but allow existing participants to log in"
+        check "Example authorization (Direct)"
+
+        click_on "Show advanced settings"
+        check "update_organization_omniauth_settings_facebook_enabled"
+        fill_in "update_organization_omniauth_settings_facebook_app_id", with: "facebook-app-id"
+        fill_in "update_organization_omniauth_settings_facebook_app_secret", with: "facebook-app-secret"
+
+        click_on "Save"
+
+        expect(page).to have_css("div.flash.success")
+        expect(page).to have_content("Citizens Rule!")
+      end
+
+>>>>>>> tags/v0.29.1
       context "without the secret key defined" do
         before do
           allow(Rails.application.secrets).to receive(:secret_key_base).and_return(nil)
         end
 
         it "shows the error message" do
+<<<<<<< HEAD
           fill_in "Name", with: "Citizens Rule!"
+=======
+          fill_in_i18n :update_organization_name, "#update_organization-name-tabs", en: "Citizens Rule!"
+>>>>>>> tags/v0.29.1
           fill_in "Host", with: "www.example.org"
           click_on "Save"
 
@@ -192,7 +215,7 @@ describe "Organizations" do
 
     describe "editing an organization with disabled OmniAuth provider" do
       let!(:organization) do
-        create(:organization, name: "Citizen Corp", default_locale: :es, available_locales: ["es"], description: { es: "Un texto largo" })
+        create(:organization, name: { ca: "", en: "Citizen Corp", es: "" }, default_locale: :es, available_locales: ["es"], description: { es: "Un texto largo" })
       end
 
       before do
@@ -228,20 +251,24 @@ describe "Organizations" do
         )
 
         # Reload the UpdateOrganizationForm
+        Decidim::System.send(:remove_const, :BaseOrganizationForm)
         Decidim::System.send(:remove_const, :UpdateOrganizationForm)
+        load "#{Decidim::System::Engine.root}/app/forms/decidim/system/base_organization_form.rb"
         load "#{Decidim::System::Engine.root}/app/forms/decidim/system/update_organization_form.rb"
 
-        click_link "Organizations"
+        click_on "Organizations"
         within "table tbody" do
-          first("tr").click_link "Edit"
+          first("tr").click_on "Edit"
         end
 
-        click_button "Show advanced settings"
+        click_on "Show advanced settings"
       end
 
       after do
         # Reload the UpdateOrganizationForm
+        Decidim::System.send(:remove_const, :BaseOrganizationForm)
         Decidim::System.send(:remove_const, :UpdateOrganizationForm)
+        load "#{Decidim::System::Engine.root}/app/forms/decidim/system/base_organization_form.rb"
         load "#{Decidim::System::Engine.root}/app/forms/decidim/system/update_organization_form.rb"
       end
 

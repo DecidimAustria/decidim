@@ -156,10 +156,6 @@ sk:
         error: Pri zmene tohto zdroja sa vyskytla chyba.
         promote_button: Propagujte na %{model_name}
         promote_confirm_text: Naozaj chcete túto emisiu podporiť?
-      compare_draft:
-        continue: Pokračovať
-        no_similars_found: Neboli nájdené žiadne podobné vylepšenie.
-        title: Podobná vylepšenia
       created:
         error: Pri vytváraní pozmeňovacieho návrhu došlo k chybe.
         success: Pozmeňovací návrh bol úspešne vytvorený.
@@ -205,8 +201,11 @@ sk:
       wizard_step_form:
         steps:
           '1': Vytvorte svoj pozmeňovací návrh
+<<<<<<< HEAD
           '2': Porovnajte váš pozmeňovací návrh
           '3': Dokončite váš pozmeňovací návrh
+=======
+>>>>>>> tags/v0.29.1
     anonymous_user: Anonymné
     application:
       document:
@@ -347,7 +346,6 @@ sk:
         new:
           complete_profile: Kompletné profil
           sign_up: Prosím, vyplňte svoj profil
-          subtitle: Pre dokončenie registrácie vyplňte prosím nasledujúci formulár
           username_help: Verejné meno, ktoré sa zobrazí vo vašich príspevkoch. S cieľom zaručiť anonymitu môže byť akékoľvek meno.
       registrations:
         new:
@@ -355,8 +353,6 @@ sk:
           log_in: Prihlásiť sa
           newsletter: Dostávajte príležitostný spravodajca s relevantnými informáciami
           newsletter_title: Povolenie kontaktu
-          sign_up: Zaregistrovať sa
-          subtitle: Registrujte sa, aby ste sa zúčastnili diskusií a návrhov podpory.
           tos_agreement: Prihlásením súhlasíte s%{link}.
           tos_title: Podmienky používania
           username_help: Verejné meno, ktoré sa zobrazí vo vašich príspevkoch. S cieľom zaručiť anonymitu to môže byť akékoľvek meno.
@@ -507,8 +503,6 @@ sk:
           notification_title: Boli ste odstránení zo skupiny <a href="%{resource_path}">%{user_group_name} </a>.
         user_group_created:
           email_outro: Toto oznámenie ste dostali, pretože ste administrátorom platformy.
-      notification_event:
-        notification_title: Došlo k udalosti <a href="%{resource_path}">%{resource_title} </a>.
       resource_endorsed:
         email_intro: '%{endorser_name}%{endorser_nickname}, ktorého sledujete, práve podporill %{resource_title} a myslíme, že by vás to mohlo zaujímať. Pozrite sa a prispejte aj vy:'
         email_outro: Túto notifikáciu ste dostali, pretože sledujete %{endorser_nickname}. Notifikácie môžete zrušiť po kliknutí na predchádzajúci odkaz.
@@ -626,7 +620,6 @@ sk:
         default_page:
           content: "<p>V %{organization} sa môžete zúčastniť a rozhodnúť sa o rôznych témach cez miesta, ktoré vidíte v hornom menu: procesy, zhromaždenie, iniciatívy, konzultácie. </ p> <p> V rámci každej z nich nájdete rôzne možnosti účasti: urobiť návrhy - jednotlivo alebo s inými ľuďmi -, zúčastňovať sa na diskusiách, uprednostňovať realizáciu projektov, zúčastniť sa osobných stretnutí a ďalších akcií. </p>"
           title: Čo môžem robiť v %{organization}?
-        title: Všeobecná nápoveda
     last_activities:
       all: Všetky typy aktivit
       index:
@@ -778,8 +771,6 @@ sk:
         metrics:
           headline: Metriky
           link: Zobraziť všetky metriky
-    participatory_space_private_users:
-      not_allowed: Nemáte povolenie na zobrazenie tohto obsahu
     profile:
       deleted: Vymazaný účastník
     profiles:
@@ -859,8 +850,6 @@ sk:
         title: Nahlásiť problém
       floating_help:
         help: Pomoc
-      login_modal:
-        sign_up: Prihlásiť sa
       participatory_space_filters:
         filters:
           areas: Oblasti
@@ -976,8 +965,6 @@ sk:
       updated_not_active: Vaše heslo bolo úspešne zmenené.
     registrations:
       destroyed: Zbohom! Váš účet bol úspešne zrušený. Dúfame, že vás čoskoro uvidíme.
-      new:
-        sign_up: Prihlásiť sa
       signed_up: Vitajte! Úspešne ste sa zaregistrovali.
       signed_up_but_inactive: Úspešne ste sa zaregistrovali. Nemohli sme vás však prihlásiť, pretože váš účet ešte nie je aktivovaný.
       signed_up_but_locked: Úspešne ste sa zaregistrovali. Nemohli sme vás však prihlásiť, pretože váš účet je uzamknutý.
@@ -992,7 +979,10 @@ sk:
         back: Späť
         forgot_your_password: Zabudli ste heslo?
         log_in: Prihlásiť sa
+<<<<<<< HEAD
         sign_up: Prihlásiť sa
+=======
+>>>>>>> tags/v0.29.1
       minimum_password_length:
         one: "(Minimálne %{count} znakov)"
         few: "(Minimálne %{count} znakov)"
@@ -1015,7 +1005,6 @@ sk:
       invalid_time_zone: nie je platná časová zóna
       long_words: obsahuje slová, ktoré sú príliš dlhé (cez 35 znakov)
       must_start_with_caps: musí začínať veľkým písmenom
-      not_found: nemôže byť nájdené. Zaregistrovali ste sa predtým?
       not_locked: nebola zamknutá
       not_saved:
         one: 'Pri spracovaní vašej požiadavky došlo k chybe:'
@@ -1041,7 +1030,10 @@ sk:
         download_open_data: Stiahnite si súbory s otvorenými dátami
         log_in: Prihlásiť sa
         made_with_open_source: Webová stránka vytvorená s <a target="_blank" href="https://github.com/decidim/decidim"> slobodným softvérom </a>.
+<<<<<<< HEAD
         sign_up: Registrovať
+=======
+>>>>>>> tags/v0.29.1
       header:
         log_in: Prihlásiť sa
       impersonation_warning:

@@ -243,6 +243,10 @@ cs:
               most_recent: Nejnovější
         exports:
           initiatives: Iniciativy
+        index:
+          initiatives_types:
+            alert_html: "<p>Musíte vytvořit alespoň jeden typ iniciativy, aby účastníci mohli začít vytvářet iniciativy.</p><p> %{link}</p>"
+            button: Nový typ iniciativy
         initiatives:
           accept:
             success: Iniciativa byla úspěšně přijata.
@@ -308,7 +312,7 @@ cs:
         initiatives_types:
           create:
             error: Došlo k chybě.
-            success: Nový druh iniciativy byl úspěšně vytvořen
+            success: Byl úspěšně vytvořen nový typ iniciativy. Musíte definovat alespoň jeden rozsah pro tento typ iniciativy, aby mohl být použit.
           destroy:
             success: Druh iniciativy byl úspěšně odstraněn.
           edit:
@@ -564,7 +568,6 @@ cs:
           other: " podpisy"
         vote_cabin:
           already_voted: Již jste podepsal
-          supports_required: "Vyžaduje %{total_supports} podpisů"
           verification_required: Ověřte svůj účet, abyste podepsali iniciativu
           vote: Podepsat
           votes_blocked: Podpis zakázán

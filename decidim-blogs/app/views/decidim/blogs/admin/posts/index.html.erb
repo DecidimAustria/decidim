@@ -15,7 +15,7 @@
           <th><%= t("models.post.fields.body", scope: "decidim.blogs") %></th>
           <th><%= t("models.post.fields.author", scope: "decidim.blogs") %></th>
           <th><%= t("models.post.fields.published_at", scope: "decidim.blogs") %></th>
-          <th class="actions"><%= t("actions.title", scope: "decidim.blogs") %></th>
+          <th><%= t("actions.title", scope: "decidim.blogs") %></th>
         </tr>
       </thead>
       <tbody>
@@ -33,7 +33,7 @@
               <%= decidim_sanitize_editor post_description_admin(post) %>
             </td>
             <td>
-              <%= post.try(:author).try(:name) %>
+              <%= translated_attribute(post.try(:author).try(:name)) %>
             </td>
             <% publish_data = publish_data(post.published_at) %>
             <td>

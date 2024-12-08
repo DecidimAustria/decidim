@@ -72,9 +72,12 @@ zh-TW:
   booleans:
     'false': '否'
     'true': '是'
+<<<<<<< HEAD
   carrierwave:
     errors:
       file_size_too_large: 檔案太大。
+=======
+>>>>>>> tags/v0.29.1
   date:
     formats:
       decidim_short: "%d/%m/%Y"
@@ -255,10 +258,6 @@ zh-TW:
         promote_button: 晉升為 %{model_name}
         promote_confirm_text: 您確定要晉升此修正嗎？
         promote_help_text: 您可以提升此修正，並將其發布為獨立的 %{model_name}.
-      compare_draft:
-        continue: 繼續
-        no_similars_found: 找不到相似的修正案。
-        title: 相似的修正案
       created:
         error: 創建修正案草稿時發生錯誤。
         success: 修正案草稿已成功創建。
@@ -313,8 +312,11 @@ zh-TW:
       wizard_step_form:
         steps:
           '1': 創建您的修正案
+<<<<<<< HEAD
           '2': 比較您的修正案
           '3': 完成您的修正案
+=======
+>>>>>>> tags/v0.29.1
     anonymous_user: 匿名
     application:
       document:
@@ -498,7 +500,6 @@ zh-TW:
         name: 子英雄橫幅
     core:
       actions:
-        login_before_access: 請先登入您的帳戶再進行訪問.
         unauthorized: 您無權限執行此操作.
     devise:
       omniauth_registrations:
@@ -508,7 +509,6 @@ zh-TW:
           complete_profile: 完成個人檔案
           nickname_help: 在 %{organization} 中的別名。只能包含字母、數字、'-' 和 '_'。
           sign_up: 請完成您的個人檔案
-          subtitle: 請填寫以下表單以完成註冊。
           username_help: 在您的帖子中顯示的公開名稱。為確保匿名性，可以是任何名稱。
       registrations:
         new:
@@ -516,8 +516,6 @@ zh-TW:
           log_in: 登入
           newsletter: 偶爾收到包含相關信息的時事通訊。
           newsletter_title: 聯絡人權限
-          sign_up: 註冊登記
-          subtitle: 註冊以參與討論並支持提案。
           terms: 此服務條款
           tos_agreement: 通過註冊，您同意遵守 %{link}。
           tos_title: 服務條款
@@ -527,7 +525,6 @@ zh-TW:
           are_you_new?: 是第一次使用這個平台嗎？
           register: 建立一個帳號
           sign_in_disabled: 你可以使用外部帳戶登入。
-          sign_up_disabled: 註冊已停用，您可以使用現有帳戶來登入。
       shared:
         newsletter_modal:
           buttons:
@@ -715,10 +712,6 @@ zh-TW:
           email_outro: 你收到了這個通知是因為你是該平台的管理員。
           email_subject: 一個使用者群組已更新其個人檔案。
           notification_title: '%{user_group_name} 使用者群組已更新其個人資料，讓它未經驗證。您現在可以在<a href="%{groups_admin_path}">管理面板</a>中進行驗證。'
-      nickname_event:
-        notification_body: 我們已更正暱稱使用的方式，以避免重複，所以我們已經移除了大小寫敏感的規則。<br/>你的暱稱是在已有同名暱稱之後創建的，因此我們已經自動重新命名。你可以從<a href="%{link_to_account_settings}">帳戶設置</a>更改它。
-      notification_event:
-        notification_title: 發生了一個事件於<a href="%{resource_path}">%{resource_title}</a>。
       reports:
         resource_hidden:
           email_intro: 一位管理員因為您的%{resource_type} 已被檢舉為%{report_reasons} 而將其移除。
@@ -779,7 +772,6 @@ zh-TW:
       create:
         button: 關注
         error: 追蹤此資源時發生問題。
-        participatory_space: 追蹤中 <span class="show-for-sr">%{resource_name}</span>
       destroy:
         button: 取消追蹤
         error: 取消追蹤此資源時發生問題。
@@ -793,14 +785,12 @@ zh-TW:
         file:
           explanation: '檔案指南：'
           message_1: 必須是圖片或文件。
-          message_2: 對於圖像，最好使用橫向圖像，服務將對圖像進行裁剪。
         icon:
           explanation: '圖示指南：'
           message_1: 必須為正方形影像。
           message_2: 此圖像的建議尺寸為 512x512。
         image:
           explanation: '圖像的指導'
-          message_1: 最好選擇一張不含文字的橫向圖像。
           message_2: 該服務裁剪圖像。
       file_validation:
         allowed_file_extensions: '允許的檔案擴展名： %{extensions}'
@@ -941,7 +931,6 @@ zh-TW:
           content: "<p>在 %{organization} 中，您可以透過頂部畫面中的不同空間參與並決定各種議題，包括流程、集會、倡議和諮詢。</p> <p>在每個空間中，您將找到不同的參與選項：個人或與他人一起提出提案、參與辯論、優先考慮要實施的項目、參加面對面會議以及其他行動。</p>\n"
           title: 我可以在 %{organization} 做什麼？”
         description: 閱讀更多有關 %{organization} 的資訊.
-        title: 一般幫助
     last_activities:
       all: 所有活動類型
       index:
@@ -1218,8 +1207,6 @@ zh-TW:
           alert: 我們已更新我們的服務條款，請您查閱。
           body: 請花一點時間檢閱我們的服務條款更新，否則您將無法使用平台。
           title: '必須：檢閱我們的服務條款更新'
-    participatory_space_private_users:
-      not_allowed: 您無權查看此內容
     passwords:
       update:
         error: 密碼更新時發生問題.
@@ -1361,8 +1348,6 @@ zh-TW:
         title: 舉報不適當的使用者
       floating_help:
         help: 幫助
-      login_modal:
-        sign_up: 註冊登記
       mentions_modal:
         remove_recipient: 移除收件人 %{name}。
       participatory_space_filters:
@@ -1557,8 +1542,6 @@ zh-TW:
       updated_not_active: 您的密碼已變更成功。
     registrations:
       destroyed: 您的帳號已成功取消，期待再相逢。
-      new:
-        sign_up: 註冊登記
       signed_up: 歡迎！您已成功註冊。
       signed_up_but_inactive: 您已註冊成功，但由於您的帳號尚未啟用，我們暫時無法讓您登入。
       signed_up_but_locked: 你已成功註冊。然而，由於你的賬戶被鎖，我們無法讓你登入。
@@ -1575,7 +1558,10 @@ zh-TW:
         didn_t_receive_unlock_instructions: 沒有收到解鎖說明？
         forgot_your_password: 忘記密碼了嗎？
         log_in: 登入
+<<<<<<< HEAD
         sign_up: 註冊登記
+=======
+>>>>>>> tags/v0.29.1
       minimum_password_length:
         other: "One\n(最少%{count} 個字符)\n\nOther\n(最少%{count} 個字符)"
     unlocks:
@@ -1589,14 +1575,15 @@ zh-TW:
   emojis:
     button: 新增Emoji
     categories:
+<<<<<<< HEAD
       activities: 活躍狀態
+=======
+>>>>>>> tags/v0.29.1
       custom: 自訂
       flags: 旗幟
       objects: 目標
-      people-body: 人與身體
-      recents: 最近使用的
-      smileys-emotion: 表情符號和情感
       symbols: 符號
+<<<<<<< HEAD
     error:
       load: 無法載入表情符號
     recents:
@@ -1608,6 +1595,8 @@ zh-TW:
       clear: 清除搜尋
       error: 搜尋表情符號失敗。
       not_found: 找不到結果
+=======
+>>>>>>> tags/v0.29.1
   errors:
     messages:
       allowed_file_content_types: '只允許使用以下擴展名的檔案： %{types}'
@@ -1624,7 +1613,6 @@ zh-TW:
       long_words: 包含過長的單詞(超過35個字符)
       must_start_with_caps: 必須以大寫字母開頭
       nesting_too_deep: 不能被放置在子類別中。
-      not_found: 找不到該項目。您之前註冊過嗎？
       not_locked: 未被鎖定
       not_saved:
         other: "One\n在處理您的請求時發生了錯誤:\n\nOther\n在處理您的請求時出現了多個錯誤:"
@@ -1701,7 +1689,6 @@ zh-TW:
         download_open_data: 下載開放數據檔案
         log_in: 登入
         made_with_open_source: 使用<a target="_blank" href="https://github.com/decidim/decidim">自由軟體</a>建立的網站。
-        sign_up: 註冊
       header:
         log_in: 登入
         main_menu: 主選單

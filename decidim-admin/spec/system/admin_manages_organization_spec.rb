@@ -18,11 +18,15 @@ describe "Admin manages organization" do
     it "updates the values from the form" do
       visit decidim_admin.edit_organization_path
 
+<<<<<<< HEAD
       fill_in :organization_name, with: attributes[:name]
+=======
+      fill_in_i18n :organization_name, "#organization-name-tabs", **attributes[:name].except("machine_translations")
+>>>>>>> tags/v0.29.1
 
       %w(X Facebook Instagram YouTube GitHub).each do |network|
         within "#organization_social_handlers" do
-          click_link network
+          click_on network
         end
 
         field_name = "organization_#{network.downcase}_handler"
@@ -37,7 +41,7 @@ describe "Admin manages organization" do
                           en: "<p>Respect the privacy of others.</p>",
                           es: "<p>Spanish - Respect the privacy of others.</p>"
 
-      click_button "Update"
+      click_on "Update"
       expect(page).to have_content("updated successfully")
 
       visit decidim_admin.root_path
@@ -46,9 +50,9 @@ describe "Admin manages organization" do
 
     it "marks the comments_max_length as required" do
       visit decidim_admin.edit_organization_path
-      expect(find("#organization_comments_max_length")[:required]).to eq("true")
+      expect(find_by_id("organization_comments_max_length")[:required]).to eq("true")
 
-      expect(page).not_to have_content("There is an error in this field.")
+      expect(page).to have_no_content("There is an error in this field.")
       fill_in :organization_comments_max_length, with: ""
       find_by_id("organization_rich_text_editor_in_public_views").click
 
@@ -80,7 +84,7 @@ describe "Admin manages organization" do
         end
 
         it "renders the editor" do
-          expect(page).to have_selector(
+          expect(page).to have_css(
             "#organization-admin_terms_of_service_body-tabs-admin_terms_of_service_body-panel-0 .editor .ProseMirror",
             text: ""
           )
@@ -267,7 +271,7 @@ describe "Admin manages organization" do
 
         it "is still editable" do
           find('div[contenteditable="true"].ProseMirror').native.send_keys(Array.new(15) { :backspace }, "bar baz")
-          click_button "Update"
+          click_on "Update"
           expect(page).to have_content("Organization updated successfully")
           expect(find(
             "#organization-admin_terms_of_service_body-tabs-admin_terms_of_service_body-panel-0 .editor .ProseMirror"
@@ -386,7 +390,7 @@ describe "Admin manages organization" do
           )["innerHTML"]).to eq(terms_content.to_s.gsub("\n", ""))
         end
 
-        it "keeps right curson position when using the backspace" do
+        it "keeps right cursor position when using the backspace" do
           find('div[contenteditable="true"].ProseMirror').native.send_keys [:enter, "bc", :left, :left]
           find('div[contenteditable="true"].ProseMirror').native.send_keys [:enter, :backspace, :backspace, "a"]
           expect(find(
@@ -519,7 +523,7 @@ describe "Admin manages organization" do
             find("button[data-action='save']").click
           end
 
-          click_button "Update"
+          click_on "Update"
 
           organization.reload
           expect(translated(organization.admin_terms_of_service_body)).to eq(
@@ -535,8 +539,8 @@ describe "Admin manages organization" do
       it "does not show the customization fields" do
         visit decidim_admin.edit_organization_path
         check "Send welcome notification"
-        expect(page).not_to have_content("Welcome notification subject")
-        click_button "Update"
+        expect(page).to have_no_content("Welcome notification subject")
+        click_on "Update"
         expect(page).to have_content("updated successfully")
 
         organization.reload
@@ -557,7 +561,7 @@ describe "Admin manages organization" do
         fill_in_i18n_editor :organization_welcome_notification_body, "#organization-welcome_notification_body-tabs",
                             en: "<p>Body</p>"
 
-        click_button "Update"
+        click_on "Update"
         expect(page).to have_content("updated successfully")
 
         organization.reload
@@ -574,13 +578,13 @@ describe "Admin manages organization" do
         fill_in_i18n :organization_welcome_notification_subject, "#organization-welcome_notification_subject-tabs",
                      en: ""
 
-        click_button "Update"
+        click_on "Update"
         expect(page).to have_content("There was a problem updating this organization.")
 
         fill_in_i18n :organization_welcome_notification_subject, "#organization-welcome_notification_subject-tabs",
                      en: "Well hello!"
 
-        click_button "Update"
+        click_on "Update"
         expect(page).to have_content("updated successfully")
 
         organization.reload

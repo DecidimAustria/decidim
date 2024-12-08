@@ -39,7 +39,10 @@ bg:
           error: Възникна проблем с гласуването за коментара.
     components:
       add_comment_form:
+<<<<<<< HEAD
         account_message: <a href="%{sign_in_url}">Влезте в профила си</a> или <a href="%{sign_up_url}">се регистрирайте</a>, за да добавите Вашия коментар.
+=======
+>>>>>>> tags/v0.29.1
         form:
           body:
             label: Коментар

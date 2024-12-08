@@ -22,7 +22,7 @@ describe "Admin manages participatory processes", versioning: true do
       switch_to_host(organization.host)
       login_as user, scope: :user
       visit decidim_admin_participatory_processes.participatory_processes_path
-      click_link translated(my_space.title)
+      click_on translated(my_space.title)
     end
 
     context "when the participatory process is private" do
@@ -40,7 +40,7 @@ describe "Admin manages participatory processes", versioning: true do
 
       it "shows the private user menu entry" do
         within_admin_sidebar_menu do
-          expect(page).not_to have_content("Private participants")
+          expect(page).to have_no_content("Private participants")
         end
       end
     end
@@ -58,7 +58,7 @@ describe "Admin manages participatory processes", versioning: true do
     let(:attributes) { attributes_for(:participatory_process, organization:) }
 
     before do
-      click_link "New process"
+      click_on "New process"
     end
 
     %w(short_description description announcement).each do |field|
@@ -89,7 +89,6 @@ describe "Admin manages participatory processes", versioning: true do
       end
 
       dynamically_attach_file(:participatory_process_hero_image, image1_path)
-      dynamically_attach_file(:participatory_process_banner_image, image2_path)
 
       within ".new_participatory_process" do
         find("*[type=submit]").click
@@ -116,29 +115,35 @@ describe "Admin manages participatory processes", versioning: true do
     end
 
     it "update a participatory process without images does not delete them" do
-      within find("tr", text: translated(participatory_process3.title)) do
-        click_link translated(participatory_process3.title)
+      within "tr", text: translated(participatory_process3.title) do
+        click_on translated(participatory_process3.title)
       end
 
       within_admin_sidebar_menu do
-        click_link "About this process"
+        click_on "About this process"
       end
 
-      click_button "Update"
+      click_on "Update"
 
       expect(page).to have_admin_callout("successfully")
 
       hero_blob = participatory_process3.hero_image.blob
+<<<<<<< HEAD
       banner_blob = participatory_process3.banner_image.blob
+=======
+>>>>>>> tags/v0.29.1
       within %([data-active-uploads] [data-filename="#{hero_blob.filename}"]) do
         src = page.find("img")["src"]
         expect(src).to be_blob_url(hero_blob)
       end
+<<<<<<< HEAD
 
       within %([data-active-uploads] [data-filename="#{banner_blob.filename}"]) do
         src = page.find("img")["src"]
         expect(src).to be_blob_url(banner_blob)
       end
+=======
+>>>>>>> tags/v0.29.1
     end
   end
 end

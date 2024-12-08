@@ -172,7 +172,7 @@ ca:
         back_to: Tornar a %{component_name}
         close_modal: Tancar el modal
         continue: Continuar
-        more_information: Més informació
+        more_information: Més informació sobre el pressupost
       budgets_list:
         budgets: Pressupostos
         cancel_order:
@@ -211,6 +211,7 @@ ca:
           fields:
             category: Categoria
             id: ID
+            map: Mapa
             title: Títol
       order_summary_mailer:
         order_summary:

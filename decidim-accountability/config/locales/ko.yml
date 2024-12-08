@@ -200,6 +200,7 @@ ko:
           search: 작업 검색
         show:
           stats:
+<<<<<<< HEAD
             attendees: 참여자
             back_to_resource: 결과로 돌아가기
             comments: 댓글
@@ -209,6 +210,9 @@ ko:
             meetings: 회의
             proposals: 제안
             votes: 지원
+=======
+            back_to_resource: 결과로 돌아가기
+>>>>>>> tags/v0.29.1
     admin:
       filters:
         results:
@@ -225,6 +229,7 @@ ko:
         name: 책임
         settings:
           global:
+<<<<<<< HEAD
             categories_label: '"카테고리" 이름'
             comments_enabled: 댓글 활성화됨
             comments_max_length: 댓글 최대 길이(기본값은 0으로 남김)
@@ -235,6 +240,14 @@ ko:
             scope_id: 범위
             scopes_enabled: 범위 활성화됨
             subcategories_label: '"카테고리" 이름'
+=======
+            comments_enabled: 댓글 활성화됨
+            comments_max_length: 댓글 최대 길이(기본값은 0으로 남김)
+            display_progress_enabled: 진행사항 보기
+            intro: 소개
+            scope_id: 범위
+            scopes_enabled: 범위 활성화됨
+>>>>>>> tags/v0.29.1
           step:
             comments_blocked: 댓글 차단됨
     events:

@@ -127,6 +127,12 @@ es:
         new:
           create: Crear
           title: Nueva ponente de la conferencia.
+        publish:
+          invalid: Se ha producido un error al publicar esta ponente.
+          success: Ponente de la conferencia actualizada correctamente.
+        unpublish:
+          invalid: Se ha producido un error al despublicar esta ponente.
+          success: Ponente de la conferencia despublicada correctamente.
         update:
           error: Se ha producido un error al actualizar la ponente de esta jornada.
           success: Ponente de la jornada actualizada correctamente.
@@ -348,14 +354,16 @@ es:
             non_user: Participante no existente
             select_user: Seleccionar participante
           index:
+<<<<<<< HEAD
             filter:
               accepted: Aceptada
               all: Todas
               rejected: Rechazada
               sent: Enviado
+=======
+>>>>>>> tags/v0.29.1
             invite_attendee: Invitar participante
             invites: Invita
-            search: Buscar
           new:
             explanation: La participante será invitada a unirse a la conferencia. Si su correo electrónico no está registrado, también será invitada a unirse a la organización.
             invite: Invitar

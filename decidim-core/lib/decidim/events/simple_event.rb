@@ -11,6 +11,10 @@ module Decidim
       include Decidim::Events::EmailEvent
       include Decidim::Events::NotificationEvent
       include Decidim::ComponentPathHelper
+<<<<<<< HEAD
+=======
+      include Decidim::OrganizationHelper
+>>>>>>> tags/v0.29.1
 
       delegate :created_at, to: :resource
 

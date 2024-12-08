@@ -60,10 +60,17 @@ RSpec.describe "Result search" do
     subject { response.body }
 
     it "displays all categories that have top-level results" do
+<<<<<<< HEAD
       expect(subject).to include(decidim_html_escape(translated(result1.category.name)))
       expect(subject).to include(decidim_html_escape(translated(result2.category.name)))
       expect(subject).to include(decidim_html_escape(translated(result3.category.name)))
       expect(subject).to include(decidim_html_escape(translated(result4.category.name)))
+=======
+      expect(subject).to include(decidim_escape_translated(result1.category.name))
+      expect(subject).to include(decidim_escape_translated(result2.category.name))
+      expect(subject).to include(decidim_escape_translated(result3.category.name))
+      expect(subject).to include(decidim_escape_translated(result4.category.name))
+>>>>>>> tags/v0.29.1
     end
   end
 

@@ -236,12 +236,14 @@ hu:
             non_user: Nemlétező felhasználó
             select_user: Felhasználó kiválasztása
           index:
+<<<<<<< HEAD
             filter:
               all: Összes
               sent: Elküldve
+=======
+>>>>>>> tags/v0.29.1
             invite_attendee: Résztvevő meghívása
             invites: Meghívottak
-            search: Keresés
         meeting_closes:
           edit:
             close: Bezárás
@@ -342,7 +344,6 @@ hu:
           body: A találkozó <a href="%{meeting_path}">%{meeting_title}</a> lezárásra vár. A "találkozó lezárása" gomb segítségével adjon jelentést a megbeszélésről.
           greetings: Üdvözöljük <br/>%{organization_name}<br/><a href="%{organization_url}">%{organization_url}</a>
           hello: Hello %{username},
-          subject: Lezárhatja a megbeszélést a %{organization_name} platformon beküldött jelentéssel
       conference_venues: Konferencia helyszínek
       content_blocks:
         upcoming_meetings:
@@ -359,12 +360,10 @@ hu:
       iframe_embed_type:
         embed_in_meeting_page: Beágyazás az értekezlet oldalába
         none: Nincs
-        open_in_live_event_page: Megnyitás az élő esemény oldalán (opcionális szavazásokkal)
         open_in_new_tab: Megnyitás új fülön
       layouts:
         live_event:
           close: bezár
-          questions: Kérdések
       mailer:
         invite_join_meeting_mailer:
           invite:

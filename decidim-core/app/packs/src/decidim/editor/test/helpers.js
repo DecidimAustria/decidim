@@ -34,25 +34,12 @@ window.DragEvent = class DragEvent extends Event {};
 
 const defaultEditorConfig = {
   contentTypes: {
-    image: ["image/jpeg", "image/png"]
+    image: ["image/jpeg", "image/png", "image/webp"]
   },
   uploadImagesPath: "/editor_images",
   dragAndDropHelpText: "Add images by dragging & dropping or pasting them.",
   uploadDialogSelector: "#upload_dialog"
 };
-
-// Mock picmo as it is distributed as an ES6 module that is not fully compatible
-// with Jest without configuration changes.
-jest.mock("@picmo/popup-picker",
-  () => ({
-    createPopup: () => {
-      return {
-        addEventListener: () => {},
-        closeButton: {}
-      }
-    }
-  })
-);
 
 // Mock the SVG icons import because jest tests are not running through webpack
 jest.mock("images/decidim/remixicon.symbol.svg", () => "test/url.svg");

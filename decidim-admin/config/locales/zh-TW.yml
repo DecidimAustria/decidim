@@ -347,7 +347,6 @@ zh-TW:
         title: 驗證衝突
         transfer:
           email: 電子郵件
-          error: 轉移現在參與者到管理參與者時發生錯誤
           name: 名稱
           reason: 理由
           success: 目前的轉換完成
@@ -360,10 +359,13 @@ zh-TW:
           title: 等待的操作
         show:
           view_more_logs: 檢視更多記錄
+<<<<<<< HEAD
       domain_whitelist:
         update:
           error: 網址白名單更新失敗
           success: 網址白名單更新成功.
+=======
+>>>>>>> tags/v0.29.1
       exports:
         export_as: "%{name} 成為 %{export_format}"
         formats:
@@ -430,7 +432,6 @@ zh-TW:
           report_count_eq: 報告數量等於
           reported_id_string_or_reported_content_cont: 按報告 Id 或內容搜索%{collection}。
           title_cont: 按標題搜索%{collection}。
-          user_name_or_user_email_cont: 按名稱或電子郵件搜索%{collection}。
           user_name_or_user_nickname_or_user_email_cont: 按電子郵件、姓名或暱稱搜索%{collection}。
         state_eq:
           label: 狀態
@@ -809,12 +810,15 @@ zh-TW:
             layout_appearance_title: 編輯版面外觀
             preview: 預覽
           omnipresent_banner_appearance_title: 編輯無處不在的橫幅
+<<<<<<< HEAD
       organization_external_domain_whitelist:
         edit:
           update: 更新
         form:
           add: 新增到白名單
           title: 外部域名白名單
+=======
+>>>>>>> tags/v0.29.1
       participatory_space_private_users:
         create:
           error: 在此參與空間中添加私人參與者時出現問題。

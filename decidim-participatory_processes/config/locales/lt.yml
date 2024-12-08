@@ -5,7 +5,6 @@ lt:
       participatory_process:
         announcement: Pranešimas
         area_id: Aplinka
-        banner_image: Reklamjuostės paveikslėlis
         copy_categories: Kopijuoti kategorijas
         copy_components: Kopijuoti komponentus
         copy_steps: Kopijuoti veiksmus
@@ -35,8 +34,6 @@ lt:
         scope_type_max_depth_id: Srities filtro gylis
         scopes_enabled: Sritys įjungtos
         short_description: Trumpas aprašymas
-        show_metrics: Rodyti metriką
-        show_statistics: Rodyti statistiką
         slug: URL priedas
         start_date: Pradžios data
         subtitle: Paantraštė
@@ -425,7 +422,6 @@ lt:
             select_participatory_process_type: Pasirinkti proceso tipą
             select_process_group: Pasirinkti procesų grupę
             title: Bendroji informacija
-            visbility: Matomumas
       content_blocks:
         extra_data:
           name: Fazė ir trukmė

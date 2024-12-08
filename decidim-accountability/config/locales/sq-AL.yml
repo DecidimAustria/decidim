@@ -235,15 +235,7 @@ sq:
           search: Kërko për veprime
         show:
           stats:
-            attendees: Të pranishëm
             back_to_resource: Kthehu mbrapsht tek rezultati
-            comments: Komente
-            contributions: Kontributet
-            last_edited_by: Së fundi edituar nga
-            last_updated_at: Përditësimi i fundit në
-            meetings: Mbledhjet
-            proposals: Propozimet
-            votes: Mbështetjet
         timeline:
           title: Evoluimi i projektit
     admin:
@@ -262,16 +254,12 @@ sq:
         name: Përgjegjësia
         settings:
           global:
-            categories_label: Emri për "Kategoritë"
             comments_enabled: Komentet e aktivizuara
             comments_max_length: Madhësia maks. e komenteve
             display_progress_enabled: Shfaq ecurinë
-            heading_leaf_level_results: Ermi për "Projekte"
-            heading_parent_level_results: Emri për "Rezultate"
             intro: Hyrje
             scope_id: Fushëveprimi
             scopes_enabled: Fushveprimet e aktivizuara
-            subcategories_label: Emri për "Nënategoritë"
           step:
             comments_blocked: Komentet të bllokuara
     events:

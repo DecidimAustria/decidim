@@ -169,7 +169,7 @@ es-MX:
         back_to: Volver a %{component_name}
         close_modal: Cierra el modal
         continue: Continuar
-        more_information: Más información
+        more_information: Más información sobre el presupuesto
       budgets_list:
         budgets: Presupuestos
         cancel_order:
@@ -208,6 +208,7 @@ es-MX:
           fields:
             category: Categoría
             id: ID
+            map: Mapa
             title: Título
       order_summary_mailer:
         order_summary:

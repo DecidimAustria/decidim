@@ -51,7 +51,6 @@ hu:
         scope_id: Hatáskör
         scopes_enabled: Hatáskörök engedélyezve
         short_description: Rövid leírás
-        show_statistics: Statisztikák megjelenítése
         slug: URL slug
         special_features: Speciális funkciók
         subtitle: Felirat
@@ -292,7 +291,7 @@ hu:
             select_parent_assembly: Szülői összeállítás kiválasztása
             social_handlers: Social
             title: Általános információ
-            visbility: Láthatóság
+            visibility: Láthatóság
         assemblies_types:
           form:
             title: Cím
@@ -300,7 +299,6 @@ hu:
           form:
             existing_user: Meglévő résztvevő
             explanation: 'Útmutató a képhez:'
-            image_guide: Olyan fekvő képek használata ajánlott, amelyek nem tartalmaznak szöveget.
             non_user: Nem résztvevő
             non_user_avatar_help: A tagként való szerepléshez hozzájárulást kell szerezni a személyektől.
             select_a_position: Válassz pozíciót
@@ -386,11 +384,7 @@ hu:
       show:
         assembly_type: Gyűlés típusa
         duration: Időtartam
-        is_transparent:
-          'false': áttetsző
-          'true': átlátszó
         private_space: Ez egy privát gyűlés
-        related_participatory_processes: Kapcsolódó részvételi folyamatok
         social_networks_title: Látogasd meg a gyűlést itt
     assembly_members:
       assembly_member:

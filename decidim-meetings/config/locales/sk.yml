@@ -184,11 +184,13 @@ sk:
             non_user: Neexistujúca užívateľ
             select_user: Vyberte používateľa
           index:
+<<<<<<< HEAD
             filter:
               sent: Odoslaná
+=======
+>>>>>>> tags/v0.29.1
             invite_attendee: Pozvať účastníka
             invites: Pozvánky
-            search: Vyhľadávanie
         meeting_closes:
           edit:
             close: Zavrieť

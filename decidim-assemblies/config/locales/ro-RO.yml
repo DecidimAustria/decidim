@@ -51,7 +51,6 @@ ro:
         scope_id: Domeniu de interes
         scopes_enabled: Domenii activate
         short_description: Descriere scurtă
-        show_statistics: Arată statistici
         slug: URL slug
         special_features: Funcționalități speciale
         subtitle: Subtitlu
@@ -287,7 +286,6 @@ ro:
           form:
             existing_user: Participant existent
             explanation: 'Îndrumare pentru imagine:'
-            image_guide: Este de preferat o imagine pe format orizontal care să nu conțină text deloc.
             non_user: Non participant
             non_user_avatar_help: Ar trebui să obţii consimţământul persoanelor înainte de a îi publica drept membri.
             select_a_position: Selectaţi o poziţie
@@ -357,11 +355,7 @@ ro:
       show:
         assembly_type: Tipul grupului de lucru
         duration: Durată
-        is_transparent:
-          'false': opac
-          'true': transparent
         private_space: Acesta este un grup de lucru privat
-        related_participatory_processes: Procese participative asociate
         social_networks_title: Vizitează adunarea pe
     assembly_members:
       assembly_member:

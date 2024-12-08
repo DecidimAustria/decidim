@@ -172,7 +172,7 @@ en:
         back_to: Back to %{component_name}
         close_modal: Close modal
         continue: Continue
-        more_information: More information
+        more_information: More information about budget
       budgets_list:
         budgets: Budgets
         cancel_order:
@@ -211,6 +211,7 @@ en:
           fields:
             category: Category
             id: ID
+            map: Map
             title: Title
       order_summary_mailer:
         order_summary:

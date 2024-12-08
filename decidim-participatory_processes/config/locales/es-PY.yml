@@ -5,7 +5,6 @@ es-PY:
       participatory_process:
         announcement: Anuncio
         area_id: Área
-        banner_image: Imagen de banner
         copy_categories: Copiar categorías
         copy_components: Copiar componentes
         copy_steps: Copiar las fases
@@ -35,8 +34,6 @@ es-PY:
         scope_type_max_depth_id: Profundidad del filtro de ámbito
         scopes_enabled: Ámbitos habilitados
         short_description: Descripción breve
-        show_metrics: Mostrar métricas
-        show_statistics: Mostrar estadísticas
         slug: Texto corto de URL
         start_date: Fecha de inicio
         subtitle: Subtítulo
@@ -438,7 +435,7 @@ es-PY:
             select_process_group: Seleccione un grupo de proceso
             slug_help_html: 'Los nombres cortos de URL se utilizan para generar las URL que apuntan a esta votación. Sólo acepta letras, números y guiones, y debe comenzar con una letra. Ejemplo: %{url}'
             title: Información general
-            visbility: Visibilidad
+            visibility: Visibilidad
       content_blocks:
         extra_data:
           name: Fase y duración

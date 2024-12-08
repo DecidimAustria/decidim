@@ -91,6 +91,11 @@ de:
   decidim:
     admin:
       filters:
+        accepted_at_not_null:
+          label: Angenommen
+          values:
+            'false': Nicht angenommen
+            'true': Angenommen
         meetings:
           category_id_eq:
             label: Kategorie
@@ -118,6 +123,18 @@ de:
               hybrid: Hybrid
               in_person: Persönlich
               online: Online
+        rejected_at_not_null:
+          label: Abgelehnt
+          values:
+            'false': Nicht abgelehnt
+            'true': Abgelehnt
+        search_placeholder:
+          user_name_or_user_email_cont: Nach Namen oder E-Mail suchen
+        sent_at_not_null:
+          label: Gesendet
+          values:
+            'false': Nicht gesendet
+            'true': Gesendet
       meeting_copies:
         create:
           error: Es gab einen Fehler beim Duplizieren dieses Meetings.
@@ -130,6 +147,7 @@ de:
         actions:
           comment: Kommentar
           join: Beitreten
+          reply_poll: Umfrage beantworten
         name: Meetings
         settings:
           global:
@@ -282,15 +300,17 @@ de:
             non_user: Nicht existierender Benutzer
             select_user: Nutzer wählen
           index:
+<<<<<<< HEAD
             filter:
               accepted: Angenommen
               all: Alle
               rejected: Abgelehnt
               sent: Geschickt
+=======
+>>>>>>> tags/v0.29.1
             invite_attendee: Teilnehmer einladen
             invites: Lädt ein
             registrations_disabled: Sie können keine Teilnehmende einladen, weil Registrierungen deaktiviert sind.
-            search: Suche
         meeting_closes:
           edit:
             close: Schließen
@@ -352,6 +372,13 @@ de:
           update:
             invalid: Beim Aktualisieren der Veranstaltungsumfrage ist ein Problem aufgetreten.
             success: Veranstaltungsumfrage erfolgreich aktualisiert.
+        poll:
+          form:
+            announcement_html:
+              - Wenn eine Frage Antworten erhalten hat oder veröffentlicht/geschlossen wird, kann sie nicht mehr bearbeitet werden.
+              - Sie können jederzeit eine neue Frage hinzufügen.
+              - Die Umfrage wird geschlossen, wenn die Ergebnisse aller erstellten Fragen veröffentlicht wurden.
+              - Besuchen Sie die <a href='%{admin_link}'>Umfrageverwaltungsseite</a> um Fragen zu versenden oder Ergebnisse zu veröffentlichen.
         registrations:
           edit:
             save: Speichern
@@ -413,7 +440,7 @@ de:
           body: Die Veranstaltung <a href="%{meeting_path}">"%{meeting_title}"</a> wurde noch nicht abgeschlossen. Bitte fügen Sie einen Bericht über die Veranstaltung mit der Schaltfläche "Meeting schließen" hinzu.
           greetings: Grüße,<br/>%{organization_name}<br/><a href="%{organization_url}">%{organization_url}</a>
           hello: Hallo %{username},
-          subject: Sie können Ihre Veranstaltung jetzt mit einem Bericht auf der %{organization_name} Plattform abschließen
+          subject: Sie können nun die Veranstaltung "%{meeting_title}" mit einem Bericht schließen
       conference_venues: Tagungsstätten
       content_blocks:
         upcoming_meetings:
@@ -430,16 +457,18 @@ de:
       iframe_embed_type:
         embed_in_meeting_page: In Meeting-Seite einbetten
         none: Keiner
-        open_in_live_event_page: In Live-Event-Seite öffnen (mit optionalen Umfragen)
+        open_in_live_event_page: Auf laufender Veranstaltungsseite öffnen
         open_in_new_tab: Link in neuem Tab öffnen
       last_activity:
         meeting_updated: 'Veranstaltung aktualisiert:'
         new_meeting: 'Neue Veranstaltung:'
       layouts:
         live_event:
+<<<<<<< HEAD
           administrate: Bearbeiten
+=======
+>>>>>>> tags/v0.29.1
           close: Schließen
-          questions: Fragen
       mailer:
         invite_join_meeting_mailer:
           invite:
@@ -520,6 +549,8 @@ de:
           edit_close_meeting: Veranstaltungsbericht bearbeiten
           edit_meeting: Veranstaltung bearbeiten
           join_meeting: Veranstaltung beitreten
+          reply_poll: Umfrage beantworten
+          view_poll: Umfrage ansehen
         meetings:
           no_meetings_warning: Keine Veranstaltungen entsprechen Ihren Suchkriterien oder es ist keine Besprechung geplant.
           upcoming_meetings_warning: Momentan gibt es keine geplanten Besprechungen, aber hier finden Sie alle aufgelisteten Besprechungen.
@@ -578,13 +609,22 @@ de:
             start_time: Anfangsdatum
             title: Titel
       polls:
+        answers:
+          index:
+            administrate: Bearbeiten
+            title: Umfrage
+          index_admin:
+            back_to_meeting: Zurück zur Veranstaltung
+            title: Umfrage bearbeiten
+            view_poll: Umfrage ansehen
         questions:
           closed_question:
-            question_results: Umfrageergebnisse
+            announcement: Die Beantwortung dieser Frage wurde beendet.
+            question: Frage
+            question_results: Resultate
           index:
             empty_questions: Während dieses Treffens werden einige Fragen gesendet und Sie werden sie beantworten können. Sie werden hier angezeigt.
           index_admin:
-            admin_dashboard: Administrations-Dashboard
             edit: Im Adminbereich bearbeiten
             question: Frage
             received_answer: Antwort erhalten
@@ -592,6 +632,10 @@ de:
             results: Ergebnisse
             send: Senden
             sent: Gesendet
+            statuses:
+              closed: Ergebnisse gesendet (geschlossen)
+              published: Gesendet (offen)
+              unpublished: Ausstehender Versand
           published_question:
             max_choices_alert: Es wurden zu viele Auswahlmöglichkeiten ausgewählt
             question: Frage

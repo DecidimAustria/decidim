@@ -1,8 +1,12 @@
-<ul class="flex justify-between md:justify-start gap-6 text-sm text-white hover:[&_a]:opacity-50">
+<ul class="flex md:justify-between md:justify-start gap-6 text-sm text-white hover:[&_a]:opacity-50">
   <% if current_organization.twitter_handler.present? %>
     <li>
       <a target="_blank" data-external-link="text-only" rel="noopener noreferrer" href="https://twitter.com/<%= current_organization.twitter_handler %>">
+<<<<<<< HEAD
         <span class="sr-only"><%= t("layouts.decidim.social_media_links.x", organization: translated_attribute(current_organization.name)) %></span>
+=======
+        <span class="sr-only"><%= t("layouts.decidim.social_media_links.x", organization: current_organization_name) %></span>
+>>>>>>> tags/v0.29.1
         <%= icon "twitter-x-line", class: "w-8 h-8 fill-current", "aria-label": "X" %>
       </a>
     </li>
@@ -10,7 +14,11 @@
   <% if current_organization.facebook_handler.present? %>
     <li>
       <a target="_blank" data-external-link="text-only" rel="noopener noreferrer" href="https://www.facebook.com/<%= current_organization.facebook_handler %>">
+<<<<<<< HEAD
         <span class="sr-only"><%= t("layouts.decidim.social_media_links.facebook", organization: translated_attribute(current_organization.name)) %></span>
+=======
+        <span class="sr-only"><%= t("layouts.decidim.social_media_links.facebook", organization: current_organization_name) %></span>
+>>>>>>> tags/v0.29.1
         <%= icon "facebook-fill", class: "w-8 h-8 fill-current", "aria-label": "Facebook" %>
       </a>
     </li>
@@ -18,7 +26,11 @@
   <% if current_organization.instagram_handler.present? %>
     <li>
       <a target="_blank" data-external-link="text-only" rel="noopener noreferrer" href="https://www.instagram.com/<%= current_organization.instagram_handler %>">
+<<<<<<< HEAD
         <span class="sr-only"><%= t("layouts.decidim.social_media_links.instagram", organization: translated_attribute(current_organization.name)) %></span>
+=======
+        <span class="sr-only"><%= t("layouts.decidim.social_media_links.instagram", organization: current_organization_name) %></span>
+>>>>>>> tags/v0.29.1
         <%= icon "instagram-line", class: "w-8 h-8 fill-current", "aria-label": "Instagram" %>
       </a>
     </li>
@@ -26,16 +38,26 @@
   <% if current_organization.youtube_handler.present? %>
     <li>
       <a target="_blank" data-external-link="text-only" rel="noopener noreferrer" href="https://www.youtube.com/<%= current_organization.youtube_handler %>">
+<<<<<<< HEAD
         <span class="sr-only"><%= t("layouts.decidim.social_media_links.youtube", organization: translated_attribute(current_organization.name)) %></span>
         <%= icon "youtube-line", class: "w-8 h-8 fill-current", "aria-label": "Youtube" %>
+=======
+        <span class="sr-only"><%= t("layouts.decidim.social_media_links.youtube", organization: current_organization_name) %></span>
+        <%= icon "youtube-line", class: "w-8 h-8 fill-current", "aria-label": "YouTube" %>
+>>>>>>> tags/v0.29.1
       </a>
     </li>
   <% end %>
   <% if current_organization.github_handler.present? %>
     <li>
       <a target="_blank" data-external-link="text-only" rel="noopener noreferrer" href="https://www.github.com/<%= current_organization.github_handler %>">
+<<<<<<< HEAD
         <span class="sr-only"><%= t("layouts.decidim.social_media_links.github", organization: translated_attribute(current_organization.name)) %></span>
         <%= icon "github-fill", class: "w-8 h-8 fill-current", "aria-label": "Github" %>
+=======
+        <span class="sr-only"><%= t("layouts.decidim.social_media_links.github", organization: current_organization_name) %></span>
+        <%= icon "github-fill", class: "w-8 h-8 fill-current", "aria-label": "GitHub" %>
+>>>>>>> tags/v0.29.1
       </a>
     </li>
   <% end %>

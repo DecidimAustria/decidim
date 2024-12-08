@@ -320,12 +320,14 @@ it:
             non_user: Utente non esistente
             select_user: Seleziona utente
           index:
+<<<<<<< HEAD
             filter:
               all: Tutti
               sent: Inviato
+=======
+>>>>>>> tags/v0.29.1
             invite_attendee: Invita il partecipante
             invites: Inviti
-            search: Ricerca
           new:
             invite: Invita
             new_invite: Invita partecipante

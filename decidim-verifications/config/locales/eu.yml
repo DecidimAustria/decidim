@@ -57,10 +57,24 @@ eu:
         grant_id_documents_offline_verification: "%{user_name} k egiaztatu zuen %{resource_name} nortasun agirien baimen bat erabiliz"
     authorization_handlers:
       admin:
+        another_dummy_authorization_handler:
+          help:
+            - Adibide bat baimen-emailea garatzaileek uler dezaten nola funtzionatzen duen egiaztapen sinple batek.
+            - Garatzaileentzat da, beren egiaztapen-sistema ezartzeko modua uler dezaten.
+            - Egiaztatu "A" letraz hasten den pasaporte zenbaki bat sartuz.
         csv_census:
           help:
             - Administratzaileek onartutako parte-hartzaileen posta elektronikoak dituen CSV igotzen dute. 
             - CSV fitxategian posta elektroniko bat duten parte-hartzaileak soilik egiaztatu ahal dira.
+        default:
+          help:
+            - Ez dago zehaztuta baimen-emailearen laguntza.
+            - Garatzaile batek laguntza zehaztu behar du "% {authorization_handler} "(i18n) itzulpen-gakoan
+        dummy_authorization_handler:
+          help:
+            - Baimen-emaile adibide bat garatzaileek uler dezaten nola funtzionatzen duen egiaztapen sinple batek.
+            - Garatzaileentzat da, beren egiaztapen-sistema ezartzeko modua uler dezaten.
+            - Egiaztatu "X" letraz hasten den pasaporte zenbaki bat sartuz.
         id_documents:
           help:
             - Erabiltzaileek beren identifikazio informazioa bete, eta dokumentuaren kopia bat kargatzen dute.
@@ -73,6 +87,11 @@ eu:
             - Posta-helbidea bere helbidean bidaltzen du egiaztapen-kodearekin.
             - Markatu mezua bidalita bezala.
             - Behin bidalitako mezua markatzen duzunean, erabiltzaileak kodea sartu eta egiaztatu egingo du.
+        sms:
+          help:
+            - Parte-hartzaileek egiaztapen-kode bat eskatzen dute telefonora bidaltzeko.
+            - Kodea sartu behar dute egiaztatzeko.
+            - Kodea jasotzen ez badute, berriz eska dezakete.
       csv_census:
         explanation: Egiaztatu erakundearen errolda erabiliz.
         name: Erakundearen zentsua
@@ -92,7 +111,7 @@ eu:
           email_intro: <a href="%{resource_url}">%{resource_title}</a> parte-hartzailea saiatu da (<a href="%{managed_user_url}">%{managed_user_name}</a>) parte-hartzailearen datuekin egiaztatzen.
           email_outro: Egiaztau <a href="%{conflicts_url}"> egiaztapenen gatazken zerrenda </a> eta jarri harremanetan parte-hartzailearekin bere datuak egiaztatu eta arazoa konpontzeko.
           email_subject: Errorea beste parte-hartzaile baten bidez egiaztatzean
-          notification_title: <a href="%{resource_url}">%{resource_title}</a> parte-hartzailea saiatu da (<a href="%{managed_user_url}">%{managed_user_name}</a>) parte-hartzailearen datuekin egiaztatzen.
+          notification_title: <a href="%{resource_path}">%{resource_title}</a> parte-hartzailea saiatu da (<a href="%{managed_user_path}">%{managed_user_name}</a>) parte-hartzailearen datuekin egiaztatzen.
     verifications:
       authorizations:
         authorization_metadata:
@@ -269,7 +288,7 @@ eu:
             error: Arazo bat egon da zure eskaerarekin.
             success: Mila esker! SMS bat bidali dugu zure telefonora.
           destroy:
-            success: Egiaztapen kodea behar bezala berrezarri da. Sartu berriro zure telefono zenbakia.
+            success: Egiaztapen-kodea arrakastaz berrezarri da. Mesedez, sartu berriro zure telefono zenbakia.
           edit:
             confirm_destroy: Ziur egiaztapen-kodea berrezarri nahi duzula?
             destroy: Berrezarri egiaztapen-kodea

@@ -97,7 +97,11 @@ sv:
             new_items:
               one: 1 valt projekt kommer att importeras
               other: "%{count} valda projekt kommer att importeras"
+<<<<<<< HEAD
             no_components: Det finns ingen budget-komponenter att importera projekt från i den här processen.
+=======
+            no_components: Det finns inga budget-komponenter att importera projekt från i den här processen.
+>>>>>>> tags/v0.29.1
             origin_component_id: Ursprungskomponent
             select_component: Välj en komponent
             success:
@@ -236,8 +240,8 @@ sv:
           search: Sök efter åtgärder
         show:
           stats:
-            attendees: Deltagare
             back_to_resource: Gå tillbaka till resultatet
+<<<<<<< HEAD
             comments: Kommentarer
             contributions: Insatser
             last_edited_by: Senast ändrad av
@@ -245,6 +249,8 @@ sv:
             meetings: Möten
             proposals: Förslag
             votes: Stöd
+=======
+>>>>>>> tags/v0.29.1
         timeline:
           title: Projektutveckling
     admin:
@@ -263,6 +269,7 @@ sv:
         name: Genomförande
         settings:
           global:
+<<<<<<< HEAD
             categories_label: Namn på "Kategorier"
             comments_enabled: Aktivera kommentarer
             comments_max_length: Maximal kommentarslängd (ange 0 för att använda standardvärdet)
@@ -273,6 +280,14 @@ sv:
             scope_id: Indelning
             scopes_enabled: Aktivera indelningar
             subcategories_label: Namn på "Underkategorier"
+=======
+            comments_enabled: Aktivera kommentarer
+            comments_max_length: Maximal kommentarslängd (ange 0 för att använda standardvärdet)
+            display_progress_enabled: Visa behandling
+            intro: Intro
+            scope_id: Indelning
+            scopes_enabled: Aktivera indelningar
+>>>>>>> tags/v0.29.1
           step:
             comments_blocked: Stäng av kommentarer
     events:

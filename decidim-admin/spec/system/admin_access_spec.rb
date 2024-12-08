@@ -18,7 +18,11 @@ describe "AdminAccess" do
       sleep 2
       visit decidim_admin_participatory_processes.edit_participatory_process_path(participatory_process)
 
+<<<<<<< HEAD
       expect(page).to have_content "You need to log in or sign up before continuing."
+=======
+      expect(page).to have_content "You need to log in or create an account before continuing."
+>>>>>>> tags/v0.29.1
     end
   end
 

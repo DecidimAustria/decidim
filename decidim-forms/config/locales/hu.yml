@@ -15,7 +15,6 @@ hu:
           attributes:
             choices:
               missing: nem teljesek
-              too_many: túl sok
   decidim:
     forms:
       admin:

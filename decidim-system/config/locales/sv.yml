@@ -68,6 +68,7 @@ sv:
         show:
           admins: Administratörer
           current_organizations: Nuvarande organisationer
+          system_checks: Systemkontroller
       default_pages:
         placeholders:
           content: Lägg till relevant innehåll på den statiska sidan %{page} på adminpanelen.
@@ -88,6 +89,10 @@ sv:
             did_not_receive_unlock_instructions?: Fick du inga instruktioner om hur du låser upp ditt konto?
             forgot_your_password?: Glömt ditt lösenord?
             log_in: Logga in
+<<<<<<< HEAD
+=======
+            sign_up: Skapa ett konto
+>>>>>>> tags/v0.29.1
       menu:
         admins: Administratörer
         dashboard: Adminpanel
@@ -206,8 +211,13 @@ sv:
           success: Organisationen har uppdaterats.
         users_registration_mode:
           disabled: Åtkomst kan endast göras med externa konton
+<<<<<<< HEAD
           enabled: Tillåt deltagare att registrera och logga in
           existing: Tillåt inte deltagare att registrera sig, men tillåt befintliga deltagare att logga in
+=======
+          enabled: Tillåt deltagare att skapa ett konto och logga in
+          existing: Tillåt inte deltagare att skapa ett konto, men låt befintliga deltagare logga in
+>>>>>>> tags/v0.29.1
       shared:
         notices:
           no_organization_warning_html: Kom igång genom att skapa en organisation. Läs %{guide} innan du fortsätter.
@@ -215,6 +225,17 @@ sv:
         organizations_list:
           confirm_resend_invitation: Är du säker på att du vill skicka inbjudan igen?
           resend_invitation: Skicka inbjudan igen
+<<<<<<< HEAD
+=======
+      system_checks:
+        active_job_queue:
+          decidim_documentation: Decidim Dokumentation
+          error: ActiveJob-kön är inte konfigurerad. Detta är inte en rekommenderad inställning för produktionsläge. Läs mer på %{error_extra}.
+          success: ActiveJob-kön är konfigurerad korrekt.
+        secret_key:
+          error: 'Den hemliga nyckeln är inte korrekt definierad. Spara till variabeln SECRET_KEY_BASE och starta om servern: %{error_extra}'
+          success: Den hemliga nyckeln är korrekt konfigurerad.
+>>>>>>> tags/v0.29.1
       titles:
         dashboard: Adminpanel
         decidim: Decidim

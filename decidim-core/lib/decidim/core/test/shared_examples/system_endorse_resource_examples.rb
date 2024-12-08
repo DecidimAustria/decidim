@@ -5,23 +5,23 @@ require "spec_helper"
 shared_context "with resources to be endorsed or not" do
   include_context "with a component"
 
-  # Should be overriden and create one main resource
+  # Should be overridden and create one main resource
   let!(:resource) { nil }
   # the name of the resource to be clicked from the component view
   let(:resource_name) { nil }
-  # Should be overriden and create 3 extra resources in the current component
+  # Should be overridden and create 3 extra resources in the current component
   let!(:resources) { nil }
 end
 
 shared_examples "Endorse resource system specs" do
   def expect_page_not_to_include_endorsements
-    expect(page).not_to have_button("Like")
-    expect(page).not_to have_css("#resource-#{resource.id}-endorsements-count")
+    expect(page).to have_no_button("Like")
+    expect(page).to have_no_css("#resource-#{resource.id}-endorsements-count")
   end
 
   def visit_resource
     visit_component
-    click_link resource_name
+    click_on resource_name
   end
 
   context "when endorsements are not enabled" do
@@ -91,7 +91,7 @@ shared_examples "Endorse resource system specs" do
           visit_resource
           within "#resource-#{resource.id}-endorsement-block" do
             expect(page).to have_button("Dislike")
-            expect(page).not_to have_button("Like")
+            expect(page).to have_no_button("Like")
           end
         end
 

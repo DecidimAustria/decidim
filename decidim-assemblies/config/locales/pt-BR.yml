@@ -51,7 +51,6 @@ pt-BR:
         scope_id: Âmbito
         scopes_enabled: Escopos ativados
         short_description: Pequena descrição
-        show_statistics: Mostre estatisticas
         slug: Slug de URL
         special_features: Funcionalidades especiais
         subtitle: Subtítulo
@@ -309,7 +308,10 @@ pt-BR:
           form:
             existing_user: Participante existente
             explanation: 'Orientação para a imagem:'
+<<<<<<< HEAD
             image_guide: De preferência, uma imagem em formato paisagem que não tenha nenhum texto.
+=======
+>>>>>>> tags/v0.29.1
             non_user: Não-participante
             non_user_avatar_help: Você deve receber o consentimento das pessoas antes de publicá-las como membro.
             select_a_position: Selecione uma posição
@@ -395,11 +397,7 @@ pt-BR:
       show:
         assembly_type: Tipo de assembleia
         duration: Duração
-        is_transparent:
-          'false': opaco
-          'true': transparente
         private_space: Esta é uma assembleia privada
-        related_participatory_processes: Processos participativos relacionados
         social_networks_title: Visite assembleia em
     assembly_members:
       assembly_member:

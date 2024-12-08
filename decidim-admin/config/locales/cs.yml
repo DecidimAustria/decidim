@@ -381,7 +381,7 @@ cs:
           update: Aktualizovat
       dashboard:
         pending_moderations:
-          anouncement:
+          announcement:
             one: Je zde %{count} čekající na moderování
             few: Jsou zde %{count} čekající na moderování
             many: Je zde %{count} čekajících na moderování
@@ -391,12 +391,12 @@ cs:
         show:
           dropdown: Rozbalovací nabídka
           view_more_logs: Zobrazit další protokoly
-      domain_whitelist:
+      domain_allowlist:
         form:
           domain_too_short: Doména je příliš krátká
         update:
-          error: Nepodařilo se aktualizovat seznam povolených domén.
-          success: Seznam povolených domén byl úspěšně aktualizován.
+          error: Aktualizace seznamu povolených externích domén se nezdařila
+          success: Seznam povolených externích domén byl úspěšně aktualizován.
       exports:
         export_as: "%{name} jako %{export_format}"
         formats:
@@ -455,6 +455,7 @@ cs:
           values:
             'false': Zveřejněno
             'true': Nezveřejněno
+        remove_all: Odebrat vše
         scope_id_eq:
           label: Oblast působnosti
         search_label: Hledat
@@ -463,7 +464,6 @@ cs:
           report_count_eq: Počet nahlášení
           reported_id_string_or_reported_content_cont: Hledat %{collection} podle nahlášeného Id nebo obsahu.
           title_cont: Hledat %{collection} podle názvu.
-          user_name_or_user_email_cont: Hledat %{collection} podle jména nebo e-mailu.
           user_name_or_user_nickname_or_user_email_cont: Hledat %{collection} podle e-mailu, jména nebo přezdívky.
         state_eq:
           label: Stav
@@ -587,7 +587,7 @@ cs:
         components: Komponenty
         configuration: Konfigurace
         content: Nahlášený obsah
-        external_domain_whitelist: Povolené externí domény
+        external_domain_allowlist: Povolené externí domény
         help_sections: Sekce nápovědy
         homepage: Domovská stránka
         impersonations: V zastoupení
@@ -872,7 +872,7 @@ cs:
             layout_appearance_title: Upravit vzhled zobrazení
             preview: Náhled
           omnipresent_banner_appearance_title: Upravit všudypřítomný banner
-      organization_external_domain_whitelist:
+      organization_external_domain_allowlist:
         edit:
           update: Aktualizace
         external_domain:
@@ -881,8 +881,8 @@ cs:
           remove: Odstranit
           up: Nahoru
         form:
-          add: Přidat do seznamu povolených
-          title: Seznam externích povolených domén
+          add: Přidat na Seznam povolených
+          title: Seznam povolených externích domén
       participatory_space_private_users:
         create:
           error: Při přidávání soukromého uživatele pro tento participační prostor došlo k chybě.
@@ -980,6 +980,11 @@ cs:
           help: Tyto tokeny se používají k veřejnému sdílení tohoto nezveřejněného zdroje každému uživateli. Budou skryty, když bude dokument publikován. Klikněte na ikonu sdílení tokenu a navštivte sdílenou URL.
           title: Sdílet tokeny
       shared:
+        adjacent_navigation:
+          next: Další
+          next_title: Další položka
+          previous: Předchozí
+          previous_title: Předchozí položka
         gallery:
           add_images: Přidat obrázky
           edit_images: Upravit obrázky
@@ -1032,7 +1037,7 @@ cs:
         areas: Oblasti
         authorization_workflows: Metody ověření
         dashboard: Ovládací panel
-        edit_external_domains: Seznam externích povolených domén
+        edit_external_domains: Seznam povolených externích domén
         edit_landing_page: Obsah stránky
         edit_organization_appearance: Upravit vzhled domovské stránky
         impersonatable_users: Spravovatelní účastníci

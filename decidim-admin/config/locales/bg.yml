@@ -381,7 +381,11 @@ bg:
           update: Актуализация
       dashboard:
         pending_moderations:
+<<<<<<< HEAD
           anouncement:
+=======
+          announcement:
+>>>>>>> tags/v0.29.1
             one: Има %{count} чакащи модериране
             other: Има %{count} чакащи модерации
           goto_moderation: Отидете на глобалните модерации
@@ -389,12 +393,21 @@ bg:
         show:
           dropdown: Падащо меню
           view_more_logs: Преглед на още регистри
+<<<<<<< HEAD
       domain_whitelist:
         form:
           domain_too_short: Домейнът е твърде кратък
         update:
           error: Неуспешно актуализиране на белия списък на домейни.
           success: Белият списък на домейни е актуализиран успешно.
+=======
+      domain_allowlist:
+        form:
+          domain_too_short: Домейнът е твърде кратък
+        update:
+          error: Неуспешно актуализиране на списъка с разрешени външни домейни
+          success: Списъкът с разрешени външни домейни е актуализиран успешно.
+>>>>>>> tags/v0.29.1
       exports:
         export_as: "%{name} като %{export_format}"
         formats:
@@ -453,6 +466,10 @@ bg:
           values:
             'false': Публикувано
             'true': Непубликувано
+<<<<<<< HEAD
+=======
+        remove_all: Премахване на всички
+>>>>>>> tags/v0.29.1
         scope_id_eq:
           label: Обхват
         search_label: Търсене
@@ -461,7 +478,10 @@ bg:
           report_count_eq: Отчитане на броя
           reported_id_string_or_reported_content_cont: Търсете в %{collection} по ID или съдържание, което може да бъде отчетено.
           title_cont: Търсене на %{collection} по заглавие.
+<<<<<<< HEAD
           user_name_or_user_email_cont: Търси в %{collection} по име или имейл.
+=======
+>>>>>>> tags/v0.29.1
           user_name_or_user_nickname_or_user_email_cont: Търсене на %{collection} по имейл, име или псевдоним.
         state_eq:
           label: Състояние
@@ -577,7 +597,11 @@ bg:
         components: Компоненти
         configuration: Конфигурация
         content: Докладвано съдържание
+<<<<<<< HEAD
         external_domain_whitelist: Лист с позволени външни домейни
+=======
+        external_domain_allowlist: Лист с позволени външни домейни
+>>>>>>> tags/v0.29.1
         help_sections: Помощни раздели
         homepage: Начална страница
         impersonations: Имитация
@@ -862,7 +886,11 @@ bg:
             layout_appearance_title: Редактиране външния вид шаблона
             preview: Преглед
           omnipresent_banner_appearance_title: Редактиране на присъстващия навсякъде банер
+<<<<<<< HEAD
       organization_external_domain_whitelist:
+=======
+      organization_external_domain_allowlist:
+>>>>>>> tags/v0.29.1
         edit:
           update: Актуализация
         external_domain:
@@ -871,8 +899,13 @@ bg:
           remove: Премахни
           up: Горе
         form:
+<<<<<<< HEAD
           add: Добави към белия списък
           title: Бял списък с външни домейни
+=======
+          add: Добави в листа с позволени
+          title: Лист с позволени външни домейни
+>>>>>>> tags/v0.29.1
       participatory_space_private_users:
         create:
           error: Възникна проблем при добавянето на частен участник за това пространство за участие.
@@ -968,6 +1001,14 @@ bg:
           help: Маркерите се използват за публично споделяне на този непубликуван ресурс с всеки потребител. Те ще бъдат скрити, след като ресурсът бъде публикуван. Щракнете върху иконата за споделяне на маркера, за да посетите URL адреса с възможност за споделяне.
           title: Споделяне на маркери
       shared:
+<<<<<<< HEAD
+=======
+        adjacent_navigation:
+          next: Следващ
+          next_title: Следващ елемент
+          previous: Предишен
+          previous_title: Предишен елемент
+>>>>>>> tags/v0.29.1
         gallery:
           add_images: Добави изображения
           edit_images: Редактиране на изображения
@@ -1020,7 +1061,11 @@ bg:
         areas: Области
         authorization_workflows: Методи за проверка
         dashboard: Контролен панел
+<<<<<<< HEAD
         edit_external_domains: Бял списък с външни домейни
+=======
+        edit_external_domains: Лист с позволени външни домейни
+>>>>>>> tags/v0.29.1
         edit_landing_page: Съдържание на страницата
         edit_organization_appearance: Редактиране на външния вид на началната страница
         impersonatable_users: Управляеми участници

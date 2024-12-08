@@ -348,7 +348,6 @@ el:
         title: Διενέξεις επαλήθευσης
         transfer:
           email: E-mail
-          error: Υπήρξε ένα πρόβλημα κατά τη μεταφορά του τρέχοντος συμμετέχοντα σε διαχειριζόμενο συμμετέχοντα.
           name: Όνομα
           reason: Αιτία
           success: Η τρέχουσα μεταφορά έχει ολοκληρωθεί με επιτυχία.
@@ -361,10 +360,13 @@ el:
           title: Εκκρεμείς εγκρίσεις
         show:
           view_more_logs: Προβολή περισσότερων αρχείων καταγραφής
+<<<<<<< HEAD
       domain_whitelist:
         update:
           error: Απέτυχε η ενημέρωση της λίστας επιτρεπόμενων τομέων.
           success: Η λίστα επιτρεπόμενων τομέων ενημερώθηκε με επιτυχία.
+=======
+>>>>>>> tags/v0.29.1
       exports:
         export_as: "Όνομα %{name} ως μορφή %{export_format}"
         formats:
@@ -431,7 +433,6 @@ el:
           report_count_eq: Αναφορά μετρητή eq
           reported_id_string_or_reported_content_cont: Αναζήτηση %{collection} με αναγνωριστικό ή περιεχόμενο προς αναφορά.
           title_cont: Αναζήτηση συλλογής %{collection} με βάση τον τίτλο.
-          user_name_or_user_email_cont: Αναζήτηση %{collection} με βάση το όνομα ή το email.
           user_name_or_user_nickname_or_user_email_cont: Αναζήτηση %{collection} με email, όνομα ή ψευδώνυμο.
         state_eq:
           label: Κατάσταση
@@ -819,12 +820,15 @@ el:
             layout_appearance_title: Επεξεργασία εμφάνισης διάταξης
             preview: Προεπισκόπηση
           omnipresent_banner_appearance_title: Επεξεργασία διαφημιστικού πλαισίου omnipresent
+<<<<<<< HEAD
       organization_external_domain_whitelist:
         edit:
           update: Ενημέρωση
         form:
           add: Προσθήκη στη λευκή λίστα
           title: Εξωτερική λευκή λίστα τομέων
+=======
+>>>>>>> tags/v0.29.1
       participatory_space_private_users:
         create:
           error: Υπήρξε ένα πρόβλημα κατά την προσθήκη ενός ιδιωτικού συμμετέχοντα για αυτόν τον χώρο συμμετοχής.

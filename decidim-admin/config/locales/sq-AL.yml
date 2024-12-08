@@ -492,9 +492,12 @@ sq:
             saturation: Thellësia
             title: Përzgjedhësi i ngjyrës
             update_suggested_colors: Përditëso ngjyrat e rekomanduara
+<<<<<<< HEAD
       organization_external_domain_whitelist:
         edit:
           update: Përditëso
+=======
+>>>>>>> tags/v0.29.1
       resource_permissions:
         edit:
           title: Github

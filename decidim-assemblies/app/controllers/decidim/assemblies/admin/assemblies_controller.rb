@@ -52,7 +52,7 @@ module Decidim
             assembly_id: current_assembly.id
           )
 
-          UpdateAssembly.call(current_assembly, @form) do
+          UpdateAssembly.call(@form, current_assembly) do
             on(:ok) do |assembly|
               flash[:notice] = I18n.t("assemblies.update.success", scope: "decidim.admin")
               redirect_to edit_assembly_path(assembly)
@@ -95,7 +95,11 @@ module Decidim
           return assembly_parent_id if params[:assembly].present?
 
           # Otherwise, return the parent_id from the params hash
+<<<<<<< HEAD
           params[:parent_id]
+=======
+          return params[:parent_id]
+>>>>>>> tags/v0.29.1
         end
 
         def assembly_parent_id

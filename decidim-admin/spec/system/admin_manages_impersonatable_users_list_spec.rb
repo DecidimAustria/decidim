@@ -11,7 +11,7 @@ describe "Admin manages impersonatable users list" do
     switch_to_host(organization.host)
     login_as admin, scope: :user
     visit decidim_admin.root_path
-    click_link "Participants"
+    click_on "Participants"
   end
 
   describe "listing impersonatable users" do
@@ -28,11 +28,12 @@ describe "Admin manages impersonatable users list" do
 
     before do
       within_admin_sidebar_menu do
-        click_link "Impersonations"
+        click_on "Impersonations"
       end
     end
 
     it "shows each user and its managed status" do
+<<<<<<< HEAD
       expect(page).to have_selector("tr[data-user-id=\"#{managed.id}\"]", text: managed.name)
       expect(page).to have_selector("tr[data-user-id=\"#{managed.id}\"]", text: "Managed")
       expect(page).to have_selector("tr[data-user-id=\"#{not_managed.id}\"]", text: not_managed.name)
@@ -46,6 +47,21 @@ describe "Admin manages impersonatable users list" do
       expect(page).not_to have_selector("tr[data-user-id=\"#{external_not_managed.id}\"]", text: external_not_managed.name)
       expect(page).not_to have_selector("tr[data-user-id=\"#{external_admin.id}\"]", text: external_admin.name)
       expect(page).not_to have_selector("tr[data-user-id=\"#{external_user_manager.id}\"]", text: external_user_manager.name)
+=======
+      expect(page).to have_css("tr[data-user-id=\"#{managed.id}\"]", text: managed.name)
+      expect(page).to have_css("tr[data-user-id=\"#{managed.id}\"]", text: "Managed")
+      expect(page).to have_css("tr[data-user-id=\"#{not_managed.id}\"]", text: not_managed.name)
+      expect(page).to have_css("tr[data-user-id=\"#{not_managed.id}\"]", text: "Not managed")
+
+      expect(page).to have_no_css("tr[data-user-id=\"#{admin.id}\"]", text: admin.name)
+      expect(page).to have_no_css("tr[data-user-id=\"#{deleted.id}\"]", text: deleted.name)
+      expect(page).to have_no_css("tr[data-user-id=\"#{blocked.id}\"]", text: blocked.name)
+      expect(page).to have_no_css("tr[data-user-id=\"#{another_admin.id}\"]", text: another_admin.name)
+      expect(page).to have_no_css("tr[data-user-id=\"#{user_manager.id}\"]", text: user_manager.name)
+      expect(page).to have_no_css("tr[data-user-id=\"#{external_not_managed.id}\"]", text: external_not_managed.name)
+      expect(page).to have_no_css("tr[data-user-id=\"#{external_admin.id}\"]", text: external_admin.name)
+      expect(page).to have_no_css("tr[data-user-id=\"#{external_user_manager.id}\"]", text: external_user_manager.name)
+>>>>>>> tags/v0.29.1
     end
   end
 end

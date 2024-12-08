@@ -25,7 +25,7 @@ data:
     - 'decidim-core/config/locales/%{locale}.yml'
 
   ## Specify the router (see Readme for details). Valid values: conservative_router, pattern_router, or a custom class.
-  # router: convervative_router
+  # router: conservative_router
 
   yaml:
     write:
@@ -136,6 +136,7 @@ ignore_unused:
   - decidim.admin.participatory_process_steps.default_title
   - decidim.authorization_handlers.{direct,multistep}
   - decidim.admin.models.assembly_member.positions.*
+  - decidim.application.documents.component_documents.*
   - decidim.statistics.*
   - decidim.components.*
   - decidim.filters.linked_classes.*
@@ -182,11 +183,6 @@ ignore_unused:
   - decidim.features.accountability.settings.*
   - decidim.accountability.models.project.valid_statuses.*
   - decidim.accountability.admin_log.*
-  - decidim.elections.admin_log.*
-  - decidim.elections.connection.failed.*
-  - decidim.elections.orders.*
-  - decidim.elections.election_m.*
-  - decidim.elections.votes.header.*
   - decidim.proposals.admin_log.*
   - decidim.log.base_presenter.*
   - decidim.admin_log.*
@@ -219,11 +215,6 @@ ignore_unused:
   - decidim.sortitions.admin_log.*
   - decidim.sortitions.sortitions.filters.*
   - decidim.sortitions.sortitions.orders.*
-  - decidim.votings.admin_log.*
-  - decidim.votings.votings.filters.*
-  - decidim.votings.votings.orders.*
-  - decidim.votings.votings_m.badge_name.*
-  - decidim.votings.votings_m.voting_type.*
   - decidim.initiatives.admin_log.*
   - decidim.initiatives.initiatives.orders.*
   - decidim.initiatives.states.*
@@ -249,7 +240,6 @@ ignore_unused:
   - decidim.assemblies.content_blocks.*.name
   - decidim.initiatives.content_blocks.*.name
   - decidim.meetings.content_blocks.*.name
-  - decidim.votings.content_blocks.*.name
   - decidim.blogs.content_blocks.*.name
   - decidim.proposals.content_blocks.*.name
   - decidim.proposals.collaborative_drafts.show.hidden_authors_count.*
@@ -314,15 +304,6 @@ ignore_unused:
   - decidim.budgets.projects.budget_excess.description
   - decidim.debates.debates.orders.*
   - decidim.debates.debate_m.commented_time_ago
-  - decidim.elections.trustee_zone.trustees.show.identification_keys.upload_error.*
-  - decidim.elections.feedback.answer.*
-  - decidim.elections.trustee_zone.elections.key_ceremony_steps.keys.*
-  - decidim.elections.trustee_zone.elections.tally_started_steps.keys.*
-  - decidim.elections.elections.filters.*
-  - decidim.votings.admin_log.*
-  - decidim.votings.admin.content_blocks.*
-  - decidim.votings.census.admin.census.new.file_help.*
-  - decidim.votings.census.document_types.*
   - decidim.devise.sessions.user.timed_out
   - decidim.admin.forms.file_help.import.*
   - decidim.admin.menu.questions_submenu.attachments
@@ -357,12 +338,10 @@ ignore_unused:
   - decidim.admin.participatory_process_user_roles.create.*
   - decidim.admin.participatory_process_user_roles.update.*
   - decidim.admin.participatory_process_user_roles.destroy.*
-  - decidim.votings.polling_officers.roles.*
   - layouts.decidim.participatory_processes.promoted_process.*
   - layouts.decidim.conferences.promoted_conference.*
   - layouts.decidim.assemblies.assembly.*
   - layouts.decidim.conferences.promoted_conference.*
-  - layouts.decidim.votings.promoted_voting.vote
   - versions.directions.*
   - layouts.decidim.conferences.conference.*
   - decidim.admin.conflicts.*
@@ -371,8 +350,11 @@ ignore_unused:
   - layouts.decidim.assemblies.promoted_assembly.take_part
   - versions.dropdown.option_*
   - decidim.meetings.meetings.filters.*
+  - decidim.meetings.polls.questions.index_admin.statuses.{closed,published,unpublished}
   - decidim.meetings.directory.meetings.index.space_type
   - decidim.authorization_modals.content.*
+  - decidim.authorization_handlers.admin.{another_dummy_authorization_handler,csv_census,dummy_authorization_handler,id_documents,postal_letter,sms}.help
+  - time.buttons.*
 
 ## Exclude these keys from the `i18n-tasks eq-base' report:
 # ignore_eq_base:

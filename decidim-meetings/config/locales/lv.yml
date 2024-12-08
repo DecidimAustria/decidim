@@ -181,11 +181,13 @@ lv:
             non_user: Neeksistējošs dalībnieks
             select_user: Izvēlieties dalībnieku
           index:
+<<<<<<< HEAD
             filter:
               sent: Nosūtīts
+=======
+>>>>>>> tags/v0.29.1
             invite_attendee: Uzaicināt apmeklētāju
             invites: Ielūgumi
-            search: Meklēt
         meeting_closes:
           edit:
             close: Aizvērt

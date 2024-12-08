@@ -18,7 +18,11 @@ describe "Admin manages participatory process types" do
     end
 
     it "can create new participatory process types", versioning: true do
+<<<<<<< HEAD
       click_link "New process type"
+=======
+      click_on "New process type"
+>>>>>>> tags/v0.29.1
 
       within ".new_participatory_process_type" do
         fill_in_i18n(:participatory_process_type_title, "#participatory_process_type-title-tabs", **attributes[:title].except("machine_translations"))
@@ -50,8 +54,8 @@ describe "Admin manages participatory process types" do
       end
 
       it "can edit them" do
-        within find("tr", text: translated(participatory_process_type.title)) do
-          click_link "Edit"
+        within "tr", text: translated(participatory_process_type.title) do
+          click_on "Edit"
         end
 
         within ".edit_participatory_process_type" do
@@ -75,7 +79,7 @@ describe "Admin manages participatory process types" do
 
         expect(page).to have_admin_callout("successfully")
 
-        expect(page).not_to have_content(translated(participatory_process_type.title))
+        expect(page).to have_no_content(translated(participatory_process_type.title))
       end
     end
   end
@@ -83,8 +87,8 @@ describe "Admin manages participatory process types" do
   private
 
   def click_delete_participatory_process_type
-    within find("tr", text: translated(participatory_process_type.title)) do
-      accept_confirm { click_link "Delete" }
+    within "tr", text: translated(participatory_process_type.title) do
+      accept_confirm { click_on "Delete" }
     end
   end
 end

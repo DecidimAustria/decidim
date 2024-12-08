@@ -4,6 +4,7 @@ module Decidim
   module Admin
     module ParticipatorySpace
       class CreateAdmin < Decidim::Command
+        delegate :current_user, to: :form
         # Public: Initializes the command.
         #
         # form - A form object with the params.
@@ -11,7 +12,6 @@ module Decidim
         #   user role
         def initialize(form, participatory_space, options = {})
           @form = form
-          @current_user = form.current_user
           @participatory_space = participatory_space
           @event_class = options.delete(:event_class)
           @event = options.delete(:event)
@@ -41,7 +41,7 @@ module Decidim
 
         private
 
-        attr_reader :form, :participatory_space, :current_user, :user
+        attr_reader :form, :participatory_space, :user
 
         def event_class = @event_class || (raise NotImplementedError, "You must define an event_class")
 
@@ -67,7 +67,7 @@ module Decidim
 
         def extra_info = { resource: { title: user.name } }
 
-        def role_params = { role: form.role.to_sym, user:, role_class.new.target_space_association => participatory_space }
+        def role_params = { :role => form.role.to_sym, :user => user, role_class.new.target_space_association => participatory_space }
 
         def send_notification(user)
           Decidim::EventsManager.publish(
@@ -114,7 +114,7 @@ module Decidim
                    current_user: user
                  )
 
-          Decidim::CreateFollow.new(form, user).call
+          Decidim::CreateFollow.new(form).call
         end
 
         def existing_user

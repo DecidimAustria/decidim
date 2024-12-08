@@ -265,7 +265,6 @@ tr:
         solved: Çözüldü
         transfer:
           email: E-Posta
-          error: Mevcut katılımcıyı yönetilen katılımcıya aktarırken bir sorun oluştu.
           name: İsim
           reason: Nedeni
           success: Aktarım başarıyla tamamlandı.
@@ -718,7 +717,6 @@ tr:
         areas: alanlar
         authorization_workflows: Doğrulama yöntemleri
         dashboard: Pano
-        edit_external_domains: Harici Güvenli Alan
         edit_landing_page: Sayfa İçeriği
         edit_organization_appearance: Ana Sayfayı Düzenleme
         impersonatable_users: Yönetilebilir kullanıcılar

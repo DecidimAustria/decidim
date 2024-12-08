@@ -80,11 +80,13 @@ ga:
           form:
             invite: Tabhair Cuireadh
           index:
+<<<<<<< HEAD
             filter:
               all: Uile
               sent: Seolta
+=======
+>>>>>>> tags/v0.29.1
             invites: Cuirí
-            search: Cuardaigh
         meeting_closes:
           edit:
             close: Dún
@@ -115,7 +117,6 @@ ga:
       layouts:
         live_event:
           close: dún
-          questions: Ceisteanna
       meeting_closes:
         edit:
           back: Ar Ais

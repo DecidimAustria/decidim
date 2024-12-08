@@ -21,7 +21,11 @@
         <dt class="font-bold"><%= t("models.newsletter.fields.sent_to", scope: "decidim.admin") %></dt>
         <dd><%= selective_newsletter_to newsletter %></dd>
       </dl>
+<<<<<<< HEAD
       <iframe src="<%= preview_newsletter_path(@newsletter) %>" class="email-preview w-full h-[60lvh]">
+=======
+      <iframe src="<%= preview_newsletter_path(@newsletter) %>" class="w-full h-[60lvh]" data-email-preview>
+>>>>>>> tags/v0.29.1
       </iframe>
     </div>
   </div>

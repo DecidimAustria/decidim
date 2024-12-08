@@ -45,6 +45,23 @@ describe "Decidim::Api::QueryType" do
 
     }
   end
+  let(:initiative_type_data) do
+    {
+      "collectUserExtraFields" => initiative.type.collect_user_extra_fields?,
+      "createdAt" => initiative.type.created_at.iso8601.to_s.gsub("Z", "+00:00"),
+      "description" => { "translation" => initiative.type.description[locale] },
+      "extraFieldsLegalInformation" => initiative.type.extra_fields_legal_information,
+      "id" => initiative.type.id.to_s,
+      "initiatives" => initiative.type.initiatives.map { |i| { "id" => i.id.to_s } },
+      "minimumCommitteeMembers" => initiative.type.minimum_committee_members,
+      "promotingCommitteeEnabled" => initiative.type.promoting_committee_enabled,
+      "signatureType" => initiative.type.signature_type,
+      "title" => { "translation" => initiative.type.title[locale] },
+      "undoOnlineSignaturesEnabled" => initiative.type.undo_online_signatures_enabled,
+      "updatedAt" => initiative.type.updated_at.iso8601.to_s.gsub("Z", "+00:00"),
+      "validateSmsCodeOnVotes" => initiative.type.validate_sms_code_on_votes
+    }
+  end
 
   let(:initiative_type_data) do
     {
@@ -100,7 +117,7 @@ describe "Decidim::Api::QueryType" do
           id
           initiatives{id}
           minimumCommitteeMembers
-          promotingComitteeEnabled
+          promotingCommitteeEnabled
           signatureType
           title {
                   translation(locale: "#{locale}")
@@ -140,7 +157,7 @@ describe "Decidim::Api::QueryType" do
   end
 
   describe "valid query" do
-    it "executes sucessfully" do
+    it "executes successfully" do
       expect { response }.not_to raise_error
     end
 
@@ -203,7 +220,7 @@ describe "Decidim::Api::QueryType" do
           id
           initiatives{id}
           minimumCommitteeMembers
-          promotingComitteeEnabled
+          promotingCommitteeEnabled
           signatureType
           title {
                   translation(locale: "en")
@@ -234,7 +251,7 @@ describe "Decidim::Api::QueryType" do
     )
     end
 
-    it "executes sucessfully" do
+    it "executes successfully" do
       expect { response }.not_to raise_error
     end
 

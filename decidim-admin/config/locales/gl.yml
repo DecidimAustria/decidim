@@ -291,7 +291,6 @@ gl:
         solved: Resolto
         transfer:
           email: Correo electrónico
-          error: Produciuse un problema ao transferir el participante actual a un participante xestionado.
           name: Nome
           reason: Motivo
           success: A transferencia actual completouse con éxito.
@@ -366,7 +365,6 @@ gl:
           report_count_eq: Número de denuncias
           reported_id_string_or_reported_content_cont: Procurar %{collection} por contido ou Id reportábel.
           title_cont: Procurar %{collection} por título.
-          user_name_or_user_email_cont: Procurar %{collection} por nome ou correo electrónico.
           user_name_or_user_nickname_or_user_email_cont: Pescudar %{collection} por correo, nome ou alcume.
         state_eq:
           label: Estado
@@ -713,9 +711,12 @@ gl:
             layout_appearance_title: Editar aspecto de deseño
             preview: Vista Previa
           omnipresent_banner_appearance_title: Editar o banner omnipresente
+<<<<<<< HEAD
       organization_external_domain_whitelist:
         edit:
           update: Actualización
+=======
+>>>>>>> tags/v0.29.1
       participatory_space_private_users:
         create:
           error: Produciuse un erro engadindo un usuario privado a este espazo participativo.

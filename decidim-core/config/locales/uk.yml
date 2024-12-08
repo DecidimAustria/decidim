@@ -196,7 +196,6 @@ uk:
         new:
           complete_profile: Заповнити профіль
           sign_up: Будь ласка, заповніть свій профіль
-          subtitle: Щоб завершити реєстрацію, заповніть наступну форму
           username_help: Загальнодоступне ім'я, яке відображається у ваших дописах. З метою гарантування анонімності, може бути будь-яким.
       registrations:
         new:
@@ -204,8 +203,6 @@ uk:
           log_in: Увійти
           newsletter: Отримувати іноді розсилання зі свіжими новинами
           newsletter_title: Дозвіл на зв'язок
-          sign_up: Зареєструватися
-          subtitle: Зареєструйтесь, щоб брати участь у обговореннях та підтримувати пропозиції.
           tos_agreement: Реєструючись, ви приймаєте %{link}.
           tos_title: Умови участі
           username_help: Загальнодоступне ім'я, яке відображається у ваших дописах. З метою гарантування анонімності, може бути будь-яким.
@@ -264,8 +261,6 @@ uk:
         email_intro: '"%{resource_title}" було оновлено. Ви можете переглянути його на сторінці:'
         email_outro: Ви отримали це сповіщення, тому що ви стежите за "%{resource_title}". Ви можете припинити стежити за ним, перейшовши за наведеним вище посиланням.
         email_subject: Оновлення до %{resource_title}
-      notification_event:
-        notification_title: З <a href="%{resource_path}">%{resource_title}</a> відбулася подія.
       users:
         profile_updated:
           email_intro: Сторінка <a href="%{resource_url}">профілю</a> учасника %{name} (%{nickname}), за яким ви стежите, була оновлена.
@@ -389,8 +384,6 @@ uk:
           headline: Поточний стан %{organization}
         sub_hero:
           register: Зареєструватися
-    participatory_space_private_users:
-      not_allowed: У вас нема прав на перегляд цього вмісту
     profile:
       deleted: Видалений учасник
     profiles:
@@ -440,8 +433,6 @@ uk:
         report: Поскаржитись
         spam: Містить клацоловки (маніпулятивно-сенсаційні заголовки), рекламу, афери або лохотрони.
         title: Поскаржитись на ускладнення
-      login_modal:
-        sign_up: Зареєструватися
       reference:
         reference: 'Посилання на джерело: %{reference}'
       results_per_page:
@@ -502,7 +493,10 @@ uk:
       footer:
         log_in: Увійти
         made_with_open_source: Цей веб-сайт створено за допомогою <a target="_blank" href="https://github.com/decidim/decidim">безкоштовного програмного забезпечення</a>.
+<<<<<<< HEAD
         sign_up: Зареєструватися
+=======
+>>>>>>> tags/v0.29.1
       header:
         log_in: Увійти
       impersonation_warning:

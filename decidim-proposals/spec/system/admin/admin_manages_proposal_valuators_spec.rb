@@ -12,6 +12,8 @@ describe "Admin manages proposals valuators" do
   end
   let!(:valuator) { create(:user, organization:) }
   let!(:valuator_role) { create(:participatory_process_user_role, role: :valuator, user: valuator, participatory_process:) }
+  let!(:other_valuator) { create(:user, organization:) }
+  let!(:other_valuator_role) { create(:participatory_process_user_role, role: :valuator, user: other_valuator, participatory_process:) }
 
   include Decidim::ComponentPathHelper
 
@@ -21,12 +23,12 @@ describe "Admin manages proposals valuators" do
     before do
       visit current_path
 
-      within find("tr", text: translated(proposal.title)) do
+      within "tr", text: translated(proposal.title) do
         page.first(".js-proposal-list-check").set(true)
       end
 
-      click_button "Actions"
-      click_button "Assign to valuator"
+      click_on "Actions"
+      click_on "Assign to valuator"
     end
 
     it "shows the component select" do
@@ -40,16 +42,51 @@ describe "Admin manages proposals valuators" do
     context "when submitting the form" do
       before do
         within "#js-form-assign-proposals-to-valuator" do
-          select valuator.name, from: :valuator_role_id
-          click_button(id: "js-submit-assign-proposals-to-valuator")
+          tom_select("#assign_valuator_role_ids", option_id: valuator_role.id)
+          click_on(id: "js-submit-assign-proposals-to-valuator")
         end
       end
 
       it "assigns the proposals to the valuator" do
         expect(page).to have_content("Proposals assigned to a valuator successfully")
 
-        within find("tr", text: translated(proposal.title)) do
-          expect(page).to have_selector("td.valuators-count", text: 1)
+        within "tr", text: translated(proposal.title) do
+          expect(page).to have_css("td.valuators-count", text: 1)
+        end
+      end
+
+      it "displays log" do
+        visit decidim_admin.root_path
+        expect(page).to have_content("assigned the #{translated(proposal.title)} proposal to a valuator")
+      end
+    end
+  end
+
+  context "when assigning to multiple valuators" do
+    before do
+      visit current_path
+
+      within "tr", text: translated(proposal.title) do
+        page.first(".js-proposal-list-check").set(true)
+      end
+
+      click_on "Actions"
+      click_on "Assign to valuator"
+    end
+
+    context "when submitting the form" do
+      before do
+        within "#js-form-assign-proposals-to-valuator" do
+          tom_select("#assign_valuator_role_ids", option_id: [valuator_role.id, other_valuator_role.id])
+          click_on(id: "js-submit-assign-proposals-to-valuator")
+        end
+      end
+
+      it "assigns the proposals to the valuator" do
+        expect(page).to have_content("Proposals assigned to a valuator successfully")
+
+        within "tr", text: translated(proposal.title) do
+          expect(page).to have_css("td.valuators-count", text: 2)
         end
       end
 
@@ -81,7 +118,7 @@ describe "Admin manages proposals valuators" do
       end
 
       expect(page).to have_content(translated(assigned_proposal.title))
-      expect(page).not_to have_content(translated(unassigned_proposal.title))
+      expect(page).to have_no_content(translated(unassigned_proposal.title))
     end
   end
 
@@ -93,12 +130,12 @@ describe "Admin manages proposals valuators" do
 
       visit current_path
 
-      within find("tr", text: translated(proposal.title)) do
+      within "tr", text: translated(proposal.title) do
         page.first(".js-proposal-list-check").set(true)
       end
 
-      click_button "Actions"
-      click_button "Unassign from valuator"
+      click_on "Actions"
+      click_on "Unassign from valuator"
     end
 
     it "shows the component select" do
@@ -112,16 +149,51 @@ describe "Admin manages proposals valuators" do
     context "when submitting the form" do
       before do
         within "#js-form-unassign-proposals-from-valuator" do
-          select valuator.name, from: :valuator_role_id
-          click_button(id: "js-submit-unassign-proposals-from-valuator")
+          tom_select("#unassign_valuator_role_ids", option_id: valuator_role.id)
+          click_on(id: "js-submit-unassign-proposals-from-valuator")
         end
       end
 
-      it "unassigns the proposals to the valuator" do
+      it "unassigns the proposals from the valuator" do
         expect(page).to have_content("Valuator unassigned from proposals successfully")
 
-        within find("tr", text: translated(proposal.title)) do
-          expect(page).to have_selector("td.valuators-count", text: 0)
+        within "tr", text: translated(proposal.title) do
+          expect(page).to have_css("td.valuators-count", text: 0)
+        end
+      end
+    end
+  end
+
+  context "when unassigning multiple valuators from a proposal from the proposals index page" do
+    let(:assigned_proposal) { proposal }
+
+    before do
+      create(:valuation_assignment, proposal:, valuator_role:)
+      create(:valuation_assignment, proposal:, valuator_role: other_valuator_role)
+
+      visit current_path
+
+      within "tr", text: translated(proposal.title) do
+        page.first(".js-proposal-list-check").set(true)
+      end
+
+      click_on "Actions"
+      click_on "Unassign from valuator"
+    end
+
+    context "when submitting the form" do
+      before do
+        within "#js-form-unassign-proposals-from-valuator" do
+          tom_select("#unassign_valuator_role_ids", option_id: [valuator_role.id, other_valuator_role.id])
+          click_on(id: "js-submit-unassign-proposals-from-valuator")
+        end
+      end
+
+      it "unassigns the proposals from the valuator" do
+        expect(page).to have_content("Valuator unassigned from proposals successfully")
+
+        within "tr", text: translated(proposal.title) do
+          expect(page).to have_css("td.valuators-count", text: 0)
         end
       end
     end
@@ -134,8 +206,8 @@ describe "Admin manages proposals valuators" do
       create(:valuation_assignment, proposal:, valuator_role:)
 
       visit current_path
-      within find("tr", text: translated(proposal.title)) do
-        click_link "Answer proposal"
+      within "tr", text: translated(proposal.title) do
+        click_on "Answer proposal"
       end
     end
 
@@ -150,7 +222,7 @@ describe "Admin manages proposals valuators" do
 
       expect(page).to have_content("Valuator unassigned from proposals successfully")
 
-      expect(page).not_to have_selector("#valuators")
+      expect(page).to have_no_selector("#valuators")
     end
   end
 end

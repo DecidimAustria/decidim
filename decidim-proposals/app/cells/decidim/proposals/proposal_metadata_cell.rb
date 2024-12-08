@@ -15,9 +15,30 @@ module Decidim
       end
 
       def state_item
-        return if state.blank?
+        return if state.blank? || @options.fetch(:skip_state, false)
 
-        { text: content_tag(:span, humanize_proposal_state(state), class: "label #{state_class}") }
+        if model.withdrawn?
+          { text: content_tag(:span, humanize_proposal_state(:withdrawn), class: "label alert") }
+        elsif model.emendation?
+          { text: content_tag(:span, humanize_proposal_state(state), class: "label #{state_class}") }
+        else
+          { text: content_tag(:span, translated_attribute(model.proposal_state&.title), class: "label", style: model.proposal_state.css_style) }
+        end
+      end
+
+      def state_class
+        return "alert" if model.withdrawn?
+
+        case state
+        when "accepted"
+          "success"
+        when "rejected"
+          "alert"
+        when "evaluating"
+          "warning"
+        else
+          "muted"
+        end
       end
 
       private
@@ -42,19 +63,6 @@ module Decidim
           text: presented_author.name,
           icon: "account-circle-line"
         }
-      end
-
-      def state_class
-        case state
-        when "accepted"
-          "success"
-        when "rejected", "withdrawn"
-          "alert"
-        when "evaluating"
-          "warning"
-        else
-          "muted"
-        end
       end
     end
   end

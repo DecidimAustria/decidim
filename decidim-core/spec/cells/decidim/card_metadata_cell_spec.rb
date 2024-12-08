@@ -18,7 +18,11 @@ describe Decidim::CardMetadataCell, type: :cell do
 
   context "when show space is disabled" do
     it "does not render the space the model belongs to" do
+<<<<<<< HEAD
       expect(cell_html).not_to have_content(decidim_escape_translated(model.component.participatory_space.title))
+=======
+      expect(cell_html).to have_no_content(decidim_escape_translated(model.component.participatory_space.title))
+>>>>>>> tags/v0.29.1
     end
   end
 
@@ -95,7 +99,7 @@ describe Decidim::CardMetadataCell, type: :cell do
 
       context "and one of dates is blank" do
         it "displays nothing" do
-          expect(cell_html).not_to have_css("span.card__grid-loader")
+          expect(cell_html).to have_no_css("span.card__grid-loader")
         end
       end
 
@@ -159,7 +163,7 @@ describe Decidim::CardMetadataCell, type: :cell do
           let(:end_date) { Date.parse("#{current_year}-06-06") }
 
           it "displays the dates excluding year" do
-            expect(cell_html).not_to have_content(current_year)
+            expect(cell_html).to have_no_content(current_year)
             expect(cell_html).to have_content("31 Jan → 06 Jun")
           end
         end
@@ -178,7 +182,7 @@ describe Decidim::CardMetadataCell, type: :cell do
           let(:end_date) { Time.zone.parse("#{current_year}-01-31 17:00") }
 
           it "displays hour interval excluding year" do
-            expect(cell_html).not_to have_content(current_year)
+            expect(cell_html).to have_no_content(current_year)
             expect(cell_html).to have_content("31 Jan 14:30 → 17:00")
           end
         end

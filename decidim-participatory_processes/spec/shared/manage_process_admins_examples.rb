@@ -16,7 +16,7 @@ shared_examples "manage process admins examples" do
     login_as user, scope: :user
     visit decidim_admin_participatory_processes.edit_participatory_process_path(participatory_process)
     within_admin_sidebar_menu do
-      click_link "Process admins"
+      click_on "Process admins"
     end
   end
 
@@ -27,7 +27,11 @@ shared_examples "manage process admins examples" do
   end
 
   it "creates a new process admin", versioning: true do
+<<<<<<< HEAD
     click_link "New process admin"
+=======
+    click_on "New process admin"
+>>>>>>> tags/v0.29.1
 
     within ".new_participatory_process_user_role" do
       fill_in :participatory_process_user_role_email, with: other_user.email
@@ -56,8 +60,8 @@ shared_examples "manage process admins examples" do
 
     it "updates a process admin", versioning: true do
       within "#process_admins" do
-        within find("#process_admins tr", text: other_user.email) do
-          click_link "Edit"
+        within "#process_admins tr", text: other_user.email do
+          click_on "Edit"
         end
       end
 
@@ -78,14 +82,14 @@ shared_examples "manage process admins examples" do
     end
 
     it "deletes a participatory_process_user_role" do
-      within find("#process_admins tr", text: other_user.email) do
-        accept_confirm { click_link "Delete" }
+      within "#process_admins tr", text: other_user.email do
+        accept_confirm { click_on "Delete" }
       end
 
       expect(page).to have_admin_callout("successfully")
 
       within "#process_admins table" do
-        expect(page).not_to have_content(other_user.email)
+        expect(page).to have_no_content(other_user.email)
       end
     end
 
@@ -109,8 +113,8 @@ shared_examples "manage process admins examples" do
       end
 
       it "resends the invitation to the user" do
-        within find("#process_admins tr", text: "test@example.org") do
-          click_link "Resend invitation"
+        within "#process_admins tr", text: "test@example.org" do
+          click_on "Resend invitation"
         end
 
         expect(page).to have_admin_callout("successfully")

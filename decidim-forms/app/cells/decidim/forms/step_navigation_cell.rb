@@ -4,8 +4,6 @@ module Decidim
   module Forms
     # This cell renders the navigation of a questionnaire step.
     class StepNavigationCell < Decidim::ViewModel
-      include Decidim::LayoutHelper
-
       def current_step_index
         model
       end
@@ -45,7 +43,8 @@ module Decidim
       def confirm_data
         { data: {
           confirm: t("decidim.forms.step_navigation.show.are_you_sure"),
-          disable: true
+          disable: true,
+          data: "survey-buttons"
         } }
       end
     end

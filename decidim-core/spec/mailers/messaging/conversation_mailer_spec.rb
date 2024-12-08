@@ -25,7 +25,11 @@ module Decidim
         end
 
         it "includes the organization data" do
+<<<<<<< HEAD
           expect(subject.body).to include(user.organization.name)
+=======
+          expect(subject.body).to include(translated(user.organization.name))
+>>>>>>> tags/v0.29.1
         end
 
         it "includes the message" do

@@ -101,7 +101,7 @@ en:
           title_or_description_or_id_string_or_author_name_or_author_nickname_cont: Search %{collection} by title, description, ID or author name.
       initiatives_settings:
         update:
-          error: An error has occured.
+          error: An error has occurred.
           success: The initiatives settings have been successfully updated.
       menu:
         attachments: Attachments
@@ -237,6 +237,10 @@ en:
               most_recent: Most recent
         exports:
           initiatives: Initiatives
+        index:
+          initiatives_types:
+            alert_html: "<p>You must create at least one initiative type so participants can start creating initiatives.</p><p> %{link}</p>"
+            button: New initiative type
         initiatives:
           accept:
             success: The initiative has been successfully accepted.
@@ -302,7 +306,7 @@ en:
         initiatives_types:
           create:
             error: An error has occurred.
-            success: A new initiative type has been successfully created.
+            success: A new initiative type has been successfully created. You need to define at least one scope for this initiative type so it can be used.
           destroy:
             success: The initiative type has been successfully removed.
           edit:
@@ -550,7 +554,6 @@ en:
           other: " signatures"
         vote_cabin:
           already_voted: Already signed
-          supports_required: "%{total_supports} signatures required"
           verification_required: Verify your account to sign the initiative
           vote: Sign
           votes_blocked: Signing disabled

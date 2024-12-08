@@ -44,6 +44,13 @@ module Decidim
 
       def banner_image
         object.attached_uploader(:banner_image).url
+<<<<<<< HEAD
+=======
+      end
+
+      def speakers
+        object.speakers.published
+>>>>>>> tags/v0.29.1
       end
     end
   end

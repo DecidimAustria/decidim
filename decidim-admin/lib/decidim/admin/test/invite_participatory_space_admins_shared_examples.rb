@@ -17,7 +17,11 @@ shared_examples "inviting participatory space admins" do |check_private_space: t
         expect(page).to have_content("Categories")
         expect(page).to have_content("Attachments")
         expect(page).to have_content(space_admins_label)
+<<<<<<< HEAD
         expect(page).not_to have_content("Private participants") if participatory_space.respond_to?(:private_space)
+=======
+        expect(page).to have_no_content("Private participants") if participatory_space.respond_to?(:private_space)
+>>>>>>> tags/v0.29.1
         expect(page).to have_content("Moderations")
       end
     end

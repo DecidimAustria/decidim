@@ -12,9 +12,15 @@
   }
 
   &__message {
+<<<<<<< HEAD
     @apply text-black font-semibold text-md;
 
     a {
+=======
+    @apply text-black font-medium text-md flex-col;
+
+    a:not(.button) {
+>>>>>>> tags/v0.29.1
       @apply underline text-secondary;
 
       svg {

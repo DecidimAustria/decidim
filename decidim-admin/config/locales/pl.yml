@@ -384,12 +384,17 @@ pl:
         show:
           dropdown: Lista rozwijana
           view_more_logs: Zobacz więcej logów
-      domain_whitelist:
+      domain_allowlist:
         form:
           domain_too_short: Domena jest za krótka
         update:
+<<<<<<< HEAD
           error: Nie udało się zaktualizować białej listy domen.
           success: Biała lista domen pomyślnie zaktualizowana.
+=======
+          error: Nie udało się zaktualizować listy dozwolonych domen zewnętrznych
+          success: Lista dozwolonych domen zewnętrznych została pomyślnie zaktualizowana.
+>>>>>>> tags/v0.29.1
       exports:
         export_as: "%{name} jako %{export_format}"
         formats:
@@ -448,6 +453,7 @@ pl:
           values:
             'false': Opublikowany
             'true': Nieopublikowany
+        remove_all: Usuń wszystkie
         scope_id_eq:
           label: Zakres
         search_label: Szukaj
@@ -456,7 +462,6 @@ pl:
           report_count_eq: Licznik raportów
           reported_id_string_or_reported_content_cont: Przeszukaj %{collection} według identyfikatora lub treści zgłoszenia.
           title_cont: Przeszukaj %{collection} według tytułu.
-          user_name_or_user_email_cont: Przeszukaj %{collection} według nazwy lub e-maila.
           user_name_or_user_nickname_or_user_email_cont: Szukaj %{collection} według adresu e-mail, nazwy lub pseudonimu.
         state_eq:
           label: Stan
@@ -580,7 +585,11 @@ pl:
         components: Komponenty
         configuration: Konfiguracja
         content: Zgłoszona zawartość
+<<<<<<< HEAD
         external_domain_whitelist: Dozwolone domeny zewnętrzne
+=======
+        external_domain_allowlist: Dozwolone domeny zewnętrzne
+>>>>>>> tags/v0.29.1
         help_sections: Sekcje pomocy
         homepage: Strona główna
         impersonations: Podszywanie się pod inne osoby
@@ -865,7 +874,7 @@ pl:
             layout_appearance_title: Edytuj wygląd layoutu
             preview: Podgląd
           omnipresent_banner_appearance_title: Edytuj stały baner
-      organization_external_domain_whitelist:
+      organization_external_domain_allowlist:
         edit:
           update: Aktualizuj
         external_domain:
@@ -874,8 +883,8 @@ pl:
           remove: Usuń
           up: Do góry
         form:
-          add: Dodaj do białej listy
-          title: Biała lista domen zewnętrznych
+          add: Dodaj do listy dozwolonych
+          title: Dozwolone domeny zewnętrzne
       participatory_space_private_users:
         create:
           error: Wystąpił błąd podczas dodawania użytkownika prywatnego do tej przestrzeni partycypacyjnej.
@@ -973,6 +982,11 @@ pl:
           help: Te tokeny są używane do publicznego udostępniania nieopublikowanego zasobu każdemu użytkownikowi. Zostaną one ukryte, gdy zasób zostanie opublikowany. Kliknij na ikonę udostępniania tokenu aby odwiedzić udostępniany adres URL.
           title: Udostępnij tokeny
       shared:
+        adjacent_navigation:
+          next: Następny
+          next_title: Następny element
+          previous: Poprzedni
+          previous_title: Poprzedni element
         gallery:
           add_images: Dodaj obrazy
           edit_images: Edytuj obrazy
@@ -1025,7 +1039,11 @@ pl:
         areas: Kategorie
         authorization_workflows: Metody weryfikacji
         dashboard: Panel
+<<<<<<< HEAD
         edit_external_domains: Biała lista domen zewnętrznych
+=======
+        edit_external_domains: Dozwolone domeny zewnętrzne
+>>>>>>> tags/v0.29.1
         edit_landing_page: Zawartość strony
         edit_organization_appearance: Edytuj wygląd strony głównej
         impersonatable_users: Zarządzaj użytkownikami

@@ -51,7 +51,6 @@ zh-TW:
         scope_id: 範圍
         scopes_enabled: 啟用範圍
         short_description: 簡短說明
-        show_statistics: 顯示統計資料
         slug: URL名稱
         special_features: 特殊功能
         subtitle: 子標題
@@ -280,7 +279,6 @@ zh-TW:
           form:
             existing_user: 現有參與者
             explanation: '圖像的指導'
-            image_guide: 最好是沒有任何文字的肖像圖像
             non_user: 非參與者
             non_user_avatar_help: 在發佈他們為會員之前，您應該徵得他們的同意
             select_a_position: 選擇一個位置
@@ -337,11 +335,11 @@ zh-TW:
       show:
         assembly_type: 大會類型
         duration: 持續時間
-        is_transparent:
-          'false': 不透明
-          'true': 透明
         private_space: 這是一個私人大會
+<<<<<<< HEAD
         related_participatory_processes: 相關參與程序
+=======
+>>>>>>> tags/v0.29.1
         social_networks_title: 訪問大會
     assembly_members:
       assembly_member:

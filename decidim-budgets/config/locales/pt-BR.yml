@@ -172,7 +172,7 @@ pt-BR:
         back_to: Voltar para %{component_name}
         close_modal: Fechar modal
         continue: Continuar
-        more_information: Mais informação
+        more_information: Mais informações sobre o orçamento
       budgets_list:
         budgets: Orçamentos
         cancel_order:
@@ -211,6 +211,10 @@ pt-BR:
           fields:
             category: Categoria
             id: ID
+<<<<<<< HEAD
+=======
+            map: Mapa
+>>>>>>> tags/v0.29.1
             title: Título
       order_summary_mailer:
         order_summary:

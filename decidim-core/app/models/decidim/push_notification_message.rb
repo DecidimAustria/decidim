@@ -1,7 +1,11 @@
 # frozen_string_literal: true
 
 module Decidim
+<<<<<<< HEAD
   # A messsage from a conversation that will be sent as a push notification
+=======
+  # A message from a conversation that will be sent as a push notification
+>>>>>>> tags/v0.29.1
   class PushNotificationMessage
     class InvalidActionError < StandardError; end
 

@@ -91,6 +91,14 @@ bg:
   decidim:
     admin:
       filters:
+<<<<<<< HEAD
+=======
+        accepted_at_not_null:
+          label: Прието
+          values:
+            'false': Не се приема
+            'true': Прието
+>>>>>>> tags/v0.29.1
         meetings:
           category_id_eq:
             label: Категория
@@ -118,6 +126,21 @@ bg:
               hybrid: Хибрид
               in_person: Лично
               online: Онлайн
+<<<<<<< HEAD
+=======
+        rejected_at_not_null:
+          label: Отхвърлено
+          values:
+            'false': Не е отхвърлено
+            'true': Отхвърлено
+        search_placeholder:
+          user_name_or_user_email_cont: Търси по име или имейл
+        sent_at_not_null:
+          label: Изпратено
+          values:
+            'false': Не е изпратено
+            'true': Изпратено
+>>>>>>> tags/v0.29.1
       meeting_copies:
         create:
           error: Възникна проблем при дублирането на тази среща.
@@ -130,6 +153,10 @@ bg:
         actions:
           comment: Коментар
           join: Присъединяване
+<<<<<<< HEAD
+=======
+          reply_poll: Отговор на анкета
+>>>>>>> tags/v0.29.1
         name: Срещи
         settings:
           global:
@@ -282,6 +309,7 @@ bg:
             non_user: Несъществуващ участник
             select_user: Избор на участник
           index:
+<<<<<<< HEAD
             filter:
               accepted: Прието
               all: Всички
@@ -291,6 +319,11 @@ bg:
             invites: Покани
             registrations_disabled: Не можете да поканите участник, защото регистрациите са изключени.
             search: Търсене
+=======
+            invite_attendee: Изпращане на покана на участника
+            invites: Покани
+            registrations_disabled: Не можете да поканите участник, защото регистрациите са изключени.
+>>>>>>> tags/v0.29.1
         meeting_closes:
           edit:
             close: Затвори
@@ -352,6 +385,16 @@ bg:
           update:
             invalid: Възникна проблем при актуализирането на тази анкета за среща.
             success: Анкетата за среща бе актуализирана успешно.
+<<<<<<< HEAD
+=======
+        poll:
+          form:
+            announcement_html:
+              - Когато даден въпрос получи отговори или бъде публикуван/затворен, той вече не може да бъде редактиран.
+              - Можете да добавите въпрос по всяко време.
+              - Анкетата ще бъде затворена, когато резултатите от всички създадени въпроси бъдат публикувани.
+              - Посетете <a href='%{admin_link}'>страницата за администриране на анкетата</a>, за да изпратите въпроси и да публикувате резултати.
+>>>>>>> tags/v0.29.1
         registrations:
           edit:
             save: Запази
@@ -413,7 +456,11 @@ bg:
           body: Срещата <a href="%{meeting_path}">"%{meeting_title}"</a> предстои да бъде затворена. Моля, добавете отчет за срещата, като използвате бутона "Затвори срещата".
           greetings: Поздрав,<br/>%{organization_name}<br/><a href="%{organization_url}">%{organization_url}</a>
           hello: Здравейте %{username},
+<<<<<<< HEAD
           subject: Вече можете да затворите срещата си с отчет в платформата %{organization_name}
+=======
+          subject: Вече можете да затворите срещата „%{meeting_title}“ с доклад
+>>>>>>> tags/v0.29.1
       conference_venues: Места за провеждане на конференции
       content_blocks:
         upcoming_meetings:
@@ -430,16 +477,24 @@ bg:
       iframe_embed_type:
         embed_in_meeting_page: Вграждане в страницата на срещата
         none: Няма
+<<<<<<< HEAD
         open_in_live_event_page: Отваряне в страницата на събитието на живо (с незадължителни анкети)
+=======
+        open_in_live_event_page: Отваряне в страницата на събитието на живо
+>>>>>>> tags/v0.29.1
         open_in_new_tab: Отваряне в страницата на събитието на живо
       last_activity:
         meeting_updated: 'Срещата е актуализирана:'
         new_meeting: 'Нова среща:'
       layouts:
         live_event:
+<<<<<<< HEAD
           administrate: Администриране
           close: затваряне
           questions: Въпроси
+=======
+          close: затваряне
+>>>>>>> tags/v0.29.1
       mailer:
         invite_join_meeting_mailer:
           invite:
@@ -520,6 +575,11 @@ bg:
           edit_close_meeting: Редактиране на отчета за срещата
           edit_meeting: Редактиране на срещата
           join_meeting: Присъединяване към срещата
+<<<<<<< HEAD
+=======
+          reply_poll: Отговор на анкета
+          view_poll: Вижте анкетата
+>>>>>>> tags/v0.29.1
         meetings:
           no_meetings_warning: Няма срещи, които отговарят на вашите критерии за търсене или няма насрочена среща.
           upcoming_meetings_warning: Понастоящем няма насрочени срещи, но тук можете да намерите изброени всички минали срещи.
@@ -578,6 +638,7 @@ bg:
             start_time: Начална дата
             title: Заглавие
       polls:
+<<<<<<< HEAD
         questions:
           closed_question:
             question_results: Резултати от въпроси
@@ -585,6 +646,24 @@ bg:
             empty_questions: По време на тази среща ще бъдат изпратени някои въпроси и вие ще можете да отговорите на тях. Те ще бъдат показани тук.
           index_admin:
             admin_dashboard: Администраторско табло
+=======
+        answers:
+          index:
+            administrate: Администриране
+            title: Анкета
+          index_admin:
+            back_to_meeting: Назад към срещата
+            title: Администриране на анкета
+            view_poll: Вижте анкетата
+        questions:
+          closed_question:
+            announcement: Отговорите на този въпрос са затворени.
+            question: Въпрос
+            question_results: Резултати
+          index:
+            empty_questions: По време на тази среща ще бъдат изпратени някои въпроси и вие ще можете да отговорите на тях. Те ще бъдат показани тук.
+          index_admin:
+>>>>>>> tags/v0.29.1
             edit: Редактирайте в админ панела
             question: Въпрос
             received_answer: получен отговор
@@ -592,6 +671,13 @@ bg:
             results: Резултати
             send: Изпрати
             sent: Изпратено
+<<<<<<< HEAD
+=======
+            statuses:
+              closed: Резултатите са изпратени (затворено)
+              published: Изпратено (отворено)
+              unpublished: Чака изпращане
+>>>>>>> tags/v0.29.1
           published_question:
             max_choices_alert: Избрани са прекалено много варианти
             question: Въпрос

@@ -7,7 +7,11 @@ module ActiveStorage
     describe "GET #show" do
       include Rails.application.routes.url_helpers
       before do
+<<<<<<< HEAD
         ActiveStorage::Current.host = "http://example.com"
+=======
+        ActiveStorage::Current.url_options = { host: "example.com", protocol: "http" }
+>>>>>>> tags/v0.29.1
       end
 
       it "correctly reports the uploaded metadata" do

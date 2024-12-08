@@ -53,7 +53,7 @@ describe "Proposals" do
       let!(:draft) { create(:proposal, :draft, component:, users: [user]) }
 
       it "redirects to edit draft" do
-        click_link "New proposal"
+        click_on "New proposal"
         path = "#{main_component_path(component)}/#{draft.id}/edit_draft?component_id=#{component.id}&question_slug=#{component.participatory_space.slug}"
         expect(page).to have_current_path(path)
       end
@@ -62,7 +62,7 @@ describe "Proposals" do
     context "when rich text editor is enabled for participants" do
       before do
         organization.update(rich_text_editor_in_public_views: true)
-        click_link "New proposal"
+        click_on "New proposal"
       end
 
       it_behaves_like "having a rich text editor", "new_proposal", "basic"
@@ -88,16 +88,54 @@ describe "Proposals" do
     context "when the rich text editor is disabled for participants" do
       before do
         organization.update(rich_text_editor_in_public_views: false)
-        click_link "New proposal"
+        click_on "New proposal"
       end
 
       it "does not displays HTML tags in the body template" do
         within "form.new_proposal" do
-          expect(find("#proposal_body").value).not_to include("<p>")
-          expect(find("#proposal_body").value).not_to include("</p>")
-          expect(find("#proposal_body").value).not_to include("<strong>")
-          expect(find("#proposal_body").value).not_to include("</strong>")
-          expect(find("#proposal_body").value).to have_content("This test has many characters")
+          expect(find_by_id("proposal_body").value).not_to include("<p>")
+          expect(find_by_id("proposal_body").value).not_to include("</p>")
+          expect(find_by_id("proposal_body").value).not_to include("<strong>")
+          expect(find_by_id("proposal_body").value).not_to include("</strong>")
+          expect(find_by_id("proposal_body").value).to have_content("This test has many characters")
+        end
+      end
+    end
+
+    describe "validating the form" do
+      before do
+        click_on "New proposal"
+      end
+
+      context "when focus shifts to body" do
+        it "displays error when title is empty" do
+          fill_in :proposal_title, with: " "
+          find_by_id("proposal_body").click
+
+          expect(page).to have_css(".form-error.is-visible", text: "There is an error in this field.")
+        end
+
+        it "displays error when title is invalid" do
+          fill_in :proposal_title, with: "invalid-title"
+          find_by_id("proposal_body").click
+
+          expect(page).to have_css(".form-error.is-visible", text: "There is an error in this field")
+        end
+      end
+
+      context "when focus remains on title" do
+        it "does not display error when title is empty" do
+          fill_in :proposal_title, with: " "
+          find_by_id("proposal_title").click
+
+          expect(page).to have_no_css(".form-error.is-visible", text: "There is an error in this field.")
+        end
+
+        it "does not display error when title is invalid" do
+          fill_in :proposal_title, with: "invalid-title"
+          find_by_id("proposal_title").click
+
+          expect(page).to have_no_css(".form-error.is-visible", text: "There is an error in this field")
         end
       end
     end

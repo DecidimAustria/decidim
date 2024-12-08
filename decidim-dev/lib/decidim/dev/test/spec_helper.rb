@@ -41,7 +41,8 @@ RSpec.configure do |config|
 
   config.before :all do
     Decidim.content_security_policies_extra = {
-      "img-src": %w(https://via.placeholder.com)
+      "img-src": %W(https://via.placeholder.com #{Decidim::Dev::Test::MapServer.host}),
+      "connect-src": %W(#{Decidim::Dev::Test::MapServer.host})
     }
   end
 
@@ -49,6 +50,10 @@ RSpec.configure do |config|
     # Ensure that the current host is not set for any spec in order to test that
     # the automatic current host definition is working correctly in all
     # situations.
+<<<<<<< HEAD
     ActiveStorage::Current.host = ""
+=======
+    ActiveStorage::Current.url_options = {}
+>>>>>>> tags/v0.29.1
   end
 end

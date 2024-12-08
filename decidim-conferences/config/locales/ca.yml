@@ -127,6 +127,12 @@ ca:
         new:
           create: Crear
           title: Nova ponent de la jornada.
+        publish:
+          invalid: S'ha produït un error en publicar aquesta ponent.
+          success: Ponent de la jornada actualitzada correctament.
+        unpublish:
+          invalid: S'ha produït un error en despublicar aquesta ponent.
+          success: Ponent de la jornada despublicada correctament.
         update:
           error: S'ha produït un error en actualitzar la ponent d'aquesta jornada.
           success: Ponent de la jornada actualitzada correctament.
@@ -348,14 +354,16 @@ ca:
             non_user: Participant no existent
             select_user: Seleccionar participant
           index:
+<<<<<<< HEAD
             filter:
               accepted: Acceptada
               all: Totes
               rejected: Rebutjada
               sent: Enviat
+=======
+>>>>>>> tags/v0.29.1
             invite_attendee: Convidar participant
             invites: Convida
-            search: Cercar
           new:
             explanation: La participant serà convidada a unir-se a una jornada. Si el seu correu electrònic no està registrat, també se la convidarà a unir-se a l'organització.
             invite: Convidar

@@ -22,7 +22,11 @@ bg:
               too_long: твърде дълъг
             choices:
               missing: не са завършени
+<<<<<<< HEAD
               too_many: са твърде много
+=======
+              too_many: Можете да изберете максимум %{count}.
+>>>>>>> tags/v0.29.1
         questionnaire:
           request_invalid: Възникна грешка при обработката на заявката. Моля, опитайте отново.
   decidim:
@@ -158,7 +162,10 @@ bg:
           answer_questionnaire:
             already_have_an_account?: Вече имате профил?
             are_you_new?: Нов потребител?
+<<<<<<< HEAD
             sign_in_description: Влезте, за да участвате в анкетата
+=======
+>>>>>>> tags/v0.29.1
             sign_up_description: Създайте акаунт на участник, за да участвате в анкетата
             title: Попълване на отговори във формуляра
           current_step: Стъпка %{step}

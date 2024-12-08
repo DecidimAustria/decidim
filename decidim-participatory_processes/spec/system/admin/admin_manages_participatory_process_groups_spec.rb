@@ -21,14 +21,14 @@ describe "Admin manages participatory process groups" do
   it_behaves_like "having a rich text editor for field", ".tabs-content[data-tabs-content='participatory_process_group-description-tabs']", "full" do
     before do
       within "div.process-title" do
-        click_link "New process group"
+        click_on "New process group"
       end
     end
   end
 
   it "creates a new participatory process group", versioning: true do
     within "div.process-title" do
-      click_link "New process group"
+      click_on "New process group"
     end
 
     within ".new_participatory_process_group" do
@@ -73,8 +73,8 @@ describe "Admin manages participatory process groups" do
     end
 
     it "can edit them" do
-      within find("tr", text: participatory_process_group.title["en"]) do
-        click_link "Edit"
+      within "tr", text: participatory_process_group.title["en"] do
+        click_on "Edit"
       end
 
       within ".edit_participatory_process_group" do
@@ -108,8 +108,8 @@ describe "Admin manages participatory process groups" do
     end
 
     it "validates the group attributes" do
-      within find("tr", text: participatory_process_group.title["en"]) do
-        click_link "Edit"
+      within "tr", text: participatory_process_group.title["en"] do
+        click_on "Edit"
       end
 
       within ".edit_participatory_process_group" do
@@ -128,41 +128,46 @@ describe "Admin manages participatory process groups" do
     end
 
     it "can remove its image" do
-      within find("tr", text: participatory_process_group.title["en"]) do
-        click_link "Edit"
+      within "tr", text: participatory_process_group.title["en"] do
+        click_on "Edit"
       end
 
       within ".upload-container-for-hero_image" do
-        find("#participatory_process_group_hero_image_button").click
+        find_by_id("participatory_process_group_hero_image_button").click
       end
 
+<<<<<<< HEAD
       click_button "Remove"
       click_button "Save"
+=======
+      click_on "Remove"
+      click_on "Save"
+>>>>>>> tags/v0.29.1
 
-      click_button "Update"
+      click_on "Update"
 
-      expect(page).not_to have_css("img")
+      expect(page).to have_no_css("img")
     end
 
     it "can delete them" do
-      within find("tr", text: participatory_process_group.title["en"]) do
-        accept_confirm { click_link "Delete" }
+      within "tr", text: participatory_process_group.title["en"] do
+        accept_confirm { click_on "Delete" }
       end
 
       expect(page).to have_admin_callout("successfully")
 
       within "table" do
-        expect(page).not_to have_content(participatory_process_group.title["en"])
+        expect(page).to have_no_content(participatory_process_group.title["en"])
       end
     end
 
     it "has a link to the landing page" do
-      within find("tr", text: participatory_process_group.title["en"]) do
-        click_link "Edit"
+      within "tr", text: participatory_process_group.title["en"] do
+        click_on "Edit"
       end
 
-      click_button "Manage"
-      click_link "Landing page"
+      click_on "Manage"
+      click_on "Landing page"
 
       expect(page).to have_content "Active content blocks"
     end

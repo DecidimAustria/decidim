@@ -21,7 +21,11 @@ describe "Admin manages budgets" do
   end
 
   it "creates a new budget", versioning: true do
+<<<<<<< HEAD
     click_link "New budget"
+=======
+    click_on "New budget"
+>>>>>>> tags/v0.29.1
 
     within ".new_budget" do
       fill_in_i18n(:budget_title, "#budget-title-tabs", **attributes[:title].except("machine_translations"))
@@ -32,7 +36,7 @@ describe "Admin manages budgets" do
       select translated(scope.name), from: :budget_decidim_scope_id
     end
 
-    click_button "Create budget"
+    click_on "Create budget"
 
     expect(page).to have_admin_callout("Budget successfully created.")
 
@@ -46,7 +50,7 @@ describe "Admin manages budgets" do
 
   describe "updating a budget", versioning: true do
     it "updates a budget" do
-      within find("tr", text: translated(budget.title)) do
+      within "tr", text: translated(budget.title) do
         page.find(".action-icon--edit").click
       end
 
@@ -55,7 +59,7 @@ describe "Admin manages budgets" do
         fill_in_i18n_editor(:budget_description, "#budget-description-tabs", **attributes[:description].except("machine_translations"))
       end
 
-      click_button "Update budget"
+      click_on "Update budget"
 
       expect(page).to have_admin_callout("Budget successfully updated.")
 
@@ -77,7 +81,7 @@ describe "Admin manages budgets" do
 
   describe "deleting a budget" do
     it "deletes a budget" do
-      within find("tr", text: translated(budget.title)) do
+      within "tr", text: translated(budget.title) do
         accept_confirm do
           page.find(".action-icon--remove").click
         end
@@ -86,7 +90,7 @@ describe "Admin manages budgets" do
       expect(page).to have_admin_callout("Budget successfully deleted.")
 
       within "table" do
-        expect(page).not_to have_content(translated(budget.title))
+        expect(page).to have_no_content(translated(budget.title))
       end
     end
 
@@ -94,8 +98,64 @@ describe "Admin manages budgets" do
       let!(:budget) { create(:budget, :with_projects, component: current_component) }
 
       it "cannot delete the budget" do
-        within find("tr", text: translated(budget.title)) do
-          expect(page).not_to have_selector(".action-icon--remove")
+        within "tr", text: translated(budget.title) do
+          expect(page).to have_no_css(".action-icon--remove")
+        end
+      end
+    end
+  end
+
+  describe "when managing a budget with scopes" do
+    let!(:scopes) { create_list(:subscope, 3, organization:, parent: scope) }
+    let(:scope_id) { scope.id }
+    let(:participatory_space) { create(:participatory_process, organization:, scopes_enabled:) }
+    let!(:component) { create(:component, manifest:, settings: { scopes_enabled:, scope_id: }, participatory_space:) }
+    let!(:budget) { create(:budget, component: current_component) }
+    let!(:scope) { create(:scope, organization:) }
+    let(:scopes_enabled) { true }
+
+    before do
+      visit current_path
+    end
+
+    context "when the scope has subscopes" do
+      context "when scopes_enabled is true" do
+        it "displays the scope column" do
+          expect(component).to be_scopes_enabled
+          expect(component).to have_subscopes
+          expect(page).to have_content("Scope")
+        end
+      end
+
+      context "when scopes_enabled is false" do
+        let(:scopes_enabled) { false }
+
+        it "displays the scope column" do
+          expect(component).not_to be_scopes_enabled
+          expect(component).not_to have_subscopes
+          expect(page).to have_no_content("Scope")
+        end
+      end
+    end
+
+    context "when the scope does not have subscopes" do
+      let(:scope_id) { scopes.first.id }
+
+      context "when scopes_enabled is true" do
+        it "hides the scope column" do
+          expect(component).to be_scopes_enabled
+          expect(component).not_to have_subscopes
+          expect(page).to have_no_content("Scope")
+        end
+      end
+
+      context "when scopes_enabled is false" do
+        let(:scopes_enabled) { false }
+
+        it "displays the scope column" do
+          expect(component).not_to be_scopes_enabled
+          expect(component).not_to have_subscopes
+          expect(page).to have_no_content("Scope")
         end
       end
     end

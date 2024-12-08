@@ -5,8 +5,6 @@ module Decidim
   # Is designed to be used by different models and so it does not try to compute
   # the information likely to change. Expects a Hash with all necessary data.
   class WizardStepFormCell < Decidim::ViewModel
-    include Decidim::LayoutHelper
-
     def show
       render view
     end
@@ -87,12 +85,6 @@ module Decidim
     # Returns the translation of the header title.
     def wizard_header_title
       view_options[:wizard_header_title]
-    end
-
-    # Returns the similar resources count for the compare step.
-    def wizard_header_similar_resources_count
-      count = view_options[:wizard_header_similar_resources_count]
-      "(#{count})" if count
     end
 
     # Returns the header see steps information, only visible for small screens.

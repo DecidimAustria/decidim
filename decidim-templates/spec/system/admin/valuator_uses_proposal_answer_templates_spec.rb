@@ -3,7 +3,11 @@
 require "spec_helper"
 
 describe "Valuator uses proposal answer templates" do
+<<<<<<< HEAD
   let(:field_values) { { internal_state: :rejected } }
+=======
+  let(:field_values) { { proposal_state_id: } }
+>>>>>>> tags/v0.29.1
   let(:token) { "rejected" }
   let!(:organization) { create(:organization) }
   let(:user) { create(:user, :confirmed, :admin_terms_accepted, organization:) }
@@ -11,6 +15,10 @@ describe "Valuator uses proposal answer templates" do
   let!(:valuation_assignment) { create(:valuation_assignment, proposal:, valuator_role:) }
   let(:participatory_space) { create(:participatory_process, title: { en: "A participatory process" }, organization:) }
   let!(:templatable) { create(:proposal_component, name: { en: "A component" }, participatory_space:) }
+<<<<<<< HEAD
+=======
+  let(:proposal_state_id) { Decidim::Proposals::ProposalState.find_by(component: templatable, token:).id }
+>>>>>>> tags/v0.29.1
   let(:description) { "Some meaningful answer" }
   let!(:template) { create(:template, target: :proposal_answer, description: { en: description }, organization:, templatable:, field_values:) }
   let!(:proposal) { create(:proposal, component: templatable) }
@@ -28,7 +36,11 @@ describe "Valuator uses proposal answer templates" do
     expect(proposal.reload.internal_state).to eq("not_answered")
     within ".edit_proposal_answer" do
       expect(page).to have_select(:proposal_answer_template_chooser, with_options: [translated(template.name)])
+<<<<<<< HEAD
       expect(page).not_to have_select(:proposal_answer_template_chooser, with_options: [translated(other_component_template.name)])
+=======
+      expect(page).to have_no_select(:proposal_answer_template_chooser, with_options: [translated(other_component_template.name)])
+>>>>>>> tags/v0.29.1
       select template.name["en"], from: :proposal_answer_template_chooser
       expect(page).to have_content(description)
       click_on "Answer"
@@ -50,7 +62,11 @@ describe "Valuator uses proposal answer templates" do
     end
 
     it "hides the template selector in the proposal answer page" do
+<<<<<<< HEAD
       expect(page).not_to have_select(:proposal_answer_template_chooser)
+=======
+      expect(page).to have_no_select(:proposal_answer_template_chooser)
+>>>>>>> tags/v0.29.1
     end
   end
 
@@ -59,7 +75,11 @@ describe "Valuator uses proposal answer templates" do
       within ".edit_proposal_answer" do
         template.destroy!
         select template.name["en"], from: :proposal_answer_template_chooser
+<<<<<<< HEAD
         expect(page).not_to have_content(description)
+=======
+        expect(page).to have_no_content(description)
+>>>>>>> tags/v0.29.1
         expect(page).to have_content("Could not find this template")
       end
     end

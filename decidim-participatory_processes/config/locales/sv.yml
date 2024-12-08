@@ -5,7 +5,6 @@ sv:
       participatory_process:
         announcement: Meddelande
         area_id: Område
-        banner_image: Bannerbild
         copy_categories: Kopiera kategorier
         copy_components: Kopiera komponenter
         copy_steps: Kopiera steg
@@ -35,8 +34,6 @@ sv:
         scope_type_max_depth_id: Djup på filter
         scopes_enabled: Aktivera indelningar
         short_description: Kort beskrivning
-        show_metrics: Visa metrik
-        show_statistics: Visa statistik
         slug: URL-slug
         start_date: Startdatum
         subtitle: Underrubrik
@@ -85,8 +82,13 @@ sv:
         one: Deltagandeprocess
         other: Deltagandeprocesser
       decidim/participatory_process_group:
+<<<<<<< HEAD
         one: Grupp för deltagandeprocess
         other: Grupper för deltagandeprocess
+=======
+        one: Grupp av deltagandeprocesser
+        other: Grupper av deltagandeprocesser
+>>>>>>> tags/v0.29.1
       decidim/participatory_process_step:
         one: Steg
         other: Steg
@@ -102,7 +104,11 @@ sv:
         import_process: Importera
         moderate: Moderera
         new_process: Ny process
+<<<<<<< HEAD
         new_process_group: Ny grupp för process
+=======
+        new_process_group: Ny grupp av processer
+>>>>>>> tags/v0.29.1
         new_process_step: Nytt steg
         new_process_type: Ny typ av process
         new_process_user_role: Ny administratör för process
@@ -115,7 +121,11 @@ sv:
         decidim_participatory_process_group_id_eq:
           label: Efter processgrupp
       menu:
+<<<<<<< HEAD
         participatory_process_groups: Grupper för process
+=======
+        participatory_process_groups: Grupper för processer
+>>>>>>> tags/v0.29.1
         participatory_process_groups_submenu:
           info: Info
           landing_page: Landningssida
@@ -141,11 +151,19 @@ sv:
             private: Privat
             published: Publicerad
             title: Titel
+<<<<<<< HEAD
           name: Delgandeprocesser
         participatory_process_group:
           fields:
             title: Titel
           name: Grupp för process
+=======
+          name: Deltagandeprocess
+        participatory_process_group:
+          fields:
+            title: Titel
+          name: Grupp av processer
+>>>>>>> tags/v0.29.1
         participatory_process_step:
           fields:
             end_date: Slutdatum
@@ -179,6 +197,7 @@ sv:
           title: Duplicera process
       participatory_process_groups:
         destroy:
+<<<<<<< HEAD
           error: Det gick inte att radera gruppen.
           success: Gruppen har raderats.
         edit:
@@ -189,6 +208,18 @@ sv:
           title: Ny grupp
         update:
           error: Det gick inte att uppdatera gruppen.
+=======
+          error: Det gick inte att radera dialoggruppen.
+          success: Gruppen för processer har raderats.
+        edit:
+          title: Redigera processgrupp
+          update: Uppdatera
+        new:
+          create: Skapa
+          title: Ny processgrupp
+        update:
+          error: Det gick inte att uppdatera processgruppen.
+>>>>>>> tags/v0.29.1
           success: Gruppen har uppdaterats.
       participatory_process_imports:
         create:
@@ -296,7 +327,11 @@ sv:
           error: Det gick inte att skapa en ny grupp för processer.
           success: Gruppen har skapats.
       titles:
+<<<<<<< HEAD
         participatory_process_groups: Grupper för deltagandeprocess
+=======
+        participatory_process_groups: Grupper av deltagandeprocesser
+>>>>>>> tags/v0.29.1
         participatory_process_types: Typer av deltagandeprocesser
         participatory_processes: Deltagandeprocesser
       users:
@@ -348,8 +383,13 @@ sv:
     help:
       participatory_spaces:
         participatory_processes:
+<<<<<<< HEAD
           contextual: "<p>En <strong>deltagandeprocess</strong> är en följd av deltagande aktiviteter (t.ex. att först göra en enkät, sedan lägga fram förslag, diskutera dem på fysiska eller virtuella möten och slutligen att rösta) för att definiera och fatta beslut om ett visst ämne.</p> <p>Exempel på deltagandeprocesser är: en process för val av kommittémedlemmar (där kandidaterna presenteras, diskuteras och slutligen väljs), medborgarbudgetar (där förslag läggs fram, prissätts och röstas om), en långsiktig planeringsprocess, samarbete kring ett utkast till förordning, utformningen av stadsmiljöer eller att skapa en plan för offentligpolicy.</p>\n"
           page: "<p>En <strong>deltagandeprocess</strong> är en följd av deltagande aktiviteter (t.ex. att först göra en enkät, sedan lägga fram förslag, diskutera dem på fysiska eller virtuella möten och slutligen att rösta) för att definiera och fatta beslut om ett visst ämne.</p> <p>Exempel på deltagandeprocesser är: en process för val av kommittémedlemmar (där kandidaterna presenteras, diskuteras och slutligen väljs), medborgarbudgetar (där förslag läggs fram, prissätts och röstas om), en långsiktig planeringsprocess, samarbete kring ett utkast till förordning, utformningen av stadsmiljöer eller att skapa en plan för offentligpolicy.</p>\n"
+=======
+          contextual: "<p>En <strong>deltagandeprocess</strong> är en följd av deltagande aktiviteter (t.ex. att först göra en enkät, sedan lägga fram förslag, diskutera dem på fysiska eller virtuella möten och slutligen att rösta) för att definiera frågeställningar och fatta beslut inom ett visst ämne.</p> <p>Exempel på deltagandeprocesser är: en process för val av kommittémedlemmar (där kandidaterna presenteras, diskuteras och slutligen väljs), medborgarbudgetar (där förslag läggs fram, prissätts och röstas om), en långsiktig planeringsprocess, samarbete kring ett utkast till förordning, utformningen av stadsmiljöer eller att skapa en policyplan.</p>\n"
+          page: "<p>En <strong>deltagandeprocess</strong> är en följd av deltagande aktiviteter (t.ex. att först göra en enkät, sedan lägga fram förslag, diskutera dem på fysiska eller virtuella möten och slutligen att rösta) för att definiera frågeställningar och fatta beslut inom ett visst ämne.</p> <p>Exempel på deltagandeprocesser är: en process för val av kommittémedlemmar (där kandidaterna presenteras, diskuteras och slutligen väljs), medborgarbudgetar (där förslag läggs fram, prissätts och röstas om), en långsiktig planeringsprocess, samarbete kring ett utkast till förordning, utformningen av stadsmiljöer eller att skapa en policyplan.</p>\n"
+>>>>>>> tags/v0.29.1
           title: Vad är en deltagandeprocess?
     log:
       value_types:
@@ -391,7 +431,11 @@ sv:
             one: 1 process
             other: "%{count} processer"
       show:
+<<<<<<< HEAD
         title: Grupper för deltagandeprocesser
+=======
+        title: Grupper av deltagandeprocesser
+>>>>>>> tags/v0.29.1
     participatory_process_steps:
       index:
         process_steps: Steg i processen
@@ -420,7 +464,11 @@ sv:
             slug_help_html: 'URL-slugs används till att generera URL:er till processen. Använd bara bokstäver, siffror och bindestreck, och de måste börja med en bokstav. Exempel: %{url}'
         participatory_process_steps:
           form:
+<<<<<<< HEAD
             cta_path_help_html: 'Använd relativa sökvägar, inte fullständiga URL: er. Accepterar bokstäver, siffror, bindestreck och snedstreck, och måste börja med en bokstav. Om fältet inte fylls i visas inte knappen. Exempel: %{url}'
+=======
+            cta_path_help_html: 'Använd relativa sökvägar, inte fullständiga URL:er. Accepterar bokstäver, siffror, bindestreck och snedstreck, och måste börja med en bokstav. Om fältet inte fylls i visas inte knappen. Exempel: %{url}'
+>>>>>>> tags/v0.29.1
             cta_text_help: Om fältet är tomt visas inte knappen.
         participatory_processes:
           form:
@@ -434,10 +482,14 @@ sv:
             scope_type_max_depth_help: Begränsa djupet på filtret för indelningen.
             select_an_area: Välj ett område
             select_participatory_process_type: Välj typ av process
+<<<<<<< HEAD
             select_process_group: Välj en processgrupp
+=======
+            select_process_group: Välj en grupp av processer
+>>>>>>> tags/v0.29.1
             slug_help_html: 'URL-slugs används till att generera URL:er till processen. Använd bara bokstäver, siffror och bindestreck, och de måste börja med en bokstav. Exempel: %{url}'
             title: Allmän information
-            visbility: Synlighet
+            visibility: Synlighet
       content_blocks:
         extra_data:
           name: Steg & varaktighet

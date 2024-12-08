@@ -97,6 +97,9 @@ th:
           success: ทำลายพื้นที่สำเร็จ
         edit:
           title: แก้ไขพื้นที่
+<<<<<<< HEAD
       organization_external_domain_whitelist:
         edit:
           update: อัปเดต
+=======
+>>>>>>> tags/v0.29.1

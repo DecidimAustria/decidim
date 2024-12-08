@@ -78,12 +78,18 @@ hu:
   booleans:
     'false': 'Nem'
     'true': 'Igen'
+<<<<<<< HEAD
   carrierwave:
     errors:
       file_resolution_too_large: A fájl felbontása túl nagy
       file_size_too_large: Túl nagy a fájl mérete
       not_inside_organization: A fájl nincs csatolva egyetlen szervezethez sem
+=======
+>>>>>>> tags/v0.29.1
   date:
+    buttons:
+      close: Bezár
+      select: Kiválaszt
     formats:
       decidim_short: "%Y.%m.%d"
       decidim_short_dashed: "%d-%m-%Y"
@@ -91,6 +97,8 @@ hu:
       decidim_with_day_and_month_name: "%A %d %b %Y"
       decidim_with_month_name: "%d %B %Y"
       decidim_with_month_name_short: "%d %b"
+      help:
+        date_format: 'Formátum nn/hh/éééé'
   datetime:
     distance_in_words:
       about_x_hours:
@@ -258,10 +266,6 @@ hu:
         promote_button: Kezdeményezze a %{model_name}
         promote_confirm_text: Biztos benne, hogy támogatni kívánja ezt a helyreigazítást?
         promote_help_text: Támogathatja ezt a helyesbítést, valamint közzéteheti azt független %{model_name} elemként.
-      compare_draft:
-        continue: Tovább
-        no_similars_found: Nem találtunk hasonló szövegjavítást.
-        title: Hasonló szövegjavítások
       created:
         error: A módosító javaslat tervezet létrehozása során hiba történt.
         success: A módosító javaslat tervezet sikeresen létrejött.
@@ -319,8 +323,11 @@ hu:
       wizard_step_form:
         steps:
           '1': Készítse el a módosítását
+<<<<<<< HEAD
           '2': Módosításod összehasonlítása
           '3': Módosításod befejezése
+=======
+>>>>>>> tags/v0.29.1
     anonymous_user: Névtelen
     application:
       document:
@@ -528,7 +535,6 @@ hu:
         name: Sub hero banner
     core:
       actions:
-        login_before_access: Kérjük, a hozzáférés előtt jelentkezzen be.
         unauthorized: Nem jogosult a művelet végrehajtására.
       application_helper:
         filter_area_values:
@@ -545,7 +551,6 @@ hu:
           complete_profile: Profil kiegészítése
           nickname_help: A beceneved itt %{organization} csak betűket, számokat '-' és '_' jeleket tartalmazhat.
           sign_up: Töltsd ki a hiányzó adatokat
-          subtitle: A regisztráció befejezéséhez töltsd ki a következő űrlapot
           username_help: Bejegyzésekben megjelenő nyilvános megnevezés. Az anonimitás megőrzése érdekében bármilyen név lehet.
       registrations:
         create:
@@ -555,8 +560,6 @@ hu:
           log_in: Bejelentkezés
           newsletter: Hírlevél fogadása a legfontosabb információkkal
           newsletter_title: Kapcsolatfelvételi engedély
-          sign_up: Regisztráció
-          subtitle: Jelentkezz be, hogy javaslatokat tudj megvitatni és támogatni.
           terms: szolgáltatási feltételek
           tos_agreement: A feliratkozással elfogadod a %{link}.
           tos_title: ÁSZF
@@ -566,7 +569,6 @@ hu:
           are_you_new?: Új vagy az oldalon?
           register: Hozz létre egy fiókot
           sign_in_disabled: Külső fiókkal férhet hozzá.
-          sign_up_disabled: A regisztráció le van tiltva, a hozzáféréshez használhat meglévő fiókot.
       shared:
         newsletter_modal:
           buttons:
@@ -615,6 +617,9 @@ hu:
     endorsers_list:
       endorsed_by: Kedvelte…
     errors:
+      files:
+        file_resolution_too_large: A fájl felbontása túl nagy
+        not_inside_organization: A fájl nincs csatolva egyetlen szervezethez sem
       internal_server_error:
         copied: Szöveg kimásolva!
         copy_error_message_clarification: A hibaüzenet másolása a vágólapra
@@ -754,7 +759,7 @@ hu:
       nickname_event:
         notification_body: Javítottunk a becenevek használatán, hogy elkerüljük a duplikációkat, és ezért megszüntettük a nagy- és kisbetűkre vonatkozó szabályt. <br/> A beceneve egy másik, azonos nevű becenév után jött létre, ezért automatikusan át lett nevezve. Megváltoztathatja itt <a href="%{link_to_account_settings}">a Fiókbeállítások menüpontban</a>.
       notification_event:
-        notification_title: 'Új esemény itt: <a href="%{resource_path}">%{resource_title}</a>.'
+        notification_title: 'Esemény történt a következővel kapcsolatban: <a href="%{resource_path}">%{resource_title}</a>.'
       reports:
         resource_hidden:
           email_intro: Egy adminisztrátor eltávolította a %{resource_type} -ját mert %{report_reasons}-ként jelentették.
@@ -819,13 +824,15 @@ hu:
       file_help:
         file:
           message_1: Képnek vagy dokumentumnak kell lennie.
-          message_2: Képeknél a fekvő elrendezés ajánlott, a kép szélei automatikusan levágásra kerülnek.
         icon:
           explanation: 'Útmutató:'
           message_1: A képnek négyzet alakúnak kell lennie.
           message_2: A javasolt képméret 512x512 px.
+<<<<<<< HEAD
         image:
           message_1: Olyan fekvő kép használata ajánlott, amely nem tartalmaz szöveget.
+=======
+>>>>>>> tags/v0.29.1
       file_validation:
         max_file_size: 'Maximális fájlméret: %{megabytes} MB'
       upload:
@@ -962,7 +969,6 @@ hu:
           content: "<p>Az %{organization} -ben részt vehetsz és dönthetsz különböző témákban a főmenüben megjelenő mezőkön keresztül: Folyamatok, Gyűlések, Kezdeményezések, Konzultációk.</p> <p>Mindegyikben megtalálja a különböző lehetőségeket a részvételre: készítsen javaslatokat - egyénileg vagy más emberekkel -, vegyél részt vitákban, fontold meg a végrehajtandó projekteket, vegyél részt személyes találkozókon és egyéb tevékenységekben.</p>\n"
           title: Mit tehetek a %{organization} szervezetben?
         description: További információ a %{organization} szervezetről.
-        title: Általános segítség
     last_activities:
       all: Valamennyi tevékenységtípus
       index:
@@ -1130,7 +1136,11 @@ hu:
         token_error: A link sajnos lejárt.
         unsubscribe: Leiratkozás
     newsletters_opt_in:
+<<<<<<< HEAD
       unathorized: Sajnos ez a link már nem elérhető.
+=======
+      unauthorized: Sajnos ez a link már nem elérhető.
+>>>>>>> tags/v0.29.1
       update:
         error: Hiba történt a hírlevél beállításainak mentése során.
         success: Hírlevél beállításainak frissítése sikeres.
@@ -1243,8 +1253,11 @@ hu:
           modal_btn_exit: Később tekintem át
           modal_button: Feltételek elutasítása
           modal_title: Tényleg elutasítja az ÁSZF frissített szövegét?
+<<<<<<< HEAD
     participatory_space_private_users:
       not_allowed: Nincs jogosultságod a tartalom megtekintésére
+=======
+>>>>>>> tags/v0.29.1
     profile:
       deleted: Törölt résztvevő
     profiles:
@@ -1392,7 +1405,10 @@ hu:
         log_in_before_follow: Kérjük, a művelet végrehajtása előtt jelentkezzen be
       login_modal:
         please_log_in: Kérjük, jelentkezz be
+<<<<<<< HEAD
         sign_up: Regisztrálj
+=======
+>>>>>>> tags/v0.29.1
       mentions_modal:
         remove_recipient: '%{name} címzett eltávolítása'
       participatory_space_filters:
@@ -1512,7 +1528,10 @@ hu:
       locked: A fiókja zárolva van.
       not_found_in_database: Érvénytelen %{authentication_keys} vagy jelszó.
       timeout: A munkamenet lejárt. A folytatáshoz jelentkezz be újra.
+<<<<<<< HEAD
       unauthenticated: A folytatás előtt be kell jelentkeznie vagy regisztrálnia kell.
+=======
+>>>>>>> tags/v0.29.1
     invitations:
       edit:
         header: Profil létrehozásának befejezése
@@ -1598,8 +1617,6 @@ hu:
       updated_not_active: A jelszó sikeresen megváltozott.
     registrations:
       destroyed: Viszlát! Fiókját sikeresen töröltük. Reméljük, hamarosan újra találkozunk.
-      new:
-        sign_up: Regisztrálj
       signed_up: Üdvözöljük! Sikeresen regisztráltál.
       signed_up_but_inactive: Sikeresen regisztráltál. Azonban nem tudtunk bejelentkezni, mert fiókja még nincs aktiválva.
       signed_up_but_locked: Sikeresen regisztráltál. Azonban nem tudtunk bejelentkezni, mert fiókja zárolva van.
@@ -1620,7 +1637,10 @@ hu:
         forgot_your_password: Elfelejtette a jelszavát?
         log_in: Bejelentkezés
         log_in_with_provider: Bejelentkezés %{provider}-profillal
+<<<<<<< HEAD
         sign_up: Regisztrálj
+=======
+>>>>>>> tags/v0.29.1
       minimum_password_length:
         one: "(Legalább%{count} karakter)"
         other: "(Legalább%{count} karakter)"
@@ -1689,6 +1709,7 @@ hu:
     upload:
       uploadedFile: Feltöltött fájl
   emojis:
+<<<<<<< HEAD
     button: Emoji hozzáadása
     categories:
       activities: Tevékenységek
@@ -1713,6 +1734,34 @@ hu:
       clear: Keresés törlése
       error: Nem tudtunk emojit keresni
       not_found: Nincs találat
+=======
+    add_custom: Új egyedi emoji hozzáadása
+    button: Emoji hozzáadása
+    categories:
+      activity: Tevékenység
+      custom: Egyéni
+      flags: Zászlók
+      foods: Étel & Ital
+      frequent: Gyakran használt
+      nature: Állatok és természet
+      objects: Objektumok
+      people: Hangulatjelek és emberek
+      places: Utazás és helyszínek
+      search: Keresés eredménye
+      symbols: Jelek
+    pick: Válasszon egy emojit…
+    search: Keresés
+    search_no_results_1: Jaj ne!
+    search_no_results_2: Az az emoji nem található
+    skins:
+      '1': Alapértelmezett
+      '2': Világos
+      '3': Közepesen világos
+      '4': Közepes
+      '5': Közepesen sötét
+      '6': Sötét
+      choose: Alapértelmezett bőrszín kiválasztása
+>>>>>>> tags/v0.29.1
   errors:
     messages:
       allowed_file_content_types: 'csak a következő kiterjesztésű fájlok engedélyezettek: %{types}'
@@ -1727,7 +1776,6 @@ hu:
       long_words: olyan szavakat tartalmaz, amelyek túl hosszúak (több mint 35 karakter)
       must_start_with_caps: nagybetűvel kell kezdenie
       nesting_too_deep: nem lehet alkategóriában belüli
-      not_found: nem található. Regisztráltál már korábban?
       not_locked: nem volt zárva
       not_saved:
         one: 'Hiba történt a kérelmed feldolgozásakor:'
@@ -1810,8 +1858,11 @@ hu:
         log_in: Bejelentkezés
         made_with_open_source: Az oldal <a target="_blank" href="https://github.com/decidim/decidim">nyílt forráskódú szoftverrel</a> készült.
         resources: Segédanyagok
+<<<<<<< HEAD
         sign_up: Regisztráció
         terms_and_conditions: Általános Szerződési Feltételek
+=======
+>>>>>>> tags/v0.29.1
       header:
         log_in: Bejelentkezés
         main_menu: Főmenü
@@ -1909,6 +1960,10 @@ hu:
     x: X
     xing: Xing
   time:
+    buttons:
+      close: Bezárás
+      reset: Visszaállítás
+      select: Kiválaszt
     formats:
       day_of_month: "%b %d"
       day_of_week: "%a"
@@ -1923,6 +1978,8 @@ hu:
         mailer:
           invitation_instructions:
             accept_until_format: "%B %d, %Y %I:%M %p"
+      help:
+        time_format: 'Formátum: óó:pp'
       long: "%B %d, %Y %H:%M"
       long_dashed: "%Y-%m-%d %H:%M:%S"
       long_with_particles: "%Y. %B %d ekkor %H:%M"

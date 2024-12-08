@@ -163,10 +163,6 @@ tr:
         error: Bu kaynağı değiştiren bir hata oluştu.
         promote_button: '%{model_name} olarak yükselt'
         promote_confirm_text: Bu değişikliği tanıtmak istediğinizden emin misiniz?
-      compare_draft:
-        continue: Devam et
-        no_similars_found: Hiç benzer düzeltme bulunamadı.
-        title: Benzer Düzeltmeler
       created:
         error: Değişiklik taslağı oluşturulurken bir hata oluştu.
         success: Değişiklik taslağı başarı ile oluşturuldu.
@@ -213,9 +209,7 @@ tr:
       wizard_step_form:
         steps:
           '1': Değişikliğinizi oluşturun
-          '2': Değişikliğinizi karşılaştırın
-          '3': Değişikliğinizi tamamlayın
-          '4': Değişikliğinizi yayınlayın
+          '2': Değişikliğinizi yayınlayın
     anonymous_user: Anonim
     application:
       document:
@@ -385,7 +379,6 @@ tr:
           complete_profile: Profilini tamamla
           nickname_help: Takma adınız %{organization}. Yalnızca harf, rakam, "-" ve "_" içerebilir.
           sign_up: Lütfen profilinizi tamamlayın
-          subtitle: Kayıt işlemini tamamlamak için lütfen aşağıdaki formu doldurunuz.
           username_help: Gönderilerinizde görünen genel ad. Anonimliği garanti etmek amacıyla herhangi bir isim olabilir.
       registrations:
         new:
@@ -393,8 +386,6 @@ tr:
           log_in: "Giriş \nGiriş Yapın "
           newsletter: Ara sıra ilgili bilgileri içeren bir haber bülteni alın
           newsletter_title: İletişim izni
-          sign_up: kaydol
-          subtitle: Tartışmalara katılmak ve teklifleri desteklemek için kaydolun.
           tos_agreement: Kaydolarak %{link}kabul ediyorsunuz.
           tos_title: Kullanım Şartları
           username_help: Yayınlarınızda görünen genel ad. Anonimlik garantilemek amacıyla herhangi bir isim olabilir.
@@ -563,8 +554,6 @@ tr:
           email_outro: Bu bildirimi, platformun yöneticisi olduğunuz için aldınız.
           email_subject: Bir kullanıcı grubu profilini güncelledi
           notification_title: '%{user_group_name} kullanıcı grubu profilini güncelledi ve doğrulanmadan bırakıldı. Artık bunu <a href="%{groups_admin_path}"> yönetici panelinde </a> doğrulayabilirsiniz.'
-      notification_event:
-        notification_title: Bir olay <a href="%{resource_path}">%{resource_title}</a>.
       reports:
         resource_hidden:
           email_intro: Bir yönetici, %{resource_type}'nizi %{report_reasons} olarak bildirildiği için kaldırdı.
@@ -615,6 +604,7 @@ tr:
       create:
         button: Takip et
         error: Bu kaynağı takip eden bir hata oluştu.
+        participatory_space: <span>%{resource_name</span> Takip edilen
       destroy:
         button: Takibi bırak
         error: Bu kaynağı takip etmekten bir hata oluştu.
@@ -630,7 +620,6 @@ tr:
           message_2: Resimler için tercihen yatay resimleri kullanın, bu servis resmi kırpar.
         image:
           explanation: 'Dosya kılavuzu:'
-          message_1: Tercihen herhangi bir metin içermeyen yatay bir resim.
           message_2: Bu servis görüntüyü kırpar.
       file_validation:
         allowed_file_extensions: 'İzin verilen dosya uzantıları: %{extensions}'
@@ -705,7 +694,7 @@ tr:
         default_page:
           content: "<p>%{organization}'da üst menüde gördüğünüz alanlar aracılığıyla katılabilir ve farklı konulara karar verebilirsiniz: Süreçler, Toplantılar, Girişimler, İstişareler. </p> <p> Her birinde farklı seçenekler bulacaksınız. katılmak: bireysel olarak veya diğer insanlarla birlikte teklifler yapın, tartışmalara katılın, uygulanacak projelere öncelik verin, yüz yüze toplantılara ve diğer eylemlere katılın. </p>\n"
           title: '%{organization} ne yapabilirim?'
-        title: Genel Yardım
+        title: Genel
     last_activities:
       all: Tüm aktivite türleri
       index:
@@ -900,8 +889,6 @@ tr:
         metrics:
           headline: Metrikler
           link: Bütün istatistikleri göster
-    participatory_space_private_users:
-      not_allowed: Bu içeriği görüntüleme izniniz bulunmuyor
     profile:
       deleted: Silinmiş kullanıcı
     profiles:
@@ -1023,7 +1010,6 @@ tr:
         log_in_before_follow: Bu İşlemi gerçekleştirmeden önce lütfen giriş yapın
       login_modal:
         please_log_in: Lütfen Giriş Yapın
-        sign_up: kaydol
       participatory_space_filters:
         filters:
           areas: alanlar
@@ -1115,7 +1101,6 @@ tr:
       locked: Hesabınız kilitli.
       not_found_in_database: '%{authentication_keys} veya şifre geçersiz.'
       timeout: Oturumunuzun süresi doldu. Devam etmek için lütfen tekrar giriş yapın.
-      unauthenticated: Devam etmeden önce giriş yapmanız veya kaydolmanız gerekmektedir.
     invitations:
       edit:
         header: Hesabınızı oluşturmayı bitirin
@@ -1181,8 +1166,6 @@ tr:
       updated_not_active: Şifreniz başarıyla değiştirildi.
     registrations:
       destroyed: Hoşçakal! Hesabınız başarıyla iptal edildi. Kısa süre sonra tekrar görmeyi umuyoruz.
-      new:
-        sign_up: kaydol
       signed_up: Hoşgeldiniz! Başarıyla kaydoldunuz.
       signed_up_but_inactive: Başarıyla kaydoldunuz. Ancak, hesabınız henüz aktif olmadığından sizi oturum açamadık.
       signed_up_but_locked: Başarıyla kaydoldunuz. Ancak, hesabınız kilitlendiğinden sizi oturum açamadık.
@@ -1200,7 +1183,6 @@ tr:
         forgot_your_password: Parolanızı mı unuttunuz?
         log_in: "Giriş \nGiriş Yapın "
         log_in_with_provider: '%{provider} ile giriş yapın'
-        sign_up: kaydol
       minimum_password_length:
         one: "(En az%{count} karakter)"
         other: "(En az%{count} karakter)"
@@ -1223,7 +1205,6 @@ tr:
       invalid_time_zone: geçerli bir zaman değil
       long_words: çok uzun kelimeler içeriyor (35 karakterden fazla)
       must_start_with_caps: büyük harfle başlamalıdır
-      not_found: bulunamadı. Daha önce üye oldunuz mu?
       not_locked: kilitli değildi
       not_saved:
         one: 'İsteğiniz işlenirken bir hata oluştu:'
@@ -1253,7 +1234,7 @@ tr:
         download_open_data: Açık Veri dosyalarını indir
         log_in: "Giriş \nGiriş Yapın "
         made_with_open_source: Web sitesi <a target="_blank" href="https://github.com/decidim/decidim">ücretsiz yazılımla yapılmıştır</a>.
-        sign_up: Kaydol
+        terms_of_service: Hizmet Kullanım Koşulları
       header:
         log_in: "Giriş \nGiriş Yapın "
       impersonation_warning:

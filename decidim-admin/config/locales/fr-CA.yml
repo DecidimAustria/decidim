@@ -381,7 +381,7 @@ fr-CA:
           update: Mettre à jour
       dashboard:
         pending_moderations:
-          anouncement:
+          announcement:
             one: Il y a %{count} modération en attente
             other: Il y a %{count} modérations en attente
           goto_moderation: Aller au panneau de modération global
@@ -389,12 +389,12 @@ fr-CA:
         show:
           dropdown: Liste déroulante
           view_more_logs: Afficher plus
-      domain_whitelist:
+      domain_allowlist:
         form:
           domain_too_short: Le nom de domaine est trop court
         update:
-          error: Échec lors de la mise à jour de la liste des domaines externes autorisés.
-          success: Liste des domaines externes autorisés mise à jour avec succès.
+          error: Impossible de mettre à jour la liste des domaines externes autorisés
+          success: La liste des domaines externes autorisés a été mise à jour avec succès.
       exports:
         export_as: "%{name} en format %{export_format}"
         formats:
@@ -453,6 +453,7 @@ fr-CA:
           values:
             'false': Publié
             'true': Dépublié
+        remove_all: Tout supprimer
         scope_id_eq:
           label: Périmètre d'application
         search_label: Rechercher
@@ -461,7 +462,6 @@ fr-CA:
           report_count_eq: Nombre de signalement
           reported_id_string_or_reported_content_cont: Rechercher %{collection} par Id ou par contenu.
           title_cont: Search %{collection} par titre.
-          user_name_or_user_email_cont: Rechercher %{collection} par nom ou par email.
           user_name_or_user_nickname_or_user_email_cont: Rechercher les %{collection} par e-mail, nom ou pseudo.
         state_eq:
           label: État
@@ -577,7 +577,7 @@ fr-CA:
         components: Fonctionnalités
         configuration: Configuration
         content: Contenu signalé
-        external_domain_whitelist: Domaines externes autorisés
+        external_domain_allowlist: Domaines externes autorisés
         help_sections: Sections d'aide
         homepage: Page d'accueil
         impersonations: Utilisateurs représentés
@@ -862,7 +862,7 @@ fr-CA:
             layout_appearance_title: Modifier l’aspect de la mise en page
             preview: Aperçu
           omnipresent_banner_appearance_title: Modifier la bannière permanente
-      organization_external_domain_whitelist:
+      organization_external_domain_allowlist:
         edit:
           update: Mettre à jour
         external_domain:
@@ -871,8 +871,8 @@ fr-CA:
           remove: Retirer
           up: Monter
         form:
-          add: Ajouter à la liste blanche
-          title: Liste blanche du domaine externe
+          add: Ajouter à la liste autorisée
+          title: Liste des domaines externes autorisés
       participatory_space_private_users:
         create:
           error: Une erreur s'est produite lors de l'ajout d'un utilisateur pour cet espace participatif.
@@ -968,6 +968,11 @@ fr-CA:
           help: Ces jetons sont utilisés pour partager cette ressource non publiée à n'importe quel utilisateur. Ils seront cachés dès que la ressource sera publiée. Cliquez sur l'icône du jeton pour visiter l'URL partageable.
           title: Partager les jetons
       shared:
+        adjacent_navigation:
+          next: Suivant
+          next_title: Élément suivant
+          previous: Précédent
+          previous_title: Élément précédent
         gallery:
           add_images: Ajouter des images
           edit_images: Modifier les images

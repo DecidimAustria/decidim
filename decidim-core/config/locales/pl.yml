@@ -86,13 +86,19 @@ pl:
   booleans:
     'false': 'Nie'
     'true': 'Tak'
+<<<<<<< HEAD
   carrierwave:
     errors:
       file_cannot_be_processed: Plik nie może zostać przetworzony
       file_resolution_too_large: Rozdzielczość pliku jest zbyt duża
       file_size_too_large: Rozmiar pliku jest zbyt duży
       not_inside_organization: Plik nie jest dołączony do żadnej organizacji
+=======
+>>>>>>> tags/v0.29.1
   date:
+    buttons:
+      close: Zamknij
+      select: Wybierz
     formats:
       decidim_short: "%d/%m/%Y"
       decidim_short_dashed: "%d.%m.%Y"
@@ -100,6 +106,10 @@ pl:
       decidim_with_day_and_month_name: "%A %d %b %Y"
       decidim_with_month_name: "%d %B %Y"
       decidim_with_month_name_short: "%d %b"
+      help:
+        date_format: 'Format: dd/mm/rrrr'
+      order: d-m-y
+      separator: "/"
   datetime:
     distance_in_words:
       about_x_hours:
@@ -283,10 +293,13 @@ pl:
         promote_button: '%{model_name} - promuj'
         promote_confirm_text: Czy na pewno chcesz promować tę wersję?
         promote_help_text: Możesz promować tę korektę i opublikować ją jako niezależny %{model_name}.
+<<<<<<< HEAD
       compare_draft:
         continue: Dalej
         no_similars_found: Nie znaleziono podobnych wersji.
         title: Podobne wersje
+=======
+>>>>>>> tags/v0.29.1
       created:
         error: Wystąpił błąd podczas tworzenia projektu poprawki.
         success: Projekt poprawki został pomyślnie utworzony.
@@ -343,14 +356,19 @@ pl:
       wizard_step_form:
         steps:
           '1': Utwórz poprawkę
-          '2': Porównaj poprawkę
-          '3': Uzupełnij poprawkę
-          '4': Opublikuj poprawkę
+          '2': Opublikuj poprawkę
     anonymous_user: Anonim
     application:
       document:
         download: Pobierz plik
+        visit_link: Odwiedź link
       documents:
+<<<<<<< HEAD
+=======
+        component_documents:
+          dummy: Dokumenty komponentu dummy
+          meetings: Dokumenty spotkań
+>>>>>>> tags/v0.29.1
         documents: Dokumenty
         related_documents: Materiały
       photo:
@@ -561,7 +579,11 @@ pl:
         name: Baner podrzędny
     core:
       actions:
+<<<<<<< HEAD
         login_before_access: Zaloguj się na swoje konto, żeby mieć dostęp.
+=======
+        login_before_access: Proszę zalogować się na swoje konto przed uzyskaniem dostępu.
+>>>>>>> tags/v0.29.1
         unauthorized: Nie masz uprawnień do wykonania tej czynności.
       application_helper:
         filter_area_values:
@@ -578,7 +600,7 @@ pl:
           complete_profile: Uzupełnij profil
           nickname_help: Twój pseudonim w %{organization}. Może zawierać tylko litery, cyfry, '-' i '_'.
           sign_up: Proszę uzupełnij swój profil
-          subtitle: Proszę wypełnić poniższy formularz, aby dokończyć rejestrację
+          subtitle: Proszę wypełnić poniższy formularz, aby zakończyć tworzenie konta
           username_help: Publiczne imię wyświetlane przy Twoich wpisach. W celu zagwarantowania anonimowości może być dowolna nazwa.
       registrations:
         create:
@@ -588,8 +610,13 @@ pl:
           log_in: Zaloguj się
           newsletter: Chcę otrzymywać okazjonalne newslettery z istotnymi informacjami
           newsletter_title: Zgoda na subskrybcję
+<<<<<<< HEAD
           sign_up: Zarejestruj się
           subtitle: Zarejestruj się, aby brać udział w dyskusjach i wspierać propozycje.
+=======
+          sign_up: Utwórz konto
+          subtitle: Utwórz konto, aby wziąć udział w platformie.
+>>>>>>> tags/v0.29.1
           terms: warunki świadczenia usług
           tos_agreement: Rejestrując się, zgadzasz się na %{link}.
           tos_title: Warunki korzystania z Platformy
@@ -599,7 +626,11 @@ pl:
           are_you_new?: Nowy na platformie?
           register: Utwórz konto
           sign_in_disabled: Możesz uzyskać dostęp za pomocą konta zewnętrznego.
+<<<<<<< HEAD
           sign_up_disabled: Rejestracja jest wyłączona, by uzyskać dostęp, możesz użyć istniejącego konta.
+=======
+          sign_up_disabled: Tworzenie konta jest wyłączone, możesz użyć istniejącego konta, aby uzyskać dostęp.
+>>>>>>> tags/v0.29.1
         user:
           timed_out: Zostałeś automatycznie wylogowany z usługi z powodu zbyt długiej nieaktywności. Jeśli chcesz kontynuować korzystanie z usługi, zaloguj się ponownie.
       shared:
@@ -662,6 +693,10 @@ pl:
     endorsers_list:
       endorsed_by: Polubione przez…
     errors:
+      files:
+        file_cannot_be_processed: Plik nie może zostać przetworzony
+        file_resolution_too_large: Rozdzielczość pliku jest zbyt duża
+        not_inside_organization: Plik nie jest dołączony do żadnej organizacji
       internal_server_error:
         copied: Tekst skopiowany!
         copy_error_message_clarification: Skopiuj komunikat o błędzie do schowka
@@ -799,9 +834,13 @@ pl:
           email_subject: Grupa użytkowników zaktualizowała swój profil
           notification_title: Grupa użytkowników %{user_group_name} zaktualizowała swój profil, pozostawiając go niezweryfikowanym. Możesz go teraz zweryfikować w <a href="%{groups_admin_path}">panelu administratora</a>.
       nickname_event:
+<<<<<<< HEAD
         notification_body: By uniknąć duplikatów, skorygowaliśmy sposób, w jaki używane są pseudonimy. Dlatego usunęliśmy zasadę uwzględniającą wielkość liter. <br/> Twój pseudonim został utworzony po innym o tej samej nazwie, więc automatycznie zmieniliśmy go. Możesz to zmienić w <a href="%{link_to_account_settings}">ustawieniach konta</a>.
+=======
+        notification_body: Skorygowaliśmy sposób, w jaki używane są pseudonimy, aby nie było duplikatów i dlatego usunęliśmy zasadę uwzględniającą wielkość liter. <br/> Twój pseudonim został utworzony po innym o tej samej nazwie, więc automatycznie zmieniliśmy jego nazwę. Możesz to zmienić z <a href="%{link_to_account_settings}">ustawień konta</a>.
+>>>>>>> tags/v0.29.1
       notification_event:
-        notification_title: Zdarzenie miało miejsce w <a href="%{resource_path}">%{resource_title}</a>.
+        notification_title: W <a href="%{resource_path}">%{resource_title}</a> doszło do zdarzenia.
       reports:
         resource_hidden:
           email_intro: Administrator usunął %{resource_type}, ponieważ zasób został zgłoszony jako %{report_reasons}.
@@ -865,11 +904,16 @@ pl:
       create:
         button: Obserwuj
         error: Wystąpił błąd podczas próby obserwowania tego zasobu.
-        participatory_space: Obserwuj <span class="show-for-sr">%{resource_name}</span>
+        participatory_space: Śledzenie <span>%{resource_name}</span>
       destroy:
         button: Przestań obserwować
         error: Nastąpił błąd podczas cofania obserwowania tego zasobu.
     forms:
+      attachment_link:
+        explanation: Wytyczne dotyczące linków do załącznika
+        help_messages:
+          - Akceptowane są tylko poprawne formaty URL.
+          - Pamiętaj, że linki muszą być publiczne, aby wszyscy uczestnicy mieli do nich dostęp.
       errors:
         decidim/user:
           password: Hasło jest za krótkie.
@@ -886,7 +930,7 @@ pl:
           message_2: Zalecany rozmiar dla tego obrazu to 512x512.
         image:
           explanation: 'Wytyczne dotyczące obrazu:'
-          message_1: Preferowany obraz krajobrazu, który nie zawiera żadnego tekstu.
+          message_1: Najlepiej obraz poziomy, który nie ma żadnego tekstu.
           message_2: Obraz jest docinany automatycznie.
       file_validation:
         allowed_file_extensions: 'Dozwolone rozszerzenia plików: %{extensions}'
@@ -1028,7 +1072,11 @@ pl:
           content: "<p>W %{organization} możesz brać udział i decydować o różnych tematach, poprzez przestrzenie widoczne w górnym menu: Procesy, Zespoły, Inicjatywy, Konsultacje.</p> <p>W ramach każdego z nich znajdziesz różne opcje uczestnictwa: składanie propozycji - indywidualnie lub wspólnie z innymi osobami - uczestnictwo w debatach, nadawanie priorytetów projektom do realizacji, uczestnictwo w spotkaniach twarzą w twarz i inne działania.</p>\n"
           title: Co mogę zrobić w %{organization}?
         description: Przeczytaj więcej o %{organization}.
+<<<<<<< HEAD
         title: Ogólna pomoc
+=======
+        title: Ogólne
+>>>>>>> tags/v0.29.1
     last_activities:
       all: Wszystkie typy aktywności
       index:
@@ -1204,7 +1252,11 @@ pl:
         token_error: Link wygasł.
         unsubscribe: Anuluj subskrypcję
     newsletters_opt_in:
+<<<<<<< HEAD
       unathorized: Przepraszamy, ten link nie jest już dostępny.
+=======
+      unauthorized: Przepraszamy, ten link nie jest już dostępny.
+>>>>>>> tags/v0.29.1
       update:
         error: Przy zapisywaniu ustawień newslettera pojawił się problem.
         success: Ustawienia newslettera zostały pomyślnie zaktualizowane.
@@ -1224,6 +1276,7 @@ pl:
         same_language: Treść została zamieszczona w preferowanym przez Ciebie języku (%{language}), dlatego w tej wiadomości e-mail nie wyświetlono żadnego automatycznego tłumaczenia.
         translated_text: 'Automatycznie przetłumaczony tekst:'
     notifications:
+      action_error: Wystąpił problem z aktualizacją powiadomień.
       no_notifications: Brak powiadomień.
       show:
         missing_event: Ups, to powiadomienie należy do elementu, który nie jest już dostępny. Możesz je odrzucić.
@@ -1300,7 +1353,11 @@ pl:
           headline: Aktualny stan %{organization}
         sub_hero:
           register: Zarejestruj się
+<<<<<<< HEAD
           register_title: Zarejestruj się, aby utworzyć konto
+=======
+          register_title: Utwórz konto
+>>>>>>> tags/v0.29.1
       index:
         standalone_pages: Strony
         subheading: '%{name} - zapoznaj się ze stronami pomocy'
@@ -1327,8 +1384,11 @@ pl:
           alert: Zaktualizowaliśmy nasze warunki świadczenia usługi, prosimy o zapoznanie się z nimi.
           body: Poświęć chwilę na zapoznanie się z naszymi zaktualizowanymi warunkami świadczenia usługi. Inaczej korzystanie z platformy nie będzie możliwe.
           title: 'Wymagane: sprawdź aktualizacje naszych warunków korzystania z platformy'
+<<<<<<< HEAD
     participatory_space_private_users:
       not_allowed: Nie możesz wyświetlać tych treści
+=======
+>>>>>>> tags/v0.29.1
     passwords:
       update:
         error: Wystąpił problem podczas aktualizacji hasła.
@@ -1485,7 +1545,11 @@ pl:
         log_in_before_follow: Przed wykonaniem czynności należy się zalogować
       login_modal:
         please_log_in: Zaloguj się
+<<<<<<< HEAD
         sign_up: Zarejestruj się
+=======
+        sign_up: Utwórz konto
+>>>>>>> tags/v0.29.1
       mentions_modal:
         remove_recipient: Usuń odbiorcę %{name}
       participatory_space_filters:
@@ -1612,7 +1676,11 @@ pl:
       locked: Twoje konto jest zablokowane.
       not_found_in_database: 'Nieprawidłowe dane: %{authentication_keys} lub hasło.'
       timeout: Twoja sesja wygasła. Aby kontynuować, zaloguj się ponownie.
+<<<<<<< HEAD
       unauthenticated: Zaloguj się lub zarejestruj, aby kontynuować.
+=======
+      unauthenticated: Musisz się zalogować lub utworzyć konto, zanim przejdziesz dalej.
+>>>>>>> tags/v0.29.1
     invitations:
       edit:
         header: Zakończ tworzenie konta
@@ -1700,7 +1768,7 @@ pl:
     registrations:
       destroyed: Twoje konto zostało pomyślnie zawieszone. Mamy nadzieję zobaczyć Cię ponownie wkrótce.
       new:
-        sign_up: Zarejestruj się
+        sign_up: Utwórz konto
       signed_up: Witamy! Zarejestrowałeś się pomyślnie.
       signed_up_but_inactive: Zarejestrowałeś się pomyślnie. Nie możemy Cię jednak zalogować, ponieważ Twoje konto nie zostało jeszcze aktywowane.
       signed_up_but_locked: Zarejestrowałeś się pomyślnie. Nie możemy Cię jednak zalogować, ponieważ Twoje konto jest zablokowane.
@@ -1721,7 +1789,11 @@ pl:
         forgot_your_password: Nie pamiętasz hasła?
         log_in: Zaloguj się
         log_in_with_provider: Zaloguj się z %{provider}
+<<<<<<< HEAD
         sign_up: Zarejestruj się
+=======
+        sign_up: Utwórz konto
+>>>>>>> tags/v0.29.1
       minimum_password_length:
         one: "(Minimum%{count} znak)"
         few: "(Minimum%{count} znaków)"
@@ -1794,6 +1866,7 @@ pl:
     upload:
       uploadedFile: Załadowany plik
   emojis:
+<<<<<<< HEAD
     button: Dodaj emotikonę
     categories:
       activities: Aktywności
@@ -1818,6 +1891,34 @@ pl:
       clear: Usuń wyszukiwanie
       error: Nie udało się wyszukać emotikonów
       not_found: Nie znaleziono żadnych wyników
+=======
+    add_custom: Użyj niestandardowych emoji
+    button: Dodaj emotikonę
+    categories:
+      activity: Aktywność
+      custom: Niestandardowe
+      flags: Flagi
+      foods: Żywność i napoje
+      frequent: Często używane
+      nature: Zwierzęta i przyroda
+      objects: Obiekty
+      people: Buźki i osoby
+      places: Podróże i miejsca
+      search: Wyniki wyszukiwania
+      symbols: Symbole
+    pick: Wybierz emoji…
+    search: Szukaj
+    search_no_results_1: O nie!
+    search_no_results_2: Nie udało się znaleźć tego emoji
+    skins:
+      '1': Domyślna
+      '2': Jasna
+      '3': Średnio jasna
+      '4': Średnia
+      '5': Średnio ciemna
+      '6': Ciemna
+      choose: Wybierz domyślny odcień skóry
+>>>>>>> tags/v0.29.1
   errors:
     messages:
       allowed_file_content_types: 'dozwolone są tylko pliki z następującymi rozszerzeniami: %{types}'
@@ -1835,7 +1936,11 @@ pl:
       long_words: zawiera słowa, które są zbyt długie (powyżej 35 znaków)
       must_start_with_caps: musi zaczynać się od dużej litery
       nesting_too_deep: nie może wchodzić w skład podkategorii
+<<<<<<< HEAD
       not_found: nie został znaleziony. Czy zarejestrowałeś(-aś) się wcześniej?
+=======
+      not_found: nie może zostać znaleziony. Czy utworzyłeś(aś) wcześniej konto?
+>>>>>>> tags/v0.29.1
       not_locked: nie był zablokowany
       not_saved:
         one: 'Wystąpił błąd podczas przetwarzania Twojego żądania:'
@@ -1924,8 +2029,13 @@ pl:
         log_in: Zaloguj się
         made_with_open_source: Strona internetowa powstała z użyciem <a target="_blank" href="https://github.com/decidim/decidim">free software</a>.
         resources: Zasoby
+<<<<<<< HEAD
         sign_up: Zarejestruj się
         terms_and_conditions: Warunki świadczenia usługi
+=======
+        sign_up: Utwórz konto
+        terms_of_service: Regulamin świadczenia usług
+>>>>>>> tags/v0.29.1
       header:
         log_in: Zaloguj się
         main_menu: Menu główne
@@ -1941,10 +2051,13 @@ pl:
         mark_as_read: Oznacz jako przeczytane
       offline_banner:
         cache_version_page: Oooops! Twoja sieć jest offline. Jest to poprzednio buforowana wersja strony, którą odwiedzasz, być może zawartość nie jest aktualna.
+<<<<<<< HEAD
       shared:
         layout_item:
           next: Następny element
           prev: Poprzedni element
+=======
+>>>>>>> tags/v0.29.1
       social_media_links:
         facebook: "%{organization} na Facebooku"
         github: "%{organization} na GitHubie"
@@ -2023,6 +2136,10 @@ pl:
     x: X
     xing: Xing
   time:
+    buttons:
+      close: Zamknij
+      reset: Resetuj
+      select: Wybierz
     formats:
       day_of_month: "%b %d"
       day_of_week: "%a"
@@ -2037,6 +2154,8 @@ pl:
         mailer:
           invitation_instructions:
             accept_until_format: "%B %d, %Y %I:%M %p"
+      help:
+        time_format: 'Format: hh:mm'
       long: "%B %d, %Y %H:%M"
       long_dashed: "%Y-%m-%d %H:%M:%S"
       long_with_particles: "%B %d, %Y o %H:%M"

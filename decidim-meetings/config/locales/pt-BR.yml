@@ -91,6 +91,14 @@ pt-BR:
   decidim:
     admin:
       filters:
+<<<<<<< HEAD
+=======
+        accepted_at_not_null:
+          label: Aceitou
+          values:
+            'false': Não aceito
+            'true': Aceitou
+>>>>>>> tags/v0.29.1
         meetings:
           category_id_eq:
             label: Categoria
@@ -118,6 +126,21 @@ pt-BR:
               hybrid: Híbrido
               in_person: Presencialmente
               online: Virtual
+<<<<<<< HEAD
+=======
+        rejected_at_not_null:
+          label: Rejeitado
+          values:
+            'false': Não rejeitado
+            'true': Rejeitado
+        search_placeholder:
+          user_name_or_user_email_cont: Buscar por nome ou email
+        sent_at_not_null:
+          label: Enviado
+          values:
+            'false': Não enviado
+            'true': Enviado
+>>>>>>> tags/v0.29.1
       meeting_copies:
         create:
           error: Ocorreu um erro ao duplicar esta reunião.
@@ -282,6 +305,7 @@ pt-BR:
             non_user: Usuário inexistente
             select_user: Selecionar usuário
           index:
+<<<<<<< HEAD
             filter:
               accepted: Aceitou
               all: Tudo
@@ -291,6 +315,11 @@ pt-BR:
             invites: Convites
             registrations_disabled: Você não pode convidar um participante porque os registros estão desativados.
             search: Pesquisa
+=======
+            invite_attendee: Convidar participante
+            invites: Convites
+            registrations_disabled: Você não pode convidar um participante porque os registros estão desativados.
+>>>>>>> tags/v0.29.1
         meeting_closes:
           edit:
             close: Fechar
@@ -413,7 +442,10 @@ pt-BR:
           body: A reunião <a href="%{meeting_path}">"%{meeting_title}"</a> está pendente para ser fechada. Adicione um relatório da reunião usando o botão "Fechar reunião".
           greetings: Saudações,<br/>%{organization_name}<br/><a href="%{organization_url}">%{organization_url}</a>
           hello: Olá %{username},
+<<<<<<< HEAD
           subject: Agora você pode encerrar sua reunião com um relatório na plataforma %{organization_name}
+=======
+>>>>>>> tags/v0.29.1
       conference_venues: Locais de conferência
       content_blocks:
         upcoming_meetings:
@@ -430,7 +462,10 @@ pt-BR:
       iframe_embed_type:
         embed_in_meeting_page: Incorporar na página da reunião
         none: Nenhum
+<<<<<<< HEAD
         open_in_live_event_page: Abrir na página de eventos ao vivo (com enquetes opcionais)
+=======
+>>>>>>> tags/v0.29.1
         open_in_new_tab: Abrir URL em uma nova aba
       last_activity:
         meeting_updated: 'Reunião atualizada:'
@@ -438,7 +473,6 @@ pt-BR:
       layouts:
         live_event:
           close: fechar
-          questions: Perguntas
       mailer:
         invite_join_meeting_mailer:
           invite:
@@ -578,12 +612,13 @@ pt-BR:
             title: Título
       polls:
         questions:
-          closed_question:
-            question_results: Resultados das perguntas
           index:
             empty_questions: Durante esta reunião, algumas perguntas serão enviadas e você poderá respondê-las. Elas serão exibidas aqui.
           index_admin:
+<<<<<<< HEAD
             admin_dashboard: Painel de administração
+=======
+>>>>>>> tags/v0.29.1
             edit: Editar no painel de administração
             question: Pergunta
             received_answer: resposta recebida

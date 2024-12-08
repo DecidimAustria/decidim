@@ -355,7 +355,7 @@ hu:
         title: Ellenőrzési konfliktusok
         transfer:
           email: Email
-          error: Hiba történt a jelenlegi résztvevő kezelt résztvevővé transzferálása során.
+          error: Hiba történt a jelenlegi résztvevő kezelt résztvevővé átminősítése során.
           name: Név
           reason: Ok
           success: Az átvitel sikeresen befejezve.
@@ -383,12 +383,12 @@ hu:
         show:
           dropdown: Legördülő lista
           view_more_logs: További naplók megtekintése
-      domain_whitelist:
+      domain_allowlist:
         form:
           domain_too_short: Túl rövid domain név
         update:
-          error: Nem sikerült frissíteni a domain fehérlistát.
-          success: A domain fehérlista sikeresen frissült.
+          error: Nem sikerült frissíteni az engedélyezett külső tartományok listáját
+          success: Az engedélyezett külső tartományok listája sikeresen frissült.
       exports:
         export_as: "%{name} mint %{export_format}"
         formats:
@@ -455,7 +455,10 @@ hu:
           report_count_eq: Jelentések száma
           reported_id_string_or_reported_content_cont: Keresés %{gyűjtemény} a jelentendő azonosító vagy tartalom alapján.
           title_cont: Keresés %{collection} cím alapján.
+<<<<<<< HEAD
           user_name_or_user_email_cont: Keresés itt %{collection} név vagy emailcím alapján.
+=======
+>>>>>>> tags/v0.29.1
           user_name_or_user_nickname_or_user_email_cont: Keresés %{collection} email, név vagy becenév alapján.
         state_eq:
           label: Állapot
@@ -570,7 +573,7 @@ hu:
         areas: Területek
         configuration: Beállítások
         content: Jelentett tartalom
-        external_domain_whitelist: Engedélyezett külső domainek
+        external_domain_allowlist: Engedélyezett külső domainek
         help_sections: Súgó szakaszok
         homepage: Homepage
         impersonations: Felhatalmazások
@@ -852,7 +855,7 @@ hu:
             layout_appearance_title: Elrendezés szerkesztése
             preview: Előnézet
           omnipresent_banner_appearance_title: Mindenhol megjelenő banner szerkesztése
-      organization_external_domain_whitelist:
+      organization_external_domain_allowlist:
         edit:
           update: Frissítés
         external_domain:
@@ -861,8 +864,8 @@ hu:
           remove: Eltávolítás
           up: Fel
         form:
-          add: Hozzáadás a kivétellistához
-          title: Külső domain kivétellista
+          add: Hozzáadás az engedélyezett listához
+          title: Engedélyezett külső domainek listája
       participatory_space_private_users:
         create:
           error: Hiba történt egy privát felhasználó hozzáadása során a részvételi helyhez.
@@ -1007,7 +1010,11 @@ hu:
         areas: Területek
         authorization_workflows: Ellenőrzési módszerek
         dashboard: Vezérlőpult
+<<<<<<< HEAD
         edit_external_domains: Külső domain kivétellista
+=======
+        edit_external_domains: Engedélyezett külső domainek listája
+>>>>>>> tags/v0.29.1
         edit_landing_page: Az oldal tartalma
         edit_organization_appearance: Honlap megjelenésének szerkesztése
         impersonatable_users: Kezelhető résztvevők

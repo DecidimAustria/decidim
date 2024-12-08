@@ -38,8 +38,8 @@ describe "User edit meeting" do
     it "updates the related attributes" do
       visit_component
 
-      click_link translated(meeting.title)
-      click_link "Close meeting"
+      click_on translated(meeting.title)
+      click_on "Close meeting"
 
       expect(page).to have_content "Close meeting"
 
@@ -49,12 +49,47 @@ describe "User edit meeting" do
         fill_in :close_meeting_closing_report, with: closing_report
         fill_in :close_meeting_attendees_count, with: 10
 
-        click_button "Close meeting"
+        click_on "Close meeting"
       end
 
       expect(page).to have_content(closing_report)
-      expect(page).not_to have_content "Close meeting"
-      expect(page).not_to have_content "Organizations"
+      expect(page).to have_no_content "Close meeting"
+      expect(page).to have_no_content "Organizations"
+      expect(meeting.reload.closed_at).not_to be_nil
+    end
+
+    it "updates without any tags" do
+      visit_component
+
+      click_on translated(meeting.title)
+      click_on "Close meeting"
+
+      expect(page).to have_content "Close meeting"
+
+      within "form.edit_close_meeting" do
+        expect(page).to have_content "Proposals"
+
+        fill_in :close_meeting_closing_report, with: closing_report
+        fill_in :close_meeting_attendees_count, with: 10
+
+        click_on "Close meeting"
+      end
+
+      meeting.reload
+      meeting.update(closing_report: {
+                       en: %(#{closing_report} <img src="https://www.example.org/foobar.png" />),
+                       es: "El encuentro fue genial",
+                       ca: "La trobada va ser genial"
+                     })
+
+      visit current_path
+
+      expect(page).to have_content(closing_report)
+      within ".meeting__agenda-item__description" do
+        expect(page).to have_no_css("img")
+      end
+      expect(page).to have_no_content "Close meeting"
+      expect(page).to have_no_content "Organizations"
       expect(meeting.reload.closed_at).not_to be_nil
     end
 
@@ -110,8 +145,8 @@ describe "User edit meeting" do
       it "updates the meeting report" do
         visit_component
 
-        click_link translated(meeting.title)
-        click_link "Edit meeting report"
+        click_on translated(meeting.title)
+        click_on "Edit meeting report"
 
         expect(page).to have_content "Close meeting"
 
@@ -121,12 +156,12 @@ describe "User edit meeting" do
           fill_in :close_meeting_attendees_count, with: 10
           fill_in :close_meeting_closing_report, with: edit_closing_report
 
-          click_button "Close meeting"
+          click_on "Close meeting"
         end
 
         expect(page).to have_content(edit_closing_report)
-        expect(page).not_to have_content "Close meeting"
-        expect(page).not_to have_content "Organizations"
+        expect(page).to have_no_content "Close meeting"
+        expect(page).to have_no_content "Organizations"
         expect(meeting.reload.closed_at).not_to be_nil
       end
     end
@@ -139,13 +174,13 @@ describe "User edit meeting" do
       it "does not display the proposal picker" do
         visit_component
 
-        click_link translated(meeting.title)
-        click_link "Close meeting"
+        click_on translated(meeting.title)
+        click_on "Close meeting"
 
         expect(page).to have_content "Close meeting"
 
         within "form.edit_close_meeting" do
-          expect(page).not_to have_content "Proposals"
+          expect(page).to have_no_content "Proposals"
         end
       end
     end
@@ -159,8 +194,8 @@ describe "User edit meeting" do
     it "does not show the button" do
       visit_component
 
-      click_link translated(meeting.title)
-      expect(page).not_to have_content("Close meeting")
+      click_on translated(meeting.title)
+      expect(page).to have_no_content("Close meeting")
     end
   end
 end

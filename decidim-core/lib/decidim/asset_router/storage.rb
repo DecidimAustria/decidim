@@ -44,6 +44,7 @@ module Decidim
       # @param options The options for the URL that are the normal route options
       #   Rails route helpers accept
       # @return [String] The URL of the asset
+<<<<<<< HEAD
       def url(**options)
         case asset
         when ActiveStorage::Attached
@@ -54,6 +55,18 @@ module Decidim
         else # ActiveStorage::VariantWithRecord, ActiveStorage::Variant
           ensure_current_host(nil, **options)
           representation_url(**options)
+=======
+      def url(**)
+        case asset
+        when ActiveStorage::Attached
+          ensure_current_host(asset.record, **)
+          blob_url(**)
+        when ActiveStorage::Blob
+          blob_url(**)
+        else # ActiveStorage::VariantWithRecord, ActiveStorage::Variant
+          ensure_current_host(nil, **)
+          representation_url(**)
+>>>>>>> tags/v0.29.1
         end
       end
 
@@ -133,7 +146,11 @@ module Decidim
             URI::HTTP.build(options)
           end
 
+<<<<<<< HEAD
         ActiveStorage::Current.host = uri.to_s
+=======
+        ActiveStorage::Current.url_options = { host: uri.to_s }
+>>>>>>> tags/v0.29.1
       end
 
       # Determines the organization for the passed record.
@@ -299,7 +316,11 @@ module Decidim
 
         # For the disk service, the URL can be only generated if the current
         # host has been set.
+<<<<<<< HEAD
         ActiveStorage::Current.host.present?
+=======
+        ActiveStorage::Current.url_options&.dig(:host).present?
+>>>>>>> tags/v0.29.1
       end
     end
   end

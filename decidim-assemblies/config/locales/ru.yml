@@ -43,7 +43,6 @@ ru:
         scope_id: Охват
         scopes_enabled: Охваты включены
         short_description: Краткое описание
-        show_statistics: Показывать статистику
         slug: Сокращенный веб-адрес
         special_features: Особенности
         subtitle: Подзаголовок
@@ -261,11 +260,7 @@ ru:
       show:
         assembly_type: Вид собрания
         duration: Длительность
-        is_transparent:
-          'false': непрозрачное
-          'true': прозрачное
         private_space: Это частное собрание
-        related_participatory_processes: Сопутствующие движения соучастия
     assembly_members:
       assembly_member:
         designated_on: 'Полномочия предоставлены:'

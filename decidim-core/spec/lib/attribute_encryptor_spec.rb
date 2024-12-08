@@ -85,7 +85,11 @@ module Decidim
           expect(described_class.decrypt(value)).to eq("Decidim")
         end
 
+<<<<<<< HEAD
         it "runs in a performant way when called multiple times concecutively" do
+=======
+        it "runs in a performant way when called multiple times consecutively" do
+>>>>>>> tags/v0.29.1
           start = Time.current
           1000.times { described_class.decrypt(value) }
 

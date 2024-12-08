@@ -55,8 +55,11 @@ si:
         timeline_entry:
           fields:
             entry_date: දිනය
+<<<<<<< HEAD
       results:
         show:
           stats:
             comments: අදහස්
             meetings: රැස්වීම්
+=======
+>>>>>>> tags/v0.29.1

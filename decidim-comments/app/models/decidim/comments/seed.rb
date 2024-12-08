@@ -9,7 +9,7 @@ module Decidim
       class << self
         # Adds a random amount of comments for a given resource.
         #
-        # @param resource [Object] - the Decidim resource to add the coments to.
+        # @param resource [Object] - the Decidim resource to add the comments to.
         #                            examples: Decidim::Proposals::CollaborativeDraft, Decidim::Proposals::Proposal,
         #
         # @return nil
@@ -18,13 +18,27 @@ module Decidim
 
           Decidim::Comments::Comment.reset_column_information
 
+          @organization = resource.organization
+
           rand(0..6).times do
-            comment = create_comment(resource)
-            create_comment(comment, resource) if [true, false].sample
+            comment1 = create_comment(resource)
+            NewCommentNotificationCreator.new(comment1, [], []).create
+
+            if [true, false].sample
+              comment2 = create_comment(comment1, resource)
+              NewCommentNotificationCreator.new(comment2, [], []).create
+            end
+
+            next if [true, false].sample
+
+            create_votes(comment1) if comment1
+            create_votes(comment2) if comment2
           end
         end
 
         private
+
+        attr_reader :organization
 
         # Creates a comment for a given resource.
         #
@@ -35,8 +49,8 @@ module Decidim
         #
         # @return [Decidim::Comments::Comment]
         def create_comment(resource, root_commentable = nil)
-          author = Decidim::User.where(organization: resource.organization).all.sample
-          user_group = [true, false].sample ? Decidim::UserGroups::ManageableUserGroups.for(author).verified.sample : nil
+          author = random_user
+          user_group = random_user_group(author)
 
           params = {
             commentable: resource,
@@ -52,6 +66,42 @@ module Decidim
             params,
             visibility: "public-only"
           )
+        end
+
+        # Creates a random amount of votes for a given comment.
+        # The votes can be from a user or a user group.
+        #
+        # @private
+        #
+        # @param [Decidim::Comments::Comment]
+        #
+        # @return nil
+        def create_votes(comment)
+          rand(0..12).times do
+            user = random_user
+            user_group = random_user_group(user)
+            author = [user, user_group].compact.sample
+            next if CommentVote.where(comment:, author:).any?
+
+            CommentVote.create!(comment:, author:, weight: [1, -1].sample)
+          end
+
+          nil
+        rescue ActiveRecord::AssociationTypeMismatch
+          nil # in case there is a mismatch, we ignore the error as it is not important for the seeding
+        end
+
+        def random_user
+          user = Decidim::User.where(organization:).not_deleted.not_blocked.confirmed.sample
+
+          user.valid? ? user : random_user
+        end
+
+        def random_user_group(user)
+          user_group = Decidim::UserGroups::ManageableUserGroups.for(user).verified.sample
+          return nil unless user_group&.valid?
+
+          [true, false].sample ? user_group : nil
         end
       end
     end

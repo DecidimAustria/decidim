@@ -78,13 +78,19 @@ es-PY:
   booleans:
     'false': 'No'
     'true': 'Sí'
+<<<<<<< HEAD
   carrierwave:
     errors:
       file_cannot_be_processed: No se ha podido procesar el archivo
       file_resolution_too_large: La resolución del archivo es demasiado grande
       file_size_too_large: El tamaño del archivo es demasiado grande
       not_inside_organization: El archivo no está relacionado con ninguna organización
+=======
+>>>>>>> tags/v0.29.1
   date:
+    buttons:
+      close: Cerrar
+      select: Seleccionar
     formats:
       decidim_short: "%d/%m/%Y"
       decidim_short_dashed: "%d-%m-%Y"
@@ -92,6 +98,10 @@ es-PY:
       decidim_with_day_and_month_name: "%A %d %b %Y"
       decidim_with_month_name: "%d %B %Y"
       decidim_with_month_name_short: "%d %b"
+      help:
+        date_format: 'Formato: dd/mm/aaaa'
+      order: d-m-a
+      separator: "/"
   datetime:
     distance_in_words:
       about_x_hours:
@@ -296,10 +306,6 @@ es-PY:
         title:
           one: "%{count} enmienda"
           other: "%{count} enmiendas"
-      compare_draft:
-        continue: Continuar
-        no_similars_found: No se encontraron enmiendas similares.
-        title: Enmiendas similares
       created:
         error: Se ha producido un error al crear la enmienda.
         success: La enmienda se ha creado correctamente.
@@ -358,14 +364,22 @@ es-PY:
       wizard_step_form:
         steps:
           '1': Crea tu enmienda
+<<<<<<< HEAD
           '2': Compara tu enmienda
           '3': Completa tu enmienda
           '4': Publica tu enmienda
+=======
+          '2': Publica tu enmienda
+>>>>>>> tags/v0.29.1
     anonymous_user: Anónimo
     application:
       document:
         download: Descargar archivo
+        visit_link: Visita el enlace
       documents:
+        component_documents:
+          dummy: Documentos de componentes ficticios
+          meetings: Documentos sobre encuentros
         documents: Documentos
         related_documents: Documentos relacionados
       photo:
@@ -587,7 +601,7 @@ es-PY:
           complete_profile: Completar perfil
           nickname_help: Tu alias en %{organization}. Solo puede contener letras, números, '-' y '_'.
           sign_up: Por favor, completa tu perfil
-          subtitle: Por favor, rellena el siguiente formulario con el fin de completar la inscripción
+          subtitle: Por favor, rellena el siguiente formulario para completar la creación de la cuenta
           username_help: Nombre público que aparece en tus mensajes. Con el objetivo de garantizar el anonimato, puede ser cualquier nombre.
       registrations:
         create:
@@ -597,8 +611,8 @@ es-PY:
           log_in: Entra
           newsletter: Quiero recibir un boletín ocasional con información relevante
           newsletter_title: Permiso de contacto
-          sign_up: Regístrate
-          subtitle: Crea una cuenta para poder participar en los debates y apoyar las propuestas.
+          sign_up: Crea una cuenta
+          subtitle: Crea una cuenta para participar en la plataforma.
           terms: los términos y condiciones de uso
           tos_agreement: Al registrarte aceptas %{link}.
           tos_title: Términos de servicio
@@ -608,7 +622,7 @@ es-PY:
           are_you_new?: '¿Eres nuevo en la plataforma?'
           register: Créate una cuenta
           sign_in_disabled: Puedes acceder con una cuenta externa.
-          sign_up_disabled: El registro está deshabilitado, puedes usar una cuenta existente para acceder.
+          sign_up_disabled: La creación de cuentas está deshabilitada, puedes utilizar una cuenta existente para acceder.
         user:
           timed_out: Has estado sin actividad durante demasiado tiempo y tu sesión se ha cerrado automáticamente. Si quieres seguir participando, inicia sesión de nuevo.
       shared:
@@ -672,6 +686,10 @@ es-PY:
     endorsers_list:
       endorsed_by: Le gusta a…
     errors:
+      files:
+        file_cannot_be_processed: No se ha podido procesar el archivo
+        file_resolution_too_large: La resolución del archivo es demasiado grande
+        not_inside_organization: El archivo no está relacionado con ninguna organización
       internal_server_error:
         copied: '¡Texto copiado!'
         copy_error_message_clarification: Mensaje de error copiado al portapapeles
@@ -809,9 +827,9 @@ es-PY:
           email_subject: Un grupo de usuarias ha actualizado su perfil
           notification_title: El grupo de usuarias %{user_group_name} ha actualizado su perfil perdiendo la verificación. Puedes volver a verificarlo a través del <a href="%{groups_admin_path}">panel de administración</a>.
       nickname_event:
-        notification_body: Hemos corregido la forma en que se utilizan los alias para que no haya duplicados, para hacerlo ya no se distingue entre mayúsculas y minúsculas.<br/>Tu alias fue creado después de otro igual, así que lo hemos renombrado automáticamente. Puedes modificarlo desde la <a href="%{link_to_account_settings}">configuración de tu cuenta</a>.
+        notification_body: Hemos corregido la forma en que se utilizan los alias para que no haya duplicados, para hacerlo ya no se distingue entre mayúsculas y minúsculas.<br/>Tu alias fue creado después de otro igual, así que se ha renombrado automáticamente. Puedes modificarlo desde la <a href="%{link_to_account_settings}">configuración de tu cuenta</a>.
       notification_event:
-        notification_title: Un evento ha ocurrido en <a href="%{resource_path}">%{resource_title}</a>.
+        notification_title: Se ha producido un evento en <a href="%{resource_path}">%{resource_title}</a>.
       reports:
         resource_hidden:
           email_intro: Una administradora eliminó su %{resource_type} porque ha sido reportado como %{report_reasons}.
@@ -876,11 +894,16 @@ es-PY:
       create:
         button: Seguir
         error: Ha habido un error siguiendo este recurso.
-        participatory_space: Siguiendo <span class="show-for-sr">%{resource_name}</span>
+        participatory_space: Siguiendo <span>%{resource_name}</span>
       destroy:
         button: Dejar de seguir
         error: Ha habido un error dejando de seguir este recurso.
     forms:
+      attachment_link:
+        explanation: Guía para enlaces adjuntos
+        help_messages:
+          - Solo se aceptan formatos de URL correctos.
+          - Por favor, ten en cuenta que los enlaces deben ser públicos para que todas las participantes puedan acceder a ellos.
       errors:
         decidim/user:
           password: La contraseña es demasiado corta.
@@ -890,14 +913,14 @@ es-PY:
         file:
           explanation: 'Instrucciones para el archivo:'
           message_1: Tiene que ser una imagen o un documento.
-          message_2: Para las imágenes, utilizar imágenes apaisadas preferiblemente, el servicio recorta la imagen.
+          message_2: Para las imágenes, utiliza, preferiblemente, imágenes apaisadas, el servicio recorta la imagen.
         icon:
           explanation: 'Instrucciones para el icono:'
           message_1: Tiene que ser una imagen cuadrada.
           message_2: El tamaño recomendado para esta imagen es 512x512.
         image:
           explanation: 'Instrucciones para la imagen:'
-          message_1: Preferiblemente una imagen de paisaje que no tenga ningún texto.
+          message_1: Preferiblemente una imagen apaisada que no tenga ningún texto.
           message_2: El servicio recorta la imagen.
       file_validation:
         allowed_file_extensions: 'Formatos de archivo permitidos: %{extensions}'
@@ -1040,7 +1063,7 @@ es-PY:
           content: "<p>En %{organization} puede participar y decidir sobre diferentes temas, a través de los espacios que ve en el menú superior: Procesos, Asambleas, Iniciativas, Consultas.</p> <p>Dentro de cada una encontrará diferentes opciones para participar: hacer propuestas, individualmente o con otras personas, participar en debates, priorizar proyectos para implementar, asistir a reuniones cara a cara y otras acciones.</p>\n"
           title: '¿Qué puedo hacer en %{organization}?'
         description: Lee más sobre %{organization}.
-        title: Ayuda general
+        title: General
     last_activities:
       all: Todos los tipos de actividad
       index:
@@ -1216,7 +1239,7 @@ es-PY:
         token_error: El enlace ha expirado.
         unsubscribe: Darse de baja
     newsletters_opt_in:
-      unathorized: Lo sentimos, este enlace ya no está disponible.
+      unauthorized: Lo sentimos, este enlace ya no está disponible.
       update:
         error: Se ha producido un error al guardar la configuración del boletín de noticias.
         success: La configuración del boletín de noticias se ha actualizado correctamente.
@@ -1236,6 +1259,7 @@ es-PY:
         same_language: El contenido ha sido publicado en tu idioma preferido (%{language}), por eso no se muestra ninguna traducción automática en este correo electrónico.
         translated_text: 'Texto traducido automáticamente:'
     notifications:
+      action_error: Se ha producido un error al actualizar las notificaciones.
       no_notifications: No hay notificaciones aún.
       show:
         missing_event: Vaya, esta notificación pertenece a un elemento que ya no está disponible. Puedes descartarla.
@@ -1312,7 +1336,11 @@ es-PY:
           headline: Estado actual de %{organization}
         sub_hero:
           register: Regístrate
+<<<<<<< HEAD
           register_title: Inicia sesión o crea una cuenta
+=======
+          register_title: Crea una cuenta
+>>>>>>> tags/v0.29.1
       index:
         standalone_pages: Páginas
         subheading: Navegar por las páginas de ayuda de %{name}
@@ -1339,8 +1367,6 @@ es-PY:
           alert: Hemos actualizado nuestros Términos y Condiciones, por favor, revísalos.
           body: Por favor, dedica un momento a revisar la actualización de nuestros Términos y Condiciones de uso. De lo contrario, no podrás participar en la plataforma.
           title: 'Requerido: Revisa las actualizaciones en nuestros términos y condiciones de uso'
-    participatory_space_private_users:
-      not_allowed: No puedes ver este contenido
     passwords:
       update:
         error: Ha habido un problema al actualizar la contraseña.
@@ -1497,7 +1523,7 @@ es-PY:
         log_in_before_follow: Por favor, inicia sesión antes de realizar esta acción
       login_modal:
         please_log_in: Por favor, inicia la sesión
-        sign_up: Regístrate
+        sign_up: Crea una cuenta
       mentions_modal:
         remove_recipient: Eliminar destinataria %{name}
       participatory_space_filters:
@@ -1624,7 +1650,7 @@ es-PY:
       locked: Tu cuenta esta bloqueada.
       not_found_in_database: '%{authentication_keys} inválido o contraseña.'
       timeout: Tu sesión expiró. Por favor, vuelve a iniciarla para continuar.
-      unauthenticated: Debes iniciar sesión o registrarte antes de continuar.
+      unauthenticated: Debes iniciar sesión o crear una cuenta antes de continuar.
     invitations:
       edit:
         header: Termina de crear tu cuenta
@@ -1711,7 +1737,7 @@ es-PY:
     registrations:
       destroyed: '¡Adiós! Su cuenta ha sido cancelada exitosamente. Esperamos volver a verte pronto.'
       new:
-        sign_up: Regístrate
+        sign_up: Crea una cuenta
       signed_up: '¡Bienvenido! Usted se ha registrado exitosamente.'
       signed_up_but_inactive: Usted se ha registrado exitosamente. Sin embargo, no pudimos iniciar sesión porque su cuenta aún no está activada.
       signed_up_but_locked: Usted se ha registrado exitosamente. Sin embargo, no pudimos iniciar sesión porque su cuenta está bloqueada.
@@ -1732,7 +1758,7 @@ es-PY:
         forgot_your_password: '¿Olvidaste tu contraseña?'
         log_in: Entra
         log_in_with_provider: Inicia sesión con %{provider}
-        sign_up: Regístrate
+        sign_up: Crea una cuenta
       minimum_password_length:
         one: "(%{count} caracteres como mínimo)"
         other: "(%{count} caracteres como mínimo)"
@@ -1803,30 +1829,36 @@ es-PY:
     upload:
       uploadedFile: Archivo subido
   emojis:
+    add_custom: Agregar emoji personalizado
     button: Añadir emoji
     categories:
-      activities: Actividades
-      animals-nature: Animales y naturaleza
+      activity: Actividad
       custom: Personalizado
       flags: Banderas
+<<<<<<< HEAD
       food-drink: Comida y bebida
+=======
+      foods: Comida y bebida
+      frequent: Usados frecuentemente
+      nature: Animales y naturaleza
+>>>>>>> tags/v0.29.1
       objects: Objetos
-      people-body: Personas y cuerpo
-      recents: Usados recientemente
-      smileys-emotion: Sonrisas y emociones
+      people: Caras y personas
+      places: Viajes y lugares
+      search: Resultados de búsqueda
       symbols: Símbolos
-      travel-places: Viajes y lugares
-    error:
-      load: No se ha producido un error al cargar la lista de emojis
-    recents:
-      clear: Borra los emojis recientes
-      none: Aún no has seleccionado ningún emoji.
-    retry: Inténtalo de nuevo
-    search:
-      _: Buscar emojis...
-      clear: Limpiar búsqueda
-      error: Error al buscar emojis
-      not_found: No se han encontrado resultados
+    pick: Elige un emoji…
+    search: Buscar
+    search_no_results_1: '¡Oh no!'
+    search_no_results_2: No se pudo encontrar ese emoji
+    skins:
+      '1': Por defecto
+      '2': Claro
+      '3': Medio claro
+      '4': Medio
+      '5': Medio oscuro
+      '6': Oscuro
+      choose: Elige un tono de piel predeterminado
   errors:
     messages:
       allowed_file_content_types: 'solo se permiten archivos con las siguientes extensiones: %{types}'
@@ -1844,7 +1876,7 @@ es-PY:
       long_words: contiene palabras que son demasiado largas (más de 35 caracteres)
       must_start_with_caps: debe comenzar con una letra mayúscula
       nesting_too_deep: no puede estar dentro de una subcategoría
-      not_found: no se pudo encontrar. ¿Te has registrado previamente?
+      not_found: no se pudo encontrar. ¿Has creado una cuenta anteriormente?
       not_locked: no estaba bloqueado
       not_saved:
         one: 'Se ha producido un error procesando tu solicitud:'
@@ -1929,8 +1961,8 @@ es-PY:
         log_in: Entra
         made_with_open_source: Sitio web creado con <a target="_blank" href="https://github.com/decidim/decidim">software libre</a>.
         resources: Recursos
-        sign_up: Regístrate
-        terms_and_conditions: Términos y condiciones
+        sign_up: Crea una cuenta
+        terms_of_service: Términos y condiciones de uso
       header:
         log_in: Entra
         main_menu: Menú principal
@@ -1946,10 +1978,6 @@ es-PY:
         mark_as_read: Marcar como leído
       offline_banner:
         cache_version_page: '¡Ups! Tu red está desconectada. Esta es una versión previa en caché de la página que estás visitando, quizás el contenido no está actualizado.'
-      shared:
-        layout_item:
-          next: Siguiente tema
-          prev: Tema anterior
       social_media_links:
         facebook: "%{organization} en Facebook"
         github: "%{organization} en GitHub"
@@ -2028,6 +2056,10 @@ es-PY:
     x: X
     xing: Xing
   time:
+    buttons:
+      close: Cerrar
+      reset: Reiniciar
+      select: Seleccionar
     formats:
       day_of_month: "%b %d"
       day_of_week: "%a"
@@ -2042,6 +2074,8 @@ es-PY:
         mailer:
           invitation_instructions:
             accept_until_format: "%B %d, %Y %I:%M %p"
+      help:
+        time_format: 'Formato: hh:mm'
       long: "%B %d, %Y %H:%M"
       long_dashed: "%d-%m-%Y %H:%M:%S"
       long_with_particles: "%d de %B del %Y a las %Hh%M"

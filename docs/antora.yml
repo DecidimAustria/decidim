@@ -1,6 +1,10 @@
 name: en
 title: "Decidim Documentation"
+<<<<<<< HEAD
 version: v0.28
+=======
+version: v0.29
+>>>>>>> tags/v0.29.1
 asciidoc:
   attributes:
     page-lang: en@

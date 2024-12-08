@@ -350,7 +350,6 @@ lt:
         title: Patikros konfliktai
         transfer:
           email: El. paštas
-          error: Iškilo problema perkeliant dabartinį dalyvį į tvarkomą dalyvį.
           name: Vardas
           reason: Priežastis
           success: Perkėlimas sėkmingai baigtas.
@@ -363,10 +362,13 @@ lt:
           title: Laukiantys Moderavimai
         show:
           view_more_logs: Peržiūrėti daugiau ataskaitų
+<<<<<<< HEAD
       domain_whitelist:
         update:
           error: Nepavyko atnaujinti domenų baltąjo sąrašo.
           success: Domenų baltasis sąrašas atnaujintas sėkmingai.
+=======
+>>>>>>> tags/v0.29.1
       exports:
         export_as: "%{name} kaip %{export_format}"
         formats:
@@ -433,7 +435,6 @@ lt:
           report_count_eq: Raportuoti skaičių
           reported_id_string_or_reported_content_cont: Ieškoti %{collection} pagal ID arba turinį.
           title_cont: Ieškoti %{collection} pagal pavadinimą.
-          user_name_or_user_email_cont: Ieškoti %{collection} pagal vardą ar el. paštą.
           user_name_or_user_nickname_or_user_email_cont: Ieškoti %{collection} pagal el. pašto adresą, vardą arba naudotojo vardą.
         state_eq:
           label: Būsena
@@ -833,12 +834,15 @@ lt:
             layout_appearance_title: Redaguoti išdėstymą
             preview: Peržiūra
           omnipresent_banner_appearance_title: Keisti visur naudojamą reklamjuostę
+<<<<<<< HEAD
       organization_external_domain_whitelist:
         edit:
           update: Atnaujinti
         form:
           add: Pridėti prie baltojo sąrašo
           title: Išorinių domenų baltasis sąrašas
+=======
+>>>>>>> tags/v0.29.1
       participatory_space_private_users:
         create:
           error: Pridedant privatų dalyvį į šia dalyvaujamają erdvę kilo problema.
@@ -983,7 +987,6 @@ lt:
         areas: Aplinkos
         authorization_workflows: Verifikacijos metodai
         dashboard: Švieslentė
-        edit_external_domains: Išorinių domenų baltasis sąrašas
         edit_landing_page: Puslapio turinys
         edit_organization_appearance: Keisti pagrindinio puslapio išvaizdą
         impersonatable_users: Dalyviai, kurių duomenis galima tvarkyti

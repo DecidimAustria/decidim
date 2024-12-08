@@ -139,8 +139,8 @@ lb:
           search: Suche nach Aktionen
         show:
           stats:
-            attendees: Teilnehmer
             back_to_resource: Gehe zurück zum Ergebnis
+<<<<<<< HEAD
             comments: Kommentarer
             contributions: Beiträge
             last_edited_by: Zuletzt bearbeitet von
@@ -148,6 +148,8 @@ lb:
             meetings: Versammlungen
             proposals: Vorschläge
             votes: Unterstützt
+=======
+>>>>>>> tags/v0.29.1
         timeline:
           title: Projektentwicklung
     admin:
@@ -166,16 +168,12 @@ lb:
         name: Rechenschaftspflicht
         settings:
           global:
-            categories_label: Name für "Kategorien"
             comments_enabled: Kommentare aktiviert
             comments_max_length: Maximale Länge der Kommentare (0 für Standardwert)
             display_progress_enabled: Fortschritt anzeigen
-            heading_leaf_level_results: Name für "Projekte"
-            heading_parent_level_results: Name für "Resultate"
             intro: Einführung
             scope_id: Bereich
             scopes_enabled: Bereiche aktiviert
-            subcategories_label: Name für "Unterkategorien"
           step:
             comments_blocked: Kommentare blockiert
     events:

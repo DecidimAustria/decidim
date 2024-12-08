@@ -112,7 +112,11 @@ FactoryBot.define do
       create_static_pages { true }
     end
 
-    name { Faker::Company.unique.name }
+    # we do not want machine translation here
+    name do
+      Decidim.available_locales.index_with { |_locale| Faker::Company.unique.name }
+    end
+
     reference_prefix { Faker::Name.suffix }
     time_zone { "UTC" }
     twitter_handler { Faker::Hipster.word }
@@ -137,7 +141,7 @@ FactoryBot.define do
     admin_terms_of_service_body { generate_localized_description(:admin_terms_of_service_body, skip_injection:) }
     force_users_to_authenticate_before_access_organization { false }
     machine_translation_display_priority { "original" }
-    external_domain_whitelist { ["example.org", "twitter.com", "facebook.com", "youtube.com", "github.com", "mytesturl.me"] }
+    external_domain_allowlist { ["example.org", "twitter.com", "facebook.com", "youtube.com", "github.com", "mytesturl.me"] }
     smtp_settings do
       {
         "from" => "test@example.org",
@@ -149,7 +153,18 @@ FactoryBot.define do
     end
     file_upload_settings { Decidim::OrganizationSettings.default(:upload) }
     enable_participatory_space_filters { true }
-    content_security_policy { {} }
+    content_security_policy do
+      {
+        "default-src" => "localhost:* #{host}:*",
+        "script-src" => "localhost:* #{host}:*",
+        "style-src" => "localhost:* #{host}:*",
+        "img-src" => "localhost:* #{host}:*",
+        "font-src" => "localhost:* #{host}:*",
+        "connect-src" => "localhost:* #{host}:*",
+        "frame-src" => "localhost:* #{host}:* www.example.org",
+        "media-src" => "localhost:* #{host}:*"
+      }
+    end
     colors do
       {
         primary: "#e02d2d",
@@ -422,6 +437,10 @@ FactoryBot.define do
     end
     title { generate_localized_title(:static_page_topic_title, skip_injection:) }
     description { generate_localized_description(:static_page_topic_description, skip_injection:) }
+<<<<<<< HEAD
+=======
+    show_in_footer { true }
+>>>>>>> tags/v0.29.1
     organization
   end
 
@@ -456,6 +475,11 @@ FactoryBot.define do
       file { Decidim::Dev.test_file("Exampledocument.pdf", "application/pdf") }
       content_type { "application/pdf" }
       file_size { 17_525 }
+    end
+
+    trait :with_link do
+      file { nil }
+      link { Faker::Internet.url }
     end
   end
 

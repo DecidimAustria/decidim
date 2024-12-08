@@ -2,9 +2,12 @@
 
 module Decidim
   class AuthorizationModalCell < Decidim::ViewModel
+<<<<<<< HEAD
     include LayoutHelper
     include Decidim::MetaTagsHelper
 
+=======
+>>>>>>> tags/v0.29.1
     delegate :authorize_action_path, to: :controller
 
     alias authorizations model

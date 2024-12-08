@@ -14,6 +14,7 @@ describe Decidim::AttachmentCreatedEvent do
   let(:email_subject) { "An update to #{resource_title}" }
   let(:email_intro) { "A new document has been added to #{resource_title}. You can see it from this page:" }
   let(:email_outro) { "You have received this notification because you are following #{resource_title}. You can stop receiving notifications following the previous link." }
+<<<<<<< HEAD
   let(:notification_title) { "new document</a> has been added to <a href=\"#{attached_to_url}\">#{resource_title}</a>" }
 
   it_behaves_like "a simple event", true
@@ -28,6 +29,13 @@ describe Decidim::AttachmentCreatedEvent do
       expect(subject.notification_title).not_to include("script")
     end
   end
+=======
+  let(:notification_title) { "A <a href=\"#{resource_path}\">new document</a> has been added to <a href=\"#{attached_to_url}\">#{resource_title}</a>" }
+
+  it_behaves_like "a simple event", true
+  it_behaves_like "a simple event email"
+  it_behaves_like "a simple event notification"
+>>>>>>> tags/v0.29.1
 
   describe "resource_url" do
     it "is generated correctly" do
@@ -39,13 +47,13 @@ describe Decidim::AttachmentCreatedEvent do
     let(:text) { "This is my text!" }
 
     context "when attached_to has a description" do
-      it "resturns the description" do
+      it "returns the description" do
         expect(subject.resource_text).to eq translated(attached_to.description)
       end
     end
 
     context "when attached_to has a body" do
-      it "resturns the description" do
+      it "returns the description" do
         allow(attached_to).to receive(:description).and_return(nil)
         allow(attached_to).to receive(:body).and_return(text)
         expect(subject.resource_text).to eq attached_to.body

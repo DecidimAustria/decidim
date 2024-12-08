@@ -336,12 +336,14 @@ ar:
             non_user: مشارك غير موجود
             select_user: اختر المشارك
           index:
+<<<<<<< HEAD
             filter:
               all: الكل
               sent: أرسلت
+=======
+>>>>>>> tags/v0.29.1
             invite_attendee: دعوة مشارك
             invites: تدعو
-            search: بحث
           new:
             invite: دعا
             new_invite: دعوة مشارك

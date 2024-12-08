@@ -5,7 +5,6 @@ pt-BR:
       participatory_process:
         announcement: Anúncio
         area_id: Área
-        banner_image: Imagem da bandeira
         copy_categories: Copiar categorias
         copy_components: Copiar componentes
         copy_steps: Copiar etapas
@@ -30,8 +29,6 @@ pt-BR:
         scope_type_max_depth_id: Profundidade de filtro de escopo
         scopes_enabled: Âmbitos ativados
         short_description: Descrição curta
-        show_metrics: Mostrar métricas
-        show_statistics: Mostrar estatísticas
         slug: Slug de URL
         start_date: Data de início
         subtitle: Subtítulo
@@ -394,7 +391,6 @@ pt-BR:
             select_process_group: Selecione um grupo de processos
             slug_help_html: 'Os slugs de URL são usados para gerar os URLs que apontam para este processo. Aceita apenas letras, números e traços e deve começar com uma letra. Exemplo: %{url}'
             title: Informação geral
-            visbility: Visibilidade
       content_blocks:
         highlighted_processes:
           name: Processos em destaque

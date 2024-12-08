@@ -51,7 +51,6 @@ eu:
         scope_id: Esparrua
         scopes_enabled: Esparru gaituak
         short_description: Deskribapen laburra
-        show_statistics: Erakutsi estatistikak
         slug: URL laburra
         special_features: Ezaugarri bereziak
         subtitle: Azpititulua
@@ -297,7 +296,11 @@ eu:
             slug_help_html: 'URL-ren testu laburrak batzar honetara daramaten URL-ak sortzeko erabiltzen dira. Letrak, zenbakiak eta gidoiak soilik onartzen ditu, eta letra batez hasi behar du. Adibidea: % {url}'
             social_handlers: Soziala
             title: Informazio orokorra
+<<<<<<< HEAD
             visbility: Ikusgarritasuna
+=======
+            visibility: Ikusgarritasuna
+>>>>>>> tags/v0.29.1
         assemblies_types:
           form:
             title: Editatu batzar mota
@@ -311,7 +314,7 @@ eu:
           form:
             existing_user: Parte-hartzailea existitzen da
             explanation: 'Jarraibideak irudirako:'
-            image_guide: Ahal izanez gero, irudi bertikal bat testurik gabe.
+            image_guide: Ahal dela, testurik gabeko irudi bertikal bat.
             non_user: Erabiltzailea ez
             non_user_avatar_help: Pertsonen baimena lortu beharko zenuke, kide gisa argitaratu baino lehen.
             select_a_position: Hautatu posizio bat
@@ -397,11 +400,11 @@ eu:
       show:
         assembly_type: Batzar mota
         duration: Iraupena
-        is_transparent:
-          'false': opakua
-          'true': gardena
         private_space: Hau batzar pribatua da
+<<<<<<< HEAD
         related_participatory_processes: Erlazionatutako prozesu parte-hartzaileak
+=======
+>>>>>>> tags/v0.29.1
         social_networks_title: 'Bisitatu batzarra:'
     assembly_members:
       assembly_member:

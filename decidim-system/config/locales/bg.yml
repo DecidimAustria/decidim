@@ -68,6 +68,10 @@ bg:
         show:
           admins: Администратори
           current_organizations: Текущи организации
+<<<<<<< HEAD
+=======
+          system_checks: Проверки на системата
+>>>>>>> tags/v0.29.1
       default_pages:
         placeholders:
           content: Моля, добавете важно съдържание на статичната страница %{page} в администраторското табло.
@@ -88,7 +92,10 @@ bg:
             did_not_receive_unlock_instructions?: Не сте получили инструкции за отключване?
             forgot_your_password?: Забравили сте паролата си?
             log_in: Вход
+<<<<<<< HEAD
             sign_up: Регистрация
+=======
+>>>>>>> tags/v0.29.1
       menu:
         admins: Администратори
         dashboard: Табло за управление
@@ -260,8 +267,11 @@ bg:
           success: Организацията беше актуализирана успешно.
         users_registration_mode:
           disabled: Достъпът е възможен само с външни профили
+<<<<<<< HEAD
           enabled: Разрешете на участниците да се регистрират и да влизат в профилите си
           existing: Не разрешавайте на участниците да се регистрират, но разрешете на съществуващите участници да влизат в профилите си
+=======
+>>>>>>> tags/v0.29.1
       shared:
         notices:
           no_organization_warning_html: Трябва да създадете организация, за да започнете. Уверете се, че сте прочели %{guide}, преди да продължите.
@@ -269,6 +279,17 @@ bg:
         organizations_list:
           confirm_resend_invitation: Сигурни ли сте, че искате да изпратите отново тази покана?
           resend_invitation: Изпратете отново покана
+<<<<<<< HEAD
+=======
+      system_checks:
+        active_job_queue:
+          decidim_documentation: Документация на Civil Power
+          error: Опашката ActiveJob не е конфигурирана. Това не е препоръчителна настройка за производство. Прочетете повече на %{error_extra}.
+          success: Опашката ActiveJob е конфигурирана правилно.
+        secret_key:
+          error: 'Тайният ключ не е дефиниран правилно. Моля, запазете в променливата на средата SECRET_KEY_BASE и рестартирайте сървъра: %{error_extra}'
+          success: Тайният ключ е конфигуриран правилно.
+>>>>>>> tags/v0.29.1
       titles:
         dashboard: Табло за управление
         decidim: Civil Power

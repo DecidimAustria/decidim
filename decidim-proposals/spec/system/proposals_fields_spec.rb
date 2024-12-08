@@ -46,7 +46,7 @@ describe "Proposals" do
 
         context "when process is not related to any scope" do
           it "can be related to a scope" do
-            visit complete_proposal_path(component, proposal_draft)
+            visit edit_draft_proposal_path(component, proposal_draft)
 
             within "form.edit_proposal" do
               expect(page).to have_content(/Scope/i)
@@ -58,16 +58,16 @@ describe "Proposals" do
           let(:participatory_process) { scoped_participatory_process }
 
           it "cannot be related to a scope" do
-            visit complete_proposal_path(component, proposal_draft)
+            visit edit_draft_proposal_path(component, proposal_draft)
 
             within "form.edit_proposal" do
-              expect(page).not_to have_content("Scope")
+              expect(page).to have_no_content("Scope")
             end
           end
         end
 
         it "creates a new proposal", :slow do
-          visit complete_proposal_path(component, proposal_draft)
+          visit edit_draft_proposal_path(component, proposal_draft)
 
           within ".edit_proposal" do
             fill_in :proposal_title, with: "More sidewalks and less roads"
@@ -78,10 +78,10 @@ describe "Proposals" do
             find("*[type=submit]").click
           end
 
-          expect(page).not_to have_css(".address__info")
-          expect(page).not_to have_css(".address__map")
+          expect(page).to have_no_css(".address__info")
+          expect(page).to have_no_css(".address__map")
 
-          click_button "Publish"
+          click_on "Publish"
 
           expect(page).to have_content("successfully")
           expect(page).to have_content("More sidewalks and less roads")
@@ -91,7 +91,7 @@ describe "Proposals" do
           expect(page).to have_author(user.name)
         end
 
-        context "when geocoding is enabled", :serves_geocoding_autocomplete, :serves_map do
+        context "when geocoding is enabled", :serves_geocoding_autocomplete do
           let!(:component) do
             create(:proposal_component,
                    :with_creation_enabled,
@@ -107,7 +107,7 @@ describe "Proposals" do
           let(:proposal_draft) { create(:proposal, :draft, users: [user], component:, title: "More sidewalks and less roads", body: "It will not solve everything") }
 
           it "creates a new proposal", :slow do
-            visit complete_proposal_path(component, proposal_draft)
+            visit edit_draft_proposal_path(component, proposal_draft)
 
             within ".edit_proposal" do
               fill_in :proposal_title, with: "More sidewalks and less roads"
@@ -127,7 +127,7 @@ describe "Proposals" do
               expect(page).to have_css(".static-map")
             end
 
-            click_button "Publish"
+            click_on "Publish"
 
             expect(page).to have_content("successfully")
             expect(page).to have_content("More sidewalks and less roads")
@@ -150,7 +150,7 @@ describe "Proposals" do
 
             before do
               # Prepare the view for submission (other than the address field)
-              visit complete_proposal_path(component, proposal_draft)
+              visit edit_draft_proposal_path(component, proposal_draft)
 
               fill_in :proposal_title, with: "More sidewalks and less roads"
               fill_in :proposal_body, with: "Cities need more people, not more cars"
@@ -173,7 +173,7 @@ describe "Proposals" do
           let(:component_suggested_hashtags) { "SuggestedHashtag1 SuggestedHashtag2" }
 
           it "offers and save extra hashtags", :slow do
-            visit complete_proposal_path(component, proposal_draft)
+            visit edit_draft_proposal_path(component, proposal_draft)
 
             within ".edit_proposal" do
               check :proposal_suggested_hashtags_suggestedhashtag1
@@ -181,13 +181,13 @@ describe "Proposals" do
               find("*[type=submit]").click
             end
 
-            click_button "Publish"
+            click_on "Publish"
 
             expect(page).to have_content("successfully")
             expect(page).to have_content("#AutoHashtag1")
             expect(page).to have_content("#AutoHashtag2")
             expect(page).to have_content("#SuggestedHashtag1")
-            expect(page).not_to have_content("#SuggestedHashtag2")
+            expect(page).to have_no_content("#SuggestedHashtag2")
           end
         end
 
@@ -200,7 +200,7 @@ describe "Proposals" do
           end
 
           it "creates a new proposal as a user group", :slow do
-            visit complete_proposal_path(component, user_group_proposal_draft)
+            visit edit_draft_proposal_path(component, user_group_proposal_draft)
 
             within ".edit_proposal" do
               fill_in :proposal_title, with: "More sidewalks and less roads"
@@ -212,7 +212,7 @@ describe "Proposals" do
               find("*[type=submit]").click
             end
 
-            click_button "Publish"
+            click_on "Publish"
 
             expect(page).to have_content("successfully")
             expect(page).to have_content("More sidewalks and less roads")
@@ -222,7 +222,7 @@ describe "Proposals" do
             expect(page).to have_author(user_group.name)
           end
 
-          context "when geocoding is enabled", :serves_geocoding_autocomplete, :serves_map do
+          context "when geocoding is enabled", :serves_geocoding_autocomplete do
             let!(:component) do
               create(:proposal_component,
                      :with_creation_enabled,
@@ -238,7 +238,7 @@ describe "Proposals" do
             let(:proposal_draft) { create(:proposal, :draft, users: [user], component:, title: "More sidewalks and less roads", body: "It will not solve everything") }
 
             it "creates a new proposal as a user group", :slow do
-              visit complete_proposal_path(component, proposal_draft)
+              visit edit_draft_proposal_path(component, proposal_draft)
 
               within ".edit_proposal" do
                 fill_in :proposal_title, with: "More sidewalks and less roads"
@@ -251,7 +251,7 @@ describe "Proposals" do
                 find("*[type=submit]").click
               end
 
-              click_button "Publish"
+              click_on "Publish"
 
               expect(page).to have_content("successfully")
               expect(page).to have_content("More sidewalks and less roads")
@@ -279,7 +279,7 @@ describe "Proposals" do
 
           it "shows a modal dialog" do
             visit_component
-            click_link "New proposal"
+            click_on "New proposal"
             expect(page).to have_content("Authorization required")
           end
         end
@@ -296,7 +296,7 @@ describe "Proposals" do
           let(:proposal_draft) { create(:proposal, :draft, users: [user], component:, title: "Proposal with attachments", body: "This is my proposal and I want to upload attachments.") }
 
           it "creates a new proposal with attachments" do
-            visit complete_proposal_path(component, proposal_draft)
+            visit edit_draft_proposal_path(component, proposal_draft)
 
             within ".edit_proposal" do
               fill_in :proposal_title, with: "Proposal with attachments"
@@ -309,18 +309,18 @@ describe "Proposals" do
               find("*[type=submit]").click
             end
 
-            click_button "Publish"
+            click_on "Publish"
 
             expect(page).to have_content("successfully")
 
             within "#panel-images" do
-              expect(page).to have_selector("img[src*=\"city.jpeg\"]", count: 1)
+              expect(page).to have_css("img[src*=\"city.jpeg\"]", count: 1)
             end
           end
 
           context "with multiple images" do
             before do
-              visit complete_proposal_path(component, proposal_draft)
+              visit edit_draft_proposal_path(component, proposal_draft)
 
               within ".edit_proposal" do
                 fill_in :proposal_title, with: "Proposal with attachments"
@@ -329,7 +329,7 @@ describe "Proposals" do
             end
 
             it "sets the card image correctly with zero weight", :slow do
-              skip "REDESIGN_PENDING - Flaky test: upload modal fails on GitHub with multiple fileshttps://github.com/decidim/decidim/issues/10961"
+              skip "REDESIGN_PENDING - Flaky test: upload modal fails on GitHub with multiple files https://github.com/decidim/decidim/issues/10961"
 
               # Attach one card image and two document images and go to preview
               dynamically_attach_file(:proposal_documents, Decidim::Dev.asset("city.jpeg"))
@@ -348,7 +348,7 @@ describe "Proposals" do
 
               # From preview, go back to edit
               expect(page).to have_content("Your proposal has not yet been published")
-              click_link "Modify the proposal"
+              click_on "Modify the proposal"
 
               # See that the images are in correct positions and remove the card
               # image.
@@ -359,13 +359,13 @@ describe "Proposals" do
               end
 
               within ".upload-container-for-documents" do
-                click_button "Edit documents"
+                click_on "Edit documents"
               end
               within ".upload-modal" do
                 within "[data-filename='city.jpeg']" do
-                  click_button("Remove")
+                  click_on("Remove")
                 end
-                click_button "Next"
+                click_on "Next"
               end
 
               within ".edit_proposal" do
@@ -374,10 +374,10 @@ describe "Proposals" do
 
               # From preview, go back to edit
               expect(page).to have_content("Your proposal has not yet been published")
-              click_link "Modify the proposal"
+              click_on "Modify the proposal"
 
               within "[data-active-uploads]" do
-                expect(page).not_to have_content("city.jpeg")
+                expect(page).to have_no_content("city.jpeg")
                 expect(page).to have_content("city2.jpeg")
                 expect(page).to have_content("city3.jpeg")
               end
@@ -389,7 +389,7 @@ describe "Proposals" do
       context "when creation is not enabled" do
         it "does not show the creation button" do
           visit_component
-          expect(page).not_to have_link("New proposal")
+          expect(page).to have_no_link("New proposal")
         end
       end
 
@@ -406,7 +406,7 @@ describe "Proposals" do
 
         before do
           visit_component
-          click_link "New proposal"
+          click_on "New proposal"
         end
 
         it "allows the creation of a single new proposal" do
@@ -417,7 +417,7 @@ describe "Proposals" do
             find("*[type=submit]").click
           end
 
-          expect(page).not_to have_content("successfully")
+          expect(page).to have_no_content("successfully")
           expect(page).to have_css("[data-alert-box].alert", text: "limit")
         end
       end
@@ -425,6 +425,6 @@ describe "Proposals" do
   end
 end
 
-def complete_proposal_path(component, proposal)
-  "#{Decidim::EngineRouter.main_proxy(component).proposal_path(proposal)}/complete"
+def edit_draft_proposal_path(component, proposal)
+  "#{Decidim::EngineRouter.main_proxy(component).proposal_path(proposal)}/edit_draft"
 end

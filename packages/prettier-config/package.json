@@ -1,7 +1,11 @@
 {
   "name": "@decidim/prettier-config",
   "description": "The prettier configuration for Decidim",
+<<<<<<< HEAD
   "version": "0.28.4",
+=======
+  "version": "0.29.1",
+>>>>>>> tags/v0.29.1
   "repository": {
     "url": "git@github.com:decidim/decidim.git",
     "type": "git",

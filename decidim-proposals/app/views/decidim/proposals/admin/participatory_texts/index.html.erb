@@ -1,4 +1,5 @@
 <% add_decidim_page_title(t(".title")) %>
+<%= append_stylesheet_pack_tag "participatory_texts_admin" %>
 
 <div class="item_show__header">
   <h1 class="item_show__header-title">
@@ -14,7 +15,11 @@
           <div class="card">
             <div class="row column">
               <p class="mt-3"><%= t(".info_1") %></p>
+<<<<<<< HEAD
               <ul id="participatory-text" class="draggable-list js-connect js-list-actives accordion  mb-m mt-2.5 ml-2.5 mr-2.5"
+=======
+              <ul id="participatory-text" class="draggable-list js-connect js-list-actives mt-2.5 ml-2.5 mr-2.5"
+>>>>>>> tags/v0.29.1
                   data-component="accordion"
                   data-accordion
                   data-sort-url="#"
@@ -27,7 +32,11 @@
                     <a data-open="true" data-controls="article-<%= proposal.id %>">
                       <%= icon "arrow-right-s-line" %>
                       <%= preview_participatory_text_section_title(proposal) %>
+<<<<<<< HEAD
                       <span class="mr-m"><%= icon "menu-line", class: "fill-black" %></span>
+=======
+                      <span><%= icon "menu-line", class: "fill-black" %></span>
+>>>>>>> tags/v0.29.1
                     </a>
                     <div data-tab-content id="article-<%= proposal.id %>">
                       <%= render "article-preview", { form: prop_form, proposal: } %>

@@ -5,7 +5,6 @@ require "decidim/core/test/shared_examples/has_contextual_help"
 
 describe "Assemblies" do
   let(:organization) { create(:organization) }
-  let(:show_statistics) { true }
 
   let(:description) { { en: "Description", ca: "Descripció", es: "Descripción" } }
   let(:short_description) { { en: "Short description", ca: "Descripció curta", es: "Descripción corta" } }
@@ -25,7 +24,6 @@ describe "Assemblies" do
       internal_organisation:,
       composition:,
       closing_date_reason:,
-      show_statistics:,
       blocks_manifests:
     )
   end
@@ -49,7 +47,7 @@ describe "Assemblies" do
       visit decidim.root_path
 
       within "#home__menu" do
-        expect(page).not_to have_content("Assemblies")
+        expect(page).to have_no_content("Assemblies")
       end
     end
   end
@@ -79,7 +77,7 @@ describe "Assemblies" do
         visit decidim.root_path
 
         within "#home__menu" do
-          expect(page).not_to have_content("Assemblies")
+          expect(page).to have_no_content("Assemblies")
         end
       end
     end
@@ -100,7 +98,7 @@ describe "Assemblies" do
       let(:manifest_name) { :assemblies }
     end
 
-    context "and requesting the asseblies path" do
+    context "and requesting the assemblies path" do
       before do
         visit decidim_assemblies.assemblies_path
       end
@@ -112,7 +110,7 @@ describe "Assemblies" do
           visit decidim.root_path
 
           within "#home__menu" do
-            click_link "Assemblies"
+            click_on "Assemblies"
           end
 
           expect(page).to have_current_path decidim_assemblies.assemblies_path
@@ -122,7 +120,7 @@ describe "Assemblies" do
       it "lists all the highlighted assemblies" do
         within "#highlighted-assemblies" do
           expect(page).to have_content(translated(promoted_assembly.title, locale: :en))
-          expect(page).to have_selector("[id^='assembly_highlight']", count: 1)
+          expect(page).to have_css("[id^='assembly_highlight']", count: 1)
         end
       end
 
@@ -133,10 +131,10 @@ describe "Assemblies" do
 
         expect(page).to have_content(translated(assembly.title, locale: :en))
         expect(page).to have_content(translated(promoted_assembly.title, locale: :en))
-        expect(page).to have_selector("a.card__grid", count: 2)
+        expect(page).to have_css("a.card__grid", count: 2)
         expect(page).to have_css(".card__grid-metadata", text: "1 assembly")
-        expect(page).not_to have_content(translated(child_assembly.title, locale: :en))
-        expect(page).not_to have_content(translated(unpublished_assembly.title, locale: :en))
+        expect(page).to have_no_content(translated(child_assembly.title, locale: :en))
+        expect(page).to have_no_content(translated(unpublished_assembly.title, locale: :en))
       end
 
       it "links to the individual assembly page" do
@@ -213,7 +211,7 @@ describe "Assemblies" do
           it "shows indefinite duration without closing date" do
             within "[data-content]" do
               expect(page).to have_content("DURATION\nIndefinite")
-              expect(page).not_to have_content("CLOSING DATE")
+              expect(page).to have_no_content("CLOSING DATE")
             end
           end
         end
@@ -257,33 +255,21 @@ describe "Assemblies" do
         it "shows the components" do
           within ".participatory-space__nav-container" do
             expect(page).to have_content(translated(proposals_component.name, locale: :en))
-            expect(page).not_to have_content(translated(meetings_component.name, locale: :en))
+            expect(page).to have_no_content(translated(meetings_component.name, locale: :en))
           end
         end
       end
 
       context "and the process statistics are enabled with stats block active" do
-        let(:show_statistics) { true }
         let(:blocks_manifests) { [:stats] }
 
         it "renders the stats for those components are visible" do
           within "[data-statistic]" do
             expect(page).to have_css(".statistic__title", text: "Proposals")
             expect(page).to have_css(".statistic__number", text: "3")
-            expect(page).not_to have_css(".statistic__title", text: "Meetings")
-            expect(page).not_to have_css(".statistic__number", text: "0")
+            expect(page).to have_no_css(".statistic__title", text: "Meetings")
+            expect(page).to have_no_css(".statistic__number", text: "0")
           end
-        end
-      end
-
-      context "and the process statistics are not enable with stats block actived" do
-        let(:show_statistics) { false }
-        let(:blocks_manifests) { [:stats] }
-
-        it "does not render the stats for those components that are not visible" do
-          expect(page).not_to have_css("h2.h2", text: "Statistics")
-          expect(page).not_to have_css(".statistic__title", text: "Proposals")
-          expect(page).not_to have_css(".statistic__number", text: "3")
         end
       end
 
@@ -300,11 +286,11 @@ describe "Assemblies" do
         it "shows only the published children assemblies" do
           within(".participatory-space__block-grid") do
             expect(page).to have_link translated(child_assembly.title)
-            expect(page).not_to have_link translated(unpublished_child_assembly.title)
+            expect(page).to have_no_link translated(unpublished_child_assembly.title)
           end
         end
 
-        it "shows the children assemblies by weigth" do
+        it "shows the children assemblies by weight" do
           expect(titles.first.text).to eq translated(child_assembly.title)
           expect(titles.last.text).to eq translated(second_child_assembly.title)
         end
@@ -322,7 +308,7 @@ describe "Assemblies" do
         it "shows only the published, private and transparent children assemblies" do
           within(".participatory-space__block-grid") do
             expect(page).to have_link translated(private_transparent_child_assembly.title)
-            expect(page).not_to have_link translated(private_transparent_unpublished_child_assembly.title)
+            expect(page).to have_no_link translated(private_transparent_unpublished_child_assembly.title)
           end
         end
       end
@@ -336,7 +322,7 @@ describe "Assemblies" do
         end
 
         it "not shows any children assemblies" do
-          expect(page).not_to have_css(".participatory-space__block-grid")
+          expect(page).to have_no_css(".participatory-space__block-grid")
         end
       end
     end

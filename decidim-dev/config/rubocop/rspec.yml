@@ -1,11 +1,17 @@
-require: rubocop-rspec
+require:
+  - rubocop-rspec
+  - rubocop-rspec_rails
 
 #  RSpec:
 #    Patterns:
 #      - "(?:^|/)spec/"
 #      - "(?:^|/)test/"
 
+<<<<<<< HEAD
 RSpec/FilePath:
+=======
+RSpec/SpecFilePathFormat:
+>>>>>>> tags/v0.29.1
   CustomTransform:
     OAuthApplicationPresenter: oauth_application_presenter
 
@@ -70,4 +76,7 @@ RSpec/LeakyConstantDeclaration:
   Enabled: false
 
 RSpec/DescribedClass:
+  Enabled: false
+
+RSpec/IndexedLet:
   Enabled: false

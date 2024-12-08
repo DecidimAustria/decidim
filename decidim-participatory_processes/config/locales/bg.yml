@@ -5,7 +5,6 @@ bg:
       participatory_process:
         announcement: Обявление
         area_id: Район
-        banner_image: Банер изображение
         copy_categories: Копирай категории
         copy_components: Копирай компоненти
         copy_steps: Копирай стъпки
@@ -35,8 +34,11 @@ bg:
         scope_type_max_depth_id: Дълбочина на филтъра за обхвата
         scopes_enabled: Обхватите са активирани
         short_description: Кратко описание
+<<<<<<< HEAD
         show_metrics: Показване на показатели
         show_statistics: Покажи статистиките
+=======
+>>>>>>> tags/v0.29.1
         slug: Съкратен URL
         start_date: Начална дата
         subtitle: Подзаглавие
@@ -438,7 +440,11 @@ bg:
             select_process_group: Изберете група на процеса
             slug_help_html: 'Съкратените URL се използват за генериране на URL адреси, които сочат към този процес. Приема само букви, цифри и тирета и трябва да започва с буква. Пример: %{url}'
             title: Основна информация
+<<<<<<< HEAD
             visbility: Видимост
+=======
+            visibility: Видимост
+>>>>>>> tags/v0.29.1
       content_blocks:
         extra_data:
           name: Фаза и продължителност

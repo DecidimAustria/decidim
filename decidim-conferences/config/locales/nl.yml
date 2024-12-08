@@ -319,12 +319,14 @@ nl:
             non_user: Niet bestaande gebruiker
             select_user: Selecteer gebruiker
           index:
+<<<<<<< HEAD
             filter:
               all: Alle
               sent: Verzonden
+=======
+>>>>>>> tags/v0.29.1
             invite_attendee: Nodig deelnemer uit
             invites: Uitnodigingen
-            search: Zoeken
           new:
             invite: Nodig uit
             new_invite: Nodig deelnemer uit

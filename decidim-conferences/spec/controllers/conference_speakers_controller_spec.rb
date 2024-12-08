@@ -30,8 +30,8 @@ module Decidim
         end
 
         context "when conference has speakers" do
-          let!(:speaker1) { create(:conference_speaker, conference:) }
-          let!(:speaker2) { create(:conference_speaker, conference:) }
+          let!(:speaker1) { create(:conference_speaker, :published, conference:) }
+          let!(:speaker2) { create(:conference_speaker, :published, conference:) }
           let!(:non_speaker) { create(:conference_speaker) }
 
           context "when user has permissions" do
@@ -39,18 +39,6 @@ module Decidim
               get :index, params: { conference_slug: conference.slug }
 
               expect(controller.helpers.collection).to contain_exactly(speaker1, speaker2)
-            end
-          end
-
-          context "when user does not have permissions" do
-            before do
-              allow(controller).to receive(:current_user_can_visit_space?).and_return(false)
-            end
-
-            it "redirects to conference path" do
-              get :index, params: { conference_slug: conference.slug }
-
-              expect(response).to redirect_to(conference_path(conference.slug))
             end
           end
         end

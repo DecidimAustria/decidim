@@ -358,7 +358,7 @@ en:
         title: Verification conflicts
         transfer:
           email: Email
-          error: There was a problem transfering the current participant to managed participant.
+          error: There was a problem transferring the current participant to managed participant.
           name: Name
           reason: Reason
           success: The current transfer has been successfully completed.
@@ -381,7 +381,7 @@ en:
           update: Update
       dashboard:
         pending_moderations:
-          anouncement:
+          announcement:
             one: There are %{count} pending moderation
             other: There are %{count} pending moderations
           goto_moderation: Go to global moderations
@@ -389,12 +389,12 @@ en:
         show:
           dropdown: Dropdown
           view_more_logs: View more logs
-      domain_whitelist:
+      domain_allowlist:
         form:
           domain_too_short: Domain too short
         update:
-          error: Failed to update domain whitelist.
-          success: Domain whitelist updated successfully.
+          error: Failed to update list of allowed external domains
+          success: The list of allowed external domain successfully updated.
       exports:
         export_as: "%{name} as %{export_format}"
         formats:
@@ -453,6 +453,7 @@ en:
           values:
             'false': Published
             'true': Unpublished
+        remove_all: Remove all
         scope_id_eq:
           label: Scope
         search_label: Search
@@ -461,7 +462,6 @@ en:
           report_count_eq: Report count eq
           reported_id_string_or_reported_content_cont: Search %{collection} by reportable id or content.
           title_cont: Search %{collection} by title.
-          user_name_or_user_email_cont: Search %{collection} by name or email.
           user_name_or_user_nickname_or_user_email_cont: Search %{collection} by email, name or nickname.
         state_eq:
           label: State
@@ -577,7 +577,7 @@ en:
         components: Components
         configuration: Configuration
         content: Reported content
-        external_domain_whitelist: Allowed external domains
+        external_domain_allowlist: Allowed external domains
         help_sections: Help sections
         homepage: Homepage
         impersonations: Impersonations
@@ -862,7 +862,7 @@ en:
             layout_appearance_title: Edit layout appearance
             preview: Preview
           omnipresent_banner_appearance_title: Edit omnipresent banner
-      organization_external_domain_whitelist:
+      organization_external_domain_allowlist:
         edit:
           update: Update
         external_domain:
@@ -871,8 +871,8 @@ en:
           remove: Remove
           up: Up
         form:
-          add: Add to whitelist
-          title: External domain whitelist
+          add: Add to allowed list
+          title: Allowed list of external domains
       participatory_space_private_users:
         create:
           error: There was a problem adding a private participant for this participatory space.
@@ -968,6 +968,11 @@ en:
           help: These tokens are used to publicly share this unpublished resource to any user. They will be hidden when the resource is published. Click on the token's share icon to visit the shareable URL.
           title: Share tokens
       shared:
+        adjacent_navigation:
+          next: Next
+          next_title: Next item
+          previous: Previous
+          previous_title: Previous item
         gallery:
           add_images: Add images
           edit_images: Edit images
@@ -1020,7 +1025,7 @@ en:
         areas: Areas
         authorization_workflows: Verification methods
         dashboard: Dashboard
-        edit_external_domains: External domain whitelist
+        edit_external_domains: Allowed list of external domains
         edit_landing_page: Page contents
         edit_organization_appearance: Edit homepage appearance
         impersonatable_users: Manageable participants

@@ -167,10 +167,6 @@ pt:
         error: Ocorreu um erro ao modificar este recurso.
         promote_button: Promover a %{model_name}
         promote_confirm_text: Tem a certeza de que deseja promover esta retificação?
-      compare_draft:
-        continue: Continuar
-        no_similars_found: Não foram encontradas retificações semelhantes.
-        title: Retificações Semelhantes
       created:
         error: Ocorreu um erro ao criar o rascunho da modificação.
         success: O rascunho da modificação foi criado corretamente.
@@ -218,8 +214,11 @@ pt:
       wizard_step_form:
         steps:
           '1': Criar a sua modificação
+<<<<<<< HEAD
           '2': Comparar a sua modificação
           '3': Concluir a sua modificação
+=======
+>>>>>>> tags/v0.29.1
     anonymous_user: Anônimo
     application:
       document:
@@ -383,7 +382,6 @@ pt:
           complete_profile: Complete o seu perfil
           nickname_help: A sua alcunha em %{organization}. Só pode conter letras, números, “-”, e “_”
           sign_up: Por favor, complete o seu perfil
-          subtitle: Por favor, preencha o seguinte formulário para completar a inscrição
           username_help: Nome público que aparece nas suas publicações. Com o objetivo de garantir o anonimato, pode ser qualquer nome.
       registrations:
         new:
@@ -391,8 +389,6 @@ pt:
           log_in: Entrar
           newsletter: Receber um boletim informativo ocasional com informações relevantes
           newsletter_title: Permissão de contacto
-          sign_up: Inscreva-se
-          subtitle: Inscreva-se para participar em discussões e propostas de suporte.
           tos_agreement: Ao se inscrever, aceita %{link}.
           tos_title: Termos de Serviço
           username_help: Nome público que aparece nas suas publicações. Com o objetivo de garantir o anonimato, pode ser qualquer nome.
@@ -552,8 +548,6 @@ pt:
           email_outro: Recebeu esta notificação porque é administrador(a) da plataforma.
           email_subject: Um grupo de utilizadores atualizou o seu perfil
           notification_title: O grupo de utilizadores %{user_group_name} atualizou o seu perfil, deixando-o por verificar. Pode agora verificá-lo no <a href="%{groups_admin_path}">painel de administrador</a>.
-      notification_event:
-        notification_title: Ocorreu um evento em <a href="%{resource_path}">%{resource_title}</a>.
       reports:
         resource_hidden:
           email_intro: Um administrador removeu o seu %{resource_type} porque foi denunciado como %{report_reasons}.
@@ -605,7 +599,6 @@ pt:
       create:
         button: Seguir
         error: Ocorreu um problema ao seguir este recurso.
-        participatory_space: Seguindo <span class="show-for-sr">%{resource_name}</span>
       destroy:
         button: Parar de seguir
         error: Ocorreu um problema ao seguir este recurso.
@@ -621,7 +614,6 @@ pt:
           message_2: Para imagens, use de preferência imagens de paisagem, o serviço corta a imagem.
         image:
           explanation: 'Orientação para a imagem:'
-          message_1: Preferencialmente, uma imagem de paisagem que não tem nenhum texto.
           message_2: O serviço corta a imagem.
       file_validation:
         allowed_file_extensions: 'Extensões de ficheiro permitidas: %{extensions}'
@@ -696,7 +688,6 @@ pt:
         default_page:
           content: "<p>Em %{organization} pode participar e decidir sobre diferentes tópicos, através dos espaços que vê no menu superior: Processos, Reuniões, Iniciativas, Consultas.</p> <p>Dentro de cada um encontrará diferentes opções para participar: fazer propostas - individualmente ou com outras pessoas -, participar em debates, priorizar projetos a serem implementados, participar em reuniões presenciais e outras ações.</p>\n"
           title: O que posso fazer em %{organization}?
-        title: Ajuda Geral
     last_activities:
       all: Todos os tipos de atividade
       index:
@@ -894,8 +885,6 @@ pt:
         metrics:
           headline: Métricas
           link: Mostrar todas as métricas
-    participatory_space_private_users:
-      not_allowed: Não tem permissão para visualizar este conteúdo
     profile:
       deleted: Participante eliminado
     profiles:
@@ -1013,8 +1002,6 @@ pt:
         title: Denunciar utilizador inapropriado
       floating_help:
         help: Ajuda
-      login_modal:
-        sign_up: Inscrever-se
       participatory_space_filters:
         filters:
           areas: Áreas
@@ -1181,8 +1168,6 @@ pt:
       updated_not_active: A sua palavra-passe foi modificada corretamente.
     registrations:
       destroyed: A sua conta foi cancelada corretamente. Esperamos vê-lo(a) novamente em breve.
-      new:
-        sign_up: Inscrever-se
       signed_up: Bem-vindo(a)! Inscreveu-se corretamente.
       signed_up_but_inactive: Inscreveu-se corretamente. No entanto, não pudemos iniciar a sua sessão porque a sua conta ainda não está ativa.
       signed_up_but_locked: Inscreveu-se corretamente. No entanto, não pudemos iniciar a sua sessão porque a sua conta está bloqueada.
@@ -1197,7 +1182,10 @@ pt:
         back: Retroceder
         forgot_your_password: Esqueceu a sua palavra-passe?
         log_in: Entrar
+<<<<<<< HEAD
         sign_up: Inscrever-se
+=======
+>>>>>>> tags/v0.29.1
       minimum_password_length:
         one: "(%{count} carácter no mínimo)"
         other: "(%{count} caracteres no mínimo)"
@@ -1218,7 +1206,6 @@ pt:
       invalid_time_zone: não é um fuso horário válido
       long_words: contém palavras muito longas (acima de 35 caracteres)
       must_start_with_caps: deve começar com uma letra maiúscula
-      not_found: não foi encontrado(a). Já se inscreveu anteriormente?
       not_locked: não estava bloqueado
       not_saved:
         one: 'Ocorreu um erro ao processar o seu pedido:'
@@ -1250,7 +1237,6 @@ pt:
         download_open_data: Transferir ficheiros Open Data
         log_in: Entrar
         made_with_open_source: Site criado com <a target="_blank" href="https://github.com/decidim/decidim"> software livre</a>.
-        sign_up: Inscrever-se
       header:
         log_in: Entrar
         main_menu: Menu principal

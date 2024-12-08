@@ -68,6 +68,10 @@ pl:
         show:
           admins: Administratorzy
           current_organizations: Bieżące organizacje
+<<<<<<< HEAD
+=======
+          system_checks: Sprawdzenie systemu
+>>>>>>> tags/v0.29.1
       default_pages:
         placeholders:
           content: Proszę dodać istotne treści do strony statycznej %{page} w panelu administratora.
@@ -88,7 +92,11 @@ pl:
             did_not_receive_unlock_instructions?: Nie dotarła instrukcja odblokowania?
             forgot_your_password?: Nie pamiętasz hasła?
             log_in: Zaloguj się
+<<<<<<< HEAD
             sign_up: Zarejestruj się
+=======
+            sign_up: Utwórz konto
+>>>>>>> tags/v0.29.1
       menu:
         admins: Administratorzy
         dashboard: Panel
@@ -260,7 +268,11 @@ pl:
           success: Organizacja została zaktualizowana.
         users_registration_mode:
           disabled: Dostęp można uzyskać tylko za pomocą kont zewnętrznych
+<<<<<<< HEAD
           enabled: Zezwalaj użytkownikom na rejestrację i logowanie
+=======
+          enabled: Pozwól uczestnikom utworzyć konto i zalogować się
+>>>>>>> tags/v0.29.1
           existing: Nie zezwalaj uczestnikom na rejestrację, ale zezwalaj obecnym uczestnikom na logowanie
       shared:
         notices:
@@ -269,6 +281,17 @@ pl:
         organizations_list:
           confirm_resend_invitation: Czy na pewno wysłać ponownie zaproszenie?
           resend_invitation: Wyślij ponownie zaproszenie
+<<<<<<< HEAD
+=======
+      system_checks:
+        active_job_queue:
+          decidim_documentation: Dokumentacja Decidim
+          error: Kolejka ActiveJob nie jest skonfigurowana. Nie jest to zalecana konfiguracja dla produkcji. Przeczytaj więcej na %{error_extra}.
+          success: Kolejka ActiveJob jest skonfigurowana poprawnie.
+        secret_key:
+          error: 'Tajny klucz nie jest poprawnie zdefiniowany. Zapisz do zmiennej środowiskowej SECRET_KEY_BASE i zrestartuj serwer: %{error_extra}'
+          success: Sekretny klucz jest skonfigurowany poprawnie.
+>>>>>>> tags/v0.29.1
       titles:
         dashboard: Panel
         decidim: Decidim

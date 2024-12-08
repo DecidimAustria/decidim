@@ -2,16 +2,13 @@
 
 module Decidim
   class NewsletterMailer < ApplicationMailer
-    helper Decidim::SanitizeHelper
-    helper Decidim::TranslationsHelper
-
     include Decidim::NewslettersHelper
 
     layout "decidim/newsletter_base"
 
     helper_method :cell
 
-    def newsletter(user, newsletter, preview: false)
+    def newsletter(user, newsletter, preview = nil)
       return if user.email.blank?
 
       @organization = user.organization

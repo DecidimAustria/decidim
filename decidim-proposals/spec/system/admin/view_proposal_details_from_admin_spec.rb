@@ -38,8 +38,8 @@ describe "Admin views proposal details from admin" do
             list_item = find("li", text: author.name)
 
             within list_item do
-              expect(page).to have_selector("a", text: author.name)
-              expect(page).to have_selector(:xpath, './/a[@title="Contact"]')
+              expect(page).to have_css("a", text: author.name)
+              expect(page).to have_xpath('.//a[@title="Contact"]')
             end
           end
         end
@@ -55,7 +55,7 @@ describe "Admin views proposal details from admin" do
             list_item = find("li", text: author.name)
 
             within list_item do
-              expect(page).to have_selector("a", text: author.name)
+              expect(page).to have_css("a", text: author.name)
             end
           end
         end
@@ -69,7 +69,7 @@ describe "Admin views proposal details from admin" do
         go_to_admin_proposal_page(proposal)
 
         within ".component__show_nav-author-title" do
-          expect(page).not_to have_selector("a", text: "Official proposal")
+          expect(page).to have_no_selector("a", text: "Official proposal")
           expect(page).to have_content("Official proposal")
         end
       end
@@ -92,23 +92,23 @@ describe "Admin views proposal details from admin" do
     end
   end
 
-  describe "with supports" do
+  describe "with votes" do
     before do
       create_list(:proposal_vote, 2, proposal:)
     end
 
-    it "shows the number of supports" do
+    it "shows the number of votes" do
       go_to_admin_proposal_page(proposal)
 
-      expect(page).to have_css("[data-supports] [data-count]", text: "2")
+      expect(page).to have_css("[data-votes] [data-count]", text: "2")
     end
 
-    it "shows the ranking by supports" do
+    it "shows the ranking by votes" do
       another_proposal = create(:proposal, component:)
       create(:proposal_vote, proposal: another_proposal)
       go_to_admin_proposal_page(proposal)
 
-      expect(page).to have_css("[data-supports] [data-ranking]", text: "1 of ")
+      expect(page).to have_css("[data-votes] [data-ranking]", text: "1 of ")
     end
   end
 
@@ -117,7 +117,7 @@ describe "Admin views proposal details from admin" do
       it "does not show the title" do
         go_to_admin_proposal_page(proposal)
 
-        expect(page).not_to have_content "Endorsers"
+        expect(page).to have_no_content "Endorsers"
       end
     end
 
@@ -208,7 +208,7 @@ describe "Admin views proposal details from admin" do
       it "does not show the title" do
         go_to_admin_proposal_page(proposal)
 
-        expect(page).not_to have_content "Related meetings"
+        expect(page).to have_no_content "Related meetings"
       end
     end
 
@@ -233,7 +233,7 @@ describe "Admin views proposal details from admin" do
 
         go_to_admin_proposal_page(proposal)
 
-        expect(page).not_to have_content "Related meetings"
+        expect(page).to have_no_content "Related meetings"
       end
     end
   end
@@ -244,7 +244,7 @@ describe "Admin views proposal details from admin" do
       go_to_admin_proposal_page(proposal)
 
       within "#documents" do
-        expect(page).to have_selector("a", text: translated(document.title))
+        expect(page).to have_css("a", text: translated(document.title))
         expect(page).to have_content(document.file_type)
       end
     end
@@ -264,7 +264,7 @@ describe "Admin views proposal details from admin" do
   end
 
   def go_to_admin_proposal_page(proposal)
-    within find("tr", text: translated(proposal.title)) do
+    within "tr", text: translated(proposal.title) do
       find("a", class: "action-icon--show-proposal").click
     end
   end

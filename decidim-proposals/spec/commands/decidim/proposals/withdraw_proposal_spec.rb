@@ -15,25 +15,27 @@ module Decidim
         let(:current_user) { proposal.creator_author }
         let(:command) { described_class.new(proposal, current_user) }
 
-        context "and the proposal has no supports" do
+        context "and the proposal has no votes" do
           it "withdraws the proposal" do
             expect do
               expect { command.call }.to broadcast(:ok)
             end.not_to change(Decidim::Proposals::Proposal, :count)
-            expect(proposal.state).to eq("withdrawn")
+            expect(proposal).to be_withdrawn
+            expect(proposal.withdrawn_at).to be_present
           end
         end
 
-        context "and the proposal HAS some supports" do
+        context "and the proposal HAS some votes" do
           before do
             proposal.votes.create!(author: current_user)
           end
 
           it "is not able to withdraw the proposal" do
             expect do
-              expect { command.call }.to broadcast(:has_supports)
+              expect { command.call }.to broadcast(:has_votes)
             end.not_to change(Decidim::Proposals::Proposal, :count)
-            expect(proposal.state).not_to eq("withdrawn")
+            expect(proposal).not_to be_withdrawn
+            expect(proposal.withdrawn_at).not_to be_present
           end
         end
       end

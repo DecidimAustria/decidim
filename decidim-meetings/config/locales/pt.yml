@@ -229,12 +229,14 @@ pt:
             non_user: Participante inexistente
             select_user: Selecione o participante
           index:
+<<<<<<< HEAD
             filter:
               all: Todos
               sent: Enviado
+=======
+>>>>>>> tags/v0.29.1
             invite_attendee: Convidar participante
             invites: Convites
-            search: Pesquisar
         meeting_closes:
           edit:
             close: Fechar
@@ -321,7 +323,6 @@ pt:
       layouts:
         live_event:
           close: Fechar
-          questions: Pergunta
       mailer:
         invite_join_meeting_mailer:
           invite:
@@ -439,12 +440,9 @@ pt:
             title: Título
       polls:
         questions:
-          closed_question:
-            question_results: Resultados das questões
           index:
             empty_questions: Durante esta reunião irão ser-lhe enviadas algumas questões e poderá responder-lhes. Serão exibidas aqui.
           index_admin:
-            admin_dashboard: Painel de controlo de administrador
             question: Questão
             received_answer: resposta recebida
             received_answers: respostas recebidas

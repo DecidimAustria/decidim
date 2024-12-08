@@ -165,7 +165,6 @@ hu:
         back_to: Vissza a(z) %{component_name} komponenshez
         close_modal: Ablak bezárás
         continue: Folytatás
-        more_information: További információk
       budgets_list:
         budgets: Költségvetések
         cancel_order:
@@ -195,6 +194,7 @@ hu:
           fields:
             category: Kategória
             id: Azonosító
+            map: Térkép
             title: Cím
       order_summary_mailer:
         order_summary:

@@ -237,6 +237,10 @@ de:
               most_recent: Neueste zuerst
         exports:
           initiatives: Initiativen
+        index:
+          initiatives_types:
+            alert_html: "<p>Sie müssen mindestens einen Initiativentyp erstellen, damit die Teilnehmenden Initiativen erstellen können.</p><p> %{link}</p>"
+            button: Neuer Initiativentyp
         initiatives:
           accept:
             success: Die Initiative wurde erfolgreich akzeptiert.
@@ -302,7 +306,7 @@ de:
         initiatives_types:
           create:
             error: Ein Fehler ist aufgetreten.
-            success: Ein neuer Initiativentyp wurde erfolgreich erstellt.
+            success: Ein neuer Initiativentyp wurde erfolgreich erstellt. Sie müssen mindestens einen Bereich für diese Initiative festlegen, damit er genutzt werden kann.
           destroy:
             success: Der Initiativentyp wurde erfolgreich entfernt.
           edit:
@@ -550,7 +554,6 @@ de:
           other: " Signaturen"
         vote_cabin:
           already_voted: Schon unterschrieben
-          supports_required: "%{total_supports} Signaturen erforderlich"
           verification_required: Bestätigen Sie Ihr Konto, um die Initiative zu unterzeichnen
           vote: Signieren
           votes_blocked: Die Anmeldung ist deaktiviert

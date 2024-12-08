@@ -52,7 +52,11 @@ module Decidim
             let!(:proposal) { create(:proposal, :official) }
 
             before do
+<<<<<<< HEAD
               component.participatory_space.organization.update!(name: "My organization")
+=======
+              component.participatory_space.organization.update!(name: { en: "My organization" })
+>>>>>>> tags/v0.29.1
               proposal.reload
             end
 
@@ -157,8 +161,8 @@ module Decidim
           expect(serialized).to include(longitude: proposal.longitude)
         end
 
-        it "serializes the amount of supports" do
-          expect(serialized).to include(supports: proposal.proposal_votes_count)
+        it "serializes the amount of votes" do
+          expect(serialized).to include(votes: proposal.proposal_votes_count)
         end
 
         it "serializes the amount of comments" do
@@ -203,6 +207,17 @@ module Decidim
           expect(serialized).to include(answered_at: proposal.answered_at)
         end
 
+<<<<<<< HEAD
+=======
+        it "serializes withdrawn status" do
+          expect(serialized).to include(withdrawn: proposal.withdrawn?)
+        end
+
+        it "serializes withdrawn date" do
+          expect(serialized).to include(withdrawn_at: proposal.withdrawn_at)
+        end
+
+>>>>>>> tags/v0.29.1
         it "serializes the amount of attachments" do
           expect(serialized).to include(attachments: proposal.attachments.count)
         end

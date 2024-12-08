@@ -44,7 +44,7 @@ describe "Explore posts" do
       end
 
       it "shows all posts for the given process" do
-        expect(page).to have_selector("#blogs > a", count: 2)
+        expect(page).to have_css("#blogs > a", count: 2)
       end
 
       context "when paginating" do
@@ -56,7 +56,11 @@ describe "Explore posts" do
         end
 
         it "lists 25 resources per page by default" do
+<<<<<<< HEAD
           expect(page).to have_selector("#blogs > a", count: 25)
+=======
+          expect(page).to have_css("#blogs > a", count: 25)
+>>>>>>> tags/v0.29.1
           expect(page).to have_css("[data-pages] [data-page]", count: 2)
         end
       end
@@ -66,7 +70,7 @@ describe "Explore posts" do
 
         it "shows only published blogs" do
           expect(Decidim::Blogs::Post.count).to eq(3)
-          expect(page).to have_selector("#blogs > a", count: 2)
+          expect(page).to have_css("#blogs > a", count: 2)
         end
       end
     end
@@ -112,7 +116,7 @@ describe "Explore posts" do
       it "show post info" do
         expect(page).to have_i18n_content(post.title)
         expect(page).to have_i18n_content(post.body)
-        expect(page).to have_content(post.author.name)
+        expect(page).to have_content(translated(post.author.name))
         expect(page).to have_content(post.created_at.strftime("%d/%m/%Y %H:%M"))
       end
 

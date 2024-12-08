@@ -4,7 +4,7 @@ require "spec_helper"
 
 module Decidim
   describe ReportedMailer do
-    let(:organization) { create(:organization, name: "Test Organization") }
+    let(:organization) { create(:organization) }
     let(:user) { create(:user, :admin, organization:) }
     let(:component) { create(:component, organization:) }
     let(:reportable) { create(:proposal, title: Decidim::Faker::Localized.sentence, body: Decidim::Faker::Localized.paragraph(sentence_count: 3)) }
@@ -14,7 +14,15 @@ module Decidim
     let(:decidim) { Decidim::Core::Engine.routes.url_helpers }
 
     before do
+<<<<<<< HEAD
       reportable.coauthorships.first.author.update!(name: "O'Higgins")
+=======
+      if reportable.coauthorships.first.author.is_a?(Decidim::Organization)
+        reportable.coauthorships.first.author.update!(name: { en: "O'Higgins" })
+      else
+        reportable.coauthorships.first.author.update!(name: "O'Higgins")
+      end
+>>>>>>> tags/v0.29.1
     end
 
     describe "#report" do
@@ -95,7 +103,7 @@ module Decidim
           end
 
           it "includes the name of the author but no link to their profile" do
-            expect(mail).not_to have_link(author.name)
+            expect(mail).to have_no_link(author.name)
           end
         end
 

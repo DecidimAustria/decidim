@@ -6,7 +6,11 @@ RSpec.describe "Project search" do
   include Decidim::ComponentPathHelper
 
   let(:user) { create(:user, :confirmed) }
+<<<<<<< HEAD
   let(:participatory_space) { create(:participatory_process, :with_steps, organization: user.organization) }
+=======
+  let(:participatory_space) { create :participatory_process, :with_steps, organization: user.organization }
+>>>>>>> tags/v0.29.1
   let(:component) { create(:budgets_component, participatory_space:, settings:) }
   let(:settings) { { vote_threshold_percent: 50 } }
   let(:budget) { create(:budget, component:, total_budget: 100_000) }

@@ -228,12 +228,14 @@
             non_user: Ikke eksisterende deltaker
             select_user: Velg deltaker
           index:
+<<<<<<< HEAD
             filter:
               all: Alle
               sent: Sendt
+=======
+>>>>>>> tags/v0.29.1
             invite_attendee: Inviter deltaker
             invites: Invitasjoner
-            search: Søk
         meeting_closes:
           edit:
             close: Lukk
@@ -332,11 +334,9 @@
       iframe_embed_type:
         embed_in_meeting_page: Bygg inn på møteside
         none: Ingen
-        open_in_live_event_page: Åpne på siden for direktearrangement (med valgfri meningsmåling)
       layouts:
         live_event:
           close: lukk
-          questions: Spørsmål
       mailer:
         invite_join_meeting_mailer:
           invite:
@@ -441,12 +441,9 @@
             title: Tittel
       polls:
         questions:
-          closed_question:
-            question_results: Resultat av spørsmål
           index:
             empty_questions: Gjennom dette møtet stilles noen spørsmål, og du vil kunne svare på dem. De vil bli vist her.
           index_admin:
-            admin_dashboard: Administrators dashbord
             question: Spørsmål
             received_answer: mottatt svar
             received_answers: mottatt svar

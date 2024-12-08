@@ -133,6 +133,12 @@ cs:
         new:
           create: Vytvořit
           title: Nový řečník konference.
+        publish:
+          invalid: Při publikování tohoto řečníka došlo k chybě.
+          success: Řečník konference byl úspěšně zveřejněn.
+        unpublish:
+          invalid: Při rušení publikování tohoto řečníka došlo k chybě.
+          success: Řečník konference byl úspěšně zneveřejněn.
         update:
           error: Při této konferenci došlo k chybě při aktualizaci řečníka.
           success: Řečník konference byl úspěšně aktualizován.
@@ -354,14 +360,16 @@ cs:
             non_user: Neexistující uživatel
             select_user: Vyberte uživatele
           index:
+<<<<<<< HEAD
             filter:
               accepted: Přijato
               all: Vše
               rejected: Odmítnuto
               sent: Odeslaná
+=======
+>>>>>>> tags/v0.29.1
             invite_attendee: Pozvat účastníka
             invites: Pozvánky
-            search: Vyhledávání
           new:
             explanation: Uživatel bude pozván, aby se připojil k konferenci. Pokud není jeho e-mail registrován, bude také pozván do organizace.
             invite: Pozvat

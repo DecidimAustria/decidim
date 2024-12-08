@@ -292,7 +292,6 @@ pt:
         title: Conflitos de verificação
         transfer:
           email: e-Mail
-          error: Houve um problema ao transferir o utilizador actual para utilizador gerido.
           name: Nome
           reason: Motivo
           success: A transferência actual foi completada com êxito.
@@ -359,7 +358,6 @@ pt:
           name_or_nickname_or_email_cont: Pesquisar %{collection} por e-mail, nome ou alcunha.
           reported_id_string_or_reported_content_cont: Pesquisar %{coleção} por identificador de denúncia ou conteúdo.
           title_cont: Pesquisar %{collection} por título.
-          user_name_or_user_email_cont: Pesquisar %{coleção} por nome ou e-mail.
         state_eq:
           label: Estado
           values:
@@ -682,12 +680,15 @@ pt:
             layout_appearance_title: Editar aparência do layout
             preview: Pré-visualização
           omnipresent_banner_appearance_title: Editar faixa omnipresente
+<<<<<<< HEAD
       organization_external_domain_whitelist:
         edit:
           update: Atualizar
         form:
           add: Adicionar à lista branca
           title: Lista branca de domínio externo
+=======
+>>>>>>> tags/v0.29.1
       participatory_space_private_users:
         create:
           error: Ocorreu um problema ao adicionar um participante privado neste espaço participativo.

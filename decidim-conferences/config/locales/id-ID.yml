@@ -277,12 +277,14 @@ id:
             non_user: Pengguna tidak ada
             select_user: Pilih pengguna
           index:
+<<<<<<< HEAD
             filter:
               all: Semua
               sent: Terkirim
+=======
+>>>>>>> tags/v0.29.1
             invite_attendee: Undang Peserta
             invites: Undangan
-            search: Pencarian
           new:
             invite: Undang
             new_invite: Undang pengguna

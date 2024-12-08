@@ -42,12 +42,16 @@ module Decidim
       route_helper?(method_name) || super
     end
 
-    def method_missing(method_name, *args)
+    def method_missing(method_name, *)
       return super unless route_helper?(method_name)
 
       filter_slug_params!(method_name)
 
+<<<<<<< HEAD
       send(engine).send(method_name, *args)
+=======
+      send(engine).send(method_name, *)
+>>>>>>> tags/v0.29.1
     end
 
     private

@@ -5,7 +5,6 @@ fr:
       participatory_process:
         announcement: Annonce
         area_id: Périmètre d'assemblée
-        banner_image: Image d'en-tête
         copy_categories: Copier les catégories
         copy_components: Copier les fonctionnalités
         copy_steps: Copier les étapes
@@ -35,8 +34,6 @@ fr:
         scope_type_max_depth_id: Profondeur du filtre de portée
         scopes_enabled: Secteurs activés
         short_description: Résumé
-        show_metrics: Afficher les métriques
-        show_statistics: Montrer les statistiques
         slug: Identifiant
         start_date: Date de début
         subtitle: Sous-titre
@@ -437,7 +434,7 @@ fr:
             select_process_group: Sélectionnez un groupe de concertations
             slug_help_html: 'Les identifiants d''URL sont utilisés pour générer les URL qui pointent vers cette concertation. N''accepte que des lettres, des chiffres et des tirets et doit commencer par une lettre. Exemple : %{url}'
             title: Informations générales
-            visbility: Visibilité
+            visibility: Visibilité
       content_blocks:
         extra_data:
           name: Phase & durée

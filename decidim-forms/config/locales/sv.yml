@@ -22,7 +22,11 @@ sv:
               too_long: är för långt
             choices:
               missing: är inte fullständiga
+<<<<<<< HEAD
               too_many: är för många
+=======
+              too_many: Du kan välja maximalt %{count}.
+>>>>>>> tags/v0.29.1
         questionnaire:
           request_invalid: Det gick inte att hantera begäran. Försök igen.
   decidim:
@@ -158,7 +162,11 @@ sv:
           answer_questionnaire:
             already_have_an_account?: Har du redan ett konto?
             are_you_new?: Ny användare?
+<<<<<<< HEAD
             sign_in_description: Logga in för att fylla i enkäten
+=======
+            sign_in_description: Logga in för att göra enkäten
+>>>>>>> tags/v0.29.1
             sign_up_description: Skapa ett konto för att göra enkäten
             title: Besvara formuläret
           current_step: Steg %{step}

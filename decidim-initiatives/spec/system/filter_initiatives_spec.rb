@@ -76,11 +76,11 @@ describe "Filter Initiatives", :slow do
         end
 
         within "#dropdown-menu-order" do
-          click_link "Most commented"
+          click_on "Most commented"
         end
 
         expect(page).to have_css(".card__grid[id^='initiative']", count: 2)
-        expect(page).to have_selector(".card__grid[id^='initiative']:first-child", text: translated(first_initiative.title))
+        expect(page).to have_css(".card__grid[id^='initiative']:first-child", text: translated(first_initiative.title))
       end
     end
   end
@@ -192,7 +192,11 @@ describe "Filter Initiatives", :slow do
       end
 
       it "does not display TYPE filter" do
+<<<<<<< HEAD
         expect(page).not_to have_css("#panel-dropdown-menu-type")
+=======
+        expect(page).to have_no_css("#panel-dropdown-menu-type")
+>>>>>>> tags/v0.29.1
       end
 
       it "lists all initiatives", :slow do
@@ -303,7 +307,7 @@ describe "Filter Initiatives", :slow do
 
       it "cannot be filtered by author" do
         within "form.new_filter" do
-          expect(page).not_to have_content(/Author/i)
+          expect(page).to have_no_content(/Author/i)
         end
       end
     end

@@ -14,7 +14,7 @@
     <div class="form__wrapper">
       <%= f.hidden_field :invitation_token %>
 
-      <%= f.text_field :nickname, help_text: t("devise.invitations.edit.nickname_help", organization: current_organization.name), required: "required", autocomplete: "nickname" %>
+      <%= f.text_field :nickname, help_text: t("devise.invitations.edit.nickname_help", organization: current_organization_name), required: "required", autocomplete: "nickname" %>
 
       <% if f.object.class.require_password_on_accepting %>
         <%= render partial: "decidim/account/password_fields", locals: { form: f, user: :user } %>
@@ -24,7 +24,7 @@
     <div class="form__wrapper-block">
       <h4 class="h4"><%= t("tos_title", scope: "decidim.devise.registrations.new") %></h4>
 
-      <div class="tos-text">
+      <div>
         <% terms_of_service_summary_content_blocks.each do |content_block| %>
           <%= cell content_block.manifest.cell, content_block %>
         <% end %>

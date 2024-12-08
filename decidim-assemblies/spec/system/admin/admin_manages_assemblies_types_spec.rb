@@ -16,7 +16,7 @@ describe "Admin manages assemblies types" do
 
     it "can create new assemblies types", versioning: true do
       within "[data-content]" do
-        click_link "New assembly type"
+        click_on "New assembly type"
 
         within ".new_assembly_type" do
           fill_in_i18n(:assemblies_type_title, "#assemblies_type-title-tabs", **attributes[:title].except("machine_translations"))
@@ -50,7 +50,11 @@ describe "Admin manages assemblies types" do
 
       it "can edit them", versioning: true do
         within "tr", text: translated(assembly_type.title) do
+<<<<<<< HEAD
           click_link "Edit"
+=======
+          click_on "Edit"
+>>>>>>> tags/v0.29.1
         end
 
         within ".edit_assembly_type" do
@@ -74,7 +78,7 @@ describe "Admin manages assemblies types" do
         expect(page).to have_admin_callout("successfully")
 
         within "#assembly-types" do
-          expect(page).not_to have_content(translated(assembly_type.title))
+          expect(page).to have_no_content(translated(assembly_type.title))
         end
       end
     end
@@ -83,8 +87,8 @@ describe "Admin manages assemblies types" do
   private
 
   def click_delete_assembly_type
-    within find("tr", text: translated(assembly_type.title)) do
-      accept_confirm { click_link "Delete" }
+    within "tr", text: translated(assembly_type.title) do
+      accept_confirm { click_on "Delete" }
     end
   end
 end

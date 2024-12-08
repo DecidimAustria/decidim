@@ -5,7 +5,6 @@ ro:
       participatory_process:
         announcement: Anunţ
         area_id: Zonă
-        banner_image: Imagine pentru banner
         copy_categories: Copiază categoriile
         copy_components: Copiază componentele
         copy_steps: Copiază pașii
@@ -35,8 +34,6 @@ ro:
         scope_type_max_depth_id: Gradul de adâncime al filtrului privind domeniul
         scopes_enabled: Domenii de interes activate
         short_description: Descriere scurtă
-        show_metrics: Arată indicatori
-        show_statistics: Arată statistici
         slug: URL slug
         start_date: Data de început
         subtitle: Subtitlu
@@ -406,7 +403,6 @@ ro:
             select_participatory_process_type: Selectați un tip de proces
             select_process_group: Selectează un grup de proces
             title: Informaţii generale
-            visbility: Vizibilitate
       content_blocks:
         highlighted_processes:
           name: Procese evidențiate

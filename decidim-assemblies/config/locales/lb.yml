@@ -44,7 +44,6 @@ lb:
         scope_id: Umfang
         scopes_enabled: Bereiche aktiviert
         short_description: Kurze Beschreibung
-        show_statistics: Zeige Statistiken
         slug: URL-Block
         special_features: Besondere Merkmale
         subtitle: Untertitel
@@ -264,11 +263,11 @@ lb:
       show:
         assembly_type: Montageart
         duration: Dauer
-        is_transparent:
-          'false': undurchsichtig
-          'true': transparent
         private_space: Dies ist eine private Versammlung
+<<<<<<< HEAD
         related_participatory_processes: Ähnliche Beteiligungsprozesse
+=======
+>>>>>>> tags/v0.29.1
     assembly_members:
       assembly_member:
         designated_on: Bezeichnet am

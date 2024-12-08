@@ -38,7 +38,12 @@ tr:
           form:
             save: Kaydet
           index:
+<<<<<<< HEAD
             internal_state: İçsel durum
+=======
+            missing_state: Kayıp Durum
+            proposal_state_id: İçsel durum
+>>>>>>> tags/v0.29.1
         questionnaire_templates:
           choose:
             create_from_template: Şablondan Oluştur

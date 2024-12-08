@@ -39,8 +39,6 @@ ga:
       actions:
         cancel: Cealaigh
     amendments:
-      compare_draft:
-        continue: Lean ar aghaidh
       edit_draft:
         send: Réamhamharc
       emendation:
@@ -104,7 +102,10 @@ ga:
       registrations:
         new:
           log_in: Logáil isteach
+<<<<<<< HEAD
           sign_up: Cláraigh
+=======
+>>>>>>> tags/v0.29.1
       shared:
         omniauth_buttons:
           or: Nó
@@ -249,8 +250,6 @@ ga:
         report: Tuairiscigh
       floating_help:
         help: Cabhair
-      login_modal:
-        sign_up: Cláraigh
       participatory_space_filters:
         filters:
           areas: Ceantair
@@ -276,17 +275,23 @@ ga:
     invitations:
       edit:
         submit_button: Sábháil
-    registrations:
+    sessions:
       new:
+<<<<<<< HEAD
         sign_up: Cláraigh
     sessions:
       new:
+=======
+>>>>>>> tags/v0.29.1
         log_in: Logáil isteach
     shared:
       links:
         back: Ar Ais
         log_in: Logáil isteach
+<<<<<<< HEAD
         sign_up: Cláraigh
+=======
+>>>>>>> tags/v0.29.1
   layouts:
     decidim:
       data_consent:
@@ -297,7 +302,10 @@ ga:
         edit: Eagar
       footer:
         log_in: Logáil isteach
+<<<<<<< HEAD
         sign_up: Cláraigh
+=======
+>>>>>>> tags/v0.29.1
       header:
         log_in: Logáil isteach
       user_profile:

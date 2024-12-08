@@ -10,7 +10,7 @@ shared_examples "manage conferences" do
     let(:attributes) { attributes_for(:conference) }
 
     before do
-      click_link "New conference"
+      click_on "New conference"
     end
 
     %w(description short_description objectives).each do |field|
@@ -35,8 +35,8 @@ shared_examples "manage conferences" do
       dynamically_attach_file(:conference_banner_image, image2_path)
 
       within ".new_conference" do
-        fill_in :conference_start_date, with: 1.month.ago
-        fill_in :conference_end_date, with: 1.month.ago + 3.days
+        fill_in_datepicker :conference_start_date_date, with: 1.month.ago.strftime("%d/%m/%Y")
+        fill_in_datepicker :conference_end_date_date, with: (1.month.ago + 3.days).strftime("%d/%m/%Y")
 
         find("*[type=submit]").click
       end
@@ -59,8 +59,8 @@ shared_examples "manage conferences" do
     let(:attributes) { attributes_for(:conference) }
 
     before do
-      within find("tr", text: translated(conference.title)) do
-        click_link "Configure"
+      within "tr", text: translated(conference.title) do
+        click_on "Configure"
       end
     end
 
@@ -79,7 +79,11 @@ shared_examples "manage conferences" do
       expect(page).to have_admin_callout("successfully")
 
       within "[data-content]" do
+<<<<<<< HEAD
         expect(page).to have_selector("input[value='#{translated(attributes[:title])}']")
+=======
+        expect(page).to have_css("input[value='#{translated(attributes[:title])}']")
+>>>>>>> tags/v0.29.1
         expect(page).to have_css("img[src*='#{image3_filename}']")
       end
 
@@ -90,8 +94,8 @@ shared_examples "manage conferences" do
 
   describe "updating a conference without images" do
     before do
-      within find("tr", text: translated(conference.title)) do
-        click_link "Configure"
+      within "tr", text: translated(conference.title) do
+        click_on "Configure"
       end
     end
 
@@ -102,9 +106,9 @@ shared_examples "manage conferences" do
 
     it "update an conference without images does not delete them" do
       within_admin_sidebar_menu do
-        click_link "About this conference"
+        click_on "About this conference"
       end
-      click_button "Update"
+      click_on "Update"
 
       expect(page).to have_admin_callout("successfully")
 
@@ -127,8 +131,8 @@ shared_examples "manage conferences" do
       let!(:conference) { create(:conference, :unpublished, organization:) }
 
       it "allows the user to preview the unpublished conference" do
-        within find("tr", text: translated(conference.title)) do
-          click_link "Preview"
+        within "tr", text: translated(conference.title) do
+          click_on "Preview"
         end
 
         expect(page).to have_content(translated(conference.title))
@@ -140,8 +144,8 @@ shared_examples "manage conferences" do
 
       it "allows the user to preview the unpublished conference" do
         new_window = window_opened_by do
-          within find("tr", text: translated(conference.title)) do
-            click_link "Preview"
+          within "tr", text: translated(conference.title) do
+            click_on "Preview"
           end
         end
 
@@ -163,13 +167,13 @@ shared_examples "manage conferences" do
     let!(:conference) { create(:conference, :unpublished, organization:) }
 
     before do
-      within find("tr", text: translated(conference.title)) do
-        click_link "Configure"
+      within "tr", text: translated(conference.title) do
+        click_on "Configure"
       end
     end
 
     it "publishes the conference" do
-      click_link "Publish"
+      click_on "Publish"
       expect(page).to have_content("successfully published")
       expect(page).to have_content("Unpublish")
       expect(page).to have_current_path decidim_admin_conferences.edit_conference_path(conference)
@@ -183,13 +187,13 @@ shared_examples "manage conferences" do
     let!(:conference) { create(:conference, organization:) }
 
     before do
-      within find("tr", text: translated(conference.title)) do
-        click_link "Configure"
+      within "tr", text: translated(conference.title) do
+        click_on "Configure"
       end
     end
 
     it "unpublishes the conference" do
-      click_link "Unpublish"
+      click_on "Unpublish"
       expect(page).to have_content("successfully unpublished")
       expect(page).to have_content("Publish")
       expect(page).to have_current_path decidim_admin_conferences.edit_conference_path(conference)
@@ -204,7 +208,7 @@ shared_examples "manage conferences" do
 
     it "does not let the admin manage conferences form other organizations" do
       within "table" do
-        expect(page).not_to have_content(external_conference.title["en"])
+        expect(page).to have_no_content(external_conference.title["en"])
       end
     end
   end
@@ -217,13 +221,13 @@ shared_examples "manage conferences" do
     end
 
     it "disables the scope for the conference" do
-      within find("tr", text: translated(conference.title)) do
-        click_link "Configure"
+      within "tr", text: translated(conference.title) do
+        click_on "Configure"
       end
 
       uncheck :conference_scopes_enabled
 
-      expect(page).to have_selector("select#conference_scope_id[disabled]")
+      expect(page).to have_css("select#conference_scope_id[disabled]")
 
       within ".edit_conference" do
         find("*[type=submit]").click

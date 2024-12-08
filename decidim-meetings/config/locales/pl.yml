@@ -97,6 +97,11 @@ pl:
   decidim:
     admin:
       filters:
+        accepted_at_not_null:
+          label: Zaakceptowano
+          values:
+            'false': Nie zaakceptowano
+            'true': Zaakceptowano
         meetings:
           category_id_eq:
             label: Kategoria
@@ -124,6 +129,21 @@ pl:
               hybrid: Hybrydowe
               in_person: Osobiste
               online: Online
+<<<<<<< HEAD
+=======
+        rejected_at_not_null:
+          label: Odrzucono
+          values:
+            'false': Nie odrzucono
+            'true': Odrzucono
+        search_placeholder:
+          user_name_or_user_email_cont: Szukaj po nazwie lub adresie e-mail
+        sent_at_not_null:
+          label: Wysłano
+          values:
+            'false': Nie wysłano
+            'true': Wysłano
+>>>>>>> tags/v0.29.1
       meeting_copies:
         create:
           error: Wystąpił błąd podczas duplikowania tego spotkania.
@@ -136,6 +156,7 @@ pl:
         actions:
           comment: Skomentuj
           join: Dołącz
+          reply_poll: Odpowiedź na ankietę
         name: Spotkania
         settings:
           global:
@@ -290,6 +311,7 @@ pl:
             non_user: Nieistniejący użytkownik
             select_user: Wybierz użytkownika
           index:
+<<<<<<< HEAD
             filter:
               accepted: Zaakceptowano
               all: Wszystkie
@@ -299,6 +321,11 @@ pl:
             invites: Zaproszeni
             registrations_disabled: Nie można zaprosić uczestnika, ponieważ rejestracja jest wyłączona.
             search: Szukaj
+=======
+            invite_attendee: Zaproś uczestnika
+            invites: Zaproszeni
+            registrations_disabled: Nie można zaprosić uczestnika, ponieważ rejestracja jest wyłączona.
+>>>>>>> tags/v0.29.1
         meeting_closes:
           edit:
             close: Zamknij
@@ -356,6 +383,16 @@ pl:
           update:
             invalid: Wystąpił błąd podczas aktualizacji tego głosowania podczas spotkania.
             success: Głosowanie podczas spotkania zostało pomyślnie zaktualizowane.
+<<<<<<< HEAD
+=======
+        poll:
+          form:
+            announcement_html:
+              - Gdy pytanie otrzymuje odpowiedzi lub jest opublikowane/zamknięte, nie może być już edytowane.
+              - Możesz dodać pytanie w dowolnym momencie.
+              - Ankieta zostanie zamknięta po opublikowaniu wyników wszystkich utworzonych pytań.
+              - Odwiedź <a href='%{admin_link}'>stronę administracyjną głosowania</a>, aby wysłać pytania i opublikować wyniki.
+>>>>>>> tags/v0.29.1
         registrations:
           edit:
             save: Zapisz
@@ -419,7 +456,11 @@ pl:
           body: Spotkanie <a href="%{meeting_path}">"%{meeting_title}"</a> oczekuje na zamknięcie. Dodaj raport z spotkania za pomocą przycisku "Zamknij spotkanie".
           greetings: Pozdrawiamy,<br/>%{organization_name}<br/><a href="%{organization_url}">%{organization_url}</a>
           hello: Witaj %{username},
+<<<<<<< HEAD
           subject: Teraz możesz zamknąć spotkanie z opublikowaniem raportu na platformie %{organization_name}
+=======
+          subject: Możesz teraz zamknąć spotkanie "%{meeting_title}" raportem
+>>>>>>> tags/v0.29.1
       conference_venues: Sale konferencyjne
       content_blocks:
         upcoming_meetings:
@@ -436,16 +477,24 @@ pl:
       iframe_embed_type:
         embed_in_meeting_page: Osadź na stronie spotkania
         none: Żaden
+<<<<<<< HEAD
         open_in_live_event_page: Otwórz stronę wydarzenia na żywo (z opcjonalnymi ankietami)
+=======
+        open_in_live_event_page: Otwórz na stronie wydarzenia na żywo
+>>>>>>> tags/v0.29.1
         open_in_new_tab: Otwórz odnośnik w nowej zakładce
       last_activity:
         meeting_updated: 'Spotkanie zaktualizowane:'
         new_meeting: 'Nowe spotkanie:'
       layouts:
         live_event:
+<<<<<<< HEAD
           administrate: Administruj
           close: zamknij
           questions: Pytania
+=======
+          close: zamknij
+>>>>>>> tags/v0.29.1
       mailer:
         invite_join_meeting_mailer:
           invite:
@@ -528,6 +577,11 @@ pl:
           edit_close_meeting: Edytuj raport ze spotkania
           edit_meeting: Edytuj spotkanie
           join_meeting: Dołącz do spotkania
+<<<<<<< HEAD
+=======
+          reply_poll: Odpowiedz na ankietę
+          view_poll: Zobacz ankietę
+>>>>>>> tags/v0.29.1
         meetings:
           no_meetings_warning: Żadne spotkanie nie spełnia kryteriów wyszukiwania lub nie zaplanowano żadnych spotkań.
           upcoming_meetings_warning: Obecnie nie ma żadnych zaplanowanych spotkań, ale możesz zobaczyć wszystkie przeszłe.
@@ -588,13 +642,30 @@ pl:
             start_time: Data rozpoczęcia
             title: Tytuł
       polls:
+        answers:
+          index:
+            administrate: Administruj
+            title: Głosowanie
+          index_admin:
+            back_to_meeting: Powrót do spotkania
+            title: Administruj ankietą
+            view_poll: Zobacz ankietę
         questions:
           closed_question:
+<<<<<<< HEAD
             question_results: Wyniki wyborów
           index:
             empty_questions: Podczas tego spotkania niektóre pytania zostaną wysłane i będziesz mógł na nie odpowiedzieć. Będą one wyświetlane tutaj.
           index_admin:
             admin_dashboard: Panel administracyjny
+=======
+            announcement: Odpowiedzi na to pytanie zostały zamknięte.
+            question: Pytanie
+            question_results: Wyniki
+          index:
+            empty_questions: Podczas tego spotkania niektóre pytania zostaną wysłane i będziesz mógł na nie odpowiedzieć. Będą one wyświetlane tutaj.
+          index_admin:
+>>>>>>> tags/v0.29.1
             edit: Edytuj w panelu administratora
             question: Pytanie
             received_answer: otrzymana odpowiedź
@@ -602,6 +673,13 @@ pl:
             results: Wyniki
             send: Wyślij
             sent: Wysłano
+<<<<<<< HEAD
+=======
+            statuses:
+              closed: Wyniki wysłane (zamknięte)
+              published: Wysłane (otwarte)
+              unpublished: Oczekuje na wysłanie
+>>>>>>> tags/v0.29.1
           published_question:
             max_choices_alert: Wybrano zbyt wiele opcji
             question: Pytanie

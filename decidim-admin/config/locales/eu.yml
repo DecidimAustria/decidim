@@ -358,7 +358,7 @@ eu:
         title: Egiaztapen-arazoak
         transfer:
           email: Helbide elektronikoa
-          error: Arazo bat egon da oraingo parte-hartzailea kudeatutako parte-hartzaile batera.
+          error: Arazo bat sortu da parte-hartzailea kudeatutako parte-hartzaileari eskualdatzean.
           name: Izena
           reason: Arrazoia
           success: Egungo transferentzia zuzen egina.
@@ -381,7 +381,11 @@ eu:
           update: Eguneratu
       dashboard:
         pending_moderations:
+<<<<<<< HEAD
           anouncement:
+=======
+          announcement:
+>>>>>>> tags/v0.29.1
             one: Moderazio bat falta da
             other: '%{count} moderazio daude zain'
           goto_moderation: Joan moderazio globaletara
@@ -389,12 +393,12 @@ eu:
         show:
           dropdown: Goitibeherako zerrrenda
           view_more_logs: Ikusi erregistro gehiago 
-      domain_whitelist:
+      domain_allowlist:
         form:
           domain_too_short: Domeinu laburregia
         update:
-          error: Errorea baimendutako domeinuen zerrenda eguneratzean.
-          success: Baimendutako domeinuen zerrenda zuzen eguneratua.
+          error: Errorea gertatu da baimendutako kanpoko domeinuen zerrenda eguneratzean
+          success: Baimendutako kanpoko domeinuen zerrenda zuzen eguneratua.
       exports:
         export_as: "%{name} honako hau gisa: %{export_format}"
         formats:
@@ -453,6 +457,7 @@ eu:
           values:
             'false': Argitaratua
             'true': Ez da argitaratu
+        remove_all: Ezabatu denak
         scope_id_eq:
           label: Esparrua
         search_label: Bilatu
@@ -461,7 +466,6 @@ eu:
           report_count_eq: Salaketa kopurua
           reported_id_string_or_reported_content_cont: Bilatu %{collection} eduki edo Id erreportablearen arabera.
           title_cont: Bilatu %{collection} izenburuaren arabera.
-          user_name_or_user_email_cont: Bilatu %{collection} helbide elektroniko edo izenaren arabera.
           user_name_or_user_nickname_or_user_email_cont: Bilatu %{collection} helbide elektroniko, izen edo ezizenaren arabera.
         state_eq:
           label: Egoera
@@ -568,7 +572,11 @@ eu:
         components: Osagaiak
         configuration: Konfigurazioa
         content: Eduki salatua
+<<<<<<< HEAD
         external_domain_whitelist: Baimendutako kanpoko domeinuak
+=======
+        external_domain_allowlist: Baimendutako kanpoko domeinuak
+>>>>>>> tags/v0.29.1
         help_sections: Laguntza atalak
         homepage: Orrialde nagusia
         impersonations: Inpertsonazioak
@@ -853,7 +861,7 @@ eu:
             layout_appearance_title: Editatu itxura globalaren itxura
             preview: Aurrebistaratu
           omnipresent_banner_appearance_title: Editatu banner nonahikoa
-      organization_external_domain_whitelist:
+      organization_external_domain_allowlist:
         edit:
           update: Eguneratu
         external_domain:
@@ -862,8 +870,8 @@ eu:
           remove: Ezabatu
           up: Igo
         form:
-          add: Gehitu zerrenda zurian
-          title: Kanpoko domeinuen zerrenda zuria
+          add: Gehitu baimendutako helbideen zerrendara
+          title: Baimendutako kanpoko domeinuen zerrenda
       participatory_space_private_users:
         create:
           error: Arazo bat egon da parte-hartzaile pribatu bat gehitzean parte hartzeko espazio honetarako.
@@ -956,6 +964,11 @@ eu:
           help: Identifikatzaile-ikur hauek argitaratu gabeko baliabide hori edozein erabiltzaileri publikoki partekatzeko erabiltzen dira. Errekurtsoa argitaratzean ezkutatuko dira. Egin klik identifikatzaile-ikurra partekatzeko ikonoan, URL partekagarria bisitatzeko.
           title: Partekatu identifikatzaile-ikurrak
       shared:
+        adjacent_navigation:
+          next: Hurrengoa
+          next_title: Hurrengo elementua
+          previous: Aurrekoa
+          previous_title: Aurreko elementua
         gallery:
           add_images: Gehitu irudiak
           edit_images: Editatu irudiak
@@ -1008,7 +1021,7 @@ eu:
         areas: Arloak
         authorization_workflows: Egiaztapen-metodoak
         dashboard: Kontrol-panela
-        edit_external_domains: Kanpoko domeinuen zerrenda
+        edit_external_domains: Baimendutako kanpoko domeinuen zerrenda
         edit_landing_page: Orriaren edukiak
         edit_organization_appearance: Editatu hasierako orriaren itxura
         impersonatable_users: Erabiltzaile erabilgarriak

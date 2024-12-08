@@ -6,7 +6,6 @@ module Decidim
     # public layout.
     class ParticipatoryProcessesController < Decidim::ParticipatoryProcesses::ApplicationController
       include ParticipatorySpaceContext
-      participatory_space_layout only: [:show, :all_metrics]
       include FilterResource
       include Paginable
       include HasParticipatorySpaceContentBlocks
@@ -33,11 +32,7 @@ module Decidim
       end
 
       def all_metrics
-        if current_participatory_space.show_statistics
-          enforce_permission_to :read, :process, process: current_participatory_space
-        else
-          render status: :not_found
-        end
+        enforce_permission_to :read, :process, process: current_participatory_space
       end
 
       private

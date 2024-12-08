@@ -7,31 +7,24 @@ module Decidim
         [
           {
             id: "usage",
+            title: t("decidim.design.helpers.usage"),
             contents: [
               {
                 type: :text,
-                values: ["Make sure the partial <code>decidim/shared/share_modal</code> is present in the DOM. This partial is placed in the application layout."]
+                values: [t("decidim.design.helpers.share_usage_description_html")]
               },
               {
-                type: :table,
-                options: { headings: ["Share Button"] },
-                items: share_table({}),
+                type: :cell_table,
+                options: { headings: [t("decidim.design.helpers.share_button")] },
                 cell_snippet: {
                   cell: "decidim/share_button",
-                  args: []
+                  args: [],
+                  call_string: 'cell("decidim/share_button", nil)'
                 }
               }
             ]
           }
         ]
-      end
-
-      def share_table(*table_rows, **_opts)
-        table_rows.each_with_index.map do
-          row = []
-          row << { method: :cell, args: ["decidim/share_button", nil] }
-          row
-        end
       end
     end
   end

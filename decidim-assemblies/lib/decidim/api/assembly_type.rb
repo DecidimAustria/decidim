@@ -31,7 +31,6 @@ module Decidim
       field :target, Decidim::Core::TranslatedFieldType, "Who participates in this assembly", null: true
       field :participatory_scope, Decidim::Core::TranslatedFieldType, "What is decided on this assembly", null: true
       field :participatory_structure, Decidim::Core::TranslatedFieldType, "How it is decided on this assembly", null: true
-      field :show_statistics, Boolean, "If this assembly should show statistics", null: true
       field :scopes_enabled, Boolean, "If this assembly has scopes enabled", null: true
       field :private_space, Boolean, "If this assembly is a private space", null: true
       field :area, Decidim::Core::AreaApiType, "Area of this assembly", null: true
@@ -54,12 +53,12 @@ module Decidim
       field :twitter_handler, String, "Twitter handler", null: true
       field :instagram_handler, String, "Instagram handler", null: true
       field :facebook_handler, String, "Facebook handler", null: true
-      field :youtube_handler, String, "Youtube handler", null: true
-      field :github_handler, String, "Github handler", null: true
+      field :youtube_handler, String, "YouTube handler", null: true
+      field :github_handler, String, "GitHub handler", null: true
       field :announcement, Decidim::Core::TranslatedFieldType, "Highlighted announcement for this assembly", null: true
 
       field :members, [Decidim::Assemblies::AssemblyMemberType, { null: true }], "Members of this assembly", null: false
-      field :children, [Decidim::Assemblies::AssemblyType, { null: true }], "Childrens of this assembly", null: false
+      field :children, [Decidim::Assemblies::AssemblyType, { null: true }], "Children of this assembly", null: false
 
       def hero_image
         object.attached_uploader(:hero_image).url

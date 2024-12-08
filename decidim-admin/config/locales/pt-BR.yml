@@ -358,7 +358,6 @@ pt-BR:
         title: Conflitos de verificação
         transfer:
           email: E-mail
-          error: Houve um erro ao transferir o usuário atual para o usuário gerenciado.
           name: Nome
           reason: Motivo
           success: A transferência atual foi concluída com sucesso.
@@ -386,12 +385,12 @@ pt-BR:
         show:
           dropdown: Dropdown
           view_more_logs: Ver mais registros
-      domain_whitelist:
+      domain_allowlist:
         form:
           domain_too_short: Domínio muito curto
         update:
-          error: Falha ao atualizar domínio de lista de desejos.
-          success: Domínio lista de desejo atualizado com sucesso.
+          error: Falha ao atualizar lista de domínios externos permitidos
+          success: Lista do domínio externo permitido atualizada com sucesso.
       exports:
         export_as: "%{name} como %{export_format}"
         formats:
@@ -458,7 +457,6 @@ pt-BR:
           report_count_eq: Número de denúncias
           reported_id_string_or_reported_content_cont: Pesquisar %{collection} por id ou conteúdo reportável.
           title_cont: Pesquisar %{collection} por título.
-          user_name_or_user_email_cont: Pesquise %{collection} por nome ou e-mail.
           user_name_or_user_nickname_or_user_email_cont: Pesquise %{collection} por e-mail, nome ou apelido.
         state_eq:
           label: Estado
@@ -570,7 +568,7 @@ pt-BR:
         areas: Áreas
         configuration: Configuração
         content: Conteúdo relatado
-        external_domain_whitelist: Domínios externos permitidos
+        external_domain_allowlist: Domínios externos permitidos
         help_sections: Seções de ajuda
         homepage: Pagina inicial
         impersonations: Imitações
@@ -855,7 +853,7 @@ pt-BR:
             layout_appearance_title: Editar aparência do layout
             preview: Pré-visualização
           omnipresent_banner_appearance_title: Editar banner onipresente
-      organization_external_domain_whitelist:
+      organization_external_domain_allowlist:
         edit:
           update: Atualizar
         external_domain:
@@ -864,8 +862,13 @@ pt-BR:
           remove: Remover
           up: Acima
         form:
+<<<<<<< HEAD
           add: Adicionar à lista branca
           title: Lista branca de domínios externos
+=======
+          add: Adicionar na lista de permitidos
+          title: Lista de domínios externos permitidos
+>>>>>>> tags/v0.29.1
       participatory_space_private_users:
         create:
           error: Ocorreu um erro ao adicionar um usuário privado para este espaço participativo.
@@ -1013,7 +1016,11 @@ pt-BR:
         areas: Áreas
         authorization_workflows: Métodos de verificação
         dashboard: painel de controle
+<<<<<<< HEAD
         edit_external_domains: Lista branca de domínios externos
+=======
+        edit_external_domains: Lista de domínios externos permitidos
+>>>>>>> tags/v0.29.1
         edit_landing_page: Conteúdos da página
         edit_organization_appearance: Editar aparência da página inicial
         impersonatable_users: Usuários gerenciáveis

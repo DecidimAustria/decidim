@@ -80,7 +80,11 @@ describe "Admin manages initiative publication" do
 
         visit public_collection_path
 
+<<<<<<< HEAD
         expect(page).not_to have_content title
+=======
+        expect(page).to have_no_content title
+>>>>>>> tags/v0.29.1
       end
     end
   end

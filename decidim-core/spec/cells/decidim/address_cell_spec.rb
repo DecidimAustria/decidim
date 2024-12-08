@@ -32,8 +32,13 @@ describe Decidim::AddressCell, type: :cell do
       expect(icondata_address).to have_content(hint_text)
       expect(icondata_address).to have_content(location_text)
       expect(icondata_address.to_s).not_to match(/<script>/i)
+<<<<<<< HEAD
       expect(icondata_address).not_to have_content(model.latitude)
       expect(icondata_address).not_to have_content(model.longitude)
+=======
+      expect(icondata_address).to have_no_content(model.latitude)
+      expect(icondata_address).to have_no_content(model.longitude)
+>>>>>>> tags/v0.29.1
     end
   end
 

@@ -17,9 +17,12 @@ import Rails from "@rails/ujs"
 import svg4everybody from "svg4everybody"
 import morphdom from "morphdom"
 
+<<<<<<< HEAD
 // vendor customizated scripts (bad practice: these ones should be removed eventually)
 import "src/decidim/vendor/modernizr"
 
+=======
+>>>>>>> tags/v0.29.1
 /**
  * Local dependencies
  */
@@ -52,8 +55,11 @@ import "src/decidim/direct_uploads/upload_field"
 import "src/decidim/data_consent"
 import "src/decidim/abide_form_validator_fixer"
 import "src/decidim/sw"
+import "src/decidim/sticky_header"
+import "src/decidim/attachments"
 
 // local deps that require initialization
+import formDatePicker from "src/decidim/datepicker/form_datepicker"
 import Configuration from "src/decidim/configuration"
 import ExternalLink from "src/decidim/external_link"
 import updateExternalDomainLinks from "src/decidim/external_domain_warning"
@@ -65,6 +71,7 @@ import addInputEmoji, { EmojiButton } from "src/decidim/input_emoji"
 import FocusGuard from "src/decidim/focus_guard"
 import backToListLink from "src/decidim/back_to_list"
 import markAsReadNotifications from "src/decidim/notifications"
+import handleNotificationActions from "src/decidim/notifications_actions"
 import RemoteModal from "src/decidim/remote_modal"
 import selectActiveIdentity from "src/decidim/identity_selector_dialog"
 import createTooltip from "src/decidim/tooltips"
@@ -73,12 +80,13 @@ import {
   createAccordion,
   createDialog,
   createDropdown,
+  announceForScreenReader,
   Dialogs
 } from "src/decidim/a11y"
 import changeReportFormBehavior from "src/decidim/change_report_form_behavior"
 
 // bad practice: window namespace should avoid be populated as much as possible
-// rails-translations could be referrenced through a single Decidim.I18n object
+// rails-translations could be referenced through a single Decidim.I18n object
 window.Decidim = window.Decidim || {
   config: new Configuration(),
   ExternalLink,
@@ -86,7 +94,8 @@ window.Decidim = window.Decidim || {
   FormValidator,
   addInputEmoji,
   EmojiButton,
-  Dialogs
+  Dialogs,
+  announceForScreenReader
 };
 
 window.morphdom = morphdom
@@ -136,6 +145,8 @@ const initializer = (element = document) => {
 
   svg4everybody();
 
+  element.querySelectorAll('input[type="datetime-local"],input[type="date"]').forEach((elem) => formDatePicker(elem))
+
   element.querySelectorAll(".editor-container").forEach((container) => window.createEditor(container));
 
   // initialize character counter
@@ -168,6 +179,7 @@ const initializer = (element = document) => {
   backToListLink(element.querySelectorAll(".js-back-to-list"));
 
   markAsReadNotifications(element)
+  handleNotificationActions(element)
 
   scrollToLastChild(element)
 
