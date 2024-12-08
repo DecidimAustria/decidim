@@ -44,6 +44,7 @@ Capybara.register_driver :headless_chrome do |app|
   options = Selenium::WebDriver::Chrome::Options.new
   options.args << "--explicitly-allowed-ports=#{Capybara.server_port}"
   options.args << "--headless=new"
+  options.args << "--disable-search-engine-choice-screen" # Prevents closing the window normally
   # Do not limit browser resources
   options.args << "--disable-dev-shm-usage"
   options.args << "--no-sandbox"
@@ -121,6 +122,7 @@ end
 Capybara.server = :puma, server_options
 
 Capybara.server_errors = [SyntaxError, StandardError]
+Capybara.save_path = Rails.root.join("tmp/screenshots")
 
 Capybara.default_max_wait_time = 10
 

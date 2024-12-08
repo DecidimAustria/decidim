@@ -918,11 +918,12 @@ de:
           filename: Dateiname
           remove: Entfernen
           replace: Ersetzen
+          save: Speichern
           title: Titel
           title_required: Titel ist erforderlich!
           uploaded: Hochgeladen
           validating: Wird validiert...
-          validation_error: Validierungsfehler!
+          validation_error: Validierungsfehler! Überprüfen Sie, ob die Datei einen erlaubten Dateityp oder Größe hat.
         select_file: Datei auswählen
       upload_help:
         dropzone: Dateien hier ablegen oder die Schaltfläche zum Hochladen benutzen
@@ -1240,6 +1241,7 @@ de:
       no_notifications: Noch keine Benachrichtigungen
       show:
         missing_event: Hoppla, diese Benachrichtigung gehört zu einem Artikel, der nicht mehr verfügbar ist. Du kannst sie verwerfen.
+        moderated: Inhalt moderiert
     notifications_digest_mailer:
       header:
         daily: Tägliche Zusammenfassung
@@ -1466,7 +1468,7 @@ de:
         more: Mehr
         unfold: Entfalten
       filter_form_help:
-        help: Das untenstehende Formular filtert die Suchergebnisse dynamisch, wenn die Suchbedingungen geändert werden.
+        help: Die Suchresultate werden bei geänderten Filtereinstellungen automatisch aktualisiert.
         skip: Zu Ergebnissen springen
       flag_modal:
         already_reported: Dieser Inhalt wurde bereits gemeldet und wird von einem Administrator überprüft.

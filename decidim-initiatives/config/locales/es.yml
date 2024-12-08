@@ -80,7 +80,6 @@ es:
   decidim:
     admin:
       actions:
-        manage: Gestionar
         new_initiative_type: Nuevo tipo de iniciativa
         new_initiative_type_scope: Añadir ámbito del tipo de iniciativa
       filters:
@@ -107,7 +106,6 @@ es:
       menu:
         attachments: Adjuntos
         committee_members: Miembros de la comisión
-        components: Componentes
         information: Información
         initiative_type_scopes: Ámbitos del tipo de iniciativa
         initiatives: Iniciativas
@@ -240,6 +238,10 @@ es:
         exports:
           initiatives: Iniciativas
         initiatives:
+          accept:
+            success: La iniciativa se ha aceptado correctamente.
+          discard:
+            success: La iniciativa se ha descartado correctamente.
           edit:
             accept: Aceptar iniciativa
             confirm: '¿Estás seguro?'
@@ -263,6 +265,12 @@ es:
             edit: Editar
             new: Nueva
             photos: Fotos
+          publish:
+            success: La iniciativa se ha publicado correctamente.
+          reject:
+            success: La iniciativa se ha rechazado correctamente.
+          unpublish:
+            success: La iniciativa se ha despublicado correctamente.
           update:
             error: Se ha producido un error.
             success: La iniciativa se ha actualizado correctamente.
@@ -382,7 +390,7 @@ es:
         select_initiative_type:
           back: Volver
           choose_html: Quiero <strong>%{title}</strong>
-          more_information: (Más información)
+          more_information: Más información
           new: Crea una nueva iniciativa
           select: Quiero promover esta iniciativa
           select_initiative_type_help: Las iniciativas son un medio por el que las participantes pueden intervenir para que la organización emprenda acciones en defensa del interés general. ¿Qué iniciativa quieres lanzar?
@@ -464,7 +472,7 @@ es:
             other: y %{count} personas más
         committee_members:
           approve: Aprobar
-          confirm_approve: '¿Seguro que quieres añadir este miembro?'
+          confirm_approve: '¿Seguro que quieres añadir a este miembro?'
           confirm_revoke: '¿Seguro que quieres revocar este miembro?'
           invite_to_committee_help: Comparte este enlace para invitar a otras participantes a la comisión promotora.
           link: Enlace

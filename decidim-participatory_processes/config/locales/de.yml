@@ -167,7 +167,7 @@ de:
             admin: Administrator
             collaborator: Mitarbeiter
             moderator: Moderator
-            valuator: Schätzer
+            valuator: Bewertende
         user:
           fields:
             invitation_accepted_at: Einladung akzeptiert am
@@ -451,7 +451,7 @@ de:
       index:
         title: Beteiligungsprozesse
       last_activity:
-        new_participatory_process: Neuer partizipativer Prozess
+        new_participatory_process: 'Neuer partizipativer Prozess:'
       pages:
         home:
           highlighted_processes:

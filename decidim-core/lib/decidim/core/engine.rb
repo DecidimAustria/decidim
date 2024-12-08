@@ -237,6 +237,14 @@ module Decidim
         app.config.action_mailer.deliver_later_queue_name = :mailers
       end
 
+      initializer "decidim_core.signed_global_id", after: "global_id" do |app|
+        next if app.config.global_id.fetch(:expires_in, nil).present?
+
+        config.after_initialize do
+          SignedGlobalID.expires_in = nil
+        end
+      end
+
       initializer "decidim_core.middleware" do |app|
         if app.config.public_file_server.enabled
           headers = app.config.public_file_server.headers || {}
@@ -265,6 +273,12 @@ module Decidim
 
       initializer "decidim_core.exceptions_app" do |app|
         app.config.exceptions_app = Decidim::Core::Engine.routes
+      end
+
+      initializer "decidim_core.direct_uploader_paths", after: "decidim_core.exceptions_app" do |_app|
+        config.to_prepare do
+          ActiveStorage::DirectUploadsController.include Decidim::DirectUpload
+        end
       end
 
       initializer "decidim_core.locales" do |app|

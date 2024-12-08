@@ -188,6 +188,7 @@ fr:
         export: Tout exporter
         export-selection: Exporter la sélection
         import: Importer
+        manage: Gérer
         newsletter:
           new: Nouvelle newsletter
         participatory_space_private_user:
@@ -350,6 +351,8 @@ fr:
       conflicts:
         attempts: Tentatives
         'false': 'Non'
+        index:
+          text: Recherche par adresse e-mail, nom ou pseudonyme.
         managed_user_name: Utilisateur représenté
         solved: Résolu
         title: Conflits de vérification
@@ -571,6 +574,7 @@ fr:
         appearance: Apparence
         area_types: Types de périmètre d'assemblée
         areas: Périmètres d'assemblée
+        components: Fonctionnalités
         configuration: Configuration
         content: Contenu signalé
         external_domain_whitelist: Domaines externes autorisés

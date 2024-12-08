@@ -188,6 +188,7 @@ eu:
         export: Esportatu dena
         export-selection: Esportatu hautaketa
         import: Inportatu
+        manage: Kudeatu
         newsletter:
           new: Beste buletin bat
         participatory_space_private_user:
@@ -350,6 +351,8 @@ eu:
       conflicts:
         attempts: Saiakerak
         'false': 'Ez'
+        index:
+          text: Bilatu gaur egungo erabiltzailearen posta elektronikoaren, izenaren edo ezizenaren bidez.
         managed_user_name: Erabiltzaile kudeatua
         solved: Ebatzita
         title: Egiaztapen-arazoak
@@ -562,6 +565,7 @@ eu:
         appearance: Itxura
         area_types: Arlo motak
         areas: Arloak
+        components: Osagaiak
         configuration: Konfigurazioa
         content: Eduki salatua
         external_domain_whitelist: Baimendutako kanpoko domeinuak

@@ -191,8 +191,13 @@ module Decidim
       resource_type.constantize.find_each do |resource|
         # exclude the users that already endorsed
         users = resource.endorsements.map(&:author)
-        rand(50).times do
+        remaining_count = Decidim::User.count - users.count
+        next if remaining_count < 1
+
+        rand([50, remaining_count].min).times do
           user = (Decidim::User.all - users).sample
+          next unless user
+
           Decidim::Endorsement.create!(resource:, author: user)
           users << user
         end
@@ -535,6 +540,17 @@ module Decidim
   # use `config.cache_key_separator = ":"` in your initializer to have namespaced data
   config_accessor :cache_key_separator do
     "/"
+  end
+
+  # This is the maximum time that the cache will be stored. If nil, the cache will be stored indefinitely.
+  # Currently, cache is applied in the Cells where the method `cache_hash` is defined.
+  config_accessor :cache_expiry_time do
+    24.hours
+  end
+
+  # Same as before, but specifically for cell displaying stats
+  config_accessor :stats_cache_expiry_time do
+    10.minutes
   end
 
   # Enable/Disable the service worker

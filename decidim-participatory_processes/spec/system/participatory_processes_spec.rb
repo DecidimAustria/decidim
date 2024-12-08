@@ -206,6 +206,13 @@ describe "Participatory Processes" do
     end
   end
 
+  it_behaves_like "followable content for users" do
+    let!(:participatory_process) { base_process }
+    let!(:user) { create(:user, :confirmed, organization:) }
+    let(:followable) { participatory_process }
+    let(:followable_path) { decidim_participatory_processes.participatory_process_path(participatory_process) }
+  end
+
   context "when going to the participatory process page" do
     let!(:participatory_process) { base_process }
     let!(:proposals_component) { create(:component, :published, participatory_space: participatory_process, manifest_name: :proposals) }
@@ -228,14 +235,6 @@ describe "Participatory Processes" do
           create(:content_block, organization:, scope_name: :participatory_process_homepage, manifest_name:, scoped_resource_id: participatory_process.id)
         end
         visit decidim_participatory_processes.participatory_process_path(participatory_process)
-      end
-
-      describe "follow button" do
-        let!(:user) { create(:user, :confirmed, organization:) }
-        let(:followable) { participatory_process }
-        let(:followable_path) { decidim_participatory_processes.participatory_process_path(participatory_process) }
-
-        include_examples "follows"
       end
 
       context "when requesting the process path" do
@@ -353,11 +352,13 @@ describe "Participatory Processes" do
           end
 
           context "and the process statistics are enabled" do
-            let(:blocks_manifests) { [:stats] }
+            let(:blocks_manifests) { [:hero, :stats] }
 
             it "the stats for those components are visible" do
               expect(page).to have_css("[data-statistic]", count: 3)
             end
+
+            it_behaves_like "accessible page"
           end
 
           context "and the process statistics are not enabled" do

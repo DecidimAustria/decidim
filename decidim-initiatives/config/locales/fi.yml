@@ -80,7 +80,6 @@ fi:
   decidim:
     admin:
       actions:
-        manage: Hallinnoi
         new_initiative_type: Uusi aloitetyyppi
         new_initiative_type_scope: Uusi aloitetyypin teema
       filters:
@@ -92,7 +91,7 @@ fi:
             values:
               accepted: Tarpeeksi allekirjoituksia
               created: Luotu
-              discarded: Hylätyt
+              discarded: Perutut
               published: Julkaistut
               rejected: Liian vähän allekirjoituksia
               validating: Teknisessä validoinnissa
@@ -107,7 +106,6 @@ fi:
       menu:
         attachments: Liitteet
         committee_members: Komitean jäsenet
-        components: Komponentit
         information: Tiedot
         initiative_type_scopes: Aloitetyypin teemat
         initiatives: Aloitteet
@@ -240,11 +238,15 @@ fi:
         exports:
           initiatives: Aloitteet
         initiatives:
+          accept:
+            success: Aloitteen hyväksyminen onnistui.
+          discard:
+            success: Aloitteen peruminen onnistui.
           edit:
             accept: Hyväksy aloite
             confirm: Oletko varma?
             confirm_send_to_technical_validation: Oletko varma?
-            discard: Hylkää aloite
+            discard: Peru aloite
             export_pdf_signatures: Vie allekirjoitukset PDF-asiakirjaan
             export_votes: Lataa allekirjoitukset
             reject: Torju aloite
@@ -263,6 +265,12 @@ fi:
             edit: Muokkaa
             new: Uusi
             photos: Kuvat
+          publish:
+            success: Aloitteen julkaisu onnistui.
+          reject:
+            success: Aloitteen hylkääminen onnistui.
+          unpublish:
+            success: Aloitteen julkaisun lopetus onnistui.
           update:
             error: Tapahtui virhe.
             success: Aloitteen päivitys onnistui.
@@ -316,7 +324,7 @@ fi:
         initiative:
           publish: "%{user_name} julkaisi aloitteen %{resource_name}"
           send_to_technical_validation: "%{user_name} lähetti aloitteen %{resource_name} tekniseen tarkastukseen"
-          unpublish: "%{user_name} hylkäsi aloitteen %{resource_name}"
+          unpublish: "%{user_name} perui aloitteen %{resource_name}"
           update: "%{user_name} päivitti aloitetta %{resource_name}"
         initiatives_settings:
           update: "%{user_name} päivitti aloitteiden asetuksia"
@@ -327,7 +335,7 @@ fi:
       admin_states:
         accepted: Tarpeeksi allekirjoituksia
         created: Luotu
-        discarded: Hylätty
+        discarded: Peruttu
         published: Julkaistu
         rejected: Liian vähän allekirjoituksia
         validating: Teknisessä tarkastuksessa
@@ -365,7 +373,7 @@ fi:
         finish:
           back: Takaisin
           back_to_initiatives: Takaisin aloitteisiin
-          callout_text: Onnittelut! Aloitteesi on luotu onnistuneesti.
+          callout_text: Onnittelut! Aloitteen luominen onnistui.
           confirm: Aloite lähetetään hallintakäyttäjän tarkastettavaksi ja julkaistavaksi. Julkaisun jälkeen et voi enää muokata aloitetta. Haluatko varmasti jatkaa?
           edit_my_initiative: Muokkaa aloitettani
           go_to_my_initiatives: Siirry omiin aloitteisiini
@@ -577,7 +585,7 @@ fi:
         badge_name:
           accepted: Tarpeeksi allekirjoituksia
           created: Luotu
-          discarded: Hylätty
+          discarded: Peruttu
           published: Julkaistu
           rejected: Liian vähän allekirjoituksia
           validating: Teknisessä tarkastuksessa

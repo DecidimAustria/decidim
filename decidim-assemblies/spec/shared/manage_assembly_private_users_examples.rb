@@ -10,7 +10,7 @@ shared_examples "manage assembly private users examples" do
     login_as user, scope: :user
     visit decidim_admin_assemblies.edit_assembly_path(assembly)
     within_admin_sidebar_menu do
-      click_link "Private users"
+      click_link "Private participants"
     end
   end
 
@@ -35,6 +35,9 @@ shared_examples "manage assembly private users examples" do
     within "#private_users table" do
       expect(page).to have_content(other_user.email)
     end
+
+    visit decidim_admin.root_path
+    expect(page).to have_content("invited #{other_user.name} to be a private participant")
   end
 
   describe "when import a batch of private users from csv" do

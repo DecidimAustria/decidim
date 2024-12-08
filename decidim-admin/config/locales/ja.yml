@@ -188,6 +188,7 @@ ja:
         export: 全てエクスポート
         export-selection: 選択したものをエクスポート
         import: インポート
+        manage: 管理
         newsletter:
           new: 新しいニュースレター
         participatory_space_private_user:
@@ -350,6 +351,8 @@ ja:
       conflicts:
         attempts: 試行回数
         'false': 'いいえ'
+        index:
+          text: 現在のユーザーのメールアドレス、名前、ニックネームで検索します。
         managed_user_name: 管理対象ユーザー
         solved: 解決済み
         title: 確認の競合
@@ -424,7 +427,7 @@ ja:
           reportable_type_string_eq:
             label: タイプ
         officialized_at_null:
-          label: 都道府県：
+          label: 状態
           values:
             'false': 公式化済み
             'true': 公式化されていない
@@ -460,7 +463,7 @@ ja:
           user_name_or_user_email_cont: '%{collection} を名前またはメールアドレスで検索します。'
           user_name_or_user_nickname_or_user_email_cont: '%{collection} をメール、表示名、アカウントIDで検索します。'
         state_eq:
-          label: 都道府県：
+          label: 状態
           values:
             all: すべて
             pending: 保留中
@@ -566,6 +569,7 @@ ja:
         appearance: 外観
         area_types: エリア種別
         areas: エリア
+        components: コンポーネント
         configuration: 設定
         content: 報告されたコンテンツ
         external_domain_whitelist: 許可された外部ドメイン

@@ -492,11 +492,11 @@ gl:
           error: Erro!
           remove: Eliminar
           replace: Substituír
+          save: Gardar
           title: Título
           title_required: O título é obrigatorio!
           uploaded: Cargado
           validating: Validando...
-          validation_error: Erro de validación!
       upload_help:
         explanation: Guía para %{attribute}
     gamification:

@@ -188,6 +188,7 @@ fi-pl:
         export: Vie kaikki
         export-selection: Vie valitut
         import: Tuo
+        manage: Hallitse
         newsletter:
           new: Uusi uutiskirje
         participatory_space_private_user:
@@ -318,7 +319,7 @@ fi-pl:
         create:
           error: Tämän komponentin luomisessa tapahtui virhe.
           success: Komponentti luotu onnistuneesti.
-          success_landing_page: Komponentti luotu onnistuneesti. Voit lisätä sisältölohkon tälle komponentille osallistumistilan etusivulle. Siirry <a href="%{landing_page_path}">Laskeutumissivu-osioon</a> lisätäksesi komponentin osallistumistilan etusivulle.
+          success_landing_page: Komponentin luonti onnistui. Voit lisätä sisältölohkon tälle komponentille osallistumistilan etusivulle. Siirry <a href="%{landing_page_path}">Laskeutumissivu-osioon</a> lisätäksesi komponentin osallistumistilan etusivulle.
         destroy:
           error: Tämän komponentin tuhoamisessa tapahtui virhe.
           success: Komponentti poistettu onnistuneesti.
@@ -350,6 +351,8 @@ fi-pl:
       conflicts:
         attempts: Yritykset
         'false': 'Ei'
+        index:
+          text: Etsi nykyisen käyttäjän sähköpostin, nimen tai nimimerkin perusteella.
         managed_user_name: Hallittu käyttäjä
         solved: Ratkaistu
         title: Vahvistusten ristiriidat
@@ -571,6 +574,7 @@ fi-pl:
         appearance: Ulkoasu
         area_types: Aluetyypit
         areas: Alueet
+        components: Komponentit
         configuration: Asetukset
         content: Ilmoitettu sisältö
         external_domain_whitelist: Sallitut ulkoiset verkko-osoitteet

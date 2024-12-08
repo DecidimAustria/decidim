@@ -10,8 +10,8 @@ ja:
         decidim_user_group_id: 作成者
         description: 説明
         hashtag: ハッシュタグ
-        offline_votes: In-personal 署名
-        offline_votes_for_scope: '%{scope_name} の In-personal 署名'
+        offline_votes: 対面署名
+        offline_votes_for_scope: '%{scope_name} の 対面署名'
         scope_id: スコープ
         signature_end_date: 署名の収集期間の終了
         signature_start_date: 署名の収集期間の開始
@@ -77,7 +77,6 @@ ja:
   decidim:
     admin:
       actions:
-        manage: 管理
         new_initiative_type: 新しいイニシアチブ種別
         new_initiative_type_scope: 新しいイニシアチブ種別のスコープ
       filters:
@@ -104,7 +103,6 @@ ja:
       menu:
         attachments: 添付ファイル
         committee_members: 委員会メンバー
-        components: コンポーネント
         information: 情報
         initiative_type_scopes: イニシアチブ種別のスコープ
         initiatives: イニシアチブ
@@ -237,6 +235,10 @@ ja:
         exports:
           initiatives: イニシアチブ
         initiatives:
+          accept:
+            success: イニシアチブは受理されました。
+          discard:
+            success: イニシアチブは破棄されました。
           edit:
             accept: イニシアチブを承認する
             confirm: よろしいですか？
@@ -260,6 +262,12 @@ ja:
             edit: 編集
             new: 新規作成
             photos: 写真
+          publish:
+            success: イニシアチブを公開しました。
+          reject:
+            success: イニシアチブはリジェクトされました。
+          unpublish:
+            success: イニシアチブは非公開になりました。
           update:
             error: エラーが発生しました。
             success: イニシアチブを更新しました。
@@ -276,7 +284,7 @@ ja:
         initiatives_type_scopes:
           create:
             error: エラーが発生しました。
-            success: 指定されたイニシアチブタイプの新しいスコープが作成されました。
+            success: 指定されたイニシアチブ種別の新しいスコープが作成されました。
           destroy:
             success: スコープを削除しました。
           edit:
@@ -293,7 +301,7 @@ ja:
             error: エラーが発生しました。
             success: 新しいイニシアチブタイプが正常に作成されました。
           destroy:
-            success: イニシアチブタイプを削除しました。
+            success: イニシアチブ種別を削除しました。
           edit:
             update: 更新
           form:
@@ -308,7 +316,7 @@ ja:
             title: 新しいイニシアチブ種別
           update:
             error: エラーが発生しました。
-            success: イニシアチブタイプを更新しました。
+            success: イニシアチブ種別を更新しました。
       admin_log:
         initiative:
           publish: "%{user_name} が %{resource_name} イニシアチブを公開しました"
@@ -318,9 +326,9 @@ ja:
         initiatives_settings:
           update: "%{user_name} がイニシアチブの設定を更新しました"
         initiatives_type:
-          create: "%{user_name} が %{resource_name} イニシアチブタイプを作成しました"
-          delete: "%{user_name} が %{resource_name} イニシアチブタイプを削除しました"
-          update: "%{user_name} は %{resource_name} イニシアチブタイプを更新しました"
+          create: "%{user_name} が %{resource_name} イニシアチブ種別を作成しました"
+          delete: "%{user_name} が %{resource_name} イニシアチブ種別を削除しました"
+          update: "%{user_name} は %{resource_name} イニシアチブ種別を更新しました"
       admin_states:
         accepted: 十分な署名
         created: 作成済み

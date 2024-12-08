@@ -80,7 +80,6 @@ ca:
   decidim:
     admin:
       actions:
-        manage: Gestionar
         new_initiative_type: Nou tipus d'iniciativa
         new_initiative_type_scope: Afegir àmbit del tipus d'iniciativa
       filters:
@@ -107,7 +106,6 @@ ca:
       menu:
         attachments: Adjunts
         committee_members: Membres de la comissió
-        components: Components
         information: Informació
         initiative_type_scopes: Àmbits del tipus d'iniciativa
         initiatives: Iniciatives
@@ -115,7 +113,7 @@ ca:
           see_initiative: Veure la iniciativa
         initiatives_settings: Configuració
         initiatives_submenu:
-          info: Sobre aquesta iniciativa
+          info: Quant a aquesta iniciativa
         initiatives_types: Tipus d'iniciatives
         moderations: Moderacions
       models:
@@ -240,6 +238,10 @@ ca:
         exports:
           initiatives: Iniciatives
         initiatives:
+          accept:
+            success: La iniciativa s'ha acceptat correctament.
+          discard:
+            success: La iniciativa s'ha descartat correctament.
           edit:
             accept: Accepta la iniciativa
             confirm: Segur?
@@ -263,6 +265,12 @@ ca:
             edit: Edita
             new: Nou
             photos: Fotografies
+          publish:
+            success: La iniciativa s'ha publicat correctament.
+          reject:
+            success: La iniciativa s'ha rebutjat correctament.
+          unpublish:
+            success: La iniciativa s'ha despublicat correctament.
           update:
             error: S'ha produït un error.
             success: La iniciativa s'ha actualitzat correctament.

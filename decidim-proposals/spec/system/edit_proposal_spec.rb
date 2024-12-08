@@ -52,10 +52,10 @@ describe "Edit proposals" do
 
       it "shows validation error when format is not accepted" do
         click_link "Edit proposal"
-        dynamically_attach_file(:proposal_documents, Decidim::Dev.asset("participatory_text.md"), keep_modal_open: true) do
+        dynamically_attach_file(:proposal_documents, Decidim::Dev.asset("dummy-dummies-example.xlsx"), keep_modal_open: true) do
           expect(page).to have_content("Accepted formats: #{Decidim::OrganizationSettings.for(organization).upload_allowed_file_extensions_image.join(", ")}")
         end
-        expect(page).to have_content("only files with the following extensions are allowed: jpeg, jpg, pdf, png, rtf, txt")
+        expect(page).to have_content("Validation error!")
       end
 
       context "with a file and photo" do
@@ -76,7 +76,7 @@ describe "Edit proposals" do
             within "[data-filename='Exampledocument.pdf']" do
               click_button("Remove")
             end
-            click_button "Next"
+            click_button "Save"
           end
 
           click_button "Send"
@@ -101,7 +101,7 @@ describe "Edit proposals" do
               within "[data-filename='Exampledocument.pdf']" do
                 find("input[type='text']").set(attachment_file_title)
               end
-              click_button "Next"
+              click_button "Save"
             end
             click_button "Send"
             expect(page).to have_selector("[data-alert-box].success")
@@ -126,7 +126,7 @@ describe "Edit proposals" do
             expect(page).to have_content("Required fields are marked with an asterisk")
             click_button("Edit documents")
             within "[data-dialog]" do
-              click_button("Next")
+              click_button("Save")
             end
             click_button("Send")
             expect(page).to have_content("Proposal successfully updated.")
@@ -148,7 +148,7 @@ describe "Edit proposals" do
             expect(page).to have_content("Required fields are marked with an asterisk")
             click_button("Edit documents")
             within "[data-dialog]" do
-              click_button("Next")
+              click_button("Save")
             end
             click_button("Send")
             expect(page).to have_content("Proposal successfully updated.")

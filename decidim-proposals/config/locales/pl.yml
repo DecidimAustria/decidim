@@ -156,9 +156,9 @@ pl:
             comments_enabled: Komentarze włączone
             comments_max_length: Maksymalna długość komentarzy (Pozostaw 0 dla wartości domyślnej)
             default_sort_order: Domyślne sortowanie propozycji
-            default_sort_order_help: Domyślnie oznacza, że jeśli wsparcie jest włączone, propozycje będą wyświetlane w kolejności losowej, a jeśli wsparcie jest zablokowane, zostaną posortowane według najbardziej popieranych.
+            default_sort_order_help: Automatycznie oznacza, że jeśli głosy są włączone, propozycje będą wyświetlane w losowej kolejności i jeśli głosy zostaną zablokowane, zostaną posortowane według tych z największą ilością głosów.
             default_sort_order_options:
-              default: Domyślne
+              automatic: Automatyczne
               most_commented: Najczęściej komentowane
               most_endorsed: Najbardziej popierane
               most_followed: Najczęściej obserwowane
@@ -210,12 +210,21 @@ pl:
             creation_enabled: Uczestnicy mogą tworzyć propozycje
             creation_enabled_readonly: To ustawienie jest wyłączone, gdy aktywujesz funkcjonalność tekstów partycypacyjnych. Aby przesłać propozycje jako tekst partycypacyjny, kliknij przycisk "Tekst partycypacyjny" i postępuj zgodnie z instrukcjami.
             default_sort_order: Domyślne sortowanie propozycji
+            default_sort_order_help: Automatycznie oznacza, że jeśli głosy są włączone, propozycje będą wyświetlane w losowej kolejności i jeśli głosy zostaną zablokowane, zostaną posortowane według tych z największą ilością głosów.
             default_sort_order_options:
+              automatic: Automatyczne
+              most_commented: Najczęściej komentowane
+              most_endorsed: Najbardziej popierane
+              most_followed: Najczęściej obserwowane
               most_voted: Najwiecej wsparć
+              random: Losowo
+              recent: Ostatnie
+              with_more_authors: Z większą liczbą autorów
             endorsements_blocked: Rekomendacje zostały zablokowane
             endorsements_enabled: Rekomendacje włączone
             proposal_answering_enabled: Włączono odpowiadanie na propozycję
             publish_answers_immediately: Natychmiast publikuj odpowiedzi na propozycje
+            publish_answers_immediately_help_html: 'Pamiętaj, że jeśli odpowiesz na dowolną propozycję bez włączonej tej opcji, musisz ją opublikować ręcznie, wybierając ją i korzystając z akcji do publikacji. Aby uzyskać więcej informacji na temat tego, jak to działa, zobacz stronę <a href="https://docs.decidim.org/en/admin/components/proposals/answers#_publication" target="_blank">z dokumentacją odpowiedzi na propozycje</a>.'
             suggested_hashtags: Hashtagi sugerowane użytkownikom dodającym nowe propozycje
             votes_blocked: Wspieranie zablokowane
             votes_enabled: Wspieranie włączone
@@ -224,24 +233,38 @@ pl:
       proposals:
         admin:
           proposal_note_created:
+            email_intro: Ktoś zostawił notatkę do propozycji „%{resource_title}”. Sprawdź ją w <a href="%{admin_proposal_info_url}">panelu administratora</a>.
             email_outro: Otrzymujesz to powiadomienie, ponieważ możesz weryfikować propozycję.
             email_subject: Ktoś zostawił notatkę do propozycji %{resource_title}.
+            notification_title: Ktoś zostawił notatkę do propozycji <a href="%{resource_path}">%{resource_title}</a>. Sprawdź ją w <a href="%{admin_proposal_info_path}">panelu administratora</a>.
         collaborative_draft_access_accepted:
+          email_intro: '%{requester_name} otrzymał(a) dostęp jako współtwórca wspólnego szkicu <a href="%{resource_url}">%{resource_title}</a>.'
+          email_outro: Otrzymujesz to powiadomienie, ponieważ współpracujesz przy dokumencie <a href="%{resource_path}">%{resource_title}</a>.
           email_subject: "%{requester_name} otrzymał(a) dostęp jako współtwórca %{resource_title}."
           notification_title: <a href="%{requester_path}">%{requester_name} %{requester_nickname}</a> otrzymał(a) <strong>dostęp jako współtwórca</strong> wspólnego szkicu <a href="%{resource_path}">%{resource_title}</a>.
         collaborative_draft_access_rejected:
+          email_intro: 'Nie przyznano Ci dostępu jako osobie uczestniczącej w tworzeniu wspólnego projektu dokumentu <a href="%{resource_path}">%{resource_title}</a>.'
+          email_outro: Otrzymujesz to powiadomienie, ponieważ współpracujesz przy dokumencie <a href="%{resource_path}">%{resource_title}</a>.
           email_subject: "%{requester_name} nie otrzymał(a) dostępu jako współtwórca wspólnego szkicu %{resource_title}."
           notification_title: <a href="%{requester_path}">%{requester_name} %{requester_nickname}</a> <strong>nie otrzymał(a) dostępu jako współtwórca</strong> wspólnego szkicu <a href="%{resource_path}">%{resource_title}</a>.
         collaborative_draft_access_requested:
+          email_intro: '%{requester_name} poprosił(a) o dostęp jako współtwórca. Możesz <strong>zaakceptować lub odrzucić prośbę</strong> na stronie wspólnego szkicu <a href="%{resource_url}">%{resource_title}</a>.'
+          email_outro: Otrzymujesz to powiadomienie, ponieważ współpracujesz przy dokumencie <a href="%{resource_path}">%{resource_title}</a>.
           email_subject: "%{requester_name} prosi o dostęp do współtworzenia %{resource_title}."
           notification_title: <a href="%{requester_path}">%{requester_name} %{requester_nickname}</a> prosi o dostęp do współtworzenia wspólnego szkicu <a href="%{resource_path}">%{resource_title}</a>. <strong>Zaakceptuj lub odrzuć prośbę</strong>.
         collaborative_draft_access_requester_accepted:
+          email_intro: Zostałeś zaakceptowany(a) jako współtwórca wspólnego szkicu <a href="%{resource_url}">%{resource_title}</a>.
+          email_outro: Otrzymujesz to powiadomienie, ponieważ chcesz współpracować przy <a href="%{resource_path}">%{resource_title}</a>.
           email_subject: Zostałeś zaakceptowany jak współtwórca %{resource_title}.
           notification_title: Otrzymałeś <strong>zgodę na dostęp jako współtwórca</strong> wspólnego szkicu <a href="%{resource_path}">%{resource_title}</a>.
         collaborative_draft_access_requester_rejected:
+          email_intro: Nie otrzymałeś(aś) dostępu jako współtwórca wspólnego szkicu <a href="%{resource_url}">%{resource_title}</a>.
+          email_outro: Otrzymujesz to powiadomienie, ponieważ chcesz współpracować przy <a href="%{resource_path}">%{resource_title}</a>.
           email_subject: Zostałeś odrzucony jako współtwórca %{resource_title}.
           notification_title: <strong>Nie otrzymałeś dostępu jako współtwórca</strong> wspólnego szkicu <a href="%{resource_path}">%{resource_title}</a>.
         collaborative_draft_withdrawn:
+          email_intro: <a href="%{author_url}">%{author_name} %{author_nickname}</a> wycofał(a) wspólny szkic <a href="%{resource_url}">%{resource_title}</a>.
+          email_outro: Otrzymujesz to powiadomienie, ponieważ współpracujesz przy dokumencie <a href="%{resource_path}">%{resource_title}</a>.
           email_subject: "%{author_name} %{author_nickname} wycofał(a) wspólny szkic %{resource_title}."
           notification_title: <a href="%{author_path}">%{author_name} %{author_nickname}</a> <strong>wycofał(a)</strong> wspólny szkic <a href="%{resource_path}">%{resource_title}</a>.
         creation_enabled:
@@ -562,6 +585,13 @@ pl:
           create:
             invalid: 'Wystąpił błąd podczas dzielenia wybranych propozycji, ponieważ niektóre z nich:'
             success: Pomyślnie podzielono propozycje.
+        valuation_assignments:
+          create:
+            invalid: Wystąpił błąd podczas przypisywania propozycji do weryfikatora.
+            success: Przypisano propozycje do weryfikatora.
+          delete:
+            invalid: Wystąpił błąd podczas usuwania przypisania propozycji do weryfikatora.
+            success: Anulowano przypisanie weryfikatora do propozycji.
       admin_log:
         proposal:
           answer: "%{user_name} odpowiedział(a) na propozycję %{resource_name} w przestrzeni %{space_name}"
@@ -584,6 +614,7 @@ pl:
           all: Wszystko
           meetings: Spotkania
           official: Urzędnik
+          participants: Użytkownicy
           user_groups: Grupy użytkowników
         filter_state_values:
           accepted: Zaakceptowano
@@ -600,6 +631,7 @@ pl:
           publish:
             error: Wystąpił błąd podczas publikowania wspólnego szkicu.
             irreversible_action_modal:
+              body: Po opublikowaniu szkicu jako propozycji nie będzie już można jej edytować. Propozycja nie zaakceptuje nowych autorów ani współautorów.
               cancel: Anuluj
               ok: Opublikuj jako propozycję
               title: Poniższe działanie jest nieodwracalne
@@ -607,11 +639,13 @@ pl:
           withdraw:
             error: Podczas zamykania wspólnego szkicu wystąpił błąd.
             irreversible_action_modal:
+              body: Po zamknięciu szkicu nie będzie on już edytowalny. Nie będzie można dodawać nowych autorów i zmian.
               cancel: Anuluj
               ok: Wycofaj wspólny szkic
               title: Poniższe działanie jest nieodwracalne
             success: Wspólny szkic został wycofany.
         create:
+          error: Przy tworzeniu wspólnego szkicu pojawił się problem.
           success: Utworzono wspólny szkic.
         edit:
           attachment_legend: "(Opcjonalnie) Dodaj załącznik"
@@ -619,6 +653,8 @@ pl:
           select_a_category: Wybierz kategorię
           send: Wyślij
           title: Edytuj wspólny szkic
+        empty: Nie ma jeszcze żadnych wspólnych wersji roboczych
+        empty_filters: Nie ma wspólnego szkicu z tymi kryteriami
         filters:
           all: Wszystko
           amendment: Poprawki
@@ -641,7 +677,10 @@ pl:
             few: "%{count} wspólne szkice"
             many: "%{count} wspólne szkice"
             other: "%{count} wspólne szkice"
+        name: Wspólne szkice
         new:
+          add_file: Dodaj plik
+          edit_file: Edytuj plik
           send: Dalej
         new_collaborative_draft_button:
           new_collaborative_draft: Nowy wspólny szkic
@@ -653,14 +692,17 @@ pl:
         requests:
           accepted_request:
             error: Nie można zaakceptować jako współtwórcy, spróbuj ponownie później.
+            success: "Użytkownik @%{user} został pomyślnie zaakceptowany jako współpracownik."
           access_requested:
             error: Twoje żądanie nie może zostać zrealizowanie, spróbuj ponownie później.
+            success: Twoja prośba o współpracę została wysłana.
           collaboration_requests:
             accept_request: Akceptuj
             reject_request: Odrzuć
             title: Prośby współpracy
           rejected_request:
             error: Nie można odrzucić, spróbuj ponownie później.
+            success: "Użytkownik @%{user} został odrzucony jako współtwórca."
         show:
           edit: Edytuj wspólny szkic
           final_proposal: ostateczna propozycja
@@ -670,6 +712,7 @@ pl:
             few: i %{count} więcej osób
             many: i %{count} więcej osób
             other: i %{count} więcej osób
+          info-message: Jest to <strong>wspólny szkic</strong> dla propozycji. Oznacza to, że możesz pomóc autorom w kształtowaniu propozycji za pomocą sekcji komentarzy lub poprawić ją bezpośrednio, prosząc o dostęp do edycji. Gdy autorzy przyznają Ci dostęp, będziesz mógł wprowadzać zmiany w tym szkicu.
           publish: Publikuj
           publish_info: Opublikuj tę wersję szkicu lub
           published_proposal: opublikowana propozycja
@@ -748,7 +791,6 @@ pl:
           discard: Porzuć ten szkic
           discard_confirmation: Czy na pewno chcesz porzucić ten szkic propozycji?
           send: Podgląd
-          title: Edytuj szkic propozycji
         filters:
           activity: Moja aktywność
           all: Wszystko

@@ -117,7 +117,8 @@ shared_examples "comments" do
   context "when not authenticated" do
     it "does not show form to add comments to user" do
       visit resource_path
-      expect(page).not_to have_selector(".add-comment form")
+      expect(page).not_to have_css(".add-comment form")
+      expect(page).to have_css(".comment-thread")
     end
   end
 
@@ -129,6 +130,32 @@ shared_examples "comments" do
 
     it "shows form to add comments to user" do
       expect(page).to have_selector(".add-comment form")
+    end
+
+    context "when user is not authorized to comment" do
+      let(:permissions) do
+        {
+          comment: {
+            authorization_handlers: {
+              "dummy_authorization_handler" => { "options" => {} }
+            }
+          }
+        }
+      end
+
+      before do
+        organization.available_authorizations = ["dummy_authorization_handler"]
+        organization.save!
+        commentable.create_resource_permission(permissions:)
+        allow(commentable).to receive(:user_allowed_to_comment?).with(user).and_return(false)
+        allow(commentable).to receive(:user_authorized_to_comment?).with(user).and_return(true)
+      end
+
+      it "shows a message indicating that comments are restricted" do
+        visit resource_path
+        expect(page).not_to have_content("Comments are disabled at this time")
+        expect(page).to have_content("You need to be verified to comment at this moment")
+      end
     end
 
     describe "when using emojis" do
@@ -466,6 +493,16 @@ shared_examples "comments" do
         expect(page).to have_comment_from(user, content, wait: 20)
         expect(page).to have_selector("span.comments-count", text: "#{commentable.comments.count} comments")
         expect(page.find("#add-comment-#{commentable.commentable_type.demodulize}-#{commentable.id}").value).to be_empty
+      end
+
+      it "shows the entry in last activities" do
+        visit decidim.last_activities_path
+        expect(page).to have_content("New comment: #{content}")
+
+        within "#filters" do
+          find("a", class: "filter", text: "Comment", match: :first).click
+        end
+        expect(page).to have_content("New comment: #{content}")
       end
     end
 
@@ -965,6 +1002,49 @@ shared_examples "comments" do
         it { is_expected.to have_key(:commentable_id) }
         it { is_expected.to have_key(:commentable_type) }
         it { is_expected.to have_key(:root_commentable_url) }
+      end
+    end
+  end
+end
+
+shared_examples "comments blocked" do
+  context "when not authenticated" do
+    context "when comments are blocked" do
+      let(:active_step_id) { component.participatory_space.active_step.id }
+
+      before do
+        component.update!(step_settings: { active_step_id => { comments_blocked: true } })
+      end
+
+      it "shows a message indicating that comments are disabled" do
+        visit resource_path
+        expect(page).to have_content("Comments are disabled at this time")
+        expect(page).not_to have_content("You need to be verified to comment at this moment")
+      end
+    end
+  end
+
+  context "when authenticated" do
+    let!(:organization) { create(:organization) }
+    let!(:user) { create(:user, :confirmed, organization:) }
+    let!(:comments) { create_list(:comment, 3, commentable:) }
+
+    before do
+      login_as user, scope: :user
+      visit resource_path
+    end
+
+    context "when comments are blocked" do
+      let(:active_step_id) { component.participatory_space.active_step.id }
+
+      before do
+        component.update!(step_settings: { active_step_id => { comments_blocked: true } })
+      end
+
+      it "shows a message indicating that comments are disabled" do
+        visit resource_path
+        expect(page).to have_content("Comments are disabled at this time")
+        expect(page).not_to have_content("You need to be verified to comment at this moment")
       end
     end
   end

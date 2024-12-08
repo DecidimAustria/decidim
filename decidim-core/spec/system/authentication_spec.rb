@@ -12,6 +12,10 @@ describe "Authentication" do
   end
 
   describe "Sign Up" do
+    around do |example|
+      perform_enqueued_jobs { example.run }
+    end
+
     context "when using email and password" do
       it "creates a new User" do
         click_link("Sign Up")
@@ -106,6 +110,23 @@ describe "Authentication" do
           expect_user_logged
         end
       end
+
+      it "sends a welcome notification" do
+        click_on("Sign Up")
+
+        find(".login__omniauth-button.button--facebook").click
+        click_on "I agree with these terms"
+
+        within_user_menu do
+          click_on "Notifications"
+        end
+
+        within "#notifications" do
+          expect(page).to have_content("thanks for joining #{translated(organization.name)}")
+        end
+
+        expect(last_email_body).to include("thanks for joining #{translated(organization.name)}")
+      end
     end
 
     context "when using twitter" do
@@ -181,6 +202,23 @@ describe "Authentication" do
 
           expect_user_logged
         end
+
+        it "sends a welcome notification" do
+          click_on("Sign Up")
+          find(".login__omniauth-button.button--x").click
+
+          click_on "I agree with these terms"
+
+          within_user_menu do
+            click_on "Notifications"
+          end
+
+          within "#notifications" do
+            expect(page).to have_content("thanks for joining #{translated(organization.name)}")
+          end
+
+          expect(last_email_body).to include("thanks for joining #{translated(organization.name)}")
+        end
       end
     end
 
@@ -217,6 +255,24 @@ describe "Authentication" do
 
         expect_user_logged
       end
+
+      it "sends a welcome notification" do
+        click_on("Sign Up")
+
+        click_on "Log in with Google"
+
+        click_on "I agree with these terms"
+
+        within_user_menu do
+          click_on "Notifications"
+        end
+
+        within "#notifications" do
+          expect(page).to have_content("thanks for joining #{translated(organization.name)}")
+        end
+
+        expect(last_email_body).to include("thanks for joining #{translated(organization.name)}")
+      end
     end
 
     context "when nickname is not unique case insensitively" do
@@ -249,7 +305,7 @@ describe "Authentication" do
 
       it "do not allow the user to sign up" do
         click_link("Log in", match: :first)
-        expect(page).not_to have_content("Create an account")
+        expect(page).not_to have_content("Sign Up")
       end
     end
   end
@@ -326,6 +382,52 @@ describe "Authentication" do
 
         expect(page).to have_content("Logged in successfully")
         expect_current_user_to_be(user)
+      end
+
+      context "when email validation is triggered in login form" do
+        before do
+          click_on("Log in", match: :first)
+        end
+
+        context "when focus shifts to password" do
+          it "displays error when email is empty" do
+            within "#session_new_user" do
+              fill_in :session_user_email, with: ""
+              find_by_id("session_user_password").click
+            end
+
+            expect(page).to have_css(".form-error.is-visible", text: "There is an error in this field.")
+          end
+
+          it "displays error when email is invalid" do
+            within "#session_new_user" do
+              fill_in :session_user_email, with: "invalid-email"
+              find_by_id("session_user_password").click
+            end
+
+            expect(page).to have_css(".form-error.is-visible", text: "There is an error in this field")
+          end
+        end
+
+        context "when focus remains on email" do
+          it "does not display error when email is empty" do
+            within "#session_new_user" do
+              fill_in :session_user_email, with: ""
+              find_by_id("session_user_email").click
+            end
+
+            expect(page).not_to have_css(".form-error.is-visible", text: "There is an error in this field.")
+          end
+
+          it "does not display error when email is invalid" do
+            within "#session_new_user" do
+              fill_in :session_user_email, with: "invalid-email"
+              find_by_id("session_user_email").click
+            end
+
+            expect(page).not_to have_css(".form-error.is-visible", text: "There is an error in this field")
+          end
+        end
       end
 
       it "caches the omniauth buttons correctly with different languages", :caching do

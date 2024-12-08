@@ -17,6 +17,7 @@ module Decidim
       include Headers::ContentSecurityPolicy
       include DisableRedirectionToExternalHost
       include Decidim::Admin::Concerns::HasBreadcrumbItems
+      include ActiveStorage::SetCurrent
 
       helper Decidim::Admin::ApplicationHelper
       helper Decidim::Admin::AttributesDisplayHelper
@@ -25,7 +26,6 @@ module Decidim
       helper Decidim::Admin::IconWithTooltipHelper
       helper Decidim::Admin::MenuHelper
       helper Decidim::Admin::ScopesHelper
-      helper Decidim::Admin::Paginable::PerPageHelper
       helper Decidim::DecidimFormHelper
       helper Decidim::ReplaceButtonsHelper
       helper Decidim::ScopesHelper

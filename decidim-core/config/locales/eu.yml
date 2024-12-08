@@ -894,20 +894,21 @@ eu:
         extension_allowlist: 'Onartutako formatuak: %{extensions}'
       upload:
         labels:
-          add_attachment: Erantsi eranskina
-          add_file: Erantsi fitxategiak
-          add_image: Erantsi irudia
+          add_attachment: Gehitu eranskina
+          add_file: Gehitu fitxategiak
+          add_image: Gehitu irudia
           edit_image: Editatu irudia
           error: Akatsa!
           file_size_too_large: 'Fitxategiaren tamaina handiegia da! Maximun fitxategiaren tamaina: %{megabytes}} MB'
           filename: Fitxategiaren izena
           remove: Kendu
           replace: Ordezkatu
+          save: Gorde
           title: Izenburua
           title_required: Izenburua behar da!
           uploaded: Igota
           validating: Balidatzen...
-          validation_error: Errorea baliozkotzean!
+          validation_error: Balioztatze-akatsa! Egiaztatu artxiboak luzapen edo tamaina baimendua duela.
         select_file: Hautatu fitxategia
       upload_help:
         dropzone: Bota artxiboak hona edo egin klik igotzeko
@@ -1225,6 +1226,7 @@ eu:
       no_notifications: Oraindik ez dago jakinarazpenik.
       show:
         missing_event: Aiba, jakinarazpen hau dagoeneko eskuragarri ez dagoen item batena da. Baztertu dezakezu.
+        moderated: Eduki moderatua
     notifications_digest_mailer:
       header:
         daily: Jakinarazpenen eguneroko laburpena
@@ -1911,13 +1913,13 @@ eu:
         decidim_logo: Decidim-en logoa
         decidim_title: Decidim
         download_open_data: Deskargatu Open Data fitxategiak
-        log_in: Sartu
+        log_in: Hasi saioa
         made_with_open_source: Gune hau egiteko, <a target="_blank" href="https://github.com/decidim/decidim">software libre</a> erabili da.
         resources: Baliabideak
         sign_up: Erregistratu
         terms_and_conditions: Terminoak eta baldintzak
       header:
-        log_in: Sartu
+        log_in: Hasi saioa
         main_menu: Menu nagusia
         user_menu: Erabiltzailearen menua
       impersonation_warning:

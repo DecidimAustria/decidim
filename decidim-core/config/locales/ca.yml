@@ -533,8 +533,8 @@ ca:
         html_content: Contingut HTML
         name: Bloc HTML
       last_activity:
-        name: Última activitat
-        title: Última activitat
+        name: Darrera activitat
+        title: Darrera activitat
         view_all: Veure-ho tot
       last_activity_settings_form:
         max_last_activity_users: Número màxim d'avatars de participants amb activitat recent a mostrar
@@ -913,11 +913,12 @@ ca:
           filename: Nom del fitxer
           remove: Eliminar
           replace: Reemplaçar
+          save: Desar
           title: Títol
           title_required: Un títol és necessari!
           uploaded: Pujat
           validating: Validant...
-          validation_error: Error de validació!
+          validation_error: Error en la validació! Si us plau, revisa que l'arxiu tingui una extensió o una mida permesa.
         select_file: Selecciona un fitxer
       upload_help:
         dropzone: Arrossega-hi els arxius o fes clic per a pujar-los
@@ -1040,7 +1041,7 @@ ca:
     last_activities:
       all: Tots els tipus d'activitats
       index:
-        last_activity: Última activitat
+        last_activity: Darrera activitat
       name: Darreres activitats
       no_activities_warning: No hi ha res a mostrar per a aquest tipus d'activitat.
     linked_resource_from:
@@ -1235,6 +1236,7 @@ ca:
       no_notifications: Encara no hi ha notificacions.
       show:
         missing_event: Vaja, aquesta notificació pertany a un element que ja no està disponible. Pots descartar-la.
+        moderated: Contingut moderat
     notifications_digest_mailer:
       header:
         daily: Resum diari de notificacions

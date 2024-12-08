@@ -23,7 +23,7 @@ ca:
       category:
         description: Descripció
         name: Nom
-        parent_id: Pare
+        parent_id: Categoria mare
         weight: Ordre de posició
       component:
         name: Nom
@@ -110,7 +110,7 @@ ca:
         code: Codi
         name: Nom
         organization: Organització
-        parent_id: Pare
+        parent_id: Àmbit pare
         scope_type: Tipus d'àmbit
         scope_type_id: Tipus d'àmbit
       scope_type:
@@ -188,6 +188,7 @@ ca:
         export: Exportar tot
         export-selection: Exportar selecció
         import: Importar
+        manage: Gestionar
         newsletter:
           new: Nou butlletí
         participatory_space_private_user:
@@ -350,6 +351,8 @@ ca:
       conflicts:
         attempts: Intents
         'false': 'No'
+        index:
+          text: Cercar per correu electrònic, nom o àlies.
         managed_user_name: Usuari gestionat
         solved: Resolt
         title: Conflictes de verificació
@@ -571,6 +574,7 @@ ca:
         appearance: Aparença
         area_types: Tipus d'àrees
         areas: Àrees
+        components: Components
         configuration: Configuració
         content: Contingut reportat
         external_domain_whitelist: Dominis externs permesos

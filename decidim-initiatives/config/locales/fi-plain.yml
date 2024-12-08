@@ -80,7 +80,6 @@ fi-pl:
   decidim:
     admin:
       actions:
-        manage: Hallitse
         new_initiative_type: Uusi aloitetyyppi
         new_initiative_type_scope: Uusi aloitetyypin teema
       filters:
@@ -107,7 +106,6 @@ fi-pl:
       menu:
         attachments: Liitteet
         committee_members: Komitean jäsenet
-        components: Komponentit
         information: Tiedot
         initiative_type_scopes: Aloitetyypin teemat
         initiatives: Aloitteet
@@ -240,6 +238,10 @@ fi-pl:
         exports:
           initiatives: Aloitteet
         initiatives:
+          accept:
+            success: Aloitteen hyväksyminen onnistui.
+          discard:
+            success: Aloitteen peruminen onnistui.
           edit:
             accept: Hyväksy aloite
             confirm: Oletko varma?
@@ -263,6 +265,12 @@ fi-pl:
             edit: Muokkaa
             new: Uusi
             photos: Kuvat
+          publish:
+            success: Aloitteen julkaisu onnistui.
+          reject:
+            success: Aloitteen hylkääminen onnistui.
+          unpublish:
+            success: Aloitteen julkaisun lopetus onnistui.
           update:
             error: Tapahtui virhe.
             success: Aloitteen päivitys onnistui.

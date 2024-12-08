@@ -188,6 +188,7 @@ cs:
         export: Exportovat vše
         export-selection: Exportovat výběr
         import: Importovat
+        manage: Spravovat
         newsletter:
           new: Nový zpravodaj
         participatory_space_private_user:
@@ -350,6 +351,8 @@ cs:
       conflicts:
         attempts: Pokusy
         'false': 'Ne'
+        index:
+          text: Hledat podle aktuálního uživatelského e-mailu, jména nebo přezdívky.
         managed_user_name: Spravovaný uživatel
         solved: Vyřešeno
         title: Konflikty ověření
@@ -378,6 +381,11 @@ cs:
           update: Aktualizovat
       dashboard:
         pending_moderations:
+          anouncement:
+            one: Je zde %{count} čekající na moderování
+            few: Jsou zde %{count} čekající na moderování
+            many: Je zde %{count} čekajících na moderování
+            other: Je tu %{count} čekajících na moderování
           goto_moderation: Přejít na globální moderaci
           title: Čekající moderování
         show:
@@ -576,6 +584,7 @@ cs:
         appearance: Vzhled
         area_types: Typy oblastí
         areas: Oblasti
+        components: Komponenty
         configuration: Konfigurace
         content: Nahlášený obsah
         external_domain_whitelist: Povolené externí domény

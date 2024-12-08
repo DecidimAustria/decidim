@@ -591,7 +591,7 @@ es-PY:
           username_help: Nombre público que aparece en tus mensajes. Con el objetivo de garantizar el anonimato, puede ser cualquier nombre.
       registrations:
         create:
-          error: Hubo un problema al crear tu cuenta.
+          error: Se ha producido un error al crear tu cuenta.
         new:
           already_have_an_account?: '¿Ya tienes una cuenta?'
           log_in: Entra
@@ -916,11 +916,12 @@ es-PY:
           filename: Nombre del archivo
           remove: Eliminar
           replace: Reemplazar
+          save: Guardar
           title: Título
           title_required: '¡Se requiere un título!'
           uploaded: Subido
           validating: Validando...
-          validation_error: '¡Error de validación!'
+          validation_error: '¡Error en la validación! Por favor, comprueba que el archivo tenga una extensión o tamaño permitidos.'
         select_file: Seleccione un archivo
       upload_help:
         dropzone: Arrastra los archivos aquí o haz clic en el botón para subirlos
@@ -1238,6 +1239,7 @@ es-PY:
       no_notifications: No hay notificaciones aún.
       show:
         missing_event: Vaya, esta notificación pertenece a un elemento que ya no está disponible. Puedes descartarla.
+        moderated: Contenido moderado
     notifications_digest_mailer:
       header:
         daily: Resumen diario de notificaciones
@@ -1378,7 +1380,7 @@ es-PY:
           manage_user_group_admins: Gestionar administradoras
           manage_user_group_users: Gestionar miembros
           message: Mensaje
-          resend_email_confirmation_instructions: Reenvia un correo electrónico con las instrucciones de confirmación
+          resend_email_confirmation_instructions: Reenvía un correo electrónico con las instrucciones de confirmación
         confirmation_instructions_sent: Instrucciones de confirmación enviadas por correo electrónico.
         create_user_group: Crea un grupo
         edit_profile: Editar perfil
@@ -1492,7 +1494,7 @@ es-PY:
       floating_help:
         help: Ayuda
       follow_button:
-        log_in_before_follow: Pro favor, inicia sesión antes de realizar esta acción
+        log_in_before_follow: Por favor, inicia sesión antes de realizar esta acción
       login_modal:
         please_log_in: Por favor, inicia la sesión
         sign_up: Regístrate
@@ -1807,7 +1809,7 @@ es-PY:
       animals-nature: Animales y naturaleza
       custom: Personalizado
       flags: Banderas
-      food-drink: Alimentos y bebidas
+      food-drink: Comida y bebida
       objects: Objetos
       people-body: Personas y cuerpo
       recents: Usados recientemente
@@ -1828,7 +1830,7 @@ es-PY:
   errors:
     messages:
       allowed_file_content_types: 'solo se permiten archivos con las siguientes extensiones: %{types}'
-      already_confirmed: ya ha sido confirmado, por favor, intente iniciar sesión de nuevo
+      already_confirmed: ya ha sido confirmado, por favor, intenta iniciar sesión de nuevo
       blank: no puede estar en blanco
       cannot_be_blank: no puede estar en blanco
       confirmation: no coincide con %{attribute}

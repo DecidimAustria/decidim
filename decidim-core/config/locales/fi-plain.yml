@@ -913,11 +913,12 @@ fi-pl:
           filename: Tiedoston nimi
           remove: Poista
           replace: Korvaa
+          save: Tallenna
           title: Tiedosto-otsikko
           title_required: Tiedosto-otsikko tarvitaan!
           uploaded: Ladattu
           validating: Validoidaan...
-          validation_error: Validointivirhe!
+          validation_error: Virhe tiedoston tarkastamisessa! Varmista, että tiedostopääte ja tiedoston koko vastaavat palvelun asettamia rajoituksia.
         select_file: Valitse tiedosto
       upload_help:
         dropzone: Pudota tiedostot tähän tai paina viereistä nappia ladataksesi tiedostoja
@@ -1235,6 +1236,7 @@ fi-pl:
       no_notifications: Ei vielä ilmoituksia.
       show:
         missing_event: Hups, tämä ilmoitus kuuluu kohteeseen, joka ei ole enää käytettävissä. Voit merkitä sen luetuksi.
+        moderated: Sisältö moderoitu
     notifications_digest_mailer:
       header:
         daily: Päivittäinen ilmoitusyhteenveto
@@ -1276,7 +1278,7 @@ fi-pl:
       name: Offline
       show:
         message_1: Verkkoyhteytesi näyttää olevan poissa käytöstä tällä hetkellä.
-        message_2: Yritä myöhemmin uudelleen.
+        message_2: Yritä myöhemmin uudestaan.
         retry: Yritä uudestaan
     open_data:
       not_available_yet: Avoimet datatiedostot eivät ole vielä käytettävissä, yritä uudelleen muutaman minuutin kuluttua.
@@ -1375,7 +1377,7 @@ fi-pl:
           manage_user_group_admins: Hallinnoi ylläpitäjiä
           manage_user_group_users: Hallinnoi jäseniä
           message: Viesti
-          resend_email_confirmation_instructions: Lähetä sähköpostin vahvistusohjeet uudelleen
+          resend_email_confirmation_instructions: Lähetä sähköpostin vahvistusohjeet uudestaan
         confirmation_instructions_sent: Sähköpostivahvistuksen ohjeet lähetetty.
         create_user_group: Luo ryhmä
         edit_profile: Muokkaa profiilia
@@ -1441,7 +1443,7 @@ fi-pl:
           past: Menneet
       filters_small_view:
         filter: Suodata
-        filter_and_search: Suodata ja hae
+        filter_and_search: Suodatus ja haku
         filter_by: Suodata
       results:
         view_all: Näytä kaikki (%{count})
@@ -1826,7 +1828,7 @@ fi-pl:
   errors:
     messages:
       allowed_file_content_types: 'ainoastaan seuraavat tiedostomuodot on sallittu: %{types}'
-      already_confirmed: on jo vahvistettu, yritä kirjautua sisään uudelleen
+      already_confirmed: on jo vahvistettu, yritä kirjautua sisään uudestaan
       blank: ei voi olla tyhjä
       cannot_be_blank: ei voi olla tyhjä
       confirmation: ei täsmää kentän %{attribute} kanssa

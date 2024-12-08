@@ -86,7 +86,6 @@ cs:
   decidim:
     admin:
       actions:
-        manage: Spravovat
         new_initiative_type: Nový typ iniciativy
         new_initiative_type_scope: Nový typ rozsahu iniciativy
       filters:
@@ -113,7 +112,6 @@ cs:
       menu:
         attachments: Přílohy
         committee_members: Členové výboru
-        components: Komponenty
         information: Informace
         initiative_type_scopes: Typy oblasti působnosti iniciativy
         initiatives: Iniciativy
@@ -246,6 +244,10 @@ cs:
         exports:
           initiatives: Iniciativy
         initiatives:
+          accept:
+            success: Iniciativa byla úspěšně přijata.
+          discard:
+            success: Iniciativa byla úspěšně zrušena.
           edit:
             accept: Přijmout iniciativu
             confirm: Jste si jisti?
@@ -269,6 +271,12 @@ cs:
             edit: Upravit
             new: Nový
             photos: Fotky
+          publish:
+            success: Iniciativa byla úspěšně publikována.
+          reject:
+            success: Iniciativa byla úspěšně zamítnuta.
+          unpublish:
+            success: Iniciativa byla úspěšně zneveřejněna.
           update:
             error: Došlo k chybě.
             success: Tato iniciativa byla úspěšně aktualizována.

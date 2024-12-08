@@ -80,7 +80,6 @@ de:
   decidim:
     admin:
       actions:
-        manage: Verwalten
         new_initiative_type: Neuer Initiativentyp
         new_initiative_type_scope: Neuer Initiativentyp
       filters:
@@ -107,7 +106,6 @@ de:
       menu:
         attachments: Anhänge
         committee_members: Ausschussmitglieder
-        components: Komponenten
         information: Information
         initiative_type_scopes: Initiativentyp
         initiatives: Initiativen
@@ -240,6 +238,10 @@ de:
         exports:
           initiatives: Initiativen
         initiatives:
+          accept:
+            success: Die Initiative wurde erfolgreich akzeptiert.
+          discard:
+            success: Die Initiative wurde erfolgreich gelöscht.
           edit:
             accept: Initiative akzeptieren
             confirm: Sind Sie sich sicher?
@@ -263,6 +265,12 @@ de:
             edit: Bearbeiten
             new: Neu
             photos: Fotos
+          publish:
+            success: Die Initiative wurde erfolgreich veröffentlicht.
+          reject:
+            success: Die Initiative wurde erfolgreich zurückgewiesen.
+          unpublish:
+            success: Die Veröffentlichung der Initiative wurde erfolgreich zurückgezogen.
           update:
             error: Ein Fehler ist aufgetreten.
             success: Die Initiative wurde erfolgreich aktualisiert.
