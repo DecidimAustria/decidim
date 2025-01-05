@@ -353,7 +353,7 @@ sv:
     participatory_spaces:
       highlighted_proposals:
         last: Senaste förslag
-        see_all: Visa alla (%{count})
+        see_all: Visa alla
     proposals:
       actions:
         answer_proposal: Besvara förslag

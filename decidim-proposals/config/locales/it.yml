@@ -325,7 +325,7 @@ it:
         title: Voti
     participatory_spaces:
       highlighted_proposals:
-        see_all: Vedi tutto (%{count})
+        see_all: Vedi tutto
     proposals:
       actions:
         answer_proposal: Proposta di Risposta
