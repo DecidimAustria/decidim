@@ -117,7 +117,7 @@ module Decidim
         end
 
         def meeting
-          @meeting ||= meetings.find(params[:id])
+          @meeting ||= meetings.find_by(id: params[:id])
         end
 
         def collection
