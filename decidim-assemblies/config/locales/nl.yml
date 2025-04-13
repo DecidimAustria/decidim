@@ -2,6 +2,8 @@
 nl:
   activemodel:
     attributes:
+      assemblies_type:
+        title: Titel
       assembly:
         area_id: Onderwerp
         assembly_type: Groepstype
@@ -41,7 +43,7 @@ nl:
         promoted: Gepromoveerd
         published_at: Gepubliceerd op
         purpose_of_action: Doelstelling
-        scope_id: Scope
+        scope_id: Bereik
         scopes_enabled: Scopes ingeschakeld
         short_description: Korte beschrijving
         show_statistics: Toon statistieken
@@ -139,7 +141,7 @@ nl:
         index:
           assembly_members_title: Groepsleden
         new:
-          create: Creëren
+          create: creëren
         update:
           error: Er is een fout opgetreden bij het bijwerken van het lid voor deze groep.
           success: Lid is succesvol bijgewerkt voor deze groep.
@@ -179,8 +181,7 @@ nl:
           categories: Categorieën
           components: Onderdelen
           moderations: Moderaties
-          private_users: Particuliere gebruikers
-        assemblies_types: Soorten groepen
+        assemblies_types: Groepstype
       models:
         assemblies_types:
           fields:

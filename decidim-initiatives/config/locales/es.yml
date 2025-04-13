@@ -80,7 +80,6 @@ es:
   decidim:
     admin:
       actions:
-        manage: Gestionar
         new_initiative_type: Nuevo tipo de iniciativa
         new_initiative_type_scope: Añadir ámbito del tipo de iniciativa
       filters:
@@ -107,7 +106,6 @@ es:
       menu:
         attachments: Adjuntos
         committee_members: Miembros de la comisión
-        components: Componentes
         information: Información
         initiative_type_scopes: Ámbitos del tipo de iniciativa
         initiatives: Iniciativas
@@ -240,6 +238,10 @@ es:
         exports:
           initiatives: Iniciativas
         initiatives:
+          accept:
+            success: La iniciativa se ha aceptado correctamente.
+          discard:
+            success: La iniciativa se ha descartado correctamente.
           edit:
             accept: Aceptar iniciativa
             confirm: '¿Estás seguro?'
@@ -263,6 +265,12 @@ es:
             edit: Editar
             new: Nueva
             photos: Fotos
+          publish:
+            success: La iniciativa se ha publicado correctamente.
+          reject:
+            success: La iniciativa se ha rechazado correctamente.
+          unpublish:
+            success: La iniciativa se ha despublicado correctamente.
           update:
             error: Se ha producido un error.
             success: La iniciativa se ha actualizado correctamente.
@@ -366,7 +374,7 @@ es:
           back: Volver
           back_to_initiatives: Volver a iniciativas
           callout_text: '¡Enhorabuena! Tu iniciativa se ha creado correctamente.'
-          confirm: Vas a enviar la iniciativa para que una administradora la revise y publique. Una vez publicada no podrás editarla. ¿Estás segura?
+          confirm: Vas a enviar la iniciativa para que una administrador ala revise y publique. Una vez publicada no podrás editarla. ¿Estás segura?
           edit_my_initiative: Editar mi iniciativa
           go_to_my_initiatives: Ir a mis iniciativas
           more_information: "(Más información)"
@@ -382,7 +390,7 @@ es:
         select_initiative_type:
           back: Volver
           choose_html: Quiero <strong>%{title}</strong>
-          more_information: (Más información)
+          more_information: Más información
           new: Crea una nueva iniciativa
           select: Quiero promover esta iniciativa
           select_initiative_type_help: Las iniciativas son un medio por el que las participantes pueden intervenir para que la organización emprenda acciones en defensa del interés general. ¿Qué iniciativa quieres lanzar?
@@ -431,7 +439,7 @@ es:
         attachment_legend: "(Opcional) Añadir un archivo adjunto"
         edit_documents: Editar documentos
         edit_image: Editar imagen
-        image_legend: "(Opcional) Añadir una imágen"
+        image_legend: "(Opcional) Añadir una imagen"
       index:
         uninitialized: Las iniciativas aún no están configuradas desde la administración.
       initiative_signatures:
@@ -464,7 +472,7 @@ es:
             other: y %{count} personas más
         committee_members:
           approve: Aprobar
-          confirm_approve: '¿Seguro que quieres añadir este miembro?'
+          confirm_approve: '¿Seguro que quieres añadir a este miembro?'
           confirm_revoke: '¿Seguro que quieres revocar este miembro?'
           invite_to_committee_help: Comparte este enlace para invitar a otras participantes a la comisión promotora.
           link: Enlace
@@ -523,17 +531,17 @@ es:
           section: 'Si lo solicita la organización, por favor imprime y rellena este formulario para enviar donde se indique:'
           signature: Firma
         result:
-          answer_title: Se ha respondido a esta iniciativa.
+          answer_title: Se ha respondido a esta iniciativa
           initiative_rejected_reason: Esta iniciativa ha sido rechazada debido a la falta de firmas.
         show:
           area: Área
-          before_send_to_technical_validation_announcement: 'Antes de enviar tu iniciativa de validación técnica, tienes que añadir %{count} miembros más a la comisión promotora.<br/><br/>Comparte este enlace con las personas que quieres formar parte de la comisión: %{href}'
+          before_send_to_technical_validation_announcement: 'Antes de enviar tu iniciativa a validación técnica, tienes que añadir %{count} miembros más a la comisión promotora.<br/><br/>Comparte este enlace con las personas que quieres formar parte de la comisión: %{href}'
           confirm: Vas a enviar la iniciativa para que una administrador ala revise y publique. Una vez publicada no podrás editarla. ¿Estás segura?
           edit: Editar
           initiative_data: Datos sobre la iniciativa
           scope: Ámbito
           send_to_technical_validation: Enviar a validación técnica
-          send_to_technical_validation_announcement: Si todo parece correcto, haga clic en "Enviar a validación técnica" para que una administradora revise y publique tu iniciativa
+          send_to_technical_validation_announcement: Si está todo correcto, haz clic en "Enviar a validación técnica" para que una administradora revise y publique tu iniciativa
           signature_collection: Firmas recogidas
           state: Estado
           type: Tipo

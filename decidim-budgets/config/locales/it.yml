@@ -3,7 +3,6 @@ it:
   activemodel:
     attributes:
       budget:
-        decidim_scope_id: Ambito
         description: Descrizione
         title: Titolo
         total_budget: Budget totale
@@ -11,7 +10,6 @@ it:
       project:
         budget_amount: Importo del budget
         decidim_category_id: Categoria
-        decidim_scope_id: Ambito tematico
         description: Descrizione
         proposal_ids: Proposte correlate
         selected: Selezionato per l'implementazione
@@ -22,11 +20,15 @@ it:
         one: Progetto
         other: Progetti
   decidim:
+    admin:
+      filters:
+        projects:
+          category_id_eq:
+            label: Categoria
     budgets:
       actions:
         attachment_collections: Cartelle
         attachments: Allegati
-        confirm_destroy: Sei certo di voler cancellare questo progetto?
         destroy: Cancella
         edit: Modifica
         edit_projects: Gestisci progetti
@@ -59,13 +61,29 @@ it:
             title: Modifica il progetto
             update: Aggiorna
           index:
+            change_category: Cambia categoria
+            change_scope: Cambia ambito
             finished_orders: Votazione finale
             pending_orders: Votazione pendente
             selected: Selezionato
             title: Progetti
+            update_scope_button: Aggiorna ambito
           new:
             create: Crea
             title: Nuovo progetto
+          update_category:
+            invalid: 'Questi progetti avevano già la categoria %{subject_name} %{projects}.'
+            success: 'Progetti aggiornati con successo alla categoria %{subject_name} e ambito %{projects}.'
+          update_scope:
+            invalid: 'Questi progetti avevano già la categoria %{subject_name} e l''ambito %{projects}.'
+            success: 'Progetti aggiornati con successo alla categoria %{subject_name} e ambito %{projects}.'
+          update_selected:
+            invalid:
+              selected: 'Questi progetti sono già stati selezionati per l''implementazione: %{projects}.'
+              unselected: 'Questi progetti sono già stati deselezionati dall''implementazione: %{projects}.'
+            success:
+              selected: 'Questi progetti sono stati selezionati con successo per l''implementazione: %{projects}.'
+              unselected: 'Questi progetti sono già stati deselezionati dall''implementazione: %{projects}.'
         proposals_imports:
           new:
             create: Importa proposte per progetti
@@ -90,6 +108,11 @@ it:
           more_than_one: elimina il tuo voto su %{name} e ricomincia
           only_one: cancella il tuo voto e ricomincia.
         highlighted_cta: Vota su %{name}
+        orders:
+          highest_cost: Costo più alto
+          label: Ordina budget per
+          lowest_cost: Costo più basso
+          random: Ordine casuale
         progress: Chiusura voto
         show: Vedi progetti
         vote: Vota
@@ -103,6 +126,7 @@ it:
             total_budget: Budget totale
         project:
           fields:
+            category: Categoria
             title: Titolo
       order_summary_mailer:
         order_summary:
@@ -139,7 +163,6 @@ it:
           title: Non hai ancora votato
         filters:
           category: Categoria
-          scope: Ambito tematico
           search: Cerca
           status: Stato
           status_values:
@@ -175,11 +198,11 @@ it:
             announcement: Annuncio
             comments_enabled: Commenti abilitati
             comments_max_length: Lunghezza massima dei commenti (Lasciare 0 per il valore predefinito)
+            geocoding_enabled: Geocodifica abilitata
             landing_page_content: Pagina iniziale dei budget
             more_information_modal: Finestra modale "Maggiori informazioni"
             projects_per_page: Progetti per pagina
             resources_permissions_enabled: Le autorizzazioni relative alle azioni possono essere impostate per ogni progetto
-            scope_id: Obiettivo
             scopes_enabled: Obiettivi abilitati
             title: Titolo
             total_budget: Budget totale

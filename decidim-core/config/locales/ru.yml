@@ -248,6 +248,10 @@ ru:
         name: Статистика организации
       sub_hero:
         name: Под-богатырский баннер
+    core:
+      application_helper:
+        filter_category_values:
+          all: Все
     devise:
       omniauth_registrations:
         new:
@@ -258,6 +262,7 @@ ru:
       registrations:
         new:
           already_have_an_account?: У вас уже есть учетная запись?
+          log_in: Войти
           newsletter: Получать время от времени рассылку со свежими новостями
           newsletter_title: Разрешение на связь с вами
           sign_up: Зарегистрироваться
@@ -401,6 +406,9 @@ ru:
         email_help: Электронная почта вашей организации, ассоциации, коллектива, группы и т.д.
       join:
         success: Запрос на присоединение успешно создан. Администратор рассмотрит ваш запрос перед тем, как принять вас в группу.
+      members:
+        accept_request: Принять
+        reject_request: Отклонить
     last_activities:
       all: Все виды активности
       index:
@@ -431,10 +439,18 @@ ru:
       home: Главная
     messaging:
       conversation_mailer:
+        comanagers_new_conversation:
+          greeting: Здравствуйте, %{recipient}!
+        comanagers_new_message:
+          greeting: Здравствуйте, %{recipient}!
         new_conversation:
           greeting: Здравствуйте, %{recipient}!
           intro: "%{sender} начал с вами новую беседу. Кликните здесь, чтобы прочитать её:"
           subject: "%{sender} начал беседу с вами"
+        new_group_conversation:
+          greeting: Здравствуйте, %{recipient}!
+        new_group_message:
+          greeting: Здравствуйте, %{recipient}!
         new_message:
           greeting: Здравствуйте, %{recipient}!
           intro: "%{sender} написал новые сообщения в вашей беседе. Кликните здесь, чтобы посмотреть их:"
@@ -502,15 +518,24 @@ ru:
         conversations: Беседы
         followers: Читают
         following: Следит за
+        group_admins: Управление админами
+        group_members: Управление участниками
       sidebar:
         badges:
           info: Значки заработаны за выполнение определенных действий на платформе.
           title: Значки
       user:
-        create_user_group: Создать группу
+        actions:
+          edit_profile: Редактировать профиль
+          edit_user_group: Изменить профиль группы
+          invite_user: Пригласить участника
+          manage_user_group_admins: Управление админами
+          manage_user_group_users: Управление участниками
         edit_profile: Редактировать профиль
         edit_user_group: Изменить профиль группы
         invite_user: Пригласить участника
+        manage_user_group_admins: Управление админами
+        manage_user_group_users: Управление участниками
     reported_mailer:
       hide:
         hello: Здравствуйте, %{name}!
@@ -551,6 +576,8 @@ ru:
         report: Пожаловаться
         spam: Содержит кликоловки (манипулятивно-сенсационные заголовки), рекламу, мошенничество или лохотроны.
         title: Пожаловаться на проблему
+      flag_user_modal:
+        close: Закрыть
       floating_help:
         help: Справка
       login_modal:
@@ -565,6 +592,8 @@ ru:
     statistics:
       comments_count: Комментариев
     user_conversations:
+      reply:
+        send: Отправить
       update:
         error: Сообщение не отправлено. Попробуйте позже
     wizard_step_form:
@@ -634,10 +663,14 @@ ru:
       signed_up: Добро пожаловать! Вы успешно зарегистрировались.
       signed_up_but_inactive: Вы успешно зарегистрировались. Однако вы не можете войти в систему, потому что учетная запись еще не активирована.
       signed_up_but_locked: Вы успешно зарегистрировались. Однако вы не можете войти в систему, потому что ваша учетная запись заблокирована.
+    sessions:
+      new:
+        log_in: Войти
     shared:
       links:
         back: Назад
         forgot_your_password: Забыли пароль?
+        log_in: Войти
         sign_up: Зарегистрироваться
     unlocks:
       new:
@@ -661,8 +694,11 @@ ru:
       edit_link:
         edit: Редактировать
       footer:
+        log_in: Войти
         made_with_open_source: Сайт создан с помощью <a target="_blank" href="https://github.com/decidim/decidim"> бесплатного программного обеспечения</a>.
         sign_up: Зарегистрироваться
+      header:
+        log_in: Войти
       impersonation_warning:
         close_session: Закрыть сеанс
         description_html: Вы выступаете в роли участника <b>%{user_name}</b>.

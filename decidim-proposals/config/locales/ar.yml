@@ -157,9 +157,7 @@ ar:
             comments_enabled: تم تمكين التعليقات
             comments_max_length: الحد الأقصى لطول التعليقات (اترك 0 لاستعمال القيمة الافتراضية)
             default_sort_order: التصنيف الافتراضي للاقتراح
-            default_sort_order_help: الافتراضي يعني أنه إذا تم تمكين الدعم، سيتم عرض المقترحات عشوائياً، وإذا تم حظر الدعم، فسيتم فرزها حسب الأكثر دعم.
             default_sort_order_options:
-              default: الافتراضي
               most_commented: صاحبة الأكثر تعليقات
               most_endorsed: صاحبة أكثر تأييدات
               most_followed: صاحبة أكثر متابعات
@@ -210,9 +208,7 @@ ar:
             creation_enabled: يمكن للمشارِكين إنشاء اقتراحات
             creation_enabled_readonly: يتم تعطيل هذا الإعداد عند تفعيل وظيفة النصوص التشاركية. لتحميل الاقتراحات كنص تشاركي، يرجى النقر على زر النصوص التشاركية واتباع التعليمات.
             default_sort_order: التصنيف الافتراضي للاقتراح
-            default_sort_order_help: الافتراضي يعني أنه إذا تم تمكين الدعم، سيتم عرض المقترحات عشوائياً، وإذا تم حظر الدعم، فسيتم فرزها حسب الأكثر دعم.
             default_sort_order_options:
-              default: الافتراضي
               most_commented: صاحبة الأكثر تعليقات
               most_endorsed: صاحبة أكثر تأييدات
               most_followed: صاحبة أكثر متابعات
@@ -315,12 +311,10 @@ ar:
             notification_title: تم رفض الاقتراح <a href="%{resource_path}">%{resource_title}</a>.
         proposal_update_category:
           email_intro: 'قام المشرف بتحديث فئة اقتراحك "%{resource_title}" ، تحقق من ذلك في هذه الصفحة:'
-          email_outro: لقد تلقيت هذا الإشعار لأنك مؤلف الاقتراح.
           email_subject: تم تحديث فئة %{resource_title} اقتراح
           notification_title: تم تحديث فئة اقتراح <a href="%{resource_path}">%{resource_title}</a> بواسطة مسؤول.
         proposal_update_scope:
           email_intro: 'قام مدير بتحديث نطاق اقتراحك "%{resource_title}" ، يرجى التحقق منه على هذه الصفحة:'
-          email_outro: لقد تلقيت هذا الإشعار لأنك مؤلف الاقتراح.
           email_subject: تم تحديث نطاق الاقتراح %{resource_title}
           notification_title: نطاق الاقتراح <a href="%{resource_path}">%{resource_title}</a> تم تحديثه من قبل مدير.
         voting_enabled:
@@ -490,7 +484,6 @@ ar:
           index:
             actions: أفعال
             assign_to_valuator: أسنِده إلى مُقيِّم
-            assign_to_valuator_button: تعيين
             cancel: إلغاء
             change_category: تغيير الفئة
             change_scope: تغيير النطاق
@@ -504,7 +497,6 @@ ar:
             split_button: انشق، مزق
             title: اقتراحات
             unassign_from_valuator: إلغاء الإسناد مِن المُقيِّم
-            unassign_from_valuator_button: إلغاء الإسناد
             update: تحديث
             update_scope_button: تحديث النطاق
           new:
@@ -741,7 +733,6 @@ ar:
           discard: تجاهل هذه المسودة
           discard_confirmation: هل أنت متأكد من أنك تريد التخلص من مسودة الاقتراح؟
           send: معاينة
-          title: تحرير مسودة الاقتراح
         filters:
           activity: نشاطي
           all: الكل
@@ -771,7 +762,6 @@ ar:
           text_banner: أنت تتطلع على قائمة الاقتراحات المسحوبة من قبل مؤلفيها. %{go_back_link}.
         new:
           send: استمر
-          title: إنشاء اقتراحك
         orders:
           label: 'ترتيب المقترحات حسب:'
           most_commented: الأكثر تعليقًا عليها

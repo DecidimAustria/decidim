@@ -60,13 +60,11 @@ el:
   decidim:
     admin:
       actions:
-        manage: Διαχείριση
         new_initiative_type: Νέος τύπος πρωτοβουλίας
       filters:
         search_placeholder:
           title_or_description_or_id_string_or_author_name_or_author_nickname_cont: Αναζήτηση συλλογής %{collection} με βάση τον τίτλο, την περιγραφή, το αναγνωριστικό ή το όνομα συντάκτη.
       menu:
-        components: Στοιχεία
         information: Πληροφορίες
         initiatives: Πρωτοβουλίες
         initiatives_types: Τύποι πρωτοβουλίας
@@ -101,6 +99,7 @@ el:
             initiative_title: Τίτλος πρωτοβουλίας
             name_and_surname: Όνομα και επώνυμο
             postal_code: Ταχυδρομικός κώδικας
+            scope: Πεδίο εφαρμογής
             time_and_date: Ώρα και ημερομηνία
             timestamp: Χρονική σήμανση
       titles:
@@ -326,6 +325,7 @@ el:
           recently_published: Δημοσιεύτηκαν πιο πρόσφατα
         print:
           city: Πόλη
+          print: Εκτύπωση
         result:
           initiative_rejected_reason: Αυτή η πρωτοβουλία απορρίφθηκε λόγω της έλλειψης υπογραφών.
         signatures_count:
@@ -369,6 +369,7 @@ el:
     resources:
       initiatives_type:
         actions:
+          create: Δημιουργία
           title: Ενέργειες
           vote: Υπογραφή
   layouts:

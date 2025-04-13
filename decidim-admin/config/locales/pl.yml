@@ -188,6 +188,7 @@ pl:
         export: Eksportuj wszystko
         export-selection: Eksportuj wybrane
         import: Importuj
+        manage: Zarządzanie
         newsletter:
           new: Nowy newsletter
         participatory_space_private_user:
@@ -576,6 +577,7 @@ pl:
         appearance: Wygląd
         area_types: Typy kategorii
         areas: Kategorie
+        components: Komponenty
         configuration: Konfiguracja
         content: Zgłoszona zawartość
         external_domain_whitelist: Dozwolone domeny zewnętrzne
@@ -764,7 +766,7 @@ pl:
           confirm_deliver: Czy na pewno chcesz dostarczyć ten newsletter? Nie można cofnąć tej czynności.
           deliver: Dostarcz newsletter
           followers_help: Wysyła newsletter do wszystkich potwierdzonych użytkowników, którzy obserwują dowolne przestrzenie partycypacyjne z tej listy.
-          none: Żaden
+          none: Bez tematu
           participants_help: Wysyła newsletter do wszystkich potwierdzonych użytkowników, którzy uczestniczyli w którejkolwiek z przestrzeni partycypacyjnych z tej listy.
           recipients_count: Ten newsletter zostanie wysłany do <strong id='recipients_count'>%{count}</strong> użytkowników.
           scopes_help: Wysyła newsletter do użytkowników, którzy mają dowolny z wybranych zakresów ustawiony jako aktywny w zakładce konta „Moje zainteresowania”.
@@ -893,7 +895,7 @@ pl:
           success: Załadowanie pliku CSV powiodło się, wysyłamy e-mail z zaproszeniem do uczestników. To może chwilę potrwać.
         new:
           csv_upload:
-            title: Załaduj swój plik CSV
+            title: Prześlij swój plik CSV
           destroy:
             button: Usuń wszystkich prywatnych uczestników
             confirm: Czy na pewno chcesz usunąć wszystkich uczestników prywatnych? Tej akcji nie można cofnąć, nie będziesz w stanie odzyskać danych.
@@ -1053,8 +1055,8 @@ pl:
         index:
           state:
             pending: Oczekujące
-            rejected: Odrzucone
-            verified: Zweryfikowane
+            rejected: Odrzucono
+            verified: Zweryfikowano
           verify_via_csv: Zweryfikuj za pomocą CSV
       user_groups_csv_verifications:
         new:

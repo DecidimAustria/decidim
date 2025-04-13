@@ -97,6 +97,20 @@ th:
           success: ทำลายพื้นที่สำเร็จ
         edit:
           title: แก้ไขพื้นที่
+      categories:
+        edit:
+          update: อัปเดต
+      filters:
+        scope_id_eq:
+          label: ขอบเขต
+      models:
+        user_group:
+          fields:
+            name: ชื่อ
       organization_external_domain_whitelist:
         edit:
           update: อัปเดต
+      resources:
+        index:
+          headers:
+            scope: ขอบเขต

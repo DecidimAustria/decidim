@@ -123,6 +123,7 @@ is:
         category:
           new: Nýr flokkur
         import: Flytja inn
+        manage: Stjórna
         newsletter:
           new: Nýtt fréttabréf
         per_page: Á hveri síðu
@@ -236,6 +237,8 @@ is:
           values:
             'false': Opinberað
             'true': Ekki opinberað
+        scope_id_eq:
+          label: Svæði
         search_label: Leita
       impersonatable_users:
         index:
@@ -318,6 +321,9 @@ is:
           fields:
             name: Nafn
             plural: Fleirtala
+        share_token:
+          fields:
+            created_at: Búið til á
         static_page:
           fields:
             created_at: Búið til á
@@ -336,6 +342,7 @@ is:
             created_at: Búið til á
             document_number: Skjal númer
             name: Nafn
+            nickname: Gælunafn
             phone: Sími
             state: Ríki
       moderations:
@@ -416,6 +423,10 @@ is:
       resource_permissions:
         edit:
           title: Breyta heimildum
+      resources:
+        index:
+          headers:
+            scope: Svæði
       scope_types:
         create:
           success: Gildissvið gerð búin til með góðum árangri.
@@ -441,6 +452,9 @@ is:
         no_scopes: Engar mælar á þessu stigi.
         update:
           success: Gildissvið uppfært með góðum árangri
+      share_tokens:
+        actions:
+          share: Deila
       static_pages:
         actions:
           view: Skoðaðu opinbera síðu
@@ -461,12 +475,6 @@ is:
         dashboard: Mælaborð
         scope_types: Gildissvið
         scopes: Scopes
-      user_groups:
-        index:
-          state:
-            pending: Í bið
-            rejected: Hafnað
-            verified: Staðfest
       users:
         form:
           email: Email

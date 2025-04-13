@@ -26,8 +26,6 @@ ga:
         other: Coistí
   decidim:
     admin:
-      actions:
-        manage: Bainistigh
       filters:
         initiatives:
           decidim_area_id_eq:
@@ -161,6 +159,7 @@ ga:
           comment: Tabhair Trácht
       initiatives_type:
         actions:
+          create: Cruthaigh
           title: Gníomhartha
           vote: Sínigh
   layouts:

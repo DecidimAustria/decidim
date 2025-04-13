@@ -31,7 +31,7 @@ fr-CA:
         promoted: Mise en avant
         published_at: Publiée à
         related_process_ids: Concertations liées
-        scope_id: Périmètre d'application
+        scope_id: Secteur
         scope_type_max_depth_id: Profondeur du filtre de portée
         scopes_enabled: Périmètres d'application activés
         short_description: Résumé
@@ -154,7 +154,7 @@ fr-CA:
           name: Étape de la concertation
         participatory_process_type:
           fields:
-            created_at: Crée le
+            created_at: Créée le
             title: Titre
           name: Type de concertation
         participatory_process_user_role:
@@ -450,7 +450,7 @@ fr-CA:
       index:
         title: Concertations
       last_activity:
-        new_participatory_process: Nouvelle concertation
+        new_participatory_process: 'Nouveau processus participatif:'
       pages:
         home:
           highlighted_processes:

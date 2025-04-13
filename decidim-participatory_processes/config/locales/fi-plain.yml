@@ -154,7 +154,7 @@ fi-pl:
           name: Osallisuusprosessin vaihe
         participatory_process_type:
           fields:
-            created_at: Luontiaika
+            created_at: Luonnin ajankohta
             title: Otsikko
           name: Prosessityyppi
         participatory_process_user_role:
@@ -450,7 +450,7 @@ fi-pl:
       index:
         title: Osallisuusprosessit
       last_activity:
-        new_participatory_process: Uusi osallisuusprosessi
+        new_participatory_process: 'Uusi osallistumisprosessi:'
       pages:
         home:
           highlighted_processes:

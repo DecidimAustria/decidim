@@ -2,6 +2,295 @@
 
 # Changelog
 
+## [0.28.5](https://github.com/decidim/decidim/tree/0.28.5)
+
+### Added
+
+Nothing.
+
+### Changed
+
+Nothing.
+
+### Fixed
+
+- Backport 'Fix file type in attachment for S3 files' to v0.28 [\#13496](https://github.com/decidim/decidim/pull/13496)
+- Backport 'Update supported versions in docs' to v0.28 [\#13497](https://github.com/decidim/decidim/pull/13497)
+- **decidim-admin**, **decidim-assemblies**, **decidim-core**, **decidim-participatory processes**, **decidim-proposals**: Backport 'Remove host param from url uploader method' to v0.28 [\#13506](https://github.com/decidim/decidim/pull/13506)
+- Backport 'Lock Ubuntu to 22.04 in github actions' to v0.28 [\#13520](https://github.com/decidim/decidim/pull/13520)
+- Backport 'Fix double encoding specific characters with the external links' to v0.28 [\#13525](https://github.com/decidim/decidim/pull/13525)
+- Backport 'Fix translation bar css' to v0.28 [\#13526](https://github.com/decidim/decidim/pull/13526)
+- Backport 'Make the address card shown long locations with the time' to v0.28 [\#13540](https://github.com/decidim/decidim/pull/13540)
+- Backport 'Fix the missing meeting calendar in meetings' lists' to v0.28 [\#13542](https://github.com/decidim/decidim/pull/13542)
+- Backport 'Fix editing the assembly content block "related assemblies"' to v0.28 [\#13544](https://github.com/decidim/decidim/pull/13544)
+- Backport 'Lock @tarekraafat/autocomplete.js version to 10.2.7' to v0.28 [\#13557](https://github.com/decidim/decidim/pull/13557)
+- Backport 'Fix redirect path after blocking an user' to v0.28 [\#13561](https://github.com/decidim/decidim/pull/13561)
+- **decidim-accountability**, **decidim-admin**, **decidim-core**, **decidim-proposals**: Backport 'Increase Map dimensions ' to v0.28 [\#13588](https://github.com/decidim/decidim/pull/13588)
+- **decidim-initiatives**: Backport 'Add new print permission in intiatives' to v0.28 [\#13590](https://github.com/decidim/decidim/pull/13590)
+- **decidim-initiatives**: Backport 'Fix initiative form is not taking into account the scope selected' to v0.28 [\#13603](https://github.com/decidim/decidim/pull/13603)
+- **decidim-budgets**: Backport 'Fix issues with the budgets proposals import' to v0.28 [\#13606](https://github.com/decidim/decidim/pull/13606)
+- **decidim-admin**: Backport 'Fix newsletter subscriber count' to v0.28 [\#13609](https://github.com/decidim/decidim/pull/13609)
+- **decidim-assemblies**: Backport 'Fix visibility on transparent assemblies' to v0.28 [\#13622](https://github.com/decidim/decidim/pull/13622)
+- **decidim-forms**: Backport 'Fix asterisk in mandatory answers from surveys' to v0.28 [\#13629](https://github.com/decidim/decidim/pull/13629)
+- **decidim-accountability**, **decidim-admin**, **decidim-assemblies**, **decidim-blogs**, **decidim-budgets**, **decidim-conferences**, **decidim-core**, **decidim-debates**, **decidim-forms**, **decidim-initiatives**, **decidim-meetings**, **decidim-pages**, **decidim-participatory processes**, **decidim-proposals**, **decidim-sortitions**, **decidim-verifications**: Backport 'Fix editor image routing' to v0.28 [\#13608](https://github.com/decidim/decidim/pull/13608)
+- **decidim-core**: Backport 'Profiles message button ' to v0.28 [\#13637](https://github.com/decidim/decidim/pull/13637)
+- **decidim-templates**: Backport 'Fix display condition answer option' to v0.28 [\#13641](https://github.com/decidim/decidim/pull/13641)
+- Backport 'Remove wkhtmltopdf-binary gem and wicked configuration' to v0.28 [\#13621](https://github.com/decidim/decidim/pull/13621)
+- **decidim-core**: Backport 'Fix datetime fields on forms when the organization has a timezone specified' to v0.28 [\#13647](https://github.com/decidim/decidim/pull/13647)
+- Backport 'Fix admin proposals filters and sortings' to v0.28 [\#13658](https://github.com/decidim/decidim/pull/13658)
+- Backport 'Sort valuator selectors by valuator name' to v0.28 [\#13652](https://github.com/decidim/decidim/pull/13652)
+- Backport 'Remove `personal_url` and `about` fields when users are deleted' to v0.28 [\#13655](https://github.com/decidim/decidim/pull/13655)
+- **decidim-comments**: Backport 'Multiple versions of a comment are shown when editing' to v0.28 [\#13663](https://github.com/decidim/decidim/pull/13663)
+- **decidim-core**: Backport 'Remove additional space from general search for comments that contain links' to v0.28 [\#13672](https://github.com/decidim/decidim/pull/13672)
+- **decidim-meetings**, **decidim-participatory processes**: Backport 'Fix missing icons in meetings' to v0.28 [\#13682](https://github.com/decidim/decidim/pull/13682)
+- Backport 'Remove redundant words in jobs.adoc' to v0.28 [\#13687](https://github.com/decidim/decidim/pull/13687)
+- **decidim-admin**, **decidim-initiatives**: Backport 'Icons in some Admin dashboard areas are misaligned' to v0.28 [\#13717](https://github.com/decidim/decidim/pull/13717)
+- **decidim-proposals**: Backport 'Hide the public export for proposals' votes' to v0.28 [\#13743](https://github.com/decidim/decidim/pull/13743)
+- **decidim-conferences**: Backport 'Fix conference attendence diploma rendering' to v0.28 [\#13750](https://github.com/decidim/decidim/pull/13750)
+- **decidim-accountability**, **decidim-admin**, **decidim-ai**, **decidim-api**, **decidim-assemblies**, **decidim-blogs**, **decidim-budgets**, **decidim-comments**, **decidim-conferences**, **decidim-core**, **decidim-debates**, **decidim-design**, **decidim-dev**, **decidim-forms**, **decidim-generators**, **decidim-initiatives**, **decidim-meetings**, **decidim-pages**, **decidim-participatory processes**, **decidim-proposals**, **decidim-sortitions**, **decidim-surveys**, **decidim-system**, **decidim-templates**, **decidim-verifications**: Backport 'Clarify license identificator (AGPL-3.0-or-later)' to v0.28 [\#13746](https://github.com/decidim/decidim/pull/13746)
+- **decidim-core**, **decidim-design**, **decidim-proposals**: Backport 'Optimize the proposals loading performance' to v0.28 [\#13745](https://github.com/decidim/decidim/pull/13745)
+- **decidim-core**: Backport 'Profile tooltip expansion on mobile' to v0.28 [\#13755](https://github.com/decidim/decidim/pull/13755)
+- **decidim-debates**, **decidim-proposals**: Backport 'OpenData Export breaks when handling deleted users' to v0.28 [\#13757](https://github.com/decidim/decidim/pull/13757)
+- **decidim-accountability**, **decidim-core**, **decidim-meetings**, **decidim-proposals**: Backport 'Fix the Diff Render output' to v0.28 [\#13753](https://github.com/decidim/decidim/pull/13753)
+- **decidim-meetings**: Backport 'Fix meeting view when maps are disabled' to v0.28 [\#13754](https://github.com/decidim/decidim/pull/13754)
+- **decidim-admin**: Backport 'Do not send newsletters to blocked users' to v0.28 [\#13761](https://github.com/decidim/decidim/pull/13761)
+- Backport 'Add authorization to GraphQL ' to v0.28 [\#13759](https://github.com/decidim/decidim/pull/13759)
+- **decidim-accountability**, **decidim-meetings**: Backport 'Fix translations' to v0.28 [\#13784](https://github.com/decidim/decidim/pull/13784)
+- **decidim-admin**, **decidim-core**: Backport 'Fix flaky spec when changing the locale of the visitor' to v0.28 [\#13783](https://github.com/decidim/decidim/pull/13783)
+- **decidim-admin**: Backport 'Fix validation errors on impersonations or transferring users' to v0.28 [\#13780](https://github.com/decidim/decidim/pull/13780)
+- **decidim-forms**: Backport 'Fix disordered columns in survey export' to v0.28 [\#13790](https://github.com/decidim/decidim/pull/13790)
+- **decidim-admin**, **decidim-core**: Backport 'Prevent notifications for blocked users' to v0.28 [\#13807](https://github.com/decidim/decidim/pull/13807)
+- **decidim-meetings**, **decidim-proposals**: Backport 'Fix proposal map performance with hundreds of markers' to v0.28 [\#13818](https://github.com/decidim/decidim/pull/13818)
+- **decidim-core**, **decidim-proposals**: Backport 'Fix prevent redirection issue when clicking text or icon within button' to v0.28 [\#13810](https://github.com/decidim/decidim/pull/13810)
+- **decidim-meetings**: Backport 'Add missing images in the custom registration emails from meetings' to v0.28 [\#13828](https://github.com/decidim/decidim/pull/13828)
+- **decidim-core**: Backport 'Fix flaky spec in authentication' to v0.28 [\#13842](https://github.com/decidim/decidim/pull/13842)
+- **decidim-core**, **decidim-dev**: Backport 'Fix flaky spec in geocoder' to v0.28 [\#13844](https://github.com/decidim/decidim/pull/13844)
+- **decidim-core**: Backport 'WCAG navigation submenu' to v0.28 [\#13852](https://github.com/decidim/decidim/pull/13852)
+- **decidim-core**: Backport 'WCAG add aria-current to mark active links' to v0.28 [\#13862](https://github.com/decidim/decidim/pull/13862)
+- **decidim-core**: Backport 'Fix CTA button path when displayed somewhere else than the home page' to v0.28 [\#13860](https://github.com/decidim/decidim/pull/13860)
+- **decidim-core**, **decidim-generators**: Backport 'Lock concurrent-ruby to 1.3.4' to v0.28 [\#13884](https://github.com/decidim/decidim/pull/13884)
+- **decidim-meetings**: Backport 'Fix ux meeting date location' to v0.28 [\#13896](https://github.com/decidim/decidim/pull/13896)
+- **decidim-core**: Backport 'Fix single attachment with title' to v0.28 [\#13899](https://github.com/decidim/decidim/pull/13899)
+- Update github actions configs [\#13915](https://github.com/decidim/decidim/pull/13915)
+- **decidim-core**: Backport 'Fix flaky spec in autocomplete' to v0.28 [\#13913](https://github.com/decidim/decidim/pull/13913)
+- **decidim-accountability**: Backport 'Fix translation issue on import projects mailer' to v0.28 [\#13950](https://github.com/decidim/decidim/pull/13950)
+- **decidim-conferences**: Backport 'Fix 'Conference media link creation form has wrong title'' to v0.28 [\#13962](https://github.com/decidim/decidim/pull/13962)
+- **decidim-forms**: Backport 'Fix answer choices default order' to v0.28 [\#13968](https://github.com/decidim/decidim/pull/13968)
+- **decidim-core**, **decidim-initiatives**: Backport 'Signature count in Initiative cards' to v0.28 [\#13979](https://github.com/decidim/decidim/pull/13979)
+- **decidim-admin**, **decidim-pages**: Backport 'Content blocks WYSIWYG editor icons' to v0.28 [\#13982](https://github.com/decidim/decidim/pull/13982)
+- Update LightHouse actions to v11 [\#13985](https://github.com/decidim/decidim/pull/13985)
+- **decidim-core**: Backport 'Prevent notifications for deleted users' to v0.28 [\#14004](https://github.com/decidim/decidim/pull/14004)
+- Backport 'Retries NPM installation a couple times to prevent network timeouts' to v0.28 [\#14005](https://github.com/decidim/decidim/pull/14005)
+- **decidim-core**: Backport 'Fix incorrect breadcrumb encoding on mobile and tablet' to v0.28 [\#14007](https://github.com/decidim/decidim/pull/14007)
+- **decidim-admin**, **decidim-conferences**, **decidim-core**: Backport 'Bring consistency to the titles in Conferences' to v0.28 [\#14009](https://github.com/decidim/decidim/pull/14009)
+- **decidim-participatory processes**, **decidim-sortitions**: Backport 'Change preview icon on sortitions' to v0.28 [\#14021](https://github.com/decidim/decidim/pull/14021)
+- **decidim-admin**, **decidim-newsletters**: Backport 'Remove new newsletter button from templates' to v0.28 [\#14023](https://github.com/decidim/decidim/pull/14023)
+- **decidim-proposals**: Backport 'Fix UX adjustments on proposal's highlighted page' to v0.28 [\#14036](https://github.com/decidim/decidim/pull/14036)
+- Backport 'Fix shebangs for bash in internal scripts' to v0.28 [\#14052](https://github.com/decidim/decidim/pull/14052)
+- **decidim-core**: Backport 'Improve url escape' to v0.28 [\#14049](https://github.com/decidim/decidim/pull/14049)
+- **decidim-core**: Backport 'Fix bug when updating a cached static map' to v0.28 [\#14050](https://github.com/decidim/decidim/pull/14050)
+
+### Removed
+
+Nothing.
+
+### Developer improvements
+
+- Backport 'Profiles message button ' to v0.28 [\#13637](https://github.com/decidim/decidim/pull/13637)
+
+### Internal
+
+- **decidim-accountability**, **decidim-meetings**: Backport 'Fix translations' to v0.28 [\#13784](https://github.com/decidim/decidim/pull/13784)
+- **decidim-core**, **decidim-generators**: Backport 'Lock concurrent-ruby to 1.3.4' to v0.28 [\#13884](https://github.com/decidim/decidim/pull/13884)
+- Update github actions configs [\#13915](https://github.com/decidim/decidim/pull/13915)
+- Update LightHouse actions to v11 [\#13985](https://github.com/decidim/decidim/pull/13985)
+
+## [0.28.4](https://github.com/decidim/decidim/tree/0.28.4)
+
+### Added
+
+Nothing.
+
+### Changed
+
+Nothing.
+
+### Fixed
+
+- **decidim-dev**: Backport 'Fix flaky on verifications' code letter system spec' to v0.28 [\#13390](https://github.com/decidim/decidim/pull/13390)
+- **decidim-comments**, **decidim-core**: Backport 'Date & Time format in Last Activities' to v0.28 [\#13388](https://github.com/decidim/decidim/pull/13388)
+- **decidim-core**, **decidim-proposals**: Backport 'Fix redirections after login with modal' to v0.28 [\#13386](https://github.com/decidim/decidim/pull/13386)
+- **decidim-accountability**, **decidim-core**, **decidim-meetings**: Backport 'Fix tab navigation on filters' to v0.28 [\#13401](https://github.com/decidim/decidim/pull/13401)
+- **decidim-admin**: Backport 'Fixes admin rights loss when added as private user with case-insensitive email ' to v0.28 [\#13400](https://github.com/decidim/decidim/pull/13400)
+- **decidim-core**: Backport 'Fix margin in offline page' to v0.28 [\#13446](https://github.com/decidim/decidim/pull/13446)
+- **decidim-admin**, **decidim-core**, **decidim-verifications**: Backport 'Spacing on DOB picker in Authorizations' to v0.28 [\#13448](https://github.com/decidim/decidim/pull/13448)
+- **decidim-conferences**, **decidim-core**, **decidim-initiatives**, **decidim-participatory processes**: Backport 'Fix showing Conferences and Initiatives in last activities page' to v0.28 [\#13450](https://github.com/decidim/decidim/pull/13450)
+- **decidim-assemblies**: Backport 'Fix private admin create new assembly ' to v0.28 [\#13444](https://github.com/decidim/decidim/pull/13444)
+- Backport 'Fix display of short bio in conferences' speaker modal' to v0.28 [\#13469](https://github.com/decidim/decidim/pull/13469)
+- **decidim-core**, **decidim-generators**: Backport 'Allow to configure the cell cache expiry time' to v0.28 [\#13454](https://github.com/decidim/decidim/pull/13454)
+- **decidim-blogs**, **decidim-core**: Backport 'Fix for liking a resource prompts for groups even though groups are disabled' to v0.28 [\#13459](https://github.com/decidim/decidim/pull/13459)
+- **decidim-initiatives**: Backport 'Fix Stack Level Too Deep on request committee member in initiatives' to v0.28 [\#13465](https://github.com/decidim/decidim/pull/13465)
+- **decidim-accountability**, **decidim-assemblies**, **decidim-blogs**, **decidim-core**, **decidim-debates**, **decidim-meetings**, **decidim-participatory processes**, **decidim-proposals**: Backport 'Fix showing spaces in Last Activity page' to v0.28 [\#13466](https://github.com/decidim/decidim/pull/13466)
+- **decidim-core**, **decidim-proposals**: Backport 'Fix for creating an amendment in proposals is not cloning the category ' to v0.28 [\#13457](https://github.com/decidim/decidim/pull/13457)
+- **decidim-admin**, **decidim-core**: Backport 'Fix regression when there's a disabled button in the upload modal' to v0.28 [\#13464](https://github.com/decidim/decidim/pull/13464)
+- **decidim-admin**: Backport 'Dropdown select scopes on Newsletters ' to v0.28 [\#13476](https://github.com/decidim/decidim/pull/13476)
+- **decidim-core**, **decidim-dev**, **decidim-generators**, **decidim-system**: Backport 'Fix issues with customized Omniauth callback handling' to v0.28 [\#13394](https://github.com/decidim/decidim/pull/13394)
+- **decidim-core**, **decidim-dev**, **decidim-forms**, **decidim-generators**, **decidim-initiatives**, **decidim-meetings**, **decidim-proposals**: Backport 'Remove invalid upload files' to v0.28 [\#13467](https://github.com/decidim/decidim/pull/13467)
+
+### Removed
+
+Nothing.
+
+### Developer improvements
+
+- Backport 'Remove invalid upload files' to v0.28 [\#13467](https://github.com/decidim/decidim/pull/13467)
+
+### Internal
+
+Nothing.
+
+## [0.28.3](https://github.com/decidim/decidim/tree/0.28.3)
+
+### Added
+
+Nothing.
+
+### Changed
+
+Nothing.
+
+### Fixed
+
+- **decidim-core**: Backport 'Prevent cached signed global IDs from expiring' to v0.28 [\#13232](https://github.com/decidim/decidim/pull/13232)
+- **decidim-accountability**, **decidim-admin**, **decidim-budgets**, **decidim-conferences**, **decidim-initiatives**, **decidim-meetings**, **decidim-proposals**: Backport 'Fix clickable area in dropdowns' to v0.28 [\#13233](https://github.com/decidim/decidim/pull/13233)
+- **decidim-core**, **decidim-elections**, **decidim-generators**: Backport 'Implements 7zip as a CLI wrapper' to v0.28 [\#13234](https://github.com/decidim/decidim/pull/13234)
+- **decidim-core**: Backport 'Send welcome notifications for omniauth users' to v0.28 [\#13240](https://github.com/decidim/decidim/pull/13240)
+- **decidim-admin**: Backport 'Pagination and search on conflicts page' to v0.28 [\#13242](https://github.com/decidim/decidim/pull/13242)
+- **decidim-meetings**: Backport 'Allow admin tags in meeting minutes' to v0.28 [\#13241](https://github.com/decidim/decidim/pull/13241)
+- **decidim-admin**, **decidim-assemblies**, **decidim-blogs**, **decidim-conferences**, **decidim-core**, **decidim-initiatives**, **decidim-participatory processes**, **decidim-system**: Backport 'Improve ActiveStorage asset linking performance' to v0.28 [\#13228](https://github.com/decidim/decidim/pull/13228)
+- **decidim-admin**: Backport 'Overwrite admin "Cell" -helper method' to v0.28 [\#13262](https://github.com/decidim/decidim/pull/13262)
+- Backport 'Lock Chrome and ChromeDriver to 126.0.6478.182' to v0.28 [\#13309](https://github.com/decidim/decidim/pull/13309)
+- Backport 'Fix google-chrome-stable installation in CI' to v0.28 [\#13327](https://github.com/decidim/decidim/pull/13327)
+- **decidim-core**: Backport 'Fix deprecation warnings from SASS' to v0.28 [\#13320](https://github.com/decidim/decidim/pull/13320)
+- **decidim-proposals**: Backport 'Fix proposals' preview spacing' to v0.28 [\#13326](https://github.com/decidim/decidim/pull/13326)
+- **decidim-core**, **decidim-proposals**: Backport 'Fix character counter disposition and spacing with WYSIWYG' to v0.28 [\#13325](https://github.com/decidim/decidim/pull/13325)
+- **decidim-admin**, **decidim-generators**, **decidim-proposals**, **decidim-templates**: Backport 'Fix exceptions with `decidim-templates` when not added explicitly ' to v0.28 [\#13324](https://github.com/decidim/decidim/pull/13324)
+- Backport 'Add overwrite parameter to upload-artifact' to v0.28 [\#13323](https://github.com/decidim/decidim/pull/13323)
+- **decidim-admin**: Backport 'Fix deleting a component which has reminders associated with it' to v0.28 [\#13329](https://github.com/decidim/decidim/pull/13329)
+- **decidim-dev**: Backport 'Disable search engine choice window for ChromeDriver in system specs' to v0.28 [\#13330](https://github.com/decidim/decidim/pull/13330)
+- **decidim-core**: Backport 'Prevent malformed URLs in online/hybrid meetings' to v0.28 [\#13331](https://github.com/decidim/decidim/pull/13331)
+- **decidim-dev**, **decidim-generators**: Backport 'Add spring as dependency' to v0.28 [\#13322](https://github.com/decidim/decidim/pull/13322)
+- **decidim-assemblies**, **decidim-budgets**, **decidim-conferences**, **decidim-core**, **decidim-debates**, **decidim-initiatives**, **decidim-meetings**, **decidim-participatory processes**, **decidim-proposals**: Backport 'Fix flaky spec with follow button in participatory spaces' to v0.28 [\#13346](https://github.com/decidim/decidim/pull/13346)
+- **decidim-core**: Backport 'Fix exporting of the open data file' to v0.28 [\#13345](https://github.com/decidim/decidim/pull/13345)
+- **decidim-admin**, **decidim-assemblies**, **decidim-blogs**, **decidim-comments**, **decidim-conferences**, **decidim-core**, **decidim-initiatives**, **decidim-participatory processes**, **decidim-proposals**: Backport 'Remove pagination configuration initializer' to v0.28 [\#13321](https://github.com/decidim/decidim/pull/13321)
+- **decidim-core**: Backport 'Fix results per page display in pagination' to v0.28 [\#13347](https://github.com/decidim/decidim/pull/13347)
+- **decidim-core**, **decidim-dev**: Backport 'Add manifest name check for spaces and components' to v0.28 [\#13359](https://github.com/decidim/decidim/pull/13359)
+
+### Removed
+
+Nothing.
+
+### Developer improvements
+
+- Backport 'Fix clickable area in dropdowns' to v0.28 [\#13233](https://github.com/decidim/decidim/pull/13233)
+
+### Internal
+
+Nothing.
+
+## [0.28.2](https://github.com/decidim/decidim/tree/0.28.2)
+
+### Added
+
+Nothing.
+
+### Changed
+
+Nothing.
+
+### Fixed
+
+- **decidim-dev**: Backport 'Fix lighthouse URLs' to v0.28 [\#12835](https://github.com/decidim/decidim/pull/12835)
+- **decidim-proposals**: Backport 'Fix proposal comparison step' to v0.28 [\#12831](https://github.com/decidim/decidim/pull/12831)
+- **decidim-core**: Backport 'Add the `rel="nofollow noopener noreferrer"` attribute to external links' to v0.28 [\#12832](https://github.com/decidim/decidim/pull/12832)
+- **decidim-conferences**: Backport 'Fix broken conference registering when no registration types' to v0.28 [\#12833](https://github.com/decidim/decidim/pull/12833)
+- **decidim-core**: Backport 'Fix flaky specs when organization name has an apostrophe' to v0.28 [\#12836](https://github.com/decidim/decidim/pull/12836)
+- **decidim-admin**, **decidim-comments**, **decidim-core**, **decidim-participatory processes**: Backport 'Fix some accessibility issues with comments' to v0.28 [\#12834](https://github.com/decidim/decidim/pull/12834)
+- **decidim-meetings**: Backport 'Fix organization multitenant issue with meeting's reminders' to v0.28 [\#12838](https://github.com/decidim/decidim/pull/12838)
+- **decidim-admin**, **decidim-core**, **decidim-system**: Backport 'Add organization or application name in emails' From header' to v0.28 [\#12860](https://github.com/decidim/decidim/pull/12860)
+- **decidim-system**: Backport 'Fix 500 error when creating or updating an organization without a secret key' to v0.28 [\#12862](https://github.com/decidim/decidim/pull/12862)
+- **decidim-core**: Backport 'Fix exceptions there isn't an organization with a host' to v0.28 [\#12861](https://github.com/decidim/decidim/pull/12861)
+- **decidim-core**: Backport 'Fix layout in Safari when there are few elements in the page' to v0.28 [\#12854](https://github.com/decidim/decidim/pull/12854)
+- **decidim-admin**: Backport 'Order users by term similarity within admin dashboard selectors' to v0.28 [\#12856](https://github.com/decidim/decidim/pull/12856)
+- **decidim-conferences**: Backport 'Remove sidebar when conference has no components' to v0.28 [\#12863](https://github.com/decidim/decidim/pull/12863)
+- **decidim-accountability**, **decidim-admin**, **decidim-budgets**, **decidim-comments**, **decidim-core**, **decidim-design**, **decidim-forms**, **decidim-meetings**, **decidim-participatory processes**, **decidim-proposals**: Backport 'Fix several HTML validation issues in redesign' to v0.28 [\#12859](https://github.com/decidim/decidim/pull/12859)
+- **decidim-admin**: Backport 'Fix admin language selector' to v0.28 [\#12855](https://github.com/decidim/decidim/pull/12855)
+- **decidim-core**: Backport 'Use values from secrets to set default max attachment and avatar size' to v0.28 [\#12906](https://github.com/decidim/decidim/pull/12906)
+- **decidim-budgets**: Backport 'Fix strings for ordering when listing budgets' to v0.28 [\#12928](https://github.com/decidim/decidim/pull/12928)
+- **decidim-accountability**, **decidim-admin**, **decidim-conferences**, **decidim-core**: Backport 'Prevent showing the dropdown menu when changing orientation of mobile devices' to v0.28 [\#12929](https://github.com/decidim/decidim/pull/12929)
+- **decidim-accountability**, **decidim-comments**, **decidim-core**, **decidim-dev**, **decidim-proposals**: Backport 'Hide moderated content from notifications' to v0.28 [\#12926](https://github.com/decidim/decidim/pull/12926)
+- **decidim-system**: Backport 'Fix admin name errors during organization creation' to v0.28 [\#12946](https://github.com/decidim/decidim/pull/12946)
+- **decidim-comments**: Backport 'Fix flaky spec on comments seeds' to v0.28 [\#12944](https://github.com/decidim/decidim/pull/12944)
+- **decidim-conferences**: Backport 'Fix flaky spec on long registration type titles' to v0.28 [\#12943](https://github.com/decidim/decidim/pull/12943)
+- **decidim-meetings**: Backport 'Fix invalid dates on meetings' seeds' to v0.28 [\#12942](https://github.com/decidim/decidim/pull/12942)
+- **decidim-conferences**: Backport 'Remove unecessary accordion in Conferences' program' to v0.28 [\#12941](https://github.com/decidim/decidim/pull/12941)
+- **decidim-debates**, **decidim-meetings**, **decidim-proposals**: Backport 'Fix exception when going to debates new URL directly as non-logged user ' to v0.28 [\#12937](https://github.com/decidim/decidim/pull/12937)
+- **decidim-admin**: Backport 'Fix flaky related to `Decidim.available_locales`' to v0.28 [\#12962](https://github.com/decidim/decidim/pull/12962)
+- **decidim-admin**: Backport 'Fix flaky spec when pasting a link in the WYSIWYG editor' to v0.28 [\#12963](https://github.com/decidim/decidim/pull/12963)
+- **decidim-core**, **decidim-system**: Backport 'Do not update SMTP or omniauth attributes if no values are specified' to v0.28 [\#12949](https://github.com/decidim/decidim/pull/12949)
+- **decidim-dev**: Backport 'Fix incomplete regexp in webmock configuration' to v0.28 [\#12947](https://github.com/decidim/decidim/pull/12947)
+- **decidim-assemblies**, **decidim-conferences**, **decidim-participatory processes**: Backport 'Fix flaky specs with last job matcher with concurreny' to v0.28 [\#12945](https://github.com/decidim/decidim/pull/12945)
+- **decidim-core**: Backport 'Fix external URL with a fragment' to v0.28 [\#12940](https://github.com/decidim/decidim/pull/12940)
+- **decidim-admin**, **decidim-initiatives**: Backport 'Fix i18n string misplacement in decidim-initiatives' to v0.28 [\#12938](https://github.com/decidim/decidim/pull/12938)
+- **decidim-assemblies**, **decidim-conferences**, **decidim-participatory processes**: Backport 'Fix valuators access to the admin participatory space' to v0.28 [\#12969](https://github.com/decidim/decidim/pull/12969)
+- **decidim-proposals**: Backport 'Hide support instruction messages once support collection is finished' to v0.28 [\#12967](https://github.com/decidim/decidim/pull/12967)
+- **decidim-comments**, **decidim-core**: Backport 'Fix flaky specs in comment search' to v0.28 [\#12968](https://github.com/decidim/decidim/pull/12968)
+- **decidim-admin**: Backport 'Fix flaky spec on organization form (comment max length)' to v0.28 [\#12989](https://github.com/decidim/decidim/pull/12989)
+- **decidim-proposals**: Backport 'Add proposal author when exporting proposals' to v0.28 [\#12939](https://github.com/decidim/decidim/pull/12939)
+- **decidim-proposals**: Backport 'Fix proposal bulk actions buttons display' to v0.28 [\#12991](https://github.com/decidim/decidim/pull/12991)
+- **decidim-proposals**: Backport 'Fix stying in participatory texts' to v0.28 [\#12990](https://github.com/decidim/decidim/pull/12990)
+- **decidim-core**, **decidim-proposals**: Backport 'Do not display an error when filling a form' to v0.28 [\#12966](https://github.com/decidim/decidim/pull/12966)
+- **decidim-proposals**: Backport 'Change default proposal sorting word to automatic' to v0.28 [\#13020](https://github.com/decidim/decidim/pull/13020)
+- **decidim-admin**, **decidim-verifications**: Backport 'Fix enable authorizations listing in admin panel' to v0.28 [\#13021](https://github.com/decidim/decidim/pull/13021)
+- Bump tailwindcss from 3.3.2 to 3.4.1 [\#13031](https://github.com/decidim/decidim/pull/13031)
+- **decidim-admin**, **decidim-dev**: Backport 'Enable admin's system tests' to v0.28 [\#13080](https://github.com/decidim/decidim/pull/13080)
+- **decidim-proposals**: Backport 'Fix hard dependency on meetings for `decidim-proposals`' to v0.28 [\#13071](https://github.com/decidim/decidim/pull/13071)
+- **decidim-meetings**: Backport 'Do not allow registering to a meeting if it started' to v0.28 [\#13019](https://github.com/decidim/decidim/pull/13019)
+- **decidim-assemblies**, **decidim-core**, **decidim-participatory processes**: Backport 'Fix participatory process groups a11y errors' to v0.28 [\#13073](https://github.com/decidim/decidim/pull/13073)
+- **decidim-core**: Backport 'Consider that the meetings module might not be installed' to v0.28 [\#13072](https://github.com/decidim/decidim/pull/13072)
+- **decidim-core**: Backport 'Remove dependency on `decidim-system` from `decidim-core`' to v0.28 [\#13070](https://github.com/decidim/decidim/pull/13070)
+- **decidim-initiatives**: Backport 'Do not show unecessary actions in the initiative page' to v0.28 [\#13092](https://github.com/decidim/decidim/pull/13092)
+- **decidim-core**: Backport 'Change background color for PWA from primary to white' to v0.28 [\#13090](https://github.com/decidim/decidim/pull/13090)
+- **decidim-initiatives**: Backport 'Fix escaping in initiatives type description HTML' to v0.28 [\#13093](https://github.com/decidim/decidim/pull/13093)
+- **decidim-accountability**, **decidim-blogs**, **decidim-budgets**, **decidim-comments**, **decidim-core**, **decidim-debates**, **decidim-dev**, **decidim-meetings**, **decidim-proposals**: Backport 'Fix showing announcement when comments are disabled ' to v0.28 [\#13089](https://github.com/decidim/decidim/pull/13089)
+- **decidim-core**: Backport 'Fix endorsement seeds with low amount of users' to v0.28 [\#13095](https://github.com/decidim/decidim/pull/13095)
+- **decidim-accountability**, **decidim-admin**, **decidim-assemblies**, **decidim-blogs**, **decidim-budgets**, **decidim-conferences**, **decidim-core**, **decidim-debates**, **decidim-meetings**, **decidim-pages**, **decidim-participatory processes**, **decidim-proposals**, **decidim-sortitions**, **decidim-templates**: Backport 'Refactor malformed titles in admin logs (part 1)' to v0.28 [\#13082](https://github.com/decidim/decidim/pull/13082)
+- **decidim-admin**, **decidim-core**, **decidim-dev**, **decidim-participatory processes**, **decidim-proposals**, **decidim-verifications**: Backport 'Label changes on Save button in Modals' to v0.28 [\#13094](https://github.com/decidim/decidim/pull/13094)
+- **decidim-admin**, **decidim-assemblies**, **decidim-conferences**, **decidim-participatory processes**: Backport 'Fix user role selected when editing a space admin' to v0.28 [\#13091](https://github.com/decidim/decidim/pull/13091)
+- **decidim-admin**, **decidim-assemblies**, **decidim-conferences**, **decidim-core**, **decidim-initiatives**, **decidim-participatory processes**: Backport 'Refactor malformed titles in admin logs (part 2)' to v0.28 [\#13083](https://github.com/decidim/decidim/pull/13083)
+- **decidim-admin**, **decidim-assemblies**, **decidim-conferences**, **decidim-core**, **decidim-participatory processes**: Backport 'Show the admin bar for other roles' to v0.28 [\#13132](https://github.com/decidim/decidim/pull/13132)
+- **decidim-meetings**, **decidim-proposals**: Backport 'Fix edit proposal icon  ' to v0.28 [\#13131](https://github.com/decidim/decidim/pull/13131)
+- **decidim-core**: Backport 'Fix attachments uploads with modal' to v0.28 [\#13130](https://github.com/decidim/decidim/pull/13130)
+- **decidim-core**: Backport 'Fix markup for Badges explanation page' to v0.28 [\#13129](https://github.com/decidim/decidim/pull/13129)
+- **decidim-accountability**, **decidim-core**: Backport 'Fix timeline entries display in result page' to v0.28 [\#13133](https://github.com/decidim/decidim/pull/13133)
+- **decidim-accountability**, **decidim-blogs**, **decidim-budgets**, **decidim-comments**, **decidim-core**, **decidim-debates**, **decidim-dev**, **decidim-meetings**, **decidim-proposals**: Backport 'Fix users tooltip display after clicking Endorse/Like/Dislike' to v0.28 [\#13143](https://github.com/decidim/decidim/pull/13143)
+- **decidim-assemblies**: Fix Assemblies pipeline [\#13144](https://github.com/decidim/decidim/pull/13144)
+
+### Removed
+
+Nothing.
+
+### Developer improvements
+
+- Backport 'Fix hard dependency on meetings for `decidim-proposals`' to v0.28 [\#13071](https://github.com/decidim/decidim/pull/13071)
+- Backport 'Consider that the meetings module might not be installed' to v0.28 [\#13072](https://github.com/decidim/decidim/pull/13072)
+- Backport 'Remove dependency on `decidim-system` from `decidim-core`' to v0.28 [\#13070](https://github.com/decidim/decidim/pull/13070)
+- Backport 'Fix endorsement seeds with low amount of users' to v0.28 [\#13095](https://github.com/decidim/decidim/pull/13095)
+
+### Internal
+
+- **decidim-dev**: Backport 'Fix lighthouse URLs' to v0.28 [\#12835](https://github.com/decidim/decidim/pull/12835)
+
 ## [0.28.1](https://github.com/decidim/decidim/tree/0.28.1)
 
 ### Added

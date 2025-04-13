@@ -18,7 +18,7 @@ eu:
     blogs:
       actions:
         author_id: Sortu argitalpena hau bezala
-        confirm_destroy: Ziur zaude post hau argitalpen ezabatu nahi duzula?
+        confirm_destroy: Ziur zaude korreo elektronikoa hau ezabatu nahi duzula?
         destroy: Ezabatu
         edit: Editatu
         new: Beste argitalpen bat
@@ -44,9 +44,9 @@ eu:
             success: Argitalpena zuzen gordea.
       admin_log:
         post:
-          create: "%{user_name} k %{resource_name} blogeko argitalpena sortu du %{space_name} espazioan"
-          delete: "%{user_name} k %{resource_name} blogeko argitalpena ezabatu du %{space_name} espazioan"
-          update: "%{user_name} k %{resource_name} blogeko argitalpena eguneratu egin da %{space_name} espazioan"
+          create: "%{user_name} parte-hartzailekak %{resource_name} blogeko argitalpena sortu du %{space_name} espazioan"
+          delete: "%{user_name} parte-hartzailekak %{resource_name} blogeko argitalpena ezabatu du %{space_name} espazioan"
+          update: "%{user_name} parte-hartzailekak %{resource_name} blogeko argitalpena eguneratu egin da %{space_name} espazioan"
       content_blocks:
         highlighted_posts:
           last_published: Azken argitarapena
@@ -65,8 +65,8 @@ eu:
       posts:
         index:
           count:
-            one: "%{count} argitalpen"
-            other: "%{count} edukin"
+            one: "Argitalpen %{count}"
+            other: "%{count} argitalpen"
           empty: Oraindik ez dago argitalpenik.
     components:
       blogs:
@@ -93,6 +93,6 @@ eu:
           email_intro: '"%{resource_title}" argitalpena jarraitzen ari zaren "%{participatory_space_title}" espazioan argitaratu da.'
           email_outro: Jakinarazpena jaso duzu "%{participatory_space_title}" jarraitzen ari zarelako. Aurreko estekan utzi ahal diozu jarraitzeari.
           email_subject: Argitalpen berria %{participatory_space_title} espazioan
-          notification_title: <a href="%{resource_path}">%{resource_title}</a> posta %{participatory_space_title} argitaratu da
+          notification_title: <a href="%{resource_path}">%{resource_title}</a> sarrera %{participatory_space_title} argitaratu da
     statistics:
       posts_count: Argitalpenak

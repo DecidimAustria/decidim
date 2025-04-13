@@ -63,6 +63,13 @@ id:
       decidim/proposals/proposal_vote:
         other: Suara
   decidim:
+    admin:
+      filters:
+        proposals:
+          category_id_eq:
+            label: Kategori
+          scope_id_eq:
+            label: Cakupan
     components:
       proposals:
         actions:
@@ -92,6 +99,7 @@ id:
             proposal_wizard_step_2_help_text: Proposal wizard "Bandingkan" langkah bantuan teks
             proposal_wizard_step_3_help_text: Panduan proposal, selesaikan langkah bantuan teks
             resources_permissions_enabled: Izin tindakan dapat diatur untuk setiap proposal
+            scope_id: Cakupan
             threshold_per_proposal: Ambang batas per proposal
             vote_limit: Batas suara per pengguna
           step:
@@ -174,11 +182,8 @@ id:
             notification_title: Proposal <a href="%{resource_path}">%{resource_title}</a> telah ditolak.
         proposal_update_category:
           email_intro: 'Admin telah memperbarui kategori proposal Anda "%{resource_title}", periksa ini:'
-          email_outro: Anda telah menerima pemberitahuan ini karena Anda adalah penulis proposal.
           email_subject: Kategori proposal %{resource_title} telah diperbarui
           notification_title: Kategori proposal <a href="%{resource_path}">%{resource_title}</a> telah diperbarui oleh admin.
-        proposal_update_scope:
-          email_outro: Anda telah menerima pemberitahuan ini karena Anda adalah penulis proposal.
         voting_enabled:
           email_intro: 'Anda dapat memilih proposal dalam %{participatory_space_title}! Mulai berpartisipasi di halaman ini:'
           email_outro: Anda telah menerima pemberitahuan ini karena Anda mengikuti %{participatory_space_title}. Anda dapat berhenti menerima notifikasi mengikuti tautan sebelumnya.
@@ -491,7 +496,6 @@ id:
           discard: Buang draf ini
           discard_confirmation: Anda yakin ingin membuang draf proposal ini?
           send: Preview
-          title: Edit Draf Proposal
         filters:
           amendment_type: Mengetik
           category: Kategori

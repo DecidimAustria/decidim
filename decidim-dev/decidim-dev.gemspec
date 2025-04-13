@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.version = Decidim::Dev.version
   s.authors = ["Josep Jaume Rey Peroy", "Marc Riera Casals", "Oriol Gual Oliva"]
   s.email = ["josepjaume@gmail.com", "mrc2407@gmail.com", "oriolgual@gmail.com"]
-  s.license = "AGPL-3.0"
+  s.license = "AGPL-3.0-or-later"
   s.homepage = "https://decidim.org"
   s.metadata = {
     "bug_tracker_uri" => "https://github.com/decidim/decidim/issues",
@@ -58,6 +58,8 @@ Gem::Specification.new do |s|
   s.add_dependency "selenium-webdriver", "~> 4.9"
   s.add_dependency "simplecov", "~> 0.22.0"
   s.add_dependency "simplecov-cobertura", "~> 2.1.0"
+  s.add_dependency "spring", "~> 2.0"
+  s.add_dependency "spring-watcher-listen", "~> 2.0"
   s.add_dependency "w3c_rspec_validators", "~> 0.3.0"
   s.add_dependency "webmock", "~> 3.18"
   s.add_dependency "wisper-rspec", "~> 1.0"

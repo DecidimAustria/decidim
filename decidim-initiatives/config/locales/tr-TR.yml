@@ -83,7 +83,6 @@ tr:
         search_placeholder:
           title_or_description_or_id_string_or_author_name_or_author_nickname_cont: '%{collection} ''ı başlık, açıklama, kimlik veya yazar adına göre arayın.'
       menu:
-        components: Bileşenler
         information: Bilgi
         initiatives: Girişimler
         initiatives_types: Girişim türleri
@@ -280,7 +279,6 @@ tr:
         finish:
           back: Geri
           back_to_initiatives: Girişimlere geri dön
-          callout_text: Tebrikler! Girişiminiz başarıyla oluşturuldu.
           confirm: Bir yöneticinin gözden geçirmesi ve yayınlaması için inisiyatif göndereceksiniz. Yayınlandıktan sonra onu düzenleyemezsiniz. Emin misiniz?
           edit_my_initiative: Girişimimi düzenle
           go_to_my_initiatives: Benim girişimlerime git
@@ -395,7 +393,7 @@ tr:
           phone_number: Telefon numarası
           place_date: Yer, Tarih
           postal_code: Posta Kodu
-          print: Yazdır
+          print: baskı
           province: İlçe / İl
           section: 'Kuruluş tarafından istenirse, lütfen belirtilen yerlerde göndermek için bu formu yazdırın ve doldurun:'
           signature: İmza
@@ -453,13 +451,14 @@ tr:
     resources:
       initiatives_type:
         actions:
+          create: Oluştur
           title: Eylemler
           vote: İmza
   layouts:
     decidim:
       initiative_creation_header:
         fill_data: Oluştur
-        finish: Bitir
+        finish: Bitiş
         promotal_committee: Tanıtım komitesi
         select_initiative_type: Seç
       initiative_signature_creation_header:

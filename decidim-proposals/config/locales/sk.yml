@@ -87,6 +87,10 @@ sk:
     admin:
       filters:
         proposals:
+          category_id_eq:
+            label: Kategória
+          scope_id_eq:
+            label: Rozsah
           valuator_role_ids_has:
             label: Priradené ku hodnotiteľov
         search_placeholder:
@@ -126,6 +130,7 @@ sk:
             proposal_wizard_step_2_help_text: Pomocný text Sprievodcu "Porovnať" návrhu
             proposal_wizard_step_3_help_text: Pomocný text Sprievodcu "Dokončiť" návrh
             resources_permissions_enabled: Pre každý návrh možno nastaviť povolenia akcie
+            scope_id: Rozsah
             threshold_per_proposal: Maximálny limit na návrh
             vote_limit: Počet hlasov na užívateľa
           step:
@@ -219,12 +224,10 @@ sk:
             notification_title: Návrh <a href="%{resource_path}">%{resource_title} </a> bol zamietnutý.
         proposal_update_category:
           email_intro: 'Správca aktualizoval kategórii vášho návrhu "%{resource_title}", pozrite sa na neho:'
-          email_outro: Toto oznámenie ste dostali, pretože ste autorom návrhu.
           email_subject: Kategória návrhov %{resource_title} bola aktualizovaná
           notification_title: Kategória návrhu <a href="%{resource_path}">%{resource_title} </a> bola aktualizovaná administrátorom.
         proposal_update_scope:
           email_intro: 'Admin upravil rozsah Vašeho návrhu %{resource_title}, pozrite sa na to na tejto stránke:'
-          email_outro: Toto oznámenie ste dostali, pretože ste autorom návrhu.
           email_subject: Rozsah návrhu %{resource_title} bol aktualizovaný
           notification_title: Rozsah návrhu <a href="%{resource_path}">%{resource_title}</a> bol aktualizovaný administrátorom.
         voting_enabled:
@@ -356,7 +359,6 @@ sk:
           index:
             actions: Akcia
             assign_to_valuator: Priradiť ku hodnotiteľovi
-            assign_to_valuator_button: Priradiť
             cancel: zrušenie
             change_category: Zmeniť kategórii
             change_scope: Zmeniť rozsah
@@ -370,7 +372,6 @@ sk:
             split_button: Rozdeliť
             title: Návrhy
             unassign_from_valuator: Zrušiť priradenie ku hodnotiteľovi
-            unassign_from_valuator_button: Zrušiť priradenie
             update: Aktualizácia
             update_scope_button: Aktualizovať rozsah
           new:
@@ -585,7 +586,6 @@ sk:
           discard: Zrušte tento návrh
           discard_confirmation: Naozaj chcete túto návrh zakázať?
           send: Náhľad
-          title: Upraviť koncept návrhu
         filters:
           activity: Moja aktivita
           all: Všetko

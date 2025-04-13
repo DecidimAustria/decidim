@@ -277,12 +277,10 @@ pt-BR:
             notification_title: A proposta <a href="%{resource_path}">%{resource_title}</a> foi rejeitada.
         proposal_update_category:
           email_intro: 'Um administrador atualizou a categoria de sua proposta "%{resource_title}", confira:'
-          email_outro: Você recebeu esta notificação porque você é o autor da proposta.
           email_subject: A categoria de proposta %{resource_title} foi atualizada
           notification_title: A <a href="%{resource_path}">%{resource_title}</a> categoria de proposta foi atualizada por um administrador.
         proposal_update_scope:
           email_intro: 'Um administrador atualizou o escopo de sua proposta "%{resource_title}", confira nesta página:'
-          email_outro: Você recebeu esta notificação porque você é o autor da proposta.
           email_subject: O escopo da proposta %{resource_title} foi atualizado
           notification_title: O escopo da proposta <a href="%{resource_path}">%{resource_title}</a> foi atualizado por um administrador.
         voting_enabled:
@@ -435,7 +433,7 @@ pt-BR:
             title: Atualizar proposta
             update: Atualizar
           form:
-            attachment_legend: "(Opcional) Adicionar um anexo"
+            attachment_legend: "(Opcional) Adicione um anexo"
             created_in_meeting: Esta proposta vem de uma reunião
             delete_attachment: Excluir anexo
             select_a_category: Selecionar uma categoria
@@ -443,7 +441,6 @@ pt-BR:
           index:
             actions: Ações
             assign_to_valuator: Atribuir ao avaliador
-            assign_to_valuator_button: Atribuir
             cancel: Cancelar
             change_category: Alterar categoria
             change_scope: Alterar o escopo
@@ -457,7 +454,6 @@ pt-BR:
             split_button: Dividir
             title: Propostas
             unassign_from_valuator: Desatribuir do avaliador
-            unassign_from_valuator_button: Desatribuir
             update: Atualizar
             update_scope_button: Atualizar Escopo
           new:
@@ -643,7 +639,7 @@ pt-BR:
             official_proposal: Proposta oficial
             published_answer: Resposta publicada
             published_at: Publicado em
-            scope: Âmbito
+            scope: Escopo
             state: Estado
             title: Título
             valuator: Avaliador
@@ -680,7 +676,6 @@ pt-BR:
           discard: Descarte este rascunho
           discard_confirmation: Deseja mesmo descartar este rascunho de proposta?
           send: Visualização
-          title: Editar proposta de rascunho
         filters:
           activity: Minha atividade
           all: Tudo
@@ -703,7 +698,6 @@ pt-BR:
           see_all_withdrawn: Veja todas as propostas retiradas
         new:
           send: Continuar
-          title: Crie sua proposta
         orders:
           label: 'Ordene propostas por:'
           most_commented: Mais comentados

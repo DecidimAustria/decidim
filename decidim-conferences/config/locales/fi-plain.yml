@@ -120,13 +120,13 @@ fi-pl:
         destroy:
           success: Puhuja poistettiin onnistuneesti konferenssista.
         edit:
-          title: Päivitä konferenssin puhuja.
+          title: Päivitä konferenssin puhujaa
           update: Päivitä
         index:
           conference_speakers_title: Konferenssin puhujat
         new:
           create: Luo
-          title: Uusi konferenssin puhuja.
+          title: Uusi konferenssin puhuja
         update:
           error: Konferenssin puhujan päivittämisessä tapahtui virhe.
           success: Konferenssin puhuja päivitettiin onnistuneesti.
@@ -137,13 +137,13 @@ fi-pl:
         destroy:
           success: Käyttäjä poistettiin onnistuneesti konferenssista.
         edit:
-          title: Päivitä konferenssin käyttäjä.
+          title: Päivitä konferenssin hallintakäyttäjää
           update: Päivitä
         index:
           conference_admins_title: Konferenssin ylläpitäjät
         new:
           create: Luo
-          title: Uusi konferenssin käyttäjä.
+          title: Uusi konferenssin hallintakäyttäjä
         update:
           error: Konferenssin käyttäjän päivittämisessä tapahtui virhe.
           success: Konferenssin käyttäjä päivitettiin onnistuneesti.
@@ -173,20 +173,20 @@ fi-pl:
       media_links:
         create:
           error: Luotaessa uutta medialinkkiä tapahtui virhe.
-          success: Medialinkki luotu onnistuneesti.
+          success: Medialinkin luonti onnistui.
         destroy:
-          success: Medialinkki poistettiin onnistuneesti.
+          success: Medialinkin poisto onnistui.
         edit:
-          title: Päivitä medialinkki.
+          title: Päivitä medialinkkiä
           update: Päivitä
         index:
           media_links_title: Medialinkit
         new:
           create: Luo
-          title: Medialinkki
+          title: Luo medialinkki
         update:
           error: Medialinkin päivittämisessä esiintyi virhe.
-          success: Medialinkki päivitettiin onnistuneesti.
+          success: Medialinkin päivitys onnistui.
       menu:
         conferences: Konferenssit
         conferences_submenu:
@@ -261,7 +261,7 @@ fi-pl:
         destroy:
           success: Yhteistyökumppani poistettu onnistuneesti tästä konferenssista.
         edit:
-          title: Päivitä yhteistyökumppani.
+          title: Päivitä yhteistyökumppania
           update: Päivitä
         new:
           create: Luo
@@ -283,7 +283,7 @@ fi-pl:
         destroy:
           success: Ilmoittautumistyyppi poistettiin onnistuneesti tästä konferenssista.
         edit:
-          title: Päivitä ilmoittautumistyyppi.
+          title: Päivitä ilmoittautumistyyppiä
           update: Päivitä
         new:
           create: Luo
@@ -474,6 +474,8 @@ fi-pl:
           name: Tärkeimmät konferenssit
       index:
         title: Konferenssit
+      last_activity:
+        new_conference: 'Uusi konferenssi:'
       mailer:
         conference_registration_mailer:
           confirmation:

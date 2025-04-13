@@ -14,7 +14,6 @@ sk:
         answer:
           attributes:
             choices:
-              missing: nie je kompletné
               too_many: je príliš veľa
   decidim:
     forms:
@@ -26,14 +25,12 @@ sk:
         questionnaires:
           answer_option:
             answer_option: Možnosť odpovede
-            free_text: Voľný text
             remove: Odstrániť
             statement: Prehlásenie
           edit:
             save: Uložiť
           form:
             add_question: Pridať otázku
-            already_answered_warning: Na formulár už niekto odpovedal, takže nemôžete meniť jeho otázky.
           matrix_row:
             remove: Odstrániť
             statement: Prehlásenie
@@ -75,11 +72,8 @@ sk:
           tos_agreement: Účasťou súhlasíte s našimi Podmienkami použitia
       step_navigation:
         show:
-          are_you_sure: Táto akcia sa nedá vrátiť späť, a nebudete môcť upraviť svoje odpovede. Ste si istí?
           submit: Poslať
       user_answers_serializer:
         created_at: Odpovedané na 
         id: ID odpovede
-        registered: Registrovaný
-        unregistered: Neregistrovaný
-        user_status: Status Užívateľa
+        question: Otázka

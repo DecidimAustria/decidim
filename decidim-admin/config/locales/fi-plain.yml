@@ -93,7 +93,7 @@ fi-pl:
         secondary_hosts: Toissijaiset osoitteet
         send_welcome_notification: Lähetä tervetuloilmoitus
         success_color: Onnistuminen
-        tertiary_color: Kolmiasteinen värimääritys
+        tertiary_color: Kolmassijainen
         time_zone: Aikavyöhyke
         tos_version: Käyttöehtojen versio
         twitter_handler: X käsittelijä
@@ -188,6 +188,7 @@ fi-pl:
         export: Vie kaikki
         export-selection: Vie valitut
         import: Tuo
+        manage: Hallitse
         newsletter:
           new: Uusi uutiskirje
         participatory_space_private_user:
@@ -318,7 +319,7 @@ fi-pl:
         create:
           error: Tämän komponentin luomisessa tapahtui virhe.
           success: Komponentti luotu onnistuneesti.
-          success_landing_page: Komponentti luotu onnistuneesti. Voit lisätä sisältölohkon tälle komponentille osallistumistilan etusivulle. Siirry <a href="%{landing_page_path}">Laskeutumissivu-osioon</a> lisätäksesi komponentin osallistumistilan etusivulle.
+          success_landing_page: Komponentin luonti onnistui. Voit lisätä sisältölohkon tälle komponentille osallistumistilan etusivulle. Siirry <a href="%{landing_page_path}">Laskeutumissivu-osioon</a> lisätäksesi komponentin osallistumistilan etusivulle.
         destroy:
           error: Tämän komponentin tuhoamisessa tapahtui virhe.
           success: Komponentti poistettu onnistuneesti.
@@ -350,6 +351,8 @@ fi-pl:
       conflicts:
         attempts: Yritykset
         'false': 'Ei'
+        index:
+          text: Etsi nykyisen käyttäjän sähköpostin, nimen tai nimimerkin perusteella.
         managed_user_name: Hallittu käyttäjä
         solved: Ratkaistu
         title: Vahvistusten ristiriidat
@@ -571,6 +574,7 @@ fi-pl:
         appearance: Ulkoasu
         area_types: Aluetyypit
         areas: Alueet
+        components: Komponentit
         configuration: Asetukset
         content: Ilmoitettu sisältö
         external_domain_whitelist: Sallitut ulkoiset verkko-osoitteet
@@ -641,7 +645,7 @@ fi-pl:
             plural: Monikko
         share_token:
           fields:
-            created_at: Luontiaika
+            created_at: Luonnin ajankohta
             expires_at: Vanhentumisaika
             last_used_at: Viimeinen käyttöaika
             times_used: Käyttökertojen määrä
@@ -759,7 +763,7 @@ fi-pl:
           confirm_deliver: Haluatko varmasti toimittaa tämän uutiskirjeen? Tätä toimintoa ei voi peruuttaa.
           deliver: Toimita uutiskirje
           followers_help: Lähetä uutiskirje kaikille vahvistetuille käyttäjille, jotka seuraavat jotain listan osallisuustiloista.
-          none: Ei kenellekään
+          none: Ei mitään
           participants_help: Lähetä uutiskirje kaikille vahvistetuille käyttäjille, jotka ovat osallistuneet jossain listan valituista osallisuustiloista.
           recipients_count: Tämä uutiskirje lähetetään <strong id='recipients_count'>%{count}</strong>:lle käyttäjälle.
           scopes_help: Lähetä uutiskirje käyttäjille, jotka ovat valinneet minkä tahansa teeman heidän tilinsä "Kiinnostuksen kohteet" -asetuksesta.
@@ -1045,9 +1049,9 @@ fi-pl:
       user_groups:
         index:
           state:
-            pending: Odottaa
-            rejected: Hylätty
-            verified: Vahvistettu
+            pending: Odottavat
+            rejected: Hylätyt
+            verified: Vahvistetut
           verify_via_csv: Vahvista CSV-tiedoston avulla
       user_groups_csv_verifications:
         new:
@@ -1057,7 +1061,7 @@ fi-pl:
             acme@esimerkki.fi
             bubba.gump@esimerkki.fi
           title: Lataa CSV-tiedosto
-          upload: Lähetä
+          upload: Lataa
       users:
         create:
           error: Tämän käyttäjän kutsumisessa tapahtui virhe.

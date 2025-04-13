@@ -14,7 +14,6 @@ hu:
         answer:
           attributes:
             choices:
-              missing: nem teljesek
               too_many: túl sok
   decidim:
     forms:
@@ -26,15 +25,12 @@ hu:
         questionnaires:
           answer_option:
             answer_option: Válasz opció
-            free_text: Szabadszöveg
             remove: Eltávolít
             statement: Állítás
           edit:
             save: Mentés
           form:
             add_question: Kérdés hozzáadása
-            add_title_and_description: Adj hozzá címet és leírást
-            already_answered_warning: Néhány felhasználó már válaszolt a kérdőívre, így nem változtathatja meg kérdéseit.
             collapse: Minden kérdés összecsukása
             expand: Minden kérdés kibontása
           matrix_row:
@@ -93,12 +89,9 @@ hu:
           tos_agreement: A részvétellel elfogadja az Általános Szerződési Feltételeket
       step_navigation:
         show:
-          are_you_sure: Ez a művelet nem vonható vissza, és nem tudod majd szerkeszteni a válaszokat. Biztos vagy ebben?
           continue: Folytatás
           submit: Beküldés
       user_answers_serializer:
         created_at: Válaszolt
         id: Válasz azonosító
-        registered: Regisztrált
-        unregistered: Nem regisztrált
-        user_status: Felhasználó státusza
+        question: Kérdés

@@ -13,6 +13,7 @@ fr-CA:
         project_ids: Projets inclus
         proposals: Propositions incluses
         start_date: Date de début
+        subresults: Sous-résultats
         title: Titre
         updated_at: Mise à jour à
       status:
@@ -94,11 +95,11 @@ fr-CA:
             create: Importer
             import_all_selected_projects: Importer tous les projets sélectionnés
             new_items:
-              one: 1 projet sélectionné va être importé
-              other: "%{count} projets sélectionnés vont être importés"
+              one: 1 projet sélectionné sera importé
+              other: "%{count} projets sélectionnés seront importés"
             no_components: Il n'y a aucune fonctionnalité Budget dans cet espace participatif depuis laquelle importer des projets.
-            origin_component_id: Fonctionnalité d'origine
-            select_component: Sélectionner une fonctionnalité
+            origin_component_id: Composant d'origine
+            select_component: Sélectionnez un composant
             success:
               one: Projet en attente d'importation. Vous serez notifié par courriel, une fois l'import terminé.
               other: "%{count} projets en attente d'importation. Vous serez notifié par email une fois l'import terminé."
@@ -200,7 +201,7 @@ fr-CA:
             end_date: Date de fin
             id: ID
             progress: Avancement
-            scope: Secteur
+            scope: Périmètre d'application
             start_date: Date de début
             status: Statut
             title: Titre
@@ -252,7 +253,7 @@ fr-CA:
           category_id_eq:
             label: Catégorie
           scope_id_eq:
-            label: Secteur
+            label: Périmètre d'application
           status_id_eq:
             label: Statut
     components:
@@ -269,7 +270,7 @@ fr-CA:
             heading_leaf_level_results: Nom pour "Projets"
             heading_parent_level_results: Nom pour "Réalisations"
             intro: Introduction
-            scope_id: Secteur
+            scope_id: Périmètre d'application
             scopes_enabled: Secteurs activés
             subcategories_label: Nom pour "Sous-catégories"
           step:

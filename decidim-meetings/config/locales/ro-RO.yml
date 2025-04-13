@@ -206,7 +206,6 @@ ro:
         attachment_collections: Dosare
         attachments: Atașamente
         close: Închide
-        confirm_destroy: Sigur dorești să ştergi acestă întâlnire?
         destroy: Ștergere
         edit: Editare
         invalid_destroy:
@@ -391,7 +390,6 @@ ro:
         new_meeting: 'Ședință nouă:'
       layouts:
         live_event:
-          administrate: Administrează
           close: închide
           questions: Întrebări
       mailer:
@@ -440,6 +438,7 @@ ro:
             all: Toate
             official: Oficial
             participants: Participanți
+            user_group: Grupuri
           search: Caută
           type: Tip
           type_values:
@@ -464,12 +463,15 @@ ro:
           see_all: Vezi toate întâlnirile
           see_all_withdrawn: Afișează toate întâlnirile anulate
           text_banner: Vizualizezi lista de întâlniri anulate de autorii lor. %{go_back_link}.
+        meeting:
+          close_meeting: Închide ședința
+          edit_meeting: Editați ședința
         meetings:
           upcoming_meetings_warning: În prezent, nu există întâlniri programate, dar aici se află pe listă toate întâlnirile anterioare.
         new:
           back: Înapoi
           create: Creează
-          title: Creează-ți o întâlnire
+          title: Creați întâlnire
         registration_confirm:
           cancel: Anulează
           confirm: Confirmare
@@ -581,7 +583,7 @@ ro:
     participatory_spaces:
       highlighted_meetings:
         past_meetings: Întâlniri anterioare
-        see_all: Afișează toate întâlnirile (%{count})
+        see_all: Afișează toate întâlnirile
         upcoming_meetings: Întâlniri viitoare
     resource_links:
       meetings_through_proposals:

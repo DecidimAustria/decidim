@@ -80,7 +80,6 @@ zh-CN:
         search_placeholder:
           title_or_description_or_id_string_or_author_name_or_author_nickname_cont: 按标题、描述、ID或作者名称搜索 %{collection}。
       menu:
-        components: 组件
         information: 信息
         initiatives: 倡议
         initiatives_types: 倡议类型
@@ -345,6 +344,7 @@ zh-CN:
           recently_published: 最近发布的
         print:
           city: 城市
+          print: 打印
         result:
           initiative_rejected_reason: 这项倡议由于没有签字而被拒绝。
         signatures_count:
@@ -391,6 +391,7 @@ zh-CN:
     resources:
       initiatives_type:
         actions:
+          create: 创建
           title: 行动
           vote: 签名
   layouts:

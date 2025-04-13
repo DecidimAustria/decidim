@@ -516,7 +516,7 @@ ca:
           see_all_withdrawn: Veure totes les trobades cancel·lades
           text_banner: Estàs veient un llistat de trobades cancel·lades per les seves autores. %{go_back_link}.
         meeting:
-          close_meeting: Tancar la trobada
+          close_meeting: Tancar trobada
           edit_close_meeting: Editar l'informe de la trobada
           edit_meeting: Editar la trobada
           join_meeting: Unir-se a la trobada
@@ -526,14 +526,14 @@ ca:
         new:
           back: Enrere
           create: Crear
-          title: Crea la teva trobada
+          title: Crear una nova trobada
         registration_confirm:
           cancel: Cancel·lar
           confirm: Confirmar
         show:
           attendees: Nombre d'assistents
           contributions: Nombre d'aportacions
-          join: Unir-se a la trobada
+          join: Inscriu-te
           leave: Cancel·la la teva inscripció
           leave_confirmation: Segur que vols cancel·lar la teva inscripció a aquesta trobada?
           link_available_soon: Enllaç disponible pròximament

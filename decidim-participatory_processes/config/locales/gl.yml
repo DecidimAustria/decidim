@@ -24,7 +24,7 @@ gl:
         promoted: Promocionado
         published_at: Publicado en
         related_process_ids: Procesos relacionados
-        scope_id: Alcance
+        scope_id: Ámbito
         scopes_enabled: Ámbitos habilitados
         short_description: Descrición curta
         show_metrics: Amosar métricas
@@ -52,6 +52,8 @@ gl:
         end_date: Data de finalización
         short_description: Descrición curta
         start_date: Data de inicio
+        title: Título
+      participatory_process_type:
         title: Título
       participatory_process_user_role:
         email: Correo electrónico
@@ -123,6 +125,10 @@ gl:
             start_date: Data de inicio
             title: Título
           name: Paso de proceso participativo
+        participatory_process_type:
+          fields:
+            created_at: Creado en
+            title: Título
         participatory_process_user_role:
           fields:
             email: Correo electrónico
@@ -188,6 +194,11 @@ gl:
         update:
           error: Produciuse un erro ao actualizar este paso de proceso participativo.
           success: Paso de proceso participativo actualizado con éxito.
+      participatory_process_types:
+        edit:
+          update: Actualización
+        new:
+          create: Crear
       participatory_process_user_roles:
         create:
           error: Houbo un erro engadindo un usuario a este proceso participativo.
@@ -335,8 +346,6 @@ gl:
           name: Procesos destacados
       index:
         title: Procesos participativos
-      last_activity:
-        new_participatory_process: Novo proceso participativo
       participatory_process_steps:
         index:
           back_to_process: Volver á páxina do proceso

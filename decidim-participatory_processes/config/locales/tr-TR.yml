@@ -24,7 +24,7 @@ tr:
         promoted: Tanıtılan
         published_at: Yayınlandı
         related_process_ids: İlgili süreçler
-        scope_id: kapsam
+        scope_id: Kapsam
         scope_type_max_depth_id: Kapsam filtre derinliği
         scopes_enabled: Kapsamlar etkin
         short_description: Kısa Açıklama
@@ -55,6 +55,8 @@ tr:
         end_date: Bitiş tarihi
         short_description: Kısa Açıklama
         start_date: Başlangıç tarihi
+        title: Başlık
+      participatory_process_type:
         title: Başlık
       participatory_process_user_role:
         email: E-posta
@@ -129,6 +131,10 @@ tr:
             start_date: Başlangıç tarihi
             title: Başlık
           name: Katılımcı süreç adımı
+        participatory_process_type:
+          fields:
+            created_at: Düzenlendi
+            title: Başlık
         participatory_process_user_role:
           fields:
             email: E-posta
@@ -201,6 +207,11 @@ tr:
         update:
           error: Bu katılımcı süreç adımı güncellenirken bir hata oluştu.
           success: Katılımcı süreç adımı başarıyla güncellendi.
+      participatory_process_types:
+        edit:
+          update: Güncelleştirme
+        new:
+          create: yaratmak
       participatory_process_user_roles:
         create:
           error: Bu katılımcı süreç için bir kullanıcı eklenirken bir hata oluştu.
@@ -358,8 +369,6 @@ tr:
           name: Vurgulanan süreçler
       index:
         title: Katılımcı süreçler
-      last_activity:
-        new_participatory_process: Yeni katılımcı süreç
       participatory_process_steps:
         index:
           back_to_process: Süreç sayfasına geri dön

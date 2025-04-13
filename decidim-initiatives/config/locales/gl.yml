@@ -53,7 +53,6 @@ gl:
       menu:
         attachments: Anexos
         committee_members: Membros da comisión
-        components: Compoñentes
         information: Información
         initiatives: Iniciativas
         initiatives_types: Tipos de iniciativa
@@ -88,6 +87,7 @@ gl:
             initiative_title: Título da iniciativa
             name_and_surname: Nome e apelidos
             postal_code: Código postal
+            scope: Alcance
             time_and_date: Hora e data
             timestamp: Timestamp
       titles:
@@ -288,6 +288,7 @@ gl:
           recent: Máis recente
         print:
           city: Cidade
+          print: Imprimir
         result:
           initiative_rejected_reason: Esta iniciativa foi rexeitada debido á súa falta de apoios.
         signatures_count:
@@ -323,13 +324,14 @@ gl:
     resources:
       initiatives_type:
         actions:
+          create: Crear
           title: Accións
           vote: Vota
   layouts:
     decidim:
       initiative_creation_header:
         fill_data: Crear
-        finish: Rematar
+        finish: Finalizar
         promotal_committee: Comité de promoción
         select_initiative_type: Elixe
       initiative_signature_creation_header:

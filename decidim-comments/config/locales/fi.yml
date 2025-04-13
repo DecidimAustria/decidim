@@ -26,7 +26,7 @@ fi:
             start_time: Kommentointi sallittu alkaen
       comments:
         create:
-          error: Kommentin luotaessa tapahtui virhe.
+          error: Kommentin luonti epäonnistui.
         delete:
           error: Kommenttia ei voitu poistaa.
         update:
@@ -89,7 +89,7 @@ fi:
             does_not_belong: Sisältää laitonta toimintaa, itsemurhauhkailua, henkilökohtaisia tietoja tai jotain muuta, jonka et usko kuuluvan %{organization_name} -palveluun.
             offensive: Sisältää rasismia, seksismiä, haukkumista, henkilökohtaisia hyökkäyksiä, tappouhkauksia, itsemurhapyyntöjä tai muuta vihapuhetta.
             spam: Sisältää klikkihoukutteita, mainostusta, huijauksia tai bottiskriptejä.
-          title: Ilmoita asiatonta sisältöä
+          title: Ilmoita epäasiallista sisältöä
         show_replies:
           one: Näytä vastaus
           other: Näytä %{count} vastausta
@@ -102,7 +102,7 @@ fi:
           recent: Uusimmat
         title: 'Järjestä tulokset:'
       comments:
-        blocked_comments_for_unauthorized_user_warning: Tilisi tulee olla varmennettu, jotta voit kommentoida tällä hetkellä. Voit kuitenkin lukea muiden jättämiä kommentteja.
+        blocked_comments_for_unauthorized_user_warning: Tilisi tulee olla vahvistettu, jotta voit kommentoida tällä hetkellä. Voit kuitenkin lukea muiden jättämiä kommentteja.
         blocked_comments_for_user_warning: Et voi kommentoida tällä hetkellä, mutta voit lukea aikaisempia kommentteja.
         blocked_comments_warning: Kommentit on poistettu käytöstä tällä hetkellä, mutta voit lukea aikaisempia kommentteja.
         comment_details_title: Kommentin yksityiskohdat
@@ -127,8 +127,8 @@ fi:
     events:
       comments:
         comment_by_followed_user:
-          email_intro: "%{author_name} on jättänyt kommentin kohteessa %{resource_title}. Voit lukea sen täältä:"
-          email_outro: Tämä ilmoitus on lähetetty sinulle, koska seuraat %{author_name}. Voit perua seuraamisen kyseisen käyttäjän profiilisivulta.
+          email_intro: "%{author_name} on jättänyt kommentin kohteessa %{resource_title}. Voit lukea sen sivulta:"
+          email_outro: Tämä ilmoitus on lähetetty sinulle, koska seuraat osallistujaa %{author_name}. Voit perua seuraamisen kyseisen osallistujan profiilisivulta.
           email_subject: '%{author_name} on jättänyt uuden kommentin kohteessa %{resource_title}'
           notification_title: <a href="%{author_path}">%{author_name} %{author_nickname}</a> on jättänyt uuden kommentin kohteessa <a href="%{resource_path}">%{resource_title}</a>.
         comment_by_followed_user_group:
@@ -137,7 +137,7 @@ fi:
           email_subject: '%{author_name} on jättänyt uuden kommentin kohteessa %{resource_title}'
           notification_title: <a href="%{author_path}">%{author_name} %{author_nickname}</a> on jättänyt uuden kommentin kohteessa <a href="%{resource_path}">%{resource_title}</a>.
         comment_created:
-          email_intro: "%{resource_title} on kommentoitu. Voit lukea kommentin tällä sivulla:"
+          email_intro: "%{resource_title} on kommentoitu. Voit lukea kommentin sivulta:"
           email_outro: Tämä ilmoitus on lähetetty sinulle, koska seuraat "%{resource_title}" tai sen kirjoittajaa. Voit lopettaa seuraamisen edellä esitetyn linkin kautta.
           email_subject: '%{author_name} on jättänyt uuden kommentin kohteessa %{resource_title}'
           notification_title: <a href="%{author_path}">%{author_name} %{author_nickname}</a>on jättänyt uuden kommentin kohteessa <a href="%{resource_path}">%{resource_title}</a>
@@ -152,10 +152,10 @@ fi:
           email_subject: Kommenttisi kohteessa "%{resource_title}" sai äänen.
           notification_title: <a href="%{resource_path}">Kommenttisi</a> kohteessa "%{resource_title}" sai äänen. Sillä on yhteensä %{upvotes} ääntä ja %{downvotes} miinusääntä.
         reply_created:
-          email_intro: "%{author_name} on vastannut kommentiisi kohdassa %{resource_title}. Voit lukea sen tällä sivulla:"
+          email_intro: "%{author_name} on vastannut kommentiisi kohdassa %{resource_title}. Voit lukea sen sivulta:"
           email_outro: Tämä ilmoitus on lähetetty sinulle, koska kommenttiisi vastattiin.
           email_subject: "%{author_name} on vastannut kommentiisi %{resource_title}"
-          notification_title: <a href="%{author_path}">%{author_name} %{author_nickname}</a> on vastannut kommentiisi kohdassa <a href="%{resource_path}">%{resource_title}</a>
+          notification_title: <a href="%{author_path}">%{author_name} %{author_nickname}</a> on vastannut kommentiisi kohteessa <a href="%{resource_path}">%{resource_title}</a>
         user_group_mentioned:
           email_intro: Ryhmä, jonka jäsen olet, on mainittu
           email_outro: Tämä ilmoitus on lähetetty sinulle, koska olet jäsenenä ryhmässä %{group_name} ja ryhmä on mainittu kohteessa %{resource_title}.
@@ -165,7 +165,7 @@ fi:
           email_intro: Sinut on mainittu
           email_outro: Tämä ilmoitus on lähetetty sinulle, koska sinut on mainittu kohteessa %{resource_title}.
           email_subject: Sinut on mainittu kohdassa %{resource_title}
-          notification_title: <a href="%{author_path}">%{author_name} %{author_nickname}</a> on maininnut sinut kohdassa <a href="%{resource_path}">%{resource_title}</a>
+          notification_title: <a href="%{author_path}">%{author_name} %{author_nickname}</a> on maininnut sinut kohteessa <a href="%{resource_path}">%{resource_title}</a>
     metrics:
       comments:
         description: Käyttäjien kirjoittamien kommenttien määrä

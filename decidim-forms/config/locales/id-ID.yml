@@ -14,7 +14,6 @@ id:
         answer:
           attributes:
             choices:
-              missing: tidak lengkap
               too_many: terlalu banyak
   decidim:
     forms:
@@ -26,14 +25,12 @@ id:
         questionnaires:
           answer_option:
             answer_option: Opsi jawaban
-            free_text: Teks gratis
             remove: Menghapus
             statement: Pernyataan
           edit:
             save: Menyimpan
           form:
             add_question: Tambahkan pertanyaan
-            already_answered_warning: Formulir sudah dijawab oleh beberapa pengguna sehingga Anda tidak dapat mengubah pertanyaannya.
           matrix_row:
             remove: Menghapus
             statement: Pernyataan
@@ -75,8 +72,8 @@ id:
           tos_agreement: Dengan berpartisipasi Anda menerima Ketentuan Layanannya
       step_navigation:
         show:
-          are_you_sure: Tindakan ini tidak dapat diurungkan dan Anda tidak akan dapat mengedit jawaban Anda. Apakah kamu yakin
           submit: Menyerahkan
       user_answers_serializer:
         created_at: Dijawab pada
         id: ID jawaban
+        question: Pertanyaan

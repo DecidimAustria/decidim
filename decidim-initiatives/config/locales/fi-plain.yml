@@ -80,7 +80,6 @@ fi-pl:
   decidim:
     admin:
       actions:
-        manage: Hallitse
         new_initiative_type: Uusi aloitetyyppi
         new_initiative_type_scope: Uusi aloitetyypin teema
       filters:
@@ -107,7 +106,6 @@ fi-pl:
       menu:
         attachments: Liitteet
         committee_members: Komitean jäsenet
-        components: Komponentit
         information: Tiedot
         initiative_type_scopes: Aloitetyypin teemat
         initiatives: Aloitteet
@@ -240,6 +238,10 @@ fi-pl:
         exports:
           initiatives: Aloitteet
         initiatives:
+          accept:
+            success: Aloitteen hyväksyminen onnistui.
+          discard:
+            success: Aloitteen peruminen onnistui.
           edit:
             accept: Hyväksy aloite
             confirm: Oletko varma?
@@ -263,6 +265,12 @@ fi-pl:
             edit: Muokkaa
             new: Uusi
             photos: Kuvat
+          publish:
+            success: Aloitteen julkaisu onnistui.
+          reject:
+            success: Aloitteen hylkääminen onnistui.
+          unpublish:
+            success: Aloitteen julkaisun peruminen onnistui.
           update:
             error: Tapahtui virhe.
             success: Aloitteen päivitys onnistui.
@@ -365,7 +373,7 @@ fi-pl:
         finish:
           back: Takaisin
           back_to_initiatives: Takaisin aloitteisiin
-          callout_text: Onnittelut! Aloitteesi on luotu onnistuneesti.
+          callout_text: Onnittelut! Aloitteen luominen onnistui.
           confirm: Aloite lähetetään hallintakäyttäjän tarkastettavaksi ja julkaistavaksi. Julkaisun jälkeen et voi enää muokata aloitetta. Haluatko varmasti jatkaa?
           edit_my_initiative: Muokkaa aloitettani
           go_to_my_initiatives: Siirry omiin aloitteisiini
@@ -533,7 +541,7 @@ fi-pl:
           initiative_data: Aloitteen tiedot
           scope: Teema
           send_to_technical_validation: Lähetä tekniseen validointiin
-          send_to_technical_validation_announcement: Jos kaikki näyttää hyvältä, paina "Lähetä tekniseen validointiin" -painiketta, jotta hallinnointikäyttäjä voi tarkistaa ja julkaista aloitteesi
+          send_to_technical_validation_announcement: Jos kaikki näyttää hyvältä, paina "Lähetä tekniseen validointiin" -painiketta, jotta hallintakäyttäjä voi tarkistaa ja julkaista aloitteesi
           signature_collection: Allekirjoituksen keräämistapa
           state: Tila
           type: Tyyppi

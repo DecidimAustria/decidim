@@ -120,13 +120,13 @@ de:
         destroy:
           success: Der Redner wurde für diese Konferenz erfolgreich gelöscht.
         edit:
-          title: Konferenzsprecher aktualisieren
+          title: Referierende Person aktualisieren
           update: Aktualisieren
         index:
           conference_speakers_title: Konferenzsprecher
         new:
           create: Erstellen
-          title: Neuer Konferenzsprecher.
+          title: Neue referierende Person
         update:
           error: Beim Aktualisieren des Sprechers für diese Konferenz ist ein Fehler aufgetreten.
           success: Der Sprecher wurde für diese Konferenz erfolgreich aktualisiert.
@@ -137,13 +137,13 @@ de:
         destroy:
           success: Benutzer wurde erfolgreich von dieser Konferenz entfernt.
         edit:
-          title: Konferenzadmin aktualisieren.
+          title: Referierende Person aktualisieren
           update: Aktualisieren
         index:
           conference_admins_title: Konferenzadmins
         new:
           create: Erstellen
-          title: Neuer Konferenzbenutzer
+          title: Neuer Konferenzadmin
         update:
           error: Bei einem Fehler ist ein Benutzer für diese Konferenz aktualisiert worden.
           success: Der Benutzer wurde für diese Konferenz erfolgreich aktualisiert.
@@ -173,9 +173,9 @@ de:
       media_links:
         create:
           error: Beim Erstellen einer neuen Medienverknüpfung ist ein Fehler aufgetreten.
-          success: Medienlink erfolgreich erstellt
+          success: Medienlink erfolgreich erstellt.
         destroy:
-          success: Medienlink wurde erfolgreich gelöscht.
+          success: Medienlink erfolgreich gelöscht.
         edit:
           title: Medienlink aktualisieren
           update: Aktualisieren
@@ -183,10 +183,10 @@ de:
           media_links_title: Medienlinks
         new:
           create: Erstellen
-          title: Medienlink
+          title: Medienlink erstellen
         update:
           error: Beim Aktualisieren dieser Medienverbindung ist ein Fehler aufgetreten.
-          success: Media Link wurde erfolgreich aktualisiert.
+          success: Medienlink erfolgreich aktualisiert.
       menu:
         conferences: Konferenzen
         conferences_submenu:
@@ -206,7 +206,7 @@ de:
           registration_types: Registrierungsarten
           registrations: Registrierungen
           see_conference: Konferenz ansehen
-          user_registrations: Benutzerregistrierungen
+          user_registrations: Teilnehmende Benutzende
       models:
         conference:
           fields:
@@ -229,7 +229,7 @@ de:
             admin: Administrator
             collaborator: Mitarbeiter
             moderator: Moderator
-            valuator: Schätzer
+            valuator: Bewertende
         media_link:
           fields:
             date: Datum
@@ -248,7 +248,7 @@ de:
             main_promotor: Hauptförderer
         registration_type:
           fields:
-            conference_meetings: Konferenzsitzungen
+            conference_meetings: Veranstaltungen der Konferenz
             price: Preis
             registrations_count: Registrierungen zählen
             title: Titel
@@ -396,7 +396,7 @@ de:
             title: Partner
         registration_types:
           form:
-            select_conference_meetings: Konferenzmeetings auswählen
+            select_conference_meetings: Konferenzveranstaltungen auswählen
           index:
             title: Registrierungsarten
         send_conference_diploma_mailer:
@@ -415,7 +415,7 @@ de:
           confirm: Bestätigen
         show:
           going: Gehen
-          no_slots_available: Keine Steckplätze verfügbar
+          no_slots_available: Keine Plätze verfügbar
           registration: Anmeldung
       conference_program:
         show:
@@ -474,6 +474,8 @@ de:
           name: Hervorgehobene Konferenzen
       index:
         title: Konferenzen
+      last_activity:
+        new_conference: 'Neue Konferenz:'
       mailer:
         conference_registration_mailer:
           confirmation:

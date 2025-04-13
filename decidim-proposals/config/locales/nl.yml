@@ -92,6 +92,10 @@ nl:
     admin:
       filters:
         proposals:
+          category_id_eq:
+            label: Categorie
+          scope_id_eq:
+            label: Scope
           valuator_role_ids_has:
             label: Toegewezen aan beoordelaar
         search_placeholder:
@@ -101,7 +105,7 @@ nl:
         actions:
           amend: Pas aan
           comment: Reactie
-          create: creëren
+          create: Creëren
           endorse: Aanbevelen
           vote: Stem
           vote_comment: Stem op de reactie
@@ -119,9 +123,7 @@ nl:
             comments_enabled: Reacties ingeschakeld
             comments_max_length: Commentaar maximale lengte (laat 0 voor standaard waarde)
             default_sort_order: Standaardsortering
-            default_sort_order_help: Standaardsortering betekent dat als de ondersteuning is ingeschakeld, de voorstellen willekeurig worden weergegeven. Als de ondersteuning geblokkeerd is, zullen ze gesorteerd worden op de meest ondersteunde manier.
             default_sort_order_options:
-              default: Standaard
               most_commented: Meeste reacties
               most_endorsed: Meest gesteund
               most_followed: Meest gevolgd
@@ -171,9 +173,7 @@ nl:
             comments_blocked: Reacties geblokkeerd
             creation_enabled: Gebruikers kunnen voorstellen maken
             default_sort_order: Standaardsortering
-            default_sort_order_help: Standaardsortering betekent dat als de ondersteuning is ingeschakeld, de voorstellen willekeurig worden weergegeven. Als de ondersteuning geblokkeerd is, zullen ze gesorteerd worden op de meest ondersteunde manier.
             default_sort_order_options:
-              default: Standaard
               most_commented: Meeste reacties
               most_endorsed: Meest gesteund
               most_followed: Meest gevolgd
@@ -263,12 +263,10 @@ nl:
             notification_title: Het voorstel <a href="%{resource_path}">%{resource_title}</a> is afgewezen.
         proposal_update_category:
           email_intro: 'Een beheerder heeft de categorie van uw voorstel "%{resource_title} bijgewerkt, bekijk het op deze pagina:'
-          email_outro: Je hebt deze melding ontvangen omdat je de auteur bent van het voorstel.
           email_subject: De categorie van het %{resource_title} voorstel is bijgewerkt
           notification_title: De categorie van het <a href="%{resource_path}">%{resource_title}</a> voorstel is bijgewerkt door een beheerder.
         proposal_update_scope:
           email_intro: 'Een admin heeft de reikwijdte van je voorstel "%{resource_title}" geüpdatet, bekijk het op deze pagina:'
-          email_outro: Je hebt deze melding ontvangen omdat je de auteur bent van het voorstel.
           email_subject: Het toepassingsgebied van het %{resource_title} voorstel is bijgewerkt
           notification_title: Het bereik van <a href="%{resource_path}">%{resource_title}</a> voorstel is bijgewerkt door een admin.
         voting_enabled:
@@ -406,7 +404,7 @@ nl:
             title: Voorstel bijwerken
             update: Bijwerken
           form:
-            attachment_legend: "(Optioneel) Een bijlage toevoegen"
+            attachment_legend: "(Optioneel) Voeg een bijlage toe"
             created_in_meeting: Dit voorstel komt uit een vergadering
             delete_attachment: Bijlage verwijderen
             select_a_category: Kies een categorie
@@ -414,7 +412,6 @@ nl:
           index:
             actions: acties
             assign_to_valuator: Toewijzen aan beoordelaar
-            assign_to_valuator_button: Toewijzen
             cancel: Annuleer
             change_category: Categorie wijzigen
             change_scope: Wijzig scope
@@ -428,7 +425,6 @@ nl:
             split_button: Splits
             title: Voorstellen
             unassign_from_valuator: Toewijzing beoordelaar ongedaan maken
-            unassign_from_valuator_button: Ontkoppelen
             update: Bijwerken
             update_scope_button: Toepassingsgebied bijwerken
           new:
@@ -645,7 +641,6 @@ nl:
           discard: Verwijder dit concept
           discard_confirmation: Weet je zeker dat je dit voorstel wilt verwijderen?
           send: Voorbeeldweergave
-          title: Bewerk voorstel
         filters:
           activity: Mijn activiteit
           all: Alle

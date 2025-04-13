@@ -57,7 +57,7 @@ fr-CA:
         with_participatory_space: Espace participatif
       decidim/user:
         current_password: Mot de passe actuel
-        email: Email
+        email: Courriel
         name: Surnom
         password: Mot de passe
         password_confirmation: Confirmation du mot de passe
@@ -500,6 +500,8 @@ fr-CA:
             dummy_step_attribute1: Attribut d'étape factice 1
             dummy_step_attribute2: Attribut d'étape factice 2
             dummy_step_translatable_text: Texte traduisible de l'étape factice
+      pagination:
+        page_title: "%{component_name} - Page %{current_page} sur %{total_pages}"
     contact: Contact
     content_blocks:
       announcement:
@@ -917,11 +919,12 @@ fr-CA:
           filename: Nom du fichier
           remove: Supprimer
           replace: Remplacer
+          save: Sauvegarder
           title: Titre
           title_required: Le titre est requis !
           uploaded: Téléchargé
           validating: Validation en cours...
-          validation_error: Erreur de validation !
+          validation_error: Erreur de validation ! Vérifiez que le fichier a une extension ou taille autorisée.
         select_file: Sélectionnez un fichier
       upload_help:
         dropzone: Déposez des fichiers ici ou cliquez sur le bouton pour télécharger
@@ -962,7 +965,7 @@ fr-CA:
       accept:
         error: Une erreur s'est produite lors de l'acceptation de cette invitation.
         success: L’invitation a été acceptée avec succès.
-      accept_invitation: Acceptez
+      accept_invitation: Accepter
       accept_or_reject_group_invitations: 'Les groupes suivants vous ont invité à les rejoindre. Accepter ou rejeter leurs demandes:'
       index:
         invite: Inviter
@@ -1020,7 +1023,7 @@ fr-CA:
         success: Le groupe est parti avec succès.
       members:
         accept_or_reject_join_requests: 'Les utilisateurs suivants ont demandé à rejoindre ce groupe. Accepter ou rejeter leurs demandes:'
-        accept_request: Acceptez
+        accept_request: Accepter
         reject_request: Rejeter
       new:
         create_user_group: Créer un groupe
@@ -1079,6 +1082,8 @@ fr-CA:
           not_found: 'Le secteur n''a pas été trouvé dans la base de données (ID: %{id})'
         scope_type_presenter:
           not_found: 'Le type de secteur n''a pas été trouvé dans la base de données (ID: %{id})'
+    machine_translations:
+      automatic: traduction automatique en %{locale_name}
     managed_users:
       expired_session: La session de représentation d'identité a expiré.
     map:
@@ -1103,7 +1108,7 @@ fr-CA:
           subject: "%{manager} a commencé une nouvelle conversation en tant que %{group}"
         comanagers_new_message:
           admin_in_group: Vous recevez ceci parce que vous êtes un administrateur de %{group}.
-          greeting: Bonjour %{recipient} !
+          greeting: Bonjour, %{recipient} !
           intro: "%{manager} a posté de nouveaux messages dans une conversation au nom de %{group}. Cliquez ici pour les voir:"
           outro: Profitez de la plateforme !
           subject: "%{manager} a envoyé de nouveaux messages en tant que %{group}"
@@ -1239,6 +1244,7 @@ fr-CA:
       no_notifications: Il n'y a pas encore de notifications.
       show:
         missing_event: Oups, cette notification est liée à un élément qui n'est plus disponible. Vous pouvez la supprimer.
+        moderated: Contenu modéré
     notifications_digest_mailer:
       header:
         daily: Résumé quotidien des notifications
@@ -1365,12 +1371,12 @@ fr-CA:
       sidebar:
         badges:
           info: Les badges sont gagnés en effectuant des activités spécifiques sur la plateforme.
-          title: Badges
+          title: Insignes
       user:
         actions:
           create_user_group: Créer un groupe
           disabled_message: Message
-          edit_profile: Modifier le profil
+          edit_profile: Mettre à jour le profil
           edit_user_group: Modifier le profil du groupe
           invite_user: Inviter un utilisateur
           join_user_group: Demander à rejoindre ce groupe
@@ -1503,7 +1509,7 @@ fr-CA:
         filters:
           area: Périmètre d'assemblée
           areas: Zones d'application
-          scope: Secteur
+          scope: Périmètre d'application
           select_an_area: Sélectionnez une zone d'application
       progress: Avancement
       public_participation:
@@ -1940,6 +1946,8 @@ fr-CA:
         expire_time_html: Votre session expirera dans <b><span class="minutes">%{minutes}</span> minutes</b>.
       language_chooser:
         choose_language: Choisir la langue
+      navigation:
+        aria_label: Menu de navigation - %{title}
       notifications_dashboard:
         mark_all_as_read: Marquer tout comme lu
         mark_as_read: Marquer comme lu

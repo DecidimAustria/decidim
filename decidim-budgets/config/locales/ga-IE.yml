@@ -3,11 +3,9 @@ ga:
   activemodel:
     attributes:
       budget:
-        decidim_scope_id: Scóip
         title: Teideal
       project:
         decidim_category_id: Catagóir
-        decidim_scope_id: Scóip
         title: Teideal
   decidim:
     budgets:
@@ -55,7 +53,6 @@ ga:
           ok: Togha
         filters:
           category: Catagóir
-          scope: Scóip
           search: Cuardaigh
           status: Stádas
           status_values:
@@ -70,7 +67,6 @@ ga:
         name: Buiséid
         settings:
           global:
-            scope_id: Scóip
             title: Teideal
           step:
             title: Teideal

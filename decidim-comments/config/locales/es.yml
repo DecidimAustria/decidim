@@ -44,7 +44,7 @@ es:
           body:
             label: Comentario
             placeholder: '¿Qué piensas sobre ésto?'
-          form_error: El texto es necesario y no puede ser más largo de %{length}.
+          form_error: El texto es necesario y no puede ser más largo de %{length} caracteres.
           submit_reply: Publicar respuesta
           submit_root_comment: Publicar comentario
           user_group_id:
@@ -75,7 +75,7 @@ es:
         edit: Editar
         edited: Editado
         hide_replies:
-          one: Ocultar la respuesta
+          one: Ocultar respuesta
           other: Ocultar %{count} respuestas
         moderated_at: Comentario moderado el %{date}
         reply: Respuesta
@@ -137,7 +137,7 @@ es:
           email_subject: Hay un nuevo comentario de %{author_name} en %{resource_title}
           notification_title: Hay un nuevo comentario de <a href="%{author_path}">%{author_name} %{author_nickname}</a> en <a href="%{resource_path}">%{resource_title}</a>.
         comment_created:
-          email_intro: "%{resource_title} ha sido comentado. Puedes leer el comentario en esta página:"
+          email_intro: "Alguien ha dejado un comentario en \"%{resource_title}\". Puedes leer el comentario a través del siguiente enlace:"
           email_outro: Has recibido esta notificación porque estás siguiendo el comentario "%{resource_title}" o a su autora. Puedes dejar de seguirla desde el enlace anterior.
           email_subject: Hay un nuevo comentario de %{author_name} en %{resource_title}
           notification_title: Hay un nuevo comentario de <a href="%{author_path}">%{author_name} %{author_nickname}</a> en <a href="%{resource_path}">%{resource_title}</a>

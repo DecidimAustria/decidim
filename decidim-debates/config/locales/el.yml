@@ -79,8 +79,6 @@ el:
           update:
             invalid: Υπήρξε ένα πρόβλημα κατά την ενημέρωση αυτής της συζήτησης.
             success: Η συζήτηση ενημερώθηκε με επιτυχία.
-        exports:
-          comments: Σχόλια
       admin_log:
         debate:
           close: "Ο/Η %{user_name} έκλεισε τον διάλογο %{resource_name} στον χώρο %{space_name}"
@@ -121,6 +119,7 @@ el:
           state_values:
             closed: Κλειστό
             open: Άνοιγμα
+          user_group: Ομάδες
         form:
           select_a_category: Please select a category
         index:
@@ -128,7 +127,6 @@ el:
         new:
           back: Πίσω
           create: Δημιουργία
-          title: Νέα συζήτηση
         orders:
           commented: Πιο σχολιασμένα
           label: Ταξινόμηση συζητήσεων κατά

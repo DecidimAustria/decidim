@@ -116,6 +116,7 @@ ru:
       actions:
         add: Добавить
         browse: Просмотреть
+        manage: Управлять
         permissions: Права
         reject: Отклонить
         verify: Подтвердить личность
@@ -355,6 +356,9 @@ ru:
           fields:
             name: Имя
             plural: Множественное число
+        share_token:
+          fields:
+            created_at: 'Создано:'
         static_page:
           fields:
             created_at: 'Создано:'
@@ -375,6 +379,7 @@ ru:
             created_at: 'Создано:'
             document_number: Номер документа
             name: Имя
+            nickname: Псевдоним
             phone: Телефон
             state: Cостояние
             users_count: Количество участников
@@ -416,7 +421,6 @@ ru:
         select_recipients_to_deliver:
           confirm_deliver: Вы уверены, что хотите доставить эту рассылку новостей? Это действие нельзя будет отменить.
           deliver: Доставить рассылку новостей
-          none: Нет
           participants_help: Отправляет новостную рассылку всем подтвержденным пользователям, которые участвовали в любом из выбранных пространств в списке.
         show:
           preview: Предпросмотр
@@ -478,6 +482,10 @@ ru:
         new:
           create: Добавить
           title: Добавить частного участника пространства соучастия.
+      participatory_space_private_users_csv_imports:
+        new:
+          csv_upload:
+            title: Загрузите ваш CSV файл
       resource_permissions:
         edit:
           title: Редактировать права доступа
@@ -541,16 +549,9 @@ ru:
           invalid: При отказе от этой группы участников произошла ошибка.
         verify:
           invalid: При подтверждении этой группы участников произошла ошибка.
-      user_groups:
-        index:
-          state:
-            pending: В ожидании
-            rejected: Отклонено
-            verified: Проверено
       user_groups_csv_verifications:
         new:
           title: Загрузите ваш CSV файл
-          upload: Загрузить
       users:
         create:
           error: При приглашении этого участника произошла ошибка.

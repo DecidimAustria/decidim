@@ -79,8 +79,6 @@ hu:
           update:
             invalid: Probléma merült fel a vita frissítése során.
             success: A vita sikeresen frissült.
-        exports:
-          comments: Hozzászólások
       admin_log:
         debate:
           close: "%{user_name} lezárta a(z) %{resource_name} vitát a(z) %{space_name} térben"
@@ -121,6 +119,7 @@ hu:
           state_values:
             closed: Lezárva
             open: Nyitva
+          user_group: Csoportok
         form:
           select_a_category: Válassz kategóriát
         index:
@@ -128,7 +127,6 @@ hu:
         new:
           back: Vissza
           create: Létrehozás
-          title: Új vita
         orders:
           commented: Legtöbb hozzászólással
           label: Viták rendezése

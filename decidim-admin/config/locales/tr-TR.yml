@@ -131,6 +131,7 @@ tr:
       actions:
         add: Eklemek
         browse: Araştır
+        manage: yönetme
         per_page: Sayfa başına
         permissions: İzinler
         reject: reddetmek
@@ -264,7 +265,6 @@ tr:
         solved: Çözüldü
         transfer:
           email: E-Posta
-          error: Mevcut katılımcıyı yönetilen katılımcıya aktarırken bir sorun oluştu.
           name: İsim
           reason: Nedeni
           success: Aktarım başarıyla tamamlandı.
@@ -427,7 +427,7 @@ tr:
             plural: Çoğul
         share_token:
           fields:
-            created_at: Oluşturulma tarihi
+            created_at: Düzenlendi
             expires_at: Süre sonu
             last_used_at: Son kullanıldığı zaman
             times_used: Kullanım Sayısı
@@ -452,7 +452,8 @@ tr:
             actions: Eylemler
             created_at: Düzenlendi
             document_number: Belge Numarası
-            name: isim
+            name: Adı
+            nickname: Takma ad
             phone: Telefon
             state: Belirtmek, bildirmek
             users_count: Kullanıcılar
@@ -532,7 +533,7 @@ tr:
           confirm_deliver: Bu bülteni sunmak istediğinizden emin misiniz? Bu işlem geri alınamaz.
           deliver: Bülten sunun
           followers_help: Listede seçili herhangi bir katılımcı süreci takip eden bütün onaylanmış kullanıcılara haber bülteni gönderir.
-          none: Hiçbiri
+          none: Yok
           participants_help: Listede seçili herhangi bir katılımcı sürece katılmış olan bütün onaylanmış kullanıcılara haber bülteni gönderir.
           recipients_count: Bu haber bülteni <strong id='recipients_count'>%{count}</strong> kullanıcıya gönderilecektir.
           scopes_help: Hesaplarındaki 'İlgi Alanlarım' ayarlarında etkinleştirilmiş herhangi bir seçili kapsam bulunan kullanıcılara haber bülteni gönderir.
@@ -621,6 +622,8 @@ tr:
           title: Yeni Katılımcı Uzay özel kullanıcısı.
       participatory_space_private_users_csv_imports:
         new:
+          csv_upload:
+            title: CSV dosyanızı yükleyin
           upload: Yükle
       resource_permissions:
         edit:
@@ -739,16 +742,12 @@ tr:
           invalid: Bu kullanıcı grubunu doğrularken bir hata oluştu.
       user_groups:
         index:
-          state:
-            pending: kadar
-            rejected: Reddedilen
-            verified: Doğrulanmış
           verify_via_csv: CSV ile doğrulayın
       user_groups_csv_verifications:
         new:
           explanation: CSV dosyanızı yükleyin. Dosyanın ilk sütunundaki kullanıcı gruplarının resmi e-postalarının, başlıksız olarak olması gerekir. Sadece e-postalarını onaylayan ve CSV dosyasında görünen bir e-postaya sahip olan kullanıcı grupları doğrulanacaktır.
           title: CSV dosyanızı yükleyin
-          upload: Yükleme
+          upload: Yükle
       users:
         create:
           error: Bu kullanıcıyı davet ederken bir hata oluştu.

@@ -24,7 +24,6 @@ zh-CN:
         promoted: 已升级
         published_at: 发布于
         related_process_ids: 相关进程
-        scope_id: 范围
         scope_type_max_depth_id: 范围过滤器深度：
         scopes_enabled: 范围已启用
         short_description: 简短描述
@@ -46,6 +45,8 @@ zh-CN:
         end_date: 结束日期
         short_description: 简短描述
         start_date: 开始日期
+        title: 标题
+      participatory_process_type:
         title: 标题
       participatory_process_user_role:
         email: 电子邮件地址
@@ -109,6 +110,10 @@ zh-CN:
             start_date: 开始日期
             title: 标题
           name: 参与进程阶段
+        participatory_process_type:
+          fields:
+            created_at: 创建于
+            title: 标题
         participatory_process_user_role:
           fields:
             email: 电子邮件地址
@@ -181,6 +186,11 @@ zh-CN:
         update:
           error: 在更新这一阶段的参与进程时遇到了问题。
           success: 参与阶段更新成功。
+      participatory_process_types:
+        edit:
+          update: 更新
+        new:
+          create: 创建
       participatory_process_user_roles:
         create:
           error: 在这个参与进程中增加参与者时遇到了问题。
@@ -315,8 +325,6 @@ zh-CN:
           name: 高亮的进程
       index:
         title: 参与进程
-      last_activity:
-        new_participatory_process: 新的参与进程
       participatory_process_steps:
         index:
           back_to_process: 返回进程页面

@@ -54,10 +54,8 @@ sk:
   decidim:
     admin:
       actions:
-        manage: Správa
         new_initiative_type: Nový typ iniciatívy
       menu:
-        components: Komponenty
         information: Informácie
         initiatives: Iniciatívy
         initiatives_types: Typy iniciatív
@@ -91,6 +89,7 @@ sk:
             initiative_title: Názov iniciatívy
             name_and_surname: Meno a priezvisko
             postal_code: Poštové smerovacie číslo
+            scope: Rozsah
             time_and_date: Čas a dátum
             timestamp: Časová pečiatka
       titles:
@@ -277,6 +276,7 @@ sk:
           recent: Najnovšie
         print:
           city: Mesto
+          print: Tlač
         result:
           initiative_rejected_reason: Táto iniciatíva bola zamietnutá z dôvodu nedostatočnej podpory.
         signatures_count:
@@ -316,6 +316,7 @@ sk:
     resources:
       initiatives_type:
         actions:
+          create: Vytvoriť
           title: Akcia
           vote: Hlasovanie
   layouts:

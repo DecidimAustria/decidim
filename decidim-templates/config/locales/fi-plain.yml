@@ -27,7 +27,7 @@ fi-pl:
           success: Mallipohjan poisto onnistui.
         empty: Mallipohjia ei ole vielä lisätty.
         fetch:
-          error: Mallipohjaa ei löytynyt. Lataa sivu uudelleen.
+          error: Mallipohjaa ei löytynyt. Lataa sivu uudestaan.
         missing_resource: "(puuttuva resurssi)"
         update:
           error: Mallipohjan päivitys epäonnistui.
@@ -90,14 +90,14 @@ fi-pl:
             edit: Muokkaa
             empty: Kysymyksiä ei ole vielä.
             questionnaire: Kysely
-            title: Muokkaa kyselylomakkeen mallipohjaa
+            title: Muokkaa kyselyn mallipohjaa
           form:
             title: Kyselylomakemalli %{questionnaire_for}
           index:
             confirm_delete: Haluatko varmasti poistaa tämän mallipohjan?
             title: Kyselymallit
           new:
-            title: Uusi kyselylomakkeen mallipohja
+            title: Uusi kyselyn mallipohja
           preview:
             current_step: Vaihe %{step}
             of_total_steps: / %{total_steps}

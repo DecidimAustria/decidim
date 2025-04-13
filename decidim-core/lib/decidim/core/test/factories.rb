@@ -203,8 +203,15 @@ FactoryBot.define do
     end
 
     trait :deleted do
+      name { "" }
+      nickname { "" }
       email { "" }
+      delete_reason { "I want to delete my account" }
+      admin { false }
       deleted_at { Time.current }
+      avatar { nil }
+      personal_url { "" }
+      about { "" }
     end
 
     trait :admin_terms_accepted do
@@ -999,6 +1006,27 @@ FactoryBot.define do
         else
           "decidim"
         end
+    end
+  end
+
+  factory :blob, class: "ActiveStorage::Blob" do
+    transient do
+      filepath { Decidim::Dev.asset("city.jpeg") }
+    end
+
+    filename { File.basename(filepath) }
+    content_type { MiniMime.lookup_by_filename(filepath)&.content_type || "text/plain" }
+
+    before(:create) do |object, evaluator|
+      object.upload(File.open(evaluator.filepath))
+    end
+
+    trait :image do
+      filepath { Decidim::Dev.asset("city.jpeg") }
+    end
+
+    trait :document do
+      filepath { Decidim::Dev.asset("Exampledocument.pdf") }
     end
   end
 end

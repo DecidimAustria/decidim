@@ -3,7 +3,7 @@ cs:
   activemodel:
     attributes:
       assemblies_type:
-        title: Název
+        title: Titul
       assembly:
         announcement: Oznámení
         area_id: Oblast
@@ -216,7 +216,7 @@ cs:
           info: O tomto shromáždění
           landing_page: Úvodní stránka
           moderations: Moderování
-          private_users: Soukromí uživatelé
+          private_users: Soukromí účastníci
           see_assembly: Zobrazit shromáždění
         assemblies_types: Typy shromáždění
       models:
@@ -357,7 +357,7 @@ cs:
           members: Členové
       assembly_types:
         commission: Komise
-        consultative_advisory: Konzultační / poradní
+        consultative_advisory: Poradní / poradní
         executive: Výkonný
         government: Vládní
         others: Ostatní

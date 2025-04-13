@@ -54,6 +54,9 @@
             name: Resultat
           status:
             name: Status
+        projects_import:
+          new:
+            create: Importer
         results:
           edit:
             title: Rediger resultatet
@@ -138,9 +141,6 @@
             other: "%{count} resultater"
         filters:
           all: Alle
-        home:
-          categories_label: Kategorier
-          subcategories_label: Underkategorier
         home_header:
           global_status: Global utførelse status
         nav_breadcrumb:

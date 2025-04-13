@@ -115,13 +115,12 @@ sl:
       actions:
         add: Dodaj
         browse: Brskaj
+        manage: Uredi
         per_page: Na stran
         permissions: Dovoljenja
         reject: Zavrni
         verify: Preveri
       filters:
-        scope_id_eq:
-          label: Področje
         state_eq:
           values:
             rejected: Zavrnjen
@@ -133,6 +132,9 @@ sl:
         scope:
           fields:
             scope_type: Tip področja
+        user_group:
+          fields:
+            name: Ime
       newsletters:
         index:
           no_scopes: Ni področij
@@ -153,3 +155,7 @@ sl:
         new:
           create: Ustvari tip področja
           title: Novo področje
+      user_groups:
+        index:
+          state:
+            rejected: Zavrnjen

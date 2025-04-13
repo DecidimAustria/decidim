@@ -98,7 +98,7 @@ lb:
             enable_pads_creation: Aktivieren Sie die Pads-Erstellung
             registration_code_enabled: Registrierungscode aktiviert
             resources_permissions_enabled: Aktionsberechtigungen können für jedes Meeting festgelegt werden
-            scope_id: Bereich
+            scope_id: Ëmfang
             scopes_enabled: Bereiche aktiviert
             terms_and_conditions_url_for_meeting_creators: Nutzungsbedingungen URL für Meeting-Ersteller
           step:
@@ -278,12 +278,14 @@ lb:
           select_a_registration_type: Bitte wählen Sie eine Registrierungsart aus
         index:
           new_meeting: Nei Versammlung
+        meeting:
+          close_meeting: Sitzung beenden
+          edit_meeting: Meeting bearbeiten
         meetings:
           upcoming_meetings_warning: Momentan gibt es keine geplanten Besprechungen, aber hier finden Sie alle aufgelisteten Besprechungen.
         new:
           back: Zréck
           create: Erstellen
-          title: Ihre Besprechung erstellen
         registration_confirm:
           cancel: Stornieren
           confirm: Bestätegen

@@ -31,13 +31,14 @@ describe "Last activity" do
            organization:)
   end
   let(:long_body_comment) { "This is my very long comment for Last Activity card that must be shorten up because is more than 100 chars" }
-  let(:another_comment) { create(:comment, body: long_body_comment) }
+  let(:another_comment) { create(:comment, body: long_body_comment, commentable: second_commentable) }
   let(:component) do
     create(:component, :published, organization:)
   end
   let(:resource) do
     create(:dummy_resource, component:, published_at: Time.current)
   end
+  let(:second_commentable) { create(:dummy_resource, component:) }
 
   before do
     allow(Decidim::ActionLog).to receive(:public_resource_types).and_return(
@@ -102,7 +103,7 @@ describe "Last activity" do
 
       it "allows filtering by type" do
         within "#filters" do
-          find("label", text: "Comment").click
+          click_on("Comment")
         end
 
         expect(page).to have_content(translated(comment.commentable.title))
@@ -112,7 +113,7 @@ describe "Last activity" do
       end
 
       context "when there are recently update old activities" do
-        let(:commentables) { create_list(:dummy_resource, 20, component:) }
+        let(:commentables) { create_list(:dummy_resource, 50, component:) }
         let(:comments) { commentables.map { |commentable| create(:comment, commentable:) } }
         let!(:action_logs) do
           comments.map do |comment|

@@ -86,7 +86,6 @@ lt:
   decidim:
     admin:
       actions:
-        manage: Valdyti
         new_initiative_type: Naujas iniciatyvos tipas
       filters:
         initiatives:
@@ -112,7 +111,6 @@ lt:
       menu:
         attachments: Priedai
         committee_members: Komiteto nariai
-        components: Komponentai
         information: Informacija
         initiatives: Iniciatyvos
         initiatives_settings: Nustatymai
@@ -363,7 +361,6 @@ lt:
         finish:
           back: Atgal
           back_to_initiatives: Grįžti į iniciatyvas
-          callout_text: Sveikiname! Jūsų iniciatyva sukurta.
           confirm: Jūs siųsite šią iniciatyvą administratoriaus peržiūrai ir publikavimui. Paskelbus iniciatyvą jos koreguoti nebegalėsite. Ar tikrai norite ją siųsti?
           edit_my_initiative: Redaguoti mano iniciatyvas
           go_to_my_initiatives: Eiti į mano iniciatyvas

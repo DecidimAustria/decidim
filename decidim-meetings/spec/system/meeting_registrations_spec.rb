@@ -128,7 +128,7 @@ describe "Meeting registrations" do
               click_link "Català"
             end
 
-            click_button "Unir-se a la trobada"
+            click_button "Inscriu-te"
 
             within "#loginModal" do
               expect(page).to have_content("Has oblidat la teva contrasenya?")
@@ -157,6 +157,18 @@ describe "Meeting registrations" do
       context "and the user is logged in" do
         before do
           login_as user, scope: :user
+        end
+
+        context "and the meeting is happening now" do
+          before do
+            meeting.update!(start_time: 1.hour.ago, end_time: 1.hour.from_now)
+          end
+
+          it "does not show the registration button" do
+            visit_meeting
+
+            expect(page).not_to have_css(".button", text: "Register")
+          end
         end
 
         context "and they ARE NOT part of a verified user group" do
@@ -304,13 +316,9 @@ describe "Meeting registrations" do
         it "shows errors for invalid file" do
           visit questionnaire_public_path
 
-          dynamically_attach_file("questionnaire_responses_0_add_documents", Decidim::Dev.asset("verify_user_groups.csv"))
+          dynamically_attach_file("questionnaire_responses_0_add_documents", Decidim::Dev.asset("verify_user_groups.csv"), keep_modal_open: true)
 
-          expect(page).to have_field("public_participation", checked: false)
-          find("#questionnaire_tos_agreement").set(true)
-          accept_confirm { click_button "Submit" }
-
-          expect(page).to have_content("Needs to be reattached")
+          expect(page).to have_content("Validation error!")
         end
 
         context "and the announcement for the meeting is configured" do

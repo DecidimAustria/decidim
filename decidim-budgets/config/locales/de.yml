@@ -3,7 +3,7 @@ de:
   activemodel:
     attributes:
       budget:
-        decidim_scope_id: Bereich
+        decidim_scope_id: Themenbereich
         description: Beschreibung
         title: Titel
         total_budget: Gesamtbudget
@@ -11,7 +11,7 @@ de:
       project:
         budget_amount: Höhe des Budgets
         decidim_category_id: Kategorie
-        decidim_scope_id: Umfang
+        decidim_scope_id: Themenbereich
         description: Beschreibung
         proposal_ids: Ähnliche Vorschläge
         proposals: Vorschläge
@@ -185,6 +185,11 @@ de:
         finished_message: Sie haben den Abstimmungsprozess beendet. Vielen Dank für Ihre Teilnahme!
         highlighted_cta: Über %{name} abstimmen
         if_change_opinion: Wenn Sie ihr Meinung geändert haben, können Sie
+        orders:
+          highest_cost: Höchste Kosten
+          label: Budgets sortieren nach
+          lowest_cost: Niedrigste Kosten
+          random: Zufällige Reihenfolge
         progress: Abstimmung beenden
         remove_vote: Stimme entfernen
         show: Projekte ansehen
@@ -248,7 +253,7 @@ de:
           title: Sie haben noch nicht abgestimmt
         filters:
           category: Kategorie
-          scope: Umfang
+          scope: Themenbereich
           search: Suche
           status: Status
           status_values:
@@ -328,7 +333,7 @@ de:
             more_information_modal: Weitere Informationen
             projects_per_page: Projekte pro Seite
             resources_permissions_enabled: Berechtigungen können für jedes Projekt festgelegt werden
-            scope_id: Bereich
+            scope_id: Themenbereich
             scopes_enabled: Bereiche aktiviert
             title: Titel
             total_budget: Gesamtbudget; Gesamtetat

@@ -60,7 +60,6 @@ ar:
       actions:
         new_initiative_type: نوع المبادرة الجديدة
       menu:
-        components: المكونات
         information: معلومات
         initiatives: المبادرات
         initiatives_settings: الإعدادات
@@ -98,6 +97,7 @@ ar:
             initiative_title: عنوان المبادرة
             name_and_surname: اسم ولقب
             postal_code: الكود البريدى
+            scope: نطاق
             time_and_date: الوقت و التاريخ
             timestamp: الطابع الزمني
       titles:
@@ -315,6 +315,7 @@ ar:
           full_name: الاسم الكامل
           initiative:
             description: 'الوصف:'
+          print: طباعة
         result:
           initiative_rejected_reason: تم رفض هذه المبادرة بسبب افتقارها للتوقيعات.
         signatures_count:
@@ -360,8 +361,12 @@ ar:
     menu:
       initiatives: المبادرات
     resources:
+      initiative:
+        actions:
+          comment: تعليق
       initiatives_type:
         actions:
+          create: إنشاء
           title: أفعال
           vote: إشارة
   layouts:

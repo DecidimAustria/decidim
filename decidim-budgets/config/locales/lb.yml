@@ -5,7 +5,6 @@ lb:
       project:
         budget_amount: Höhe des Budgets
         decidim_category_id: Kategorie
-        decidim_scope_id: Umfang
         description: Beschreibung
         proposal_ids: Ähnliche Vorschläge
         selected: Zur Implementierung ausgewählt
@@ -20,7 +19,6 @@ lb:
       actions:
         attachment_collections: Ordner
         attachments: Anhänge
-        confirm_destroy: Möchten Sie dieses Projekt wirklich löschen?
         destroy: Löschen
         edit: Bearbeiten
         edit_projects: Projekte verwalten
@@ -123,7 +121,6 @@ lb:
             other: "%{count} Projekte"
         filters:
           category: Kategorie
-          scope: Umfang
           search: Suche
           status: Status
           status_values:
@@ -163,7 +160,6 @@ lb:
             more_information_modal: Weitere Informationen
             projects_per_page: Projekte pro Seite
             resources_permissions_enabled: Berechtigungen können für jedes Projekt festgelegt werden
-            scope_id: Bereich
             scopes_enabled: Bereiche aktiviert
             title: Titel
             total_budget: Gesamtbudget; Gesamtetat

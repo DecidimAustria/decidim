@@ -151,6 +151,7 @@ nl:
         export: Alles exporteren
         export-selection: Selectie exporteren
         import: Importeren
+        manage: Beheer
         newsletter:
           new: Nieuwe nieuwsbrief
         participatory_space_private_user:
@@ -295,7 +296,6 @@ nl:
         title: Controle conflicten
         transfer:
           email: E-mail
-          error: Er is een probleem opgetreden bij het overbrengen van de huidige deelnemer naar een beheerde deelnemer.
           name: Naam
           reason: Reden
           success: De overdracht is met succes voltooid.
@@ -363,7 +363,7 @@ nl:
             'false': Ingediend
             'true': Niet-gepubliceerde
         scope_id_eq:
-          label: Bereik
+          label: Scope
         search_label: Zoeken
         search_placeholder:
           name_or_nickname_or_email_cont: Zoek %{collection} op e-mail, naam of bijnaam.
@@ -565,10 +565,11 @@ nl:
           name: Deelnemer
         user_group:
           fields:
-            actions: acties
+            actions: Acties
             created_at: Aangemaakt op
             document_number: Documentnummer
             name: Naam
+            nickname: Gebruikersnaam
             phone: Telefoon
             state: Staat
             users_count: Aantal deelnemers
@@ -749,6 +750,8 @@ nl:
           title: Nieuwe privé deelnemer burgerinspraak.
       participatory_space_private_users_csv_imports:
         new:
+          csv_upload:
+            title: Upload uw CSV-bestand
           destroy:
             button: Verwijder alle privé deelnemers
             empty: Je hebt geen privé deelnemers.
@@ -880,14 +883,14 @@ nl:
         index:
           state:
             pending: In afwachting
-            rejected: Geweigerd
+            rejected: Afgewezen
             verified: Geverifieerd
           verify_via_csv: Controleer via CSV
       user_groups_csv_verifications:
         new:
           explanation: Upload uw CSV-bestand. De officiële e-mails van de groepen in uw organisatie moeten in de eerste kolom van het bestand staan, zonder kopteksten. Alleen groepen die hun e-mail hebben bevestigd en een e-mail hebben die in het CSV-bestand wordt weergegeven, worden gevalideerd.
           title: Upload uw CSV-bestand
-          upload: Uploaden
+          upload: Upload
       users:
         create:
           error: Er is een probleem opgetreden bij het uitnodigen van deze beheerder.

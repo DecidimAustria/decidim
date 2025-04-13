@@ -89,7 +89,7 @@ tr:
               'false': Teklifler
               'true': Değişiklikler
           scope_id_eq:
-            label: Kapsam
+            label: kapsam
           state_eq:
             label: Durum
             values:
@@ -138,8 +138,9 @@ tr:
             proposal_wizard_step_1_help_text: Teklif sihirbazı "Oluştur" adımı yardım metni
             proposal_wizard_step_2_help_text: Teklif sihirbazı "Karşılaştır" adımı yardım metni
             proposal_wizard_step_3_help_text: Teklif sihirbazı "Tamamlandı" adımı yardım metni
+            proposal_wizard_step_4_help_text: Teklif "Yayınlama"  sihirbazı  yardım metni
             resources_permissions_enabled: Her teklif için işlem izinleri ayarlanabilir
-            scope_id: Kapsam
+            scope_id: kapsam
             scopes_enabled: Kapsamlar etkinleştirildi
             threshold_per_proposal: Teklif başına eşik
             vote_limit: Katılımcı başına destek sınırı
@@ -244,12 +245,10 @@ tr:
             notification_title: <a href="%{resource_path}">%{resource_title}</a> teklifi reddedildi.
         proposal_update_category:
           email_intro: 'Bir yönetici "%{resource_title}" teklifinizin kategorisini güncelledi, bu sayfada kontrol edin:'
-          email_outro: Bu bildirimi, teklifin yazarı olduğunuz için aldınız.
           email_subject: '%{resource_title} teklif kategorisi güncellendi'
           notification_title: <a href="%{resource_path}">%{resource_title}</a> teklif kategorisi bir yönetici tarafından güncellendi.
         proposal_update_scope:
           email_intro: 'Bir yönetici, "%{resource_title}" teklifinizin kapsamını güncelledi, bu sayfada göz atın:'
-          email_outro: Bu bildirimi, teklifin yazarı olduğunuz için aldınız.
           email_subject: '%{resource_title} teklif kapsamı güncellendi'
           notification_title: <a href="%{resource_path}">%{resource_title} </a> teklif kapsamı bir yönetici tarafından güncellendi.
         voting_enabled:
@@ -349,6 +348,7 @@ tr:
               md: Markdown
               odt: ODT
             bottom_hint: "(Belge bölümlerini önizleyebilir ve sıralayabilirsiniz)"
+            document_legend: '2 Mb''tan küçük bir belge ekleyin; 3 seviyeye kadar olan her bölüm tekliflere ayrıştırılacaktır. Desteklenen formatlar şunlardır: %{valid_mime_types}'
             title: BELGE EKLE
             upload_document: Belge yükle
           sections:
@@ -383,7 +383,6 @@ tr:
           index:
             actions: Eylemler
             assign_to_valuator: Bilirkişiye ata
-            assign_to_valuator_button: Ata
             cancel: İptal Et
             change_category: Kategoriyi değiştir
             change_scope: Kapsamı değiştir
@@ -397,7 +396,6 @@ tr:
             split_button: Böl
             title: Teklifler
             unassign_from_valuator: Bilirkişinin atamasını kaldır
-            unassign_from_valuator_button: Atamayı kaldır
             update: Güncelle
             update_scope_button: Kapsamı Güncelle
           new:
@@ -503,7 +501,7 @@ tr:
           open: Aç
           published: Yayınlandı
           related_to: İle ilgili
-          scope: Kapsam
+          scope: kapsam
           search: Arama
           state: Statü
           withdrawn: Geri çekildi
@@ -576,7 +574,7 @@ tr:
             official_proposal: Resmi teklif
             published_answer: Yayınlanan cevap
             published_at: Yayınlandı
-            scope: Kapsam
+            scope: kapsam
             state: Durum
             title: Başlık
             valuator: Bilirkişi
@@ -608,7 +606,6 @@ tr:
           discard: Bu taslağı sil
           discard_confirmation: Bu teklif taslağını silmek istediğinizden emin misiniz?
           send: Ön izleme
-          title: Teklif Taslağını Düzenle
         filters:
           activity: Aktivitelerim
           all: Tümü

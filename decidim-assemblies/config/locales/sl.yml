@@ -2,6 +2,8 @@
 sl:
   activemodel:
     attributes:
+      assemblies_type:
+        title: Naziv
       assembly:
         area_id: Področje
         assembly_type: Vrsta združbe
@@ -133,6 +135,13 @@ sl:
           success: Član uspešno kreiran v tej združbi.
         destroy:
           success: Član uspešno izbrisan v tej združbi.
+        edit:
+          update: Posodobi
+        new:
+          create: Ustvari
+      filters:
+        decidim_assemblies_type_id_eq:
+          label: Vrsta združbe
       menu:
         assemblies: Združbe
         assemblies_submenu:
@@ -148,6 +157,12 @@ sl:
         assemblies_types:
           fields:
             title: Naziv
+        assembly_member:
+          fields:
+            ceased_date: Datum prenehanja
+            designation_date: Datum imenovanja
+            full_name: Ime
+            position: Položaj
       titles:
         assemblies: Združbe
         assemblies_types: Vrste združb

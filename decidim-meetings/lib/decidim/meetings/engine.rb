@@ -46,6 +46,8 @@ module Decidim
       end
 
       initializer "decidim_meetings.register_icons" do
+        Decidim.icons.register(name: "headphone-line", icon: "headphone-line", category: "system", description: "", engine: :meetings)
+        Decidim.icons.register(name: "video-line", icon: "video-line", category: "system", description: "", engine: :meetings)
         Decidim.icons.register(name: "Decidim::Meetings::Meeting", icon: "map-pin-line", description: "Meeting", category: "activity", engine: :meetings)
         Decidim.icons.register(name: "in_person", icon: "community-line", description: "In person", category: "meetings", engine: :meetings)
         Decidim.icons.register(name: "online", icon: "webcam-line", description: "Online", category: "meetings", engine: :meetings)
@@ -75,7 +77,12 @@ module Decidim
 
       initializer "decidim_meetings.content_security_handlers" do |_app|
         Decidim.configure do |config|
-          config.content_security_policies_extra.deep_merge!({ "frame-src" => %w(player.twitch.tv meet.jit.si) })
+          if config.content_security_policies_extra["frame-src"].respond_to?(:<<)
+            config.content_security_policies_extra["frame-src"] << "player.twitch.tv"
+            config.content_security_policies_extra["frame-src"] << "meet.jit.si"
+          else
+            config.content_security_policies_extra["frame-src"] = %w(player.twitch.tv meet.jit.si)
+          end
         end
       end
 

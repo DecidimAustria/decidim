@@ -52,6 +52,9 @@ is:
             name: Niðurstaða
           status:
             name: Staða
+        projects_import:
+          new:
+            create: Flytja inn
         results:
           edit:
             title: Breyta niðurstöðum
@@ -105,7 +108,7 @@ is:
             end_date: Loka dagsetning
             id: ID
             progress: Framfarir
-            scope: Gildissvið
+            scope: Umfang
             start_date: Upphafsdagur
             status: Staða
             title: Titill
@@ -125,9 +128,6 @@ is:
             other: "%{count} niðurstöður"
         filters:
           all: Allt
-        home:
-          categories_label: Flokkar
-          subcategories_label: Undirflokka
         home_header:
           global_status: Global framkvæmdastaða
         nav_breadcrumb:
@@ -153,7 +153,7 @@ is:
           category_id_eq:
             label: Flokkur
           scope_id_eq:
-            label: Gildissvið
+            label: Umfang
           status_id_eq:
             label: Staða
     components:
@@ -167,7 +167,7 @@ is:
             heading_leaf_level_results: Nafn fyrir "Verkefni"
             heading_parent_level_results: Nafn fyrir "Úrslit"
             intro: Intro
-            scope_id: Gildissvið
+            scope_id: Umfang
             scopes_enabled: Umfang virkt
             subcategories_label: Nafn fyrir "undirflokka"
           step:

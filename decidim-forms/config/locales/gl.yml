@@ -14,7 +14,6 @@ gl:
         answer:
           attributes:
             choices:
-              missing: non están completos
               too_many: son demasiados
   decidim:
     forms:
@@ -26,15 +25,12 @@ gl:
         questionnaires:
           answer_option:
             answer_option: Opción de resposta
-            free_text: Texto libre
             remove: Quitar
             statement: Declaración
           edit:
             save: Gardar
           form:
             add_question: Engadir pregunta
-            add_title_and_description: Engadir títutlo e descrición
-            already_answered_warning: Algúns usuarios xa responderon o cuestionario para que non poida modificar as súas preguntas.
           matrix_row:
             remove: Quitar
             statement: Declaración
@@ -90,8 +86,8 @@ gl:
           tos_agreement: Ao participar aceptas as Condicións de servizo
       step_navigation:
         show:
-          are_you_sure: Non se pode desfacer esta acción e non poderá editar as túas respostas. Estás seguro?
           submit: Enviar
       user_answers_serializer:
         created_at: Respondeu
         id: ID de resposta
+        question: Pregunta

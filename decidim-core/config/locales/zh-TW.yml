@@ -500,6 +500,9 @@ zh-TW:
       actions:
         login_before_access: 請先登入您的帳戶再進行訪問.
         unauthorized: 您無權限執行此操作.
+      application_helper:
+        filter_category_values:
+          all: 全部
     devise:
       omniauth_registrations:
         create:
@@ -513,6 +516,7 @@ zh-TW:
       registrations:
         new:
           already_have_an_account?: 已經有帳號了嗎？
+          log_in: 登入
           newsletter: 偶爾收到包含相關信息的時事通訊。
           newsletter_title: 聯絡人權限
           sign_up: 註冊登記
@@ -818,11 +822,11 @@ zh-TW:
           filename: 檔案名稱
           remove: 移除
           replace: 替換
+          save: 儲存
           title: 標題
           title_required: 標題為必填欄位！
           uploaded: 已上傳
           validating: 驗證中...
-          validation_error: 驗證錯誤!
         select_file: 選擇檔案
       upload_help:
         dropzone: 將檔案拖曳到此處或點擊按鈕上傳。
@@ -1235,6 +1239,8 @@ zh-TW:
         conversations: 對話
         followers: 追隨者
         following: 關注
+        group_admins: 管理管理員
+        group_members: 管理成員
         groups: 群組
         members: 成員
         officialized: 正式認證參與者
@@ -1250,9 +1256,11 @@ zh-TW:
           edit_user_group: 編輯群組資料
           invite_user: 邀請參與者
           join_user_group: 申請加入群組
+          leave_user_group: 退出群組
           manage_user_group_admins: 管理管理員
           manage_user_group_users: 管理成員
           message: 訊息
+          resend_email_confirmation_instructions: 重新發送電子郵件確認指示
         confirmation_instructions_sent: 電子郵件確認指示已發送.
         create_user_group: 建立群組
         edit_profile: 編輯個人資料
@@ -1367,6 +1375,7 @@ zh-TW:
       participatory_space_filters:
         filters:
           areas: 區域
+          scope: 範圍
           select_an_area: 選擇一個地區
       public_participation:
         public_participation: 公開展示我的出席情況。
@@ -1564,12 +1573,16 @@ zh-TW:
       signed_up_but_unconfirmed: 確認信件已送至您的 Email 信箱，請點擊信件內連結以啓動您的帳號。
       update_needs_confirmation: 您已經成功的更新帳號資訊，但我們仍需確認您的電子信箱，請至新信箱收信並點擊連結以確認您的新電子郵件帳號。
       updated: 您的帳號已成功升級。
+    sessions:
+      new:
+        log_in: 登入
     shared:
       links:
         back: 返回
         didn_t_receive_confirmation_instructions: 沒有收到確認的說明嗎？
         didn_t_receive_unlock_instructions: 沒有收到解鎖說明？
         forgot_your_password: 忘記密碼了嗎？
+        log_in: 登入
         sign_up: 註冊登記
       minimum_password_length:
         other: "One\n(最少%{count} 個字符)\n\nOther\n(最少%{count} 個字符)"
@@ -1694,9 +1707,11 @@ zh-TW:
         data_consent_settings: Cookie 設定
         decidim_logo: Decidim 商標
         download_open_data: 下載開放數據檔案
+        log_in: 登入
         made_with_open_source: 使用<a target="_blank" href="https://github.com/decidim/decidim">自由軟體</a>建立的網站。
         sign_up: 註冊
       header:
+        log_in: 登入
         main_menu: 主選單
         user_menu: 使用者選單
       impersonation_warning:

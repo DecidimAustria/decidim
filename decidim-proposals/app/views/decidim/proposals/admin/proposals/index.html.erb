@@ -6,8 +6,10 @@
         <%= t(".title") %>
         <span id="js-selected-proposals-count" class="component-counter component-counter--inline" title="<%= t("decidim.proposals.admin.proposals.index.selected") %>"></span>
       </div>
+      <div class="flex items-center gap-x-4">
         <%= render partial: "bulk-actions" %>
         <%= render partial: "decidim/admin/components/resource_action" %>
+      </div>
     </h1>
   </div>
   <%= admin_filter_selector(:proposals) %>
@@ -19,7 +21,7 @@
             <%= check_box_tag "proposals_bulk", "all", false, class: "js-check-all" %>
           </th>
           <th class="!text-left">
-            <%= sort_link(query, :title, t("models.proposal.fields.title", scope: "decidim.proposals") ) %>
+            <%= sort_link(query, :translated_title, t("models.proposal.fields.title", scope: "decidim.proposals") ) %>
           </th>
           <th>
             <%= sort_link(query, :published_at, t("models.proposal.fields.published_at", scope: "decidim.proposals") ) %>
@@ -52,7 +54,7 @@
           </th>
 
           <th>
-            <%= sort_link(query, :state, [:state, :is_emendation], t("models.proposal.fields.state", scope: "decidim.proposals") ) %>
+            <%= t("models.proposal.fields.state", scope: "decidim.proposals") %>
           </th>
 
           <th class="actions"><%= t("actions.title", scope: "decidim.proposals") %></th>

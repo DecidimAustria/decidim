@@ -72,8 +72,6 @@ kaa:
           FormPDF: PDF
           JSON: JSON
       filters:
-        category_id_eq:
-          label: Kategoriya
         filter_label: Filtr
         invitation_accepted_at_present:
           values:
@@ -126,6 +124,8 @@ kaa:
             email: Elektron pochta
         user_group:
           fields:
+            actions: Háreketler
+            name: Ataması
             phone: Telefon
       moderated_users:
         index:
@@ -188,7 +188,6 @@ kaa:
       share_tokens:
         actions:
           destroy: Óshiriw
-          share: Bólisiw
       shared:
         gallery:
           add_images: Súwretlerdi qosıw
@@ -196,6 +195,9 @@ kaa:
       static_pages:
         edit:
           update: Jańalaw
+      user_groups_csv_verifications:
+        new:
+          upload: Júklew
       users_statistics:
         users_count:
           participants: Qatnasıwshılar

@@ -342,6 +342,10 @@ sk:
         name: Štatistiky organizácie
       sub_hero:
         name: Pruh pod hlavným pruhom
+    core:
+      application_helper:
+        filter_category_values:
+          all: Všetko
     devise:
       omniauth_registrations:
         new:
@@ -352,6 +356,7 @@ sk:
       registrations:
         new:
           already_have_an_account?: Už máte účet?
+          log_in: Prihlásiť sa
           newsletter: Dostávajte príležitostný spravodajca s relevantnými informáciami
           newsletter_title: Povolenie kontaktu
           sign_up: Zaregistrovať sa
@@ -580,7 +585,7 @@ sk:
         current_admins: 'Aktuálni administrátori:'
         manage_admins: Správa administrátorov
     group_invites:
-      accept_invitation: Akceptovať
+      accept_invitation: Prijať
       accept_or_reject_group_invitations: 'Nasledujúce skupiny vás pozvali, aby ste sa k nim pripojili. Prijať alebo odmietnuť ich požiadavky: '
       index:
         invite: Pozvať
@@ -611,8 +616,8 @@ sk:
         success: Skupina úspěšně opustila.
       members:
         accept_or_reject_join_requests: 'Následující uživatelé se připojili k této skupině. Přijmout nebo odmítnout jejich požadavky:'
-        accept_request: Akceptovat
-        reject_request: Odmítnout
+        accept_request: Prijať
+        reject_request: Odmietnuť
       new:
         create_user_group: Vytvořit skupinu
         new_user_group: Nová skupina
@@ -656,10 +661,18 @@ sk:
       home: Domov
     messaging:
       conversation_mailer:
+        comanagers_new_conversation:
+          greeting: Dobrý deň, %{recipient}!
+        comanagers_new_message:
+          greeting: Dobrý deň, %{recipient}!
         new_conversation:
           greeting: Dobrý deň, %{recipient}!
           intro: "%{sender} zahájil novú diskusiu s vami. Kliknite sem pre zobrazenie:"
           subject: "%{sender} začal s vami konverzovať"
+        new_group_conversation:
+          greeting: Dobrý deň, %{recipient}!
+        new_group_message:
+          greeting: Dobrý deň, %{recipient}!
         new_message:
           greeting: Dobrý deň, %{recipient}!
           intro: "%{sender} poslala nové správy vo vašej konverzácii. Kliknite sem pre ich zobrazenie:"
@@ -787,6 +800,8 @@ sk:
         badges: Odznaky
         followers: Sledujúci
         following: Nasleduje
+        group_admins: Správa administrátorov
+        group_members: Správa členov
         groups: Skupiny
         members: Členovia
       sidebar:
@@ -794,7 +809,17 @@ sk:
           info: Odznaky získate za určité aktivity a účasť na platforme.
           title: Odznaky
       user:
-        create_user_group: Vytvoriť skupinu
+        actions:
+          create_user_group: Vytvořit skupinu
+          edit_profile: Editovať profil
+          edit_user_group: Upraviť profil skupiny
+          invite_user: Pozvať užívateľa
+          join_user_group: Žiadosť o pripojenie k skupine
+          leave_user_group: Opustiť skupinu
+          manage_user_group_admins: Správa administrátorov
+          manage_user_group_users: Správa členov
+          resend_email_confirmation_instructions: Opakujte e-mailové pokyny na potvrdenie
+        create_user_group: Vytvořit skupinu
         edit_profile: Editovať profil
         edit_user_group: Upraviť profil skupiny
         invite_user: Pozvať užívateľa
@@ -823,7 +848,7 @@ sk:
     scopes:
       global: Globální oblast působnosti
       picker:
-        cancel: zrušenie
+        cancel: Zrušiť
         choose: Vybrat
         title: Vyberte %{field}
       prompt: Vyberte oblast
@@ -856,6 +881,8 @@ sk:
         report: Správa
         spam: Obsahuje clickbait, reklama, podvody alebo skripty.
         title: Nahlásiť problém
+      flag_user_modal:
+        close: Zavrieť
       floating_help:
         help: Pomoc
       login_modal:
@@ -879,6 +906,8 @@ sk:
       comments_count: Komentáre
     user_contact_disabled: Tento účastník nepovoľuje posielanie priamych správ.
     user_conversations:
+      reply:
+        send: Poslat
       update:
         error: Zpráva nebyla odeslána. Zkuste to později znovu
     user_interests:
@@ -983,10 +1012,14 @@ sk:
       signed_up_but_unconfirmed: Na vašu e-mailovú adresu bola odoslaná správa s potvrdzujúcim odkazom. Kliknutím na odkaz aktivujte svoj účet.
       update_needs_confirmation: Účet ste úspešne aktualizovali, ale musíme overiť novú e-mailovú adresu. Skontrolujte e-mail a potvrďte novú e-mailovú adresu.
       updated: Účet bol úspešne aktualizovaný.
+    sessions:
+      new:
+        log_in: Prihlásiť sa
     shared:
       links:
         back: Späť
         forgot_your_password: Zabudli ste heslo?
+        log_in: Prihlásiť sa
         sign_up: Prihlásiť sa
       minimum_password_length:
         one: "(Minimálne %{count} znakov)"
@@ -1034,8 +1067,11 @@ sk:
         edit: Upraviť
       footer:
         download_open_data: Stiahnite si súbory s otvorenými dátami
+        log_in: Prihlásiť sa
         made_with_open_source: Webová stránka vytvorená s <a target="_blank" href="https://github.com/decidim/decidim"> slobodným softvérom </a>.
         sign_up: Registrovať
+      header:
+        log_in: Prihlásiť sa
       impersonation_warning:
         close_session: Zatvoriť sedenie
         description_html: Spravujete účastníka <b>%{user_name} </ b>.

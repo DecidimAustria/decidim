@@ -148,9 +148,7 @@ el:
             comments_enabled: Τα σχόλια ενεργοποιήθηκαν
             comments_max_length: Μέγιστο μέγεθος σχολίων (Αφήστε το 0 για την προκαθορισμένη τιμή)
             default_sort_order: Προεπιλεγμένη ταξινόμηση προτάσεων
-            default_sort_order_help: Προεπιλογή σημαίνει ότι αν η υποστήριξη είναι ενεργοποιημένη, οι προτάσεις θα εμφανίζονται ταξινομημένες τυχαία, και αν η υποστήριξη είναι μπλοκαρισμένη, θα ταξινομούνται με βάση την περισσότερη υποστήριξη.
             default_sort_order_options:
-              default: Προεπιλογή
               most_commented: Πιο σχολιασμένες
               most_endorsed: Με τις περισσότερες επιδοκιμασίες
               most_followed: Με τους περισσότερους ακολούθους
@@ -201,9 +199,7 @@ el:
             creation_enabled: Οι συμμετέχοντες μπορούν να δημιουργήσουν προτάσεις
             creation_enabled_readonly: Αυτή η ρύθμιση είναι απενεργοποιημένη όταν ενεργοποιείτε τη λειτουργία Συμμετοχικών Κειμένων. Για να ανεβάσετε προτάσεις ως συμμετοχικό κείμενο κάντε κλικ στο κουμπί Συμμετοχικά Κείμενα και ακολουθήστε τις οδηγίες.
             default_sort_order: Προεπιλεγμένη ταξινόμηση προτάσεων
-            default_sort_order_help: Προεπιλογή σημαίνει ότι αν η υποστήριξη είναι ενεργοποιημένη, οι προτάσεις θα εμφανίζονται ταξινομημένες τυχαία, και αν η υποστήριξη είναι μπλοκαρισμένη, θα ταξινομούνται με βάση την περισσότερη υποστήριξη.
             default_sort_order_options:
-              default: Προεπιλογή
               most_commented: Πιο σχολιασμένες
               most_endorsed: Με τις περισσότερες επιδοκιμασίες
               most_followed: Με τους περισσότερους ακολούθους
@@ -316,12 +312,10 @@ el:
             notification_title: Η πρόταση <a href="%{resource_path}">%{resource_title}</a> απορρίφθηκε.
         proposal_update_category:
           email_intro: 'Ένας διαχειριστής ενημέρωσε την κατηγορία της πρότασής σας «%{resource_title}», δείτε την σε αυτήν τη σελίδα:'
-          email_outro: Λάβατε αυτήν την ειδοποίηση επειδή είστε ο συντάκτης της πρότασης.
           email_subject: Η κατηγορία της πρότασης %{resource_title} ενημερώθηκε
           notification_title: Η κατηγορία της πρότασης <a href="%{resource_path}">%{resource_title}</a> ενημερώθηκε από έναν διαχειριστή.
         proposal_update_scope:
           email_intro: 'Ένας διαχειριστής ενημέρωσε το πεδίο εφαρμογής της πρότασής σας «%{resource_title}», δείτε την σε αυτήν τη σελίδα:'
-          email_outro: Λάβατε αυτήν την ειδοποίηση επειδή είστε ο συντάκτης της πρότασης.
           email_subject: Το πεδίο εφαρμογής της πρότασης %{resource_title} ενημερώθηκε
           notification_title: Το πεδίο εφαρμογής της πρότασης <a href="%{resource_path}">%{resource_title}</a> ενημερώθηκε από έναν διαχειριστή.
         voting_enabled:
@@ -497,7 +491,6 @@ el:
           index:
             actions: Ενέργειες
             assign_to_valuator: Εκχώρηση σε εκτιμητή
-            assign_to_valuator_button: Εκχώρηση
             cancel: Ακύρωση
             change_category: Αλλαγή κατηγορίας
             change_scope: Αλλαγή πεδίου εφαρμογής
@@ -511,7 +504,6 @@ el:
             split_button: Διαχωρισμός
             title: Προτάσεις
             unassign_from_valuator: Κατάργηση εκχώρησης από εκτιμητή
-            unassign_from_valuator_button: Κατάργηση εκχώρησης
             update: Ενημέρωση
             update_scope_button: Ενημέρωση πεδίου εφαρμογής
           new:
@@ -540,11 +532,11 @@ el:
           update_category:
             invalid: 'Αυτές οι προτάσεις είχαν ήδη την κατηγορία %{subject_name}: %{proposals}.'
             select_a_category: Παρακαλώ επιλέξτε μια κατηγορία.
-            select_a_proposal: Επιλέξτε μια πρόταση.
+            select_a_proposal: Παρακαλώ επιλέξτε μια πρόταση.
             success: 'Οι προτάσεις ενημερώθηκαν με επιτυχία στην κατηγορία %{subject_name}: %{proposals}.'
           update_scope:
             invalid: 'Αυτές οι προτάσεις είχαν ήδη το πεδίο εφαρμογής %{subject_name}: %{proposals}.'
-            select_a_proposal: Επιλέξτε μια πρόταση.
+            select_a_proposal: Παρακαλώ επιλέξτε μια πρόταση.
             select_a_scope: Παρακαλώ επιλέξτε ένα πεδίο εφαρμογής.
             success: 'Οι προτάσεις ενημερώθηκαν με επιτυχία στο πεδίο εφαρμογής %{subject_name}: %{proposals}.'
         proposals_imports:
@@ -760,7 +752,6 @@ el:
           discard: Διαγραφή πρόχειρου
           discard_confirmation: Είστε βέβαιοι ότι θέλετε να απορρίψετε αυτό το προσχέδιο πρότασης;
           send: Προεπισκόπηση
-          title: Επεξεργασία προσχεδίου πρότασης
         filters:
           activity: Η δραστηριότητά μου
           all: Όλα
@@ -786,7 +777,6 @@ el:
           text_banner: Βλέπετε τη λίστα των προτάσεων που αποσύρονται από τους συντάκτες τους. %{go_back_link}.
         new:
           send: Συνέχεια
-          title: Δημιουργήστε την πρότασή σας
         orders:
           label: 'Ταξινόμηση προτάσεων κατά:'
           most_commented: Με τα περισσότερα σχόλια

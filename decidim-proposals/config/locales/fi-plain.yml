@@ -148,9 +148,9 @@ fi-pl:
             comments_enabled: Kommentit käytössä
             comments_max_length: Kommenttien maksimipituus (jätä arvoksi 0 käyttääksesi oletusarvoa)
             default_sort_order: Ehdotuksen oletusjärjestys
-            default_sort_order_help: Oletus tarkoittaa, että mikäli kannatukset ovat käytössä, ehdotukset näytetään satunnaisessa järjestyksessä ja mikäli kannatukset on estetty, niin ehdotukset järjestetään eniten kannatuksia saaneet ensin.
+            default_sort_order_help: Automaattinen tarkoittaa, että mikäli äänet ovat käytössä, ehdotukset näytetään satunnaisessa järjestyksessä ja mikäli äänet on estetty, ehdotukset järjestetään eniten ääniä saaneet ensin.
             default_sort_order_options:
-              default: Oletus
+              automatic: Automaattinen
               most_commented: Eniten kommentoidut
               most_endorsed: Eniten suositellut
               most_followed: Eniten seuratut
@@ -202,9 +202,9 @@ fi-pl:
             creation_enabled: Osallistujat voivat luoda ehdotuksia
             creation_enabled_readonly: Tämä asetus on pois päältä, kun olet ottanut ehdotusaineistot käyttöön. Voit ladata uusia ehdotusaineistoja siirtymällä ehdotusaineistot-osioon ja seuraamalla kyseisen osion ohjeistusta.
             default_sort_order: Ehdotuksen oletusjärjestys
-            default_sort_order_help: Oletus tarkoittaa, että mikäli kannatukset ovat käytössä, ehdotukset näytetään satunnaisessa järjestyksessä ja mikäli kannatukset on estetty, niin ehdotukset järjestetään eniten kannatuksia saaneet ensin.
+            default_sort_order_help: Automaattinen tarkoittaa, että mikäli äänet ovat käytössä, ehdotukset näytetään satunnaisessa järjestyksessä ja mikäli äänet on estetty, ehdotukset järjestetään eniten ääniä saaneet ensin.
             default_sort_order_options:
-              default: Oletus
+              automatic: Automaattinen
               most_commented: Eniten kommentoidut
               most_endorsed: Eniten suositellut
               most_followed: Eniten seuratut
@@ -320,12 +320,12 @@ fi-pl:
             notification_title: Ehdotus <a href="%{resource_path}">%{resource_title}</a> on hylätty.
         proposal_update_category:
           email_intro: 'Järjestelmänvalvoja on päivittänyt ehdotuksesi aihepiiriin "%{resource_title}", tarkista se:'
-          email_outro: Tämä ilmoitus on lähetetty sinulle, koska olet ehdotuksen tekijä.
+          email_outro: Tämä ilmoitus on lähetetty sinulle, koska olet ehdotuksen laatija.
           email_subject: Ehdotuksen %{resource_title} aihepiiri on päivitetty
           notification_title: Järjestelmänvalvoja on päivittänyt ehdotuksen <a href="%{resource_path}">%{resource_title}</a> aihepiirin.
         proposal_update_scope:
           email_intro: 'Hallintakäyttäjä on päivittänyt ehdotuksesi "%{resource_title}" teeman, tarkista se tältä sivulta:'
-          email_outro: Tämä ilmoitus on lähetetty sinulle, koska olet ehdotuksen tekijä.
+          email_outro: Tämä ilmoitus on lähetetty sinulle, koska olet ehdotuksen laatija.
           email_subject: Ehdotuksen %{resource_title} teema on päivitetty
           notification_title: Hallintakäyttäjä on päivittänyt ehdotuksen <a href="%{resource_path}">%{resource_title}</a> teeman.
         voting_enabled:
@@ -388,7 +388,7 @@ fi-pl:
     participatory_spaces:
       highlighted_proposals:
         last: Viimeisimmät ehdotukset
-        see_all: Näytä kaikki
+        see_all: Näytä kaikki ehdotukset
     proposals:
       actions:
         answer_proposal: Vastaa ehdotukseen
@@ -803,7 +803,7 @@ fi-pl:
           text_banner: Katselet peruutettuja ehdotuksia, jotka niiden tekijät ovat peruuttaneet. %{go_back_link}.
         new:
           send: Jatka
-          title: Luo ehdotuksesi
+          title: Luo uusi ehdotus
         orders:
           label: 'Järjestä ehdotukset:'
           most_commented: Eniten kommentoidut

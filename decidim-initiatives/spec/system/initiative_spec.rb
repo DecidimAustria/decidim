@@ -146,10 +146,6 @@ describe "Initiative" do
         it { expect(page).not_to have_link("Send to technical validation") }
       end
 
-      shared_examples_for "initiative shows send to technical validation disabled" do
-        it { expect(page).to have_link("Send to technical validation", href: "#") }
-      end
-
       context "when initiative state is created" do
         let(:state) { :created }
 
@@ -159,8 +155,9 @@ describe "Initiative" do
             visit decidim_initiatives.initiative_path(initiative)
           end
 
-          it_behaves_like "initiative shows send to technical validation disabled"
+          it_behaves_like "initiative does not show send to technical validation"
           it { expect(page).to have_content("Before sending your initiative for technical validation") }
+          it { expect(page).to have_link("Edit") }
         end
 
         context "when the user can send the initiative to technical validation" do
@@ -172,7 +169,9 @@ describe "Initiative" do
       context "when initiative state is validating" do
         let(:state) { :validating }
 
-        it_behaves_like "initiative shows send to technical validation disabled"
+        it { expect(page).not_to have_link("Edit") }
+
+        it_behaves_like "initiative does not show send to technical validation"
       end
 
       context "when initiative state is discarded" do
@@ -199,14 +198,13 @@ describe "Initiative" do
         it_behaves_like "initiative does not show send to technical validation"
       end
     end
+  end
 
-    describe "follow button" do
-      let!(:user) { create(:user, :confirmed, organization:) }
-      let(:followable) { initiative }
-      let(:followable_path) { decidim_initiatives.initiative_path(initiative) }
-
-      include_examples "follows"
-    end
+  it_behaves_like "followable content for users" do
+    let(:initiative) { base_initiative }
+    let!(:user) { create(:user, :confirmed, organization:) }
+    let(:followable) { initiative }
+    let(:followable_path) { decidim_initiatives.initiative_path(initiative) }
   end
 
   describe "initiative components" do

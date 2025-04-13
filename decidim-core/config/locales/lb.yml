@@ -378,6 +378,10 @@ lb:
         name: Organisations-Statistiken
       sub_hero:
         name: Sub hero Banner
+    core:
+      application_helper:
+        filter_category_values:
+          all: All
     devise:
       omniauth_registrations:
         new:
@@ -389,6 +393,7 @@ lb:
       registrations:
         new:
           already_have_an_account?: Hues du schonn en Kont?
+          log_in: Umelden
           newsletter: Heiansdo en Newsletter mat relevanten Informatiounen zougeschéckt kréien
           newsletter_title: Erlabnis Kontakt opzehuelen
           sign_up: Registréieren
@@ -647,7 +652,7 @@ lb:
         current_admins: 'Aktuell Admins:'
         manage_admins: Admins verwalten
     group_invites:
-      accept_invitation: Unhuelen
+      accept_invitation: Acceptéieren
       accept_or_reject_group_invitations: 'Dës Gruppen hunn dech agelueden dech hinnen unzeschléissen. Hir Ufroen unhuelen oder refuséieren:'
       index:
         invite: Alueden
@@ -678,7 +683,7 @@ lb:
         success: Aus dem Grupp ausgetrueden.
       members:
         accept_or_reject_join_requests: 'Dës Benotzer hunn ugefrot dësem Grupp bäizetrieden. Hir Ufroen unhuelen oder refuséieren:'
-        accept_request: Akzeptéieren
+        accept_request: Acceptéieren
         reject_request: Refuséieren
       new:
         create_user_group: Grupp erstellen
@@ -759,7 +764,7 @@ lb:
           subject: "%{sender} huet eng Konversatioun mam %{group} ugefaangen"
         new_group_message:
           admin_in_group: Du kriss dat heiten, well du bass Administrateur am %{group}.
-          greeting: Moien, %{recipient}!
+          greeting: Moien %{recipient}!
           intro: "%{sender} huet nei Noriichten gepost an der Konversatioun mam Grupp %{group}. Klick hei fir se ze gesinn:"
           subject: "%{group} hat neue Nachrichten von %{sender}"
         new_message:
@@ -781,6 +786,8 @@ lb:
           new_conversation: Nei Konversatioun
           next: Weider
           title: Konversatiounen
+        reply_form:
+          placeholder: Deng Äntwert...
         show:
           back: Zeréck bei all d'Konversatiounen
           chat_with: Konversatioun mat
@@ -901,6 +908,8 @@ lb:
         conversations: Konversatiounen
         followers: Unhänger
         following: Geet no
+        group_admins: Admins verwalten
+        group_members: Memberen verwalten
         groups: Gruppen
         members: Memberen
         officialized: Offiziellen Teilnehmer
@@ -910,13 +919,23 @@ lb:
           info: Ofzeechen kann een sech verdéngen, andeems een bestëmmten Aktivitéiten op der Plattform duerchféiert.
           title: Ofzeechen
       user:
+        actions:
+          create_user_group: Grupp erstellen
+          edit_profile: Profil beaarbechten
+          edit_user_group: Profil vum Grupp beaarbechten
+          invite_user: En Teilnehmer alueden
+          join_user_group: Ufro engem Grupp bäitrieden ze dierfen
+          leave_user_group: Grupp verloossen
+          manage_user_group_admins: Admins verwalten
+          manage_user_group_users: Memberen verwalten
+          resend_email_confirmation_instructions: Den Email mat der Confirmatioun vun den Instruktiounen op en Neits schécken
         create_user_group: Grupp erstellen
         edit_profile: Profil beaarbechten
         edit_user_group: Profil vum Grupp beaarbechten
         invite_user: En Teilnehmer alueden
         join_user_group: Ufro engem Grupp bäitrieden ze dierfen
         leave_user_group: Grupp verloossen
-        manage_user_group_admins: Administrateuren verwalten
+        manage_user_group_admins: Admins verwalten
         manage_user_group_users: Memberen verwalten
         resend_email_confirmation_instructions: Den Email mat der Confirmatioun vun den Instruktiounen op en Neits schécken
     reported_mailer:
@@ -1014,6 +1033,7 @@ lb:
       participatory_space_filters:
         filters:
           areas: Beräicher
+          scope: Ëmfang
           select_an_area: Wiel e Beräich
       public_participation:
         public_participation: Uweisen, dass ech ageloggt sinn
@@ -1185,10 +1205,14 @@ lb:
       signed_up_but_unconfirmed: Du krus eng Noriicht op den Email-Adress geschéckt. Klick do op de Link, fir däin Kont ze aktivéieren.
       update_needs_confirmation: Du hues däin Kont aktivéiert, mir kontrolléieren deng Email-Adress. W. e. g. iwwerpréif deng Email-Agäng an klick do op de Link fir deng nei Adress ze bestätegen.
       updated: Däin Kont gouf aktualiséiert.
+    sessions:
+      new:
+        log_in: Umelden
     shared:
       links:
         back: Zréck
         forgot_your_password: Passwuert vergiess?
+        log_in: Umelden
         sign_up: Registréieren
       minimum_password_length:
         one: "(%{count} Minimum Zeechen)"
@@ -1240,9 +1264,11 @@ lb:
         cc_by_license: Creative Commons Lizenz
         decidim_logo: Decidim-Logo
         download_open_data: Open Data Dateien eroflueden
+        log_in: Umelden
         made_with_open_source: Website mat <a target="_blank" href="https://github.com/decidim/decidim">fräi Software erstallt</a>.
         sign_up: Registréieren
       header:
+        log_in: Umelden
         main_menu: Hauptmenü
         user_menu: Benotzer-Menü
       impersonation_warning:

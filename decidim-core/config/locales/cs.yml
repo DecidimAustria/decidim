@@ -388,6 +388,7 @@ cs:
           '1': Vytvořte svůj pozměňovací návrh
           '2': Porovnejte váš pozměňovací návrh
           '3': Dokončete váš pozměňovací návrh
+          '4': Publikovat svůj pozměňovací návrh
     anonymous_user: Anonymní
     application:
       document:
@@ -533,6 +534,8 @@ cs:
             dummy_step_attribute1: Atribut 1 zástupného kroku
             dummy_step_attribute2: Atribut 2 zástupného kroku
             dummy_step_translatable_text: Zástupný krok textu k přeložení
+      pagination:
+        page_title: "%{component_name} - Strana %{current_page} z %{total_pages}"
     contact: Kontakt
     content_blocks:
       announcement:
@@ -955,11 +958,12 @@ cs:
           filename: Název souboru
           remove: Odebrat
           replace: Nahradit
+          save: Uložit
           title: Název
           title_required: Název je povinný!
           uploaded: Nahráno
           validating: Probíhá ověřování...
-          validation_error: Chyba ověření!
+          validation_error: Chyba ověření! Zkontrolujte, zda má soubor povolenou příponu nebo velikost.
         select_file: Vyberte soubor
       upload_help:
         dropzone: Přetáhněte soubory sem nebo klikněte na tlačítko pro nahrání
@@ -1000,7 +1004,7 @@ cs:
       accept:
         error: Při přijetí této pozvánky došlo k chybě.
         success: Pozvánka úspěšně přijata.
-      accept_invitation: Akceptovat
+      accept_invitation: Přijmout
       accept_or_reject_group_invitations: 'Následující skupiny vás pozvaly, abyste se k nim připojili. Přijmout nebo odmítnout jejich požadavky:'
       index:
         invite: Pozvat
@@ -1058,7 +1062,7 @@ cs:
         success: Skupina úspěšně opustila.
       members:
         accept_or_reject_join_requests: 'Následující uživatelé se připojili k této skupině. Přijmout nebo odmítnout jejich požadavky:'
-        accept_request: Akceptovat
+        accept_request: Přijmout
         reject_request: Odmítnout
       new:
         create_user_group: Vytvořit skupinu
@@ -1117,6 +1121,8 @@ cs:
           not_found: 'Oblast působnosti nebyla nalezena v databázi (ID: %{id})'
         scope_type_presenter:
           not_found: 'Typ oboru nebyl nalezen v databázi (ID: %{id})'
+    machine_translations:
+      automatic: automatický překlad do %{locale_name}
     managed_users:
       expired_session: Aktuální relace správy účastníka vypršela.
     map:
@@ -1135,13 +1141,13 @@ cs:
       conversation_mailer:
         comanagers_new_conversation:
           admin_in_group: Obdrželi jste to, protože jste administrátor v %{group}.
-          greeting: Dobrý den, %{recipient}!
+          greeting: Ahoj, %{recipient}!
           intro: "%{manager} zahájil novou konverzaci s názvem %{group}. Klikněte zde pro její zobrazení:"
           outro: Užijte si platformu!
           subject: "%{manager} zahájil novou konverzaci jako %{group}"
         comanagers_new_message:
           admin_in_group: Obdrželi jste to, protože jste administrátor v %{group}.
-          greeting: Dobrý den, %{recipient}!
+          greeting: Ahoj, %{recipient}!
           intro: "%{manager} zveřejnil nové zprávy v konverzaci s názvem %{group}. Klikněte zde pro jejich zobrazení:"
           outro: Užijte si platformu!
           subject: "%{manager} odeslal nové zprávy jako %{group}"
@@ -1152,13 +1158,13 @@ cs:
           subject: "%{sender} začal s vámi konverzovat"
         new_group_conversation:
           admin_in_group: Obdrželi jste to, protože jste administrátor v %{group}.
-          greeting: Dobrý den, %{recipient}!
+          greeting: Ahoj, %{recipient}!
           intro: "%{sender} zahájil novou konverzaci se skupinou %{group}. Klikněte zde pro její zobrazení:"
           outro: Užijte si platformu!
           subject: "%{sender} zahájil konverzaci s %{group}"
         new_group_message:
           admin_in_group: Obdrželi jste to, protože jste administrátor v %{group}.
-          greeting: Dobrý den, %{recipient}!
+          greeting: Ahoj, %{recipient}!
           intro: "%{sender} přidal nové zprávy do konverzace se skupinou %{group}. Klikněte zde pro jejich zobrazení:"
           outro: Užijte si platformu!
           subject: "%{group} má nové zprávy od %{sender}"
@@ -1277,6 +1283,7 @@ cs:
       no_notifications: Zatím žádné oznámení.
       show:
         missing_event: Jejda, toto oznámení patří k položce, která již není k dispozici. Můžete ho zahodit.
+        moderated: Obsah upraven
     notifications_digest_mailer:
       header:
         daily: Denní výběr oznámení
@@ -1394,8 +1401,8 @@ cs:
         conversations: Konverzace
         followers: Sledující
         following: Sleduje
-        group_admins: Spravovat správce
-        group_members: Spravovat členy
+        group_admins: Správa administrátorů
+        group_members: Správa členů
         groups: Skupiny
         members: Členové
         officialized: Oficiální účastník
@@ -1408,14 +1415,14 @@ cs:
         actions:
           create_user_group: Vytvořit skupinu
           disabled_message: Zpráva
-          edit_profile: Upravit profil
+          edit_profile: Editovat profil
           edit_user_group: Upravit profil skupiny
-          invite_user: Pozvat účastníka
-          join_user_group: Požádat o připojení ke skupině
+          invite_user: Pozvat uživatele
+          join_user_group: Žádost o připojení ke skupině
           leave_user_group: Opustit skupinu
           manage_user_group: Spravovat skupinu
-          manage_user_group_admins: Spravovat správce
-          manage_user_group_users: Spravovat členy
+          manage_user_group_admins: Správa administrátorů
+          manage_user_group_users: Správa členů
           message: Zpráva
           resend_email_confirmation_instructions: Znovu odeslat pokyny pro potvrzení e-mailu
         confirmation_instructions_sent: Pokyny pro potvrzení e-mailu byly odeslány.
@@ -1593,7 +1600,7 @@ cs:
         time_ago: "před %{time}"
       reply:
         placeholder: Vaše odpověď...
-        send: Odeslat
+        send: Poslat
       update:
         error: Zpráva nebyla odeslána. Zkuste to později
     user_interests:
@@ -1985,6 +1992,8 @@ cs:
         expire_time_html: Platnost vaší relace vyprší za <b><span class="minutes">%{minutes}</span></b>.
       language_chooser:
         choose_language: Vyberte jazyk
+      navigation:
+        aria_label: Navigační menu - %{title}
       notifications_dashboard:
         mark_all_as_read: Označit vše jako přečtené
         mark_as_read: Označit jako přečtené
@@ -2091,6 +2100,7 @@ cs:
       long_with_particles: "%B %d, %Y v %H:%M"
       short: "%d/%m/%Y %H:%M"
       time_of_day: "%H:%M"
+      tooltip: "%d-%m-%Y %H:%M %p %Z (GMT %:z)"
   versions:
     directions:
       left: Smazané

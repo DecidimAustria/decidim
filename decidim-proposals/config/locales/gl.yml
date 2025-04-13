@@ -99,7 +99,7 @@ gl:
             values:
               'false': Propostas
           scope_id_eq:
-            label: Ámbito
+            label: Alcance
           state_eq:
             label: Estado
             values:
@@ -130,9 +130,7 @@ gl:
             collaborative_drafts_enabled: Esquemas colaborativos habilitados
             comments_enabled: Comentarios habilitados
             default_sort_order: Orde predefinido das propostas
-            default_sort_order_help: Predefinido significa que se os apoios están activos, as propostas amosaranse ordenadas ao chou e se están bloqueados, entón serán ordenados de máis a menos apoios.
             default_sort_order_options:
-              default: Predefinida
               most_commented: Máis comentadas
               most_endorsed: Máis apoios
               most_followed: Máis seguidas
@@ -153,7 +151,7 @@ gl:
             proposal_wizard_step_2_help_text: Asistente de propostas "Comparar" texto de axuda paso a paso
             proposal_wizard_step_3_help_text: Asistente de propostas Texto de axuda de paso "Completo"
             resources_permissions_enabled: Os permisos de acción pódense establecer para cada proposta
-            scope_id: Ámbito
+            scope_id: Alcance
             scopes_enabled: Ámbitos habilitados
             threshold_per_proposal: Umbral por proposta
             vote_limit: Límite de voto por usuario
@@ -163,9 +161,7 @@ gl:
             comments_blocked: Comentarios bloqueados
             creation_enabled: Os participantes poden crear propostas
             default_sort_order: Orde predefinido das propostas
-            default_sort_order_help: Predefinido significa que se os apoios están activos, as propostas amosaranse ordenadas ao chou e se están bloqueados, entón serán ordenados de máis a menos apoios.
             default_sort_order_options:
-              default: Predefinida
               most_commented: Máis comentadas
               most_endorsed: Máis apoios
               most_followed: Máis seguidas
@@ -249,11 +245,8 @@ gl:
             notification_title: A proposta <a href="%{resource_path}">%{resource_title}</a> foi rexeitada.
         proposal_update_category:
           email_intro: 'Un administrador actualizou a categoría da túa proposta "%{resource_title}", comproba isto:'
-          email_outro: Recibiches esta notificación porque es o autor da proposta.
           email_subject: A categoría de proposta %{resource_title} foi actualizada
           notification_title: A categoría de proposta <a href="%{resource_path}">%{resource_title}</a> foi actualizada por un administrador.
-        proposal_update_scope:
-          email_outro: Recibiches esta notificación porque es o autor da proposta.
         voting_enabled:
           email_intro: 'Podes votar propostas en %{participatory_space_title}. Comezar a participar nesta páxina:'
           email_outro: Recibiches esta notificación porque estás seguindo %{participatory_space_title}. Podes deixar de recibir notificacións seguindo a ligazón anterior.
@@ -603,7 +596,6 @@ gl:
           discard: Descarta este borrador
           discard_confirmation: '¿Estás seguro de que desexas descartar este borrador de proposta?'
           send: Vista previa
-          title: Editar borrador de proposta
         filters:
           activity: A miña actividade
           all: Todas

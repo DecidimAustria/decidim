@@ -118,6 +118,7 @@ sr:
       actions:
         add: Dodaj
         browse: Prеglеdaj
+        manage: Upravljaj
         per_page: Po stranici
         permissions: Dozvole
         reject: Odbaci
@@ -260,8 +261,6 @@ sr:
           values:
             'false': Objavljeno
             'true': Neobjavljeno
-        scope_id_eq:
-          label: Opseg
         search_label: Pretraži
         search_placeholder:
           name_or_nickname_or_email_cont: Pretraži %{collection} prema e-pošti, imenu ili nadimku.
@@ -378,6 +377,9 @@ sr:
           fields:
             name: Ime
             plural: Množina
+        share_token:
+          fields:
+            created_at: Stvoreno
         static_page:
           fields:
             created_at: Kreirano na
@@ -395,11 +397,12 @@ sr:
         user_group:
           fields:
             actions: Akcije
-            created_at: Kreirano na
+            created_at: Stvoreno
             document_number: Broj dokumenta
             name: Ime
+            nickname: Nadimak
             phone: Telefon
-            state: Država
+            state: Državno
             users_count: Broj učesnika
       moderations:
         report:
@@ -449,7 +452,6 @@ sr:
           confirm_deliver: Da li ste sigurni da želite da dostavite ovaj bilten? Ova radnja se ne može poništiti.
           deliver: Dostavi bilten
           followers_help: Pošalji bilten svim potvrđenim učesnicima koji prate bilo koji od odabranih prostora za učešće sa liste.
-          none: Nijеdan
           participants_help: Pošalji bilten svim potvrđenim učesnicima koji su učestvovali u bilo kojem od odabranih prostora za učešće sa liste.
           recipients_count: Ovaj bilten biće dostavljen <strong id='recipients_count'>%{count}</strong> korisnicima.
           scopes_help: Šalje bilten korisnicima koji su aktivirali makar jedan od odabranih opsega u podešavanjima "Moji interesi" svog naloga.

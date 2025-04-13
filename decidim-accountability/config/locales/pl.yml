@@ -13,6 +13,7 @@ pl:
         project_ids: Uwzględnione projekty
         proposals: Uwzględnione propozycje
         start_date: Data rozpoczęcia
+        subresults: Podwyniki
         title: Tytuł
         updated_at: Zaktualizowano
       status:
@@ -95,14 +96,7 @@ pl:
           new:
             create: Importuj
             import_all_selected_projects: Importuj wszystkie projekty wybrane do wdrożenia
-            new_items:
-              one: 1 wybrany projekt zostanie zaimportowany
-              few: "%{count} wybrane projekty zostaną zaimportowane"
-              many: "%{count} wybranych projektów zostanie zaimportowanych"
-              other: "%{count} wybranych projektów zostanie zaimportowanych"
             no_components: W tej przestrzeni partycypacyjnej nie ma komponentów budżetu, aby zaimportować projekty do wyników.
-            origin_component_id: Oryginalny komponent
-            select_component: Wybierz komponent
             title: Importuj projekty z innego komponentu
         results:
           create:
@@ -186,6 +180,11 @@ pl:
           success: Importowanie wyników zakończyło się pomyślnie. Możesz przejrzeć wyniki w panelu administracyjnym.
       import_projects_mailer:
         import:
+          added_projects:
+            one: Wynik został prawidłowo zaimportowany z projektów.
+            few: "Wyniki zostały prawidłowo zaimportowane z projektów."
+            many: "Wyniki zostały prawidłowo zaimportowane z projektów."
+            other: "%{count} wynik/wyniki/wyników został/zostały/zostało zaimportowanych z projektów."
           subject: Zaimportowano wyniki
           success: Pomyślnie zaimportowano projekty do wyników w komponencie %{component_name}. Możesz przejrzeć wyniki w interfejsie administracji.
       last_activity:
@@ -222,10 +221,8 @@ pl:
         filters:
           all: Wszystkie
         home:
-          categories_label: Kategorie
           empty: Nie ma jeszcze żadnych wyników.
           empty_filters: Brak wyników z tymi kryteriami.
-          subcategories_label: Podkategorie
         home_header:
           global_status: Globalny status realizacji
         nav_breadcrumb:

@@ -21,7 +21,7 @@ eu:
         creation_date: Sortze-data
         decidim_area_id: Arloa
         decidim_assemblies_type_id: Batzar mota
-        decidim_scope_id: Esparrua
+        decidim_scope_id: Eremua
         description: Deskribapena
         developer_group: Talde sustatzailea
         document: Dokumentua
@@ -39,17 +39,17 @@ eu:
         internal_organisation: Barneko antolaketa
         is_transparent: Gardena da
         local_area: Antolakuntza Arloa
-        meta_scope: Esparruko metadatuak
+        meta_scope: Eremuko metadatuak
         parent_id: Batzar nagusia
-        participatory_processes_ids: Erlazionatutako prozesu parte-hartzaileak
+        participatory_processes_ids: Erlazionatutako partaidetza-prozesuak
         participatory_scope: Zer erabakitzen den
         participatory_structure: Nola erabakitzen den
         private_space: Espazio pribatua
         promoted: Nabarmendua
         published_at: Noiz argitaratua
         purpose_of_action: Ekintzaren xedea
-        scope_id: Esparrua
-        scopes_enabled: Esparru gaituak
+        scope_id: Eremua
+        scopes_enabled: Eremu gaituak
         short_description: Deskribapen laburra
         show_statistics: Erakutsi estatistikak
         slug: URL laburra
@@ -69,10 +69,10 @@ eu:
         gender: Generoa
         non_user_avatar: Abatarra
         position: Posizioa
-        user_id: Erabiltzailea edo taldea
+        user_id: Parte-hartzailea edo taldea
         weight: Kokapenaren hurrenkera
       assembly_user_role:
-        email: E-maila
+        email: Helbide elektronikoa
         name: Izena
         role: Rola
     errors:
@@ -90,8 +90,8 @@ eu:
         one: Batzarkidea
         other: Batzar kideak
       decidim/assembly_user_role:
-        one: Batzarreko erabiltzaileen rola
-        other: Batzar erabiltzailearen rolak
+        one: Batzarreko parte-hartzailearen rola
+        other: Batzar parte-hartzailearen rolak
   decidim:
     admin:
       actions:
@@ -137,7 +137,7 @@ eu:
         new:
           copy: Kopiatu
           select: Hautatu bikoiztu nahi dituzun datuak
-          title: Bikoiztu batzarra
+          title: Kopiatu batzarra
       assembly_imports:
         create:
           error: Arazo bat egon da batzar hau inportatzean.
@@ -156,7 +156,7 @@ eu:
           title: Eguneratu batzarkidea
           update: Eguneratu
         index:
-          assembly_members_title: Batzarkideak
+          assembly_members_title: Batzarraen kideak
         new:
           create: Sortu
           title: Beste batzarkide bat
@@ -178,7 +178,7 @@ eu:
           success: Batzar honetatik administratzailea zuzen kendua.
         edit:
           title: Eguneratu batzarraren administratzailea
-          update: Eguneratu
+          update: Onartu
         index:
           assembly_admins_title: Batzarraren administratzaileak
         new:
@@ -210,13 +210,13 @@ eu:
           info: Batzar honi buruz
           landing_page: Hasierako orria
           moderations: Moderazioak
-          private_users: Erabiltzaile pribatuak
+          private_users: Parte-hartzaile pribatuak
           see_assembly: Ikusi batzarra
         assemblies_types: Batzar motak
       models:
         assemblies_types:
           fields:
-            created_at: Sortze-data
+            created_at: Noiz sortua
             title: Izenburua
         assembly:
           fields:
@@ -229,10 +229,10 @@ eu:
           name: Batzarra
         assembly_member:
           fields:
-            ceased_date: Sortze-data
+            ceased_date: Uzte-data
             designation_date: Izendapen-data
             full_name: Izena
-            position: Kargua
+            position: Posizioa
           name: kidea
           positions:
             other: Beste bat
@@ -255,29 +255,29 @@ eu:
         assemblies_types: Batzar motak
     admin_log:
       assembly:
-        create: "%{user_name} k %{resource_name} batzarra sortu zuen"
-        duplicate: "%{user_name} k %{resource_name} batzarra bikoiztu zuen"
-        export: "%{user_name} k %{resource_name} batzarra esportatu zuen"
-        import: "%{user_name} k %{resource_name} batzarra inportatu zuen"
-        publish: "%{user_name} k%{resource_name} batzarra argitaratu du"
-        unpublish: "%{user_name} k %{resource_name} batzarra desargitaratu du"
-        update: "%{user_name} k %{resource_name} batzarra eguneratu du"
+        create: "%{user_name} parte-hartzaileak %{resource_name} batzarra sortu du"
+        duplicate: "%{user_name} parte-hartzaileak %{resource_name} batzarra bikoiztu du"
+        export: "%{user_name} parte-hartzaileak %{resource_name} batzarra esportatu du"
+        import: "%{user_name} parte-hartzaileak %{resource_name} batzarra inportatu du"
+        publish: "%{user_name} parte-hartzaileak %{resource_name} batzarra argitaratu du"
+        unpublish: "%{user_name} parte-hartzaileak %{resource_name} batzarra desargitaratu du"
+        update: "%{user_name} parte-hartzaileak %{resource_name} batzarra eguneratu du"
       assembly_member:
-        create: "%{user_name} k %{resource_name} kidea sortu du %{space_name} batzarrean"
-        delete: "%{user_name} k kendu du %{resource_name} kidea %{space_name} batzarretik"
-        update: "%{user_name} k %{resource_name} kidea eguneratu du %{space_name} batzarrean"
+        create: "%{user_name} parte-hartzaileak %{resource_name} kidea sortu du %{space_name} batzarrean"
+        delete: "%{user_name} parte-hartzaileak kendu du %{resource_name} kidea %{space_name} batzarretik"
+        update: "%{user_name} parte-hartzaileak %{resource_name} kidea eguneratu du %{space_name} batzarrean"
       assembly_setting:
-        update: "%{user_name} k batzarren konfigurazioa eguneratu du"
+        update: "%{user_name} parte-hartzaileak batzarren konfigurazioa eguneratu du"
       assembly_type:
-        create: "%{user_name} k %{resource_name} batzar mota sortu du"
-        delete: "%{user_name} k %{resource_name} batzar mota ezabatu du"
-        publish: "%{user_name} k %{resource_name} batzar mota argitaratu du"
-        unpublish: "%{user_name} k %{resource_name} batzar mota despublikatu du"
-        update: "%{user_name} k %{resource_name} batzar mota eguneratu du"
+        create: "%{user_name} parte-hartzaileak %{resource_name} batzar mota sortu du"
+        delete: "%{user_name} parte-hartzaileak %{resource_name} batzar mota ezabatu du"
+        publish: "%{user_name} parte-hartzaileak %{resource_name} batzar mota argitaratu du"
+        unpublish: "%{user_name} parte-hartzaileak %{resource_name} batzar mota despublikatu du"
+        update: "%{user_name} parte-hartzaileak %{resource_name} batzar mota eguneratu du"
       assembly_user_role:
-        create: "%{user_name} k %{resource_name} gonbidatu du %{space_name} batzarrera"
-        delete: "%{user_name} k %{resource_name} parte-hartzailea %{space_name} muntaia kendu du"
-        update: "%{user_name} k %{resource_name} rola aldatu du %{space_name} batzarrerako"
+        create: "%{user_name} parte-hartzaileak %{resource_name} gonbidatu du %{space_name} batzarrera"
+        delete: "%{user_name} parte-hartzaileak %{resource_name} parte-hartzailea %{space_name} muntaia kendu du"
+        update: "%{user_name} parte-hartzaileak %{resource_name} rola aldatu du %{space_name} batzarrerako"
     assemblies:
       admin:
         assemblies:
@@ -291,10 +291,10 @@ eu:
             metadata: Metadata
             other: Beste bat
             select_a_created_by: Hautatu egilea
-            select_an_area: Hautatu Arlo bat
+            select_an_area: Hautatu arlo bat
             select_an_assembly_type: Hautatu batzar mota bat
             select_parent_assembly: Hautatu batzar nagusia
-            slug_help_html: 'URL-ren testu laburrak batzar honetara daramaten URL-ak sortzeko erabiltzen dira. Letrak, zenbakiak eta gidoiak soilik onartzen ditu, eta letra batez hasi behar du. Adibidea: % {url}'
+            slug_help_html: 'URL-ren testu laburrak batzar honetara daramaten URL-ak sortzeko erabiltzen dira. Letrak, zenbakiak eta gidoiak soilik onartzen ditu, eta letra batez hasi behar du. Adibidea: %{url}'
             social_handlers: Soziala
             title: Informazio orokorra
             visbility: Ikusgarritasuna
@@ -303,20 +303,20 @@ eu:
             title: Editatu batzar mota
         assembly_copies:
           form:
-            slug_help_html: 'URL-ren testu laburrak batzar honetara daramaten URL-ak sortzeko erabiltzen dira. Letrak, zenbakiak eta gidoiak soilik onartzen ditu, eta letra batez hasi behar du. Adibidea: % {url}'
+            slug_help_html: 'URL-ren testu laburrak batzar honetara daramaten URL-ak sortzeko erabiltzen dira. Letrak, zenbakiak eta gidoiak soilik onartzen ditu, eta letra batez hasi behar du. Adibidea: %{url}'
         assembly_imports:
           form:
-            slug_help_html: 'URL-ren testu laburrak batzar honetara daramaten URL-ak sortzeko erabiltzen dira. Letrak, zenbakiak eta gidoiak soilik onartzen ditu, eta letra batez hasi behar du. Adibidea: % {url}'
+            slug_help_html: 'URL-ren testu laburrak batzar honetara daramaten URL-ak sortzeko erabiltzen dira. Letrak, zenbakiak eta gidoiak soilik onartzen ditu, eta letra batez hasi behar du. Adibidea: %{url}'
         assembly_members:
           form:
             existing_user: Parte-hartzailea existitzen da
             explanation: 'Jarraibideak irudirako:'
             image_guide: Ahal izanez gero, irudi bertikal bat testurik gabe.
-            non_user: Erabiltzailea ez
+            non_user: Ez da parte-hartzailea
             non_user_avatar_help: Pertsonen baimena lortu beharko zenuke, kide gisa argitaratu baino lehen.
             select_a_position: Hautatu posizio bat
             select_user: Hautatu parte-hartzaile bat
-            user_type: Erabiltzaile mota
+            user_type: Parte-hartzaile mota
         content_blocks:
           highlighted_assemblies:
             max_results: Erakusteko elementu gehienen kopurua
@@ -335,7 +335,7 @@ eu:
           included_at: Barne
           indefinite_duration: Zehaztu gabe
           local_area: Antolakuntza Arloa
-          meta_scope: Esparrua
+          meta_scope: Eremua
           participatory_scope: Zer erabakitzen den
           participatory_structure: Nola erabakitzen den
           target: Nork hartzen du parte?
@@ -369,7 +369,7 @@ eu:
         related_assemblies:
           name: Lotutako batzarrak
       created_by:
-        city_council: Udaletxea
+        city_council: Udala
         others: Beste batzuk
         public: Publikoa
       filter:
@@ -401,7 +401,7 @@ eu:
           'false': opakua
           'true': gardena
         private_space: Hau batzar pribatua da
-        related_participatory_processes: Erlazionatutako prozesu parte-hartzaileak
+        related_participatory_processes: Erlazionatutako partaidetza-prozesuak
         social_networks_title: 'Bisitatu batzarra:'
     assembly_members:
       assembly_member:
@@ -424,8 +424,8 @@ eu:
     help:
       participatory_spaces:
         assemblies:
-          contextual: "<p>Batzar bat erakunde bateko kideen taldea da, eta aldiro elkartzen da erakundearen eremu edo esparru zehatz bati buruzko erabakiak hartzeko.</p> <p>Batzarrak biltzen dira, batzuk pribatuak eta batzuk irekita daude. Ireki ezkero, haiekin parte har dezakete (esate baterako: gaitasuna ahalbidetzen duen tokian parte hartzera, agenda puntuak gehituz edo organo horri egindako proposamenak eta erabakiak iruzkinatuz).</p> <p>Adibideak: Batzar orokorra (urtebete betetzen du antolakuntzaren jarduera-ildo nagusiak eta organo exekutiboak boto bidez), berdintasun aholku-kontseiluak (bi hilero behin biltzen ditu genero-harremanak hobetzeko proposamenak egiteko erakundean), ebaluazio-batzorde bat (hilero biltzen dena prozesu bat kontrolatzeko) edo berme-organo bat (gertakariak, abusuak edo erabakiak hartzeko prozedurak hobetzeko proposamenak biltzen dituena) dira.</p>\n"
-          page: "<p>Batzar bat erakunde bateko kideen taldea da, eta aldiro elkartzen da erakundearen eremu edo esparru zehatz bati buruzko erabakiak hartzeko.</p> <p>Batzarrak biltzen dira, batzuk pribatuak eta batzuk irekita daude. Ireki ezkero, haiekin parte har dezakete (esate baterako: gaitasuna ahalbidetzen duen tokian parte hartzera, agenda puntuak gehituz edo organo horri egindako proposamenak eta erabakiak iruzkinatuz).</p> <p>Adibideak: Batzar orokorra (urtebete betetzen du antolakuntzaren jarduera-ildo nagusiak eta organo exekutiboak boto bidez), berdintasun aholku-kontseiluak (bi hilero behin biltzen ditu genero-harremanak hobetzeko proposamenak egiteko erakundean), ebaluazio-batzorde bat (hilero biltzen dena prozesu bat kontrolatzeko) edo berme-organo bat (gertakariak, abusuak edo erabakiak hartzeko prozedurak hobetzeko proposamenak biltzen dituena) dira.</p>\n"
+          contextual: "<p><strong>Batzarra </strong> erakunde bateko kideen talde bat da, aldian-aldian biltzen dena erakundearen arlo edo esparru jakin bati buruzko erabakiak hartzeko.</p> <p>Batzarrek bilerak egiten dituzte, batzuk pribatuak eta beste batzuk irekiak. Irekiak badira, parte hartzea posible da (adibidez: bertaratzea edukiera badago, gaiak agendara gehitzea, edo organo honek hartutako proposamenei eta erabakiei buruzko iruzkinak egitea). </p> <p>Adibideak: Batzar nagusia (urtean behin biltzen dena erakundearen ekintza-ildo nagusiak eta bere organo exekutiboak bozketa bidez definitzeko), berdintasun aholku-batzordea (bi hilabetean behin biltzen dena erakundearen genero-harremanak hobetzeko proposamenak egiteko), ebaluazio-batzordea (hilabetean behin biltzen dena prozesu baten jarraipena egiteko) edo berme-organoa (gorabeherak, gehiegikeriak edo erabakiak hartzeko prozedurak hobetzeko proposamenak biltzen dituena) batzordeen adibideak dira. </p>\n"
+          page: "<p><strong>Batzarra</strong> erakunde bateko kideen talde bat da, aldian-aldian biltzen dena erakundearen arlo edo esparru jakin bati buruzko erabakiak hartzeko.</p>\n\n<p>Batzarrek bilerak egiten dituzte, batzuk pribatuak eta beste batzuk irekiak. Irekiak badira, parte hartzea posible da (adibidez: bertaratzea edukiera badago, gaiak agendara gehitzea, edo organo honek hartutako proposamenei eta erabakiei buruzko iruzkinak egitea).</p>\n\n<p>Adibideak: Batzar nagusia (urtean behin biltzen dena erakundearen ekintza-ildo nagusiak eta bere organo exekutiboak bozketa bidez definitzeko), berdintasun aholku-batzordea (bi hilabetean behin biltzen dena erakundearen genero-harremanak hobetzeko proposamenak egiteko), ebaluazio-batzordea (hilabetean behin biltzen dena prozesu baten jarraipena egiteko) edo berme-organoa (gorabeherak, gehiegikeriak edo erabakiak hartzeko prozedurak hobetzeko proposamenak biltzen dituena) batzarren adibideak dira.</p>dira\n"
           title: Zer dira batzarrak?
     log:
       value_types:
@@ -450,16 +450,16 @@ eu:
       assemblies:
         assembly:
           more_info: Informazio gehiago
-          take_part: Parte hartu
+          take_part: Hartu parte
         index:
           promoted_assemblies: Batzar nabarmenduak
         metadata:
           children_item:
-            one: "%{count} batzarra"
+            one: "%{count} batzar"
             other: "%{count} batzar"
         order_by_assemblies:
           assemblies:
-            one: "%{count} batzarrak"
-            other: "%{count} batzarrak"
+            one: "batzar %{count}"
+            other: "%{count} batzar"
       assembly_navigation:
         assembly_member_menu_item: Kideak

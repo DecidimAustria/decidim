@@ -118,6 +118,7 @@ sk:
       actions:
         add: Pridať
         browse: Prechádzať
+        manage: Správa
         per_page: Na stranu
         permissions: Práva
         reject: Odmietnuť
@@ -260,8 +261,6 @@ sk:
           values:
             'false': Zverejnené
             'true': Nepublikované
-        scope_id_eq:
-          label: Rozsah
         search_label: Hľadať
         search_placeholder:
           name_or_nickname_or_email_cont: Hľadať {collection} podľa e-mailu, mena alebo prezývky.
@@ -378,6 +377,9 @@ sk:
           fields:
             name: Meno
             plural: Množné číslo
+        share_token:
+          fields:
+            created_at: Vytvorené
         static_page:
           fields:
             created_at: Vytvorené
@@ -397,7 +399,8 @@ sk:
             actions: Akcie
             created_at: Vytvorené
             document_number: Číslo dokumentu
-            name: Meno
+            name: Názov
+            nickname: Prezývka
             phone: Telefón
             state: Štát
             users_count: Počet účastníkov
@@ -531,6 +534,8 @@ sk:
           title: Nový súkromný účastník participatívneho priestoru.
       participatory_space_private_users_csv_imports:
         new:
+          csv_upload:
+            title: Nahrať súbor CSV
           upload: Nahrať
       resource_permissions:
         edit:
@@ -629,10 +634,6 @@ sk:
           invalid: Nastal problém pri overovaní tejto skupiny.
       user_groups:
         index:
-          state:
-            pending: Čakajúce
-            rejected: Odmietnuté
-            verified: Overené
           verify_via_csv: Overte pomocou CSV
       user_groups_csv_verifications:
         new:

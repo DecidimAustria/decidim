@@ -13,6 +13,7 @@ fi-pl:
         project_ids: Liitetyt suunnitelmat
         proposals: Sisällytetyt ehdotukset
         start_date: Alkamispäivä
+        subresults: Alitulokset
         title: Otsikko
         updated_at: Päivitysaika
       status:
@@ -94,15 +95,15 @@ fi-pl:
             create: Tuo
             import_all_selected_projects: Tuo kaikki toteutukseen valitut hankkeet
             new_items:
-              one: 1 toteutukseen valittu hanke tuodaan
-              other: "%{count} toteutukseen valittua hanketta tuodaan"
+              one: 1 toteutukseen valittu projekti tuodaan
+              other: "%{count} toteutukseen valittua projektia tuodaan"
             no_components: Tässä osallistumistilassa ei ole yhtään budjetointikomponenttia, josta hankkeet voitaisiin tuoda tuloksiksi.
             origin_component_id: Lähdekomponentti
             select_component: Valitse komponentti
             success:
               one: 1 hanke on lisätty jonoon tuotavaksi. Sinulle ilmoitetaan sähköpostitse, kun tuonti valmistuu.
               other: "%{count} hanketta on lisätty jonoon tuotavaksi. Sinulle ilmoitetaan sähköpostitse, kun tuonti valmistuu."
-            title: Tuo hankkeita toisesta komponentista
+            title: Tuo projekteja toisesta komponentista
         results:
           create:
             invalid: Tuloksen luonti epäonnistui.
@@ -230,7 +231,7 @@ fi-pl:
           global_status: Yleisen toteutuksen tila
         nav_breadcrumb:
           global: Yleinen toteutus
-        no_results: Hankkeita ei ole saatavilla
+        no_results: Projekteja ei ole saatavilla
         search:
           search: Hae toimintoja
         show:

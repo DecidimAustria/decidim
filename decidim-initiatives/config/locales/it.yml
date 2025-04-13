@@ -54,6 +54,9 @@ it:
               needs_to_be_reattached: Necessita di essere riallegato
   activerecord:
     models:
+      decidim/initiative:
+        one: Iniziativa
+        other: Iniziative
       decidim/initiative_comittee:
         one: Comitato di
         other: COMITATI
@@ -63,7 +66,6 @@ it:
   decidim:
     admin:
       actions:
-        manage: Gestisci
         new_initiative_type: Nuovo tipo di iniziativa
       filters:
         initiatives:
@@ -85,7 +87,6 @@ it:
       menu:
         attachments: Allegati
         committee_members: Membri del comitato
-        components: componenti
         information: Informazione
         initiatives: Iniziative
         initiatives_types: Tipi di iniziativa
@@ -294,8 +295,7 @@ it:
         finish:
           back: Indietro
           back_to_initiatives: Torna alle iniziative
-          callout_text: Complimenti! La tua iniziativa è stata creata con successo.
-          confirm: Stai per inviare l'iniziativa per un amministratore per la revisione e pubblicarla. Una volta pubblicato non sarai in grado di modificarlo. Sei sicuro?
+          confirm: Stai per inviare l'iniziativa per un amministratore per rivederla e pubblicarla. Una volta pubblicato non sarai in grado di modificarlo. Sei sicuro?
           edit_my_initiative: Modifica la mia iniziativa
           go_to_my_initiatives: Vai alle mie iniziative
           more_information: "(Maggiori informazioni)"
@@ -352,6 +352,8 @@ it:
           email_outro: 'Hai ricevuto questa notifica perché sei l''autore di questa iniziativa: %{resource_title}'
           email_subject: "%{applicant_nickname} vuole unirsi alla tua iniziativa"
           notification_title: <a href="%{applicant_profile_url}">%{applicant_nickname}</a> ha fatto domanda per il comitato promoter della tua iniziativa <a href="%{resource_url}">%{resource_title}</a>. Per accettare o rifiutare clicca <a href="%{resource_url}/edit">qui</a>.
+      form:
+        attachment_legend: "(Facoltativo) Aggiungi un allegato"
       initiative_signatures:
         fill_personal_data:
           continue: Continua
@@ -424,7 +426,7 @@ it:
           phone_number: Numero di telefono
           place_date: Luogo, data
           postal_code: Codice postale/CAP
-          print: Stampa
+          print: Stampare
           province: Provincia/Stato
           section: 'Se richiesto dall''organizzazione, si prega di stampare e compilare il presente modulo per inviare dove indicato:'
           signature: Firma
@@ -483,6 +485,7 @@ it:
           comment: Commenta
       initiatives_type:
         actions:
+          create: Creare
           title: Azioni
           vote: Firma
   layouts:

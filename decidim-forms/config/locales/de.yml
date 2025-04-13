@@ -4,8 +4,8 @@ de:
     attributes:
       answer:
         body: Antworten
-        choices: Auswahl
-        selected_choices: Ausgewählte Auswahl
+        choices: Optionen
+        selected_choices: Ausgewählte Optionen
       question:
         max_choices: Maximale Anzahl von Auswahlmöglichkeiten
         question_type: Art
@@ -43,7 +43,7 @@ de:
             statement: Aussage
           answers:
             actions:
-              back: Zurück zu Antworten
+              back: Zurück zu den Antworten
               export: Exportieren
               next: Nächste &rsaquo;
               previous: "&lsaquo; Vorherige"
@@ -82,13 +82,13 @@ de:
           form:
             add_question: Frage hinzufügen
             add_separator: Trennzeichen hinzufügen
-            add_title_and_description: Füge Titel und Beschreibung hinzu
+            add_title_and_description: Titel und Beschreibung hinzufügen
             already_answered_warning: Der Fragebogen wird bereits von einigen Benutzern beantwortet, sodass Sie die Fragen nicht ändern können.
             collapse: Alle Fragen einklappen
             expand: Alle Fragen ausklappen
             preview: Vorschau
             title: Formular für %{questionnaire_for} bearbeiten
-            unpublished_warning: Das Formular ist nicht öffentlich. Sie können die Fragen ändern, dabei werden allerdings die aktuellen Antworten gelöscht.
+            unpublished_warning: Das Formular ist nicht veröffentlicht. Sie können die Fragen ändern, aber dadurch werden die aktuellen Antworten gelöscht.
           matrix_row:
             matrix_row: Zeile
             remove: Löschen
@@ -101,7 +101,7 @@ de:
             any: Irgendein
             collapse: Einklappen
             description: Beschreibung
-            down: Nieder
+            down: Nach unten
             expand: Ausklappen
             question: Frage
             remove: Löschen
@@ -111,7 +111,7 @@ de:
             down: Runter
             remove: Löschen
             separator: Trennzeichen
-            up: Hoch
+            up: Nach oben
           title_and_description:
             collapse: Einklappen
             description: Beschreibung
@@ -127,9 +127,6 @@ de:
       admin_log:
         questionnaire:
           update: "%{user_name} hat die Umfrage %{resource_name} aktualisiert"
-      errors:
-        answer:
-          body: Textkörper kann nicht leer sein
       images:
         dimensions: "%{width} x %{height} px"
         processors:
@@ -145,21 +142,15 @@ de:
         single_option: Einzelne Option
         sorting: Sortierung
         title_and_description: Titel und Beschreibung
-      questionnaire_answer_presenter:
-        download_attachment: Anhang herunterladen
       questionnaires:
         answer:
           invalid: Bei der Beantwortung des Fragebogens sind Fehler aufgetreten.
-          max_choices_alert: Es wurden zu viele Auswahlmöglichkeiten ausgewählt
           success: Fragebogen erfolgreich beantwortet.
         question:
           max_choices: 'Max Auswahlmöglichkeiten: %{n}'
         show:
           answer_questionnaire:
-            already_have_an_account?: Haben Sie bereits ein Konto?
-            are_you_new?: Neue Teilnehmer*in?
             sign_in_description: Melden Sie sich an, um an der Umfrage teilzunehmen
-            sign_up_description: Erstellen Sie ein Nutzendenkonto, um an der Umfrage teilzunehmen
             title: Beantworten Sie den Fragebogen
           current_step: Schritt %{step}
           empty: Für dieses Formular wurden noch keine Fragen eingestellt.
@@ -178,21 +169,15 @@ de:
             title: JavaScript ist deaktiviert
           questionnaire_not_published:
             body: Dieses Formular ist noch nicht veröffentlicht.
-          tos_agreement: Mit der Teilnahme stimmen Sie den Nutzungsbedingungen zu
+          tos_agreement: 'Mit Ihrer Teilnahme stimmen Sie folgenden Nutzungsbedingungen zu:'
       step_navigation:
         show:
-          are_you_sure: Diese Aktion kann nicht rückgängig gemacht werden und Sie können Ihre Antworten nicht bearbeiten. Sind Sie sich sicher?
+          are_you_sure: Diese Aktion kann nicht rückgängig gemacht werden und Sie können Ihre Antworten nicht mehr bearbeiten. Sind Sie sicher?
           back: Zurück
           continue: Weiter
           submit: einreichen
       user_answers_serializer:
         body: Antwort
-        completion: Abschluss
         created_at: Beantwortet am
         id: ID beantworten
-        ip_hash: IP-Hash
         question: Frage
-        registered: Registriert
-        session_token: Benutzerkennung
-        unregistered: Nicht registriert
-        user_status: Benutzerstatus

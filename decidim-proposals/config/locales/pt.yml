@@ -137,9 +137,7 @@ pt:
             comments_enabled: Comentários ativados
             comments_max_length: Comprimento máximo dos comentários (Deixar 0 para o valor predefinido)
             default_sort_order: Ordenamento por defeitos das propostas
-            default_sort_order_help: Por defeito significa que se os apoios estiverem activos as propostas serão ordenadas ao acaso, e se os apoios estiverem bloqueados serão ordenadas do maior para o menor número de apoios.
             default_sort_order_options:
-              default: Por defeito
               most_commented: Mais comentada
               most_endorsed: Mais apoiada
               most_followed: Mais seguida
@@ -188,9 +186,7 @@ pt:
             automatic_hashtags: Hashtags adicionados a todas as propostas
             comments_blocked: Comentários bloqueados
             default_sort_order: Ordenamento por defeitos das propostas
-            default_sort_order_help: Por defeito significa que se os apoios estiverem activos as propostas serão ordenadas ao acaso, e se os apoios estiverem bloqueados serão ordenadas do maior para o menor número de apoios.
             default_sort_order_options:
-              default: Por defeito
               most_commented: Mais comentada
               most_endorsed: Mais apoiada
               most_followed: Mais seguida
@@ -280,12 +276,10 @@ pt:
             notification_title: A proposta <a href="%{resource_path}">%{resource_title}</a> foi rejeitada.
         proposal_update_category:
           email_intro: 'Um administrador atualizou a categoria da sua proposta "%{resource_title}", verifique nesta página:'
-          email_outro: Recebeu esta notificação porque é o autor da proposta.
           email_subject: A categoria da proposta %{resource_title} foi atualizada
           notification_title: A categoria da proposta <a href="%{resource_path}">%{resource_title}</a> foi atualizada por um administrador.
         proposal_update_scope:
           email_intro: 'Um administrador atualizou o âmbito da sua proposta "%{resource_title}". Consulte-o nesta página:'
-          email_outro: Recebeu esta notificação porque é o autor da proposta.
           email_subject: O âmbito da proposta %{resource_title} foi atualizado
           notification_title: O âmbito da proposta <a href="%{resource_path}">%{resource_title}</a> foi atualizado por um administrador.
         voting_enabled:
@@ -412,7 +406,7 @@ pt:
             title: Atualizar proposta
             update: Atualizar
           form:
-            attachment_legend: "(Opcional) Adicionar um anexo"
+            attachment_legend: "(Opcional) Adicione um anexo"
             created_in_meeting: Esta proposta vem de uma reunião
             delete_attachment: Apagar anexo
             select_a_category: Selecione uma categoria
@@ -420,7 +414,6 @@ pt:
           index:
             actions: Ações
             assign_to_valuator: Atribuir a avaliador
-            assign_to_valuator_button: Atribuir
             cancel: Cancelar
             change_category: Modificar categoria
             change_scope: Modificar âmbito
@@ -434,7 +427,6 @@ pt:
             split_button: Dividir
             title: Propostas
             unassign_from_valuator: Remover atribuição ao avaliador
-            unassign_from_valuator_button: Remover atribuição
             update: Atualizar
             update_scope_button: Atualizar Âmbito
           new:
@@ -650,7 +642,6 @@ pt:
           discard: Descartar este rascunho
           discard_confirmation: Tem a certeza de que deseja descartar este rascunho da proposta?
           send: Pré-visualizar
-          title: Editar Rascunho da Proposta
         filters:
           activity: A minha atividade
           all: Todos

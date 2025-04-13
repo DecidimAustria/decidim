@@ -2,6 +2,8 @@
 "no":
   activemodel:
     attributes:
+      assemblies_type:
+        title: Tittel
       assembly:
         area_id: Område
         assembly_type: Forsamlingstype
@@ -179,7 +181,6 @@
           categories: Kategorier
           components: Komponenter
           moderations: Moderering
-          private_users: Private brukere
         assemblies_types: Forsamlingstyper
       models:
         assemblies_types:

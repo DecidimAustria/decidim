@@ -497,6 +497,8 @@ ca:
             dummy_step_attribute1: Atribut de fase de prova 1
             dummy_step_attribute2: Atribut de fase de prova 2
             dummy_step_translatable_text: Text de fase traduïble de proves
+      pagination:
+        page_title: "%{component_name} - Pàgina %{current_page} de %{total_pages}"
     contact: Contacte
     content_blocks:
       announcement:
@@ -533,8 +535,8 @@ ca:
         html_content: Contingut HTML
         name: Bloc HTML
       last_activity:
-        name: Última activitat
-        title: Última activitat
+        name: Darrera activitat
+        title: Darrera activitat
         view_all: Veure-ho tot
       last_activity_settings_form:
         max_last_activity_users: Número màxim d'avatars de participants amb activitat recent a mostrar
@@ -913,11 +915,12 @@ ca:
           filename: Nom del fitxer
           remove: Eliminar
           replace: Reemplaçar
+          save: Desar
           title: Títol
           title_required: Un títol és necessari!
           uploaded: Pujat
           validating: Validant...
-          validation_error: Error de validació!
+          validation_error: Error en la validació! Si us plau, revisa que l'arxiu tingui una extensió o una mida permesa.
         select_file: Selecciona un fitxer
       upload_help:
         dropzone: Arrossega-hi els arxius o fes clic per a pujar-los
@@ -977,7 +980,7 @@ ca:
         success: Sol·licitud d'incorporació rebutjada correctament.
       actions:
         are_you_sure: Segur?
-        promote_to_admin: Fer administrador
+        promote_to_admin: Fer administradora
         remove_from_group: Eliminar participant
       index:
         current_members_without_admins: 'Membres actuals (sense administradors):'
@@ -1016,8 +1019,8 @@ ca:
         success: El grup s'ha abandonat correctament.
       members:
         accept_or_reject_join_requests: 'Les següents participants han sol·licitat unir-se a aquest grup. Accepta o rebutja les seves sol·licituds:'
-        accept_request: Accepta
-        reject_request: Rebutja
+        accept_request: Acceptar
+        reject_request: Rebutjar
       new:
         create_user_group: Crea un grup
         new_user_group: Nou grup
@@ -1040,7 +1043,7 @@ ca:
     last_activities:
       all: Tots els tipus d'activitats
       index:
-        last_activity: Última activitat
+        last_activity: Darrera activitat
       name: Darreres activitats
       no_activities_warning: No hi ha res a mostrar per a aquest tipus d'activitat.
     linked_resource_from:
@@ -1075,6 +1078,8 @@ ca:
           not_found: 'L''àmbit no s''ha trobat a la base de dades (ID: %{id})'
         scope_type_presenter:
           not_found: 'El tipus d''àmbit no s''ha trobat a la base de dades (ID: %{id})'
+    machine_translations:
+      automatic: traducció automàtica a %{locale_name} 
     managed_users:
       expired_session: La sessió actual d'administració d'una participant ha caducat.
     map:
@@ -1094,35 +1099,35 @@ ca:
         comanagers_new_conversation:
           admin_in_group: Reps aquesta notificació perquè administres el grup "%{group}".
           greeting: Hola, %{recipient}!
-          intro: "%{manager} ha iniciat una nova conversa en nom de %{group}. Fes clic aquí per veure-la:"
+          intro: "%{manager} ha iniciat una nova conversa en nom de %{group}. Per veure-la i respondre, inicia la teva sessió i fes clic a l'enllaç que trobaràs més avall:"
           outro: Gaudeix de la plataforma!
           subject: "%{manager} ha iniciat una nova conversa com a %{group}"
         comanagers_new_message:
           admin_in_group: Reps aquesta notificació perquè administres el grup "%{group}".
           greeting: Hola, %{recipient}!
-          intro: "%{manager} ha publicat nous missatge a una conversa en nom de %{group}. Fes clic aquí per veure-la:"
+          intro: "%{manager} ha publicat nous missatges a una conversa en nom de %{group}. Per veure'ls i respondre, inicia la teva sessió i fes clic a l'enllaç que trobaràs més avall:"
           outro: Gaudeix de la plataforma!
           subject: "%{manager} ha enviat nous missatges com a %{group}"
         new_conversation:
           greeting: Hola, %{recipient}!
-          intro: "%{sender} ha iniciat una nova conversa amb tu. Fes clic aquí per veure-la:"
+          intro: "%{sender} ha iniciat una nova conversa amb tu. Per veure-la i respondre, inicia la teva sessió i fes clic a l'enllaç que trobaràs més avall:"
           outro: Gaudeix de la plataforma!
           subject: "%{sender} ha iniciat una conversa amb tu"
         new_group_conversation:
           admin_in_group: Reps aquesta notificació perquè administres el grup "%{group}".
           greeting: Hola, %{recipient}!
-          intro: "%{sender} ha iniciat una nova conversa amb el %{group}. Fes clic aquí per veure-la:"
+          intro: "%{sender} ha iniciat una nova conversa amb el %{group}. Per veure-la i respondre, inicia la teva sessió i fes clic a l'enllaç que trobaràs més avall:"
           outro: Gaudeix de la plataforma!
           subject: "%{sender} ha iniciat una nova conversa amb %{group}"
         new_group_message:
           admin_in_group: Reps aquesta notificació perquè administres el grup "%{group}".
           greeting: Hola, %{recipient}!
-          intro: "%{sender} ha publicat nous missatge a una conversa amb el grup %{group}. Fes clic aquí per veure-la:"
+          intro: "%{sender} ha publicat nous missatge a una conversa amb el grup %{group}. Per veure'ls i respondre, inicia la teva sessió i fes clic a l'enllaç que trobaràs més avall:"
           outro: Gaudeix de la plataforma!
           subject: "%{group} té nous missatge de %{sender}"
         new_message:
           greeting: Hola, %{recipient}!
-          intro: "%{sender} ha enviat nous missatges a la teva conversa. Fes clic aquí per veure'ls:"
+          intro: "%{sender} ha enviat nous missatges a la teva conversa. Per veure'ls i respondre, inicia la teva sessió i fes clic a l'enllaç que trobaràs més avall:"
           outro: Gaudeix de la plataforma!
           subject: Tens nous missatges de %{sender}
       conversations:
@@ -1163,7 +1168,7 @@ ca:
         active: Actives
         finished: 'Finalitzat el: %{end_date}'
         not_started: No s'ha iniciat encara
-        remaining: "resta %{time_distance}"
+        remaining: "Resta(en) %{time_distance}"
     metrics:
       download:
         csv: Descarregar les dades (csv)
@@ -1235,6 +1240,7 @@ ca:
       no_notifications: Encara no hi ha notificacions.
       show:
         missing_event: Vaja, aquesta notificació pertany a un element que ja no està disponible. Pots descartar-la.
+        moderated: Contingut moderat
     notifications_digest_mailer:
       header:
         daily: Resum diari de notificacions
@@ -1353,7 +1359,7 @@ ca:
         followers: Seguidores
         following: Seguint
         group_admins: Gestionar administradores
-        group_members: Gestionar membres
+        group_members: Gestiona els membres
         groups: Grups
         members: Membres
         officialized: Participant oficial
@@ -1364,16 +1370,16 @@ ca:
           title: Insígnies
       user:
         actions:
-          create_user_group: Crear un grup
+          create_user_group: Crea un grup
           disabled_message: Missatge
-          edit_profile: Editar el perfil
-          edit_user_group: Editar el perfil del grup
-          invite_user: Convidar participant
-          join_user_group: Sol·licitar unir-se al grup
-          leave_user_group: Surt del grup
+          edit_profile: Edita el perfil
+          edit_user_group: Edita el perfil del grup
+          invite_user: Convida la participant
+          join_user_group: Sol·licita unir-se al grup
+          leave_user_group: Marxa del grup
           manage_user_group: Gestiona el grup
           manage_user_group_admins: Gestionar administradores
-          manage_user_group_users: Gestionar membres
+          manage_user_group_users: Gestiona els membres
           message: Missatge
           resend_email_confirmation_instructions: Reenvia un correu electrònic amb les instruccions de confirmació
         confirmation_instructions_sent: Instruccions de confirmació enviades per correu electrònic.
@@ -1384,7 +1390,7 @@ ca:
         invite_user: Convida la participant
         join_user_group: Sol·licita unir-se al grup
         leave_user_group: Marxa del grup
-        manage_user_group_admins: Gestiona les administradores
+        manage_user_group_admins: Gestionar administradores
         manage_user_group_users: Gestiona els membres
         resend_email_confirmation_instructions: Reenvia un correu electrònic amb les instruccions de confirmació
     reported_mailer:
@@ -1574,7 +1580,7 @@ ca:
     user_update_mailer:
       notify:
         body_1: Reps aquest missatge per informar-te d'una actualització del teu compte.
-        body_2: En el cas que no hagis estat tu qui ha realitzat aquesta actualització, si us plau, inicia la teva sessió i modifica la teva contrasenya. Si no poguessis iniciar la teva sessió, si ús pla, contacte amb el servei de suport a la plataforma.
+        body_2: En el cas que no hagis estat tu qui ha realitzat aquesta actualització, si us plau, inicia la teva sessió i modifica la teva contrasenya. Si no poguessis iniciar la teva sessió, si us plau, contacte amb el servei de suport a la plataforma.
         greetings: Hola,<br/>%{organization_name}<br/><a href="%{organization_url}">%{organization_url}</a>
         hello: Hola %{user}
         main_body: 'S''han modificat els següents detalls: %{updates}.'
@@ -1663,7 +1669,7 @@ ca:
       invite_collaborator:
         subject: T'han convidat a col·laborar a %{organization}
       invite_private_user:
-        subject: T'han convidat a participar en un procés participatiu privat a%{organization}
+        subject: T'han convidat a participar en un espai de participació privat a%{organization}
       organization_admin_invitation_instructions:
         subject: T'han convidat a administrar %{organization}
       password_change:
@@ -1936,6 +1942,8 @@ ca:
         expire_time_html: La vostra sessió caducarà en <b><span class="minutes">%{minutes}</span> minutes</b>.
       language_chooser:
         choose_language: Triar la llengua
+      navigation:
+        aria_label: 'Menú de navegació: %{title}'
       notifications_dashboard:
         mark_all_as_read: Marcar tot com a llegit
         mark_as_read: Marcar com a llegit

@@ -176,7 +176,6 @@ nl:
         attachment_collections: Mappen
         attachments: Bijlagen
         close: Sluit
-        confirm_destroy: Weet u zeker dat u deze vergadering wilt verwijderen?
         destroy: Verwijderen
         edit: Bewerk
         invalid_destroy:
@@ -356,7 +355,6 @@ nl:
         open_in_new_tab: Open link in een nieuw tabblad
       layouts:
         live_event:
-          administrate: Beheer
           close: sluit
           questions: Vragen
       mailer:
@@ -429,12 +427,14 @@ nl:
           see_all: Alle vergaderingen bekijken
           see_all_withdrawn: Bekijk alle afgelaste vergaderingen
           text_banner: Je bekijkt de lijst van vergaderingen die zijn afgelast door hun maker. %{go_back_link}.
+        meeting:
+          close_meeting: Vergadering sluiten
+          edit_meeting: Vergadering bewerken
         meetings:
           upcoming_meetings_warning: Momenteel zijn er geen geplande vergaderingen, maar hier vindt u alle afgelopen vergaderingen.
         new:
           back: Achterzijde
           create: Aanmaken
-          title: Maak je vergadering
         registration_confirm:
           cancel: Annuleer
           confirm: Bevestigen

@@ -7,6 +7,7 @@ end
 
 describe "Admin manages newsletters" do
   let(:organization) { create(:organization) }
+  let!(:attributes) { attributes_for(:newsletter, organization:) }
   let(:user) { create(:user, :admin, :confirmed, name: "Sarah Kerrigan", organization:) }
   let!(:deliverable_users) { create_list(:user, 5, :confirmed, newsletter_notifications_at: Time.current, organization:) }
 
@@ -41,9 +42,7 @@ describe "Admin manages newsletters" do
         fill_in_i18n(
           :newsletter_subject,
           "#newsletter-subject-tabs",
-          en: "A fancy newsletter for %{name}",
-          es: "Un correo electrónico muy chulo para %{name}",
-          ca: "Un correu electrònic flipant per a %{name}"
+          **attributes[:subject].except("machine_translations")
         )
 
         fill_in_i18n_editor(
@@ -82,7 +81,10 @@ describe "Admin manages newsletters" do
       end
 
       expect(page).to have_content("Preview")
-      expect(page).to have_content("A fancy newsletter for #{user.name}")
+      expect(page).to have_content(translated(attributes[:subject]))
+
+      visit decidim_admin.root_path
+      expect(page).to have_content("created the #{translated(attributes[:subject])} newsletter")
     end
   end
 
@@ -148,9 +150,7 @@ describe "Admin manages newsletters" do
         fill_in_i18n(
           :newsletter_subject,
           "#newsletter-subject-tabs",
-          en: "A fancy newsletter",
-          es: "Un correo electrónico muy chulo",
-          ca: "Un correu electrònic flipant"
+          **attributes[:subject].except("machine_translations")
         )
 
         fill_in_i18n_editor(
@@ -165,7 +165,10 @@ describe "Admin manages newsletters" do
       end
 
       expect(page).to have_content("Preview")
-      expect(page).to have_content("A fancy newsletter")
+      expect(page).to have_content(translated(attributes[:subject]))
+
+      visit decidim_admin.root_path
+      expect(page).to have_content("updated the #{translated(attributes[:subject])} newsletter")
     end
   end
 
@@ -250,6 +253,24 @@ describe "Admin manages newsletters" do
           expect(page).to have_content("5 / 5")
         end
       end
+
+      context "when the followers count varies" do
+        let!(:followers) do
+          deliverable_users.first(3).each do |follower|
+            create(:follow, followable: component.participatory_space, user: follower)
+          end
+        end
+
+        it "has a working user counter" do
+          visit decidim_admin.select_recipients_to_deliver_newsletter_path(newsletter)
+          expect(page).to have_content("This newsletter will be send to 5 users.")
+          uncheck("Send to all users")
+          uncheck("Send to participants")
+          check("Send to followers")
+          select_all
+          expect(page).to have_content("This newsletter will be send to 3 users.")
+        end
+      end
     end
 
     context "when participants are selected" do
@@ -259,6 +280,21 @@ describe "Admin manages newsletters" do
         deliverable_users.each do |participant|
           create(:dummy_resource, component:, author: participant, published_at: Time.current)
         end
+      end
+
+      it "has a working user counter" do
+        visit decidim_admin.select_recipients_to_deliver_newsletter_path(newsletter)
+        expect(page).to have_content("This newsletter will be send to 5 users.")
+        uncheck("Send to all users")
+        uncheck("Send to followers")
+        check("Send to participants")
+
+        plural_name = assembly.model_name.route_key
+        within ".#{plural_name}-block" do
+          select translated(assembly.title), from: "newsletter_participatory_space_types_#{plural_name}__ids"
+        end
+
+        expect(page).to have_content("This newsletter will be send to 0 users.")
       end
 
       it "sends to participants", :slow do

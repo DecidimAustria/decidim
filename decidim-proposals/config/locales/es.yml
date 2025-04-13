@@ -14,7 +14,7 @@ es:
         user_group_id: Crear borrador colaborativo como
       proposal:
         address: Dirección
-        answer: Respuesta
+        answer: Responder
         answered_at: Respondido en
         automatic_hashtags: Hashtags añadidos automáticamente
         body: Cuerpo
@@ -27,7 +27,7 @@ es:
         title: Título
         user_group_id: Crear propuesta como
       proposal_answer:
-        answer: Responder
+        answer: Respuesta
         cost: Coste
         cost_report: Informe de coste
         execution_period: Período de ejecución
@@ -148,9 +148,9 @@ es:
             comments_enabled: Comentarios habilitados
             comments_max_length: Longitud máxima de los comentarios (deja 0 si quieres mantener la configuración por defecto)
             default_sort_order: Ordenación por defecto de propuestas
-            default_sort_order_help: Por defecto significa que si los apoyos están habilitados, las propuestas se mostrarán en orden aleatorio, y si los apoyos están bloqueados, se ordenarán por las más apoyadas.
+            default_sort_order_help: '''Automático'' significa que si los apoyos están habilitados, las propuestas se mostrarán en orden aleatorio, y si los apoyos están bloqueados, se ordenarán de más a menos apoyos.'
             default_sort_order_options:
-              default: Por defecto
+              automatic: Automático
               most_commented: Más comentadas
               most_endorsed: Con más adhesiones
               most_followed: Más seguidas
@@ -202,9 +202,9 @@ es:
             creation_enabled: Las participantes pueden crear propuestas
             creation_enabled_readonly: Esta opción se desactiva cuando activas la funcionalidad de Textos Participativos. Para subir propuestas como texto participativo haz clic en el botón Textos Participativos y sigue las instrucciones.
             default_sort_order: Orden predeterminado de propuestas
-            default_sort_order_help: Por defecto significa que si los apoyos están habilitados, las propuestas se mostrarán en orden aleatorio, y si los apoyos están bloqueados, se ordenarán por las más apoyadas.
+            default_sort_order_help: '''Automático'' significa que si los apoyos están habilitados, las propuestas se mostrarán en orden aleatorio, y si los apoyos están bloqueados, se ordenarán de más a menos apoyos.'
             default_sort_order_options:
-              default: Por defecto
+              automatic: Automático
               most_commented: Más comentadas
               most_endorsed: Con más adhesiones
               most_followed: Más seguidas
@@ -278,7 +278,7 @@ es:
           follower:
             email_intro: 'La propuesta "%{resource_title}" ha sido aceptada. Puedes leer la respuesta en esta página:'
             email_outro: Has recibido esta notificación porque estás siguiendo el espacio "%{resource_title}". Puedes dejar de seguirlo desde el enlace anterior.
-            email_subject: Se ha aceptado una propesta que estás siguiendo
+            email_subject: Se ha aceptado una propuesta que estás siguiendo
             notification_title: La propuesta <a href="%{resource_path}">%{resource_title}</a> ha sido aceptada.
         proposal_evaluating:
           affected_user:
@@ -320,12 +320,12 @@ es:
             notification_title: La propuesta <a href="%{resource_path}">%{resource_title}</a> ha sido rechazada.
         proposal_update_category:
           email_intro: 'Una administradora ha actualizado la categoría de tu propuesta "%{resource_title}", puedes comprobarlo en esta página:'
-          email_outro: Recibiste esta notificación porque eres autora de la propuesta.
+          email_outro: Recibiste esta notificación porque eres la autora de la propuesta.
           email_subject: La categoría de la propuesta %{resource_title} ha sido actualizada
           notification_title: La categoría de la propuesta <a href="%{resource_path}">%{resource_title}</a> ha sido actualizada por una administradora.
         proposal_update_scope:
           email_intro: 'Una administradora ha actualizado el ámbito de tu propuesta "%{resource_title}", puedes comprobarlo en esta página:'
-          email_outro: Recibiste esta notificación porque eres autora de la propuesta.
+          email_outro: Recibiste esta notificación porque eres la autora de la propuesta.
           email_subject: El ámbito de la propuesta %{resource_title} ha sido actualizado
           notification_title: El ámbito de la propuesta <a href="%{resource_path}">%{resource_title}</a> ha sido actualizado por una administradora.
         voting_enabled:
@@ -490,7 +490,7 @@ es:
         proposals:
           answer:
             invalid: Ha habido un problema al responder a esta propuesta.
-            success: Propuesta respuesta con éxito.
+            success: Propuesta respondida con éxito.
           create:
             invalid: Ha habido un problema al crear esta propuesta.
             success: Propuesta creada correctamente.
@@ -520,7 +520,7 @@ es:
             split_button: Dividir
             title: Propuestas
             unassign_from_valuator: Desasignar de evaluadora
-            unassign_from_valuator_button: Desasignar
+            unassign_from_valuator_button: Deshacer la asignación
             update: Actualizar
             update_scope_button: Actualizar ámbito
           new:
@@ -567,7 +567,7 @@ es:
             no_components: No hay otros componentes de propuestas en este espacio participativo desde donde importarlas.
             select_component: Selecciona un componente
             select_states: Comprueba los estados de las propuestas a importar
-            title: Importar proyectos desde otro componente
+            title: Importar propuestas desde otro componente
         proposals_merges:
           create:
             invalid: 'Ha habido un problema al fusionar las propuestas seleccionadas porque algunas de ellas:'
@@ -602,14 +602,14 @@ es:
         withdrawn: Retirada
       application_helper:
         filter_origin_values:
-          all: Todas
+          all: Todos
           meetings: Encuentros
           official: Oficial
           participants: Participantes
           user_groups: Grupos
         filter_state_values:
           accepted: Aceptada
-          all: Todas
+          all: Todos
           evaluating: En evaluación
           not_answered: No contestada
           rejected: Rechazada
@@ -645,7 +645,7 @@ es:
           send: Enviar
           title: Editar borrador colaborativo
         empty: Todavía no hay borradores colaborativos
-        empty_filters: No hay un borrador de colaboración con este criterio
+        empty_filters: No hay ningún borrador colaborativo con este criterio
         filters:
           all: Todas
           amendment: Enmiendas
@@ -804,7 +804,7 @@ es:
           text_banner: Estás viendo la lista de propuestas retiradas por sus autoras. %{go_back_link}.
         new:
           send: Continuar
-          title: Crea tu propuesta
+          title: Crear una nueva propuesta
         orders:
           label: 'Ordenar propuestas por:'
           most_commented: Más comentadas

@@ -285,7 +285,7 @@ Also some more refined configurations:
 |If you are using a `osm` as a provider, you need to define this variable. Keep in mind that OpenStreetMap cannot be used directly due its non-commercial license in many cases. See xref:services:maps.adoc[Maps].
 
 *You need to define this variable if using `osm` as a provider, usually the URL goes in the form of `http://staticmap.openstreetmap.de/`*
-|https://image.maps.ls.hereapi.com/mia/1.6/mapview (only if using Here Maps)
+|https://image.maps.hereapi.com/mia/v3/base/mc/overlay (only if using Here Maps)
 |No
 
 |MAPS_ATTRIBUTION
@@ -524,6 +524,16 @@ take over user accounts.
 |DECIDIM_IMAGE_UPLOADER_QUALITY
 |Defines the quality of image uploads after processing. Image uploads are processed by Decidim, this value helps reduce the size of the files.
 |80
+|No
+
+|DECIDIM_CACHE_EXPIRATION_TIME
+|The default number of minutes where a cache in Decidim will be applied (currently Decidim applies cache to some pieces of html called cells). If empty has no expiration time (but you can clear the cache anytime with the command `rails tmp:clear`). Note that zero ("0") is different than an empty string and it will disable the cache completely.
+|1440
+|No
+
+|DECIDIM_STATS_CACHE_EXPIRATION_TIME
+|Same as before but for the default number of minutes for html that displays stats.
+|10
 |No
 
 |DECIDIM_MAXIMUM_ATTACHMENT_SIZE

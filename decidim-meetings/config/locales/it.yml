@@ -69,7 +69,7 @@ it:
               'false': Conclusi
               'true': Prossimi
           scope_id_eq:
-            label: Ambito
+            label: Visibilità
           with_any_origin:
             values:
               user_group: Gruppi di utenti
@@ -101,7 +101,7 @@ it:
             maps_enabled: Mappe abilitate
             registration_code_enabled: Codice di registrazione abilitato
             resources_permissions_enabled: Le autorizzazioni delle azioni possono essere impostate per ogni riunione
-            scope_id: Ambito
+            scope_id: Visibilità
             scopes_enabled: Ambiti abilitati
             terms_and_conditions_url_for_meeting_creators: Termini e condizioni URL per i creatori di riunione
           step:
@@ -171,7 +171,6 @@ it:
         attachment_collections: Cartelle
         attachments: Allegati
         close: Chiuso
-        confirm_destroy: Sei certo di voler cancellare questo meeting?
         destroy: Cancella
         edit: Modifica
         invalid_destroy:
@@ -309,18 +308,25 @@ it:
           value_types:
             organizer_presenter:
               not_found: 'L''organizzatore non è stato trovato nel database (ID: %{id})'
+      application_helper:
+        filter_category_values:
+          all: Tutte
       calendar_modal:
         calendar_url: URL del calendario
         export_calendar: Esporta il calendario
+      close_meeting_reminder_mailer:
+        close_meeting_reminder:
+          subject: Ora puoi chiudere il tuo incontro con un report sulla organizzazione %{organization_name}
       conference_venues: Sale per conferenze
       directory:
         meetings:
           index:
             meetings: Incontri
             space_type: Spazio partecipativo
+      iframe_embed_type:
+        open_in_live_event_page: Apri nella pagina dell'evento in diretta (con sondaggi opzionali)
       layouts:
         live_event:
-          administrate: Amministra
           close: chiudi
           questions: Domande
       mailer:
@@ -368,6 +374,7 @@ it:
             all: Tutte
             official: Ufficiale
             participants: Utenti
+            user_group: Gruppi
           search: Cerca
           type: Tipo
           type_values:
@@ -387,12 +394,14 @@ it:
           select_a_registration_type: Seleziona un tipo di registrazione
         index:
           new_meeting: Nuova riunione
+        meeting:
+          close_meeting: Chiusura meeting
+          edit_meeting: Modifica la riunione
         meetings:
           upcoming_meetings_warning: Attualmente non vi sono meeting in programma, ma qui puoi trovare elencati tutti i meeting effettuati in passato.
         new:
           back: Indietro
           create: Crea
-          title: Crea una riunione
         registration_confirm:
           cancel: Annulla
           confirm: Conferma
@@ -417,6 +426,7 @@ it:
             one: "%{count} slot rimanenti"
             other: "%{count} slot rimanenti"
           visit_finished: Visualizza la riunione passata
+          withdraw_meeting: Ritira meeting
         update:
           invalid: Si è verificato un errore durante l'aggiornamento della riunione.
           success: Hai aggiornato la riunione con successo.

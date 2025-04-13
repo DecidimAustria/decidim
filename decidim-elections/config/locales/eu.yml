@@ -34,13 +34,13 @@ eu:
       trustees_participatory_space:
         user_id: Parte-hartzailea
       voting:
-        banner_image: Banner-irudia
+        banner_image: Bannerra
         census_contact_information: Erroldako kontaktoen informazioa
         description: Deskribapena
         end_time: Bozketaren amaiera-data
         introductory_image: Aurkezpenaren irudia
         promoted: Nabarmendua
-        scope_id: Esparrua
+        scope_id: Eremua
         show_check_census: Erakutsi "Egiaztatu errolda" orria
         start_time: Bozketaren hasiera-data
         title: Izenburua
@@ -136,7 +136,7 @@ eu:
             'true': Baliozkotua
       voting_publications:
         create:
-          error: Arazo bat egon da bozketa hau argitaratzean.
+          error: Arazo bat sortu da bozketa hau argitaratzean.
           success: Bozketa zuzen argitaratu da.
         destroy:
           error: Arazo bat sortu da bozketa honen argitalpena kentzean.
@@ -144,7 +144,7 @@ eu:
     components:
       elections:
         actions:
-          vote: Eman botoa
+          vote: Eman babesa
         name: Bozketak
         settings:
           global:
@@ -342,7 +342,7 @@ eu:
             mark_as_missing: Marka desagertu da
             mark_as_missing_description: Bermatzaile guztiek parte hartu beharko lukete prozesu honetan, baina horietako batek ezin badu parte hartu, desagertu gisa markatu dezakezu.
             success: Desagertutako bermatzailearen txostena zuzen bidali da Iragarki-taulara.
-            tally_completion: Prozesua amaitu egingo da bermatzaileak aktibo daudenean edo desagertutzat jotzen direnean. Gutxienez % {quorum} bermatzaile behar dira prozesua amaitzeko.
+            tally_completion: Prozesua amaitutzat emango da administratzaile guztiak aktibo daudenean edo desagertuta markatuta daudenean. Gutxienez %{quorum} administratzaile behar dira prozesua osatzeko.
             title: Zenbatzeko prozesua
             undo_mark_as_missing: Akats baten ondorioz desagertu gisa markatutako bermatzaile batek parte hartu ahal izango du prozesua amaitu aurretik. Ohi bezala joka dezakete, eta absentearen marka ez da kontuan hartuko.
           vote:
@@ -364,7 +364,7 @@ eu:
             no_vote_statistics_yet: Oraindik ez dago boto-estatistikarik
             title: Boto-estatistikak
             voters: Boto-emaileak
-            votes: Botoak
+            votes: Babesak
         trustees_participatory_spaces:
           actions:
             disable: Desgaitu
@@ -377,7 +377,7 @@ eu:
             invalid: Arazo bat egon da bermatzaile hau kentzean.
             success: Bermatzailea zuzen ezabatua.
           form:
-            select_user: Hautatu erabiltzailea
+            select_user: Hautatu parte-hartzailea
           index:
             title: Bermatzaileak
           new:
@@ -388,25 +388,25 @@ eu:
             success: '%{trustee} bermatzailea zuzen eguneratua.'
       admin_log:
         election:
-          create: "%{user_name} k %{space_name} ko %{resource_name} aukera sortu du"
-          delete: "%{user_name} k ezabatu du %{space_name} ko %{resource_name} aukera"
-          end_vote: "%{user_name} k amaitu du bozketaldia %{space_name} ko %{resource_name} bozketarako Iragarki Taulan"
-          publish: "%{user_name} k argitaratu du %{space_name} ko %{resource_name} hautaketa"
-          publish_results: "%{user_name} k argitaratu ditu %{resource_name} hautaketarako emaitzak %{space_name} Iragarki Taulan"
-          report_missing_trustee: "% {user_name} k jakinarazi zion % {trustee_name} ri  desagertutako bermatzaile gisa % {space_name} aukeraren % {resource_name} zenbaketan Iragarki-taulan"
-          setup: "%{user_name} k sortu du %{space_name} ko %{resource_name} hautaketa Iragarki Taulan"
-          start_key_ceremony: "%{user_name} k hasi du kontaketa %{resource_name} hautaketarako Iragarki Taulan"
-          start_tally: "%{user_name} k hasi zuen kontaketa %{resource_name} aukerarako Iragarki Taulan"
-          start_vote: "%{user_name} k hasi du bozketaldia %{space_name} ko %{resource_name} hautaketarako Iragarki Taulan"
-          unpublish: "%{user_name} k despublikatu du %{space_name} ko %{resource_name} hautaketa"
-          update: "%{user_name} k eguneratu du %{space_name} ko %{resource_name} hautaketa"
+          create: "%{user_name} parte-hartzaileak %{space_name} ko %{resource_name} aukera sortu du"
+          delete: "%{user_name} parte-hartzaileak ezabatu du %{space_name} ko %{resource_name} aukera"
+          end_vote: "%{user_name} parte-hartzaileak amaitu du bozketaldia %{space_name} ko %{resource_name} bozketarako Iragarki Taulan"
+          publish: "%{user_name} parte-hartzaileak argitaratu du %{space_name} ko %{resource_name} hautaketa"
+          publish_results: "%{user_name} parte-hartzaileak argitaratu ditu %{resource_name} hautaketarako emaitzak %{space_name} Iragarki Taulan"
+          report_missing_trustee: "% {user_name} parte-hartzaileak jakinarazi zion % {trustee_name} ri desagertutako bermatzaile gisa % {space_name} aukeraren % {resource_name} zenbaketan Iragarki-taulan"
+          setup: "%{user_name} parte-hartzaileak sortu du %{space_name} ko %{resource_name} hautaketa Iragarki Taulan"
+          start_key_ceremony: "%{user_name} parte-hartzaileak hasi du kontaketa %{resource_name} hautaketarako Iragarki Taulan"
+          start_tally: "%{user_name} parte-hartzaileak hasi du kontaketa %{resource_name} aukerarako Iragarki Taulan"
+          start_vote: "%{user_name} parte-hartzaileak hasi du bozketaldia %{space_name} ko %{resource_name} hautaketarako Iragarki Taulan"
+          unpublish: "%{user_name} parte-hartzaileak despublikatu du %{space_name} ko %{resource_name} hautaketa"
+          update: "%{user_name} parte-hartzaileak eguneratu du %{space_name} ko %{resource_name} hautaketa"
         trustee:
-          create: "%{user_name} k %{trustee_user} erabiltzailea esleitu du bermatzaile gisa"
+          create: "%{user_name} parte-hartzaileak %{trustee_user} parte-hartzailea esleitu du bermatzaile gisa"
       connection:
         failed:
           modal:
             close: Itxi
-            communication_lost: Zoritxarrez, badirudi (Iragarki-taula) boto-zerbitzariarekin komunikazioa galdu egin dela.<br>Baliteke Interneterako konexioa hautsita egotea edo zerbitzaria lanpetuta egotea.<br>Saiatu geroago, edo jarri kontaktuan, arazo honek irauten badu.
+            communication_lost: Zoritxarrez, badirudi (Iragarki-taula) boto-zerbitzariarekin komunikazioa galdu egin dela.<br>Baliteke Interneterako konexioa hautsita egotea edo zerbitzaria lanpetuta egotea.<br>Saiatu geroago, edo jarri kontaktuan babeslearekin, arazo honek irauten badu.
             generic_error: Zoritxarrez, errore ezezagun bat izan da. Ziur aski, zure nabigatzaileak ez du pairatzen edo modu "ezkutuan" edo "pribatuan" erabiltzen ari zara, bateragarria ez izanik.
             title: Zerbait gaizki joan da
       election_m:
@@ -416,6 +416,9 @@ eu:
           upcoming: Hurrengoak
         end_date: Amaitu
         footer:
+          remaining_time:
+            one: "Gainontzeko <strong> ordu bat %{minutes} minutu</strong> bozkatzeko."
+            other: "Gainontzeko <strong>%{count} ordu %{minutes} minutu</strong> bozkatzeko."
           view: Ikusi
           vote: Eman botoa
         label:
@@ -426,8 +429,8 @@ eu:
       elections:
         count:
           elections_count:
-            one: "%{count} bozketa"
-            other: "%{count} bozketa"
+            one: "Bozketa bat"
+            other: "Bozketa %{count}"
         election_log:
           chained_hash: Mezu honen Hash kateatua
           complete: Osatu
@@ -493,19 +496,19 @@ eu:
             other: "%{count} boto"
         show:
           action_button:
-            change_vote: Aldatu zure botoa
-            vote: Botoa ematen hasi
-            vote_again: Berriro eman botoa
+            change_vote: Aldatu zure babesa
+            vote: Babesa ematen hasi
+            vote_again: Berriro eman babesa
           callout:
-            already_voted: Jada botoa eman duzu aukera honetan. Zure botoa alda dezakezu edo egiaztatu.
-            pending_vote: Zure botoa ematen ari da zerbitzarian.
-            vote_rejected: Ezin izan da zure botoa egiaztatu. Mesedez, egizu berriro.
+            already_voted: Jada babesa eman duzu aukera honetan. Zure babesa alda dezakezu edo egiaztatu.
+            pending_vote: Zure babesa ematen ari da zerbitzarian.
+            vote_rejected: Ezin izan da zure babesa egiaztatu. Mesedez, egizu berriro.
           election_log: Aukeraketaren erregistroa
           preview: Aurreikusi
           verify:
             already_voted: Bozkatu duzu?
-            verify_here: Egiaztatu zure botoa hemen.
-            will_verify: Zure botoa egiaztatu ahal izango duzu hautaketa hasten denean.
+            verify_here: Egiaztatu zure babesa hemen.
+            will_verify: Zure babesa egiaztatu ahal izango duzu hautaketa hasten denean.
           voting_period_status:
             finished: Bozketa hasi zen %{start_time} eta amaitu zen %{end_time}
             ongoing: 'Bozketa aktibo %{end_time} arte'
@@ -521,7 +524,7 @@ eu:
             proposals: Proposamenak
             selected: Hautatua
             title: Izenburua
-            votes: Botoak
+            votes: Babesak
         election:
           fields:
             bb_status: Iragarki Taularen egoera
@@ -538,7 +541,7 @@ eu:
         trustees_participatory_space:
           fields:
             considered: kontuan hartuta
-            email: E-maila
+            email: Helbide elektronikoa
             inactive: inaktibo
             name: Izena
             notification: Jakinarazpena egun honetan bidali zen
@@ -641,49 +644,49 @@ eu:
             success: Zure identifikazio-gako publikoa zuzen gorde da.
       votes:
         ballot_decision:
-          audit: ( Ikuskatu boto-papera )
+          audit: Boto-orria ikuskatu
           back: Hasi berriro bozkatzeko prozesua
           ballot_hash: 'Boto-paperaren identifikatzailea hau da:'
           cast: Eman boto-papera zure bozketa amaitzeko
           description: Hemen dituzu zure boto-papera emateko aukerak, behar bezala zenbatua izateko edo, bestela, auditatu dezakezu zure boto-papera behar bezala zifratu zela. Segurtasun-arrazoiak direla eta, boto-txartela auditatzea balio gabe utziko da, eta horrek esan nahi du zure botoa emateko prozesua berriz hasi beharko duzula.
           header: 'Boto-papera zifratu da: bidali edo ikuskatu'
         casting:
-          header: Botoa ematen ari da...
+          header: Babesa ematen ari da...
           text: Zure bozketa-papera hautetsontzian jartzen ari da.
         confirm:
           answer_number: '%{number} erantzun'
           confirm: Baieztatu
           edit: editatu
-          header: Baieztatu botoa
-          intro: Hemen duzu emango duzun botoaren laburpena. < br> Mesedez, berretsi zure botoa edo editatu zure erantzunak.
+          header: Baieztatu babesa
+          intro: Hemen duzu emango duzun babesaren laburpena. < br> Mesedez, berretsi zure botoa edo editatu zure erantzunak.
           nota_option: Hutsik
         confirmed:
           back: Itzuli bozketetara
           experience: Nola baloratzen duzu esperientzia?
           feedback: Emaguzu zure iritzia
-          header: Baieztatutako botoa
-          lead: Zure botoa eman da!
-          text: 'Egiaztatu ahal duzu zure botoa zuzen sartu dela hautesontzian honako identifikatzailearekin: <strong class="evote__poll-id">%{e_vote_poll_id}</strong>'
+          header: Baieztatutako babesa
+          lead: Zure babesa eman da!
+          text: 'Ondorengo identifikatzaileari esker zure botoa hautestontzian zuzen sartu dela egiaztatu ahal duzu: '
           verify_link: 'Egiaztatzeko, kopiatu identifikatzailea eta itsatsi hemen: <a href="%{link}">página de verificación de voto</a>'
         create:
-          error: Arazo bat egon da botoa ematean. Mesedez, saiatu berriro.
+          error: Arazo bat egon da babesa ematean. Mesedez, saiatu berriro.
         encrypting:
-          header: Botoa zifratzen ari da...
+          header: Babesa zifratzen ari da...
           text: Zure boto-papera zifratzen ari da boto sekretua bermatzeko.
         failed:
           header: Boto okerra
-          lead: Ez duzu eman botoa!
+          lead: Ez duzu eman babesa!
           text: Zerbait txarto irten da, mesedez, saiatu berriro.
           try_again: Saiatu berriro
         header:
-          ballot_decision: Eman edo ikuskatu zure botoa
-          confirm: Baieztatu botoa
+          ballot_decision: Eman edo ikuskatu zure babesa
+          confirm: Berretsi
           election: Hautaketa
           register: Erregistroa
-          vote_for: Bozkatu %{title} (r) en alde
+          vote_for: '%{title} (r) en alde bozkatu'
         messages:
           invalid_token: Bozketa-kabinan egindako saioa ez da baliozkoa. Saiatu berriro bozkatzen.
-          not_allowed: Une honetan ezin duzu botoa eman bozketa honetan.
+          not_allowed: Une honetan ezin duzu babesa eman bozketa honetan.
         modal:
           close: Itxi
           proposal_header: 'Proposamenak:'
@@ -700,10 +703,10 @@ eu:
           no_account: Ez, eskerrik asko.
           title: Berria plataforman?
         update:
-          error: Arazo bat egon da botoaren egoera eguneratzean. Mesedez, saiatu berriro.
+          error: Arazo bat egon da babesaren egoera eguneratzean. Mesedez, saiatu berriro.
         verify:
           content:
-            heading: Egiaztatu zure botoa
+            heading: Egiaztatu zure babesa
             info: Egiaztatzaile horrek egiaztatu behar du zure botoa, zifratutako testu-batekin identifikatua, zuzen eman dela eta hautestontziaren barruan dagoela.
           error:
             header: Botoa ez da aurkitu!
@@ -714,9 +717,9 @@ eu:
             vote_identifier: 'Kode identifikatzailea:'
             vote_identifier_help: Hau da eman zizuten identifikatzailea botoa eman ondoren (ez da bozkatzeko kutxan sartzeko kodea).
           header:
-            title: Egiaztatu zure botoa
+            title: Egiaztatu zure babesa
           success:
-            header: Botoa aurkituta!
+            header: Babesa aurkituta!
             info: Zure boto zifratua %{link} hautestontzian dago.
         voting_step:
           back: Atzera
@@ -744,9 +747,9 @@ eu:
             notification_title: <a href="%{participatory_space_url}">%{resource_name}</a> ren bermatzailea zara.
         votes:
           accepted_votes:
-            email_intro: 'Zure botoa onartu egin da! Zure botoaren tokena erabiliz: %{encrypted_vote_hash}, zure botoa egiaztatu ahal duzu<a href="%{verify_url}">hemen</a>.'
-            email_outro: Jakinarazpen hau jaso duzu %{resource_name} aukeran botoa eman duzulako.
-            email_subject: Zure botoa %{resource_name} aukerarako onartu egin da.
+            email_intro: 'Zure babesa onartu egin da! Zure botoaren tokena erabiliz: %{encrypted_vote_hash}, zure babesa egiaztatu ahal duzu<a href="%{verify_url}">hemen</a>.'
+            email_outro: Jakinarazpen hau jaso duzu %{resource_name} aukeran babesa eman duzulako.
+            email_subject: Zure babesa %{resource_name} aukerarako onartu egin da.
             notification_title: 'Zure botoa onartu egin da. Egiaztatu zure botoa <a href="%{verify_url}">hemen</a> zure botoaren tokena erabiliz: %{encrypted_vote_hash}'
       votings:
         polling_officers:
@@ -785,7 +788,7 @@ eu:
             title: Editatu boto-paper mota
             update: Eguneratu
           form:
-            code_help: 'Laguntza: kodea erroldaren eta boto-paper motaren arteko lotura da. Erroldako datuak eguneratzean, sarrera bakoitzari kodearekin bat datorren boto-paper mota esleitzen zaio.'
+            code_help: 'Laguntza: kodea erroldaren eta boto-paper motaren arteko esteka da. Erroldako datuak eguneratzean, sarrera bakoitzari kodearekin bat datorren boto-paper mota esleitzen zaio.'
             election: Aukera
             questions: Galderak boto-paper mota honetarako
             questions_help: 'Laguntza: hautatu bozketako osagaien galderak, boto-paper mota honetarako boto-emaileei aurkezteko.'
@@ -858,11 +861,11 @@ eu:
               code: Kodea
           monitoring_committee_member:
             fields:
-              email: E-maila
+              email: Helbide elektronikoa
               name: Izena
           polling_officer:
             fields:
-              email: E-maila
+              email: Helbide elektronikoa
               name: Izena
               polling_station: Bozketa-gunea (rola)
           polling_station:
@@ -1037,27 +1040,27 @@ eu:
             success: Bozketa zuzen eguneratua.
       admin_log:
         ballot_style:
-          create: "%{user_name} k sortu du boto-paper bat kode honekin: %{ballot_style_code} espazio honetan: %{space_name}"
-          delete: "%{user_name} k ezabatu du boto-paper mota hau kode honekin: %{ballot_style_code} espazio honetan: %{space_name}"
-          update: "%{user_name} k eguneratu du boto-paper mota kode honekin: %{ballot_style_code} espazio honetan: %{space_name}"
+          create: "%{user_name} parte-hartzaileak sortu du boto-paper bat kode honekin: %{ballot_style_code} espazio honetan: %{space_name}"
+          delete: "%{user_name} parte-hartzaileak ezabatu du boto-paper mota hau kode honekin: %{ballot_style_code} espazio honetan: %{space_name}"
+          update: "%{user_name} parte-hartzaileak eguneratu du boto-paper mota kode honekin: %{ballot_style_code} espazio honetan: %{space_name}"
         census:
-          create: "%{user_name} k sortu du errolda espazio honetarako: %{space_name}"
-          delete: "%{user_name} k ezabatu du errolda espazio honetarako: %{space_name}"
-          update: "%{user_name} k eguneratu du errolda espazio honetarako: %{space_name}"
+          create: "%{user_name} parte-hartzaileak sortu du errolda espazio honetarako: %{space_name}"
+          delete: "%{user_name} parte-hartzaileak ezabatu du errolda espazio honetarako: %{space_name}"
+          update: "%{user_name} parte-hartzaileak eguneratu du errolda espazio honetarako: %{space_name}"
         monitoring_committee_member:
-          create: "%{user_name} k esleitu du %{monitoring_committee_member_user} erabiltzailea jarraipen-batzordeko kide gisa espazio honetan: %{space_name}"
-          delete: "%{user_name} k desesleitu du %{monitoring_committee_member_user} erabiltzailea jarraipen-batzordeko kide gisa espazio honetan: %{space_name}"
+          create: "%{user_name} parte-hartzaileak esleitu du %{monitoring_committee_member_user} parte-hartzailea jarraipen-batzordeko kide gisa espazio honetan: %{space_name}"
+          delete: "%{user_name} parte-hartzailek desesleitu du %{monitoring_committee_member_user} parte-hartzailea jarraipen-batzordeko kide gisa espazio honetan: %{space_name}"
         polling_officer:
-          create: "%{user_name} k esleitu du %{polling_officer_user} erabiltzailea jarraipen-batzordeko kide gisa espazio honetan: %{space_name}"
-          delete: "%{user_name} k desesleitu du %{polling_officer_user} erabiltzailea jarraipen-batzordeko kide gisa espazio honetan: %{space_name}"
+          create: "%{user_name} parte-hartzailek esleitu du %{polling_officer_user} parte-hartzailea jarraipen-batzordeko kide gisa espazio honetan: %{space_name}"
+          delete: "%{user_name} parte-hartzailek desesleitu du %{polling_officer_user} parte-hartzailea jarraipen-batzordeko kide gisa espazio honetan: %{space_name}"
         polling_station:
-          create: "%{user_name} k sortu du %{resource_name} bozketa-gunea %{space_name} espazioan"
-          delete: "%{user_name} k ezabatu du %{resource_name} bozketa-gunea %{space_name} espazioan"
-          update: "%{user_name} k eguneratu du %{resource_name} bozketa-gunea %{space_name} espazioan"
+          create: "%{user_name} parte-hartzaileak sortu du %{resource_name} bozketa-gunea %{space_name} espazioan"
+          delete: "%{user_name} parte-hartzaileak ezabatu du %{resource_name} bozketa-gunea %{space_name} espazioan"
+          update: "%{user_name} parte-hartzaileak eguneratu du %{resource_name} bozketa-gunea %{space_name} espazioan"
         voting:
-          create: "%{user_name}-k sortu du %{resource_name} bozketa"
-          publish: "%{user_name}-k argitaratu du %{resource_name} bozketa"
-          unpublish: "%{user_name}-k desargitaratu du %{resource_name} bozketa"
+          create: "%{user_name} parte-hartzaileak sortu du %{resource_name} bozketa"
+          publish: "%{user_name} parte-hartzaileak argitaratu du %{resource_name} bozketa"
+          unpublish: "%{user_name} parte-hartzaileak desargitaratu du %{resource_name} bozketa"
       census:
         admin:
           census:
@@ -1120,7 +1123,7 @@ eu:
           passport: Pasaportea
         export_mailer:
           access_codes_export:
-            click_button: 'Egin klik hurrengo loturan zure datuak deskargatzeko. <br/>Artxiboa eskuragai egongo da data honetara arte %{date}.<br/>Irekitzeko beharko duzu <a href="https://www.7-zip.org/">7-Zip</a> (Windowserako), <a href="https://www.keka.io/en/">Keka</a> (para MacOS) o <a href="https://peazip.github.io">PeaZip</a> (Linuxerako). Pasahitza: %{password}'
+            click_button: 'Egin klik hurrengo estekan zure datuak deskargatzeko. <br/>Artxiboa eskuragai egongo da data honetara arte %{date}.<br/>Irekitzeko beharko duzu <a href="https://www.7-zip.org/">7-Zip</a> (Windowserako), <a href="https://www.keka.io/en/">Keka</a> (para MacOS) o <a href="https://peazip.github.io">PeaZip</a> (Linuxerako). Pasahitza: %{password}'
             download: Deskargatu
             subject: Bozketan sartzeko kodeen esportazioa %{voting_title} rako prest dago
         vote_flow:
@@ -1150,7 +1153,7 @@ eu:
           certify:
             add_images: Gehiru irudiak
             error: Arazo bat izan da ziurtagiria eranstean, mesedez, saiatu berriro.
-            form_legend: Igo Hauteskundearen Itxieraren Egiaztagiriaren agazkia
+            form_legend: Hauteskundearen itxieraren egiaztagiriaren agazkia igo
             heading: Botoen zenbaketa - Igo ziurtagiria
             info_text: Mesedez, igo bozketa-itxieraren ziurtagiriaren argazki bat.
             submit: Igo ziurtagiria
@@ -1252,7 +1255,7 @@ eu:
             polling_officer_role_description: Plataforma honetan egindako aukeraketa batzuetan mahaiko kudeatzaile gisa (Presidentea edo Administratzailea) jarduteko izendatu zaituzte.
             polling_station:
               address: Helbidea
-              count_votes: Zenbatu botoak
+              count_votes: Zenbatu babesak
               election: Aukera
               identify_person: Identifikatu pertsona bat
               name: Izena
@@ -1373,10 +1376,10 @@ eu:
   layouts:
     decidim:
       voting_navigation:
-        check_census: Botoa eman dezaket?
+        check_census: Babesa eman dezaket?
         election_log: Aukeraketaren erregistroa
       votings:
         index:
           promoted_votings: Bozketa nabarmenduak
         promoted_voting:
-          vote: Eman botoa
+          vote: Eman babesa

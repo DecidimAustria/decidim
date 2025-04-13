@@ -2,6 +2,8 @@
 sk:
   activemodel:
     attributes:
+      assemblies_type:
+        title: Názov
       assembly:
         area_id: Oblasť
         assembly_type: Typ zhromaždenia
@@ -113,12 +115,26 @@ sk:
         update:
           error: Pri tvorbe nového typu zhromaždenia nastala chyba.
           success: Typ zhromaždenia úspešne aktualizovaný.
+      assembly_members:
+        edit:
+          update: Aktualizovať
+        new:
+          create: Vytvoriť
+      filters:
+        decidim_assemblies_type_id_eq:
+          label: Typ zhromaždenia
       menu:
         assemblies_types: Typy zhromaždení
       models:
         assemblies_types:
           fields:
             title: Názov
+        assembly_member:
+          fields:
+            ceased_date: Dátum ukončenia
+            designation_date: Dátum konania
+            full_name: Meno
+            position: Pozícia
         assembly_user_role:
           roles:
             valuator: Hodnotiteľ
@@ -136,6 +152,7 @@ sk:
           form:
             title: Názov
       show:
+        assembly_type: Typ zhromaždenia
         related_participatory_processes: Súvisiace participatívne procesy
     events:
       assemblies:

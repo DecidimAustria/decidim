@@ -52,7 +52,7 @@ es:
         confirm_destroy: '¿Estás segura?'
         destroy: Elimina
         edit: Editar
-        new: Añadir debate
+        new: Nuevo debate
         title: Acciones
       admin:
         debate_closes:
@@ -134,7 +134,7 @@ es:
         new:
           back: Volver
           create: Crear
-          title: Nuevo debate
+          title: Crear un debate
         orders:
           commented: Más comentados
           label: Ordenar debates por

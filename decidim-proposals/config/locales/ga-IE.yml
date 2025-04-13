@@ -30,6 +30,12 @@ ga:
         few: Moltaí
         many: Moltaí
         other: Moltaí
+      decidim/proposals/proposal_vote:
+        one: Tacaíocht
+        two: Tacaíochtaí
+        few: Tacaíochtaí
+        many: Tacaíochtaí
+        other: Tacaíochtaí
   decidim:
     admin:
       filters:
@@ -111,7 +117,6 @@ ga:
             select_a_category: Roghnaigh catagóir
           index:
             actions: Gníomhartha
-            assign_to_valuator_button: Ceap
             cancel: Cealaigh
             change_category: Athraigh catagóir
             merge_button: Cumaisc

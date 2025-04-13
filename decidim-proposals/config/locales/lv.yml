@@ -80,6 +80,10 @@ lv:
     admin:
       filters:
         proposals:
+          category_id_eq:
+            label: Kategorija
+          scope_id_eq:
+            label: Darbības tvērums
           valuator_role_ids_has:
             label: Piešķirts vērtētājam
         search_placeholder:
@@ -119,6 +123,7 @@ lv:
             proposal_wizard_step_2_help_text: Priekšlikumu vedņa "Salīdzināt" soļa palīdzības teksts
             proposal_wizard_step_3_help_text: Priekšlikuma vedņa „Pabeigt” soļa palīdzības teksts
             resources_permissions_enabled: Katram priekšlikumam var iestatīt darbības atļaujas
+            scope_id: Darbības tvērums
             threshold_per_proposal: Slieksnis vienam priekšlikumam
             vote_limit: Atbalsta limits vienam dalībniekam
           step:
@@ -219,12 +224,10 @@ lv:
             notification_title: <a href="%{resource_path}">%{resource_title}</a> priekšlikums tika noraidīts.
         proposal_update_category:
           email_intro: 'Administrators ir atjauninājis jūsu priekšlikuma kategoriju "%{resource_title}", aplūkojiet to šajā lapā:'
-          email_outro: Jūs saņēmāt šo paziņojumu, jo esat priekšlikuma autors.
           email_subject: '%{resource_title} priekšlikuma kategorija ir atjaunināta'
           notification_title: <a href="%{resource_path}">%{resource_title}</a> administrators ir atjauninājis priekšlikuma kategoriju.
         proposal_update_scope:
           email_intro: 'Administrators ir atjauninājis jūsu priekšlikuma tvērumu "%{resource_title}", aplūkojiet to šajā lapā:'
-          email_outro: Jūs saņēmāt šo paziņojumu, jo esat priekšlikuma autors.
           email_subject: '%{resource_title} priekšlikuma tvērums tika atjaunināts'
           notification_title: <a href="%{resource_path}">%{resource_title}</a> administrators ir atjauninājis priekšlikuma tvērumu.
         voting_enabled:
@@ -351,7 +354,6 @@ lv:
           index:
             actions: Darbības
             assign_to_valuator: Piešķirt vērtētājam
-            assign_to_valuator_button: Piešķirt
             cancel: Atcelt
             change_category: Mainīt kategoriju
             change_scope: Mainīt tvērumu
@@ -365,7 +367,6 @@ lv:
             split_button: Sadalījums
             title: Priekšlikumi
             unassign_from_valuator: Atsaukt no vērtētāja
-            unassign_from_valuator_button: Atsaukt
             update: Atjaunināt
             update_scope_button: Atjaunināt tvērumu
           new:
@@ -576,7 +577,6 @@ lv:
           discard: Atmest šo melnrakstu
           discard_confirmation: Vai tiešām vēlaties atmest šo grozījuma melnrakstu?
           send: Priekšskatīt
-          title: Rediģēt priekšlikuma projektu
         filters:
           activity: Mana aktivitāte
           all: Visi

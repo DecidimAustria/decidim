@@ -3,7 +3,7 @@ sq:
   activemodel:
     attributes:
       budget:
-        decidim_scope_id: Fushëveprimi
+        decidim_scope_id: Fushëveprim
         description: Përshkrimi
         title: Titulli
         total_budget: Buxheti total
@@ -31,7 +31,7 @@ sq:
           category_id_eq:
             label: Kategori
           scope_id_eq:
-            label: Qëllimi
+            label: Fushëveprim
           selected_at_null:
             label: E përzgjedhur
             values:
@@ -41,7 +41,6 @@ sq:
       actions:
         attachment_collections: Dosjet
         attachments: Bashkëngjitjet
-        confirm_destroy: A je i sigurt që do ta fshish këtë projekt?
         destroy: Fshi
         edit: Përpuno
         edit_projects: Menaxho projektet
@@ -49,3 +48,11 @@ sq:
         new_budget: Buxhet i ri
         new_project: Projekt i ri
         preview: Pamje paraprake
+      projects:
+        filters:
+          scope: Fushëveprim
+    components:
+      budgets:
+        settings:
+          global:
+            scope_id: Fushëveprim

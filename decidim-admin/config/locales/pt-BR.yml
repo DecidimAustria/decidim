@@ -188,6 +188,7 @@ pt-BR:
         export: Exportar tudo
         export-selection: Exportar selecionado
         import: Importar
+        manage: Gerenciar
         newsletter:
           new: Novo Boletim Informativo
         participatory_space_private_user:
@@ -288,6 +289,7 @@ pt-BR:
       block_user:
         new:
           action: Bloquear conta e enviar justificativa
+          already_reported_html: Continuar com essa ação também resultará na ocultação o conteúdo de todos os participantes.
           description: Bloquear um usuário irá tornar sua conta inutilizável. Você pode fornecer em sua justificação quaisquer diretrizes sobre como você poderia considerar desbloquear o usuário.
           justification: Justificativa
           title: Bloquear usuário %{name}
@@ -349,12 +351,13 @@ pt-BR:
       conflicts:
         attempts: Tentativas
         'false': 'Não'
+        index:
+          text: Pesquisar por e-mail, nome ou apelido do usuário.
         managed_user_name: Usuário gerenciado
         solved: Resolvido
         title: Conflitos de verificação
         transfer:
           email: E-mail
-          error: Houve um erro ao transferir o usuário atual para o usuário gerenciado.
           name: Nome
           reason: Motivo
           success: A transferência atual foi concluída com sucesso.
@@ -661,7 +664,7 @@ pt-BR:
             created_at: Criado em
             document_number: Número do documento
             name: Nome
-            nickname: Nome de usuário
+            nickname: Apelido
             phone: Telefone
             state: Situação
             users_count: Total de usuários
@@ -1050,7 +1053,7 @@ pt-BR:
             acme@example.org
             bubba.gump@example.org
           title: Envie seu arquivo CSV
-          upload: Envio
+          upload: Upload
       users:
         create:
           error: Ocorreu um erro ao convidar esse usuário.

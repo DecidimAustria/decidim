@@ -23,7 +23,7 @@ ca:
       category:
         description: Descripció
         name: Nom
-        parent_id: Pare
+        parent_id: Categoria mare
         weight: Ordre de posició
       component:
         name: Nom
@@ -110,7 +110,7 @@ ca:
         code: Codi
         name: Nom
         organization: Organització
-        parent_id: Pare
+        parent_id: Àmbit pare
         scope_type: Tipus d'àmbit
         scope_type_id: Tipus d'àmbit
       scope_type:
@@ -188,6 +188,7 @@ ca:
         export: Exportar tot
         export-selection: Exportar selecció
         import: Importar
+        manage: Gestionar
         newsletter:
           new: Nou butlletí
         participatory_space_private_user:
@@ -350,12 +351,14 @@ ca:
       conflicts:
         attempts: Intents
         'false': 'No'
+        index:
+          text: Cercar per correu electrònic, nom o àlies.
         managed_user_name: Usuari gestionat
         solved: Resolt
         title: Conflictes de verificació
         transfer:
           email: Correu electrònic
-          error: S¡ha produït un error en transferir la participant actual a la participant gestionada.
+          error: Hi ha hagut un problema transferint la participant actual a una participant gestionada.
           name: Nom
           reason: Raó
           success: La transferència s'ha completat correctament.
@@ -571,6 +574,7 @@ ca:
         appearance: Aparença
         area_types: Tipus d'àrees
         areas: Àrees
+        components: Components
         configuration: Configuració
         content: Contingut reportat
         external_domain_whitelist: Dominis externs permesos
@@ -641,7 +645,7 @@ ca:
             plural: Plural
         share_token:
           fields:
-            created_at: Creat el
+            created_at: Data de creació
             expires_at: Caduca el
             last_used_at: Darrer cop que es va fer servir
             times_used: Cops utilitzat
@@ -888,7 +892,7 @@ ca:
           success: L'arxiu CSV s'ha carregat amb èxit, estem enviant un correu d'invitació a les participants. Això pot trigar una estona.
         new:
           csv_upload:
-            title: Puja el teu fitxer CSV
+            title: Puja el fitxer CSV
           destroy:
             button: Esborrar totes les participants privades
             confirm: Segur que vols esborrar totes les participants privades? Aquesta acció no es pot desfer, no podràs recuperar-les.
@@ -1045,9 +1049,9 @@ ca:
       user_groups:
         index:
           state:
-            pending: Pendent
-            rejected: Rebutjat
-            verified: Verificat
+            pending: Pendents
+            rejected: Rebutjada
+            verified: Verificades
           verify_via_csv: Verifica mitjançant CSV
       user_groups_csv_verifications:
         new:
@@ -1057,7 +1061,7 @@ ca:
             acme@example.org
             bubba.gump@example.org
           title: Puja el fitxer CSV
-          upload: Pujar
+          upload: Carrega
       users:
         create:
           error: S'ha produït un error en convidar aquesta participant.

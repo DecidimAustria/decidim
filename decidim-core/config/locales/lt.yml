@@ -598,7 +598,7 @@ lt:
         filter_area_values:
           all: Visos
         filter_category_values:
-          all: Visos
+          all: Visi
         filter_scope_values:
           all: Visos
     devise:
@@ -614,6 +614,7 @@ lt:
       registrations:
         new:
           already_have_an_account?: Jau turite paskyrą?
+          log_in: Prisijungti
           newsletter: Kartais gauti naujienlaiškį su aktualia informacija
           newsletter_title: Leidimas susisiekti
           sign_up: Užsiregistruoti
@@ -931,11 +932,11 @@ lt:
           filename: Rinkmenos pavadinimas
           remove: Pašalinti
           replace: Pakeisti
+          save: Išsaugoti
           title: Pavadinimas
           title_required: Reikalingas pavadinimas!
           uploaded: Įkelta
           validating: Tvirtinama...
-          validation_error: Tvirtinimo klaida!
         select_file: Pasirinkite rinkmeną
       upload_help:
         dropzone: Užvilkite rinkmeną čia arba spauskite įkėlimo mygtuką
@@ -1360,6 +1361,8 @@ lt:
         conversations: Pokalbiai
         followers: Sekėjai
         following: Seka
+        group_admins: Valdyti administratorių duomenis
+        group_members: Valdyti narius
         groups: Grupės
         members: Nariai
         officialized: Patikrintas dalyvis
@@ -1381,7 +1384,7 @@ lt:
           manage_user_group_admins: Valdyti administratorių duomenis
           manage_user_group_users: Valdyti narius
           message: Pranešimas
-          resend_email_confirmation_instructions: Išsiųsti patvirtinimo instrukcijas dar kartą
+          resend_email_confirmation_instructions: Persiųsti patvirtinimo nurodymus el. paštu
         confirmation_instructions_sent: Patvirtinimo el. laiškas išsiųstas.
         create_user_group: Sukurti grupę
         edit_profile: Redaguoti profilį
@@ -1390,7 +1393,7 @@ lt:
         invite_user: Kviesti dalyvį
         join_user_group: Prašyti prisijungti prie grupės
         leave_user_group: Palikti grupę
-        manage_user_group_admins: Tvarkyti administratorius
+        manage_user_group_admins: Valdyti administratorių duomenis
         manage_user_group_users: Valdyti narius
         resend_email_confirmation_instructions: Persiųsti patvirtinimo nurodymus el. paštu
     reported_mailer:
@@ -1447,7 +1450,6 @@ lt:
           past: Praėję
       filters_small_view:
         filter: Filtruoti
-        filter_and_search: Filtruoti ir ieškoti
         filter_by: Filtruoti pagal
       results:
         view_all: Peržiūrėti viską (%{count})
@@ -1700,12 +1702,16 @@ lt:
       signed_up_but_unconfirmed: Žinutė su patvirtinimo nuoroda buvo išsiųsta į jūsų el. paštą. Prašome sekite nuorodą norėdami aktyvuoti paskyrą.
       update_needs_confirmation: Sėkmingai atnaujinote paskyrą, bet turime patvirtinti jūsų naują el. pašto adresą. Prašome patikrinkite savo el. paštą ir spustelėkite patvirtinimo nuorodą.
       updated: Jūsų paskyra atnaujinta.
+    sessions:
+      new:
+        log_in: Prisijungti
     shared:
       links:
         back: Atgal
         didn_t_receive_confirmation_instructions: Negavote patvirtinimo nurodymų?
         didn_t_receive_unlock_instructions: Negavote atblokavimo nurodymų?
         forgot_your_password: Pamiršote savo slaptažodį?
+        log_in: Prisijungti
         sign_up: Užsiregistruoti
       minimum_password_length:
         one: "(bent %{count} simbolis)"
@@ -1900,11 +1906,13 @@ lt:
         decidim_logo: '„Decidim“ logotipas'
         decidim_title: Decidim
         download_open_data: Parsisiųsti atvirųjų duomenų rinkmenas
+        log_in: Prisijungti
         made_with_open_source: Interneto svetainė sukurta naudojant <a target="_blank" href="https://github.com/decidim/decidim">atvirą programinę įrangą</a>.
         resources: Ištekliai
         sign_up: Registruotis
         terms_and_conditions: Nuostatos ir sąlygos
       header:
+        log_in: Prisijungti
         main_menu: Pagrindinis meniu
         user_menu: Naudotojo meniu
       impersonation_warning:

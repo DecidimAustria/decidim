@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
   }
   s.summary = "The core of the Decidim framework."
   s.description = "Adds core features so other engines can hook into the framework."
-  s.license = "AGPL-3.0"
+  s.license = "AGPL-3.0-or-later"
   s.required_ruby_version = "~> 3.1.0"
 
   s.files = Dir.chdir(__dir__) do
@@ -30,6 +30,9 @@ Gem::Specification.new do |s|
         f.start_with?(*%w(app/ config/ db/ lib/ Rakefile README.md))
     end
   end
+
+  # Lock Temporarily as it is failing in 0.29 branch. More info: https://github.com/rails/rails/pull/54264
+  s.add_dependency "concurrent-ruby", "= 1.2.2"
 
   s.add_dependency "active_link_to", "~> 1.0"
   s.add_dependency "acts_as_list", "~> 1.0"

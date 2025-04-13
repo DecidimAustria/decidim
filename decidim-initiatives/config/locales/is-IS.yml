@@ -20,10 +20,7 @@ is:
         name: Heill heiti
   decidim:
     admin:
-      actions:
-        manage: Stjórna
       menu:
-        components: Hluti
         information: Upplýsingar
         initiatives: Frumkvæði
         initiatives_types: Frumgerð tegundir
@@ -41,6 +38,9 @@ is:
             created_at: Búið til á
             title: Frumgerð tegundir
           name: Frumgerðartegund
+        initiatives_votes:
+          fields:
+            scope: Umfang
       titles:
         initiatives: Frumkvæði
         initiatives_types: Frumgerð tegundir
@@ -153,6 +153,7 @@ is:
           recent: Síðast
         print:
           city: Borg
+          print: Prenta
         vote_cabin:
           vote: Skráðu þig
         votes_count:
@@ -169,11 +170,14 @@ is:
         expired: Útrunnið
     menu:
       initiatives: Frumkvæði
+    resources:
+      initiatives_type:
+        actions:
+          create: Búa til
   layouts:
     decidim:
       initiative_creation_header:
         fill_data: Búa til
-        finish: Klára
         select_initiative_type: Veldu
       initiatives:
         no_initiatives_yet:

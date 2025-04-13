@@ -16,7 +16,6 @@ is:
     attributes:
       decidim/user:
         current_password: Núverandi lykilorð
-        email: Tölvupóstur
         password: Lykilorð
         password_confirmation: Staðfesta lykilorð
         remember_me: Muna eftir mér
@@ -74,6 +73,9 @@ is:
         create: "%{user_name} búið til %{resource_name} truflanir síðu"
         delete: "%{user_name} eytt %{resource_name} truflanir síðunni"
         update: "%{user_name} uppfært %{resource_name} truflanir síðu"
+    amendments:
+      compare_draft:
+        continue: Halda áfram
     anonymous_user: Nafnlaus
     application:
       documents:
@@ -119,6 +121,10 @@ is:
             dummy_step_attribute1: Dummy Skref Attribute 1
             dummy_step_attribute2: Dummy Skref Attribute 2
     contact: Hafa samband
+    core:
+      application_helper:
+        filter_category_values:
+          all: Allt
     devise:
       omniauth_registrations:
         new:
@@ -225,10 +231,18 @@ is:
       home: Heim
     messaging:
       conversation_mailer:
+        comanagers_new_conversation:
+          greeting: Hæ, %{recipient}!
+        comanagers_new_message:
+          greeting: Hæ, %{recipient}!
         new_conversation:
           greeting: Hæ, %{recipient}!
           intro: "%{sender} hefur byrjað nýtt samtal við þig. Smelltu hér til að sjá það:"
           subject: "%{sender} hefur byrjað samtal við þig"
+        new_group_conversation:
+          greeting: Hæ, %{recipient}!
+        new_group_message:
+          greeting: Hæ, %{recipient}!
         new_message:
           greeting: Hæ, %{recipient}!
           intro: "%{sender} hefur sent ný skilaboð í samtali þínu. Smelltu hér til að sjá þær:"
@@ -267,7 +281,6 @@ is:
     scopes:
       global: Global umfang
       picker:
-        cancel: Hætta við
         choose: Veldu
         title: Veldu %{field}
       prompt: Veldu umfang
@@ -281,6 +294,8 @@ is:
         report: Skýrsla
         spam: Inniheldur clickbait, auglýsingar, óþekktarangi eða handritabots.
         title: Tilkynna um vandamál
+      flag_user_modal:
+        close: Loka
       login_modal:
         sign_up: Skráðu þig
       reference:
@@ -291,6 +306,8 @@ is:
         share: Deila
         share_link: Deila tengil
     user_conversations:
+      reply:
+        send: Senda
       update:
         error: Skilaboð ekki send. Reyndu aftur seinna
   devise:

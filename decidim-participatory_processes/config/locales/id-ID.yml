@@ -24,7 +24,6 @@ id:
         promoted: Dipromosikan
         published_at: Diterbitkan di
         related_process_ids: Proses terkait
-        scope_id: Cakupan
         scopes_enabled: Lingkup diaktifkan
         short_description: Deskripsi Singkat
         show_statistics: Tampilkan statistik
@@ -44,6 +43,8 @@ id:
         end_date: Tanggal akhir
         short_description: Deskripsi Singkat
         start_date: Mulai tanggal
+        title: Judul
+      participatory_process_type:
         title: Judul
       participatory_process_user_role:
         email: E-mail
@@ -106,6 +107,10 @@ id:
             start_date: Mulai tanggal
             title: Judul
           name: Langkah proses partisipatif
+        participatory_process_type:
+          fields:
+            created_at: Dibuat di
+            title: Judul
         participatory_process_user_role:
           fields:
             email: E-mail
@@ -168,6 +173,11 @@ id:
         update:
           error: Ada kesalahan saat memperbarui langkah proses partisipatif ini.
           success: Langkah proses partisipatif berhasil diperbarui.
+      participatory_process_types:
+        edit:
+          update: Memperbarui
+        new:
+          create: Membuat
       participatory_process_user_roles:
         create:
           error: Terjadi kesalahan saat menambahkan pengguna untuk proses partisipatif ini.
@@ -288,8 +298,6 @@ id:
           name: Proses yang disorot
       index:
         title: Proses partisipatif
-      last_activity:
-        new_participatory_process: Proses partisipatif baru
       participatory_processes:
         filters:
           counters:

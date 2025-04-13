@@ -141,9 +141,7 @@ ro:
             comments_enabled: Comentariile au fost activate
             comments_max_length: Număr maxim de caractere a comentariilor (păstrează 0 pentru valoarea implicită)
             default_sort_order: Mod implicit de sortare a propunerilor
-            default_sort_order_help: Implicit înseamnă că dacă este activată votarea, propunerile vor fi afișate aleatoriu, și dacă votarea este blocată, atunci vor fi sortate în funcție de cele mai multe voturi.
             default_sort_order_options:
-              default: Implicit
               most_commented: Cele mai comentate
               most_endorsed: Cele mai susținute
               most_followed: Cele mai urmărite
@@ -194,9 +192,7 @@ ro:
             comments_blocked: Comentarii blocate
             creation_enabled: Participantul poate crea propuneri
             default_sort_order: Mod implicit de sortare a propunerilor
-            default_sort_order_help: Implicit înseamnă că dacă este activată votarea, propunerile vor fi afișate aleatoriu, și dacă votarea este blocată, atunci vor fi sortate în funcție de cele mai multe voturi.
             default_sort_order_options:
-              default: Implicit
               most_commented: Cele mai comentate
               most_endorsed: Cele mai susținute
               most_followed: Cele mai urmărite
@@ -286,12 +282,10 @@ ro:
             notification_title: Propunerea <a href="%{resource_path}">%{resource_title}</a> a fost respinsă.
         proposal_update_category:
           email_intro: 'Un administrator a actualizat categoria propunerii tale „%{resource_title}", verifică modificarea în această pagină:'
-          email_outro: Ai primit această notificare deoarece ești autorul acestei propuneri.
           email_subject: Categoria propunerii %{resource_title} a fost actualizată
           notification_title: Categoria propunerii <a href="%{resource_path}">%{resource_title}</a> a fost actualizată de către un administrator.
         proposal_update_scope:
           email_intro: 'Un administrator a actualizat domeniul de interes al propunerii tale „%{resource_title}”, verifică modificarea în această pagină:'
-          email_outro: Ai primit această notificare deoarece ești autorul acestei propuneri.
           email_subject: Domeniul de interes al propunerii %{resource_title} a fost actualizat
           notification_title: Domeniul de interes al propunerii <a href="%{resource_path}">%{resource_title}</a> a fost actualizat de către un administrator.
         voting_enabled:
@@ -363,14 +357,14 @@ ro:
         title: Acțiuni
       admin:
         actions:
-          preview: Previzualizează
+          preview: Previzualizați
         exports:
           proposal_comments: Comentarii
           proposals: Propuneri
         imports:
           label:
-            answers: Importă răspunsuri dintr-un fişier
-            proposals: Importă propuneri dintr-un fişier
+            answers: Importați răspunsuri dintr-un fișier
+            proposals: Importați propuneri dintr-un fișier
           resources:
             answers:
               one: răspuns la propunere
@@ -398,7 +392,7 @@ ro:
             info_1: Următoarele secțiuni au fost convertite în propuneri. Acum le poți revizui și ajusta înainte de a le publica.
             publish_document: Publică documentul
             save_draft: Salvează ciorna
-            title: Pevizualizează textul participativ
+            title: Previzualizați textul participativ
           new_import:
             accepted_mime_types:
               md: Markdown
@@ -439,7 +433,7 @@ ro:
           index:
             actions: Acțiuni
             assign_to_valuator: Atribuie evaluatorului
-            assign_to_valuator_button: Atribuie
+            assign_to_valuator_button: Delegați
             cancel: Anulează
             change_category: Schimbă categoria
             change_scope: Schimbă domeniul
@@ -453,7 +447,7 @@ ro:
             split_button: Împarte
             title: Propuneri
             unassign_from_valuator: Atribuire către evaluator anulată
-            unassign_from_valuator_button: Neatribuit
+            unassign_from_valuator_button: Anulare delegare
             update: Actualizează
             update_scope_button: Actualizează domeniu
           new:
@@ -466,7 +460,7 @@ ro:
             comments_count: Număr de comentarii
             documents: Documente
             endorsements_count: Număr de susțineri
-            endorsers: Susţinători
+            endorsers: Susținători
             n_more_endorsers:
               one: și încă 1
               few: și încă %{count}
@@ -672,8 +666,7 @@ ro:
         edit_draft:
           discard: Renunță la această ciornă
           discard_confirmation: Sigur dorești să renunți la această ciornă de propunere?
-          send: Previzualizează
-          title: Editează ciorna de propunere
+          send: Previzualizați
         filters:
           activity: Activitatea mea
           all: Toate
@@ -700,6 +693,7 @@ ro:
           text_banner: Vizualizezi lista de propuneri retrase de autorii lor. %{go_back_link}.
         new:
           send: Continuă
+          title: Creați o nouă propunere
         orders:
           label: 'Ordonează propunerile după:'
           most_commented: Cele mai comentate

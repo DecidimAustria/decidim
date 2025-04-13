@@ -188,6 +188,7 @@ ja:
         export: 全てエクスポート
         export-selection: 選択したものをエクスポート
         import: インポート
+        manage: 管理
         newsletter:
           new: 新しいニュースレター
         participatory_space_private_user:
@@ -207,7 +208,7 @@ ja:
         actions:
           accept: 利用規約に同意する
           are_you_sure: 管理者向け利用規約を本当に拒否しますか？
-          refuse: 管理者規約を拒否する
+          refuse: 管理者規約に同意しない
           title: 利用規約に同意する
         required_review:
           alert: '必須：管理者の利用規約を確認してください'
@@ -350,12 +351,14 @@ ja:
       conflicts:
         attempts: 試行回数
         'false': 'いいえ'
+        index:
+          text: 現在のユーザーのメールアドレス、名前、ニックネームで検索します。
         managed_user_name: 管理対象ユーザー
         solved: 解決済み
         title: 確認の競合
         transfer:
           email: Eメールアドレス
-          error: 参加者から管理対象参加者への移行中に問題が発生しました。
+          error: 現在の参加者を管理対象の参加者に移行する際に問題が発生しました。
           name: 名前
           reason: 理由
           success: 現在の移転が正常に完了しました。
@@ -424,7 +427,7 @@ ja:
           reportable_type_string_eq:
             label: タイプ
         officialized_at_null:
-          label: 都道府県：
+          label: 状態
           values:
             'false': 公式化済み
             'true': 公式化されていない
@@ -460,7 +463,7 @@ ja:
           user_name_or_user_email_cont: '%{collection} を名前またはメールアドレスで検索します。'
           user_name_or_user_nickname_or_user_email_cont: '%{collection} をメール、表示名、アカウントIDで検索します。'
         state_eq:
-          label: 都道府県：
+          label: 状態
           values:
             all: すべて
             pending: 保留中
@@ -566,6 +569,7 @@ ja:
         appearance: 外観
         area_types: エリア種別
         areas: エリア
+        components: コンポーネント
         configuration: 設定
         content: 報告されたコンテンツ
         external_domain_whitelist: 許可された外部ドメイン
@@ -663,9 +667,9 @@ ja:
             created_at: 作成日時
             document_number: ドキュメント番号
             name: 名前
-            nickname: ニックネーム
+            nickname: アカウントID
             phone: 電話番号
-            state: 都道府県：
+            state: 状態
             users_count: 参加者数
       moderated_users:
         index:
@@ -699,7 +703,7 @@ ja:
         reports:
           index:
             author: 投稿者
-            callout_html: コンテンツは、そのアイテムの横にある %{icon} フラグをクリックすることによって、ユーザー（登録済みアカウントを持っている人であれば誰でも）によって通知されたときに、モデレーションパネルに表示されます。
+            callout_html: コンテンツは、その項目の横にある %{icon} フラグをクリックすることによって、ユーザー（登録済みアカウントを持っている人であれば誰でも）によって通知されたときに、モデレーションパネルに表示されます。
             content_original_language: コンテンツのオリジナル言語
             participatory_space: 参加型スペース
             reported_content: 報告されたコンテンツ
@@ -1092,7 +1096,7 @@ ja:
       actions:
         expand: 展開
         hidden: 非表示
-        hide: 非表示
+        hide: 非表示にする
         not_hidden: 表示
         title: アクション
         unhide: 非表示解除

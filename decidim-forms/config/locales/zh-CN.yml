@@ -4,8 +4,6 @@ zh-CN:
     attributes:
       answer:
         body: 答案
-        choices: 选择
-        selected_choices: 选定的选择
       question:
         max_choices: 选择的最大数量
         question_type: 类型
@@ -16,7 +14,6 @@ zh-CN:
         answer:
           attributes:
             choices:
-              missing: 不完成
               too_many: 太多了
   decidim:
     forms:
@@ -31,22 +28,14 @@ zh-CN:
             show: 显示回复
           answer_option:
             answer_option: 答案选项
-            free_text: 免费文本
             remove: 删除
             statement: 声明
           answers:
             actions:
-              back: 回到回应
-              export: 导出
               show: 显示答案
             empty: 尚无答案
-            export:
-              answer:
-                title: '回复 #%{number}'
             export_response:
               title: survey_user_answers_%{token}
-            index:
-              title: "%{total} 个回复总数"
             show:
               title: '答案 #%{number}'
           display_condition:
@@ -72,12 +61,9 @@ zh-CN:
             title: 编辑问题单
           form:
             add_question: 添加问题
-            add_separator: 添加分隔符
-            already_answered_warning: 某些用户已经回答了表单，因此您不能修改其问题。
             collapse: 收起所有问题
             expand: 展开所有问题
             preview: 预览
-            unpublished_warning: 表单未发布。您可以修改它的问题，但这样做将删除当前答案。
           matrix_row:
             matrix_row: 行
             remove: 删除
@@ -117,7 +103,6 @@ zh-CN:
       questionnaires:
         answer:
           invalid: 回答表单时出现问题。
-          max_choices_alert: 选择了太多选项
           success: 表单回答成功。
         question:
           max_choices: '最大选择数: %{n}'
@@ -143,18 +128,11 @@ zh-CN:
           tos_agreement: 通过参与您接受其服务条款
       step_navigation:
         show:
-          are_you_sure: 此操作不能撤消，您将无法编辑您的答案。您确定吗？
           back: 后退
           continue: 继续
           submit: 提交
       user_answers_serializer:
         body: 答案
-        completion: 完成
         created_at: 回答于
         id: 答案 ID
-        ip_hash: IP哈希
         question: 问
-        registered: 已注册
-        session_token: 用户标识符
-        unregistered: 未注册
-        user_status: 用户状态

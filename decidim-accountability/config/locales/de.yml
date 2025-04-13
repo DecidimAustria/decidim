@@ -13,6 +13,7 @@ de:
         project_ids: Enthaltene Projekte
         proposals: Enthaltene Vorschläge
         start_date: Startdatum
+        subresults: Teilergebnisse
         title: Titel
         updated_at: Aktualisiert am
       status:
@@ -200,7 +201,7 @@ de:
             end_date: Enddatum
             id: ID
             progress: Fortschritt
-            scope: Themenbereich
+            scope: Umfang
             start_date: Startdatum
             status: Status
             title: Titel
@@ -252,7 +253,7 @@ de:
           category_id_eq:
             label: Kategorie
           scope_id_eq:
-            label: Themenbereich
+            label: Umfang
           status_id_eq:
             label: Status
     components:
@@ -269,7 +270,7 @@ de:
             heading_leaf_level_results: Name für "Projekte"
             heading_parent_level_results: Name für "Ergebnisse"
             intro: Einführung
-            scope_id: Bereich
+            scope_id: Umfang
             scopes_enabled: Bereiche aktiviert
             subcategories_label: Name für "Unterkategorien"
           step:

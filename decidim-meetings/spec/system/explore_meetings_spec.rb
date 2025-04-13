@@ -141,7 +141,7 @@ describe "Explore meetings", :slow do
         visit_component
 
         within("#meetings__meeting_#{meeting.id}") do
-          expect(page).to have_css("span", text: 2)
+          expect(page).to have_css("[data-comments-count]", text: 2)
         end
       end
     end
@@ -569,6 +569,23 @@ describe "Explore meetings", :slow do
         within "[data-content]" do
           expect(page).to have_css(".meeting__aside-block", text: "Attendees count\n#{meeting.attendees_count}")
           expect(page).to have_css(".meeting__aside-block", text: "Attending organizations\n#{meeting.attending_organizations}")
+        end
+      end
+    end
+
+    context "when the meeting is closed and has audio and video urls" do
+      let(:video_url) { "https://decidim.org" }
+      let(:audio_url) { "https://example.com" }
+
+      let!(:meeting) { create(:meeting, :published, :closed, contributions_count: 0, component:, video_url:, audio_url:) }
+
+      it_behaves_like "a closing report page" do
+        it "shows the video url" do
+          expect(page).to have_content(video_url)
+        end
+
+        it "shows the audio url" do
+          expect(page).to have_content(audio_url)
         end
       end
     end

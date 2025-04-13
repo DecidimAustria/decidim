@@ -53,6 +53,9 @@ lb:
             name: Resultat
           status:
             name: Status
+        projects_import:
+          new:
+            create: Import
         results:
           edit:
             title: Ergebnis bearbeiten
@@ -108,7 +111,7 @@ lb:
             end_date: Enddatum
             id: ID
             progress: Fortschritt
-            scope: Themenbereich
+            scope: Umfang
             start_date: Startdatum
             status: Status
             title: Titel
@@ -128,9 +131,6 @@ lb:
             other: "%{count} Ergebnisse"
         filters:
           all: Alle
-        home:
-          categories_label: Kategorien
-          subcategories_label: Unterkategorien
         home_header:
           global_status: Globaler Umsetzungsstatus
         nav_breadcrumb:
@@ -156,7 +156,7 @@ lb:
           category_id_eq:
             label: Kategorie
           scope_id_eq:
-            label: Themenberäich
+            label: Umfang
           status_id_eq:
             label: Status
     components:
@@ -173,7 +173,7 @@ lb:
             heading_leaf_level_results: Name für "Projekte"
             heading_parent_level_results: Name für "Resultate"
             intro: Einführung
-            scope_id: Bereich
+            scope_id: Umfang
             scopes_enabled: Bereiche aktiviert
             subcategories_label: Name für "Unterkategorien"
           step:

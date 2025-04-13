@@ -16,12 +16,93 @@ gem "decidim-dev", "0.28.0.rc1"
 ### 1.2. Run commands
 
 ```console
+sudo apt install p7zip # or the alternative installation process for your operating system. See "2.1. 7zip dependency introduction"
+sudo apt install wkhtmltopdf # or the alternative installation process for your operating system. See "2.5. wkhtmltopdf binary change"
+bundle remove spring spring-watcher-listen
 bundle update decidim
 bin/rails decidim:upgrade
 bin/rails db:migrate
+bin/rails decidim:upgrade:clean:invalid_records
+bin/rails decidim_proposals:upgrade:set_categories
+bin/rails decidim:upgrade:fix_nickname_casing
 ```
 
 ## 2. General notes
+
+### 2.1. 7zip dependency introduction
+
+We had to migrate from an unmaintained dependency and do a wrapper for the 7zip command line. This means that you need to install 7zip in your system. You can do it by running:
+
+```bash
+sudo apt install p7zip
+```
+
+This works for Ubuntu Linux, other operating systems would need to do other command/package.
+
+You can read more about this change on PR [#13185](https://github.com/decidim/decidim/pull/13185).
+
+### 2.2. Cleanup invalid resources
+
+While upgrading various instances to latest Decidim version, we have noticed there are some records that may not be present anymore. As a result, the application would generate a lot of errors, in both frontend and Backend.
+
+In order to fix these errors, we have introduced a new rake task, aiming to fix the errors by removing invalid data.
+
+In your console you can run:
+
+```bash
+bin/rails decidim:upgrade:clean:invalid_records
+```
+
+If you have a big installation having multiple records, many users etc, you can split the clean up task as follows:
+
+```bash
+bin/rails decidim:upgrade:clean:searchable_resources
+bin/rails decidim:upgrade:clean:notifications
+bin/rails decidim:upgrade:clean:follows
+bin/rails decidim:upgrade:clean:action_logs
+```
+
+You can read more about this change on PR [#13237](https://github.com/decidim/decidim/pull/13237).
+
+### 2.3 Allow Cell's cache to expire
+
+Now the cache expiration time is configurable via initializers/ENV variables.
+
+Decidim uses cache in some HTML views (usually under the `cells/` folder). In the past the cache had no expiration time, now it is configurable using the ENV var `DECIDIM_CACHE_EXPIRATION_TIME` (this var expects an integer specifying the number of minutes for which the cache is valid).
+
+Also note, that now it comes with a default value of 24 hours (1440 minutes).
+
+### 2.4. Amendments category fix
+
+We have identified a bug in the filtering system, as the amendments created did not share the category with the proposal it amended. This fix aims to fix historic data. To fix it, you need to run:
+
+```shell
+bin/rails decidim_proposals:upgrade:set_categories
+```
+
+You can read more about this change on PR [#13395](https://github.com/decidim/decidim/pull/13395).
+
+### 2.5. wkhtmltopdf binary change
+
+For improving the support with latest versions of Ubuntu, and keeping a low size in Heroku/Docker images, we removed the `wkhtmltopdf-binary` gem dependency. This means that your package manager should have the `wkhtmltopdf` binary installed.
+
+In the case of Ubuntu/Debian, this is done with the following command:
+
+```bash
+sudo apt install wkhtmltopdf
+```
+
+You can read more about this change on PR [#13616](https://github.com/decidim/decidim/pull/13616).
+
+### 2.6. Clean deleted user records `decidim:upgrade:clean:clean_deleted_users` task
+
+When a user deleted their account, we mistakenly retained some metadata, such as the personal_url and about fields. Going forward, these fields will be automatically cleared upon deletion. To fix this issue for previously deleted accounts, we've added a new rake task that should be run on your production database.
+
+```ruby
+bin/rails decidim:upgrade:clean:clean_deleted_users
+```
+
+You can read more about this change on PR [#13624](https://github.com/decidim/decidim/pull/13624).
 
 ## 3. One time actions
 
@@ -93,6 +174,62 @@ Additionally, if you need, you can also customize the `admin` and `system` inter
 - `app/packs/stylesheets/decidim/system/decidim_application.scss` for system interface
 
 You can read more about this change on PR [\#12646](https://github.com/decidim/decidim/pull/12646).
+
+### 3.4. Remove spring and spring-watcher-listen from your Gemfile
+
+To simplify the upgrade process, we have decided to add `spring` and `spring-watcher-listener` as hard dependencies of `decidim-dev`.
+
+Before upgrading to this version, make sure you run in your console:
+
+```bash
+bundle remove spring spring-watcher-listen
+```
+
+You can read more about this change on PR [#13235](https://github.com/decidim/decidim/pull/13235).
+
+### 3.5. Clean up orphaned attachment blobs
+
+We have added a new task that helps you clean the orphaned attachment blobs. This task will remove all the attachment blobs that have been created for more than 1 hour and are not yet referenced by any attachment record. This helps cleaning your filesystem of unused files.
+
+You can run the task with the following command:
+
+```bash
+bin/rails decidim:upgrade:attachments_cleanup
+```
+
+You can see more details about this change on PR [\#11851](https://github.com/decidim/decidim/pull/11851)
+
+### 3.6. Changes in Static maps configuration when using HERE.com
+
+As of [#14180](https://github.com/decidim/decidim/pull/14180) we are migrating to here.com api V3, as V1 does not work anymore. In case your application uses Here.com as static map tile provider, you will need to change your `config/initializers/decidim.rb` to use the new url `https://image.maps.hereapi.com/mia/v3/base/mc/overlay`:
+
+```ruby
+  static_url = "https://image.maps.ls.hereapi.com/mia/1.6/mapview" if static_provider == "here" && static_url.blank?
+```
+
+to
+
+```ruby
+  static_url = "https://image.maps.hereapi.com/mia/v3/base/mc/overlay" if static_provider == "here" && static_url.blank?
+```
+
+You can read more about this change on PR [#14180](https://github.com/decidim/decidim/pull/14180).
+
+### 3.7. Convert nicknames to lowercase
+
+As of [#14272](https://github.com/decidim/decidim/pull/14272) we are migrating all the nicknames to lowercase fix performance issues which affects large databases having many participants.
+
+To apply the fix on your application, you need to run the below command.
+
+```bash
+bin/rails decidim:upgrade:fix_nickname_casing
+```
+
+You can read more about this change on PR [#14272](https://github.com/decidim/decidim/pull/14272).
+
+### 3.8. [[TITLE OF THE ACTION]]
+
+You can read more about this change on PR [#XXXX](https://github.com/decidim/decidim/pull/XXXX).
 
 ## 4. Scheduled tasks
 

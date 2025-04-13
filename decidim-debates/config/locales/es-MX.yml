@@ -52,7 +52,7 @@ es-MX:
         confirm_destroy: '¿Seguro que quieres borrar el debate?'
         destroy: Borrar
         edit: Editar
-        new: Añadir debate
+        new: Nuevo debate
         title: Acciones
       admin:
         debate_closes:
@@ -134,7 +134,7 @@ es-MX:
         new:
           back: Volver
           create: Crear
-          title: Nuevo debate
+          title: Crear un debate
         orders:
           commented: Más comentados
           label: Ordenar debates por

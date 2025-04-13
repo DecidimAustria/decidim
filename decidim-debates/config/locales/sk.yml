@@ -87,7 +87,8 @@ sk:
         new:
           back: Späť
           create: Vytvoriť
-          title: Nová debata
+        show:
+          edit_debate: Upraviť debatu
       models:
         debate:
           fields:

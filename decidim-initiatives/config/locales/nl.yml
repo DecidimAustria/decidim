@@ -60,7 +60,6 @@ nl:
   decidim:
     admin:
       actions:
-        manage: Beheer
         new_initiative_type: Nieuw initiatiefstype
       filters:
         search_placeholder:
@@ -68,7 +67,6 @@ nl:
       menu:
         attachments: Bijlagen
         committee_members: Commissieleden
-        components: Onderdelen
         information: Informatie
         initiatives: Initiatieven
         initiatives_types: Initiatieftypes
@@ -104,6 +102,7 @@ nl:
             initiative_title: Titel van het initiatief
             name_and_surname: Naam en achternaam
             postal_code: Postcode
+            scope: Bereik
             time_and_date: Tijd en datum
             timestamp: tijdstempel
       titles:
@@ -361,6 +360,7 @@ nl:
           recently_published: Meest recent gepubliceerd
         print:
           city: stad
+          print: Afdrukken
         result:
           initiative_rejected_reason: Dit initiatief is afgewezen vanwege het gebrek aan handtekeningen.
         signatures_count:
@@ -412,6 +412,7 @@ nl:
           comment: Reactie
       initiatives_type:
         actions:
+          create: creëren
           title: acties
           vote: Onderteken
   layouts:

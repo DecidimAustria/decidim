@@ -49,6 +49,9 @@ lv:
             name: Rezultāts
           status:
             name: Statuss
+        projects_import:
+          new:
+            create: Importēt
         results:
           edit:
             title: Labot rezultātu
@@ -96,7 +99,9 @@ lv:
       models:
         result:
           fields:
+            category: Kategorija
             end_date: Beigu datums
+            scope: Darbības tvērums
             start_date: Sākuma datums
             status: Statuss
             title: Nosaukums
@@ -116,9 +121,6 @@ lv:
             other: "%{count} rezultāti"
         filters:
           all: Visi
-        home:
-          categories_label: Kategorijas
-          subcategories_label: Apakškategorijas
         home_header:
           global_status: Globālais izpildes statuss
         nav_breadcrumb:
@@ -137,6 +139,13 @@ lv:
             votes: Atbalsta
         timeline:
           title: Projekta attīstība
+    admin:
+      filters:
+        results:
+          category_id_eq:
+            label: Kategorija
+          scope_id_eq:
+            label: Darbības tvērums
     components:
       accountability:
         name: Atbildība
@@ -148,6 +157,7 @@ lv:
             heading_leaf_level_results: Projektu nosaukums
             heading_parent_level_results: Rezultātu nosaukums
             intro: Ievads
+            scope_id: Darbības tvērums
             subcategories_label: Apakškategoriju nosaukums
           step:
             comments_blocked: Komentāri ir bloķēti

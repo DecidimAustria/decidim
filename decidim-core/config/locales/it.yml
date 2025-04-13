@@ -40,6 +40,7 @@ it:
       decidim/promote_to_admin: Promosso ad amministratore del gruppo
       decidim/removed_from_group: Rimosso dal gruppo
       decidim/resource_endorsed_event: Risorsa approvata
+      decidim/user_group_created_event: Gruppo utenti creato
   activerecord:
     attributes:
       decidim/user:
@@ -65,6 +66,9 @@ it:
   booleans:
     'false': 'No'
     'true': 'Si'
+  carrierwave:
+    errors:
+      file_size_too_large: La dimensione del file è troppo grande
   date:
     formats:
       decidim_short: "%d/%m/%Y"
@@ -216,6 +220,8 @@ it:
       update_draft:
         error: C'è stato un problema nell'eliminazione della bozza di emendamento.
         success: Bozza emendamento aggiornata correttamente.
+      withdraw:
+        error: Si è verificato un errore durante il ritiro dell'emendamento.
       wizard_step_form:
         steps:
           '1': Crea il tuo emendamento
@@ -378,6 +384,12 @@ it:
         name: Statistiche dell'organizzazione
       sub_hero:
         name: Testo in evidenza home
+    core:
+      actions:
+        login_before_access: Per favore, fai login con il tuo account prima di accedere.
+      application_helper:
+        filter_category_values:
+          all: Tutto
     devise:
       omniauth_registrations:
         new:
@@ -389,6 +401,7 @@ it:
       registrations:
         new:
           already_have_an_account?: Hai già un account?
+          log_in: Accedi
           newsletter: Ricevi una newsletter occasionale con informazioni pertinenti
           newsletter_title: Autorizzazione di contatto
           sign_up: Registrati
@@ -400,6 +413,7 @@ it:
         new:
           are_you_new?: Sei nuovo nella piattaforma?
           register: Crea un account
+          sign_up_disabled: La registrazione è disabilitata, puoi accedere a un utente esistente.
       shared:
         newsletter_modal:
           buttons:
@@ -407,7 +421,7 @@ it:
             uncheck: Mantieni deselezionato
           title: Iscrizioni alla newsletter
         omniauth_buttons:
-          or: O
+          or: oppure
     doorkeeper:
       authorizations:
         new:
@@ -427,13 +441,19 @@ it:
         ready: Pronto
       show:
         download_data: Scarica i dati
+        download_data_description_html: |-
+          Un file contenente tutte le informazioni associate al tuo account verrà inviato a <strong>%{user_email}</strong>. Questa email conterrà un file .zip e una password per aprirlo.<br/><br/>Per decomprimere il file, avrai bisogno di <a href="https://www.7-zip.org/">7-Zip</a> (per Windows) o <a href="https://www.keka.io/">Keka</a> (per MacOS). Se si utilizza Linux, la maggior parte delle volte il software predefinito è sufficiente. In caso contrario, è possibile utilizzare <a href="https://gitlab.gnome.org/GNOME/file-roller">File Roller</a> o <a href="https://peazip.github.io">PeaZip</a>).
         request_data: Richiedi dati
     editor_images:
       drag_and_drop_help: Aggiungi immagini trascinandole o incollandole.
+    endorsement_buttons_cell:
+      already_endorsed: Non mi piace
     endorsements:
       identities:
         done: Fatto
         select_identity: Seleziona identità
+    endorsers_list:
+      endorsed_by: Piace a…
     errors:
       internal_server_error:
         title: C'era un problema con il nostro server
@@ -510,7 +530,7 @@ it:
           email_outro: Hai ricevuto questa notifica perché hai fatto attività sul nostro sito web.
       groups:
         demoted_membership:
-          email_intro: Un amministratore del gruppo <a href="%{resource_url}">%{user_group_name}</a> ha rimosso i diritti di amministratore per quel gruppo.
+          email_intro: Un amministratore del gruppo <a href="%{resource_url}">%{user_group_name}</a> ha rimosso i tuoi diritti di amministratore per quel gruppo.
           email_outro: Hai ricevuto questa notifica perché sei un membro di quel gruppo.
           email_subject: Non sei più un amministratore del gruppo %{user_group_name}!
           notification_title: Non sei più un amministratore del gruppo <a href="%{resource_path}">%{user_group_name}</a>.
@@ -521,7 +541,7 @@ it:
           notification_title: Sei stato invitato a far parte del gruppo <a href="%{resource_path}">%{user_group_name}</a> . Controlla la pagina <a href="%{groups_profile_tab_path}">Gruppi</a> nel tuo profilo per approvarla!
         join_request_accepted:
           email_intro: Congratulazioni! Un amministratore del gruppo <a href="%{resource_url}">%{user_group_name}</a> ha accettato la tua richiesta di adesione.
-          email_outro: Hai ricevuto questa notifica perché la tua richiesta di partecipazione è stata aggiornata.
+          email_outro: Hai ricevuto questa notifica perché la tua richiesta di adesione è stata aggiornata.
           email_subject: Sei stato accettato nel gruppo %{user_group_name}!
           notification_title: Sei stato accettato nel gruppo <a href="%{resource_path}">%{user_group_name}</a>.
         join_request_created:
@@ -535,7 +555,7 @@ it:
           email_subject: La tua richiesta di aderire al gruppo %{user_group_name} è stata respinta!
           notification_title: La tua richiesta di aderire al gruppo <a href="%{resource_path}">%{user_group_name}</a> è stata respinta.
         promoted_to_admin:
-          email_intro: Un amministratore del gruppo <a href="%{resource_url}">%{user_group_name}</a> ti ha concesso i diritti di amministratore per quel gruppo.
+          email_intro: Un amministratore del gruppo <a href="%{resource_url}">%{user_group_name}</a> ti ha concesso i diritti di amministratore quel gruppo.
           email_outro: Hai ricevuto questa notifica perché sei un membro di quel gruppo.
           email_subject: Ora sei un amministratore del gruppo %{user_group_name}!
           notification_title: Ora sei un amministratore del gruppo <a href="%{resource_path}">%{user_group_name}</a>.
@@ -548,12 +568,14 @@ it:
           email_intro: Un nuovo gruppo di utenti è stato creato con il nome %{user_group_name}. Ora puoi verificarlo nel <a href="%{groups_admin_url}">pannello di amministrazione</a>.
           email_outro: Hai ricevuto questa notifica perché sei un amministratore della piattaforma.
           email_subject: È stato creato un nuovo gruppo di utenti
-          notification_title: Il gruppo utente %{user_group_name} è stato creato. Ora puoi verificarlo nel <a href="%{groups_admin_path}">pannello di amministratore</a>.
+          notification_title: Il gruppo di utenti %{user_group_name} è stato creato. Ora puoi verificarlo nel <a href="%{groups_admin_path}">pannello di amministratore</a>.
         user_group_updated:
           email_intro: Un gruppo di utenti con il nome %{user_group_name} ha aggiornato il suo profilo, lasciandolo non verificato. Ora puoi verificarlo nel <a href="%{groups_admin_url}">pannello di amministrazione</a>.
           email_outro: Hai ricevuto questa notifica perché sei un amministratore della piattaforma.
           email_subject: Un gruppo di utenti ha aggiornato il suo profilo
           notification_title: Il gruppo utenti %{user_group_name} ha aggiornato il suo profilo, lasciandolo non verificato. Ora puoi verificarlo nel <a href="%{groups_admin_path}">pannello di amministratore</a>.
+      nickname_event:
+        notification_body: Abbiamo corretto il modo in cui vengono usati i soprannomi in modo che non ci siano duplicati, ed è per questo che abbiamo rimosso la regola del caso sensibile. <br/> Il tuo nickname è stato creato dopo un altro con lo stesso nome, quindi lo abbiamo rinominato automaticamente. Puoi cambiarlo da <a href="%{link_to_account_settings}">le impostazioni del tuo account</a>.
       notification_event:
         notification_title: Si è verificato un evento di <a href="%{resource_path}">%{resource_title}</a>.
       reports:
@@ -575,6 +597,8 @@ it:
           email_outro: Hai ricevuto questa notifica perché stai seguendo %{nickname}. È possibile interrompere la ricezione di notifiche seguendo il collegamento precedente.
           email_subject: "%{nickname} ha aggiornato il proprio profilo"
           notification_title: La pagina <a href="%{resource_path}">profilo</a> di %{name} (%{nickname}), che stai seguendo, è stata aggiornata.
+        user_officialized:
+          email_subject: ""
     export_mailer:
       download_your_data_export:
         click_button: 'Clicca sul link per scaricare i tuoi dati.<br/>Il file sarà disponibile fino a %{date}.<br/>Avrai bisogno di <a href="https://www.7-zip.org/">7-Zip</a> (per Windows), <a href="https://www.keka.io/en/">Keka</a> (per MacOS) o <a href="https://peazip.github.io">PeaZip</a> (per Linux) per aprirlo. Password: %{password}'
@@ -653,12 +677,12 @@ it:
         current_admins: 'Amministratori attuali:'
         manage_admins: Gestisci amministratori
     group_invites:
-      accept_invitation: Accettare
+      accept_invitation: Accettato
       accept_or_reject_group_invitations: 'I seguenti gruppi ti hanno invitato a unirti a loro. Accetta o rifiuta le loro richieste:'
       index:
         invite: Invitare
         invite_user: Invita un utente
-      reject_invitation: Rifiutare
+      reject_invitation: Rifiutato
     group_members:
       actions:
         are_you_sure: Sei sicuro?
@@ -684,8 +708,8 @@ it:
         success: Gruppo lasciato con successo.
       members:
         accept_or_reject_join_requests: 'I seguenti utenti hanno chiesto di unirsi a questo gruppo. Accetta o rifiuta le loro richieste:'
-        accept_request: Accettare
-        reject_request: Rifiutare
+        accept_request: Accettato
+        reject_request: Rifiutato
       new:
         create_user_group: Crea un gruppo
         new_user_group: Nuovo gruppo
@@ -787,6 +811,8 @@ it:
           new_conversation: Nuova conversazione
           next: Successivo
           title: Conversazioni
+        reply_form:
+          placeholder: La tua risposta...
         show:
           back: Torna a tutte le conversazioni
           chat_with: Conversazione con
@@ -913,6 +939,8 @@ it:
         conversations: Conversazioni
         followers: Followers
         following: Seguiti
+        group_admins: Gestisci amministratori
+        group_members: Gestisci i membri
         groups: gruppi
         members: Utenti
         officialized: Partecipante ufficiale
@@ -920,8 +948,18 @@ it:
       sidebar:
         badges:
           info: I badge vengono guadagnati eseguendo attività specifiche sulla piattaforma.
-          title: badge
+          title: Badge
       user:
+        actions:
+          create_user_group: Crea un gruppo
+          edit_profile: Modifica Profilo
+          edit_user_group: Modifica il profilo del gruppo
+          invite_user: Invita utente
+          join_user_group: Richiesta di iscrizione al gruppo
+          leave_user_group: Lascia il gruppo
+          manage_user_group_admins: Gestisci amministratori
+          manage_user_group_users: Gestisci i membri
+          resend_email_confirmation_instructions: Rispedire le istruzioni per la conferma dell'email
         create_user_group: Crea un gruppo
         edit_profile: Modifica Profilo
         edit_user_group: Modifica il profilo del gruppo
@@ -1025,7 +1063,9 @@ it:
         sign_up: Registrazione
       participatory_space_filters:
         filters:
+          area: Area
           areas: Ambiti territoriali
+          scope: Ambito
           select_an_area: Seleziona un'area
       public_participation:
         public_participation: Mostra pubblicamente la mia presenza
@@ -1060,6 +1100,9 @@ it:
       help_text: "<strong>Attenzione:</strong> Il contenuto potrebbe essere tradotto automaticamente e non essere accurato al 100%."
       show_original: Mostra testo originale
       show_translated: Mostra testo tradotto automaticamente
+    user_activity:
+      index:
+        no_activities_warning: Questo utente non ha ancora avuto alcuna attività.
     user_contact_disabled: Questo partecipante non accetta messaggi diretti.
     user_conversations:
       create:
@@ -1125,6 +1168,7 @@ it:
       last_attempt: Hai ancora un tentativo prima che il tuo account sia bloccato.
       locked: Il tuo account è bloccato.
       not_found_in_database: '%{authentication_keys} o password non validi.'
+      unauthenticated: Devi accedere o registrarti, per continuare.
     invitations:
       edit:
         header: Completa la creazione del tuo account
@@ -1190,18 +1234,22 @@ it:
     registrations:
       destroyed: Ciao! Il tuo account è stato cancellato con successo. Speriamo di rivederti presto.
       new:
-        sign_up: Iscriviti
+        sign_up: Registrati
       signed_up: Benvenuto! Ti sei registrato con successo.
       signed_up_but_inactive: Ti sei registrato con successo. Tuttavia, non siamo riusciti ad accedere perché il tuo account non è ancora attivo.
       signed_up_but_locked: Ti sei registrato con successo. Tuttavia, non siamo riusciti ad accedere perché il tuo account è bloccato.
       signed_up_but_unconfirmed: Un messaggio con un link di conferma è stato inviato al tuo indirizzo email. Segui il link per attivare il tuo account.
       update_needs_confirmation: Hai aggiornato correttamente il tuo account, ma dobbiamo verificare il tuo nuovo indirizzo email. Controlla la tua email e segui il link di conferma per confermare il tuo nuovo indirizzo email.
       updated: Il tuo account è stato aggiornato correttamente.
+    sessions:
+      new:
+        log_in: Accedi
     shared:
       links:
         back: Indietro
         forgot_your_password: Hai dimenticato la password?
-        sign_up: Iscriviti
+        log_in: Accedi
+        sign_up: Registrati
       minimum_password_length:
         one: "(Minimo%{count} caratteri)"
         other: "(Minimo%{count} caratteri)"
@@ -1213,6 +1261,21 @@ it:
   doorkeeper:
     scopes:
       public: Le tue informazioni pubbliche.
+  emojis:
+    categories:
+      activities: Attività
+      people-body: Persone & Corpo
+      recents: Usati di recente
+      smileys-emotion: Sorrisi ed Emozioni
+    error:
+      load: Impossibile caricare le emoji
+    recents:
+      clear: Cancella le emoji recenti
+      none: Non hai ancora selezionato nessuna emojis
+    search:
+      clear: Cancella ricerca
+      error: Ricerca emojis non riuscita
+      not_found: Nessun risultato trovato
   errors:
     messages:
       confirmation_period_expired: deve essere confermato entro %{period}, si prega di richiederne uno nuovo
@@ -1252,9 +1315,12 @@ it:
         cc_by_license: Licenza Creative Commons
         decidim_logo: Logo Decidim
         download_open_data: Scarica i file Open Data
+        log_in: Accedi
         made_with_open_source: Sito web creato con <a target="_blank" href="https://github.com/decidim/decidim">software libero</a>.
         sign_up: Registrati
+        terms_and_conditions: Termini e condizioni
       header:
+        log_in: Accedi
         main_menu: Menù principale
         user_menu: Menù utente
       impersonation_warning:
@@ -1266,6 +1332,10 @@ it:
       notifications_dashboard:
         mark_all_as_read: Contrassegnare tutti come letti
         mark_as_read: Segna come già letto
+      shared:
+        layout_item:
+          next: Articolo successivo
+          prev: Articolo precedente
       social_media_links:
         facebook: "%{organization} su Facebook"
         github: "%{organization} su GitHub"

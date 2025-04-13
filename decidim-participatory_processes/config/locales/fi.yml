@@ -95,7 +95,7 @@ fi:
       actions:
         activate: Aktivoi
         configure: Asetukset
-        confirm_destroy: Vahvista poistaminen
+        confirm_destroy: Vahvista poisto
         destroy: Poista
         duplicate: Kopioi
         edit: Muokkaa
@@ -108,9 +108,9 @@ fi:
         new_process_user_role: Uusi prosessin hallintakäyttäjä
         preview: Esikatsele
         publish: Julkaise
-        resend_invitation: Lähetä kutsu uudelleen
+        resend_invitation: Lähetä kutsu uudestaan
         see_process: Näytä prosessi
-        unpublish: Lopeta julkaisu
+        unpublish: Peru julkaisu
       filters:
         decidim_participatory_process_group_id_eq:
           label: Prosessiryhmä
@@ -154,7 +154,7 @@ fi:
           name: Osallistumisprosessin vaihe
         participatory_process_type:
           fields:
-            created_at: Luontiaika
+            created_at: Luonnin ajankohta
             title: Otsikko
           name: Prosessityyppi
         participatory_process_user_role:
@@ -192,7 +192,7 @@ fi:
           success: Osallistumisprosessien ryhmän päivitys onnistui.
       participatory_process_imports:
         create:
-          error: Virhe tuotaessa tätä osallistumisprosessia.
+          error: Tämän osallistumisprosessin tuonti epäonnistui.
           success: Osallistumisprosessin tuonti onnistui.
         new:
           import: Tuo
@@ -203,8 +203,8 @@ fi:
           error: Osallistumisprosessin julkaisu epäonnistui.
           success: Osallistumisprosessin julkaisu onnistui.
         destroy:
-          error: Osallistumisprosessin julkaisun lopettaminen epäonnistui.
-          success: Osallistumisprosessin julkaisun lopettaminen onnistui.
+          error: Osallistumisprosessin julkaisun peruminen epäonnistui.
+          success: Osallistumisprosessin julkaisun peruminen onnistui.
       participatory_process_step_activations:
         create:
           error: Osallistumisprosessin vaiheen aktivointi epäonnistui.
@@ -258,7 +258,7 @@ fi:
           error: Osallistumisprosessin käyttäjän lisääminen epäonnistui.
           success: Käyttäjän lisäys tähän osallistumisprosessiin onnistui.
         destroy:
-          success: Käyttäjä poistaminen tästä osallistumisprosessista onnistui.
+          success: Käyttäjä poisto tästä osallistumisprosessista onnistui.
         edit:
           title: Päivitä osallistumisprosessin hallintakäyttäjä
           update: Päivitä
@@ -301,8 +301,8 @@ fi:
         participatory_processes: Osallistumisprosessit
       users:
         resend_invitation:
-          error: Kutsun uudelleenlähetys epäonnistui.
-          success: Kutsun uudelleenlähetys onnistui.
+          error: Kutsun uudestaanlähetys epäonnistui.
+          success: Kutsun uudestaanlähetys onnistui.
     admin_log:
       participatory_process:
         create: "%{user_name} loi osallistumisprosessin %{resource_name}"
@@ -310,7 +310,7 @@ fi:
         export: "%{user_name} vei osallistumisprosessin %{resource_name}"
         import: "%{user_name} toi osallistumisprosessin %{resource_name}"
         publish: "%{user_name} julkaisi osallistumisprosessin %{resource_name}"
-        unpublish: "%{user_name} muutti osallistumisprosessin %{resource_name} julkaisemattomaksi"
+        unpublish: "%{user_name} perui osallistumisprosessin %{resource_name} julkaisun"
         update: "%{user_name} päivitti osallistumisprosessin %{resource_name}"
       participatory_process_group:
         create: "%{user_name} loi osallistumisprosessien ryhmän %{resource_name}"
@@ -336,12 +336,12 @@ fi:
           email_subject: Sinulle on myönnetty rooli %{role} kohteessa "%{resource_title}".
           notification_title: Sinulle on myönnetty rooli %{role} osallistumistilassa <a href="%{resource_url}">%{resource_title}</a>.
         step_activated:
-          email_intro: 'Vaihe %{resource_title} on nyt käytössä kohteessa %{participatory_space_title}. Voit tutustua siihen tältä sivulta:'
+          email_intro: 'Vaihe %{resource_title} on nyt käytössä kohteessa %{participatory_space_title}. Voit tutustua siihen sivulta:'
           email_outro: Tämä ilmoitus on lähetetty sinulle, koska seuraat kohdetta %{participatory_space_title}. Voit lopettaa ilmoitusten vastaanottamisen edellä esitetyn linkin kautta.
           email_subject: Päivitys kohteessa %{participatory_space_title}
           notification_title: Vaihe %{resource_title} on nyt käytössä kohteessa <a href="%{resource_path}">%{participatory_space_title}</a>
         step_changed:
-          email_intro: 'Vaiheen %{resource_title} päivämäärät kohteessa %{participatory_space_title} on päivitetty. Voit tutustua siihen tältä sivulta:'
+          email_intro: 'Vaiheen %{resource_title} päivämäärät kohteessa %{participatory_space_title} on päivitetty. Voit tutustua siihen sivulta:'
           email_outro: Tämä ilmoitus on lähetetty sinulle, koska seuraat kohdetta %{participatory_space_title}. Voit lopettaa ilmoitusten vastaanottamisen edellä esitetyn linkin kautta.
           email_subject: Päivitys kohteessa %{participatory_space_title}
           notification_title: Päivämäärät on päivitetty vaiheelle <a href="%{resource_path}">%{resource_title}</a> osallistumistilassa <a href="%{participatory_space_url}">%{participatory_space_title}</a>.
@@ -450,7 +450,7 @@ fi:
       index:
         title: Osallistumisprosessit
       last_activity:
-        new_participatory_process: Uusi osallistumisprosessi
+        new_participatory_process: 'Uusi osallistumisprosessi:'
       pages:
         home:
           highlighted_processes:

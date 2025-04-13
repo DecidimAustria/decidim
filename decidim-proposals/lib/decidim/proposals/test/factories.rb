@@ -300,7 +300,7 @@ FactoryBot.define do
     trait :participant_author do
       after :build do |proposal, evaluator|
         proposal.coauthorships.clear
-        user = build(:user, organization: proposal.component.participatory_space.organization, skip_injection: evaluator.skip_injection)
+        user = build(:user, :confirmed, organization: proposal.component.participatory_space.organization, skip_injection: evaluator.skip_injection)
         proposal.coauthorships.build(author: user)
       end
     end
@@ -324,8 +324,8 @@ FactoryBot.define do
     trait :official_meeting do
       after :build do |proposal, evaluator|
         proposal.coauthorships.clear
-        component = build(:meeting_component, participatory_space: proposal.component.participatory_space, skip_injection: evaluator.skip_injection)
-        proposal.coauthorships.build(author: build(:meeting, component:, skip_injection: evaluator.skip_injection))
+        component = build(:meeting_component, :published, participatory_space: proposal.component.participatory_space, skip_injection: evaluator.skip_injection)
+        proposal.coauthorships.build(author: build(:meeting, :published, component:, skip_injection: evaluator.skip_injection))
       end
     end
 
@@ -388,7 +388,8 @@ FactoryBot.define do
     trait :with_endorsements do
       after :create do |proposal, evaluator|
         5.times.collect do
-          create(:endorsement, resource: proposal, author: build(:user, organization: proposal.participatory_space.organization, skip_injection: evaluator.skip_injection),
+          create(:endorsement, resource: proposal,
+                               author: build(:user, :confirmed, organization: proposal.participatory_space.organization, skip_injection: evaluator.skip_injection),
                                skip_injection: evaluator.skip_injection)
         end
       end
@@ -411,6 +412,12 @@ FactoryBot.define do
         proposal.attachments << create(:attachment, :with_pdf, attached_to: proposal, skip_injection: evaluator.skip_injection)
       end
     end
+
+    trait :moderated do
+      after(:create) do |proposal, evaluator|
+        create(:moderation, reportable: proposal, hidden_at: 2.days.ago, skip_injection: evaluator.skip_injection)
+      end
+    end
   end
 
   factory :proposal_vote, class: "Decidim::Proposals::ProposalVote" do
@@ -427,7 +434,7 @@ FactoryBot.define do
     end
     amendable { build(:proposal, skip_injection:) }
     emendation { build(:proposal, component: amendable.component, skip_injection:) }
-    amender { build(:user, organization: amendable.component.participatory_space.organization, skip_injection:) }
+    amender { build(:user, :confirmed, organization: amendable.component.participatory_space.organization, skip_injection:) }
     state { Decidim::Amendment::STATES.keys.sample }
   end
 
@@ -435,7 +442,13 @@ FactoryBot.define do
     transient do
       skip_injection { false }
     end
-    body { Faker::Lorem.sentences(number: 3).join("\n") }
+    body do
+      if skip_injection
+        generate(:title)
+      else
+        "<script>alert(\"proposal_note_body\");</script> #{generate(:title)}"
+      end
+    end
     proposal { build(:proposal, skip_injection:) }
     author { build(:user, organization: proposal.organization, skip_injection:) }
   end

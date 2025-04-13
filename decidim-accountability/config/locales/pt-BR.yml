@@ -13,6 +13,7 @@ pt-BR:
         project_ids: Projetos incluídos
         proposals: Propostas incluídas
         start_date: Data de início
+        subresults: Subresultados
         title: Título
         updated_at: Atualizado em
       status:
@@ -93,12 +94,7 @@ pt-BR:
           new:
             create: Importar
             import_all_selected_projects: Importar todos os projetos selecionados para implementação
-            new_items:
-              one: 1 projeto selecionado será importado
-              other: "%{count} projetos selecionados serão importados"
             no_components: Não há componentes de orçamento neste espaço participativo para importar os projetos em resultados.
-            origin_component_id: Componente de origem
-            select_component: Selecionar componente
             success:
               one: Projetos na fila para ser importado. Você será notificado no seu endereço eletrônico quando estiver completo.
               other: "Projetos na fila para importar. Você sera notificado em seu endereço eletrônico quando estiver completo."
@@ -200,7 +196,7 @@ pt-BR:
             end_date: Data final
             id: ID
             progress: Progresso
-            scope: Escopo
+            scope: Âmbito
             start_date: Data de início
             status: Status
             title: Título
@@ -222,10 +218,8 @@ pt-BR:
         filters:
           all: Todos
         home:
-          categories_label: Categorias
           empty: Não existem resultados ainda.
           empty_filters: Não há resultados com este critério.
-          subcategories_label: Subcategorias
         home_header:
           global_status: Status de execução global
         nav_breadcrumb:
@@ -252,7 +246,7 @@ pt-BR:
           category_id_eq:
             label: Categoria
           scope_id_eq:
-            label: Escopo
+            label: Âmbito
           status_id_eq:
             label: Status
     components:
@@ -269,7 +263,7 @@ pt-BR:
             heading_leaf_level_results: Nome para "Projetos"
             heading_parent_level_results: Nome para "Resultados"
             intro: Introdução
-            scope_id: Escopo
+            scope_id: Âmbito
             scopes_enabled: Escopos habilitados
             subcategories_label: Nome para "Subcategorias"
           step:

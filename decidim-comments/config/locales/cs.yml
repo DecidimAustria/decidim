@@ -69,12 +69,20 @@ cs:
           against: Proti
           in_favor: Ve prospěch
         cancel_reply: Zrušit odpověď
+        comment_label: Komentář %{comment_id}
+        comment_label_reply: Komentář %{comment_id} (odpověď na komentář %{parent_comment_id})
         confirm_destroy: Opravdu chcete odstranit tento komentář?
+        controls_label: Ovládání komentářů
         delete: Smazat
         deleted_at: Komentář byl smazán dne %{date}
         deleted_user: Vymazaný účastník
         edit: Upravit
         edited: Upraveno
+        hide_replies:
+          one: Skrýt odpověď
+          few: Skrýt {count} odpovědi
+          many: Skrýt {count} odpovědí
+          other: Skrýt {count} odpovědí
         moderated_at: Komentář moderován dne %{date}
         reply: Odpověď
         report:

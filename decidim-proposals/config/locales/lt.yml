@@ -156,9 +156,7 @@ lt:
             comments_enabled: Komentarai įjungti
             comments_max_length: Maksimalus komentarų ilgis (Palikite 0 kaip numatytą vertę)
             default_sort_order: Numatytas pasiūlymų rikiavimas
-            default_sort_order_help: Numatytasis reiškia, kad įjungus paramą, pasiūlymai bus surūšiuotjami atsitiktine tvarka, o jeigu paramos blokuojamos – pagal labiausiai palaikomus.
             default_sort_order_options:
-              default: Numatytasis
               most_commented: Labiausiai komentuojamas
               most_endorsed: Labiausiai pritarta
               most_followed: Labiausiai sekė
@@ -209,9 +207,7 @@ lt:
             creation_enabled: Dalyviai gali kurti pasiūlymus
             creation_enabled_readonly: Šis nustatymas išjungiamas, kai suaktyvinate Dalyvaujančių Tekstų funkciją. Norėdami įkelti pasiūlymus kaip dalyvaujamąjį tekstą, spustelėkite mygtuką Dalyvaujantys Tekstai ir vadovaukitės instrukcijomis.
             default_sort_order: Numatytasis pasiūlymų rūšiavimas
-            default_sort_order_help: Numatytasis reiškia, kad įjungus palaikymus pasiūlymai bus rodomi surūšiuoti atsitiktine tvarka, o jei palaikymai yra blokuojami – pagal labiausiai palaikomus.
             default_sort_order_options:
-              default: Numatytasis
               most_commented: Labiausiai komentuojamas
               most_endorsed: Labiausiai pritarta
               most_followed: Labiausiai sekamas
@@ -324,12 +320,10 @@ lt:
             notification_title: Pasiūlymas <a href="%{resource_path}">%{resource_title}</a> buvo atmestas.
         proposal_update_category:
           email_intro: 'Administratorius atnaujino jūsų pasiūlymo „%{resource_title}“ kategoriją, patikrinkite tai šiame puslapyje:'
-          email_outro: Šį pranešimą gavote dėl to, kad esate pasiūlymo autorius.
           email_subject: '%{resource_title} pasiūlymo kategorija buvo atnaujinta'
           notification_title: Administratorius atnaujino <a href="%{resource_path}">%{resource_title}</a> pasiūlymo kategoriją.
         proposal_update_scope:
           email_intro: 'Administratorius atnaujino jūsų pasiūlymo „%{resource_title}“ apimtį, patikrinkite tai šiame puslapyje:'
-          email_outro: Šį pranešimą gavote dėl to, kad esate pasiūlymo autorius.
           email_subject: '%{resource_title} pasiūlymo apimtis buvo atnaujinta'
           notification_title: Administratorius atnaujino <a href="%{resource_path}">%{resource_title}</a> pasiūlymo apimtį.
         voting_enabled:
@@ -511,7 +505,6 @@ lt:
           index:
             actions: Veiksmai
             assign_to_valuator: Priskirti vertintojui
-            assign_to_valuator_button: Priskirti
             cancel: Atšaukti
             change_category: Keisti kategoriją
             change_scope: Keisti apimtį
@@ -525,7 +518,6 @@ lt:
             split_button: Skaidyti
             title: Pasiūlymai
             unassign_from_valuator: Panaikinti vertintojui pavestą užduotį
-            unassign_from_valuator_button: Atšaukti priskyrimą
             update: Atnaujinti
             update_scope_button: Atnaujinti apimtį
           new:
@@ -786,7 +778,6 @@ lt:
           discard: Ištrinti šį juodraštį
           discard_confirmation: Ar tikrai norite ištrinti šį pasiūlymo juodraštį?
           send: Peržiūrėti
-          title: Redaguoti pasiūlymo projektą
         filters:
           activity: Mano veikla
           all: Visi
@@ -814,7 +805,6 @@ lt:
           text_banner: Jūs žiūrite autorių atsiimtų pasiūlymų sąrašą. %{go_back_link}.
         new:
           send: Tęsti
-          title: Sukurti savo pasiūlymą
         orders:
           label: 'Rikiuoti pasiūlymus pagal:'
           most_commented: Labiausiai komentuojamas

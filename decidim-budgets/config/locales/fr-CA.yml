@@ -3,7 +3,7 @@ fr-CA:
   activemodel:
     attributes:
       budget:
-        decidim_scope_id: Secteur
+        decidim_scope_id: Périmètre d'application
         description: Description
         title: Titre
         total_budget: Budget total
@@ -34,7 +34,7 @@ fr-CA:
           category_id_eq:
             label: Catégorie
           scope_id_eq:
-            label: Secteur
+            label: Périmètre d'application
           selected_at_null:
             label: Sélectionnés
             values:
@@ -44,7 +44,7 @@ fr-CA:
       actions:
         attachment_collections: Dossiers
         attachments: Documents liés
-        confirm_destroy: Êtes-vous certain de vouloir supprimer ce projet?
+        confirm_destroy: Êtes-vous sûr(e) de vouloir supprimer ce projet ?
         destroy: Supprimer
         edit: Modifier
         edit_projects: Gérer les projets
@@ -185,6 +185,11 @@ fr-CA:
         finished_message: Vous avez terminé le processus de vote. Merci de votre participation !
         highlighted_cta: Voter pour %{name}
         if_change_opinion: Si vous avez changé d’avis, vous pouvez
+        orders:
+          highest_cost: Coût décroissant
+          label: Trier les budgets par
+          lowest_cost: Coût croissant
+          random: Ordre aléatoire
         progress: Terminer le vote
         remove_vote: Retirer le vote
         show: Voir les projets
@@ -328,7 +333,7 @@ fr-CA:
             more_information_modal: Plus d’informations
             projects_per_page: Projets par page
             resources_permissions_enabled: Les autorisations d'actions peuvent être définies pour chaque projet
-            scope_id: Secteur
+            scope_id: Périmètre d'application
             scopes_enabled: Secteurs activés
             title: Titre
             total_budget: Budget total

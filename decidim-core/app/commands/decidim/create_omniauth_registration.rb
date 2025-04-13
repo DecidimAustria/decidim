@@ -45,6 +45,8 @@ module Decidim
 
     attr_reader :form, :verified_email
 
+    REGEXP_SANITIZER = /[<>?%&\^*#@()\[\]=+:;"{}\\|]/
+
     def create_or_find_user
       @user = User.find_or_initialize_by(
         email: verified_email,
@@ -55,24 +57,34 @@ module Decidim
         # If user has left the account unconfirmed and later on decides to sign
         # in with omniauth with an already verified account, the account needs
         # to be marked confirmed.
-        @user.skip_confirmation! if !@user.confirmed? && @user.email == verified_email
+        if !@user.confirmed? && @user.email == verified_email
+          @user.skip_confirmation!
+          @user.after_confirmation
+        end
+        @user.tos_agreement = "1"
+        @user.save!
       else
         @user.email = (verified_email || form.email)
-        @user.name = form.name
+        @user.name = form.name.gsub(REGEXP_SANITIZER, "")
         @user.nickname = form.normalized_nickname
         @user.newsletter_notifications_at = nil
         @user.password = SecureRandom.hex
-        if form.avatar_url.present?
-          url = URI.parse(form.avatar_url)
-          filename = File.basename(url.path)
-          file = url.open
-          @user.avatar.attach(io: file, filename:)
-        end
+        attach_avatar(form.avatar_url) if form.avatar_url.present?
         @user.skip_confirmation! if verified_email
-      end
+        @user.tos_agreement = "1"
+        @user.save!
 
-      @user.tos_agreement = "1"
-      @user.save!
+        @user.after_confirmation if verified_email
+      end
+    end
+
+    def attach_avatar(avatar_url)
+      url = URI.parse(avatar_url)
+      filename = File.basename(url.path)
+      file = url.open
+      @user.avatar.attach(io: file, filename:)
+    rescue OpenURI::HTTPError, Errno::ECONNREFUSED
+      # Do not attach the avatar, as it fails to fetch it.
     end
 
     def create_identity
@@ -120,7 +132,7 @@ module Decidim
         provider: form.provider,
         uid: form.uid,
         email: form.email,
-        name: form.name,
+        name: form.name.gsub(REGEXP_SANITIZER, ""),
         nickname: form.normalized_nickname,
         avatar_url: form.avatar_url,
         raw_data: form.raw_data

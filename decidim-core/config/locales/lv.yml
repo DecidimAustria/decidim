@@ -327,6 +327,10 @@ lv:
         name: Organizācijas statistika
       sub_hero:
         name: Kājenes apakšējais galvenais reklāmkarogs
+    core:
+      application_helper:
+        filter_category_values:
+          all: Visi
     devise:
       omniauth_registrations:
         new:
@@ -337,6 +341,7 @@ lv:
       registrations:
         new:
           already_have_an_account?: Jums jau ir konts?
+          log_in: Pieteikties
           newsletter: Saņemiet neregulāru informatīvo biļetenu ar būtisko informāciju
           newsletter_title: Atļauja sazināties
           sign_up: Reģistrēties
@@ -686,6 +691,8 @@ lv:
           new_conversation: Jauna saruna
           next: Nākamais
           title: Sarunas
+        reply_form:
+          placeholder: Jūsu atbilde...
         show:
           chat_with: Saruna ar
           title: Saruna ar %{usernames}
@@ -798,6 +805,8 @@ lv:
         conversations: Sarunas
         followers: Sekotāji
         following: Seko
+        group_admins: Pārvaldīt administratorus
+        group_members: Pārvaldīt biedrus
         groups: Grupas
         members: Dalībnieki
       sidebar:
@@ -805,6 +814,16 @@ lv:
           info: Žetoni tiek nopelnīti, veicot noteiktas darbības platformā.
           title: Žetoni
       user:
+        actions:
+          create_user_group: Izveidot grupu
+          edit_profile: Rediģēt profilu
+          edit_user_group: Rediģēt grupas profilu
+          invite_user: Uzaicināt dalībnieku
+          join_user_group: Pieteikums pievienoties grupai
+          leave_user_group: Pamest grupu
+          manage_user_group_admins: Pārvaldīt administratorus
+          manage_user_group_users: Pārvaldīt biedrus
+          resend_email_confirmation_instructions: Atkārtoti e-pastā nosūtīt apstiprināšanas norādījumus
         create_user_group: Izveidot grupu
         edit_profile: Rediģēt profilu
         edit_user_group: Rediģēt grupas profilu
@@ -866,6 +885,8 @@ lv:
         offensive: Satur rasismu, seksismu, lamuvārdus, personiskus uzbrukumus, nāves draudus, ierosinājumus veikt pašnāvību vai jebkāda veida naida runu.
         report: Ziņot
         spam: Satur klikšķu ēsmu (clickbait), reklāmu, krāpšanu vai skriptu robotprogrammatūru.
+      flag_user_modal:
+        close: Aizvērt
       floating_help:
         help: Palīdzība
       login_modal:
@@ -1015,10 +1036,14 @@ lv:
       signed_up_but_unconfirmed: Uz jūsu e-pasta adresi ir nosūtīts ziņojums ar apstiprinājuma saiti. Lūdzu, izmantojiet saiti, lai aktivizētu savu kontu.
       update_needs_confirmation: Jūs veiksmīgi atjauninājāt kontu, taču mums ir jāpārbauda jūsu jaunā e-pasta adrese. Lūdzu, pārbaudiet savu e-pastu un izmantojiet apstiprināšanas saiti, lai apstiprinātu jauno e-pasta adresi.
       updated: Jūsu konts tika veiksmīgi atjaunināts.
+    sessions:
+      new:
+        log_in: Pieteikties
     shared:
       links:
         back: Atpakaļ
         forgot_your_password: Aizmirsāt paroli?
+        log_in: Pieteikties
         sign_up: Reģistrēties
       minimum_password_length:
         zero: "(vismaz %{count} rakstzīmes)"
@@ -1062,8 +1087,11 @@ lv:
         edit: Labot
       footer:
         download_open_data: Lejupielādējiet atvērto datu failus
+        log_in: Pieteikties
         made_with_open_source: Vietne, kas izveidota ar <a target="_blank" href="https://github.com/decidim/decidim"> bezmaksas programmatūru </a>.
         sign_up: Reģistrēties
+      header:
+        log_in: Pieteikties
       impersonation_warning:
         close_session: Aizvērt sesiju
         description_html: Jūs pārvaldāt dalībnieku <b>%{user_name}</b>.

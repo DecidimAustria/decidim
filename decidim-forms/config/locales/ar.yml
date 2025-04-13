@@ -4,7 +4,6 @@ ar:
     attributes:
       answer:
         body: إجابة
-        choices: الخيارات
       question:
         max_choices: أقصى عدد من الخيارات
         question_type: نوع
@@ -15,7 +14,6 @@ ar:
         answer:
           attributes:
             choices:
-              missing: ليست كاملة
               too_many: كثير جدا
   decidim:
     forms:
@@ -27,7 +25,6 @@ ar:
         questionnaires:
           answer_option:
             answer_option: خيار الإجابة
-            free_text: نص حر
             remove: إزالة
             statement: بيان
           display_condition:
@@ -37,7 +34,6 @@ ar:
             save: حفظ
           form:
             add_question: أضف سؤال
-            already_answered_warning: تمت الإجابة على النموذج من قبل بعض المستخدمين حتى لا تتمكن من تعديل أسئلته.
           matrix_row:
             remove: إزالة
             statement: بيان
@@ -68,8 +64,6 @@ ar:
           max_choices: 'خيارات ماكس: %{n}'
         show:
           answer_questionnaire:
-            already_have_an_account?: لديك حساب بالفعل؟
-            are_you_new?: مستخدم جديد؟
             title: أجب عن النموذج
           questionnaire_answered:
             body: لقد أجبت بالفعل على هذا النموذج.
@@ -83,11 +77,8 @@ ar:
           tos_agreement: من خلال المشاركة ، فإنك تقبل شروط الخدمة
       step_navigation:
         show:
-          are_you_sure: لا يمكن التراجع عن هذا الإجراء ولن تتمكن من تعديل إجاباتك. هل أنت واثق؟
           submit: خضع
       user_answers_serializer:
         created_at: أجاب على
         id: معرف الإجابة
-        registered: مُسجَّل
-        unregistered: غير مُسجَّل
-        user_status: حالة المستخدم
+        question: سؤال
