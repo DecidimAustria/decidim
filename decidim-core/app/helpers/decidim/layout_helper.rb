@@ -28,7 +28,7 @@ module Decidim
 
     def legacy_favicon
       variant = :favicon if current_organization.favicon.content_type != "image/vnd.microsoft.icon"
-      icon_image = current_organization.attached_uploader(:favicon).variant_url(variant, host: current_organization.host)
+      icon_image = current_organization.attached_uploader(:favicon).variant_url(variant)
       return unless icon_image
 
       favicon_link_tag(icon_image, rel: "icon", sizes: "any", type: nil)
