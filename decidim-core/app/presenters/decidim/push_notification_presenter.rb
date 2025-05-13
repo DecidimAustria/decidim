@@ -15,7 +15,7 @@ module Decidim
     end
 
     def icon
-      user.organization.attached_uploader(:favicon).variant_url(:big, host: user.organization.host)
+      user.organization.attached_uploader(:favicon).variant_url(:big)
     end
 
     def url
