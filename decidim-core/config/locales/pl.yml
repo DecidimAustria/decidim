@@ -1329,7 +1329,7 @@ pl:
           agreement: Wyrażam zgodę na te warunki
           legend: Wyraź zgodę na warunki usługi
         refuse:
-          modal_body: Jeśli odmówisz, nie będziesz mógł/mogła korzystać z platformy, możesz <a href="%{data_portability_path}">pobrać swoje dane</a> i/lub <a href="%{delete_path}">usunąć konto</a>.
+          modal_body: Jeśli odmówisz, nie będziesz mógł/mogła korzystać z platformy, możesz <a href="%{download_your_data_path}">pobrać swoje dane</a> i/lub <a href="%{delete_path}">usunąć konto</a>.
           modal_btn_continue: Zaakceptuj warunki i kontynuuj
           modal_btn_exit: Zapoznam się później
           modal_button: Odrzuć warunki
