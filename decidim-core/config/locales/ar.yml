@@ -576,7 +576,6 @@ ar:
       drag_and_drop_help: يمكن إضافة صور عن طريق سحبها وإسقاطها أو لصقها.
     endorsement_buttons_cell:
       already_endorsed: لا يعجبني
-      endorse: يعجبني
     endorsements:
       identities:
         done: تم
@@ -865,7 +864,6 @@ ar:
       reject_invitation: رفض
     group_members:
       actions:
-        are_you_sure: هل أنت واثق؟
         promote_to_admin: جعل المشرف
         remove_from_group: إزالة المشارك
       index:
@@ -1054,10 +1052,8 @@ ar:
       unsubscribe:
         success: أنت غير مشترك بنجاح.
         token_error: انتهت صلاحية الرابط.
-        unsubscribe: إلغاء الاشتراك
     newsletters_opt_in_mailer:
       notify:
-        body_1: تزداد أهمية معالجة البيانات الشخصية وحمايتها بالنسبة لنا جميعًا. مع اللائحة العامة الجديدة لحماية البيانات (GDPR) المؤرخة 25 مايو 2018 ، أصبح للأفراد سيطرة أفضل على بياناتهم الشخصية. لهذا السبب نحتاج إلى "موافق" لمواصلة إرسال المعلومات ذات الصلة حول أنشطة %{organization_name}.
         body_2: 'كيف يمكنك أن تعطينا موافقتك؟ فقط انقر على الزر التالي:'
         body_3: مع هذه الموافقة ، ستتمكن من متابعة تلقي معلومات حول خدمات النظام الأساسي. على العكس من ذلك ، إذا لم نتلق تأكيدًا إيجابيًا من جانبك ، فسنوقف إرسال رسائلنا إليك. إذا أكدت رغبتك في أن تظل على اطلاع ، فسيكون لديك دائمًا خيار الإلغاء في أي وقت.
         button: نعم ، أرغب في متابعة تلقي المعلومات ذات الصلة
@@ -1181,11 +1177,6 @@ ar:
           message: الرسالة
           resend_email_confirmation_instructions: إعادة إرسال تعليمات تأكيد البريد الإلكتروني
     reported_mailer:
-      hide:
-        hello: مرحبا %{name}،
-        manage_moderations: إدارة التعديلات
-        report_html: <p>بعد <a href="%{url}">محتوى</a> تم إخفاء تلقائيا.</p>
-        subject: تم إخفاء المورد تلقائيًا
       report:
         authors: المؤلفون
         content: محتوى تم الإبلاغ عنه

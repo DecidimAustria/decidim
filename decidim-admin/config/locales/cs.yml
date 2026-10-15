@@ -53,6 +53,7 @@ cs:
         customize_welcome_notification: Přizpůsobit uvítací oznámení
         default_locale: Výchozí jazyk
         description: Popis
+        enable_machine_translations: Povolit strojové překlady
         enable_omnipresent_banner: Zobrazit všudypřítomný banner
         enable_participatory_space_filters: Povolit filtry participačního prostoru
         facebook_handler: Facebook handler
@@ -70,7 +71,7 @@ cs:
         highlighted_content_banner_enabled: Zobrazit zvýrazněný banner obsahu
         highlighted_content_banner_image: Obrázek
         highlighted_content_banner_short_description: Stručný popis
-        highlighted_content_banner_title: Titul
+        highlighted_content_banner_title: Název
         host: Hostitel
         instagram_handler: Instagram handler
         logo: Logo
@@ -813,7 +814,7 @@ cs:
         index:
           actions: Akce
           badge: Odznak
-          block: Zablokovat uživatele
+          block: Blokovat uživatele
           created_at: Vytvořeno na
           name: Název
           nickname: Přezdívka
@@ -862,7 +863,7 @@ cs:
         form:
           colors:
             choose_color: Vyberte hlavní barvu
-            colors_title: Organizační barvy
+            colors_title: Barvy organizace
             colors_warning_html: Varování! Změna těchto barev může narušit kontrasty přístupnosti. Můžete zkontrolovat kontrast výběru s <a href="%{link}">kontrolou kontrastu WebAIM Contrast Checker</a> nebo jinými podobnými nástroji.
             explanation: Tento nástroj vám pomůže vybrat barevné schéma skládající se z odstínů rovnoměrně rozložených kolem barevného kruhového spektra, který bude použit na internetových stránkách organizace.
             legend_html: Hlavní barvy aplikace, založené na <a href="https://www.color-meanings.com/triadic-colors/">Triadic algoritmu</a>. <i>sekundární</i> barva je automaticky vypočítána z primární barvy a sytosti, kterou vyberete.

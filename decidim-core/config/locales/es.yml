@@ -160,6 +160,13 @@ es:
       x_seconds:
         one: 1 segundo
         other: "%{count} segundos"
+    widget:
+      label:
+        date: Seleccionar fecha para %{label}
+        time: Seleccionar hora para %{label}
+      picker:
+        date_button: Abrir el selector de calendario para %{label}
+        time_button: Abrir selector de hora para %{label}
   decidim:
     accessibility:
       external_link: Enlace externo
@@ -983,7 +990,12 @@ es:
       title: '¿Qué son las insignias?'
     group_admins:
       actions:
-        are_you_sure: '¿Seguro? Esto no eliminará a la participante del grupo.'
+        confirm_modal:
+          ok_add: Añadir una administradora
+          ok_remove: Eliminar la administradora
+          title_add: Confirmar la nueva administradora
+          title_remove: Eliminar la administradora
+        confirm_remove_from_admin: '¿Seguro que quieres eliminar a la administradora de este grupo?'
         demote_admin: Eliminar permisos de administración
       demote:
         error: Se ha producido un error al eliminar esta participante de la lista de administradoras.
@@ -1013,7 +1025,11 @@ es:
         error: Se ha producido un error al aceptar esta solicitud de incorporación al grupo.
         success: Solicitud de unirse correctamente aceptada.
       actions:
-        are_you_sure: '¿Seguro?'
+        confirm_modal:
+          ok_remove: Eliminar miembro
+          title_remove: Eliminar miembro
+        confirm_promote_to_admin: '¿Seguro que quieres agregar esta usuaria como administradora?'
+        confirm_remove_from_group: '¿Seguro que quieres eliminar a esta usuaria de este grupo?'
         promote_to_admin: Hacer administradora
         remove_from_group: Eliminar participante
       index:
@@ -1251,11 +1267,12 @@ es:
         main_image: Imagen principal
     newsletters:
       unsubscribe:
-        check_subscription: Si quieres cambiar tus preferencias, puedes hacerlo en la <a href="%{link}" target="_blank">página de configuración</a>.
+        check_subscription_html: Si quieres volver a recibirlos, puedes volver a activar tu suscripción en cualquier momento desde la <a href="%{link}" target="_blank">página de configuración</a>.
         error: Se ha producido un error al cancelar la suscripción.
+        subscription_preferences: Hemos actualizado tus preferencias de suscripción y ya no recibirás boletines informativos de %{organization_name}.
         success: Has cancelado la subscripción correctamente.
         token_error: El enlace ha caducado.
-        unsubscribe: Anula la subscripción
+        unsubscribe: Cancelar la suscripción al boletín informativo
     newsletters_opt_in:
       unauthorized: Lo sentimos, este enlace ya no está disponible.
       update:
@@ -1263,7 +1280,7 @@ es:
         success: La configuración del boletín de noticias se ha actualizado correctamente.
     newsletters_opt_in_mailer:
       notify:
-        body_1: El procesamiento de datos personales y su protección es cada vez más importante para todas nosotras. Con el nuevo Reglamento General de Protección de Datos (RGPD) del 25 de mayo de 2018, las personas tienen un mayor control sobre sus datos personales. Por este motivo, necesitamos tu autorización para seguir enviándote información relevante sobre las actividades del %{organization_name}.
+        body_1: El procesamiento de datos personales y su protección es cada vez más importante para todas nosotras. Con el Reglamento General de Protección de Datos (RGPD) del 25 de mayo de 2018, las personas tienen un mayor control sobre sus datos personales. Por este motivo, necesitamos tu autorización para seguir enviándote información relevante sobre las actividades del %{organization_name}.
         body_2: '¿Cómo puedes darnos tu consentimiento? Simplemente haz clic en el siguiente botón:'
         body_3: Con este consentimiento, podrás continuar recibiendo información sobre los servicios de la plataforma. Si, por el contrario, no recibimos una confirmación positiva de tu parte, dejaremos de enviarte nuestros mensajes. Si confirmas que deseas mantenerte informada, siempre tendrás la opción de cancelar en cualquier momento.
         button: Sí, quiero continuar recibiendo información relevante
@@ -1422,7 +1439,7 @@ es:
         confirmation_instructions_sent: Instrucciones de confirmación enviadas por correo electrónico.
         fill_in_email_to_confirm_it: Por favor, introduce el correo electrónico de tu grupo para confirmarlo.
     reported_mailer:
-      hide:
+      hidden_automatically:
         content: Contenido reportado
         details: Detalles
         hello: Hola %{name},
@@ -1431,6 +1448,15 @@ es:
         reason: Motivo
         report_html: <p>El siguiente <a href="%{url}">contenido</a> se ha ocultado automáticamente.</p>
         subject: Un contenido se ha ocultado de forma automática
+      hidden_manually:
+        content: Contenido reportado
+        details: Detalles
+        hello: Hola %{name},
+        manage_moderations: Gestiona moderaciones
+        participatory_space: Espacio de participación
+        reason: Razón
+        report_html: <p>El siguiente <a href="%{url}">contenido</a> se ha ocultado automáticamente por %{moderator}.</p>
+        subject: Un recurso ha sido oculto por %{moderator}
       report:
         authors: Autoras
         content: Contenido reportado
@@ -1448,6 +1474,8 @@ es:
       create:
         error: Se ha producido un error al denunciar el contenido. Por favor, inténtalo otra vez.
         success: El contenido se ha denunciado con éxito y será revisado por una administradora.
+      hide:
+        success: Se ha ocultado este recurso.
       parent_hidden:
         report_details: El recurso principal estaba oculto
     resource_endorsements:
@@ -1473,6 +1501,7 @@ es:
     searches:
       filters:
         jump_to: 'Salta a:'
+        resource: "%{label} entre %{collection}"
         search: Buscar
         state:
           active: Activo
@@ -1495,6 +1524,7 @@ es:
         close_modal: Cerrar el modal
         ok: De acuerdo
         title: Confirmar
+      confirm_unload: Esta página contiene cambios sin guardar. ¿Seguro que quieres abandonar esta página?
       embed:
         title: Contenido de vídeo incrustado
       extended_navigation_bar:
@@ -1958,14 +1988,17 @@ es:
         edit: Edita
       footer:
         cc_by_license: Con licencia Creative Commons
+        current_organization_img: "%{organization} (Ir a la página principal)"
         data_consent_settings: Configuración de cookies
         decidim_logo: Logo Decidim
         decidim_title: Decidim
         download_open_data: Descargar ficheros de datos abiertos
+        help: Ayuda
         log_in: Entra
         made_with_open_source: Web creada con <a target="_blank" href="https://github.com/decidim/decidim">software libre</a>.
         resources: Recursos
         sign_up: Crea una cuenta
+        social_media: Redes Sociales
         terms_of_service: Términos y condiciones de uso
       header:
         log_in: Entra
@@ -2005,6 +2038,8 @@ es:
         profile: Mi cuenta
         public_profile: Mi perfil público
         title: Enlaces de perfil
+        unread_conversations: Tienes conversaciones sin leer
+        unread_notifications: Tienes notificaciones sin leer
       user_profile:
         account: Cuenta
         authorizations: Autorizaciones

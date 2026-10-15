@@ -7,6 +7,7 @@ the instructions for all the patch releases in GitHub:
 - https://github.com/decidim/decidim/releases/tag/v0.29.1
 - https://github.com/decidim/decidim/releases/tag/v0.29.2
 - https://github.com/decidim/decidim/releases/tag/v0.29.3
+- https://github.com/decidim/decidim/releases/tag/v0.29.4
 
 ## 1. Upgrade notes
 

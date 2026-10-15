@@ -697,7 +697,6 @@ ro:
       drag_and_drop_help: Adaugați imagini prin tragere & plasare sau lipirea lor.
     endorsement_buttons_cell:
       already_endorsed: Nu-mi place
-      endorse: Îmi place
     endorsements:
       identities:
         done: Finalizat
@@ -975,7 +974,6 @@ ro:
       reject_invitation: Respingeți
     group_members:
       actions:
-        are_you_sure: Sunteți sigur?
         promote_to_admin: Setare ca administrator
         remove_from_group: Eliminați participantul
       index:
@@ -1163,17 +1161,14 @@ ro:
         main_image: Imaginea principală
     newsletters:
       unsubscribe:
-        check_subscription: Dacă doriți să vă schimbați preferințele, puteți face acest lucru în <a href="%{link}" target="_blank">pagina de configurare</a>.
         error: A apărut o eroare la dezabonare.
         success: Sunteți dezabonat cu succes.
         token_error: Link-ul a expirat.
-        unsubscribe: Dezabonare
     newsletters_opt_in:
       update:
         error: A apărut o eroare la actualizarea acestui buletin informativ.
     newsletters_opt_in_mailer:
       notify:
-        body_1: Prelucrarea datelor cu caracter personal şi protecţia acesteia devin din ce în ce mai importante pentru noi toţi. Prin noul Regulament general privind protecția datelor (RGDP) din 25 mai 2018, persoanele fizice dețin un control mai bun asupra datelor lor cu caracter personal. Din acest motiv avem nevoie de "OK-ul tău" pentru a continua să trimiți informații relevante despre activitățile %{organization_name}.
         body_2: 'Cum ne puteți da acordul? Doar faceți clic pe următorul buton:'
         body_3: Cu acest consimțământ veți putea primi în continuare informații despre serviciile platformei. Dacă, dimpotrivă, nu primim o confirmare pozitivă din partea dumneavoastră, vom înceta să vă trimitem mesajele. Dacă confirmați că doriți să fiți informat în continuare, veți avea întotdeauna opțiunea de a anula oricând.
         button: Da, doresc să continui să primesc informații relevante
@@ -1286,15 +1281,6 @@ ro:
           message: Mesaj
           resend_email_confirmation_instructions: Retrimite e-mail instrucțiuni de confirmare
     reported_mailer:
-      hide:
-        content: Conținut raportat
-        details: Detalii
-        hello: Bună ziua %{name},
-        manage_moderations: Gestionați moderările
-        participatory_space: Spaţiu participativ
-        reason: Motiv
-        report_html: <p>Următorul <a href="%{url}">conținut</a> a fost ascuns automat.</p>
-        subject: O resursă a fost ascunsă automat
       report:
         authors: Autori
         content: Conținut raportat
