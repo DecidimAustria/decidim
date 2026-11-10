@@ -31,8 +31,8 @@ Gem::Specification.new do |s|
     end
   end
 
-  # Lock Temporarily as it is failing in 0.29 branch. More info: https://github.com/rails/rails/pull/54264
-  s.add_dependency "concurrent-ruby", "= 1.3.4"
+  # Keep the supported concurrency security fixes; load Logger explicitly in decidim/rails.
+  s.add_dependency "concurrent-ruby", "= 1.3.8"
 
   s.add_dependency "active_link_to", "~> 1.0"
   s.add_dependency "acts_as_list", "~> 1.0"

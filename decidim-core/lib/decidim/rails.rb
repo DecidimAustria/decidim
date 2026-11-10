@@ -7,6 +7,7 @@
 # 1. To remove the sprockets dependency from Rails
 # 2. To remove the railtie includes that are not necessary for running Decidim
 
+require "logger"
 require "rails"
 
 %w(
